@@ -1,1 +1,8 @@
-# tp-2022-1c-Octocats
+# TP Cuatrimestral - Octocats
+
+Integrantes:
+- Ardanaz, Ignacio Ángel
+- Cabrera Lavezzi, Thiago Martin
+- Fernandez, Ciro
+- Marmo, Lucas Andres
+- Sandrini, Alejo 

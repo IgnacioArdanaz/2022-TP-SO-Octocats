@@ -1,5 +1,5 @@
-#ifndef CONSOLA_MAIN_H_
-#define CONSOLA_MAIN_H_
+#ifndef KERNEL_MAIN_H_
+#define KERNEL_MAIN_H_
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -9,4 +9,7 @@
 #include<readline/readline.h>
 #include "../../shared/src/sockets.h"
 
-#endif /* CONSOLA_MAIN_H_ */
+#define IP "127.0.0.1"
+#define PUERTO "4444"
+
+#endif /* KERNEL_MAIN_H_ */
