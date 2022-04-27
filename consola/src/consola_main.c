@@ -1,4 +1,5 @@
 #include "consola_main.h"
+#include "parser.c"
 
 //int main(int argc, char** argv){
 //	if(argc < 3) {
@@ -9,7 +10,11 @@
 //	char* path = argv[2];
 
 	/*-----------------------------ACA VA EL PARSER------------------------------------------*/
-
+/*
+ * TODO Archivo parser agregado, falta parser.h
+ * LLamar funcion parser(int argc, char** argv) para iniciar
+ * Alejiti & Ziroide <3
+ */
 
 int main(){
 	/*---------------------------------------------------------------------------------------*/

@@ -3,6 +3,7 @@
 	<name>tp-2022-1c-Octocats</name>
 	<comment></comment>
 	<projects>
+		<project>RemoteSystemsTempFiles</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>
