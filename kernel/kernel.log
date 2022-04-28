@@ -8,3 +8,16 @@
 [INFO] 13:26:32:818 kernel/(18928:18928): KERNEL listo para recibir al cliente
 [INFO] 13:26:48:714 kernel/(18928:18928): Cliente conectado (a KERNEL)
 
+[INFO] 18:03:50:674 kernel/(16654:16654): Escuchando en 127.0.0.1:4444 (KERNEL)
+
+[INFO] 18:03:50:707 kernel/(16654:16654): KERNEL listo para recibir al cliente
+[INFO] 18:04:06:480 kernel/(16654:16654): Cliente conectado (a KERNEL)
+
+[INFO] 18:04:55:060 kernel/(16818:16818): KERNEL listo para recibir al cliente
+[INFO] 18:04:55:066 kernel/(16818:16818): Cliente conectado (a KERNEL)
+
+[INFO] 18:05:16:554 kernel/(16886:16886): Escuchando en 127.0.0.1:4444 (KERNEL)
+
+[INFO] 18:05:16:557 kernel/(16886:16886): KERNEL listo para recibir al cliente
+[INFO] 18:05:21:955 kernel/(16886:16886): Cliente conectado (a KERNEL)
+

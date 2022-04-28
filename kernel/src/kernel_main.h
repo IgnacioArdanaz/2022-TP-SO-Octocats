@@ -7,7 +7,7 @@
 #include<commons/string.h>
 #include<commons/config.h>
 #include<readline/readline.h>
-#include "../../shared/src/sockets.h"
+#include "../../shared/src/sockets.c"
 
 #define IP "127.0.0.1"
 #define PUERTO "4444"

@@ -1,5 +1,5 @@
 #include "consola_main.h"
-#include "parser.c"
+//#include "parser.c"
 
 //int main(int argc, char** argv){
 //	if(argc < 3) {
