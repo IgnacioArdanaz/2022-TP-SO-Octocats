@@ -6,3 +6,9 @@
 [INFO] 13:26:48:712 consola/(18971:18971): IP: 127.0.0.1 | Puerto: 4444
 [INFO] 13:26:48:718 consola/(18971:18971): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
 
+[INFO] 16:05:09:244 consola/(4982:4982): IP: 127.0.0.1 | Puerto: 4444
+[ERROR] 16:05:09:250 consola/(4982:4982): Error al conectar (a KERNEL)
+
+[INFO] 16:06:08:445 consola/(5062:5062): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 16:06:08:451 consola/(5062:5062): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+

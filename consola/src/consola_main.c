@@ -8,29 +8,16 @@ int main(int argc, char** argv){
 	int tamanio = atoi(argv[1]);
 	char* path = argv[2];
 
-	/*-----------------------------ACA VA EL PARSER------------------------------------------*/
-/*
- * TODO Archivo parser agregado, falta parser.h
- * LLamar funcion parser(int argc, char** argv) para iniciar
- * Alejiti & Ziroide <3
- */
 	char** tabla = string_array_new();
-	int funca = parser(path, &tabla);
-	//printf("lolasoasdasd2 %s \n",tabla[1]);
-	//tabla[2]="xasdasdw";
-	//printf("lolaso %s \n",string_array_pop(tabla));
-	//= string_array_replace(tabla,0,"lolaso");
-	//printf("lolaso %s \n",tabla[1]);
-	//string_array_destroy(tabla);
+	parser(path, &tabla);
+
 	int cant = string_array_size(tabla);
 	for(int i=0; i<cant; i++){
-		//printf("lolaso %s \n",string_array_pop(tabla));
-		printf("lolaso %s \n",tabla[i]);
+		printf("Instruccion numero %d: %s \n",i,tabla[i]);
 	}
-	free(tabla);
-//int main(){
-	/*---------------------------------------------------------------------------------------*/
-/*
+
+
+
 	int conexion;
 	char* ip_kernel;
 	char* puerto_kernel;
@@ -49,7 +36,9 @@ int main(int argc, char** argv){
 
 	conexion = crear_conexion(logger, "KERNEL", ip_kernel, puerto_kernel);
 
+	free(tabla);
 	log_destroy(logger);
 	config_destroy(config);
-	close(conexion);*/
+	close(conexion);
+
 }

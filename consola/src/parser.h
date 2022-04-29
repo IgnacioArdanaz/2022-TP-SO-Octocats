@@ -25,7 +25,7 @@ int isNumber(char s[]);
 
 void leerParametro(FILE *archivo,char *auxP);
 
-int parser(char* path,char*** tabla);
+void parser(char* path,char*** tabla);
 
 
 #endif

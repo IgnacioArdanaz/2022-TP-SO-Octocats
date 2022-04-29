@@ -53,9 +53,8 @@ void leerParametros(FILE *archivo,char** instruccion, char *auxP, int cantParame
 
 }
 
-int parser(char* path, char*** tabla) {
-//    char *auxP = malloc(sizeof(char));
-//    char *instruccion = malloc(sizeof(char));
+void parser(char* path, char*** tabla) {
+
 	char *auxP = string_new();
 
     int cant;
@@ -87,8 +86,7 @@ int parser(char* path, char*** tabla) {
         }
     }
     printf("Termino bien\n");
-    //free(auxP);
-    //free(instruccion);
+
     fclose(archivo);
-    return 1;
+
 }
