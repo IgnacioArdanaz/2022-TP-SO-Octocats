@@ -1,10 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include<commons/log.h>
-#include<commons/string.h>
-#include<commons/config.h>
+#include "parser.h"
 
 /*
  *  Para guardar las instrucciones podemos usar string_split (biblioteca commons)
@@ -15,22 +9,10 @@
  * TODO investigar si exit puede devolver el tipo de error
  * crear nuestros propios #define como EXIT_FAILURE pero mas descriptivos
  */
-
-
-typedef struct {
-	char *operacion;
-	int cantParametros;
-} t_identificador;
-
 static t_identificador tablaIdentificadores[] = {
         {"NO_OP",1},{"I/O",1}, {"READ",1},
         {"COPY",2},{"WRITE",2},{"EXIT",0}
 };
-
-#define CANT_IDENTIFICADORES (sizeof(tablaIdentificadores)/sizeof(t_identificador))
-/*estamos dividiendo la cantidad de bytes que ocupa la tabla por lo que ocupa un identificador
- * obteniendo la cantidad de identificadores, capaz se podria hacer con size?
-*/
 
 int cantParametros(char *instruccion){
     for(int i=0;i < CANT_IDENTIFICADORES;i++){
@@ -47,8 +29,7 @@ int cantParametros(char *instruccion){
      */
 }
 
-int isNumber(char s[])
-{
+int isNumber(char s[]){
     for (int i = 0; s[i]!= '\0'; i++)
     {
         if (isdigit(s[i]) == 0)
@@ -57,39 +38,57 @@ int isNumber(char s[])
     return 1;
 }
 
-void leerParametro(FILE *archivo,char *auxP){
-	fscanf(archivo, "%s",auxP);
+void leerParametros(FILE *archivo,char** instruccion, char *auxP, int cantParametros){
+	int j;
+	for(j=0;j<cantParametros;j++){
+		fscanf(archivo, "%s",auxP);
 		if(!isNumber(auxP)){
-	    	printf("error parametro invalido\n");
-	    	exit(1); //error 1: parametro invalido
-	    }
+			    	printf("error parametro invalido\n");
+			    	exit(1); //error 1: parametro invalido
+			    }
+		string_append_with_format(instruccion," %s",auxP);
+	}
+
+
+
 }
 
-int parser(int argc, char** argv) {
-    if(argc < 2) {
-            return EXIT_FAILURE;
-        }
+int parser(char* path, char*** tabla) {
+//    char *auxP = malloc(sizeof(char));
+//    char *instruccion = malloc(sizeof(char));
+	char *auxP = string_new();
 
-    char *auxP = malloc(sizeof(char));
     int cant;
     int i;
     FILE *archivo;
-    archivo= fopen(argv[1],"r");
-
+    printf("asd %s\n",path);
+    archivo= fopen(path,"r");
+    int inst=0;
     while(!feof(archivo)){
         //leemos la primer palabra de la instruccion (una operacion)
         fscanf(archivo, "%s",auxP);
-
         cant = cantParametros(auxP);
-
+        inst++;
+        //guardar operacion
+        //instruccion = auxP;
+        char *instruccion = string_new();
+        strcpy(instruccion, auxP);
         //segun que operacion deba realizar va a leer X cantidad de parametros
+        //for(i=0;i<cant;i++){
+        	leerParametros(archivo,&instruccion,auxP,cant);
+        	printf("auxP: %s\n",auxP);
+        	//guardar parametro
+        	//string_append_with_format(&instruccion," %s",auxP);
+        	printf("info: %s\n",instruccion);
+        //}
+        string_array_push(tabla, instruccion);
         for(i=0;i<cant;i++){
-
-        	leerParametro(archivo,auxP);
+        	printf("info tabla: %s\n",**tabla);
         }
     }
     printf("Termino bien\n");
-    free(auxP);
+    //free(auxP);
+    //free(instruccion);
     fclose(archivo);
-
+    return 1;
 }

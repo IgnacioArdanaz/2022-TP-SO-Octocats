@@ -1,13 +1,12 @@
 #include "consola_main.h"
-#include "parser.c"
 
-//int main(int argc, char** argv){
-//	if(argc < 3) {
-//		return EXIT_FAILURE;
-//	}
-//	//Recibe primero el tamanio y despues el path
-//	int tamanio = atoi(argv[1]);
-//	char* path = argv[2];
+int main(int argc, char** argv){
+	if(argc < 3) {
+		return EXIT_FAILURE;
+	}
+	//Recibe primero el tamanio y despues el path
+	int tamanio = atoi(argv[1]);
+	char* path = argv[2];
 
 	/*-----------------------------ACA VA EL PARSER------------------------------------------*/
 /*
@@ -15,10 +14,23 @@
  * LLamar funcion parser(int argc, char** argv) para iniciar
  * Alejiti & Ziroide <3
  */
-
-int main(){
+	char** tabla = string_array_new();
+	int funca = parser(path, &tabla);
+	//printf("lolasoasdasd2 %s \n",tabla[1]);
+	//tabla[2]="xasdasdw";
+	//printf("lolaso %s \n",string_array_pop(tabla));
+	//= string_array_replace(tabla,0,"lolaso");
+	//printf("lolaso %s \n",tabla[1]);
+	//string_array_destroy(tabla);
+	int cant = string_array_size(tabla);
+	for(int i=0; i<cant; i++){
+		//printf("lolaso %s \n",string_array_pop(tabla));
+		printf("lolaso %s \n",tabla[i]);
+	}
+	free(tabla);
+//int main(){
 	/*---------------------------------------------------------------------------------------*/
-
+/*
 	int conexion;
 	char* ip_kernel;
 	char* puerto_kernel;
@@ -39,5 +51,5 @@ int main(){
 
 	log_destroy(logger);
 	config_destroy(config);
-	close(conexion);
+	close(conexion);*/
 }
