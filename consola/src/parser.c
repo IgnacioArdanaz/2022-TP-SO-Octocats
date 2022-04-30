@@ -1,10 +1,4 @@
 #include "parser.h"
-
-/*
- *  Para guardar las instrucciones podemos usar string_split (biblioteca commons)
- *  si es que guardamos la instruccion completa como string,
- *  almacenando estos en un array
- */
 /*
  * TODO investigar si exit puede devolver el tipo de error
  * crear nuestros propios #define como EXIT_FAILURE pero mas descriptivos
@@ -22,11 +16,6 @@ int cantParametros(char *instruccion){
     }
     printf("error operacion invalida\n"); //si no es un operacion valido devuelve -1
     exit(EXIT_FAILURE);
-    /*
-     * si quisieramos saber si hay un parametro sobrante, podriamos hacer una verificacion
-     * si lo que lee es numerico (basicamente piensa que viene una operacion pero en realiadad
-     * es un parametro extra en alguna instruccion)
-     */
 }
 
 int isNumber(char s[]){
@@ -38,55 +27,65 @@ int isNumber(char s[]){
     return 1;
 }
 
+void validarParametro(char *auxP){
+	if(!isNumber(auxP)){
+		printf("error parametro invalido\n");
+		exit(1); //error 1: parametro invalido
+	}
+}
+
 void leerParametros(FILE *archivo,char** instruccion, char *auxP, int cantParametros){
 	int j;
 	for(j=0;j<cantParametros;j++){
 		fscanf(archivo, "%s",auxP);
-		if(!isNumber(auxP)){
-			    	printf("error parametro invalido\n");
-			    	exit(1); //error 1: parametro invalido
-			    }
+		validarParametro(auxP);
+		//si es valido el parametro lo concatena a la instruccion
 		string_append_with_format(instruccion," %s",auxP);
 	}
+}
 
-
-
+void iterarNOOP(FILE *archivo, char* instruccion, char *auxP, char*** tabla){
+	int repeticiones;
+	fscanf(archivo, "%s",auxP);
+	validarParametro(auxP);
+	repeticiones = atoi(auxP);
+	printf("cant de NOOP: %d\n",repeticiones);
+	for(int i=0;i<repeticiones-1;i++){
+		//iteramos hasta cantidad de repeticiones menos uno para al final
+		//utilizar el puntero leido
+		char *copia = string_duplicate(instruccion);
+		string_array_push(tabla, copia);
+	}
+	string_array_push(tabla, instruccion);
 }
 
 void parser(char* path, char*** tabla) {
-
+	// Puntero que nos ayuda a leer cada palabra
 	char *auxP = string_new();
-
-    int cant;
-    int i;
+    int cant; // Cantidad de parametros
     FILE *archivo;
-    printf("asd %s\n",path);
     archivo= fopen(path,"r");
-    int inst=0;
+
     while(!feof(archivo)){
         //leemos la primer palabra de la instruccion (una operacion)
         fscanf(archivo, "%s",auxP);
+        //asignamos la cantidad de parametros que tiene la operacion
         cant = cantParametros(auxP);
-        inst++;
-        //guardar operacion
-        //instruccion = auxP;
+        //creamos el puntero de la instruccion
         char *instruccion = string_new();
+        //guardar la operacion en el puntero instruccion
         strcpy(instruccion, auxP);
-        //segun que operacion deba realizar va a leer X cantidad de parametros
-        //for(i=0;i<cant;i++){
+
+        if(strcmp(instruccion, "NO_OP")==0){
+        	iterarNOOP(archivo, instruccion, auxP, tabla);
+        }else{
         	leerParametros(archivo,&instruccion,auxP,cant);
-        	printf("auxP: %s\n",auxP);
-        	//guardar parametro
-        	//string_append_with_format(&instruccion," %s",auxP);
-        	printf("info: %s\n",instruccion);
-        //}
-        string_array_push(tabla, instruccion);
-        for(i=0;i<cant;i++){
-        	printf("info tabla: %s\n",**tabla);
+        	string_array_push(tabla, instruccion);
         }
     }
-    printf("Termino bien\n");
 
+    printf("\n------------------\nParser termino bien\n------------------\n\n");
+    free(auxP);
     fclose(archivo);
 
 }

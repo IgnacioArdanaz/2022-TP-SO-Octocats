@@ -23,7 +23,11 @@ int cantParametros(char *instruccion);
 
 int isNumber(char s[]);
 
+void validarParametro(char *auxP);
+
 void leerParametro(FILE *archivo,char *auxP);
+
+void iterarNOOP(FILE *archivo, char* instruccion, char *auxP, char*** tabla);
 
 void parser(char* path,char*** tabla);
 

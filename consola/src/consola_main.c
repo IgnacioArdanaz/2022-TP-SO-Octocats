@@ -36,9 +36,15 @@ int main(int argc, char** argv){
 
 	conexion = crear_conexion(logger, "KERNEL", ip_kernel, puerto_kernel);
 
-	free(tabla);
+	string_array_destroy(tabla);
 	log_destroy(logger);
 	config_destroy(config);
 	close(conexion);
-
+	/*
+	 * TODO hay algo relacionado con conexion que tira Segmentation fault (core dumped)
+	 * basicamente hay algo de memoria que no estamos liberando
+	 *
+	 * CONFIRMADO parser y la tabla ya funcionan perfecto
+	 *
+	 */
 }
