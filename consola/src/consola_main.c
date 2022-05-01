@@ -5,7 +5,7 @@ int main(int argc, char** argv){
 		return EXIT_FAILURE;
 	}
 	//Recibe primero el tamanio y despues el path
-	int tamanio = atoi(argv[1]);
+	uint8_t tamanio = atoi(argv[1]);
 	char* path = argv[2];
 
 	char** tabla = string_array_new();
@@ -15,8 +15,6 @@ int main(int argc, char** argv){
 	for(int i=0; i<cant; i++){
 		printf("Instruccion numero %d: %s \n",i,tabla[i]);
 	}
-
-
 
 	int conexion;
 	char* ip_kernel;
@@ -36,10 +34,13 @@ int main(int argc, char** argv){
 
 	conexion = crear_conexion(logger, "KERNEL", ip_kernel, puerto_kernel);
 
+	send_programa(conexion, tabla, tamanio);
+
 	string_array_destroy(tabla);
 	log_destroy(logger);
 	config_destroy(config);
 	close(conexion);
+
 	/*
 	 * TODO hay algo relacionado con conexion que tira Segmentation fault (core dumped)
 	 * basicamente hay algo de memoria que no estamos liberando

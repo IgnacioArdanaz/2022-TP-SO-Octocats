@@ -12,3 +12,257 @@
 [INFO] 16:06:08:445 consola/(5062:5062): IP: 127.0.0.1 | Puerto: 4444
 [INFO] 16:06:08:451 consola/(5062:5062): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
 
+[INFO] 15:03:26:239 consola/(15486:15486): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 15:03:26:268 consola/(15486:15486): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 15:50:13:289 consola/(19848:19848): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 15:50:13:415 consola/(19848:19848): Instruccion 0: NO_OP
+[INFO] 15:50:13:416 consola/(19848:19848): Instruccion 1: NO_OP
+[INFO] 15:50:13:416 consola/(19848:19848): Instruccion 2: NO_OP
+[INFO] 15:50:13:416 consola/(19848:19848): Instruccion 3: NO_OP
+[INFO] 15:50:13:416 consola/(19848:19848): Instruccion 4: NO_OP
+[INFO] 15:50:13:416 consola/(19848:19848): Instruccion 5: I/O 3000
+[INFO] 15:50:13:416 consola/(19848:19848): Instruccion 6: WRITE 4 42
+[INFO] 15:50:13:416 consola/(19848:19848): Instruccion 7: COPY 0 4
+[INFO] 15:50:13:416 consola/(19848:19848): Instruccion 8: READ 0
+[INFO] 15:50:13:416 consola/(19848:19848): Instruccion 9: EXIT
+[INFO] 16:43:21:992 consola/(23932:23932): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 16:43:22:319 consola/(23932:23932): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 16:47:43:395 consola/(24184:24184): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 16:47:43:531 consola/(24184:24184): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 16:51:15:599 consola/(24436:24436): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 16:51:15:648 consola/(24436:24436): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 16:55:53:618 consola/(24692:24692): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 16:55:53:746 consola/(24692:24692): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 17:18:58:752 consola/(25857:25857): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 17:18:58:797 consola/(25857:25857): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 17:25:55:159 consola/(26286:26286): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 17:25:55:294 consola/(26286:26286): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 17:33:56:880 consola/(26690:26690): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 17:33:57:157 consola/(26690:26690): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 17:57:52:044 consola/(28123:28123): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 17:57:52:272 consola/(28123:28123): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 17:59:17:134 consola/(28251:28251): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 17:59:17:562 consola/(28251:28251): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 18:03:07:305 consola/(28492:28492): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 18:03:07:566 consola/(28492:28492): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 18:09:19:588 consola/(28926:28926): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 18:09:19:708 consola/(28926:28926): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 18:12:13:301 consola/(29150:29150): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 18:12:13:395 consola/(29150:29150): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 18:15:06:940 consola/(29385:29385): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 18:15:06:994 consola/(29385:29385): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 18:22:53:476 consola/(29768:29768): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 18:22:53:612 consola/(29768:29768): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 18:44:00:792 consola/(30924:30924): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 18:44:01:003 consola/(30924:30924): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 19:23:39:835 consola/(1138:1138): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 19:23:39:887 consola/(1138:1138): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 19:37:10:061 consola/(2059:2059): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 19:37:10:238 consola/(2059:2059): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 19:39:31:817 consola/(2242:2242): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 19:39:32:093 consola/(2242:2242): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 19:42:02:204 consola/(2419:2419): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 19:42:02:273 consola/(2419:2419): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 19:43:05:936 consola/(2529:2529): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 19:43:06:105 consola/(2529:2529): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 19:43:47:726 consola/(2636:2636): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 19:43:47:754 consola/(2636:2636): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 19:47:25:704 consola/(2897:2897): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 19:47:25:932 consola/(2897:2897): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 19:54:04:638 consola/(3386:3386): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 19:54:04:681 consola/(3386:3386): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 19:58:48:198 consola/(3768:3768): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 19:58:48:199 consola/(3768:3768): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 20:01:58:528 consola/(4004:4004): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 20:01:58:672 consola/(4004:4004): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 20:04:14:993 consola/(4187:4187): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 20:04:15:236 consola/(4187:4187): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 20:26:58:206 consola/(3304:3304): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 20:26:58:217 consola/(3304:3304): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 20:58:53:029 consola/(8128:8128): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 20:58:53:030 consola/(8128:8128): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:10:04:638 consola/(9805:9805): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:10:04:638 consola/(9805:9805): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:13:17:110 consola/(10322:10322): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:13:17:111 consola/(10322:10322): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:16:06:701 consola/(10765:10765): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:16:06:704 consola/(10765:10765): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:18:34:292 consola/(11179:11179): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:18:34:293 consola/(11179:11179): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:20:06:784 consola/(11475:11475): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:20:06:784 consola/(11475:11475): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:21:44:114 consola/(11748:11748): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:21:44:115 consola/(11748:11748): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:26:33:361 consola/(12445:12445): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:26:33:368 consola/(12445:12445): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:29:45:700 consola/(12929:12929): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:29:45:701 consola/(12929:12929): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:33:19:056 consola/(13428:13428): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:33:19:059 consola/(13428:13428): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:36:37:211 consola/(13931:13931): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:36:37:212 consola/(13931:13931): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:41:30:910 consola/(14639:14639): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:41:30:910 consola/(14639:14639): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:45:15:973 consola/(15201:15201): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:45:15:976 consola/(15201:15201): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:49:06:698 consola/(15750:15750): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:49:06:699 consola/(15750:15750): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:50:54:343 consola/(16052:16052): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:50:54:344 consola/(16052:16052): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:52:27:000 consola/(16310:16310): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:52:27:001 consola/(16310:16310): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:54:19:887 consola/(16634:16634): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:54:19:893 consola/(16634:16634): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:56:08:340 consola/(16937:16937): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:56:08:340 consola/(16937:16937): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:58:21:814 consola/(17277:17277): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 21:58:21:818 consola/(17277:17277): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 21:59:08:541 consola/(17442:17442): IP: 127.0.0.1 | Puerto: 4444
+[ERROR] 21:59:08:541 consola/(17442:17442): Error al conectar (a KERNEL)
+
+[INFO] 22:01:53:408 consola/(17859:17859): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:01:53:410 consola/(17859:17859): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:30:05:000 consola/(21331:21331): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:30:05:004 consola/(21331:21331): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:31:03:277 consola/(21512:21512): IP: 127.0.0.1 | Puerto: 4444
+[ERROR] 22:31:03:278 consola/(21512:21512): Error al conectar (a KERNEL)
+
+[INFO] 22:34:08:205 consola/(22007:22007): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:34:08:215 consola/(22007:22007): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:35:11:811 consola/(22205:22205): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:35:11:813 consola/(22205:22205): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:36:47:944 consola/(22474:22474): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:36:47:944 consola/(22474:22474): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:38:25:151 consola/(22766:22766): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:38:25:152 consola/(22766:22766): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:38:56:996 consola/(22892:22892): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:38:56:997 consola/(22892:22892): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:41:20:213 consola/(23293:23293): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:41:20:214 consola/(23293:23293): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:48:19:540 consola/(24280:24280): IP: 127.0.0.1 | Puerto: 4444
+[ERROR] 22:48:19:544 consola/(24280:24280): Error al conectar (a KERNEL)
+
+[INFO] 22:48:21:514 consola/(24295:24295): IP: 127.0.0.1 | Puerto: 4444
+[ERROR] 22:48:21:515 consola/(24295:24295): Error al conectar (a KERNEL)
+
+[INFO] 22:48:30:572 consola/(24353:24353): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:48:30:572 consola/(24353:24353): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:51:19:829 consola/(24817:24817): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:51:19:829 consola/(24817:24817): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:53:02:397 consola/(25102:25102): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:53:02:397 consola/(25102:25102): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:54:02:087 consola/(25306:25306): IP: 127.0.0.1 | Puerto: 4444
+[ERROR] 22:54:02:088 consola/(25306:25306): Error al conectar (a KERNEL)
+
+[INFO] 22:55:28:000 consola/(25527:25527): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:55:28:001 consola/(25527:25527): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:56:32:700 consola/(25724:25724): IP: 127.0.0.1 | Puerto: 4444
+[ERROR] 22:56:32:700 consola/(25724:25724): Error al conectar (a KERNEL)
+
+[INFO] 22:56:49:376 consola/(25781:25781): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:56:49:376 consola/(25781:25781): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 22:59:06:403 consola/(26118:26118): IP: 127.0.0.1 | Puerto: 4444
+[ERROR] 22:59:06:403 consola/(26118:26118): Error al conectar (a KERNEL)
+
+[INFO] 22:59:13:594 consola/(26179:26179): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 22:59:13:594 consola/(26179:26179): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 23:00:42:569 consola/(26439:26439): IP: 127.0.0.1 | Puerto: 4444
+[ERROR] 23:00:42:574 consola/(26439:26439): Error al conectar (a KERNEL)
+
+[INFO] 23:00:47:532 consola/(26458:26458): IP: 127.0.0.1 | Puerto: 4444
+[ERROR] 23:00:47:532 consola/(26458:26458): Error al conectar (a KERNEL)
+
+[INFO] 23:00:54:722 consola/(26512:26512): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 23:00:54:723 consola/(26512:26512): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 09:43:03:777 consola/(4303:4303): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 09:43:03:778 consola/(4303:4303): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 09:49:29:418 consola/(5002:5002): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 09:49:29:419 consola/(5002:5002): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 09:50:37:765 consola/(5178:5178): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 09:50:37:765 consola/(5178:5178): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 09:52:01:833 consola/(5371:5371): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 09:52:01:834 consola/(5371:5371): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 09:52:33:445 consola/(5482:5482): IP: 127.0.0.1 | Puerto: 4444
+[ERROR] 09:52:33:445 consola/(5482:5482): Error al conectar (a KERNEL)
+
+[INFO] 09:54:28:801 consola/(5731:5731): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 09:54:28:802 consola/(5731:5731): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 09:57:10:972 consola/(6057:6057): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 09:57:10:972 consola/(6057:6057): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 10:14:02:745 consola/(7863:7863): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 10:14:02:745 consola/(7863:7863): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 10:21:52:949 consola/(8655:8655): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 10:21:52:950 consola/(8655:8655): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 10:22:23:758 consola/(8764:8764): IP: 127.0.0.1 | Puerto: 4444
+[INFO] 10:22:23:762 consola/(8764:8764): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
