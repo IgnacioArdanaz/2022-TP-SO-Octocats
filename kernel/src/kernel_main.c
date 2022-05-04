@@ -66,7 +66,6 @@ int main(void) {
 
 				string_array_destroy(instrucciones);
 
-
 				break;
 			}
 
@@ -83,11 +82,8 @@ int main(void) {
 
 	log_info(logger, "DISCONNECT_SUCCESS!");
 
-
-
-
-
 	liberar_conexion(&cliente_socket);
+
 	log_destroy(logger);
 	config_destroy(config);
 
