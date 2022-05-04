@@ -5,7 +5,7 @@ int main(int argc, char** argv){
 		return EXIT_FAILURE;
 	}
 	//Recibe primero el tamanio y despues el path
-	uint8_t tamanio = atoi(argv[1]);
+	uint16_t tamanio = atoi(argv[1]);
 	char* path = argv[2];
 
 	char** tabla = string_array_new();

@@ -1,16 +1,30 @@
 #include "kernel_main.h"
 
-int main(void) {
-	t_log* logger = log_create("kernel.log", "kernel", 1, LOG_LEVEL_INFO);
 
-	int server_socket = iniciar_servidor(logger, "KERNEL", IP, PUERTO);
-	int cliente_socket = esperar_cliente(logger, "KERNEL",server_socket);
+int main(void) {
+	t_log* logger;
+	t_config* config;
+	int conexion_cpu_dispatch;
+	int conexion_memoria;
+	char* puerto_escucha;
+	char* ip_cpu;
+	char* puerto_cpu_dispatch;
+	char* puerto_cpu_interrupt;
+	char* puerto_memoria;
+
+	logger = log_create("kernel.log", "kernel", 1, LOG_LEVEL_INFO);
+	config = config_create("kernel.config");
+
+	puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
+
+	int server_socket = iniciar_servidor(logger, "KERNEL", IP, puerto_escucha);
+	int cliente_socket = esperar_cliente(logger, "KERNEL", server_socket);
 
 	op_code cop;
 	while (cliente_socket != -1) {
 
 		if (recv(cliente_socket, &cop, sizeof(op_code), 0) <= 0) {
-			log_info(logger, "DISCONNECT!");
+			log_info(logger, "DISCONNECT_FAILURE!");
 			return EXIT_FAILURE;
 		}
 
@@ -18,9 +32,7 @@ int main(void) {
 			case PROGRAMA:
 			{
 				char** instrucciones = string_array_new();
-				uint8_t tamanio;
-
-
+				uint16_t tamanio;
 
 				if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
 					log_error(logger, "Fallo recibiendo PROGRAMA");
@@ -34,7 +46,27 @@ int main(void) {
 					log_info(logger, "Instruccion numero %d: %s \n", i, instrucciones[i]);
 				}
 
+
+				PCB_t proceso;
+				proceso.instrucciones = string_array_new();
+
+				proceso.pid = 1; // A DETERMINAR CON EL TEMA DE HILOS Y N CONSOLAS
+				proceso.tamanio = tamanio;
+				proceso.pc = 0;
+				proceso.instrucciones = instrucciones;
+				proceso.tabla_paginas = 0;   // SOLO LO INICIALIZAMOS, MEMORIA NOS VA A ENVIAR EL VALOR
+				proceso.est_rafaga = 5;  // ESTO VA POR ARCHIVO DE CONFIGURACION
+
+				ip_cpu = config_get_string_value(config,"IP_CPU");
+				puerto_cpu_dispatch = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
+
+				conexion_cpu_dispatch = crear_conexion(logger, "CPU DISPATCH", ip_cpu, puerto_cpu_dispatch);
+
+				send_proceso(conexion_cpu_dispatch, proceso);
+
 				string_array_destroy(instrucciones);
+
+
 				break;
 			}
 
@@ -48,6 +80,16 @@ int main(void) {
 				return EXIT_FAILURE;
 		}
 	}
+
+	log_info(logger, "DISCONNECT_SUCCESS!");
+
+
+
+
+
+	liberar_conexion(&cliente_socket);
+	log_destroy(logger);
+	config_destroy(config);
 
 	return EXIT_SUCCESS;
 }
