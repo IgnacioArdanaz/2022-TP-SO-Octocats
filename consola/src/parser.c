@@ -1,36 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include<commons/log.h>
-#include<commons/string.h>
-#include<commons/config.h>
-
-/*
- *  Para guardar las instrucciones podemos usar string_split (biblioteca commons)
- *  si es que guardamos la instruccion completa como string,
- *  almacenando estos en un array
- */
+#include "parser.h"
 /*
  * TODO investigar si exit puede devolver el tipo de error
  * crear nuestros propios #define como EXIT_FAILURE pero mas descriptivos
  */
-
-
-typedef struct {
-	char *operacion;
-	int cantParametros;
-} t_identificador;
-
 static t_identificador tablaIdentificadores[] = {
         {"NO_OP",1},{"I/O",1}, {"READ",1},
         {"COPY",2},{"WRITE",2},{"EXIT",0}
 };
-
-#define CANT_IDENTIFICADORES (sizeof(tablaIdentificadores)/sizeof(t_identificador))
-/*estamos dividiendo la cantidad de bytes que ocupa la tabla por lo que ocupa un identificador
- * obteniendo la cantidad de identificadores, capaz se podria hacer con size?
-*/
 
 int cantParametros(char *instruccion){
     for(int i=0;i < CANT_IDENTIFICADORES;i++){
@@ -40,15 +16,9 @@ int cantParametros(char *instruccion){
     }
     printf("error operacion invalida\n"); //si no es un operacion valido devuelve -1
     exit(EXIT_FAILURE);
-    /*
-     * si quisieramos saber si hay un parametro sobrante, podriamos hacer una verificacion
-     * si lo que lee es numerico (basicamente piensa que viene una operacion pero en realiadad
-     * es un parametro extra en alguna instruccion)
-     */
 }
 
-int isNumber(char s[])
-{
+int isNumber(char s[]){
     for (int i = 0; s[i]!= '\0'; i++)
     {
         if (isdigit(s[i]) == 0)
@@ -57,38 +27,64 @@ int isNumber(char s[])
     return 1;
 }
 
-void leerParametro(FILE *archivo,char *auxP){
-	fscanf(archivo, "%s",auxP);
-		if(!isNumber(auxP)){
-	    	printf("error parametro invalido\n");
-	    	exit(1); //error 1: parametro invalido
-	    }
+void validarParametro(char *auxP){
+	if(!isNumber(auxP)){
+		printf("error parametro invalido\n");
+		exit(1); //error 1: parametro invalido
+	}
 }
 
-int parser(int argc, char** argv) {
-    if(argc < 2) {
-            return EXIT_FAILURE;
-        }
+void leerParametros(FILE *archivo,char** instruccion, char *auxP, int cantParametros){
+	int j;
+	for(j=0;j<cantParametros;j++){
+		fscanf(archivo, "%s",auxP);
+		validarParametro(auxP);
+		//si es valido el parametro lo concatena a la instruccion
+		string_append_with_format(instruccion," %s",auxP);
+	}
+}
 
-    char *auxP = malloc(sizeof(char));
-    int cant;
-    int i;
+void iterarNOOP(FILE *archivo, char* instruccion, char *auxP, char*** tabla){
+	int repeticiones;
+	fscanf(archivo, "%s",auxP);
+	validarParametro(auxP);
+	repeticiones = atoi(auxP);
+	printf("cant de NOOP: %d\n",repeticiones);
+	for(int i=0;i<repeticiones-1;i++){
+		//iteramos hasta cantidad de repeticiones menos uno para al final
+		//utilizar el puntero leido
+		char *copia = string_duplicate(instruccion);
+		string_array_push(tabla, copia);
+	}
+	string_array_push(tabla, instruccion);
+}
+
+void parser(char* path, char*** tabla) {
+	// Puntero que nos ayuda a leer cada palabra
+	char *auxP = string_new();
+    int cant; // Cantidad de parametros
     FILE *archivo;
-    archivo= fopen(argv[1],"r");
+    archivo= fopen(path,"r");
 
     while(!feof(archivo)){
         //leemos la primer palabra de la instruccion (una operacion)
         fscanf(archivo, "%s",auxP);
-
+        //asignamos la cantidad de parametros que tiene la operacion
         cant = cantParametros(auxP);
+        //creamos el puntero de la instruccion
+        char *instruccion = string_new();
+        //guardar la operacion en el puntero instruccion
+        strcpy(instruccion, auxP);
 
-        //segun que operacion deba realizar va a leer X cantidad de parametros
-        for(i=0;i<cant;i++){
-
-        	leerParametro(archivo,auxP);
+        if(strcmp(instruccion, "NO_OP")==0){
+        	iterarNOOP(archivo, instruccion, auxP, tabla);
+        }else{
+        	leerParametros(archivo,&instruccion,auxP,cant);
+        	string_array_push(tabla, instruccion);
         }
     }
-    printf("Termino bien\n");
+
+    printf("\n------------------\nParser termino bien\n------------------\n\n");
     free(auxP);
     fclose(archivo);
 

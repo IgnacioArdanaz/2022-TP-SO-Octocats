@@ -1,14 +1,12 @@
-[ERROR] 13:17:37:535 consola/(18211:18211): Error creando el socket para (null):(null)
-[INFO] 13:18:49:021 consola/(18335:18335): IP: (null) | Puerto: (null)
-[INFO] 13:19:21:957 consola/(18412:18412): IP: 127.0.0.1 | Puerto: 4444
-[INFO] 13:19:21:958 consola/(18412:18412): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
-
-[INFO] 13:26:48:712 consola/(18971:18971): IP: 127.0.0.1 | Puerto: 4444
-[INFO] 13:26:48:718 consola/(18971:18971): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+[INFO] 10:36:35:993 consola/(23648:23648): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:36:35:994 consola/(23648:23648): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
 [INFO] 18:04:06:479 consola/(16706:16706): IP: 127.0.0.1 | Puerto: 4444
 [INFO] 18:04:06:480 consola/(16706:16706): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
 
 [INFO] 18:05:21:954 consola/(16903:16903): IP: 127.0.0.1 | Puerto: 4444
 [INFO] 18:05:21:955 consola/(16903:16903): Cliente conectado en 127.0.0.1:4444 (a KERNEL)
+
+[INFO] 10:43:52:289 consola/(24786:24786): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:43:52:291 consola/(24786:24786): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 

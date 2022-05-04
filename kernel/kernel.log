@@ -1,23 +1,45 @@
-[INFO] 13:14:06:544 kernel/(17858:17858): Escuchando en 127.0.0.1:4444 (KERNEL)
+[INFO] 10:36:32:671 kernel/(23633:23633): Escuchando en 127.0.0.1:8000 (KERNEL)
 
-[INFO] 13:14:06:554 kernel/(17858:17858): KERNEL listo para recibir al cliente
-[INFO] 13:19:21:958 kernel/(17858:17858): Cliente conectado (a KERNEL)
+[INFO] 10:36:32:675 kernel/(23633:23633): KERNEL listo para recibir al cliente
+[INFO] 10:36:35:993 kernel/(23633:23633): Cliente conectado (a KERNEL)
 
-[INFO] 13:26:32:817 kernel/(18928:18928): Escuchando en 127.0.0.1:4444 (KERNEL)
+[INFO] 10:36:35:994 kernel/(23633:23633): Tamanio 8
+[INFO] 10:36:35:994 kernel/(23633:23633): Instruccion numero 0: I/O 3000 
 
-[INFO] 13:26:32:818 kernel/(18928:18928): KERNEL listo para recibir al cliente
-[INFO] 13:26:48:714 kernel/(18928:18928): Cliente conectado (a KERNEL)
+[INFO] 10:36:35:994 kernel/(23633:23633): Instruccion numero 1: NO_OP 
 
-[INFO] 18:03:50:674 kernel/(16654:16654): Escuchando en 127.0.0.1:4444 (KERNEL)
+[INFO] 10:36:35:994 kernel/(23633:23633): Instruccion numero 2: NO_OP 
 
-[INFO] 18:03:50:707 kernel/(16654:16654): KERNEL listo para recibir al cliente
-[INFO] 18:04:06:480 kernel/(16654:16654): Cliente conectado (a KERNEL)
+[INFO] 10:36:35:994 kernel/(23633:23633): Instruccion numero 3: WRITE 4 42 
 
-[INFO] 18:04:55:060 kernel/(16818:16818): KERNEL listo para recibir al cliente
-[INFO] 18:04:55:066 kernel/(16818:16818): Cliente conectado (a KERNEL)
+[INFO] 10:36:35:994 kernel/(23633:23633): Instruccion numero 4: COPY 0 4 
 
-[INFO] 18:05:16:554 kernel/(16886:16886): Escuchando en 127.0.0.1:4444 (KERNEL)
+[INFO] 10:36:35:994 kernel/(23633:23633): Instruccion numero 5: READ 0 
 
-[INFO] 18:05:16:557 kernel/(16886:16886): KERNEL listo para recibir al cliente
-[INFO] 18:05:21:955 kernel/(16886:16886): Cliente conectado (a KERNEL)
+[INFO] 10:36:35:994 kernel/(23633:23633): Instruccion numero 6: EXIT 
 
+[INFO] 10:36:35:995 kernel/(23633:23633): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+
+[INFO] 10:36:36:972 kernel/(23633:23633): DISCONNECT_FAILURE![INFO] 10:43:47:105 kernel/(24743:24743): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 10:43:47:105 kernel/(24743:24743): KERNEL listo para recibir al cliente
+[INFO] 10:43:52:290 kernel/(24743:24743): Cliente conectado (a KERNEL)
+
+[INFO] 10:43:52:292 kernel/(24743:24743): Tamanio 8
+[INFO] 10:43:52:292 kernel/(24743:24743): Instruccion numero 0: I/O 3000 
+
+[INFO] 10:43:52:292 kernel/(24743:24743): Instruccion numero 1: NO_OP 
+
+[INFO] 10:43:52:292 kernel/(24743:24743): Instruccion numero 2: NO_OP 
+
+[INFO] 10:43:52:292 kernel/(24743:24743): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 10:43:52:292 kernel/(24743:24743): Instruccion numero 4: COPY 0 4 
+
+[INFO] 10:43:52:292 kernel/(24743:24743): Instruccion numero 5: READ 0 
+
+[INFO] 10:43:52:292 kernel/(24743:24743): Instruccion numero 6: EXIT 
+
+[INFO] 10:43:52:293 kernel/(24743:24743): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+
+[INFO] 10:43:53:278 kernel/(24743:24743): DISCONNECT_FAILURE!
