@@ -1,0 +1,563 @@
+20:57:45 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o   -lcommons -lpthread
+Finished building target: kernel
+ 
+20:57:53 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+20:58:08 **** Incremental Build of configuration Debug for project consola ****
+make all 
+Building file: ../src/consola_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/consola_main.d" -MT"src/consola_main.o" -o "src/consola_main.o" "../src/consola_main.c"
+In file included from ../src/consola_main.h:11:0,
+                 from ../src/consola_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:74:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/consola_main.h:7:0,
+                 from ../src/consola_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+Finished building: ../src/consola_main.c
+ 
+Building file: ../src/parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+Finished building: ../src/parser.c
+ 
+Building target: consola
+Invoking: GCC C Linker
+gcc  -o "consola"  ./src/consola_main.o ./src/parser.o   -lcommons
+Finished building target: consola
+ 
+20:59:03 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:03:42 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:03:59 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:08:26 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:74:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/kernel_main.h:7:0,
+                 from ../src/kernel_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+../src/kernel_main.c: In function ‘procesar_socket’:
+../src/kernel_main.c:30:40: warning: passing argument 2 of ‘recv_programa’ from incompatible pointer type [-Wincompatible-pointer-types]
+     if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
+                                        ^
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c:15:6: note: expected ‘char **’ but argument is of type ‘char ***’
+ bool recv_programa(int fd, char** instrucciones, uint16_t* tamanio) {
+      ^
+../src/kernel_main.c:43:11: warning: variable ‘proceso’ set but not used [-Wunused-but-set-variable]
+     PCB_t proceso;
+           ^
+../src/kernel_main.c:66:4: warning: case value ‘4294967295’ not in enumerated type ‘op_code {aka enum <anonymous>}’ [-Wswitch]
+    case -1:
+    ^
+../src/kernel_main.c:16:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = argumentos->server_name;
+        ^
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:101:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:100:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:99:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:98:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:96:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:95:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o   -lcommons -lpthread
+Finished building target: kernel
+ 
+21:08:35 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:10:42 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:74:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/kernel_main.h:7:0,
+                 from ../src/kernel_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+../src/kernel_main.c: In function ‘procesar_socket’:
+../src/kernel_main.c:20:3: warning: implicit declaration of function ‘print’ [-Wimplicit-function-declaration]
+   print("Cliente socket: %d%n",cliente_socket);
+   ^
+../src/kernel_main.c:31:40: warning: passing argument 2 of ‘recv_programa’ from incompatible pointer type [-Wincompatible-pointer-types]
+     if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
+                                        ^
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c:15:6: note: expected ‘char **’ but argument is of type ‘char ***’
+ bool recv_programa(int fd, char** instrucciones, uint16_t* tamanio) {
+      ^
+../src/kernel_main.c:44:11: warning: variable ‘proceso’ set but not used [-Wunused-but-set-variable]
+     PCB_t proceso;
+           ^
+../src/kernel_main.c:67:4: warning: case value ‘4294967295’ not in enumerated type ‘op_code {aka enum <anonymous>}’ [-Wswitch]
+    case -1:
+    ^
+../src/kernel_main.c:16:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = argumentos->server_name;
+        ^
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:102:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:101:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:100:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:99:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:97:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:96:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o   -lcommons -lpthread
+./src/kernel_main.o: In function `procesar_socket':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_main.c:20: undefined reference to `print'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'kernel' failed
+make: *** [kernel] Error 1
+21:11:07 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:74:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/kernel_main.h:7:0,
+                 from ../src/kernel_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+../src/kernel_main.c: In function ‘procesar_socket’:
+../src/kernel_main.c:31:40: warning: passing argument 2 of ‘recv_programa’ from incompatible pointer type [-Wincompatible-pointer-types]
+     if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
+                                        ^
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c:15:6: note: expected ‘char **’ but argument is of type ‘char ***’
+ bool recv_programa(int fd, char** instrucciones, uint16_t* tamanio) {
+      ^
+../src/kernel_main.c:44:11: warning: variable ‘proceso’ set but not used [-Wunused-but-set-variable]
+     PCB_t proceso;
+           ^
+../src/kernel_main.c:67:4: warning: case value ‘4294967295’ not in enumerated type ‘op_code {aka enum <anonymous>}’ [-Wswitch]
+    case -1:
+    ^
+../src/kernel_main.c:16:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = argumentos->server_name;
+        ^
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:102:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:101:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:100:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:99:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:97:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:96:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o   -lcommons -lpthread
+Finished building target: kernel
+ 
+21:11:11 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:12:32 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:74:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/kernel_main.h:7:0,
+                 from ../src/kernel_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+../src/kernel_main.c: In function ‘procesar_socket’:
+../src/kernel_main.c:30:40: warning: passing argument 2 of ‘recv_programa’ from incompatible pointer type [-Wincompatible-pointer-types]
+     if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
+                                        ^
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c:15:6: note: expected ‘char **’ but argument is of type ‘char ***’
+ bool recv_programa(int fd, char** instrucciones, uint16_t* tamanio) {
+      ^
+../src/kernel_main.c:43:11: warning: variable ‘proceso’ set but not used [-Wunused-but-set-variable]
+     PCB_t proceso;
+           ^
+../src/kernel_main.c:66:4: warning: case value ‘4294967295’ not in enumerated type ‘op_code {aka enum <anonymous>}’ [-Wswitch]
+    case -1:
+    ^
+../src/kernel_main.c:16:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = argumentos->server_name;
+        ^
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:103:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:102:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:101:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:100:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:98:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:97:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o   -lcommons -lpthread
+Finished building target: kernel
+ 
+21:12:36 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:14:09 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:74:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/kernel_main.h:7:0,
+                 from ../src/kernel_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+../src/kernel_main.c: In function ‘procesar_socket’:
+../src/kernel_main.c:31:40: warning: passing argument 2 of ‘recv_programa’ from incompatible pointer type [-Wincompatible-pointer-types]
+     if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
+                                        ^
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c:15:6: note: expected ‘char **’ but argument is of type ‘char ***’
+ bool recv_programa(int fd, char** instrucciones, uint16_t* tamanio) {
+      ^
+../src/kernel_main.c:44:11: warning: variable ‘proceso’ set but not used [-Wunused-but-set-variable]
+     PCB_t proceso;
+           ^
+../src/kernel_main.c:67:4: warning: case value ‘4294967295’ not in enumerated type ‘op_code {aka enum <anonymous>}’ [-Wswitch]
+    case -1:
+    ^
+../src/kernel_main.c:16:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = argumentos->server_name;
+        ^
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:104:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:103:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:102:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:101:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:99:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:98:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o   -lcommons -lpthread
+Finished building target: kernel
+ 
+21:14:13 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:14:25 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:18:43 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:74:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/kernel_main.h:7:0,
+                 from ../src/kernel_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+../src/kernel_main.c: In function ‘procesar_socket’:
+../src/kernel_main.c:31:40: warning: passing argument 2 of ‘recv_programa’ from incompatible pointer type [-Wincompatible-pointer-types]
+     if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
+                                        ^
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c:15:6: note: expected ‘char **’ but argument is of type ‘char ***’
+ bool recv_programa(int fd, char** instrucciones, uint16_t* tamanio) {
+      ^
+../src/kernel_main.c:44:11: warning: variable ‘proceso’ set but not used [-Wunused-but-set-variable]
+     PCB_t proceso;
+           ^
+../src/kernel_main.c:67:4: warning: case value ‘4294967295’ not in enumerated type ‘op_code {aka enum <anonymous>}’ [-Wswitch]
+    case -1:
+    ^
+../src/kernel_main.c:16:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = argumentos->server_name;
+        ^
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:104:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:103:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:102:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:101:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:99:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:98:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o   -lcommons -lpthread
+Finished building target: kernel
+ 
+21:18:47 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:19:03 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:74:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/kernel_main.h:7:0,
+                 from ../src/kernel_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+../src/kernel_main.c: In function ‘procesar_socket’:
+../src/kernel_main.c:31:40: warning: passing argument 2 of ‘recv_programa’ from incompatible pointer type [-Wincompatible-pointer-types]
+     if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
+                                        ^
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c:15:6: note: expected ‘char **’ but argument is of type ‘char ***’
+ bool recv_programa(int fd, char** instrucciones, uint16_t* tamanio) {
+      ^
+../src/kernel_main.c:44:11: warning: variable ‘proceso’ set but not used [-Wunused-but-set-variable]
+     PCB_t proceso;
+           ^
+../src/kernel_main.c:67:4: warning: case value ‘4294967295’ not in enumerated type ‘op_code {aka enum <anonymous>}’ [-Wswitch]
+    case -1:
+    ^
+../src/kernel_main.c:16:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = argumentos->server_name;
+        ^
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:104:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:103:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:102:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:101:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:99:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:98:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o   -lcommons -lpthread
+Finished building target: kernel
+ 
+21:19:20 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+21:20:03 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:22:33 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:74:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/kernel_main.h:7:0,
+                 from ../src/kernel_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+../src/kernel_main.c: In function ‘procesar_socket’:
+../src/kernel_main.c:31:40: warning: passing argument 2 of ‘recv_programa’ from incompatible pointer type [-Wincompatible-pointer-types]
+     if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
+                                        ^
+In file included from ../src/kernel_main.h:11:0,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/protocol.c:15:6: note: expected ‘char **’ but argument is of type ‘char ***’
+ bool recv_programa(int fd, char** instrucciones, uint16_t* tamanio) {
+      ^
+../src/kernel_main.c:44:11: warning: variable ‘proceso’ set but not used [-Wunused-but-set-variable]
+     PCB_t proceso;
+           ^
+../src/kernel_main.c:67:4: warning: case value ‘4294967295’ not in enumerated type ‘op_code {aka enum <anonymous>}’ [-Wswitch]
+    case -1:
+    ^
+../src/kernel_main.c:16:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = argumentos->server_name;
+        ^
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:104:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:103:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:102:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:101:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:99:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:98:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o   -lcommons -lpthread
+Finished building target: kernel
+ 
+21:22:39 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:22:47 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.

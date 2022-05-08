@@ -1,0 +1,13 @@
+01:11:28 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building target: shared
+Invoking: GCC C Linker
+gcc  -o "shared"  ./src/protocol.o ./src/sockets.o   -lcommons
+/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o: In function `_start':
+(.text+0x18): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [shared] Error 1
+makefile:30: recipe for target 'shared' failed
+
+01:11:29 Build Finished (took 507ms)
+
