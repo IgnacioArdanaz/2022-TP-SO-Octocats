@@ -11,6 +11,8 @@ int main(void) {
 	char* puerto_cpu_interrupt;
 	char* puerto_memoria;
 
+	t_queue* colaNew = queue_create();
+
 	t_log* logger;
 	t_config* config;
 
@@ -20,7 +22,16 @@ int main(void) {
 	puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
 
 	int server_socket = iniciar_servidor(logger, "KERNEL", IP, puerto_escucha);
-	while(escuchar_servidor(logger,"KERNEL",server_socket));
+	while(escuchar_servidor(logger,"KERNEL",server_socket, colaNew));
+
+
+
+
+
+
+
+
+
 
 	log_info(logger, "DISCONNECT_SUCCESS!");
 

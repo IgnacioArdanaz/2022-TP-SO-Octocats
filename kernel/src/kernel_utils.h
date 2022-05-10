@@ -7,6 +7,7 @@
 #include<commons/log.h>
 #include<commons/string.h>
 #include<commons/config.h>
+#include<commons/collections/queue.h>
 #include<readline/readline.h>
 
 #include "../../shared/src/sockets.h"
@@ -17,9 +18,15 @@ typedef struct{
 	t_log* log;
 	int cliente;
 	char* server_name;
-} thread_args;
+	t_queue* colaNew;
+} procesar_consola_args;
 
-void procesar_socket(thread_args* argumentos);
-int escuchar_servidor(t_log* logger, char* name, int server_socket);
+typedef struct{
+	t_log* log;
+	t_queue* colaNew;
+} pasaje_new_ready_args;
+
+void procesar_consola(procesar_consola_args* argumentos);
+int escuchar_servidor(t_log* logger, char* name, int server_socket, t_queue* colaNew);
 
 #endif /* KERNEL_UTILS_H_ */
