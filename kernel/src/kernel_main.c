@@ -11,8 +11,6 @@ int main(void) {
 	char* puerto_cpu_interrupt;
 	char* puerto_memoria;
 
-	t_queue* colaNew = queue_create();
-
 	t_log* logger;
 	t_config* config;
 
