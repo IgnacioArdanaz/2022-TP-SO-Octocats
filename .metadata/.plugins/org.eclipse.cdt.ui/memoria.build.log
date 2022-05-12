@@ -1,0 +1,30 @@
+01:42:13 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building target: memoria
+Invoking: GCC C Linker
+gcc  -o "memoria"  ./src/memoria_main.o   
+./src/memoria_main.o: In function `crear_conexion':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:22: undefined reference to `log_error'
+makefile:30: recipe for target 'memoria' failed
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:28: undefined reference to `log_error'
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:33: undefined reference to `log_info'
+./src/memoria_main.o: In function `iniciar_servidor':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:79: undefined reference to `log_info'
+./src/memoria_main.o: In function `esperar_cliente':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:91: undefined reference to `log_info'
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:95: undefined reference to `log_info'
+./src/memoria_main.o: In function `deserializar_programa':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:74: undefined reference to `string_array_push'
+./src/memoria_main.o: In function `deserializar_proceso':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:186: undefined reference to `string_array_push'
+./src/memoria_main.o: In function `main':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:4: undefined reference to `log_create'
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:5: undefined reference to `config_create'
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:8: undefined reference to `config_get_string_value'
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:14: undefined reference to `log_destroy'
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:15: undefined reference to `config_destroy'
+collect2: error: ld returned 1 exit status
+make: *** [memoria] Error 1
+
+01:42:16 Build Finished (took 2s.368ms)
+

@@ -1,0 +1,49 @@
+19:13:19 **** Build of configuration Debug for project cpu ****
+make all 
+Building file: ../src/cpu_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cpu_main.d" -MT"src/cpu_main.o" -o "src/cpu_main.o" "../src/cpu_main.c"
+In file included from ../src/cpu_main.h:11:0,
+                 from ../src/cpu_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘send_finalizado’:
+../src/../../shared/src/protocol.c:6:22: warning: passing argument 2 of ‘send’ makes pointer from integer without a cast [-Wint-conversion]
+     if (send(socket, mensaje_gen, sizeof(mensaje_gen), 0) != sizeof(mensaje_gen)){
+                      ^
+In file included from ../src/../../shared/src/sockets.h:4:0,
+                 from ../src/../../shared/src/sockets.c:1,
+                 from ../src/cpu_main.h:10,
+                 from ../src/cpu_main.c:1:
+/usr/include/i386-linux-gnu/sys/socket.h:149:16: note: expected ‘const void *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+ extern ssize_t send (int __fd, const void *__buf, size_t __n, int __flags);
+                ^
+In file included from ../src/cpu_main.h:11:0,
+                 from ../src/cpu_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:90:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/cpu_main.h:7:0,
+                 from ../src/cpu_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+../src/cpu_main.c: In function ‘main’:
+../src/cpu_main.c:42:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 7 has type ‘double’ [-Wformat=]
+     log_info(logger, "PCB ---> pid=%d | tamanio=%d | pc=%d | tabla_paginas=%d | est_rafaga=%d", proceso.pid, proceso.tamanio, proceso.pc, proceso.tabla_paginas, proceso.est_rafaga );
+                      ^
+../src/cpu_main.c:49:4: warning: case value ‘4294967295’ not in enumerated type ‘op_code {aka enum <anonymous>}’ [-Wswitch]
+    case -1:
+    ^
+../src/cpu_main.c:7:8: warning: unused variable ‘puerto_interrupt’ [-Wunused-variable]
+  char* puerto_interrupt;
+        ^
+Finished building: ../src/cpu_main.c
+ 
+Building target: cpu
+Invoking: GCC C Linker
+gcc  -o "cpu"  ./src/cpu_main.o   -lcommons
+Finished building target: cpu
+ 
+
+19:13:21 Build Finished (took 1s.358ms)
+
