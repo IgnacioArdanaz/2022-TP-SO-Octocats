@@ -1,5 +1,21 @@
-01:42:13 **** Incremental Build of configuration Debug for project memoria ****
+12:56:02 **** Incremental Build of configuration Debug for project memoria ****
 make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+In file included from ../src/memoria_main.h:11:0,
+                 from ../src/memoria_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:74:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/memoria_main.h:7:0,
+                 from ../src/memoria_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+Finished building: ../src/memoria_main.c
+ 
 Building target: memoria
 Invoking: GCC C Linker
 gcc  -o "memoria"  ./src/memoria_main.o   
@@ -26,5 +42,5 @@ makefile:30: recipe for target 'memoria' failed
 collect2: error: ld returned 1 exit status
 make: *** [memoria] Error 1
 
-01:42:16 Build Finished (took 2s.368ms)
+12:56:03 Build Finished (took 896ms)
 

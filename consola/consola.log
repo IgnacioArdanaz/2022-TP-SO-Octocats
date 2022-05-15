@@ -67,3 +67,24 @@
 [INFO] 22:00:00:758 consola/(20557:20557): IP: 127.0.0.1 | Puerto: 8000
 [INFO] 22:00:00:759 consola/(20557:20557): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
+[INFO] 11:00:22:696 consola/(4782:4782): IP: 127.0.0.1 | Puerto: 8000
+[ERROR] 11:00:22:702 consola/(4782:4782): Error al conectar (a KERNEL)
+
+[INFO] 11:03:52:271 consola/(4904:4904): IP: 127.0.0.1 | Puerto: 8000
+[ERROR] 11:03:52:271 consola/(4904:4904): Error al conectar (a KERNEL)
+
+[INFO] 11:09:39:067 consola/(5107:5107): IP: 127.0.0.1 | Puerto: 8000
+[ERROR] 11:09:39:067 consola/(5107:5107): Error al conectar (a KERNEL)
+
+[INFO] 11:11:47:157 consola/(5176:5176): IP: 127.0.0.1 | Puerto: 8000
+[ERROR] 11:11:47:157 consola/(5176:5176): Error al conectar (a KERNEL)
+
+[INFO] 11:16:11:969 consola/(5277:5277): IP: 127.0.0.1 | Puerto: 8000
+[ERROR] 11:16:11:969 consola/(5277:5277): Error al conectar (a KERNEL)
+
+[INFO] 11:30:06:468 consola/(6203:6203): IP: 127.0.0.1 | Puerto: 8000
+[ERROR] 11:30:06:483 consola/(6203:6203): Error al conectar (a KERNEL)
+
+[INFO] 11:31:14:584 consola/(6270:6270): IP: 127.0.0.1 | Puerto: 8000
+[ERROR] 11:31:14:584 consola/(6270:6270): Error al conectar (a KERNEL)
+

@@ -15,18 +15,17 @@
 #include "../../shared/src/structures.h"
 
 typedef struct{
-	t_log* log;
 	int cliente;
 	char* server_name;
-	t_queue* colaNew;
 } procesar_consola_args;
 
-typedef struct{
-	t_log* log;
-	t_queue* colaNew;
-} pasaje_new_ready_args;
+t_config* config;
+t_log* logger;
 
+void inicializar_estructuras();
 void procesar_consola(procesar_consola_args* argumentos);
-int escuchar_servidor(t_log* logger, char* name, int server_socket, t_queue* colaNew);
-
+int escuchar_servidor(char* name, int server_socket);
+void pasaje_new_ready();
+PCB_t* sjf();
+PCB_t* fifo();
 #endif /* KERNEL_UTILS_H_ */
