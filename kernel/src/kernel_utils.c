@@ -1,6 +1,8 @@
 #include "kernel_utils.h"
 
-pthread_mutex_t sem_ready;
+pthread_mutex_t mx_cola_new = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t s_new_ready = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t s_multip_actual = PTHREAD_MUTEX_INITIALIZER;
 t_queue* cola_new;
 t_list* cola_ready;
 t_queue* cola_blocked;
@@ -14,15 +16,19 @@ void pasaje_new_ready(){
 	int grado_multiprogramacion = config_get_int_value(config, "GRADO_MULTIPROGRAMACION");
 	//solucion de mierda, buscarle la vuelta a hacer una mas linda
 	//no se pq pero el semaforo siempre empieza en 1, entonces me caga
-	pthread_mutex_lock(&sem_ready);
+	pthread_mutex_lock(&s_new_ready);
 	while(1){
-		pthread_mutex_lock(&sem_ready);
+		pthread_mutex_lock(&s_new_ready);
+		pthread_mutex_lock(&mx_cola_new);
 		//AGREGAR QUE SI HAY PCBS EN READY SUSPENDED TIENEN PRIORIDAD DE PASO
 		if(multiprogramacion_actual < grado_multiprogramacion){
 			PCB_t* p = queue_pop(cola_new);
 			list_add(cola_ready,p);
+			pthread_mutex_lock(&s_multip_actual);
+			multiprogramacion_actual++;
+			pthread_mutex_unlock(&s_multip_actual);
 		}
-		pthread_mutex_unlock(&sem_ready);
+		pthread_mutex_unlock(&mx_cola_new);
 	}
 
 }
@@ -33,10 +39,6 @@ void inicializar(){
 	cola_new = queue_create();
 	cola_blocked = queue_create();
 	cola_ready = list_create();
-	if(pthread_mutex_init(&sem_ready,NULL) != 0){
-		log_error(logger,"Error inicializando el MUTEX de new-ready");
-		exit(-1);
-	}
 	pthread_t hilo_pasaje_new_ready;
 	pthread_create(&hilo_pasaje_new_ready,NULL,(void*)pasaje_new_ready,NULL);
 	pthread_detach(hilo_pasaje_new_ready);
@@ -45,6 +47,7 @@ void inicializar(){
 void procesar_socket(thread_args* argumentos){
 	int cliente_socket = argumentos->cliente;
 	char* server_name = argumentos->server_name;
+	free(argumentos);
 	op_code cop;
 	while (cliente_socket != -1) {
 
@@ -56,7 +59,6 @@ void procesar_socket(thread_args* argumentos){
 		switch (cop) {
 			case PROGRAMA:
 			{
-				log_info(logger,"LOGRE ENTRAR AL SWITH CASE");
 				char** instrucciones = string_array_new();
 				uint16_t tamanio;
 
@@ -82,10 +84,10 @@ void procesar_socket(thread_args* argumentos){
 				proceso.instrucciones = instrucciones;
 				proceso.tabla_paginas = 0;   // SOLO LO INICIALIZAMOS, MEMORIA NOS VA A ENVIAR EL VALOR
 				proceso.est_rafaga = 5;  // ESTO VA POR ARCHIVO DE CONFIGURACION
-
+				pthread_mutex_lock(&mx_cola_new);
 				queue_push(cola_new,&proceso);
-//				pthread_mutex_unlock(&sem_ready);
-
+				pthread_mutex_unlock(&mx_cola_new);
+				pthread_mutex_unlock(&s_new_ready);
 //				ip_cpu = config_get_string_value(config,"IP_CPU");
 //				puerto_cpu_dispatch = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
 //
@@ -94,8 +96,9 @@ void procesar_socket(thread_args* argumentos){
 //				send_proceso(conexion_cpu_dispatch, proceso);
 
 				string_array_destroy(instrucciones);
-
-				break;
+				log_info(logger,"Cola de new: %d",queue_size(cola_new));
+				log_info(logger,"Cola de ready: %d", list_size(cola_ready));
+				return;
 			}
 
 			// Errores

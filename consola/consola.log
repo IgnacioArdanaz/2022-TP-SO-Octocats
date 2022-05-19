@@ -115,3 +115,87 @@
 [INFO] 00:58:28:031 consola/(8879:8879): IP: 127.0.0.1 | Puerto: 8000
 [INFO] 00:58:28:032 consola/(8879:8879): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
+[INFO] 01:17:46:633 consola/(9159:9159): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:17:46:633 consola/(9159:9159): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:28:49:217 consola/(9288:9288): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:28:49:218 consola/(9288:9288): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:29:56:874 consola/(9381:9381): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:29:56:875 consola/(9381:9381): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:31:00:739 consola/(9425:9425): IP: 127.0.0.1 | Puerto: 8000
+[ERROR] 01:31:00:739 consola/(9425:9425): Error al conectar (a KERNEL)
+
+[INFO] 01:31:10:569 consola/(9465:9465): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:31:10:570 consola/(9465:9465): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:32:20:156 consola/(9542:9542): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:32:20:157 consola/(9542:9542): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:35:50:195 consola/(9664:9664): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:35:50:195 consola/(9664:9664): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:37:09:791 consola/(9719:9719): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:37:09:792 consola/(9719:9719): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:51:00:204 consola/(10217:10217): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:51:00:204 consola/(10217:10217): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:51:11:815 consola/(10263:10263): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:51:11:816 consola/(10263:10263): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:51:13:602 consola/(10276:10276): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:51:13:602 consola/(10276:10276): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:54:30:396 consola/(10372:10372): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:54:30:397 consola/(10372:10372): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:54:36:468 consola/(10385:10385): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:54:36:469 consola/(10385:10385): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:54:43:736 consola/(10397:10397): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:54:43:737 consola/(10397:10397): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:55:51:614 consola/(10456:10456): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:55:51:614 consola/(10456:10456): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:56:05:779 consola/(10480:10480): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:56:05:779 consola/(10480:10480): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:56:23:957 consola/(10493:10493): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:56:23:957 consola/(10493:10493): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:56:40:332 consola/(10514:10514): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:56:40:333 consola/(10514:10514): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:56:54:683 consola/(10527:10527): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:56:54:684 consola/(10527:10527): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:57:03:582 consola/(10539:10539): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:57:03:582 consola/(10539:10539): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:58:24:966 consola/(10599:10599): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:58:24:967 consola/(10599:10599): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:58:28:338 consola/(10611:10611): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:58:28:338 consola/(10611:10611): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:58:31:381 consola/(10625:10625): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:58:31:382 consola/(10625:10625): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:58:35:435 consola/(10637:10637): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:58:35:436 consola/(10637:10637): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:58:38:427 consola/(10649:10649): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:58:38:427 consola/(10649:10649): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:58:41:268 consola/(10661:10661): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:58:41:269 consola/(10661:10661): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:58:43:978 consola/(10673:10673): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:58:43:979 consola/(10673:10673): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:58:46:689 consola/(10685:10685): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:58:46:689 consola/(10685:10685): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+

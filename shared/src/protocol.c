@@ -61,7 +61,6 @@ static void deserializar_programa(void* stream, char** instrucciones, uint16_t* 
 
     char* r_instruccion;
     acumulador = sizeof(size_t);
-    printf("1 \n");
     for(int i = 0; i < length_lista; i++){
     	// Despues deserializo el size de cada instruccion
     	memcpy(&size_instruccion, stream + acumulador, sizeof(size_t));
@@ -70,10 +69,7 @@ static void deserializar_programa(void* stream, char** instrucciones, uint16_t* 
     	// Despues deserializo cada instruccion en si y la guardo en un array de strings
     	memcpy(r_instruccion, stream + acumulador, size_instruccion);
     	acumulador += size_instruccion;
-    	printf("Instruccion recibida: %s \n", r_instruccion);
-    	printf("A punto de hacer el array push...\n");
-    	string_array_push(instrucciones, r_instruccion);
-    	printf("Pudo hacer el array push sin problemas!\n");
+     	string_array_push(&instrucciones, r_instruccion);
     }
     uint16_t r_tamanio;
     // Finalmente deserializo el tamanio del programa para memoria
