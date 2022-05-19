@@ -1,7 +1,11 @@
 #include "kernel_utils.h"
 
+void inicializar(){
+	logger = log_create("kernel.log", "kernel", 1, LOG_LEVEL_INFO);
+	config = config_create("kernel.config");
+}
+
 void procesar_socket(thread_args* argumentos){
-	t_log* logger = argumentos->log;
 	int cliente_socket = argumentos->cliente;
 	char* server_name = argumentos->server_name;
 	op_code cop;
@@ -66,13 +70,12 @@ void procesar_socket(thread_args* argumentos){
 
 }
 
-int escuchar_servidor(t_log* logger, char* name, int server_socket){
+int escuchar_servidor(char* name, int server_socket){
 
 	int cliente_socket = esperar_cliente(logger, name, server_socket);
 	if (cliente_socket != -1){
 		pthread_t hilo;
 		thread_args* arg = malloc(sizeof(thread_args));
-		arg->log = logger;
 		arg->cliente = cliente_socket;
 		arg->server_name = name;
 		printf("Cliente socket: %d\n",cliente_socket);
