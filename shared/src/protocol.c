@@ -71,7 +71,9 @@ static void deserializar_programa(void* stream, char** instrucciones, uint16_t* 
     	memcpy(r_instruccion, stream + acumulador, size_instruccion);
     	acumulador += size_instruccion;
     	printf("Instruccion recibida: %s \n", r_instruccion);
+    	printf("A punto de hacer el array push...\n");
     	string_array_push(instrucciones, r_instruccion);
+    	printf("Pudo hacer el array push sin problemas!\n");
     }
     uint16_t r_tamanio;
     // Finalmente deserializo el tamanio del programa para memoria

@@ -1,8 +1,45 @@
 #include "kernel_utils.h"
 
+pthread_mutex_t sem_ready;
+t_queue* cola_new;
+t_list* cola_ready;
+t_queue* cola_blocked;
+t_config* config;
+
+int multiprogramacion_actual = 0;
+
+//HILO
+void pasaje_new_ready(){
+
+	int grado_multiprogramacion = config_get_int_value(config, "GRADO_MULTIPROGRAMACION");
+	//solucion de mierda, buscarle la vuelta a hacer una mas linda
+	//no se pq pero el semaforo siempre empieza en 1, entonces me caga
+	pthread_mutex_lock(&sem_ready);
+	while(1){
+		pthread_mutex_lock(&sem_ready);
+		//AGREGAR QUE SI HAY PCBS EN READY SUSPENDED TIENEN PRIORIDAD DE PASO
+		if(multiprogramacion_actual < grado_multiprogramacion){
+			PCB_t* p = queue_pop(cola_new);
+			list_add(cola_ready,p);
+		}
+		pthread_mutex_unlock(&sem_ready);
+	}
+
+}
+
 void inicializar(){
 	logger = log_create("kernel.log", "kernel", 1, LOG_LEVEL_INFO);
 	config = config_create("kernel.config");
+	cola_new = queue_create();
+	cola_blocked = queue_create();
+	cola_ready = list_create();
+	if(pthread_mutex_init(&sem_ready,NULL) != 0){
+		log_error(logger,"Error inicializando el MUTEX de new-ready");
+		exit(-1);
+	}
+	pthread_t hilo_pasaje_new_ready;
+	pthread_create(&hilo_pasaje_new_ready,NULL,(void*)pasaje_new_ready,NULL);
+	pthread_detach(hilo_pasaje_new_ready);
 }
 
 void procesar_socket(thread_args* argumentos){
@@ -19,10 +56,11 @@ void procesar_socket(thread_args* argumentos){
 		switch (cop) {
 			case PROGRAMA:
 			{
+				log_info(logger,"LOGRE ENTRAR AL SWITH CASE");
 				char** instrucciones = string_array_new();
 				uint16_t tamanio;
 
-				if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
+				if (!recv_programa(cliente_socket, instrucciones, &tamanio)) {
 					log_error(logger, "Fallo recibiendo PROGRAMA");
 					break;
 				}
@@ -45,6 +83,9 @@ void procesar_socket(thread_args* argumentos){
 				proceso.tabla_paginas = 0;   // SOLO LO INICIALIZAMOS, MEMORIA NOS VA A ENVIAR EL VALOR
 				proceso.est_rafaga = 5;  // ESTO VA POR ARCHIVO DE CONFIGURACION
 
+				queue_push(cola_new,&proceso);
+//				pthread_mutex_unlock(&sem_ready);
+
 //				ip_cpu = config_get_string_value(config,"IP_CPU");
 //				puerto_cpu_dispatch = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
 //
@@ -60,6 +101,7 @@ void procesar_socket(thread_args* argumentos){
 			// Errores
 			case -1:
 				log_error(logger, "Cliente desconectado de kernel");
+				break;
 			default:
 				log_error(logger, "Algo anduvo mal en el server del kernel ");
 				log_info(logger, "Cop: %d", cop);
@@ -84,4 +126,33 @@ int escuchar_servidor(char* name, int server_socket){
 		return 1;
 	}
 	return 0;
+}
+
+//exit-->console
+//dispatch --> agregar a ready
+//agregar semaforos a fifo,sjf,etc
+//colas de suspended ready y suspended blocked
+
+PCB_t* fifo(){
+	return list_remove(cola_ready,0);
+}
+
+PCB_t* sjf(){
+
+	PCB_t* primer_pcb = list_get(cola_ready,0);
+	double raf_min = primer_pcb->est_rafaga;
+	int index_pcb = 0;
+	int i;
+	for (i = 1;i<list_size(cola_ready);i++){
+		PCB_t* pcb = list_get(cola_ready,i);
+		double est_raf = pcb->est_rafaga;
+		//si el sjf luego sigue con FIFO, entonces tiene que ser >
+		//si el sjf luego sigue con LIFO, entonces tiene que ser >=
+		if(raf_min >= est_raf){
+			raf_min = est_raf;
+			index_pcb = i;
+		}
+	}
+	return list_remove(cola_ready,index_pcb);
+
 }

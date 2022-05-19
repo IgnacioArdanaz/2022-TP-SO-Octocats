@@ -1,6 +1,26 @@
-23:09:48 **** Incremental Build of configuration Debug for project consola ****
+00:58:26 **** Incremental Build of configuration Debug for project consola ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/consola_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/consola_main.d" -MT"src/consola_main.o" -o "src/consola_main.o" "../src/consola_main.c"
+In file included from ../src/consola_main.h:11:0,
+                 from ../src/consola_main.c:1:
+../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
+../src/../../shared/src/protocol.c:75:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
+      string_array_push(instrucciones, r_instruccion);
+                        ^
+In file included from ../src/consola_main.h:7:0,
+                 from ../src/consola_main.c:1:
+/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
+  void    string_array_push(char*** array, char* text);
+          ^
+Finished building: ../src/consola_main.c
+ 
+Building target: consola
+Invoking: GCC C Linker
+gcc  -o "consola"  ./src/consola_main.o ./src/parser.o   -lcommons
+Finished building target: consola
+ 
 
-23:09:49 Build Finished (took 1s.197ms)
+00:58:27 Build Finished (took 831ms)
 

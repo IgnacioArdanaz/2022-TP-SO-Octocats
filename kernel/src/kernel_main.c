@@ -13,7 +13,6 @@ int main(void) {
 
 	inicializar();
 	puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-	log_info(logger,"Config: IP=%s PORT=%s",IP,puerto_escucha);
 	int server_socket = iniciar_servidor(logger, "KERNEL", IP, puerto_escucha);
 	int result = EXIT_SUCCESS;
 	if (server_socket == 0){
