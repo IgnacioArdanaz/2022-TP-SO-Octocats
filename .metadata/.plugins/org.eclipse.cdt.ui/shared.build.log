@@ -1,4 +1,4 @@
-01:43:12 **** Incremental Build of configuration Debug for project shared ****
+02:48:58 **** Incremental Build of configuration Debug for project shared ****
 make all 
 Building file: ../src/protocol.c
 Invoking: GCC C Compiler
@@ -14,5 +14,5 @@ collect2: error: ld returned 1 exit status
 makefile:30: recipe for target 'shared' failed
 make: *** [shared] Error 1
 
-01:43:13 Build Finished (took 754ms)
+02:48:59 Build Finished (took 1s.194ms)
 

@@ -3,12 +3,16 @@
 pthread_mutex_t mx_cola_new = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t s_new_ready = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t s_multip_actual = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_pid_sig = PTHREAD_MUTEX_INITIALIZER;
+t_dictionary* sockets;
 t_queue* cola_new;
 t_list* cola_ready;
 t_queue* cola_blocked;
 t_config* config;
-
-int multiprogramacion_actual = 0;
+int pid_sig;
+int estimacion_inicial;
+int grado_multiprogramacion;
+int multiprogramacion_actual;
 
 //HILO
 void pasaje_new_ready(){
@@ -39,6 +43,10 @@ void inicializar(){
 	cola_new = queue_create();
 	cola_blocked = queue_create();
 	cola_ready = list_create();
+	sockets = dictionary_create();
+	pid_sig = 1;
+	grado_multiprogramacion = config_get_int_value(config,"GRADO_MULTIPROGRAMACION");
+	estimacion_inicial = config_get_int_value(config,"ESTIMACION_INICIAL");
 	pthread_t hilo_pasaje_new_ready;
 	pthread_create(&hilo_pasaje_new_ready,NULL,(void*)pasaje_new_ready,NULL);
 	pthread_detach(hilo_pasaje_new_ready);
@@ -78,15 +86,21 @@ void procesar_socket(thread_args* argumentos){
 				PCB_t proceso;
 				proceso.instrucciones = string_array_new();
 
-				proceso.pid = 1; // A DETERMINAR CON EL TEMA DE HILOS Y N CONSOLAS
+				pthread_mutex_lock(&mx_pid_sig);
+				proceso.pid = pid_sig;
+				pid_sig+=1;
+				pthread_mutex_unlock(&mx_pid_sig);
+
 				proceso.tamanio = tamanio;
 				proceso.pc = 0;
 				proceso.instrucciones = instrucciones;
 				proceso.tabla_paginas = 0;   // SOLO LO INICIALIZAMOS, MEMORIA NOS VA A ENVIAR EL VALOR
-				proceso.est_rafaga = 5;  // ESTO VA POR ARCHIVO DE CONFIGURACION
+				proceso.est_rafaga = estimacion_inicial;  // ESTO VA POR ARCHIVO DE CONFIGURACION
+
 				pthread_mutex_lock(&mx_cola_new);
 				queue_push(cola_new,&proceso);
 				pthread_mutex_unlock(&mx_cola_new);
+
 				pthread_mutex_unlock(&s_new_ready);
 //				ip_cpu = config_get_string_value(config,"IP_CPU");
 //				puerto_cpu_dispatch = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
@@ -100,11 +114,13 @@ void procesar_socket(thread_args* argumentos){
 				log_info(logger,"Cola de ready: %d", list_size(cola_ready));
 				return;
 			}
-
+			//si la variable que evaluamos en el switch es un op_code
+			//que tiene de posibilidades definidas 0 (PROGRAMA) o 1 (PROCESO)
+			//cuando en la vida puede llegar a dar -1???
 			// Errores
-			case -1:
-				log_error(logger, "Cliente desconectado de kernel");
-				break;
+//			case -1:
+//				log_error(logger, "Cliente desconectado de kernel");
+//				break;
 			default:
 				log_error(logger, "Algo anduvo mal en el server del kernel ");
 				log_info(logger, "Cop: %d", cop);

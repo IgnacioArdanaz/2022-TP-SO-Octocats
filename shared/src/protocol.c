@@ -8,7 +8,9 @@ bool send_programa(int fd, char** instrucciones, uint16_t tamanio) {
         free(stream);
         return false;
     }
+    printf("Hasta aca llega el programa (protocol.c linea 10)");
     free(stream);
+    printf("Hasta aca llega el programa (protocol.c linea 12)");
     return true;
 }
 
@@ -33,24 +35,23 @@ static void* serializar_programa(size_t* size, char** instrucciones, uint16_t ta
     void * stream_inst = serializar_instrucciones(&size_stream_inst, instrucciones, &length_lista);
 
     printf("Size_lista: %zu \n", size_stream_inst);
-
+    printf("Hasta aca llega (protocol.c linea 38)");
     *size =
           sizeof(op_code)   // 4
         + sizeof(size_t)    // size de size_payload
         + sizeof(size_t)    // size de length_lista
         + size_stream_inst  // size del stream de instrucciones (stream_inst)
         + sizeof(uint16_t);  // tamanio de memoria
+    printf("Hasta aca llega (protocol.c linea 45)");
     size_t size_payload = *size - sizeof(op_code) - sizeof(size_t);
-
     void* stream = malloc(*size);
-
     op_code cop = PROGRAMA;
     memcpy(stream, &cop, sizeof(op_code));
     memcpy(stream + sizeof(op_code), &size_payload, sizeof(size_t));
     memcpy(stream + sizeof(op_code) + sizeof(size_t), &length_lista, sizeof(size_t));
     memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2, stream_inst, size_stream_inst);
     memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + size_stream_inst, &tamanio, sizeof(uint16_t));
-
+    printf("Hasta aca llega (protocol.c linea 54)");
     return stream;
 }
 

@@ -10,6 +10,7 @@
 #include<readline/readline.h>
 #include<commons/collections/queue.h>
 #include<commons/collections/list.h>
+#include<commons/collections/dictionary.h>
 #include "../../shared/src/sockets.h"
 #include "../../shared/src/protocol.h"
 #include "../../shared/src/structures.h"

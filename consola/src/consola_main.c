@@ -34,18 +34,18 @@ int main(int argc, char** argv){
 
 	conexion = crear_conexion(logger, "KERNEL", ip_kernel, puerto_kernel);
 
-	send_programa(conexion, tabla, tamanio);
-
+	if (send_programa(conexion, tabla, tamanio)){
+		log_info(logger,"Programa enviado al kernel correctamente!");
+	}
+	else{
+		log_error(logger,"Por desgracia no se pudo enviar el programa :(");
+	}
+	log_info(logger,"Si lees esto, solucionaste el problema del segmentation fault!! :)\n");
 	string_array_destroy(tabla);
 	log_destroy(logger);
 	config_destroy(config);
 	close(conexion);
 
-	/*
-	 * TODO hay algo relacionado con conexion que tira Segmentation fault (core dumped)
-	 * basicamente hay algo de memoria que no estamos liberando
-	 *
-	 * CONFIRMADO parser y la tabla ya funcionan perfecto
-	 *
-	 */
+	return 0;
+
 }
