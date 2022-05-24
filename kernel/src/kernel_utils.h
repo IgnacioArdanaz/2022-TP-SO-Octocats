@@ -8,6 +8,7 @@
 #include<commons/string.h>
 #include<commons/config.h>
 #include<readline/readline.h>
+#include<semaphore.h>
 #include<commons/collections/queue.h>
 #include<commons/collections/list.h>
 #include<commons/collections/dictionary.h>

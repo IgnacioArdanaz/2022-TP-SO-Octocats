@@ -17,10 +17,10 @@ int multiprogramacion_actual;
 //HILO
 void pasaje_new_ready(){
 
-	int grado_multiprogramacion = config_get_int_value(config, "GRADO_MULTIPROGRAMACION");
+	grado_multiprogramacion = config_get_int_value(config, "GRADO_MULTIPROGRAMACION");
 	//solucion de mierda, buscarle la vuelta a hacer una mas linda
 	//no se pq pero el semaforo siempre empieza en 1, entonces me caga
-	pthread_mutex_lock(&s_new_ready);
+	pthread_mutex_lock(&s_new_ready);  // Quizas aplicaria un contador en vez de mutex y nos ahorramos este lock
 	while(1){
 		pthread_mutex_lock(&s_new_ready);
 		pthread_mutex_lock(&mx_cola_new);
@@ -55,12 +55,15 @@ void inicializar(){
 void procesar_socket(thread_args* argumentos){
 	int cliente_socket = argumentos->cliente;
 	char* server_name = argumentos->server_name;
+	uint32_t resultOk = 0;
+	int32_t resultError = -1;
 	free(argumentos);
 	op_code cop;
 	while (cliente_socket != -1) {
 
 		if (recv(cliente_socket, &cop, sizeof(op_code), 0) <= 0) {
 			log_info(logger, "DISCONNECT_FAILURE!");
+			send(cliente_socket, &resultError, sizeof(uint32_t), NULL);
 			return;
 		}
 
@@ -68,20 +71,17 @@ void procesar_socket(thread_args* argumentos){
 			case PROGRAMA:
 			{
 				char** instrucciones = string_array_new();
-				uint16_t tamanio;
+				uint16_t tamanio = 0;
 
-				if (!recv_programa(cliente_socket, instrucciones, &tamanio)) {
+				if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
 					log_error(logger, "Fallo recibiendo PROGRAMA");
 					break;
 				}
 
 				log_info(logger, "Tamanio %d", tamanio);
-
-
-				for(int i = 0; instrucciones[i] != NULL; i++){
-					log_info(logger, "Instruccion numero %d: %s \n", i, instrucciones[i]);
+				for(int i = 0; i <  string_array_size(instrucciones); i++){
+					log_info(logger, "Instruccion numero %d: %s", i, instrucciones[i]);
 				}
-
 
 				PCB_t proceso;
 				proceso.instrucciones = string_array_new();
@@ -112,6 +112,9 @@ void procesar_socket(thread_args* argumentos){
 				string_array_destroy(instrucciones);
 				log_info(logger,"Cola de new: %d",queue_size(cola_new));
 				log_info(logger,"Cola de ready: %d", list_size(cola_ready));
+
+//				send(cliente_socket, &resultOk, sizeof(uint32_t), NULL); // Forma de avisar a la consola, no iria aca
+
 				return;
 			}
 			//si la variable que evaluamos en el switch es un op_code
@@ -139,8 +142,7 @@ int escuchar_servidor(char* name, int server_socket){
 		thread_args* arg = malloc(sizeof(thread_args));
 		arg->cliente = cliente_socket;
 		arg->server_name = name;
-		printf("Cliente socket: %d\n",cliente_socket);
-		pthread_create(&hilo,NULL,(void*)procesar_socket,(void*)arg);
+		pthread_create(&hilo, NULL, (void*) procesar_socket, (void*) arg);
 		pthread_detach(hilo);
 		return 1;
 	}

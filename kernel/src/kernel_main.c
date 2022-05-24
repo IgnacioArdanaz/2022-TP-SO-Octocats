@@ -14,7 +14,7 @@ int main(void) {
 	inicializar();
 	puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
 	int server_socket = iniciar_servidor(logger, "KERNEL", IP, puerto_escucha);
-	int result = EXIT_SUCCESS;
+	int result = 5;
 	if (server_socket == 0){
 		log_error(logger,"Error creando el socket :(");
 		result = EXIT_FAILURE;

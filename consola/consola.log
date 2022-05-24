@@ -277,3 +277,651 @@
 [INFO] 02:47:17:327 consola/(12694:12694): IP: 127.0.0.1 | Puerto: 8000
 [INFO] 02:47:17:327 consola/(12694:12694): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
+[INFO] 10:44:31:830 consola/(12882:12882): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:44:31:831 consola/(12882:12882): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:44:31:832 consola/(12882:12882): Programa enviado al kernel correctamente!
+[INFO] 10:44:31:832 consola/(12882:12882): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 10:55:57:502 consola/(14635:14635): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:55:57:502 consola/(14635:14635): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:55:57:502 consola/(14635:14635): Programa enviado al kernel correctamente!
+[INFO] 10:55:57:503 consola/(14635:14635): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 10:59:14:014 consola/(15208:15208): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:59:14:015 consola/(15208:15208): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:59:14:015 consola/(15208:15208): Programa enviado al kernel correctamente!
+[INFO] 10:59:14:015 consola/(15208:15208): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:01:44:759 consola/(15676:15676): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:01:44:760 consola/(15676:15676): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:01:44:760 consola/(15676:15676): Programa enviado al kernel correctamente!
+[INFO] 11:01:44:760 consola/(15676:15676): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:02:36:022 consola/(15879:15879): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:02:36:023 consola/(15879:15879): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:02:36:023 consola/(15879:15879): Programa enviado al kernel correctamente!
+[INFO] 11:02:36:024 consola/(15879:15879): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:03:56:424 consola/(16196:16196): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:03:56:427 consola/(16196:16196): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:03:56:430 consola/(16196:16196): Programa enviado al kernel correctamente!
+[INFO] 11:03:56:430 consola/(16196:16196): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:05:44:487 consola/(16548:16548): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:05:44:487 consola/(16548:16548): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:05:44:488 consola/(16548:16548): Programa enviado al kernel correctamente!
+[INFO] 11:05:44:488 consola/(16548:16548): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:07:35:628 consola/(16911:16911): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:07:35:629 consola/(16911:16911): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:07:35:629 consola/(16911:16911): Programa enviado al kernel correctamente!
+[INFO] 11:07:35:630 consola/(16911:16911): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:09:14:630 consola/(17239:17239): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:09:14:630 consola/(17239:17239): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:09:14:631 consola/(17239:17239): Programa enviado al kernel correctamente!
+[INFO] 11:09:14:631 consola/(17239:17239): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:15:48:065 consola/(18168:18168): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:15:48:065 consola/(18168:18168): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:15:48:066 consola/(18168:18168): Programa enviado al kernel correctamente!
+[INFO] 11:15:48:066 consola/(18168:18168): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:17:01:427 consola/(18382:18382): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:17:01:428 consola/(18382:18382): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:17:01:428 consola/(18382:18382): Programa enviado al kernel correctamente!
+[INFO] 11:17:01:428 consola/(18382:18382): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:19:51:733 consola/(18818:18818): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:19:51:734 consola/(18818:18818): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:19:51:734 consola/(18818:18818): Programa enviado al kernel correctamente!
+[INFO] 11:19:51:734 consola/(18818:18818): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:21:01:709 consola/(19028:19028): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:21:01:710 consola/(19028:19028): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:21:01:710 consola/(19028:19028): Programa enviado al kernel correctamente!
+[INFO] 11:21:01:710 consola/(19028:19028): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:21:42:319 consola/(19172:19172): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:21:42:320 consola/(19172:19172): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:21:42:320 consola/(19172:19172): Programa enviado al kernel correctamente!
+[INFO] 11:21:42:320 consola/(19172:19172): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:23:13:418 consola/(19412:19412): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:23:13:418 consola/(19412:19412): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:23:13:418 consola/(19412:19412): Programa enviado al kernel correctamente!
+[INFO] 11:23:13:418 consola/(19412:19412): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:24:16:162 consola/(19603:19603): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:24:16:162 consola/(19603:19603): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:24:16:163 consola/(19603:19603): Programa enviado al kernel correctamente!
+[INFO] 11:24:16:164 consola/(19603:19603): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:24:51:817 consola/(19736:19736): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:24:51:818 consola/(19736:19736): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:24:51:818 consola/(19736:19736): Programa enviado al kernel correctamente!
+[INFO] 11:24:51:818 consola/(19736:19736): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:26:13:907 consola/(19987:19987): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:26:13:908 consola/(19987:19987): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:26:13:908 consola/(19987:19987): Programa enviado al kernel correctamente!
+[INFO] 11:26:13:908 consola/(19987:19987): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:45:19:316 consola/(22441:22441): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:45:19:317 consola/(22441:22441): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:45:19:317 consola/(22441:22441): Programa enviado al kernel correctamente!
+[INFO] 11:45:19:317 consola/(22441:22441): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 11:50:32:472 consola/(23254:23254): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:50:32:474 consola/(23254:23254): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:50:32:474 consola/(23254:23254): Programa enviado al kernel correctamente!
+[INFO] 11:50:32:474 consola/(23254:23254): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 13:26:53:110 consola/(1003:1003): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:26:53:111 consola/(1003:1003): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:26:53:114 consola/(1003:1003): Programa enviado al kernel correctamente!
+[INFO] 13:26:53:115 consola/(1003:1003): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 13:28:32:542 consola/(1202:1202): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:28:32:543 consola/(1202:1202): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:28:32:543 consola/(1202:1202): Programa enviado al kernel correctamente!
+[INFO] 13:28:32:543 consola/(1202:1202): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 13:31:08:140 consola/(1495:1495): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:31:08:141 consola/(1495:1495): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:31:08:142 consola/(1495:1495): Programa enviado al kernel correctamente!
+[INFO] 13:31:08:142 consola/(1495:1495): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 13:32:39:623 consola/(1681:1681): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:32:39:627 consola/(1681:1681): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:32:39:627 consola/(1681:1681): Programa enviado al kernel correctamente!
+[INFO] 13:32:39:629 consola/(1681:1681): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 13:36:04:772 consola/(2052:2052): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:36:04:774 consola/(2052:2052): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:36:04:774 consola/(2052:2052): Programa enviado al kernel correctamente!
+[INFO] 13:36:04:780 consola/(2052:2052): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 13:37:41:257 consola/(2244:2244): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:37:41:258 consola/(2244:2244): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:37:41:258 consola/(2244:2244): Programa enviado al kernel correctamente!
+[INFO] 13:37:41:258 consola/(2244:2244): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 13:42:04:560 consola/(2778:2778): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:42:04:560 consola/(2778:2778): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:42:04:561 consola/(2778:2778): Programa enviado al kernel correctamente!
+[INFO] 13:42:04:561 consola/(2778:2778): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 13:45:42:269 consola/(3189:3189): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:45:42:270 consola/(3189:3189): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:45:42:270 consola/(3189:3189): Programa enviado al kernel correctamente!
+[INFO] 13:45:42:270 consola/(3189:3189): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 13:46:43:544 consola/(3342:3342): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:46:43:545 consola/(3342:3342): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:46:43:545 consola/(3342:3342): Programa enviado al kernel correctamente!
+[INFO] 13:46:43:545 consola/(3342:3342): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 14:54:15:779 consola/(7617:7617): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 14:54:15:781 consola/(7617:7617): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 14:54:15:781 consola/(7617:7617): Programa enviado al kernel correctamente!
+[INFO] 14:54:15:781 consola/(7617:7617): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 15:01:40:655 consola/(8030:8030): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 15:01:40:655 consola/(8030:8030): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 15:01:40:655 consola/(8030:8030): Programa enviado al kernel correctamente!
+[INFO] 15:01:40:656 consola/(8030:8030): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 15:13:06:092 consola/(8622:8622): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 15:13:06:093 consola/(8622:8622): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 15:13:06:093 consola/(8622:8622): Programa enviado al kernel correctamente!
+[INFO] 15:13:06:093 consola/(8622:8622): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 15:21:16:537 consola/(9084:9084): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 15:21:16:537 consola/(9084:9084): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 15:21:16:538 consola/(9084:9084): Programa enviado al kernel correctamente!
+[INFO] 15:21:16:538 consola/(9084:9084): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 15:23:17:959 consola/(9230:9230): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 15:23:17:965 consola/(9230:9230): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 15:23:17:966 consola/(9230:9230): Programa enviado al kernel correctamente!
+[INFO] 15:23:17:966 consola/(9230:9230): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 15:39:45:313 consola/(10068:10068): IP: 127.0.0.1 | Puerto: 8000
+[ERROR] 15:39:45:314 consola/(10068:10068): Error al conectar (a KERNEL)
+
+[ERROR] 15:39:45:315 consola/(10068:10068): Por desgracia no se pudo enviar el programa :(
+[INFO] 15:39:45:315 consola/(10068:10068): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 15:40:39:332 consola/(10131:10131): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 15:40:39:333 consola/(10131:10131): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 15:40:39:333 consola/(10131:10131): Programa enviado al kernel correctamente!
+[INFO] 15:40:39:334 consola/(10131:10131): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 15:56:46:561 consola/(10902:10902): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 15:56:46:562 consola/(10902:10902): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 15:56:46:562 consola/(10902:10902): Programa enviado al kernel correctamente!
+[INFO] 15:56:46:562 consola/(10902:10902): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 23:06:12:245 consola/(11743:11743): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:06:12:246 consola/(11743:11743): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:06:12:246 consola/(11743:11743): Programa enviado al kernel correctamente!
+[INFO] 23:06:12:247 consola/(11743:11743): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 23:06:13:131 consola/(11743:11743): -1218658068
+
+[INFO] 23:11:06:532 consola/(12028:12028): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:11:06:532 consola/(12028:12028): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:11:06:532 consola/(12028:12028): Programa enviado al kernel correctamente!
+[INFO] 23:11:06:533 consola/(12028:12028): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 23:11:07:381 consola/(12028:12028): resultado -> -1219051284
+
+[INFO] 23:14:36:749 consola/(12311:12311): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:14:36:750 consola/(12311:12311): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:14:36:750 consola/(12311:12311): Programa enviado al kernel correctamente!
+[INFO] 23:14:36:750 consola/(12311:12311): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 23:14:36:752 consola/(12311:12311): resultado -> -1
+
+[INFO] 23:16:09:845 consola/(12437:12437): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:16:09:846 consola/(12437:12437): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:16:09:847 consola/(12437:12437): Programa enviado al kernel correctamente!
+[INFO] 23:16:09:847 consola/(12437:12437): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 23:16:09:848 consola/(12437:12437): resultado -> 0
+
+[INFO] 23:17:02:322 consola/(12527:12527): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:17:02:324 consola/(12527:12527): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:17:02:325 consola/(12527:12527): Programa enviado al kernel correctamente!
+[INFO] 23:17:02:325 consola/(12527:12527): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 23:17:03:221 consola/(12527:12527): resultado -> -1219022612
+
+[INFO] 23:23:18:632 consola/(12882:12882): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:23:18:633 consola/(12882:12882): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:23:18:633 consola/(12882:12882): Programa enviado al kernel correctamente!
+[INFO] 23:23:18:633 consola/(12882:12882): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 23:23:19:118 consola/(12882:12882): resultado -> -1219157780
+
+[INFO] 23:30:13:630 consola/(13300:13300): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:30:13:630 consola/(13300:13300): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:30:13:631 consola/(13300:13300): Programa enviado al kernel correctamente!
+[INFO] 23:30:13:631 consola/(13300:13300): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 23:30:14:397 consola/(13300:13300): resultado -> -1218764564
+
+[INFO] 23:33:12:065 consola/(13519:13519): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:33:12:068 consola/(13519:13519): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:33:12:068 consola/(13519:13519): Programa enviado al kernel correctamente!
+[INFO] 23:33:12:069 consola/(13519:13519): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 23:33:13:042 consola/(13519:13519): resultado -> -1218744084
+
+[INFO] 23:38:44:099 consola/(13860:13860): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:38:45:186 consola/(13860:13860): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:40:11:224 consola/(13860:13860): Programa enviado al kernel correctamente!
+[INFO] 23:40:18:192 consola/(13860:13860): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 23:43:10:739 consola/(13860:13860): resultado -> -1209970452
+
+[INFO] 23:48:35:320 consola/(14526:14526): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:48:35:320 consola/(14526:14526): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:48:35:320 consola/(14526:14526): Programa enviado al kernel correctamente!
+[INFO] 23:48:35:320 consola/(14526:14526): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 23:50:05:838 consola/(14526:14526): resultado -> -1209970452
+
+[INFO] 00:02:47:153 consola/(15440:15440): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:02:47:164 consola/(15440:15440): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:02:47:169 consola/(15440:15440): Programa enviado al kernel correctamente!
+[INFO] 00:02:47:169 consola/(15440:15440): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 00:03:27:451 consola/(15440:15440): resultado -> -1219014420
+
+[INFO] 00:05:41:161 consola/(16008:16008): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:05:41:163 consola/(16008:16008): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:05:41:163 consola/(16008:16008): Programa enviado al kernel correctamente!
+[INFO] 00:05:41:163 consola/(16008:16008): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 00:05:42:473 consola/(16008:16008): resultado -> -1218457364
+
+[INFO] 00:12:44:333 consola/(16529:16529): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:12:44:334 consola/(16529:16529): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:12:44:334 consola/(16529:16529): Programa enviado al kernel correctamente!
+[INFO] 00:12:44:338 consola/(16529:16529): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 00:12:45:125 consola/(16529:16529): resultado -> -1218748180
+
+[INFO] 00:14:42:268 consola/(16674:16674): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:14:42:269 consola/(16674:16674): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:14:42:269 consola/(16674:16674): Programa enviado al kernel correctamente!
+[INFO] 00:14:42:269 consola/(16674:16674): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 00:18:28:422 consola/(16674:16674): resultado -> -1209970452
+
+[INFO] 00:21:19:262 consola/(17199:17199): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:21:19:262 consola/(17199:17199): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:21:19:263 consola/(17199:17199): Programa enviado al kernel correctamente!
+[INFO] 00:21:19:263 consola/(17199:17199): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 00:21:46:370 consola/(17199:17199): resultado -> -1209970452
+
+[INFO] 00:23:18:973 consola/(17414:17414): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:23:18:973 consola/(17414:17414): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:23:18:973 consola/(17414:17414): Programa enviado al kernel correctamente!
+[INFO] 00:23:18:973 consola/(17414:17414): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 00:25:49:956 consola/(17414:17414): resultado -> -1209970452
+
+[INFO] 00:29:49:469 consola/(17880:17880): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:29:49:470 consola/(17880:17880): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:29:49:470 consola/(17880:17880): Programa enviado al kernel correctamente!
+[INFO] 00:29:49:470 consola/(17880:17880): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 00:29:50:541 consola/(17880:17880): resultado -> -1218834196
+
+[INFO] 00:35:05:149 consola/(18212:18212): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:35:05:149 consola/(18212:18212): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:35:05:149 consola/(18212:18212): Programa enviado al kernel correctamente!
+[INFO] 00:35:05:150 consola/(18212:18212): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 00:36:00:991 consola/(18212:18212): resultado -> -1209970452
+
+[INFO] 00:41:55:806 consola/(18606:18606): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:41:55:812 consola/(18606:18606): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:41:55:812 consola/(18606:18606): Programa enviado al kernel correctamente!
+[INFO] 00:41:55:812 consola/(18606:18606): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 00:41:56:458 consola/(18606:18606): resultado -> -1218739988
+
+[INFO] 00:44:50:430 consola/(18804:18804): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:44:50:431 consola/(18804:18804): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:44:50:431 consola/(18804:18804): Programa enviado al kernel correctamente!
+[INFO] 00:44:50:431 consola/(18804:18804): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 00:45:41:626 consola/(18804:18804): resultado -> -1209970452
+
+[INFO] 00:57:26:656 consola/(19486:19486): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:57:26:657 consola/(19486:19486): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:57:26:657 consola/(19486:19486): Programa enviado al kernel correctamente!
+[INFO] 00:57:26:657 consola/(19486:19486): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 00:57:27:657 consola/(19486:19486): resultado -> -1219362580
+
+[INFO] 01:00:19:309 consola/(19697:19697): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:00:19:309 consola/(19697:19697): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:00:19:309 consola/(19697:19697): Programa enviado al kernel correctamente!
+[INFO] 01:00:19:309 consola/(19697:19697): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 01:00:50:107 consola/(19775:19775): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:00:50:107 consola/(19775:19775): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:00:50:107 consola/(19775:19775): Programa enviado al kernel correctamente!
+[INFO] 01:00:50:108 consola/(19775:19775): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 01:04:29:423 consola/(19775:19775): resultado -> -1209970452
+
+[INFO] 08:04:39:444 consola/(7385:7385): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 08:04:39:445 consola/(7385:7385): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 08:04:39:445 consola/(7385:7385): Programa enviado al kernel correctamente!
+[INFO] 08:04:39:445 consola/(7385:7385): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 08:04:40:215 consola/(7385:7385): resultado -> -1219112724
+
+[INFO] 08:14:10:721 consola/(8035:8035): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 08:14:10:722 consola/(8035:8035): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 08:14:10:722 consola/(8035:8035): Programa enviado al kernel correctamente!
+[INFO] 08:14:10:722 consola/(8035:8035): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 08:14:11:176 consola/(8035:8035): resultado -> -1219243796
+
+[INFO] 08:17:24:558 consola/(8252:8252): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 08:17:24:560 consola/(8252:8252): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 08:17:24:560 consola/(8252:8252): Programa enviado al kernel correctamente!
+[INFO] 08:17:24:560 consola/(8252:8252): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 08:17:25:012 consola/(8252:8252): resultado -> -1219243796
+
+[INFO] 08:19:03:106 consola/(8395:8395): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 08:19:03:107 consola/(8395:8395): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 08:19:03:107 consola/(8395:8395): Programa enviado al kernel correctamente!
+[INFO] 08:19:03:107 consola/(8395:8395): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 08:19:03:556 consola/(8395:8395): resultado -> -1219288852
+
+[INFO] 08:23:06:685 consola/(8641:8641): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 08:23:06:685 consola/(8641:8641): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 08:23:06:685 consola/(8641:8641): Programa enviado al kernel correctamente!
+[INFO] 08:23:06:685 consola/(8641:8641): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 08:26:29:265 consola/(8641:8641): resultado -> -1209970452
+
+[INFO] 08:28:08:451 consola/(9093:9093): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 08:28:08:452 consola/(9093:9093): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 08:28:08:452 consola/(9093:9093): Programa enviado al kernel correctamente!
+[INFO] 08:28:08:452 consola/(9093:9093): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 08:32:32:774 consola/(9093:9093): resultado -> -1209970452
+
+[INFO] 12:12:44:436 consola/(5746:5746): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:12:44:445 consola/(5746:5746): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:12:44:445 consola/(5746:5746): Programa enviado al kernel correctamente!
+[INFO] 12:12:44:445 consola/(5746:5746): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 12:12:45:224 consola/(5746:5746): resultado -> -1218440980
+
+[INFO] 12:14:22:869 consola/(6020:6020): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:14:22:870 consola/(6020:6020): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:14:22:870 consola/(6020:6020): Programa enviado al kernel correctamente!
+[INFO] 12:14:22:870 consola/(6020:6020): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 12:24:28:361 consola/(6020:6020): resultado -> -1209970452
+
+[INFO] 12:26:31:008 consola/(7680:7680): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:26:31:017 consola/(7680:7680): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:26:31:017 consola/(7680:7680): Programa enviado al kernel correctamente!
+[INFO] 12:26:31:017 consola/(7680:7680): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 12:27:35:273 consola/(7823:7823): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:27:35:274 consola/(7823:7823): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:27:35:274 consola/(7823:7823): Programa enviado al kernel correctamente!
+[INFO] 12:27:35:274 consola/(7823:7823): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 12:29:13:333 consola/(8031:8031): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:29:13:333 consola/(8031:8031): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:29:13:334 consola/(8031:8031): Programa enviado al kernel correctamente!
+[INFO] 12:29:13:334 consola/(8031:8031): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 12:29:17:312 consola/(8050:8050): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:29:17:312 consola/(8050:8050): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:29:17:313 consola/(8050:8050): Programa enviado al kernel correctamente!
+[INFO] 12:29:17:313 consola/(8050:8050): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 12:29:30:617 consola/(8095:8095): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:29:30:617 consola/(8095:8095): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:29:30:618 consola/(8095:8095): Programa enviado al kernel correctamente!
+[INFO] 12:29:30:618 consola/(8095:8095): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 12:30:59:109 consola/(8285:8285): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:30:59:109 consola/(8285:8285): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:30:59:110 consola/(8285:8285): Programa enviado al kernel correctamente!
+[INFO] 12:30:59:110 consola/(8285:8285): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 12:35:34:567 consola/(8285:8285): resultado -> -1219272468
+
+[INFO] 12:35:34:567 consola/(8095:8095): resultado -> -1219174164
+
+[INFO] 12:35:34:567 consola/(8050:8050): resultado -> -1218826004
+
+[INFO] 12:35:34:567 consola/(8031:8031): resultado -> -1218412308
+
+[INFO] 12:35:34:567 consola/(7823:7823): resultado -> -1218440980
+
+[INFO] 12:35:34:567 consola/(7680:7680): resultado -> -1218875156
+
+[INFO] 12:36:56:531 consola/(9069:9069): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:36:56:533 consola/(9069:9069): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:36:56:533 consola/(9069:9069): Programa enviado al kernel correctamente!
+[INFO] 12:36:56:533 consola/(9069:9069): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 12:37:16:747 consola/(9069:9069): resultado -> -1219280660
+
+[INFO] 12:40:06:361 consola/(9555:9555): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:40:06:362 consola/(9555:9555): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:40:06:362 consola/(9555:9555): Programa enviado al kernel correctamente!
+[INFO] 12:40:06:362 consola/(9555:9555): Si lees esto, solucionaste el problema del segmentation fault!! :)
+
+[INFO] 12:40:06:365 consola/(9555:9555): resultado -> 0
+
+[INFO] 12:46:22:889 consola/(10460:10460): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:46:22:897 consola/(10460:10460): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:46:22:897 consola/(10460:10460): Programa enviado al kernel correctamente!
+[INFO] 12:50:15:693 consola/(10460:10460): resultado -> -1219313428
+
+[INFO] 12:51:50:132 consola/(11197:11197): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:51:50:133 consola/(11197:11197): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:51:50:133 consola/(11197:11197): Programa enviado al kernel correctamente!
+[INFO] 12:52:04:135 consola/(11197:11197): resultado -> -1219063572
+
+[INFO] 12:53:24:500 consola/(11483:11483): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:53:24:500 consola/(11483:11483): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:53:24:501 consola/(11483:11483): Programa enviado al kernel correctamente!
+[INFO] 12:57:07:792 consola/(11483:11483): resultado -> -1209970452
+
+[INFO] 12:58:57:741 consola/(12305:12305): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:58:57:742 consola/(12305:12305): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:58:57:742 consola/(12305:12305): Programa enviado al kernel correctamente!
+[INFO] 12:58:58:683 consola/(12305:12305): resultado -> -1219362580
+
+[INFO] 12:59:59:746 consola/(12530:12530): IP: 127.0.0.1 | Puerto: 8000
+[ERROR] 12:59:59:747 consola/(12530:12530): Error al conectar (a KERNEL)
+
+[ERROR] 12:59:59:751 consola/(12530:12530): Por desgracia no se pudo enviar el programa :(
+[INFO] 12:59:59:751 consola/(12530:12530): resultado -> -1219063572
+
+[INFO] 13:00:16:255 consola/(12584:12584): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:00:16:257 consola/(12584:12584): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:00:16:257 consola/(12584:12584): Programa enviado al kernel correctamente!
+[INFO] 13:00:16:862 consola/(12584:12584): resultado -> -1218969364
+
+[INFO] 13:02:40:765 consola/(12970:12970): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:02:40:766 consola/(12970:12970): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:02:40:766 consola/(12970:12970): Programa enviado al kernel correctamente!
+[INFO] 13:06:41:787 consola/(12970:12970): resultado -> -1219084052
+
+[INFO] 18:02:34:405 consola/(15313:15313): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 18:02:34:406 consola/(15313:15313): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 18:02:34:406 consola/(15313:15313): Programa enviado al kernel correctamente!
+[INFO] 18:02:35:389 consola/(15313:15313): resultado -> -1218846484
+
+[INFO] 18:07:18:378 consola/(16013:16013): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 18:07:18:378 consola/(16013:16013): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 18:07:18:378 consola/(16013:16013): Programa enviado al kernel correctamente!
+[INFO] 18:08:51:115 consola/(16214:16214): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 18:08:51:115 consola/(16214:16214): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 18:08:51:115 consola/(16214:16214): Programa enviado al kernel correctamente!
+[INFO] 18:25:04:620 consola/(16214:16214): resultado -> -1219215124
+
+[INFO] 18:25:04:620 consola/(16013:16013): resultado -> -1219211028
+
+[INFO] 18:27:22:761 consola/(18534:18534): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 18:27:22:761 consola/(18534:18534): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 18:27:22:762 consola/(18534:18534): Programa enviado al kernel correctamente!
+[INFO] 18:28:04:452 consola/(18631:18631): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 18:28:04:457 consola/(18631:18631): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 18:28:04:457 consola/(18631:18631): Programa enviado al kernel correctamente!
+[INFO] 18:28:07:035 consola/(18631:18631): resultado -> -1219342100
+
+[INFO] 18:28:07:035 consola/(18534:18534): resultado -> -1218502420
+
+[INFO] 18:38:10:845 consola/(19901:19901): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 18:38:10:846 consola/(19901:19901): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 18:38:10:846 consola/(19901:19901): Programa enviado al kernel correctamente!
+[INFO] 18:41:16:928 consola/(20342:20342): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 18:41:16:929 consola/(20342:20342): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 18:41:16:929 consola/(20342:20342): Programa enviado al kernel correctamente!
+[INFO] 18:51:30:998 consola/(3387:3387): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 18:51:31:041 consola/(3387:3387): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 18:51:31:042 consola/(3387:3387): Programa enviado al kernel correctamente!
+[INFO] 18:51:39:210 consola/(3387:3387): resultado -> -1219219220
+
+[INFO] 19:03:06:519 consola/(5010:5010): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:03:06:520 consola/(5010:5010): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:03:06:520 consola/(5010:5010): Programa enviado al kernel correctamente!
+[INFO] 19:03:19:156 consola/(5045:5045): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:03:19:157 consola/(5045:5045): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:03:19:158 consola/(5045:5045): Programa enviado al kernel correctamente!
+[INFO] 19:03:29:244 consola/(5077:5077): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:03:29:245 consola/(5077:5077): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:03:29:245 consola/(5077:5077): Programa enviado al kernel correctamente!
+[INFO] 19:03:33:271 consola/(5098:5098): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:03:33:272 consola/(5098:5098): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:03:33:272 consola/(5098:5098): Programa enviado al kernel correctamente!
+[INFO] 19:03:37:716 consola/(5119:5119): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:03:37:717 consola/(5119:5119): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:03:37:717 consola/(5119:5119): Programa enviado al kernel correctamente!
+[INFO] 19:05:45:829 consola/(5119:5119): resultado -> -1218576148
+
+[INFO] 19:05:45:829 consola/(5098:5098): resultado -> -1219243796
+
+[INFO] 19:05:45:829 consola/(5077:5077): resultado -> -1218719508
+
+[INFO] 19:05:45:829 consola/(5045:5045): resultado -> -1218854676
+
+[INFO] 19:05:45:829 consola/(5010:5010): resultado -> -1218572052
+
