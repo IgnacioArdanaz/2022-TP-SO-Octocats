@@ -1,0 +1,54 @@
+[INFO] 19:47:19:913 consola/(11305:11305): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:47:19:913 consola/(11305:11305): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:47:19:913 consola/(11305:11305): Programa enviado al kernel correctamente!
+[INFO] 19:47:20:869 consola/(11305:11305): resultado -> -1219059476
+
+[INFO] 19:50:21:616 consola/(11696:11696): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:50:21:620 consola/(11696:11696): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:50:21:620 consola/(11696:11696): Programa enviado al kernel correctamente!
+[INFO] 19:50:22:537 consola/(11696:11696): resultado -> -1218494228
+
+[INFO] 19:51:44:054 consola/(11918:11918): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:51:44:054 consola/(11918:11918): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:51:44:054 consola/(11918:11918): Programa enviado al kernel correctamente!
+[INFO] 19:51:50:933 consola/(11939:11939): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:51:50:934 consola/(11939:11939): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:51:50:934 consola/(11939:11939): Programa enviado al kernel correctamente!
+[INFO] 19:52:29:907 consola/(11939:11939): resultado -> -1219378964
+
+[INFO] 19:52:29:908 consola/(11918:11918): resultado -> -1218572052
+
+[INFO] 19:53:37:453 consola/(12256:12256): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:53:37:454 consola/(12256:12256): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:53:37:455 consola/(12256:12256): Programa enviado al kernel correctamente!
+[INFO] 19:53:42:330 consola/(12277:12277): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:53:42:331 consola/(12277:12277): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:53:42:331 consola/(12277:12277): Programa enviado al kernel correctamente!
+[INFO] 19:53:46:613 consola/(12295:12295): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:53:46:614 consola/(12295:12295): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:53:46:614 consola/(12295:12295): Programa enviado al kernel correctamente!
+[INFO] 19:53:49:879 consola/(12313:12313): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:53:49:880 consola/(12313:12313): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:53:49:880 consola/(12313:12313): Programa enviado al kernel correctamente!
+[INFO] 19:53:55:509 consola/(12334:12334): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 19:53:55:510 consola/(12334:12334): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 19:53:55:510 consola/(12334:12334): Programa enviado al kernel correctamente!
+[INFO] 19:54:21:129 consola/(12334:12334): resultado -> -1219055380
+
+[INFO] 19:54:21:129 consola/(12313:12313): resultado -> -1219075860
+
+[INFO] 19:54:21:129 consola/(12295:12295): resultado -> -1218510612
+
+[INFO] 19:54:21:129 consola/(12277:12277): resultado -> -1218387732
+
+[INFO] 19:54:21:129 consola/(12256:12256): resultado -> -1218440980
+

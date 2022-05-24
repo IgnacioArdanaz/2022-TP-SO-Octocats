@@ -7,7 +7,6 @@
 #include<commons/log.h>
 #include<commons/string.h>
 #include<commons/config.h>
-#include<commons/collections/queue.h>
 #include<readline/readline.h>
 #include<semaphore.h>
 #include<commons/collections/queue.h>
@@ -20,7 +19,7 @@
 typedef struct{
 	int cliente;
 	char* server_name;
-} procesar_consola_args;
+} thread_args;
 
 t_log* logger;
 t_config* config;
@@ -31,10 +30,4 @@ int escuchar_servidor(char* name, int server_socket);
 PCB_t* fifo();
 PCB_t* sjf();
 
-void inicializar_estructuras();
-void procesar_consola(procesar_consola_args* argumentos);
-int escuchar_servidor(char* name, int server_socket);
-void pasaje_new_ready();
-PCB_t* sjf();
-PCB_t* fifo();
 #endif /* KERNEL_UTILS_H_ */

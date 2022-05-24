@@ -5,6 +5,7 @@ int main(void) {
 
 	int conexion_cpu_dispatch;
 	int conexion_memoria;
+	char* puerto_escucha;
 	char* ip_cpu;
 	char* puerto_cpu_dispatch;
 	char* puerto_cpu_interrupt;

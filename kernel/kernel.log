@@ -1,0 +1,114 @@
+[INFO] 19:47:12:026 kernel/(11264:11264): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:47:12:027 kernel/(11264:11264): KERNEL listo para recibir al cliente
+[INFO] 19:47:19:913 kernel/(11264:11264): Cliente conectado (a KERNEL)
+
+[INFO] 19:47:19:913 kernel/(11264:11264): KERNEL listo para recibir al cliente
+[INFO] 19:50:15:555 kernel/(11671:11671): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:50:15:556 kernel/(11671:11671): KERNEL listo para recibir al cliente
+[INFO] 19:50:21:616 kernel/(11671:11671): Cliente conectado (a KERNEL)
+
+[INFO] 19:50:21:616 kernel/(11671:11671): KERNEL listo para recibir al cliente
+[INFO] 19:51:37:040 kernel/(11893:11893): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:51:37:045 kernel/(11893:11893): KERNEL listo para recibir al cliente
+[INFO] 19:51:44:054 kernel/(11893:11893): Cliente conectado (a KERNEL)
+
+[INFO] 19:51:44:054 kernel/(11893:11893): KERNEL listo para recibir al cliente
+[INFO] 19:51:44:060 kernel/(11893:11924): Tamanio 8
+[INFO] 19:51:44:061 kernel/(11893:11924): Instruccion numero 0: I/O 3000
+[INFO] 19:51:44:061 kernel/(11893:11924): Instruccion numero 1: NO_OP
+[INFO] 19:51:44:061 kernel/(11893:11924): Instruccion numero 2: NO_OP
+[INFO] 19:51:44:061 kernel/(11893:11924): Instruccion numero 3: WRITE 4 42
+[INFO] 19:51:44:064 kernel/(11893:11924): Instruccion numero 4: COPY 0 4
+[INFO] 19:51:44:064 kernel/(11893:11924): Instruccion numero 5: READ 0
+[INFO] 19:51:44:064 kernel/(11893:11924): Instruccion numero 6: EXIT
+[INFO] 19:51:44:068 kernel/(11893:11924): Cola de new: 0
+[INFO] 19:51:44:069 kernel/(11893:11924): Cola de ready: 1
+[INFO] 19:51:50:934 kernel/(11893:11893): Cliente conectado (a KERNEL)
+
+[INFO] 19:51:50:934 kernel/(11893:11893): KERNEL listo para recibir al cliente
+[INFO] 19:51:50:936 kernel/(11893:11953): Tamanio 8
+[INFO] 19:51:50:937 kernel/(11893:11953): Instruccion numero 0: I/O 3000
+[INFO] 19:51:50:937 kernel/(11893:11953): Instruccion numero 1: NO_OP
+[INFO] 19:51:50:937 kernel/(11893:11953): Instruccion numero 2: NO_OP
+[INFO] 19:51:50:938 kernel/(11893:11953): Instruccion numero 3: WRITE 4 42
+[INFO] 19:51:50:938 kernel/(11893:11953): Instruccion numero 4: COPY 0 4
+[INFO] 19:51:50:938 kernel/(11893:11953): Instruccion numero 5: READ 0
+[INFO] 19:51:50:938 kernel/(11893:11953): Instruccion numero 6: EXIT
+[INFO] 19:51:50:938 kernel/(11893:11953): Cola de new: 0
+[INFO] 19:51:50:938 kernel/(11893:11953): Cola de ready: 2
+[ERROR] 19:53:09:205 kernel/(12130:12130): Error creando el socket :(
+[ERROR] 19:53:13:555 kernel/(12153:12153): Error creando el socket :(
+[ERROR] 19:53:17:163 kernel/(12171:12171): Error creando el socket :(
+[ERROR] 19:53:20:817 kernel/(12186:12186): Error creando el socket :(
+[ERROR] 19:53:24:802 kernel/(12208:12208): Error creando el socket :(
+[INFO] 19:53:31:568 kernel/(12232:12232): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:53:31:599 kernel/(12232:12232): KERNEL listo para recibir al cliente
+[INFO] 19:53:37:454 kernel/(12232:12232): Cliente conectado (a KERNEL)
+
+[INFO] 19:53:37:454 kernel/(12232:12232): KERNEL listo para recibir al cliente
+[INFO] 19:53:37:456 kernel/(12232:12263): Tamanio 8
+[INFO] 19:53:37:456 kernel/(12232:12263): Instruccion numero 0: I/O 3000
+[INFO] 19:53:37:456 kernel/(12232:12263): Instruccion numero 1: NO_OP
+[INFO] 19:53:37:457 kernel/(12232:12263): Instruccion numero 2: NO_OP
+[INFO] 19:53:37:457 kernel/(12232:12263): Instruccion numero 3: WRITE 4 42
+[INFO] 19:53:37:457 kernel/(12232:12263): Instruccion numero 4: COPY 0 4
+[INFO] 19:53:37:457 kernel/(12232:12263): Instruccion numero 5: READ 0
+[INFO] 19:53:37:457 kernel/(12232:12263): Instruccion numero 6: EXIT
+[INFO] 19:53:37:457 kernel/(12232:12263): Cola de new: 0
+[INFO] 19:53:37:458 kernel/(12232:12263): Cola de ready: 1
+[INFO] 19:53:42:330 kernel/(12232:12232): Cliente conectado (a KERNEL)
+
+[INFO] 19:53:42:331 kernel/(12232:12232): KERNEL listo para recibir al cliente
+[INFO] 19:53:42:333 kernel/(12232:12283): Tamanio 8
+[INFO] 19:53:42:333 kernel/(12232:12283): Instruccion numero 0: I/O 3000
+[INFO] 19:53:42:333 kernel/(12232:12283): Instruccion numero 1: NO_OP
+[INFO] 19:53:42:333 kernel/(12232:12283): Instruccion numero 2: NO_OP
+[INFO] 19:53:42:333 kernel/(12232:12283): Instruccion numero 3: WRITE 4 42
+[INFO] 19:53:42:333 kernel/(12232:12283): Instruccion numero 4: COPY 0 4
+[INFO] 19:53:42:333 kernel/(12232:12283): Instruccion numero 5: READ 0
+[INFO] 19:53:42:333 kernel/(12232:12283): Instruccion numero 6: EXIT
+[INFO] 19:53:42:334 kernel/(12232:12283): Cola de new: 0
+[INFO] 19:53:42:334 kernel/(12232:12283): Cola de ready: 2
+[INFO] 19:53:46:613 kernel/(12232:12232): Cliente conectado (a KERNEL)
+
+[INFO] 19:53:46:613 kernel/(12232:12232): KERNEL listo para recibir al cliente
+[INFO] 19:53:46:616 kernel/(12232:12304): Tamanio 8
+[INFO] 19:53:46:617 kernel/(12232:12304): Instruccion numero 0: I/O 3000
+[INFO] 19:53:46:617 kernel/(12232:12304): Instruccion numero 1: NO_OP
+[INFO] 19:53:46:617 kernel/(12232:12304): Instruccion numero 2: NO_OP
+[INFO] 19:53:46:618 kernel/(12232:12304): Instruccion numero 3: WRITE 4 42
+[INFO] 19:53:46:620 kernel/(12232:12304): Instruccion numero 4: COPY 0 4
+[INFO] 19:53:46:621 kernel/(12232:12304): Instruccion numero 5: READ 0
+[INFO] 19:53:46:621 kernel/(12232:12304): Instruccion numero 6: EXIT
+[INFO] 19:53:46:621 kernel/(12232:12304): Cola de new: 0
+[INFO] 19:53:46:621 kernel/(12232:12304): Cola de ready: 3
+[INFO] 19:53:49:879 kernel/(12232:12232): Cliente conectado (a KERNEL)
+
+[INFO] 19:53:49:880 kernel/(12232:12232): KERNEL listo para recibir al cliente
+[INFO] 19:53:49:881 kernel/(12232:12319): Tamanio 8
+[INFO] 19:53:49:881 kernel/(12232:12319): Instruccion numero 0: I/O 3000
+[INFO] 19:53:49:881 kernel/(12232:12319): Instruccion numero 1: NO_OP
+[INFO] 19:53:49:881 kernel/(12232:12319): Instruccion numero 2: NO_OP
+[INFO] 19:53:49:881 kernel/(12232:12319): Instruccion numero 3: WRITE 4 42
+[INFO] 19:53:49:881 kernel/(12232:12319): Instruccion numero 4: COPY 0 4
+[INFO] 19:53:49:881 kernel/(12232:12319): Instruccion numero 5: READ 0
+[INFO] 19:53:49:881 kernel/(12232:12319): Instruccion numero 6: EXIT
+[INFO] 19:53:49:882 kernel/(12232:12319): Cola de new: 0
+[INFO] 19:53:49:887 kernel/(12232:12319): Cola de ready: 4
+[INFO] 19:53:55:509 kernel/(12232:12232): Cliente conectado (a KERNEL)
+
+[INFO] 19:53:55:509 kernel/(12232:12232): KERNEL listo para recibir al cliente
+[INFO] 19:53:55:510 kernel/(12232:12347): Tamanio 8
+[INFO] 19:53:55:510 kernel/(12232:12347): Instruccion numero 0: I/O 3000
+[INFO] 19:53:55:510 kernel/(12232:12347): Instruccion numero 1: NO_OP
+[INFO] 19:53:55:510 kernel/(12232:12347): Instruccion numero 2: NO_OP
+[INFO] 19:53:55:510 kernel/(12232:12347): Instruccion numero 3: WRITE 4 42
+[INFO] 19:53:55:510 kernel/(12232:12347): Instruccion numero 4: COPY 0 4
+[INFO] 19:53:55:511 kernel/(12232:12347): Instruccion numero 5: READ 0
+[INFO] 19:53:55:511 kernel/(12232:12347): Instruccion numero 6: EXIT
+[INFO] 19:53:55:511 kernel/(12232:12347): Cola de new: 1
+[INFO] 19:53:55:512 kernel/(12232:12347): Cola de ready: 4
