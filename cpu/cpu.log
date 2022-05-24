@@ -329,3 +329,24 @@
 
 [INFO] 10:43:52:294 cpu/(24700:24700): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
 [INFO] 10:43:53:279 cpu/(24700:24700): DISCONNECT!
+[INFO] 10:44:13:811 cpu/(12768:12768): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 10:44:13:817 cpu/(12768:12768): CPU_DISPACHT listo para recibir al cliente
+[INFO] 10:51:18:718 cpu/(13875:13875): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 10:51:18:729 cpu/(13875:13875): CPU_DISPACHT listo para recibir al cliente
+[INFO] 11:03:45:194 cpu/(16135:16135): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 11:03:45:195 cpu/(16135:16135): CPU_DISPACHT listo para recibir al cliente
+[INFO] 11:47:18:150 cpu/(22734:22734): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 11:47:18:391 cpu/(22734:22734): CPU_DISPACHT listo para recibir al cliente
+[INFO] 11:50:08:542 cpu/(23191:23191): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 11:50:08:550 cpu/(23191:23191): CPU_DISPACHT listo para recibir al cliente
+[INFO] 12:11:45:668 cpu/(5561:5561): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 12:11:45:670 cpu/(5561:5561): CPU_DISPACHT listo para recibir al cliente
+[INFO] 18:50:52:094 cpu/(3248:3248): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 18:50:52:112 cpu/(3248:3248): CPU_DISPACHT listo para recibir al cliente

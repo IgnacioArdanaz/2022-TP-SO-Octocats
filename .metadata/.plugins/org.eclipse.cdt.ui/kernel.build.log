@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 12:56:01 **** Incremental Build of configuration Debug for project kernel ****
+=======
+02:48:55 **** Incremental Build of configuration Debug for project kernel ****
+>>>>>>> solucionando_kernel
 make all 
-Building file: ../src/kernel_main.c
+Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
+<<<<<<< HEAD
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
 In file included from ../src/kernel_main.h:14:0,
                  from ../src/kernel_main.c:1:
@@ -42,4 +47,38 @@ Finished building target: kernel
  
 
 12:56:02 Build Finished (took 1s.280ms)
+=======
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:57:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = argumentos->server_name;
+        ^
+In file included from ../src/kernel_utils.h:15:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:23:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, char** instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:24:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, char** instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_instrucciones’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_instrucciones(size_t* size_lista, char** instrucciones, size_t* length_instrucciones);
+              ^
+../src/../../shared/src/protocol.h:29:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t proceso);
+              ^
+../src/../../shared/src/protocol.h:31:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/kernel_utils.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+Finished building target: kernel
+ 
+
+02:48:57 Build Finished (took 1s.553ms)
+>>>>>>> solucionando_kernel
 

@@ -1,6 +1,7 @@
 #include "protocol.h"
 
-// PROGRAMA
+/***************************** PROGRAMA *****************************/
+// Envio y serializacion
 bool send_programa(int fd, char** instrucciones, uint16_t tamanio) {
     size_t size;
     void* stream = serializar_programa(&size, instrucciones, tamanio);
@@ -12,27 +13,11 @@ bool send_programa(int fd, char** instrucciones, uint16_t tamanio) {
     return true;
 }
 
-bool recv_programa(int fd, char** instrucciones, uint16_t* tamanio) {
-    size_t size_payload;
-    if (recv(fd, &size_payload, sizeof(size_t), 0) != sizeof(size_t))
-        return false;
-    void* stream = malloc(size_payload);
-    if (recv(fd, stream, size_payload, 0) != size_payload) {
-        free(stream);
-        return false;
-    }
-    deserializar_programa(stream, instrucciones, tamanio);
-    free(stream);
-    return true;
-}
-
 static void* serializar_programa(size_t* size, char** instrucciones, uint16_t tamanio) {
     size_t size_stream_inst = 0, length_lista = 0;
 
     // Serializamos todas las instrucciones en un stream auxiliar
     void * stream_inst = serializar_instrucciones(&size_stream_inst, instrucciones, &length_lista);
-
-    printf("Size_lista: %zu \n", size_stream_inst);
 
     *size =
           sizeof(op_code)   // 4
@@ -43,40 +28,13 @@ static void* serializar_programa(size_t* size, char** instrucciones, uint16_t ta
     size_t size_payload = *size - sizeof(op_code) - sizeof(size_t);
 
     void* stream = malloc(*size);
-
     op_code cop = PROGRAMA;
     memcpy(stream, &cop, sizeof(op_code));
     memcpy(stream + sizeof(op_code), &size_payload, sizeof(size_t));
     memcpy(stream + sizeof(op_code) + sizeof(size_t), &length_lista, sizeof(size_t));
     memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2, stream_inst, size_stream_inst);
     memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + size_stream_inst, &tamanio, sizeof(uint16_t));
-
     return stream;
-}
-
-static void deserializar_programa(void* stream, char** instrucciones, uint16_t* tamanio) {
-	size_t length_lista, size_instruccion, acumulador = 0;
-	// Primero deserializo la longitud de la lista (cantidad de elementos)
-    memcpy(&length_lista, stream, sizeof(size_t));
-
-    char* r_instruccion;
-    acumulador = sizeof(size_t);
-    printf("1 \n");
-    for(int i = 0; i < length_lista; i++){
-    	// Despues deserializo el size de cada instruccion
-    	memcpy(&size_instruccion, stream + acumulador, sizeof(size_t));
-    	acumulador += sizeof(size_t);
-    	r_instruccion = malloc(size_instruccion);
-    	// Despues deserializo cada instruccion en si y la guardo en un array de strings
-    	memcpy(r_instruccion, stream + acumulador, size_instruccion);
-    	acumulador += size_instruccion;
-    	printf("Instruccion recibida: %s \n", r_instruccion);
-    	string_array_push(instrucciones, r_instruccion);
-    }
-    uint16_t r_tamanio;
-    // Finalmente deserializo el tamanio del programa para memoria
-    memcpy(&r_tamanio, stream + acumulador, sizeof(uint16_t));
-    *tamanio = r_tamanio;
 }
 
 static void* serializar_instrucciones(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones) {
@@ -97,8 +55,46 @@ static void* serializar_instrucciones(size_t* size_stream_inst, char** instrucci
     return stream;
 }
 
-// PROCESO
+// Recepcion y deserializacion
+bool recv_programa(int fd, char** instrucciones, uint16_t* tamanio) {
+	size_t size_payload;
+    if (recv(fd, &size_payload, sizeof(size_t), 0) != sizeof(size_t))
+        return false;
+    void* stream = malloc(size_payload);
+    if (recv(fd, stream, size_payload, 0) != size_payload) {
+        free(stream);
+        return false;
+    }
+    deserializar_programa(stream, instrucciones, tamanio);
+    free(stream);
+    return true;
+}
 
+static void deserializar_programa(void* stream, char** instrucciones, uint16_t* tamanio) {
+	size_t length_lista, size_instruccion, acumulador = 0;
+	// Primero deserializo la longitud de la lista (cantidad de elementos)
+    memcpy(&length_lista, stream, sizeof(size_t));
+
+    char* r_instruccion;
+    acumulador = sizeof(size_t);
+    for(int i = 0; i < length_lista; i++){
+    	// Despues deserializo el size de cada instruccion
+    	memcpy(&size_instruccion, stream + acumulador, sizeof(size_t));
+    	acumulador += sizeof(size_t);
+    	r_instruccion = malloc(size_instruccion);
+    	// Despues deserializo cada instruccion en si y la guardo en un array de strings
+    	memcpy(r_instruccion, stream + acumulador, size_instruccion);
+    	acumulador += size_instruccion;
+     	string_array_push(instrucciones, r_instruccion);
+    }
+    uint16_t r_tamanio;
+    // Finalmente deserializo el tamanio del programa para memoria
+    memcpy(&r_tamanio, stream + acumulador, sizeof(uint16_t));
+    *tamanio = r_tamanio;
+}
+
+/***************************** PROCESO *****************************/
+// Envio y serializacionPROGRAMA
 bool send_proceso(int fd, PCB_t proceso) {
     size_t size;
     void* stream = serializar_proceso(&size, proceso);
@@ -115,8 +111,6 @@ static void* serializar_proceso(size_t* size, PCB_t proceso) {
 
     // Serializamos todas las instrucciones en un stream auxiliar
     void * stream_inst = serializar_instrucciones(&size_stream_inst, proceso.instrucciones, &length_lista);
-
-    printf("Size_lista: %zu \n", size_stream_inst);
 
     *size =
           sizeof(op_code)   // 4
@@ -146,6 +140,7 @@ static void* serializar_proceso(size_t* size, PCB_t proceso) {
     return stream;
 }
 
+//Recepcion y deserealizacion
 bool recv_proceso(int fd, PCB_t* proceso) {
     size_t size_payload;
     if (recv(fd, &size_payload, sizeof(size_t), 0) != sizeof(size_t))
@@ -181,8 +176,7 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
     	// Despues deserializo cada instruccion en si y la guardo en un array de strings
     	memcpy(r_instruccion, stream + acumulador, size_instruccion);
     	acumulador += size_instruccion;
-    	printf("Instruccion recibida: %s \n", r_instruccion);
-//    	string_array_push(&instrucciones, r_instruccion);
+
     	string_array_push(&(proceso->instrucciones), r_instruccion);
     	printf("a");
     }

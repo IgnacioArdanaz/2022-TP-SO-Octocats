@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 12:55:57 **** Incremental Build of configuration Debug for project consola ****
+=======
+02:48:53 **** Incremental Build of configuration Debug for project consola ****
+>>>>>>> solucionando_kernel
 make all 
 Building file: ../src/consola_main.c
 Invoking: GCC C Compiler
@@ -22,5 +26,9 @@ gcc  -o "consola"  ./src/consola_main.o ./src/parser.o   -lcommons
 Finished building target: consola
  
 
+<<<<<<< HEAD
 12:55:59 Build Finished (took 1s.752ms)
+=======
+02:48:54 Build Finished (took 911ms)
+>>>>>>> solucionando_kernel
 

@@ -9,7 +9,10 @@
 #include<commons/config.h>
 #include<commons/collections/queue.h>
 #include<readline/readline.h>
-
+#include<semaphore.h>
+#include<commons/collections/queue.h>
+#include<commons/collections/list.h>
+#include<commons/collections/dictionary.h>
 #include "../../shared/src/sockets.h"
 #include "../../shared/src/protocol.h"
 #include "../../shared/src/structures.h"
@@ -19,8 +22,14 @@ typedef struct{
 	char* server_name;
 } procesar_consola_args;
 
-t_config* config;
 t_log* logger;
+t_config* config;
+void inicializar();
+void pasaje_new_ready();
+void procesar_socket(thread_args* argumentos);
+int escuchar_servidor(char* name, int server_socket);
+PCB_t* fifo();
+PCB_t* sjf();
 
 void inicializar_estructuras();
 void procesar_consola(procesar_consola_args* argumentos);
