@@ -41,7 +41,7 @@ static void* serializar_instrucciones(size_t* size_stream_inst, char** instrucci
 	void * stream = malloc(sizeof(void*));
 	size_t size_instruccion;
 
-	for(uint8_t i = 0; instrucciones[i] != NULL; i++){
+	for(uint16_t i = 0; instrucciones[i] != NULL; i++){
 		// Primero serializo la longitud de cada instruccion
 		size_instruccion = strlen(instrucciones[i]) + 1;
 		memcpy(stream + *size_stream_inst, &size_instruccion, sizeof(size_t));
@@ -94,8 +94,8 @@ static void deserializar_programa(void* stream, char** instrucciones, uint16_t* 
 }
 
 /***************************** PROCESO *****************************/
-// Envio y serializacionPROGRAMA
-bool send_proceso(int fd, PCB_t proceso) {
+// Envio y serializacion PROGRAMA
+bool send_proceso(int fd, PCB_t *proceso) {
     size_t size;
     void* stream = serializar_proceso(&size, proceso);
     if (send(fd, stream, size, 0) != size) {
@@ -106,11 +106,13 @@ bool send_proceso(int fd, PCB_t proceso) {
     return true;
 }
 
-static void* serializar_proceso(size_t* size, PCB_t proceso) {
+static void* serializar_proceso(size_t* size, PCB_t *proceso) {
     size_t size_stream_inst = 0, length_lista = 0;
 
     // Serializamos todas las instrucciones en un stream auxiliar
-    void * stream_inst = serializar_instrucciones(&size_stream_inst, proceso.instrucciones, &length_lista);
+    void * stream_inst = serializar_instrucciones(&size_stream_inst, proceso->instrucciones, &length_lista);
+
+//    length_lista = 7;
 
     *size =
           sizeof(op_code)   // 4
@@ -129,13 +131,13 @@ static void* serializar_proceso(size_t* size, PCB_t proceso) {
     op_code cop = PROCESO;
     memcpy(stream, &cop, sizeof(op_code));
     memcpy(stream + sizeof(op_code), &size_payload, sizeof(size_t));
-    memcpy(stream + sizeof(op_code) + sizeof(size_t), &proceso.pid, sizeof(uint16_t));
-    memcpy(stream + sizeof(op_code) + sizeof(size_t) + sizeof(uint16_t), &proceso.tamanio, sizeof(uint16_t));
+    memcpy(stream + sizeof(op_code) + sizeof(size_t), &proceso->pid, sizeof(uint16_t));
+    memcpy(stream + sizeof(op_code) + sizeof(size_t) + sizeof(uint16_t), &proceso->tamanio, sizeof(uint16_t));
     memcpy(stream + sizeof(op_code) + sizeof(size_t) + sizeof(uint16_t) * 2, &length_lista, sizeof(size_t));
     memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + sizeof(uint16_t) * 2, stream_inst, size_stream_inst);
-    memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + sizeof(uint16_t) * 2 + size_stream_inst, &proceso.pc, sizeof(uint32_t));
-    memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + sizeof(uint16_t) * 2 + size_stream_inst + sizeof(uint32_t), &proceso.tabla_paginas, sizeof(uint32_t));
-    memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + sizeof(uint16_t) * 2 + size_stream_inst + sizeof(uint32_t) * 2, &proceso.est_rafaga, sizeof(double));
+    memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + sizeof(uint16_t) * 2 + size_stream_inst, &proceso->pc, sizeof(uint32_t));
+    memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + sizeof(uint16_t) * 2 + size_stream_inst + sizeof(uint32_t), &proceso->tabla_paginas, sizeof(uint32_t));
+    memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + sizeof(uint16_t) * 2 + size_stream_inst + sizeof(uint32_t) * 2, &proceso->est_rafaga, sizeof(double));
 
     return stream;
 }
@@ -178,7 +180,6 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
     	acumulador += size_instruccion;
 
     	string_array_push(&(proceso->instrucciones), r_instruccion);
-    	printf("a");
     }
 
     // Finalmente deserializo el tamanio del programa para memoria

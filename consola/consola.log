@@ -52,3 +52,894 @@
 
 [INFO] 19:54:21:129 consola/(12256:12256): resultado -> -1218440980
 
+[INFO] 09:03:30:743 consola/(14943:14943): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:03:30:744 consola/(14943:14943): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:03:30:744 consola/(14943:14943): Programa enviado al kernel correctamente!
+[INFO] 09:03:39:044 consola/(14965:14965): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:03:39:044 consola/(14965:14965): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:03:39:044 consola/(14965:14965): Programa enviado al kernel correctamente!
+[INFO] 09:04:04:883 consola/(14965:14965): resultado -> -1218371348
+
+[INFO] 09:04:04:883 consola/(14943:14943): resultado -> -1219034900
+
+[INFO] 09:36:27:716 consola/(17718:17718): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:36:27:716 consola/(17718:17718): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:36:27:717 consola/(17718:17718): Programa enviado al kernel correctamente!
+[INFO] 09:36:52:459 consola/(17768:17768): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:36:52:460 consola/(17768:17768): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:36:52:460 consola/(17768:17768): Programa enviado al kernel correctamente!
+[INFO] 09:36:57:006 consola/(17785:17785): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:36:57:007 consola/(17785:17785): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:36:57:008 consola/(17785:17785): Programa enviado al kernel correctamente!
+[INFO] 09:37:01:381 consola/(17804:17804): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:37:01:382 consola/(17804:17804): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:37:01:385 consola/(17804:17804): Programa enviado al kernel correctamente!
+[INFO] 09:37:06:952 consola/(17821:17821): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:37:06:953 consola/(17821:17821): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:37:06:953 consola/(17821:17821): Programa enviado al kernel correctamente!
+[INFO] 09:37:58:961 consola/(17821:17821): resultado -> -1219174164
+
+[INFO] 09:37:58:961 consola/(17804:17804): resultado -> -1219006228
+
+[INFO] 09:37:58:961 consola/(17785:17785): resultado -> -1218387732
+
+[INFO] 09:37:58:961 consola/(17768:17768): resultado -> -1218592532
+
+[INFO] 09:37:58:961 consola/(17718:17718): resultado -> -1218756372
+
+[INFO] 09:39:09:541 consola/(18050:18050): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:39:09:541 consola/(18050:18050): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:39:09:542 consola/(18050:18050): Programa enviado al kernel correctamente!
+[INFO] 09:39:13:791 consola/(18050:18050): resultado -> -1218793236
+
+[INFO] 09:41:55:013 consola/(18353:18353): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:41:55:014 consola/(18353:18353): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:41:55:014 consola/(18353:18353): Programa enviado al kernel correctamente!
+[INFO] 09:41:57:216 consola/(18353:18353): resultado -> -1218862868
+
+[INFO] 09:43:10:223 consola/(18514:18514): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:43:10:224 consola/(18514:18514): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:43:10:224 consola/(18514:18514): Programa enviado al kernel correctamente!
+[INFO] 09:43:22:019 consola/(18514:18514): resultado -> -1218453268
+
+[INFO] 10:01:17:661 CONSOLA/(20230:20230): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:01:17:663 CONSOLA/(20230:20230): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:01:17:664 CONSOLA/(20230:20230): Programa enviado al kernel correctamente!
+[INFO] 10:01:18:479 CONSOLA/(20230:20230): resultado -> -1219100436
+
+[INFO] 10:02:45:261 CONSOLA/(20393:20393): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:02:45:262 CONSOLA/(20393:20393): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:02:45:262 CONSOLA/(20393:20393): Programa enviado al kernel correctamente!
+[INFO] 10:02:46:197 CONSOLA/(20393:20393): resultado -> -1218674452
+
+[INFO] 10:07:11:058 CONSOLA/(20890:20890): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:07:11:058 CONSOLA/(20890:20890): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:07:11:059 CONSOLA/(20890:20890): Programa enviado al kernel correctamente!
+[INFO] 10:07:11:904 CONSOLA/(20890:20890): resultado -> -1219370772
+
+[INFO] 10:13:22:703 CONSOLA/(21543:21543): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:13:22:704 CONSOLA/(21543:21543): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:13:22:704 CONSOLA/(21543:21543): Programa enviado al kernel correctamente!
+[INFO] 10:13:23:763 CONSOLA/(21543:21543): resultado -> -1219079956
+
+[INFO] 10:15:13:870 CONSOLA/(21739:21739): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:15:13:871 CONSOLA/(21739:21739): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:15:13:871 CONSOLA/(21739:21739): Programa enviado al kernel correctamente!
+[INFO] 10:15:14:698 CONSOLA/(21739:21739): resultado -> -1219157780
+
+[INFO] 10:17:29:758 CONSOLA/(21968:21968): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:17:30:602 CONSOLA/(21968:21968): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:21:26:355 CONSOLA/(22422:22422): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:21:26:356 CONSOLA/(22422:22422): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:21:26:356 CONSOLA/(22422:22422): Programa enviado al kernel correctamente!
+[INFO] 10:21:41:279 CONSOLA/(22459:22459): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:21:41:280 CONSOLA/(22459:22459): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:21:41:280 CONSOLA/(22459:22459): Programa enviado al kernel correctamente!
+[INFO] 10:22:30:693 CONSOLA/(22459:22459): resultado -> -1219170068
+
+[INFO] 10:22:30:693 CONSOLA/(22422:22422): resultado -> -1219161876
+
+[INFO] 10:23:37:873 CONSOLA/(22731:22731): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:23:37:877 CONSOLA/(22731:22731): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:23:37:878 CONSOLA/(22731:22731): Programa enviado al kernel correctamente!
+[INFO] 11:34:51:122 CONSOLA/(22731:22731): resultado -> -1218400020
+
+[INFO] 11:36:24:414 CONSOLA/(29681:29681): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:36:24:415 CONSOLA/(29681:29681): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:36:24:415 CONSOLA/(29681:29681): Programa enviado al kernel correctamente!
+[INFO] 11:36:25:468 CONSOLA/(29681:29681): resultado -> -1218903828
+
+[INFO] 11:40:51:213 CONSOLA/(30197:30197): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:40:51:214 CONSOLA/(30197:30197): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:40:51:214 CONSOLA/(30197:30197): Programa enviado al kernel correctamente!
+[INFO] 11:41:50:207 CONSOLA/(30197:30197): resultado -> -1209970452
+
+[INFO] 11:44:40:746 CONSOLA/(30637:30637): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:44:40:747 CONSOLA/(30637:30637): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:44:40:749 CONSOLA/(30637:30637): Programa enviado al kernel correctamente!
+[INFO] 11:44:41:588 CONSOLA/(30637:30637): resultado -> -1218391828
+
+[INFO] 11:48:10:964 CONSOLA/(31061:31061): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:48:10:967 CONSOLA/(31061:31061): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:48:10:968 CONSOLA/(31061:31061): Programa enviado al kernel correctamente!
+[INFO] 11:49:00:536 CONSOLA/(31162:31162): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:49:00:538 CONSOLA/(31162:31162): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:49:00:538 CONSOLA/(31162:31162): Programa enviado al kernel correctamente!
+[INFO] 11:50:53:236 CONSOLA/(31162:31162): resultado -> -1219395348
+
+[INFO] 11:52:54:388 CONSOLA/(31635:31635): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:52:54:389 CONSOLA/(31635:31635): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:52:54:389 CONSOLA/(31635:31635): Programa enviado al kernel correctamente!
+[INFO] 11:55:54:265 CONSOLA/(31635:31635): resultado -> -1219362580
+
+[INFO] 11:57:08:579 CONSOLA/(32146:32146): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:57:08:579 CONSOLA/(32146:32146): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:57:08:579 CONSOLA/(32146:32146): Programa enviado al kernel correctamente!
+[INFO] 11:57:35:540 CONSOLA/(32192:32192): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 11:57:35:541 CONSOLA/(32192:32192): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 11:57:35:541 CONSOLA/(32192:32192): Programa enviado al kernel correctamente!
+[INFO] 11:57:36:488 CONSOLA/(32192:32192): resultado -> -1219014420
+
+[INFO] 11:57:36:488 CONSOLA/(32146:32146): resultado -> -1218645780
+
+[INFO] 12:05:27:071 CONSOLA/(527:527): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:05:27:072 CONSOLA/(527:527): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:05:27:072 CONSOLA/(527:527): Programa enviado al kernel correctamente!
+[INFO] 12:05:41:042 CONSOLA/(557:557): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:05:41:043 CONSOLA/(557:557): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:05:41:043 CONSOLA/(557:557): Programa enviado al kernel correctamente!
+[INFO] 12:05:41:895 CONSOLA/(557:557): resultado -> -1218707220
+
+[INFO] 12:05:41:895 CONSOLA/(527:527): resultado -> -1219223316
+
+[INFO] 12:09:40:914 CONSOLA/(976:976): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:09:40:915 CONSOLA/(976:976): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:09:40:915 CONSOLA/(976:976): Programa enviado al kernel correctamente!
+[INFO] 12:09:47:119 CONSOLA/(997:997): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:09:47:120 CONSOLA/(997:997): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:09:47:120 CONSOLA/(997:997): Programa enviado al kernel correctamente!
+[INFO] 12:09:48:043 CONSOLA/(997:997): resultado -> -1218395924
+
+[INFO] 12:09:48:043 CONSOLA/(976:976): resultado -> -1219141396
+
+[INFO] 12:11:06:640 CONSOLA/(1179:1179): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:11:06:640 CONSOLA/(1179:1179): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:11:06:640 CONSOLA/(1179:1179): Programa enviado al kernel correctamente!
+[INFO] 12:11:12:675 CONSOLA/(1197:1197): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:11:12:677 CONSOLA/(1197:1197): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:11:12:678 CONSOLA/(1197:1197): Programa enviado al kernel correctamente!
+[INFO] 12:11:13:696 CONSOLA/(1197:1197): resultado -> -1219071764
+
+[INFO] 12:11:13:696 CONSOLA/(1179:1179): resultado -> -1219362580
+
+[INFO] 12:22:06:924 CONSOLA/(2310:2310): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:22:06:925 CONSOLA/(2310:2310): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:22:06:925 CONSOLA/(2310:2310): Programa enviado al kernel correctamente!
+[INFO] 12:22:17:173 CONSOLA/(2337:2337): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:22:17:178 CONSOLA/(2337:2337): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:22:17:178 CONSOLA/(2337:2337): Programa enviado al kernel correctamente!
+[INFO] 12:22:18:115 CONSOLA/(2337:2337): resultado -> -1219350292
+
+[INFO] 12:22:18:115 CONSOLA/(2310:2310): resultado -> -1218387732
+
+[INFO] 12:24:41:046 CONSOLA/(2713:2713): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:24:41:047 CONSOLA/(2713:2713): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:24:41:047 CONSOLA/(2713:2713): Programa enviado al kernel correctamente!
+[INFO] 12:26:48:964 CONSOLA/(2889:2889): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:26:54:711 CONSOLA/(2889:2889): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:27:11:909 CONSOLA/(2889:2889): Programa enviado al kernel correctamente!
+[INFO] 12:28:37:168 CONSOLA/(2713:2713): resultado -> -1209970452
+
+[INFO] 12:37:08:415 CONSOLA/(3954:3954): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:37:08:416 CONSOLA/(3954:3954): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:37:08:416 CONSOLA/(3954:3954): Programa enviado al kernel correctamente!
+[INFO] 12:39:52:167 CONSOLA/(4264:4264): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:39:54:523 CONSOLA/(4264:4264): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:41:43:016 CONSOLA/(4264:4264): Programa enviado al kernel correctamente!
+[INFO] 12:45:24:898 CONSOLA/(3954:3954): resultado -> -1209970452
+
+[INFO] 12:50:45:777 CONSOLA/(5388:5388): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:50:45:777 CONSOLA/(5388:5388): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:50:45:777 CONSOLA/(5388:5388): Programa enviado al kernel correctamente!
+[INFO] 12:51:43:993 CONSOLA/(5458:5458): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 12:51:58:495 CONSOLA/(5458:5458): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 12:53:29:080 CONSOLA/(5458:5458): Programa enviado al kernel correctamente!
+[INFO] 13:00:55:407 CONSOLA/(6335:6335): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:00:55:407 CONSOLA/(6335:6335): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:00:55:407 CONSOLA/(6335:6335): Programa enviado al kernel correctamente!
+[INFO] 13:03:33:069 CONSOLA/(5458:5458): resultado -> -1209970452
+
+[INFO] 13:06:07:588 CONSOLA/(6911:6911): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:06:07:589 CONSOLA/(6911:6911): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:06:07:589 CONSOLA/(6911:6911): Programa enviado al kernel correctamente!
+[INFO] 13:06:28:994 CONSOLA/(6952:6952): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:06:28:997 CONSOLA/(6952:6952): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:06:28:999 CONSOLA/(6952:6952): Programa enviado al kernel correctamente!
+[INFO] 13:06:30:189 CONSOLA/(6952:6952): resultado -> -1218408212
+
+[INFO] 13:06:30:189 CONSOLA/(6911:6911): resultado -> -1218436884
+
+[INFO] 13:08:35:643 CONSOLA/(7246:7246): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:08:35:643 CONSOLA/(7246:7246): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:08:35:644 CONSOLA/(7246:7246): Programa enviado al kernel correctamente!
+[INFO] 13:09:12:416 CONSOLA/(7303:7303): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:09:12:423 CONSOLA/(7303:7303): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:09:12:424 CONSOLA/(7303:7303): Programa enviado al kernel correctamente!
+[INFO] 13:09:13:412 CONSOLA/(7303:7303): resultado -> -1218813716
+
+[INFO] 13:09:13:413 CONSOLA/(7246:7246): resultado -> -1219260180
+
+[INFO] 13:11:00:241 CONSOLA/(7532:7532): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:11:00:242 CONSOLA/(7532:7532): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:11:00:242 CONSOLA/(7532:7532): Programa enviado al kernel correctamente!
+[INFO] 13:11:07:780 CONSOLA/(7554:7554): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:11:07:782 CONSOLA/(7554:7554): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:11:07:783 CONSOLA/(7554:7554): Programa enviado al kernel correctamente!
+[INFO] 13:11:08:559 CONSOLA/(7554:7554): resultado -> -1218543380
+
+[INFO] 13:11:08:559 CONSOLA/(7532:7532): resultado -> -1218658068
+
+[INFO] 13:13:22:752 CONSOLA/(7828:7828): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:13:22:752 CONSOLA/(7828:7828): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:13:22:752 CONSOLA/(7828:7828): Programa enviado al kernel correctamente!
+[INFO] 13:13:35:045 CONSOLA/(7858:7858): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:13:35:048 CONSOLA/(7858:7858): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:13:35:049 CONSOLA/(7858:7858): Programa enviado al kernel correctamente!
+[INFO] 13:13:36:243 CONSOLA/(7858:7858): resultado -> -1218666260
+
+[INFO] 13:13:36:243 CONSOLA/(7828:7828): resultado -> -1219022612
+
+[INFO] 13:14:56:423 CONSOLA/(8041:8041): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:14:56:423 CONSOLA/(8041:8041): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:14:56:423 CONSOLA/(8041:8041): Programa enviado al kernel correctamente!
+[INFO] 13:15:02:697 CONSOLA/(8059:8059): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:15:02:701 CONSOLA/(8059:8059): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:15:02:705 CONSOLA/(8059:8059): Programa enviado al kernel correctamente!
+[INFO] 13:15:03:627 CONSOLA/(8059:8059): resultado -> -1219026708
+
+[INFO] 13:15:03:628 CONSOLA/(8041:8041): resultado -> -1218518804
+
+[INFO] 13:16:10:912 CONSOLA/(8259:8259): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:16:10:914 CONSOLA/(8259:8259): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:16:10:914 CONSOLA/(8259:8259): Programa enviado al kernel correctamente!
+[INFO] 13:16:27:099 CONSOLA/(8290:8290): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 13:16:27:101 CONSOLA/(8290:8290): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:16:27:101 CONSOLA/(8290:8290): Programa enviado al kernel correctamente!
+[INFO] 13:16:27:948 CONSOLA/(8290:8290): resultado -> -1218662164
+
+[INFO] 13:16:27:948 CONSOLA/(8259:8259): resultado -> -1218371348
+
+[INFO] 23:28:55:661 CONSOLA/(24010:24010): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:28:55:662 CONSOLA/(24010:24010): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:28:55:662 CONSOLA/(24010:24010): Programa enviado al kernel correctamente!
+[INFO] 23:29:15:028 CONSOLA/(24050:24050): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:29:15:030 CONSOLA/(24050:24050): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:29:15:030 CONSOLA/(24050:24050): Programa enviado al kernel correctamente!
+[INFO] 23:29:15:830 CONSOLA/(24050:24050): resultado -> -1218494228
+
+[INFO] 23:29:15:830 CONSOLA/(24010:24010): resultado -> -1218952980
+
+[INFO] 23:33:46:371 CONSOLA/(24553:24553): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:33:46:372 CONSOLA/(24553:24553): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:33:46:372 CONSOLA/(24553:24553): Programa enviado al kernel correctamente!
+[INFO] 23:34:02:259 CONSOLA/(24589:24589): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:34:02:262 CONSOLA/(24589:24589): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:34:02:262 CONSOLA/(24589:24589): Programa enviado al kernel correctamente!
+[INFO] 23:34:03:165 CONSOLA/(24589:24589): resultado -> -1219358484
+
+[INFO] 23:34:03:165 CONSOLA/(24553:24553): resultado -> -1218658068
+
+[INFO] 23:36:14:175 CONSOLA/(24850:24850): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:36:14:175 CONSOLA/(24850:24850): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:36:14:176 CONSOLA/(24850:24850): Programa enviado al kernel correctamente!
+[INFO] 23:37:02:658 CONSOLA/(24926:24926): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:37:02:660 CONSOLA/(24926:24926): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:37:02:660 CONSOLA/(24926:24926): Programa enviado al kernel correctamente!
+[INFO] 23:37:03:503 CONSOLA/(24926:24926): resultado -> -1218973460
+
+[INFO] 23:37:03:503 CONSOLA/(24850:24850): resultado -> -1219239700
+
+[INFO] 23:38:20:299 CONSOLA/(25107:25107): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:38:20:300 CONSOLA/(25107:25107): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:38:20:300 CONSOLA/(25107:25107): Programa enviado al kernel correctamente!
+[INFO] 23:38:35:060 CONSOLA/(25139:25139): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:38:35:063 CONSOLA/(25139:25139): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:38:35:067 CONSOLA/(25139:25139): Programa enviado al kernel correctamente!
+[INFO] 23:38:35:955 CONSOLA/(25139:25139): resultado -> -1219157780
+
+[INFO] 23:38:35:956 CONSOLA/(25107:25107): resultado -> -1219313428
+
+[INFO] 23:40:35:605 CONSOLA/(25359:25359): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:40:35:606 CONSOLA/(25359:25359): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:40:35:606 CONSOLA/(25359:25359): Programa enviado al kernel correctamente!
+[INFO] 23:40:35:607 CONSOLA/(25359:25359): resultado -> -1218883348
+
+[INFO] 23:43:02:445 CONSOLA/(25678:25678): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:43:02:446 CONSOLA/(25678:25678): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:43:02:446 CONSOLA/(25678:25678): Programa enviado al kernel correctamente!
+[INFO] 23:50:58:161 CONSOLA/(25678:25678): resultado -> -1209970452
+
+[INFO] 23:52:17:012 CONSOLA/(26591:26591): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:52:17:013 CONSOLA/(26591:26591): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:52:17:013 CONSOLA/(26591:26591): Programa enviado al kernel correctamente!
+[INFO] 23:52:46:740 CONSOLA/(26642:26642): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:52:46:747 CONSOLA/(26642:26642): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:52:46:748 CONSOLA/(26642:26642): Programa enviado al kernel correctamente!
+[INFO] 23:52:47:554 CONSOLA/(26642:26642): resultado -> -1218375444
+
+[INFO] 23:52:47:555 CONSOLA/(26591:26591): resultado -> -1219297044
+
+[INFO] 23:55:02:819 CONSOLA/(26891:26891): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:55:02:819 CONSOLA/(26891:26891): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:55:02:819 CONSOLA/(26891:26891): Programa enviado al kernel correctamente!
+[INFO] 23:56:35:821 CONSOLA/(27034:27034): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 23:56:35:822 CONSOLA/(27034:27034): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 23:56:35:822 CONSOLA/(27034:27034): Programa enviado al kernel correctamente!
+[INFO] 00:01:22:359 CONSOLA/(27533:27533): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:01:22:359 CONSOLA/(27533:27533): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:01:22:360 CONSOLA/(27533:27533): Programa enviado al kernel correctamente!
+[INFO] 00:01:44:821 CONSOLA/(27578:27578): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:01:44:824 CONSOLA/(27578:27578): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:01:44:825 CONSOLA/(27578:27578): Programa enviado al kernel correctamente!
+[INFO] 00:01:45:660 CONSOLA/(27578:27578): resultado -> -1218891540
+
+[INFO] 00:01:45:660 CONSOLA/(27533:27533): resultado -> -1219026708
+
+[INFO] 00:07:25:375 CONSOLA/(28094:28094): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:07:25:375 CONSOLA/(28094:28094): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:07:25:376 CONSOLA/(28094:28094): Programa enviado al kernel correctamente!
+[INFO] 00:07:49:848 CONSOLA/(28138:28138): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:07:49:849 CONSOLA/(28138:28138): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:07:49:850 CONSOLA/(28138:28138): Programa enviado al kernel correctamente!
+[INFO] 00:07:50:710 CONSOLA/(28138:28138): resultado -> -1209970452
+
+[INFO] 00:07:50:710 CONSOLA/(28094:28094): resultado -> -1218907924
+
+[INFO] 00:08:58:187 CONSOLA/(28362:28362): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:08:58:187 CONSOLA/(28362:28362): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:08:58:187 CONSOLA/(28362:28362): Programa enviado al kernel correctamente!
+[INFO] 00:16:14:578 CONSOLA/(28362:28362): resultado -> -1218395924
+
+[INFO] 00:17:56:099 CONSOLA/(29181:29181): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:17:56:099 CONSOLA/(29181:29181): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:17:56:100 CONSOLA/(29181:29181): Programa enviado al kernel correctamente!
+[INFO] 00:23:32:107 CONSOLA/(29638:29638): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:23:40:451 CONSOLA/(29638:29638): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:31:26:270 CONSOLA/(30561:30561): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:31:26:271 CONSOLA/(30561:30561): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:31:26:272 CONSOLA/(30561:30561): Programa enviado al kernel correctamente!
+[INFO] 00:31:48:044 CONSOLA/(30605:30605): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:31:48:045 CONSOLA/(30605:30605): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:31:48:047 CONSOLA/(30605:30605): Programa enviado al kernel correctamente!
+[INFO] 00:31:48:823 CONSOLA/(30605:30605): resultado -> -1219268372
+
+[INFO] 00:31:48:824 CONSOLA/(30561:30561): resultado -> -1219206932
+
+[INFO] 00:38:37:347 CONSOLA/(31246:31246): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:38:37:348 CONSOLA/(31246:31246): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:38:37:348 CONSOLA/(31246:31246): Programa enviado al kernel correctamente!
+[INFO] 00:38:54:620 CONSOLA/(31290:31290): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:38:54:621 CONSOLA/(31290:31290): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:38:54:621 CONSOLA/(31290:31290): Programa enviado al kernel correctamente!
+[INFO] 00:38:55:441 CONSOLA/(31290:31290): resultado -> -1219239700
+
+[INFO] 00:38:55:441 CONSOLA/(31246:31246): resultado -> -1218875156
+
+[INFO] 00:42:53:173 CONSOLA/(31672:31672): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:42:53:174 CONSOLA/(31672:31672): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:42:53:174 CONSOLA/(31672:31672): Programa enviado al kernel correctamente!
+[INFO] 00:43:00:556 CONSOLA/(31697:31697): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:43:00:558 CONSOLA/(31697:31697): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:43:00:558 CONSOLA/(31697:31697): Programa enviado al kernel correctamente!
+[INFO] 00:43:01:540 CONSOLA/(31697:31697): resultado -> -1219219220
+
+[INFO] 00:43:01:542 CONSOLA/(31672:31672): resultado -> -1218998036
+
+[INFO] 00:54:30:157 CONSOLA/(427:427): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:54:30:158 CONSOLA/(427:427): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:54:30:159 CONSOLA/(427:427): Programa enviado al kernel correctamente!
+[INFO] 00:54:49:789 CONSOLA/(459:459): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:54:49:792 CONSOLA/(459:459): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:54:49:792 CONSOLA/(459:459): Programa enviado al kernel correctamente!
+[INFO] 00:54:50:927 CONSOLA/(459:459): resultado -> -1218445076
+
+[INFO] 00:54:50:928 CONSOLA/(427:427): resultado -> -1218658068
+
+[INFO] 00:59:16:806 CONSOLA/(966:966): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:59:16:806 CONSOLA/(966:966): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:59:16:807 CONSOLA/(966:966): Programa enviado al kernel correctamente!
+[INFO] 00:59:23:052 CONSOLA/(983:983): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 00:59:23:057 CONSOLA/(983:983): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 00:59:23:058 CONSOLA/(983:983): Programa enviado al kernel correctamente!
+[INFO] 00:59:23:954 CONSOLA/(983:983): resultado -> -1218551572
+
+[INFO] 00:59:23:954 CONSOLA/(966:966): resultado -> -1219301140
+
+[INFO] 01:01:35:115 CONSOLA/(1244:1244): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:01:35:116 CONSOLA/(1244:1244): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:01:35:117 CONSOLA/(1244:1244): Programa enviado al kernel correctamente!
+[INFO] 01:01:50:427 CONSOLA/(1274:1274): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:01:50:431 CONSOLA/(1274:1274): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:01:50:431 CONSOLA/(1274:1274): Programa enviado al kernel correctamente!
+[INFO] 01:01:51:304 CONSOLA/(1274:1274): resultado -> -1218719508
+
+[INFO] 01:01:51:304 CONSOLA/(1244:1244): resultado -> -1218514708
+
+[INFO] 01:04:53:523 CONSOLA/(1692:1692): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:04:53:524 CONSOLA/(1692:1692): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:04:53:525 CONSOLA/(1692:1692): Programa enviado al kernel correctamente!
+[INFO] 01:05:09:777 CONSOLA/(1721:1721): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:05:09:779 CONSOLA/(1721:1721): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:05:09:787 CONSOLA/(1721:1721): Programa enviado al kernel correctamente!
+[INFO] 01:05:10:727 CONSOLA/(1721:1721): resultado -> -1218592532
+
+[INFO] 01:05:10:727 CONSOLA/(1692:1692): resultado -> -1218936596
+
+[INFO] 01:06:15:866 CONSOLA/(1877:1877): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:06:15:867 CONSOLA/(1877:1877): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:06:15:867 CONSOLA/(1877:1877): Programa enviado al kernel correctamente!
+[INFO] 01:06:23:297 CONSOLA/(1900:1900): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:06:23:298 CONSOLA/(1900:1900): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:06:23:298 CONSOLA/(1900:1900): Programa enviado al kernel correctamente!
+[INFO] 01:06:42:981 CONSOLA/(1938:1938): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:06:42:981 CONSOLA/(1938:1938): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:06:42:981 CONSOLA/(1938:1938): Programa enviado al kernel correctamente!
+[INFO] 01:07:22:728 CONSOLA/(1938:1938): resultado -> -1218445076
+
+[INFO] 01:07:22:728 CONSOLA/(1900:1900): resultado -> -1219211028
+
+[INFO] 01:07:22:729 CONSOLA/(1877:1877): resultado -> -1218699028
+
+[INFO] 01:14:45:045 CONSOLA/(2885:2885): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:14:45:047 CONSOLA/(2885:2885): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:14:45:047 CONSOLA/(2885:2885): Programa enviado al kernel correctamente!
+[INFO] 01:15:33:415 CONSOLA/(2955:2955): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:15:33:417 CONSOLA/(2955:2955): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:15:33:417 CONSOLA/(2955:2955): Programa enviado al kernel correctamente!
+[INFO] 01:15:34:379 CONSOLA/(2955:2955): resultado -> -1218424596
+
+[INFO] 01:15:34:379 CONSOLA/(2885:2885): resultado -> -1218891540
+
+[INFO] 01:16:58:269 CONSOLA/(3135:3135): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:16:58:272 CONSOLA/(3135:3135): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:16:58:272 CONSOLA/(3135:3135): Programa enviado al kernel correctamente!
+[INFO] 01:17:04:416 CONSOLA/(3159:3159): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:17:04:418 CONSOLA/(3159:3159): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:17:04:418 CONSOLA/(3159:3159): Programa enviado al kernel correctamente!
+[INFO] 01:17:05:058 CONSOLA/(3159:3159): resultado -> -1218543380
+
+[INFO] 01:17:05:058 CONSOLA/(3135:3135): resultado -> -1218359060
+
+[INFO] 01:19:13:788 CONSOLA/(3423:3423): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:19:13:788 CONSOLA/(3423:3423): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:19:13:788 CONSOLA/(3423:3423): Programa enviado al kernel correctamente!
+[INFO] 01:19:29:304 CONSOLA/(3452:3452): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:19:29:306 CONSOLA/(3452:3452): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:19:29:307 CONSOLA/(3452:3452): Programa enviado al kernel correctamente!
+[INFO] 01:19:29:992 CONSOLA/(3452:3452): resultado -> -1219297044
+
+[INFO] 01:19:29:993 CONSOLA/(3423:3423): resultado -> -1219043092
+
+[INFO] 01:23:24:732 CONSOLA/(3949:3949): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:23:24:732 CONSOLA/(3949:3949): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:23:24:733 CONSOLA/(3949:3949): Programa enviado al kernel correctamente!
+[INFO] 01:23:42:066 CONSOLA/(3985:3985): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:23:42:070 CONSOLA/(3985:3985): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:23:42:071 CONSOLA/(3985:3985): Programa enviado al kernel correctamente!
+[INFO] 01:23:42:727 CONSOLA/(3985:3985): resultado -> -1219067668
+
+[INFO] 01:23:42:727 CONSOLA/(3949:3949): resultado -> -1218453268
+
+[INFO] 01:24:46:648 CONSOLA/(4181:4181): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:24:46:648 CONSOLA/(4181:4181): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:24:46:648 CONSOLA/(4181:4181): Programa enviado al kernel correctamente!
+[INFO] 01:25:06:409 CONSOLA/(4228:4228): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:25:06:410 CONSOLA/(4228:4228): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:25:06:410 CONSOLA/(4228:4228): Programa enviado al kernel correctamente!
+[INFO] 01:25:07:154 CONSOLA/(4228:4228): resultado -> -1219075860
+
+[INFO] 01:25:07:154 CONSOLA/(4181:4181): resultado -> -1218682644
+
+[INFO] 01:29:20:776 CONSOLA/(4740:4740): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:29:20:777 CONSOLA/(4740:4740): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:29:20:777 CONSOLA/(4740:4740): Programa enviado al kernel correctamente!
+[INFO] 01:29:21:330 CONSOLA/(4740:4740): resultado -> -1218912020
+
+[INFO] 01:30:26:363 CONSOLA/(4905:4905): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:30:26:363 CONSOLA/(4905:4905): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:30:26:363 CONSOLA/(4905:4905): Programa enviado al kernel correctamente!
+[INFO] 01:30:31:951 CONSOLA/(4924:4924): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:30:31:953 CONSOLA/(4924:4924): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:30:31:954 CONSOLA/(4924:4924): Programa enviado al kernel correctamente!
+[INFO] 01:30:32:805 CONSOLA/(4924:4924): resultado -> -1218985748
+
+[INFO] 01:30:32:805 CONSOLA/(4905:4905): resultado -> -1218613012
+
+[INFO] 01:31:53:424 CONSOLA/(5104:5104): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:31:53:424 CONSOLA/(5104:5104): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:31:53:424 CONSOLA/(5104:5104): Programa enviado al kernel correctamente!
+[INFO] 01:32:04:022 CONSOLA/(5127:5127): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:32:04:025 CONSOLA/(5127:5127): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:32:04:025 CONSOLA/(5127:5127): Programa enviado al kernel correctamente!
+[INFO] 01:32:04:813 CONSOLA/(5127:5127): resultado -> -1219055380
+
+[INFO] 01:32:04:813 CONSOLA/(5104:5104): resultado -> -1218895636
+
+[INFO] 01:36:03:946 CONSOLA/(5599:5599): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:36:03:947 CONSOLA/(5599:5599): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:36:03:947 CONSOLA/(5599:5599): Programa enviado al kernel correctamente!
+[INFO] 01:41:26:156 CONSOLA/(6039:6039): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:41:36:074 CONSOLA/(6039:6039): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:43:25:051 CONSOLA/(6039:6039): Programa enviado al kernel correctamente!
+[INFO] 01:50:28:658 CONSOLA/(5599:5599): resultado -> -1209970452
+
+[INFO] 01:51:41:441 CONSOLA/(7115:7115): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:51:41:442 CONSOLA/(7115:7115): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:51:41:442 CONSOLA/(7115:7115): Programa enviado al kernel correctamente!
+[INFO] 01:52:24:743 CONSOLA/(7182:7182): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:52:24:745 CONSOLA/(7182:7182): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:52:24:745 CONSOLA/(7182:7182): Programa enviado al kernel correctamente!
+[INFO] 01:52:25:715 CONSOLA/(7182:7182): resultado -> -1218789140
+
+[INFO] 01:52:25:715 CONSOLA/(7115:7115): resultado -> -1218907924
+
+[INFO] 01:55:46:255 CONSOLA/(7585:7585): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:55:46:255 CONSOLA/(7585:7585): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:55:46:256 CONSOLA/(7585:7585): Programa enviado al kernel correctamente!
+[INFO] 01:56:27:435 CONSOLA/(7646:7646): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:56:27:436 CONSOLA/(7646:7646): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:56:27:437 CONSOLA/(7646:7646): Programa enviado al kernel correctamente!
+[INFO] 01:56:28:222 CONSOLA/(7646:7646): resultado -> -1218711316
+
+[INFO] 01:56:28:223 CONSOLA/(7585:7585): resultado -> -1218580244
+
+[INFO] 01:57:54:840 CONSOLA/(7830:7830): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:57:54:841 CONSOLA/(7830:7830): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:57:54:841 CONSOLA/(7830:7830): Programa enviado al kernel correctamente!
+[INFO] 01:58:33:327 CONSOLA/(7892:7892): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:58:33:327 CONSOLA/(7892:7892): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:58:33:328 CONSOLA/(7892:7892): Programa enviado al kernel correctamente!
+[INFO] 01:58:39:487 CONSOLA/(7913:7913): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 01:58:39:488 CONSOLA/(7913:7913): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 01:58:39:488 CONSOLA/(7913:7913): Programa enviado al kernel correctamente!
+[INFO] 02:08:10:334 CONSOLA/(8775:8775): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 02:08:10:335 CONSOLA/(8775:8775): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 02:08:10:335 CONSOLA/(8775:8775): Programa enviado al kernel correctamente!
+[INFO] 02:08:17:419 CONSOLA/(8795:8795): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 02:08:17:421 CONSOLA/(8795:8795): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 02:08:17:421 CONSOLA/(8795:8795): Programa enviado al kernel correctamente!
+[INFO] 02:08:18:198 CONSOLA/(8795:8795): resultado -> -1219239700
+
+[INFO] 02:08:18:198 CONSOLA/(8775:8775): resultado -> -1218449172
+
+[INFO] 02:15:34:715 CONSOLA/(9492:9492): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 02:15:34:716 CONSOLA/(9492:9492): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 02:15:34:716 CONSOLA/(9492:9492): Programa enviado al kernel correctamente!
+[INFO] 02:16:38:573 CONSOLA/(9585:9585): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 02:16:38:574 CONSOLA/(9585:9585): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 02:16:38:574 CONSOLA/(9585:9585): Programa enviado al kernel correctamente!
+[INFO] 02:16:39:375 CONSOLA/(9585:9585): resultado -> -1218424596
+
+[INFO] 02:16:39:375 CONSOLA/(9492:9492): resultado -> -1218649876
+
+[INFO] 02:18:12:162 CONSOLA/(9782:9782): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 02:18:12:163 CONSOLA/(9782:9782): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 02:18:12:163 CONSOLA/(9782:9782): Programa enviado al kernel correctamente!
+[INFO] 02:18:49:474 CONSOLA/(9846:9846): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 02:18:49:477 CONSOLA/(9846:9846): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 02:18:49:477 CONSOLA/(9846:9846): Programa enviado al kernel correctamente!
+[INFO] 02:18:50:585 CONSOLA/(9846:9846): resultado -> -1218658068
+
+[INFO] 02:18:50:585 CONSOLA/(9782:9782): resultado -> -1219047188
+
+[INFO] 08:28:45:632 CONSOLA/(3809:3809): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 08:28:45:695 CONSOLA/(3809:3809): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 08:28:45:695 CONSOLA/(3809:3809): Programa enviado al kernel correctamente!
+[INFO] 08:28:56:444 CONSOLA/(3839:3839): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 08:28:56:446 CONSOLA/(3839:3839): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 08:28:56:447 CONSOLA/(3839:3839): Programa enviado al kernel correctamente!
+[INFO] 08:29:13:289 CONSOLA/(3873:3873): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 08:29:13:292 CONSOLA/(3873:3873): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 08:29:13:293 CONSOLA/(3873:3873): Programa enviado al kernel correctamente!
+[INFO] 08:29:29:190 CONSOLA/(3904:3904): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 08:29:29:190 CONSOLA/(3904:3904): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 08:29:29:191 CONSOLA/(3904:3904): Programa enviado al kernel correctamente!
+[INFO] 08:46:28:284 CONSOLA/(5746:5746): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 08:46:28:288 CONSOLA/(5746:5746): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 08:46:28:288 CONSOLA/(5746:5746): Programa enviado al kernel correctamente!
+[INFO] 08:46:28:934 CONSOLA/(5746:5746): resultado -> -1219256084
+
+[INFO] 09:10:13:088 CONSOLA/(8075:8075): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:10:13:373 CONSOLA/(8075:8075): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:13:37:155 CONSOLA/(8419:8419): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:13:37:156 CONSOLA/(8419:8419): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:13:37:156 CONSOLA/(8419:8419): Programa enviado al kernel correctamente!
+[INFO] 09:13:37:800 CONSOLA/(8419:8419): resultado -> -1218641684
+
+[INFO] 09:18:24:189 CONSOLA/(8913:8913): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:18:24:194 CONSOLA/(8913:8913): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:18:24:195 CONSOLA/(8913:8913): Programa enviado al kernel correctamente!
+[INFO] 09:18:24:876 CONSOLA/(8913:8913): resultado -> -1218821908
+
+[INFO] 09:19:43:091 CONSOLA/(9085:9085): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:19:43:091 CONSOLA/(9085:9085): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:19:43:091 CONSOLA/(9085:9085): Programa enviado al kernel correctamente!
+[INFO] 09:19:51:756 CONSOLA/(9102:9102): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:19:51:758 CONSOLA/(9102:9102): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:19:51:758 CONSOLA/(9102:9102): Programa enviado al kernel correctamente!
+[INFO] 09:19:52:565 CONSOLA/(9102:9102): resultado -> -1218461460
+
+[INFO] 09:19:52:565 CONSOLA/(9085:9085): resultado -> -1218473748
+
+[INFO] 09:21:50:679 CONSOLA/(9343:9343): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:21:50:680 CONSOLA/(9343:9343): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:21:50:680 CONSOLA/(9343:9343): Programa enviado al kernel correctamente!
+[INFO] 09:22:18:362 CONSOLA/(9388:9388): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:22:18:364 CONSOLA/(9388:9388): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:22:18:364 CONSOLA/(9388:9388): Programa enviado al kernel correctamente!
+[INFO] 09:22:19:194 CONSOLA/(9388:9388): resultado -> -1219264276
+
+[INFO] 09:22:19:195 CONSOLA/(9343:9343): resultado -> -1218948884
+
+[INFO] 09:23:33:027 CONSOLA/(9592:9592): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:23:33:028 CONSOLA/(9592:9592): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:23:33:028 CONSOLA/(9592:9592): Programa enviado al kernel correctamente!
+[INFO] 09:23:54:386 CONSOLA/(9638:9638): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:23:54:392 CONSOLA/(9638:9638): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:23:54:395 CONSOLA/(9638:9638): Programa enviado al kernel correctamente!
+[INFO] 09:23:55:248 CONSOLA/(9638:9638): resultado -> -1218928404
+
+[INFO] 09:23:55:248 CONSOLA/(9592:9592): resultado -> -1218731796
+
+[INFO] 09:32:38:841 CONSOLA/(10557:10557): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:32:38:842 CONSOLA/(10557:10557): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:32:38:842 CONSOLA/(10557:10557): Programa enviado al kernel correctamente!
+[INFO] 09:32:52:547 CONSOLA/(10587:10587): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:32:52:552 CONSOLA/(10587:10587): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:32:52:552 CONSOLA/(10587:10587): Programa enviado al kernel correctamente!
+[INFO] 09:33:25:890 CONSOLA/(10587:10587): resultado -> -1218866964
+
+[INFO] 09:33:25:890 CONSOLA/(10557:10557): resultado -> -1218842388
+
+[INFO] 09:34:45:450 CONSOLA/(10908:10908): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:34:45:450 CONSOLA/(10908:10908): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:34:45:451 CONSOLA/(10908:10908): Programa enviado al kernel correctamente!
+[INFO] 09:34:57:504 CONSOLA/(10933:10933): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:34:57:509 CONSOLA/(10933:10933): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:34:57:510 CONSOLA/(10933:10933): Programa enviado al kernel correctamente!
+[INFO] 09:34:58:336 CONSOLA/(10933:10933): resultado -> -1218580244
+
+[INFO] 09:34:58:336 CONSOLA/(10908:10908): resultado -> -1219063572
+
+[INFO] 09:38:07:455 CONSOLA/(11337:11337): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:38:07:467 CONSOLA/(11337:11337): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:38:07:467 CONSOLA/(11337:11337): Programa enviado al kernel correctamente!
+[INFO] 09:38:13:630 CONSOLA/(11355:11355): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:38:13:632 CONSOLA/(11355:11355): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:38:13:632 CONSOLA/(11355:11355): Programa enviado al kernel correctamente!
+[INFO] 09:38:14:684 CONSOLA/(11355:11355): resultado -> -1218711316
+
+[INFO] 09:38:14:684 CONSOLA/(11337:11337): resultado -> -1219272468
+
+[INFO] 09:39:39:586 CONSOLA/(11580:11580): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:39:39:587 CONSOLA/(11580:11580): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:39:39:587 CONSOLA/(11580:11580): Programa enviado al kernel correctamente!
+[INFO] 09:39:45:699 CONSOLA/(11601:11601): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:39:45:708 CONSOLA/(11601:11601): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:39:45:709 CONSOLA/(11601:11601): Programa enviado al kernel correctamente!
+[INFO] 09:39:46:412 CONSOLA/(11601:11601): resultado -> -1218477844
+
+[INFO] 09:39:46:412 CONSOLA/(11580:11580): resultado -> -1218629396
+
+[INFO] 09:44:16:427 CONSOLA/(12141:12141): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:44:16:428 CONSOLA/(12141:12141): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:44:16:428 CONSOLA/(12141:12141): Programa enviado al kernel correctamente!
+[INFO] 09:44:38:260 CONSOLA/(12180:12180): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:44:38:261 CONSOLA/(12180:12180): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:44:38:261 CONSOLA/(12180:12180): Programa enviado al kernel correctamente!
+[INFO] 09:45:56:319 CONSOLA/(12180:12180): resultado -> -1218539284
+
+[INFO] 09:45:56:319 CONSOLA/(12141:12141): resultado -> -1218842388
+
+[INFO] 09:47:14:450 CONSOLA/(12549:12549): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:47:14:450 CONSOLA/(12549:12549): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:47:14:451 CONSOLA/(12549:12549): Programa enviado al kernel correctamente!
+[INFO] 09:52:16:550 CONSOLA/(12982:12982): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:52:16:564 CONSOLA/(12982:12982): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:52:16:564 CONSOLA/(12982:12982): Programa enviado al kernel correctamente!
+[INFO] 09:52:27:332 CONSOLA/(13001:13001): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:52:27:333 CONSOLA/(13001:13001): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:52:27:333 CONSOLA/(13001:13001): Programa enviado al kernel correctamente!
+[INFO] 09:52:49:816 CONSOLA/(13022:13022): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 09:52:50:413 CONSOLA/(13022:13022): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 09:52:50:413 CONSOLA/(13022:13022): Programa enviado al kernel correctamente!
+[INFO] 10:18:50:204 CONSOLA/(4191:4191): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:18:50:218 CONSOLA/(4191:4191): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:18:50:218 CONSOLA/(4191:4191): Programa enviado al kernel correctamente!
+[INFO] 10:19:05:235 CONSOLA/(4256:4256): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:19:05:240 CONSOLA/(4256:4256): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:19:05:240 CONSOLA/(4256:4256): Programa enviado al kernel correctamente!
+[INFO] 10:19:06:062 CONSOLA/(4256:4256): resultado -> -1218715412
+
+[INFO] 10:19:06:062 CONSOLA/(4191:4191): resultado -> -1218842388
+
+[INFO] 10:22:16:111 CONSOLA/(4611:4611): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:22:16:126 CONSOLA/(4611:4611): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:26:36:209 CONSOLA/(4874:4874): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:26:36:223 CONSOLA/(4874:4874): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:37:56:286 CONSOLA/(5729:5729): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:37:56:699 CONSOLA/(5729:5729): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 13:37:56:760 CONSOLA/(5729:5729): Programa enviado al kernel correctamente!
+[INFO] 13:37:57:180 CONSOLA/(5729:5729): resultado -> 67605290
+
+[INFO] 10:38:49:270 CONSOLA/(5796:5796): IP: 127.0.0.1 | Puerto: 8000
+[ERROR] 10:38:49:587 CONSOLA/(5796:5796): Error al conectar (a KERNEL)
+
+[ERROR] 13:38:49:637 CONSOLA/(5796:5796): Por desgracia no se pudo enviar el programa :(
+[INFO] 10:40:18:966 CONSOLA/(5989:5989): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:40:18:968 CONSOLA/(5989:5989): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:40:18:968 CONSOLA/(5989:5989): Programa enviado al kernel correctamente!
+[INFO] 10:40:27:018 CONSOLA/(6011:6011): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 10:40:27:031 CONSOLA/(6011:6011): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 10:40:27:033 CONSOLA/(6011:6011): Programa enviado al kernel correctamente!
+[INFO] 10:40:27:969 CONSOLA/(6011:6011): resultado -> -1219333908
+
+[INFO] 10:40:27:969 CONSOLA/(5989:5989): resultado -> -1219256084
+

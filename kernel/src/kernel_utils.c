@@ -1,55 +1,93 @@
 #include "kernel_utils.h"
 
-pthread_mutex_t mx_cola_new = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t s_new_ready = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t s_multip_actual = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_multip_actual = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_pid_sig = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_logger = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_cpu_desocupado = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_cola_new = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_lista_ready = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_socket = PTHREAD_MUTEX_INITIALIZER;
+
+sem_t s_new_ready, s_fifo_ready_execute, s_srt_ready_execute, s_cont_ready;
+
 t_dictionary* sockets;
 t_queue* cola_new;
 t_list* cola_ready;
 t_queue* cola_blocked;
-t_config* config;
-int pid_sig;
-int estimacion_inicial;
-int grado_multiprogramacion;
-int multiprogramacion_actual;
 
-//HILO
-void pasaje_new_ready(){
+int pid_sig, estimacion_inicial, grado_multiprogramacion, multiprogramacion_actual, conexion_cpu_dispatch, cpu_desocupado = 1, aaa=1;
+char *algoritmo_config, *ip_cpu, *puerto_cpu_dispatch;
 
-	grado_multiprogramacion = config_get_int_value(config, "GRADO_MULTIPROGRAMACION");
-	//solucion de mierda, buscarle la vuelta a hacer una mas linda
-	//no se pq pero el semaforo siempre empieza en 1, entonces me caga
-	pthread_mutex_lock(&s_new_ready);  // Quizas aplicaria un contador en vez de mutex y nos ahorramos este lock
-	while(1){
-		pthread_mutex_lock(&s_new_ready);
-		pthread_mutex_lock(&mx_cola_new);
-		//AGREGAR QUE SI HAY PCBS EN READY SUSPENDED TIENEN PRIORIDAD DE PASO
-		if(multiprogramacion_actual < grado_multiprogramacion){
-			PCB_t* p = queue_pop(cola_new);
-			list_add(cola_ready,p);
-			pthread_mutex_lock(&s_multip_actual);
-			multiprogramacion_actual++;
-			pthread_mutex_unlock(&s_multip_actual);
+algoritmo_t algoritmo;
+
+void inicializar(){
+	logger = log_create("kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
+	config = config_create("kernel.config");
+
+	cola_new = queue_create();
+	cola_blocked = queue_create();
+	cola_ready = list_create();
+
+	sockets = dictionary_create();
+
+	pid_sig = 1;
+
+	grado_multiprogramacion = config_get_int_value(config,"GRADO_MULTIPROGRAMACION");
+	estimacion_inicial = config_get_double_value(config,"ESTIMACION_INICIAL");
+	ip_cpu = config_get_string_value(config,"IP_CPU");
+	puerto_cpu_dispatch = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
+	algoritmo_config = config_get_string_value(config,"ALGORITMO_PLANIFICACION");
+
+	conexion_cpu_dispatch = crear_conexion(logger, "CPU DISPATCH", ip_cpu, puerto_cpu_dispatch);
+
+	sem_init(&s_new_ready, 0, 0);
+	sem_init(&s_cont_ready, 0, 0); // Incrementa al sumar un proceso a ready y decrementa al ejecutarlo
+
+	pthread_t hilo_pasaje_new_ready;
+	pthread_create(&hilo_pasaje_new_ready,NULL,(void*)pasaje_new_ready,NULL);
+	pthread_detach(hilo_pasaje_new_ready);
+
+	if(strcmp(algoritmo_config, "FIFO") == 0){
+		algoritmo = FIFO;
+	} else {
+		algoritmo = SRT;
+	}
+	switch(algoritmo){
+		case FIFO:
+		{
+			printf("FIFO %d", algoritmo);
+			sem_init(&s_fifo_ready_execute, 0, 0);
+			pthread_t hilo_fifo_ready_execute;
+			pthread_create(&hilo_fifo_ready_execute,NULL,(void*)fifo_ready_execute,NULL);
+			pthread_detach(hilo_fifo_ready_execute);
+			break;
 		}
-		pthread_mutex_unlock(&mx_cola_new);
+		case SRT:
+		{
+			printf("SRT %d", algoritmo);
+			sem_init(&s_srt_ready_execute, 0, 0);
+			pthread_t hilo_srt_ready_execute;
+			pthread_create(&hilo_srt_ready_execute,NULL,(void*)srt_ready_execute,NULL);
+			pthread_detach(hilo_srt_ready_execute);
+			break;
+		}
 	}
 
 }
 
-void inicializar(){
-	logger = log_create("kernel.log", "kernel", 1, LOG_LEVEL_INFO);
-	config = config_create("kernel.config");
-	cola_new = queue_create();
-	cola_blocked = queue_create();
-	cola_ready = list_create();
-	sockets = dictionary_create();
-	pid_sig = 1;
-	grado_multiprogramacion = config_get_int_value(config,"GRADO_MULTIPROGRAMACION");
-	estimacion_inicial = config_get_int_value(config,"ESTIMACION_INICIAL");
-	pthread_t hilo_pasaje_new_ready;
-	pthread_create(&hilo_pasaje_new_ready,NULL,(void*)pasaje_new_ready,NULL);
-	pthread_detach(hilo_pasaje_new_ready);
+int escuchar_servidor(char* name, int server_socket){
+	int cliente_socket = esperar_cliente(logger, name, server_socket);
+
+	if (cliente_socket != -1){
+		pthread_t hilo;
+		thread_args* arg = malloc(sizeof(thread_args));
+		arg->cliente = cliente_socket;
+		arg->server_name = name;
+		pthread_create(&hilo, NULL, (void*) procesar_socket, (void*) arg);
+		pthread_detach(hilo);
+		return 1;
+	}
+	return 0;
 }
 
 void procesar_socket(thread_args* argumentos){
@@ -60,13 +98,13 @@ void procesar_socket(thread_args* argumentos){
 	free(argumentos);
 	op_code cop;
 	while (cliente_socket != -1) {
-
 		if (recv(cliente_socket, &cop, sizeof(op_code), 0) <= 0) {
+			pthread_mutex_lock(&mx_logger);
 			log_info(logger, "DISCONNECT_FAILURE!");
+			pthread_mutex_unlock(&mx_logger);
 			send(cliente_socket, &resultError, sizeof(uint32_t), NULL);
 			return;
 		}
-
 		switch (cop) {
 			case PROGRAMA:
 			{
@@ -74,44 +112,43 @@ void procesar_socket(thread_args* argumentos){
 				uint16_t tamanio = 0;
 
 				if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
+					pthread_mutex_lock(&mx_logger);
 					log_error(logger, "Fallo recibiendo PROGRAMA");
+					pthread_mutex_unlock(&mx_logger);
 					break;
 				}
 
+				pthread_mutex_lock(&mx_logger);
 				log_info(logger, "Tamanio %d", tamanio);
+				pthread_mutex_unlock(&mx_logger);
+
 				for(int i = 0; i <  string_array_size(instrucciones); i++){
+					pthread_mutex_lock(&mx_logger);
 					log_info(logger, "Instruccion numero %d: %s", i, instrucciones[i]);
+					pthread_mutex_unlock(&mx_logger);
 				}
 
-				PCB_t proceso;
-				proceso.instrucciones = string_array_new();
+				PCB_t* proceso = malloc(sizeof(PCB_t));
+				proceso->instrucciones = string_array_new();
 
 				pthread_mutex_lock(&mx_pid_sig);
-				proceso.pid = pid_sig;
+				proceso->pid = pid_sig;
 				pid_sig+=1;
 				pthread_mutex_unlock(&mx_pid_sig);
 
-				proceso.tamanio = tamanio;
-				proceso.pc = 0;
-				proceso.instrucciones = instrucciones;
-				proceso.tabla_paginas = 0;   // SOLO LO INICIALIZAMOS, MEMORIA NOS VA A ENVIAR EL VALOR
-				proceso.est_rafaga = estimacion_inicial;  // ESTO VA POR ARCHIVO DE CONFIGURACION
+				proceso->tamanio = tamanio;
+				proceso->pc = 0;
+				proceso->instrucciones = instrucciones;
+				proceso->tabla_paginas = 0;   // SOLO LO INICIALIZAMOS, MEMORIA NOS VA A ENVIAR EL VALOR
+				proceso->est_rafaga = estimacion_inicial;  // ESTO VA POR ARCHIVO DE CONFIGURACION
 
 				pthread_mutex_lock(&mx_cola_new);
-				queue_push(cola_new,&proceso);
+				queue_push(cola_new, proceso);
 				pthread_mutex_unlock(&mx_cola_new);
 
-				pthread_mutex_unlock(&s_new_ready);
-//				ip_cpu = config_get_string_value(config,"IP_CPU");
-//				puerto_cpu_dispatch = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
-//
-//				conexion_cpu_dispatch = crear_conexion(logger, "CPU DISPATCH", ip_cpu, puerto_cpu_dispatch);
-//
-//				send_proceso(conexion_cpu_dispatch, proceso);
+				sem_post(&s_new_ready);
 
 				string_array_destroy(instrucciones);
-				log_info(logger,"Cola de new: %d",queue_size(cola_new));
-				log_info(logger,"Cola de ready: %d", list_size(cola_ready));
 
 //				send(cliente_socket, &resultOk, sizeof(uint32_t), NULL); // Forma de avisar a la consola, no iria aca
 
@@ -125,8 +162,10 @@ void procesar_socket(thread_args* argumentos){
 //				log_error(logger, "Cliente desconectado de kernel");
 //				break;
 			default:
+				pthread_mutex_lock(&mx_logger);
 				log_error(logger, "Algo anduvo mal en el server del kernel ");
 				log_info(logger, "Cop: %d", cop);
+				pthread_mutex_unlock(&mx_logger);
 		}
 	}
 
@@ -134,20 +173,83 @@ void procesar_socket(thread_args* argumentos){
 
 }
 
-int escuchar_servidor(char* name, int server_socket){
+/****Hilo NEW -> READY ***/
+void pasaje_new_ready(){
 
-	int cliente_socket = esperar_cliente(logger, name, server_socket);
-	if (cliente_socket != -1){
-		pthread_t hilo;
-		thread_args* arg = malloc(sizeof(thread_args));
-		arg->cliente = cliente_socket;
-		arg->server_name = name;
-		pthread_create(&hilo, NULL, (void*) procesar_socket, (void*) arg);
-		pthread_detach(hilo);
-		return 1;
+	grado_multiprogramacion = config_get_int_value(config, "GRADO_MULTIPROGRAMACION");
+	while(1){
+		sem_wait(&s_new_ready);
+		pthread_mutex_lock(&mx_cola_new);
+		//AGREGAR QUE SI HAY PCBS EN READY SUSPENDED TIENEN PRIORIDAD DE PASO
+		if(multiprogramacion_actual < grado_multiprogramacion){
+			PCB_t* p = queue_pop(cola_new);
+			list_add(cola_ready,p);
+			sem_post(&s_cont_ready);
+			pthread_mutex_lock(&mx_multip_actual);
+			multiprogramacion_actual++;
+			pthread_mutex_unlock(&mx_multip_actual);
+			pthread_mutex_lock(&mx_logger);
+			log_info(logger,"(new -> ready) Cola de new: %d",queue_size(cola_new));
+			log_info(logger,"(new -> ready) Cola de ready: %d", list_size(cola_ready));
+			pthread_mutex_unlock(&mx_logger);
+			switch(algoritmo){
+				case FIFO:
+				{
+					sem_post(&s_fifo_ready_execute);
+					break;
+				}
+				case SRT:
+				{
+					sem_post(&s_srt_ready_execute);
+					break;
+				}
+			}
+		}
+		pthread_mutex_unlock(&mx_cola_new);
 	}
-	return 0;
+
 }
+
+/****Hilo READY -> EXECUTE (FIFO) ***/
+void fifo_ready_execute(){
+	while(1){
+		sem_wait(&s_fifo_ready_execute);
+		pthread_mutex_lock(&mx_cpu_desocupado);
+		if(cpu_desocupado){ // Para que no ejecute cada vez que un proceso pasa de new a ready
+			pthread_mutex_lock(&mx_lista_ready);
+			sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
+			PCB_t* proceso = malloc(sizeof(PCB_t));
+			proceso = list_remove(cola_ready, 0);
+			pthread_mutex_unlock(&mx_lista_ready);
+			pthread_mutex_lock(&mx_logger);
+			log_info(logger, "\n Mandando proceso %d a ejecutar tam %d ints %s %s %s %s pc %d tabla %d est %d \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
+			pthread_mutex_unlock(&mx_logger);
+			cpu_desocupado = 0;
+			send_proceso(conexion_cpu_dispatch, proceso);
+			free(proceso);
+			}
+		pthread_mutex_unlock(&mx_cpu_desocupado);
+	}
+}
+
+/****Hilo READY -> EXECUTE (SRT) ***/
+void srt_ready_execute(){
+	while(1){
+		sem_wait(&s_srt_ready_execute);
+//		pthread_mutex_lock(&mx_cola_new);
+//		//AGREGAR QUE SI HAY PCBS EN READY SUSPENDED TIENEN PRIORIDAD DE PASO
+//		if(multiprogramacion_actual < grado_multiprogramacion){
+//			PCB_t* p = queue_pop(cola_new);
+//			list_add(cola_ready,p);
+//			pthread_mutex_lock(&mx_multip_actual);
+//			multiprogramacion_actual++;
+//			pthread_mutex_unlock(&mx_multip_actual);
+//		}
+//		pthread_mutex_unlock(&mx_cola_new);
+	}
+
+}
+
 
 //exit-->console
 //dispatch --> agregar a ready

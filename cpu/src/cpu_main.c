@@ -19,11 +19,11 @@ int main(void) {
 	op_code cop;
 	while (cliente_socket_dispatch != -1) {
 
-		if (recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0) <= 0) {
-			log_info(logger, "DISCONNECT!");
-			return EXIT_FAILURE;
-		}
-
+//		if (recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0) <= 0) {
+//			log_info(logger, "DISCONNECT!");
+//			return EXIT_FAILURE;
+//		}
+		cop = PROCESO;
 		switch (cop) {
 			case PROCESO:
 			{
@@ -42,11 +42,6 @@ int main(void) {
 				log_info(logger, "PCB ---> pid=%d | tamanio=%d | pc=%d | tabla_paginas=%d | est_rafaga=%d", proceso.pid, proceso.tamanio, proceso.pc, proceso.tabla_paginas, proceso.est_rafaga );
 				break;
 			}
-
-			// Errores
-			case -1:
-				log_error(logger, "Cliente desconectado de kernel");
-				return EXIT_FAILURE;
 			default:
 				log_error(logger, "Algo anduvo mal en el server del kernel ");
 				log_info(logger, "Cop: %d", cop);

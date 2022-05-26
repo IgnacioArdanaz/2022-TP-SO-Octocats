@@ -21,12 +21,19 @@ typedef struct{
 	char* server_name;
 } thread_args;
 
+typedef enum {
+    FIFO,
+	SRT,
+} algoritmo_t;
+
 t_log* logger;
 t_config* config;
 void inicializar();
-void pasaje_new_ready();
-void procesar_socket(thread_args* argumentos);
 int escuchar_servidor(char* name, int server_socket);
+void procesar_socket(thread_args* argumentos);
+void pasaje_new_ready();
+void fifo_ready_execute();
+void srt_ready_execute();
 PCB_t* fifo();
 PCB_t* sjf();
 

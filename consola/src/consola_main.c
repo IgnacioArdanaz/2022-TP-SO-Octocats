@@ -2,6 +2,7 @@
 
 int main(int argc, char** argv){
 	if(argc < 3) {
+		printf("Uso incorrecto :(\n\tEjemplo: ./a.out un_tamanio ruta_de_pseudocodigo\n");
 		return EXIT_FAILURE;
 	}
 
@@ -22,7 +23,7 @@ int main(int argc, char** argv){
 	char* puerto_kernel;
 	uint32_t resultado;
 
-	t_log* logger = log_create("consola.log", "consola", 1, LOG_LEVEL_INFO);;
+	t_log* logger = log_create("consola.log", "CONSOLA", 1, LOG_LEVEL_INFO);
 	t_config* config = config_create("consola.config");
 
 	ip_kernel = config_get_string_value(config, "IP_KERNEL");
@@ -31,6 +32,8 @@ int main(int argc, char** argv){
 	log_info(logger, "IP: %s | Puerto: %s", ip_kernel, puerto_kernel);
 
 	conexion = crear_conexion(logger, "KERNEL", ip_kernel, puerto_kernel);
+
+	printf("hola conexion %d \n", conexion);
 
 	if (send_programa(conexion, tabla, tamanio)){
 		log_info(logger,"Programa enviado al kernel correctamente!");
