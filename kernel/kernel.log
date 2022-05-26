@@ -2132,3 +2132,147 @@
 [INFO] 10:40:18:978 KERNEL/(5957:5963): 
  Mandando proceso 1 a ejecutar tam 8 ints I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 0 
 
+[INFO] 11:51:25:539 KERNEL/(21420:21420): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+
+[INFO] 11:51:25:564 KERNEL/(21420:21420): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 11:51:25:564 KERNEL/(21420:21420): KERNEL listo para recibir al cliente
+[INFO] 11:51:49:098 KERNEL/(21420:21420): Cliente conectado (a KERNEL)
+
+[INFO] 11:51:49:098 KERNEL/(21420:21420): KERNEL listo para recibir al cliente
+[INFO] 11:51:49:100 KERNEL/(21420:21481): Tamanio 8
+[INFO] 11:51:49:100 KERNEL/(21420:21481): Instruccion numero 0: I/O 3000
+[INFO] 11:51:49:100 KERNEL/(21420:21481): Instruccion numero 1: NO_OP
+[INFO] 11:51:49:101 KERNEL/(21420:21481): Instruccion numero 2: NO_OP
+[INFO] 11:51:49:101 KERNEL/(21420:21481): Instruccion numero 3: WRITE 4 42
+[INFO] 11:51:49:101 KERNEL/(21420:21481): Instruccion numero 4: COPY 0 4
+[INFO] 11:51:49:101 KERNEL/(21420:21481): Instruccion numero 5: READ 0
+[INFO] 11:51:49:102 KERNEL/(21420:21481): Instruccion numero 6: EXIT
+[INFO] 11:51:49:102 KERNEL/(21420:21428): (new -> ready) Cola de new: 0
+[INFO] 11:51:49:102 KERNEL/(21420:21428): (new -> ready) Cola de ready: 1
+[INFO] 11:51:49:102 KERNEL/(21420:21429): 
+ Mandando proceso 1 a ejecutar tam 8 ints I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 0 
+
+[INFO] 15:33:43:202 KERNEL/(27524:27524): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+
+[INFO] 15:33:43:303 KERNEL/(27524:27524): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 15:33:43:303 KERNEL/(27524:27524): KERNEL listo para recibir al cliente
+[INFO] 15:33:51:948 KERNEL/(27524:27524): Cliente conectado (a KERNEL)
+
+[INFO] 15:33:51:948 KERNEL/(27524:27524): KERNEL listo para recibir al cliente
+[INFO] 15:33:51:951 KERNEL/(27524:27555): Tamanio 8
+[INFO] 15:33:51:951 KERNEL/(27524:27555): Instruccion numero 0: I/O 3000
+[INFO] 15:33:51:951 KERNEL/(27524:27555): Instruccion numero 1: NO_OP
+[INFO] 15:33:51:952 KERNEL/(27524:27555): Instruccion numero 2: NO_OP
+[INFO] 15:33:51:954 KERNEL/(27524:27555): Instruccion numero 3: WRITE 4 42
+[INFO] 15:33:51:954 KERNEL/(27524:27555): Instruccion numero 4: COPY 0 4
+[INFO] 15:33:51:954 KERNEL/(27524:27555): Instruccion numero 5: READ 0
+[INFO] 15:33:51:955 KERNEL/(27524:27555): Instruccion numero 6: EXIT
+[INFO] 15:33:51:955 KERNEL/(27524:27529): (new -> ready) Cola de new: 0
+[INFO] 15:33:51:955 KERNEL/(27524:27529): (new -> ready) Cola de ready: 1
+[INFO] 15:33:51:955 KERNEL/(27524:27530): 
+ Mandando proceso 1 a ejecutar tam 8 ints I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 0 
+
+[INFO] 15:40:36:429 KERNEL/(28349:28349): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+
+[INFO] 15:40:36:429 KERNEL/(28349:28349): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 15:40:36:434 KERNEL/(28349:28349): KERNEL listo para recibir al cliente
+[INFO] 15:43:05:558 KERNEL/(28349:28349): Cliente conectado (a KERNEL)
+
+[INFO] 15:43:05:558 KERNEL/(28349:28349): KERNEL listo para recibir al cliente
+[INFO] 15:43:05:562 KERNEL/(28349:28622): Tamanio 8
+[INFO] 15:43:05:562 KERNEL/(28349:28622): Instruccion numero 0: I/O 3000
+[INFO] 15:43:05:562 KERNEL/(28349:28622): Instruccion numero 1: NO_OP
+[INFO] 15:43:05:563 KERNEL/(28349:28622): Instruccion numero 2: NO_OP
+[INFO] 15:43:05:563 KERNEL/(28349:28622): Instruccion numero 3: WRITE 4 42
+[INFO] 15:43:05:563 KERNEL/(28349:28622): Instruccion numero 4: COPY 0 4
+[INFO] 15:43:05:563 KERNEL/(28349:28622): Instruccion numero 5: READ 0
+[INFO] 15:43:05:563 KERNEL/(28349:28622): Instruccion numero 6: EXIT
+[INFO] 15:43:05:563 KERNEL/(28349:28354): (new -> ready) Cola de new: 0
+[INFO] 15:43:05:563 KERNEL/(28349:28354): (new -> ready) Cola de ready: 1
+[INFO] 15:43:05:563 KERNEL/(28349:28355): 
+ Mandando proceso 1 a ejecutar tam 8 ints I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 0 
+
+[INFO] 16:25:21:686 KERNEL/(30551:30551): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+
+[INFO] 16:25:21:703 KERNEL/(30551:30551): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 16:25:21:703 KERNEL/(30551:30551): KERNEL listo para recibir al cliente
+[INFO] 16:25:29:353 KERNEL/(30551:30551): Cliente conectado (a KERNEL)
+
+[INFO] 16:25:29:354 KERNEL/(30551:30551): KERNEL listo para recibir al cliente
+[INFO] 16:25:29:366 KERNEL/(30551:30580): Tamanio 8
+[INFO] 16:25:29:367 KERNEL/(30551:30580): Instruccion numero 0: I/O 3000
+[INFO] 16:25:29:370 KERNEL/(30551:30580): Instruccion numero 1: NO_OP
+[INFO] 16:25:29:370 KERNEL/(30551:30580): Instruccion numero 2: NO_OP
+[INFO] 16:25:29:370 KERNEL/(30551:30580): Instruccion numero 3: WRITE 4 42
+[INFO] 16:25:29:370 KERNEL/(30551:30580): Instruccion numero 4: COPY 0 4
+[INFO] 16:25:29:370 KERNEL/(30551:30580): Instruccion numero 5: READ 0
+[INFO] 16:25:29:370 KERNEL/(30551:30580): Instruccion numero 6: EXIT
+[INFO] 16:25:29:370 KERNEL/(30551:30557): (new -> ready) Cola de new: 0
+[INFO] 16:25:29:370 KERNEL/(30551:30557): (new -> ready) Cola de ready: 1
+[INFO] 16:25:29:370 KERNEL/(30551:30558): 
+ Mandando proceso 1 a ejecutar tam 8 ints I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 0 
+
+[INFO] 16:26:32:279 KERNEL/(30551:30551): Cliente conectado (a KERNEL)
+
+[INFO] 16:26:32:280 KERNEL/(30551:30551): KERNEL listo para recibir al cliente
+[INFO] 16:26:32:280 KERNEL/(30551:30640): Tamanio 8
+[INFO] 16:26:32:280 KERNEL/(30551:30640): Instruccion numero 0: I/O 3000
+[INFO] 16:26:32:280 KERNEL/(30551:30640): Instruccion numero 1: NO_OP
+[INFO] 16:26:32:280 KERNEL/(30551:30640): Instruccion numero 2: NO_OP
+[INFO] 16:26:32:280 KERNEL/(30551:30640): Instruccion numero 3: WRITE 4 42
+[INFO] 16:26:32:280 KERNEL/(30551:30640): Instruccion numero 4: COPY 0 4
+[INFO] 16:26:32:280 KERNEL/(30551:30640): Instruccion numero 5: READ 0
+[INFO] 16:26:32:280 KERNEL/(30551:30640): Instruccion numero 6: EXIT
+[INFO] 16:26:32:280 KERNEL/(30551:30557): (new -> ready) Cola de new: 0
+[INFO] 16:26:32:280 KERNEL/(30551:30557): (new -> ready) Cola de ready: 1
+[INFO] 16:26:44:942 KERNEL/(30551:30551): Cliente conectado (a KERNEL)
+
+[INFO] 16:26:44:943 KERNEL/(30551:30551): KERNEL listo para recibir al cliente
+[INFO] 16:26:44:946 KERNEL/(30551:30660): Tamanio 8
+[INFO] 16:26:44:946 KERNEL/(30551:30660): Instruccion numero 0: I/O 3000
+[INFO] 16:26:44:946 KERNEL/(30551:30660): Instruccion numero 1: NO_OP
+[INFO] 16:26:44:946 KERNEL/(30551:30660): Instruccion numero 2: NO_OP
+[INFO] 16:26:44:947 KERNEL/(30551:30660): Instruccion numero 3: WRITE 4 42
+[INFO] 16:26:44:947 KERNEL/(30551:30660): Instruccion numero 4: COPY 0 4
+[INFO] 16:26:44:947 KERNEL/(30551:30660): Instruccion numero 5: READ 0
+[INFO] 16:26:44:947 KERNEL/(30551:30660): Instruccion numero 6: EXIT
+[INFO] 16:26:44:947 KERNEL/(30551:30557): (new -> ready) Cola de new: 0
+[INFO] 16:26:44:947 KERNEL/(30551:30557): (new -> ready) Cola de ready: 2
+[INFO] 17:28:27:229 KERNEL/(1438:1438): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+
+[INFO] 17:28:27:240 KERNEL/(1438:1438): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 17:28:27:240 KERNEL/(1438:1438): KERNEL listo para recibir al cliente
+[INFO] 17:28:31:579 KERNEL/(1438:1438): Cliente conectado (a KERNEL)
+
+[INFO] 17:28:31:579 KERNEL/(1438:1438): KERNEL listo para recibir al cliente
+[INFO] 17:28:31:585 KERNEL/(1438:1459): Tamanio 8
+[INFO] 17:28:31:585 KERNEL/(1438:1459): Instruccion numero 0: I/O 3000
+[INFO] 17:28:31:585 KERNEL/(1438:1459): Instruccion numero 1: NO_OP
+[INFO] 17:28:31:585 KERNEL/(1438:1459): Instruccion numero 2: NO_OP
+[INFO] 17:28:31:586 KERNEL/(1438:1459): Instruccion numero 3: WRITE 4 42
+[INFO] 17:28:31:586 KERNEL/(1438:1459): Instruccion numero 4: COPY 0 4
+[INFO] 17:28:31:586 KERNEL/(1438:1459): Instruccion numero 5: READ 0
+[INFO] 17:28:31:586 KERNEL/(1438:1459): Instruccion numero 6: EXIT
+[INFO] 17:28:31:586 KERNEL/(1438:1443): (new -> ready) Cola de new: 0
+[INFO] 17:28:31:586 KERNEL/(1438:1443): (new -> ready) Cola de ready: 1
+[INFO] 17:28:31:586 KERNEL/(1438:1444): 
+ Mandando proceso 1 a ejecutar tam 8 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 0 
+
+[INFO] 17:28:38:737 KERNEL/(1438:1438): Cliente conectado (a KERNEL)
+
+[INFO] 17:28:38:737 KERNEL/(1438:1438): KERNEL listo para recibir al cliente
+[INFO] 17:28:38:737 KERNEL/(1438:1475): Tamanio 8
+[INFO] 17:28:38:737 KERNEL/(1438:1475): Instruccion numero 0: I/O 3000
+[INFO] 17:28:38:737 KERNEL/(1438:1475): Instruccion numero 1: NO_OP
+[INFO] 17:28:38:737 KERNEL/(1438:1475): Instruccion numero 2: NO_OP
+[INFO] 17:28:38:737 KERNEL/(1438:1475): Instruccion numero 3: WRITE 4 42
+[INFO] 17:28:38:737 KERNEL/(1438:1475): Instruccion numero 4: COPY 0 4
+[INFO] 17:28:38:737 KERNEL/(1438:1475): Instruccion numero 5: READ 0
+[INFO] 17:28:38:737 KERNEL/(1438:1475): Instruccion numero 6: EXIT
+[INFO] 17:28:38:737 KERNEL/(1438:1443): (new -> ready) Cola de new: 0
+[INFO] 17:28:38:737 KERNEL/(1438:1443): (new -> ready) Cola de ready: 1

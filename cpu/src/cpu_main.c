@@ -19,10 +19,10 @@ int main(void) {
 	op_code cop;
 	while (cliente_socket_dispatch != -1) {
 
-//		if (recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0) <= 0) {
-//			log_info(logger, "DISCONNECT!");
-//			return EXIT_FAILURE;
-//		}
+		if (recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0) <= 0) {
+			log_info(logger, "DISCONNECT!");
+			return EXIT_FAILURE;
+		}
 		cop = PROCESO;
 		switch (cop) {
 			case PROCESO:

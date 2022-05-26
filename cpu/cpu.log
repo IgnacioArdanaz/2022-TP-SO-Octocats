@@ -1761,3 +1761,64 @@
 [INFO] 10:40:04:484 cpu/(5917:5917): CPU_DISPACHT listo para recibir al cliente
 [INFO] 10:40:12:953 cpu/(5917:5917): Cliente conectado (a CPU_DISPACHT)
 
+[INFO] 11:50:35:012 cpu/(21330:21330): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 11:50:35:036 cpu/(21330:21330): CPU_DISPACHT listo para recibir al cliente
+[INFO] 11:51:25:538 cpu/(21330:21330): Cliente conectado (a CPU_DISPACHT)
+
+[INFO] 15:33:34:770 cpu/(27489:27489): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 15:33:34:899 cpu/(27489:27489): CPU_DISPACHT listo para recibir al cliente
+[INFO] 15:33:43:201 cpu/(27489:27489): Cliente conectado (a CPU_DISPACHT)
+
+[INFO] 15:33:51:955 cpu/(27489:27489): Ejecutando proceso pid=1
+[INFO] 15:33:51:955 cpu/(27489:27489): Instruccion numero 0: I/O 3000 
+
+[INFO] 15:33:51:955 cpu/(27489:27489): Instruccion numero 1: NO_OP 
+
+[INFO] 15:33:51:955 cpu/(27489:27489): Instruccion numero 2: NO_OP 
+
+[INFO] 15:33:51:955 cpu/(27489:27489): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 15:33:51:955 cpu/(27489:27489): Instruccion numero 4: COPY 0 4 
+
+[INFO] 15:33:51:955 cpu/(27489:27489): Instruccion numero 5: READ 0 
+
+[INFO] 15:33:51:955 cpu/(27489:27489): Instruccion numero 6: EXIT 
+
+[INFO] 15:33:51:955 cpu/(27489:27489): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 15:34:39:844 cpu/(27489:27489): DISCONNECT!
+[INFO] 15:40:30:756 cpu/(28314:28314): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 15:40:30:760 cpu/(28314:28314): CPU_DISPACHT listo para recibir al cliente
+[INFO] 15:40:36:425 cpu/(28314:28314): Cliente conectado (a CPU_DISPACHT)
+
+[INFO] 15:43:05:563 cpu/(28314:28314): Ejecutando proceso pid=1
+[INFO] 15:43:05:564 cpu/(28314:28314): Instruccion numero 0: I/O 3000 
+
+[INFO] 15:43:05:564 cpu/(28314:28314): Instruccion numero 1: NO_OP 
+
+[INFO] 15:43:05:564 cpu/(28314:28314): Instruccion numero 2: NO_OP 
+
+[INFO] 15:43:05:564 cpu/(28314:28314): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 15:43:05:564 cpu/(28314:28314): Instruccion numero 4: COPY 0 4 
+
+[INFO] 15:43:05:564 cpu/(28314:28314): Instruccion numero 5: READ 0 
+
+[INFO] 15:43:05:564 cpu/(28314:28314): Instruccion numero 6: EXIT 
+
+[INFO] 15:43:05:564 cpu/(28314:28314): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 15:48:48:646 cpu/(28314:28314): DISCONNECT!
+[INFO] 16:25:11:642 cpu/(30515:30515): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 16:25:11:643 cpu/(30515:30515): CPU_DISPACHT listo para recibir al cliente
+[INFO] 16:25:21:686 cpu/(30515:30515): Cliente conectado (a CPU_DISPACHT)
+
+[INFO] 16:53:32:556 cpu/(30515:30515): DISCONNECT!
+[INFO] 17:27:45:382 cpu/(1374:1374): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+
+[INFO] 17:27:45:534 cpu/(1374:1374): CPU_DISPACHT listo para recibir al cliente
+[INFO] 17:28:27:229 cpu/(1374:1374): Cliente conectado (a CPU_DISPACHT)
+
+[INFO] 17:28:44:950 cpu/(1374:1374): DISCONNECT!

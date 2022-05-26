@@ -76,8 +76,9 @@ void inicializar(){
 }
 
 int escuchar_servidor(char* name, int server_socket){
+	printf("Kernel esperando un nuevo cliente \n");
 	int cliente_socket = esperar_cliente(logger, name, server_socket);
-
+	printf("Socket del cliente recibido en kernel.\n ");
 	if (cliente_socket != -1){
 		pthread_t hilo;
 		thread_args* arg = malloc(sizeof(thread_args));
@@ -85,6 +86,7 @@ int escuchar_servidor(char* name, int server_socket){
 		arg->server_name = name;
 		pthread_create(&hilo, NULL, (void*) procesar_socket, (void*) arg);
 		pthread_detach(hilo);
+		printf("Cliente procesado por kernel\n");
 		return 1;
 	}
 	return 0;
@@ -146,7 +148,7 @@ void procesar_socket(thread_args* argumentos){
 				queue_push(cola_new, proceso);
 				pthread_mutex_unlock(&mx_cola_new);
 
-				sem_post(&s_new_ready);
+				sem_post(&s_new_ready); //Avisa al hilo planificador de pasaje de new a ready que debe ejecutarse.
 
 				string_array_destroy(instrucciones);
 
@@ -184,7 +186,7 @@ void pasaje_new_ready(){
 		if(multiprogramacion_actual < grado_multiprogramacion){
 			PCB_t* p = queue_pop(cola_new);
 			list_add(cola_ready,p);
-			sem_post(&s_cont_ready);
+			sem_post(&s_cont_ready); //Sumo uno al contador de ready
 			pthread_mutex_lock(&mx_multip_actual);
 			multiprogramacion_actual++;
 			pthread_mutex_unlock(&mx_multip_actual);
@@ -216,16 +218,16 @@ void fifo_ready_execute(){
 		sem_wait(&s_fifo_ready_execute);
 		pthread_mutex_lock(&mx_cpu_desocupado);
 		if(cpu_desocupado){ // Para que no ejecute cada vez que un proceso pasa de new a ready
-			pthread_mutex_lock(&mx_lista_ready);
 			sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
 			PCB_t* proceso = malloc(sizeof(PCB_t));
+			pthread_mutex_lock(&mx_lista_ready);
 			proceso = list_remove(cola_ready, 0);
 			pthread_mutex_unlock(&mx_lista_ready);
 			pthread_mutex_lock(&mx_logger);
-			log_info(logger, "\n Mandando proceso %d a ejecutar tam %d ints %s %s %s %s pc %d tabla %d est %d \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
+			log_info(logger, "\n Mandando proceso %d a ejecutar tam %d inst %s %s %s %s pc %d tabla %d est %d \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
 			pthread_mutex_unlock(&mx_logger);
 			cpu_desocupado = 0;
-			send_proceso(conexion_cpu_dispatch, proceso);
+			//send_proceso(conexion_cpu_dispatch, proceso);
 			free(proceso);
 			}
 		pthread_mutex_unlock(&mx_cpu_desocupado);
@@ -250,16 +252,12 @@ void srt_ready_execute(){
 
 }
 
-
-//exit-->console
-//dispatch --> agregar a ready
-//agregar semaforos a fifo,sjf,etc
-//colas de suspended ready y suspended blocked
-
+//Este no va
 PCB_t* fifo(){
 	return list_remove(cola_ready,0);
 }
 
+//Este no va pero se puede usar la logica para hacer srt_ready_execute
 PCB_t* sjf(){
 
 	PCB_t* primer_pcb = list_get(cola_ready,0);
