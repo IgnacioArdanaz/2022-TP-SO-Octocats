@@ -8,7 +8,7 @@ int main(int argc, char** argv){
 
 	//Recibe primero el tamanio y despues el path
 	uint16_t tamanio = atoi(argv[1]);
-	char* path = argv[2];
+	char* path = string_duplicate(argv[2]);
 
 	char** tabla = string_array_new();
 	parser(path, &tabla);
@@ -21,7 +21,7 @@ int main(int argc, char** argv){
 	int conexion;
 	char* ip_kernel;
 	char* puerto_kernel;
-	uint32_t resultado;
+	int32_t resultado = 5;
 
 	t_log* logger = log_create("consola.log", "CONSOLA", 1, LOG_LEVEL_INFO);
 	t_config* config = config_create("consola.config");
@@ -37,7 +37,7 @@ int main(int argc, char** argv){
 
 	if (send_programa(conexion, tabla, tamanio)){
 		log_info(logger,"Programa enviado al kernel correctamente!");
-		recv(conexion, &resultado, sizeof(uint32_t), MSG_WAITALL); // Cada consola espera respuesta del kernel, puede recibir 0 (resultOK) o -1 (resultError)
+		recv(conexion, &resultado, sizeof(int32_t), MSG_WAITALL); // Cada consola espera respuesta del kernel, puede recibir 0 (resultOK) o -1 (resultError)
 		log_info(logger,"resultado -> %d\n", resultado);
 	}
 	else{

@@ -15,14 +15,15 @@ t_queue* cola_new;
 t_list* cola_ready;
 t_queue* cola_blocked;
 
+
 int pid_sig, estimacion_inicial, grado_multiprogramacion, multiprogramacion_actual, conexion_cpu_dispatch, cpu_desocupado = 1, aaa=1;
 char *algoritmo_config, *ip_cpu, *puerto_cpu_dispatch;
 
 algoritmo_t algoritmo;
 
-void inicializar(){
-	logger = log_create("kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
-	config = config_create("kernel.config");
+void inicializar(t_log* logger, t_config* config){
+//	logger = log_create("kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
+//	config = config_create("kernel.config");
 
 	cola_new = queue_create();
 	cola_blocked = queue_create();
@@ -75,7 +76,7 @@ void inicializar(){
 
 }
 
-int escuchar_servidor(char* name, int server_socket){
+int escuchar_servidor(char* name, int server_socket, t_log* logger){
 	printf("Kernel esperando un nuevo cliente \n");
 	int cliente_socket = cliente_socket = esperar_cliente(logger, name, server_socket);
 	printf("Socket del cliente recibido en kernel.\n ");
@@ -94,8 +95,8 @@ int escuchar_servidor(char* name, int server_socket){
 
 void procesar_socket(thread_args* argumentos){
 	int cliente_socket = argumentos->cliente;
-	char* server_name = argumentos->server_name;
-	uint32_t resultOk = 0;
+	char* server_name = string_duplicate(argumentos->server_name);
+	int32_t resultOk = 0;
 	int32_t resultError = -1;
 	free(argumentos);
 	op_code cop;
@@ -104,7 +105,7 @@ void procesar_socket(thread_args* argumentos){
 			pthread_mutex_lock(&mx_logger);
 			//log_info(logger, "DISCONNECT_FAILURE!");
 			pthread_mutex_unlock(&mx_logger);
-			send(cliente_socket, &resultError, sizeof(uint32_t), NULL);
+			send(cliente_socket, &resultError, sizeof(int32_t), NULL);
 			return;
 		}
 		switch (cop) {
@@ -132,7 +133,7 @@ void procesar_socket(thread_args* argumentos){
 				}
 
 				PCB_t* proceso = malloc(sizeof(PCB_t));
-//				proceso->instrucciones = string_array_new();
+				proceso->instrucciones = string_array_new();
 
 				pthread_mutex_lock(&mx_pid_sig);
 				proceso->pid = pid_sig;
@@ -151,9 +152,9 @@ void procesar_socket(thread_args* argumentos){
 
 				sem_post(&s_new_ready); //Avisa al hilo planificador de pasaje de new a ready que debe ejecutarse.
 
-				string_array_destroy(instrucciones);
+//				string_array_destroy(instrucciones);
 
-//				send(cliente_socket, &resultOk, sizeof(uint32_t), NULL); // Forma de avisar a la consola, no iria aca
+//				send(cliente_socket, &resultOk, sizeof(int32_t), NULL); // Forma de avisar a la consola, no iria aca
 
 				return;
 			}
@@ -178,18 +179,19 @@ void procesar_socket(thread_args* argumentos){
 
 /****Hilo NEW -> READY ***/
 void pasaje_new_ready(){
-
-	grado_multiprogramacion = config_get_int_value(config, "GRADO_MULTIPROGRAMACION");
 	while(1){
 		sem_wait(&s_new_ready);
-		pthread_mutex_lock(&mx_cola_new);
 		//AGREGAR QUE SI HAY PCBS EN READY SUSPENDED TIENEN PRIORIDAD DE PASO
 		if(multiprogramacion_actual < grado_multiprogramacion){
-			PCB_t* p = queue_pop(cola_new);
+			pthread_mutex_lock(&mx_cola_new);
+			PCB_t* proceso = malloc(sizeof(PCB_t));
+			proceso = queue_pop(cola_new);
+			printf("\nPROCESO %d POPEADO COLA NEW ->  tam %d inst %s %s %s %s pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
+			pthread_mutex_unlock(&mx_cola_new);
 			pthread_mutex_lock(&mx_lista_ready);
-			list_add(cola_ready,p);
-			printf("\n(new -> ready) Cola de ready: %d",list_size(cola_ready));
-			printf("\n(new -> ready) Cola de new %d:\n", queue_size(cola_new));
+			printf("\nAntes de agregar un nuevo proceso a ready");
+			imprimir_lista_ready();
+			list_add(cola_ready,proceso);
 			pthread_mutex_unlock(&mx_lista_ready);
 			sem_post(&s_cont_ready); //Sumo uno al contador de ready
 			pthread_mutex_lock(&mx_multip_actual);
@@ -213,7 +215,9 @@ void pasaje_new_ready(){
 				}
 			}
 		}
-		pthread_mutex_unlock(&mx_cola_new);
+		printf("\n(new -> ready) Cola de ready: %d",list_size(cola_ready));
+		imprimir_lista_ready();
+		printf("\n(new -> ready) Cola de new : %d\n", queue_size(cola_new));
 	}
 
 }
@@ -222,7 +226,6 @@ void pasaje_new_ready(){
 void fifo_ready_execute(){
 	while(1){
 		sem_wait(&s_fifo_ready_execute);
-		pthread_mutex_lock(&mx_cpu_desocupado);
 		if(cpu_desocupado){ // Para que no ejecute cada vez que un proceso pasa de new a ready
 			sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
 			PCB_t* proceso = malloc(sizeof(PCB_t));
@@ -233,13 +236,15 @@ void fifo_ready_execute(){
 			pthread_mutex_lock(&mx_logger);
 			//log_info(logger, "\n Mandando proceso %d a ejecutar tam %d inst %s %s %s %s pc %d tabla %d est %d \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
 			pthread_mutex_unlock(&mx_logger);
+			pthread_mutex_lock(&mx_cpu_desocupado);
 			cpu_desocupado = 0;
+			pthread_mutex_unlock(&mx_cpu_desocupado);
 			send_proceso(conexion_cpu_dispatch, proceso);
-			free(proceso);
+//			free(proceso);
 			}
-		pthread_mutex_unlock(&mx_cpu_desocupado);
 	}
 }
+
 
 /****Hilo READY -> EXECUTE (SRT) ***/
 void srt_ready_execute(){
@@ -259,28 +264,34 @@ void srt_ready_execute(){
 
 }
 
-//Este no va
-PCB_t* fifo(){
-	return list_remove(cola_ready,0);
+void imprimir_lista_ready(){
+	printf("\nIMPRIMIENDO LISTA READY");
+	t_list_iterator* list_iterator = list_iterator_create(cola_ready);
+	while(list_iterator_has_next(list_iterator)){
+		PCB_t* proceso = malloc(sizeof(PCB_t));
+		proceso = list_iterator_next(list_iterator);
+		printf("\n PROCESO %d -> tam %d inst %s %s %s %s pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
+	}
+	list_iterator_destroy(list_iterator);
 }
 
 //Este no va pero se puede usar la logica para hacer srt_ready_execute
-PCB_t* sjf(){
-
-	PCB_t* primer_pcb = list_get(cola_ready,0);
-	double raf_min = primer_pcb->est_rafaga;
-	int index_pcb = 0;
-	int i;
-	for (i = 1;i<list_size(cola_ready);i++){
-		PCB_t* pcb = list_get(cola_ready,i);
-		double est_raf = pcb->est_rafaga;
-		//si el sjf luego sigue con FIFO, entonces tiene que ser >
-		//si el sjf luego sigue con LIFO, entonces tiene que ser >=
-		if(raf_min >= est_raf){
-			raf_min = est_raf;
-			index_pcb = i;
-		}
-	}
-	return list_remove(cola_ready,index_pcb);
-
-}
+//PCB_t* sjf(){
+//
+//	PCB_t* primer_pcb = list_get(cola_ready,0);
+//	double raf_min = primer_pcb->est_rafaga;
+//	int index_pcb = 0;
+//	int i;
+//	for (i = 1;i<list_size(cola_ready);i++){
+//		PCB_t* pcb = list_get(cola_ready,i);
+//		double est_raf = pcb->est_rafaga;
+//		//si el sjf luego sigue con FIFO, entonces tiene que ser >
+//		//si el sjf luego sigue con LIFO, entonces tiene que ser >=
+//		if(raf_min >= est_raf){
+//			raf_min = est_raf;
+//			index_pcb = i;
+//		}
+//	}
+//	return list_remove(cola_ready,index_pcb);
+//
+//}

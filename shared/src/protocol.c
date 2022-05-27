@@ -34,6 +34,7 @@ static void* serializar_programa(size_t* size, char** instrucciones, uint16_t ta
     memcpy(stream + sizeof(op_code) + sizeof(size_t), &length_lista, sizeof(size_t));
     memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2, stream_inst, size_stream_inst);
     memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + size_stream_inst, &tamanio, sizeof(uint16_t));
+
     return stream;
 }
 
@@ -110,7 +111,7 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso) {
     size_t size_stream_inst = 0, length_lista = 0;
 
     // Serializamos todas las instrucciones en un stream auxiliar
-    void * stream_inst = serializar_instrucciones(&size_stream_inst, proceso->instrucciones, &length_lista);
+    void * stream_inst = serializar_instrucciones_cpu(&size_stream_inst, proceso->instrucciones, &length_lista);
 
 //    length_lista = 7;
 
@@ -138,6 +139,24 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso) {
     memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + sizeof(uint16_t) * 2 + size_stream_inst, &proceso->pc, sizeof(uint32_t));
     memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + sizeof(uint16_t) * 2 + size_stream_inst + sizeof(uint32_t), &proceso->tabla_paginas, sizeof(uint32_t));
     memcpy(stream + sizeof(op_code) + sizeof(size_t) * 2 + sizeof(uint16_t) * 2 + size_stream_inst + sizeof(uint32_t) * 2, &proceso->est_rafaga, sizeof(double));
+
+    return stream;
+}
+
+static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones) {
+	void * stream = malloc(sizeof(void*));
+	size_t size_instruccion;
+
+	for(uint16_t i = 0; instrucciones[i] != NULL; i++){
+		// Primero serializo la longitud de cada instruccion
+		size_instruccion = strlen(instrucciones[i]) + 1;
+		memcpy(stream + *size_stream_inst, &size_instruccion, sizeof(size_t));
+		*size_stream_inst += sizeof(size_t);
+		// Despues serializo la instruccion en si
+		memcpy(stream + *size_stream_inst, instrucciones[i], size_instruccion);
+		*size_stream_inst += size_instruccion;
+		*length_instrucciones += 1;
+	}
 
     return stream;
 }

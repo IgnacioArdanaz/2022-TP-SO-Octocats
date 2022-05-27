@@ -11,16 +11,21 @@ int main(void) {
 	char* puerto_cpu_interrupt;
 	char* puerto_memoria;
 
-	inicializar();
+	t_log* logger = log_create("kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
+	t_config* config = config_create("kernel.config");
+
+	inicializar(logger, config);
 	puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
 	int server_socket = iniciar_servidor(logger, "KERNEL", IP, puerto_escucha);
 	int result = 5;
 	if (server_socket == 0){
-		log_error(logger,"Error creando el socket :(");
+//		log_error(logger,"Error creando el socket :(");
+		printf("Error creando el socket :(");
 		result = EXIT_FAILURE;
 	} else{
-		while(escuchar_servidor("KERNEL",server_socket));
-		log_info(logger, "DISCONNECT_SUCCESS!");
+		while(escuchar_servidor("KERNEL",server_socket, logger));
+		printf("DISCONNECT_SUCCESS!");
+		//log_info(logger, "DISCONNECT_SUCCESS!");
 	}
 
 	log_destroy(logger);

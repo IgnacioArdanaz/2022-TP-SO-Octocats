@@ -1967,3 +1967,416 @@
 
 [INFO] 09:47:53:170 cpu/(1228:1228): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
 [INFO] 09:48:23:341 cpu/(1228:1228): DISCONNECT!
+[INFO] 11:52:24:765 cpu/(8136:8136): Ejecutando proceso pid=1
+[INFO] 11:52:24:766 cpu/(8136:8136): Instruccion numero 0: I/O 3000 
+
+[INFO] 11:52:24:766 cpu/(8136:8136): Instruccion numero 1: NO_OP 
+
+[INFO] 11:52:24:766 cpu/(8136:8136): Instruccion numero 2: NO_OP 
+
+[INFO] 11:52:24:766 cpu/(8136:8136): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 11:52:24:766 cpu/(8136:8136): Instruccion numero 4: COPY 0 4 
+
+[INFO] 11:52:24:766 cpu/(8136:8136): Instruccion numero 5: READ 0 
+
+[INFO] 11:52:24:766 cpu/(8136:8136): Instruccion numero 6: EXIT 
+
+[INFO] 11:52:24:766 cpu/(8136:8136): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 11:53:32:458 cpu/(8136:8136): DISCONNECT!
+[INFO] 12:03:52:474 cpu/(8905:8905): Ejecutando proceso pid=1
+[INFO] 12:03:52:475 cpu/(8905:8905): Instruccion numero 0: I/O 3000 
+
+[INFO] 12:03:52:475 cpu/(8905:8905): Instruccion numero 1: NO_OP 
+
+[INFO] 12:03:52:475 cpu/(8905:8905): Instruccion numero 2: NO_OP 
+
+[INFO] 12:03:52:475 cpu/(8905:8905): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 12:03:52:475 cpu/(8905:8905): Instruccion numero 4: COPY 0 4 
+
+[INFO] 12:03:52:475 cpu/(8905:8905): Instruccion numero 5: READ 0 
+
+[INFO] 12:03:52:475 cpu/(8905:8905): Instruccion numero 6: EXIT 
+
+[INFO] 12:03:52:475 cpu/(8905:8905): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 12:05:09:251 cpu/(8905:8905): DISCONNECT!
+[INFO] 12:11:31:822 cpu/(9155:9155): DISCONNECT!
+[INFO] 12:11:57:980 cpu/(9544:9544): DISCONNECT!
+[INFO] 12:12:22:229 cpu/(9596:9596): DISCONNECT!
+[INFO] 12:16:43:260 cpu/(9640:9640): DISCONNECT!
+[INFO] 12:16:59:028 cpu/(9970:9970): DISCONNECT!
+[INFO] 12:17:13:307 cpu/(10024:10024): DISCONNECT!
+[INFO] 12:17:19:920 cpu/(10053:10053): DISCONNECT!
+[INFO] 12:17:25:800 cpu/(10081:10081): DISCONNECT!
+[INFO] 12:17:32:185 cpu/(10106:10106): DISCONNECT!
+[INFO] 12:17:38:773 cpu/(10136:10136): DISCONNECT!
+[INFO] 12:17:56:158 cpu/(10164:10164): Ejecutando proceso pid=1
+[INFO] 12:17:56:159 cpu/(10164:10164): Instruccion numero 0: I/O 3000 
+
+[INFO] 12:17:56:159 cpu/(10164:10164): Instruccion numero 1: NO_OP 
+
+[INFO] 12:17:56:159 cpu/(10164:10164): Instruccion numero 2: NO_OP 
+
+[INFO] 12:17:56:159 cpu/(10164:10164): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 12:17:56:159 cpu/(10164:10164): Instruccion numero 4: COPY 0 4 
+
+[INFO] 12:17:56:159 cpu/(10164:10164): Instruccion numero 5: READ 0 
+
+[INFO] 12:17:56:159 cpu/(10164:10164): Instruccion numero 6: EXIT 
+
+[INFO] 12:17:56:159 cpu/(10164:10164): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 12:18:44:796 cpu/(10164:10164): DISCONNECT!
+[INFO] 12:38:39:641 cpu/(11382:11382): Ejecutando proceso pid=1
+[INFO] 12:38:39:642 cpu/(11382:11382): Instruccion numero 0: I/O 3000 
+
+[INFO] 12:38:39:642 cpu/(11382:11382): Instruccion numero 1: NO_OP 
+
+[INFO] 12:38:39:642 cpu/(11382:11382): Instruccion numero 2: NO_OP 
+
+[INFO] 12:38:39:642 cpu/(11382:11382): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 12:38:39:642 cpu/(11382:11382): Instruccion numero 4: COPY 0 4 
+
+[INFO] 12:38:39:642 cpu/(11382:11382): Instruccion numero 5: READ 0 
+
+[INFO] 12:38:39:642 cpu/(11382:11382): Instruccion numero 6: EXIT 
+
+[INFO] 12:38:39:642 cpu/(11382:11382): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 12:40:56:872 cpu/(11382:11382): DISCONNECT!
+[INFO] 12:41:12:725 cpu/(11624:11624): DISCONNECT!
+[INFO] 12:41:29:965 cpu/(11672:11672): DISCONNECT!
+[INFO] 12:41:39:957 cpu/(11705:11705): DISCONNECT!
+[INFO] 12:41:50:323 cpu/(11733:11733): DISCONNECT!
+[INFO] 12:42:11:694 cpu/(11773:11773): Ejecutando proceso pid=1
+[INFO] 12:42:11:695 cpu/(11773:11773): Instruccion numero 0: I/O 3000 
+
+[INFO] 12:42:11:695 cpu/(11773:11773): Instruccion numero 1: NO_OP 
+
+[INFO] 12:42:11:695 cpu/(11773:11773): Instruccion numero 2: NO_OP 
+
+[INFO] 12:42:11:695 cpu/(11773:11773): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 12:42:11:695 cpu/(11773:11773): Instruccion numero 4: COPY 0 4 
+
+[INFO] 12:42:11:695 cpu/(11773:11773): Instruccion numero 5: READ 0 
+
+[INFO] 12:42:11:695 cpu/(11773:11773): Instruccion numero 6: EXIT 
+
+[INFO] 12:42:11:695 cpu/(11773:11773): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 12:44:43:302 cpu/(11773:11773): DISCONNECT!
+[INFO] 12:52:49:406 cpu/(12687:12687): Ejecutando proceso pid=1
+[INFO] 12:52:49:406 cpu/(12687:12687): Instruccion numero 0: I/O 3000 
+
+[INFO] 12:52:49:406 cpu/(12687:12687): Instruccion numero 1: NO_OP 
+
+[INFO] 12:52:49:406 cpu/(12687:12687): Instruccion numero 2: NO_OP 
+
+[INFO] 12:52:49:406 cpu/(12687:12687): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 12:52:49:406 cpu/(12687:12687): Instruccion numero 4: COPY 0 4 
+
+[INFO] 12:52:49:407 cpu/(12687:12687): Instruccion numero 5: READ 0 
+
+[INFO] 12:52:49:407 cpu/(12687:12687): Instruccion numero 6: EXIT 
+
+[INFO] 12:52:49:407 cpu/(12687:12687): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 12:53:41:257 cpu/(12687:12687): DISCONNECT!
+[INFO] 12:54:27:639 cpu/(12845:12845): DISCONNECT!
+[INFO] 12:54:56:761 cpu/(12894:12894): Ejecutando proceso pid=1
+[INFO] 12:54:56:761 cpu/(12894:12894): Instruccion numero 0: I/O 3000 
+
+[INFO] 12:54:56:761 cpu/(12894:12894): Instruccion numero 1: NO_OP 
+
+[INFO] 12:54:56:761 cpu/(12894:12894): Instruccion numero 2: NO_OP 
+
+[INFO] 12:54:56:761 cpu/(12894:12894): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 12:54:56:761 cpu/(12894:12894): Instruccion numero 4: COPY 0 4 
+
+[INFO] 12:54:56:761 cpu/(12894:12894): Instruccion numero 5: READ 0 
+
+[INFO] 12:54:56:761 cpu/(12894:12894): Instruccion numero 6: EXIT 
+
+[INFO] 12:54:56:761 cpu/(12894:12894): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 12:59:52:642 cpu/(12894:12894): DISCONNECT!
+[INFO] 13:01:52:976 cpu/(13381:13381): Ejecutando proceso pid=1
+[INFO] 13:01:52:976 cpu/(13381:13381): Instruccion numero 0: I/O 3000 
+
+[INFO] 13:01:52:976 cpu/(13381:13381): Instruccion numero 1: NO_OP 
+
+[INFO] 13:01:52:976 cpu/(13381:13381): Instruccion numero 2: NO_OP 
+
+[INFO] 13:01:52:976 cpu/(13381:13381): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 13:01:52:976 cpu/(13381:13381): Instruccion numero 4: COPY 0 4 
+
+[INFO] 13:01:52:976 cpu/(13381:13381): Instruccion numero 5: READ 0 
+
+[INFO] 13:01:52:976 cpu/(13381:13381): Instruccion numero 6: EXIT 
+
+[INFO] 13:01:52:976 cpu/(13381:13381): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 13:06:39:651 cpu/(13381:13381): DISCONNECT!
+[INFO] 13:07:29:746 cpu/(13728:13728): DISCONNECT!
+[INFO] 13:07:48:052 cpu/(13785:13785): Ejecutando proceso pid=1
+[INFO] 13:07:48:052 cpu/(13785:13785): Instruccion numero 0: I/O 3000 
+
+[INFO] 13:07:48:052 cpu/(13785:13785): Instruccion numero 1: NO_OP 
+
+[INFO] 13:07:48:053 cpu/(13785:13785): Instruccion numero 2: NO_OP 
+
+[INFO] 13:07:48:053 cpu/(13785:13785): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 13:07:48:053 cpu/(13785:13785): Instruccion numero 4: COPY 0 4 
+
+[INFO] 13:07:48:053 cpu/(13785:13785): Instruccion numero 5: READ 0 
+
+[INFO] 13:07:48:053 cpu/(13785:13785): Instruccion numero 6: EXIT 
+
+[INFO] 13:07:48:053 cpu/(13785:13785): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 13:07:59:793 cpu/(13785:13785): Ejecutando proceso pid=2
+[INFO] 13:07:59:793 cpu/(13785:13785): Instruccion numero 0: I/O 3000 
+
+[INFO] 13:07:59:793 cpu/(13785:13785): Instruccion numero 1: NO_OP 
+
+[INFO] 13:07:59:793 cpu/(13785:13785): Instruccion numero 2: NO_OP 
+
+[INFO] 13:07:59:793 cpu/(13785:13785): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 13:07:59:793 cpu/(13785:13785): Instruccion numero 4: COPY 0 4 
+
+[INFO] 13:07:59:793 cpu/(13785:13785): Instruccion numero 5: READ 0 
+
+[INFO] 13:07:59:793 cpu/(13785:13785): Instruccion numero 6: EXIT 
+
+[INFO] 13:07:59:793 cpu/(13785:13785): PCB ---> pid=2 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 13:08:30:735 cpu/(13785:13785): DISCONNECT!
+[INFO] 13:09:55:921 cpu/(13943:13943): Ejecutando proceso pid=1
+[INFO] 13:09:55:921 cpu/(13943:13943): Instruccion numero 0: I/O 3000 
+
+[INFO] 13:09:55:922 cpu/(13943:13943): Instruccion numero 1: NO_OP 
+
+[INFO] 13:09:55:922 cpu/(13943:13943): Instruccion numero 2: NO_OP 
+
+[INFO] 13:09:55:922 cpu/(13943:13943): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 13:09:55:922 cpu/(13943:13943): Instruccion numero 4: COPY 0 4 
+
+[INFO] 13:09:55:922 cpu/(13943:13943): Instruccion numero 5: READ 0 
+
+[INFO] 13:09:55:922 cpu/(13943:13943): Instruccion numero 6: EXIT 
+
+[INFO] 13:09:55:922 cpu/(13943:13943): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 13:10:01:487 cpu/(13943:13943): Ejecutando proceso pid=2
+[INFO] 13:10:01:487 cpu/(13943:13943): Instruccion numero 0: I/O 3000 
+
+[INFO] 13:10:01:487 cpu/(13943:13943): Instruccion numero 1: NO_OP 
+
+[INFO] 13:10:01:488 cpu/(13943:13943): Instruccion numero 2: NO_OP 
+
+[INFO] 13:10:01:488 cpu/(13943:13943): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 13:10:01:488 cpu/(13943:13943): Instruccion numero 4: COPY 0 4 
+
+[INFO] 13:10:01:488 cpu/(13943:13943): Instruccion numero 5: READ 0 
+
+[INFO] 13:10:01:488 cpu/(13943:13943): Instruccion numero 6: EXIT 
+
+[INFO] 13:10:01:488 cpu/(13943:13943): PCB ---> pid=2 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 13:10:17:558 cpu/(13943:13943): DISCONNECT!
+[INFO] 13:10:46:023 cpu/(14054:14054): DISCONNECT!
+[INFO] 13:10:58:238 cpu/(14106:14106): DISCONNECT!
+[INFO] 13:11:06:929 cpu/(14135:14135): DISCONNECT!
+[INFO] 13:11:27:615 cpu/(14173:14173): Ejecutando proceso pid=1
+[INFO] 13:11:27:615 cpu/(14173:14173): Instruccion numero 0: I/O 3000 
+
+[INFO] 13:11:27:615 cpu/(14173:14173): Instruccion numero 1: NO_OP 
+
+[INFO] 13:11:27:615 cpu/(14173:14173): Instruccion numero 2: NO_OP 
+
+[INFO] 13:11:27:615 cpu/(14173:14173): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 13:11:27:615 cpu/(14173:14173): Instruccion numero 4: COPY 0 4 
+
+[INFO] 13:11:27:616 cpu/(14173:14173): Instruccion numero 5: READ 0 
+
+[INFO] 13:11:27:616 cpu/(14173:14173): Instruccion numero 6: EXIT 
+
+[INFO] 13:11:27:616 cpu/(14173:14173): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 13:14:14:042 cpu/(14173:14173): DISCONNECT!
+[INFO] 13:16:17:750 cpu/(14472:14472): Ejecutando proceso pid=1
+[INFO] 13:16:17:750 cpu/(14472:14472): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 13:17:09:134 cpu/(14472:14472): DISCONNECT!
+[INFO] 13:17:48:194 cpu/(14632:14632): DISCONNECT!
+[INFO] 13:18:06:128 cpu/(14680:14680): DISCONNECT!
+[INFO] 13:18:33:146 cpu/(14721:14721): Ejecutando proceso pid=1
+[INFO] 13:18:33:148 cpu/(14721:14721): Instruccion numero 0: I/O 3000 
+
+[INFO] 13:18:33:148 cpu/(14721:14721): Instruccion numero 1: NO_OP 
+
+[INFO] 13:18:33:148 cpu/(14721:14721): Instruccion numero 2: NO_OP 
+
+[INFO] 13:18:33:148 cpu/(14721:14721): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 13:18:33:148 cpu/(14721:14721): Instruccion numero 4: COPY 0 4 
+
+[INFO] 13:18:33:148 cpu/(14721:14721): Instruccion numero 5: READ 0 
+
+[INFO] 13:18:33:148 cpu/(14721:14721): Instruccion numero 6: EXIT 
+
+[INFO] 13:18:33:148 cpu/(14721:14721): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 13:19:42:777 cpu/(14721:14721): DISCONNECT!
+[INFO] 14:05:57:997 cpu/(17472:17472): Ejecutando proceso pid=1
+[INFO] 14:05:57:997 cpu/(17472:17472): Instruccion numero 0: I/O 3000 
+
+[INFO] 14:05:57:998 cpu/(17472:17472): Instruccion numero 1: NO_OP 
+
+[INFO] 14:05:57:998 cpu/(17472:17472): Instruccion numero 2: NO_OP 
+
+[INFO] 14:05:57:998 cpu/(17472:17472): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 14:05:57:998 cpu/(17472:17472): Instruccion numero 4: COPY 0 4 
+
+[INFO] 14:05:57:998 cpu/(17472:17472): Instruccion numero 5: READ 0 
+
+[INFO] 14:05:57:998 cpu/(17472:17472): Instruccion numero 6: EXIT 
+
+[INFO] 14:05:57:998 cpu/(17472:17472): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 14:06:29:669 cpu/(17472:17472): DISCONNECT!
+[INFO] 14:15:55:109 cpu/(18111:18111): Ejecutando proceso pid=1
+[INFO] 14:15:55:112 cpu/(18111:18111): Instruccion numero 0: I/O 3000 
+
+[INFO] 14:15:55:112 cpu/(18111:18111): Instruccion numero 1: NO_OP 
+
+[INFO] 14:15:55:112 cpu/(18111:18111): Instruccion numero 2: NO_OP 
+
+[INFO] 14:15:55:112 cpu/(18111:18111): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 14:15:55:113 cpu/(18111:18111): Instruccion numero 4: COPY 0 4 
+
+[INFO] 14:15:55:113 cpu/(18111:18111): Instruccion numero 5: READ 0 
+
+[INFO] 14:15:55:113 cpu/(18111:18111): Instruccion numero 6: EXIT 
+
+[INFO] 14:15:55:113 cpu/(18111:18111): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 14:16:22:182 cpu/(18111:18111): DISCONNECT!
+[INFO] 14:21:53:360 cpu/(18611:18611): Ejecutando proceso pid=1
+[INFO] 14:21:53:360 cpu/(18611:18611): Instruccion numero 0: I/O 3000 
+
+[INFO] 14:21:53:360 cpu/(18611:18611): Instruccion numero 1: NO_OP 
+
+[INFO] 14:21:53:360 cpu/(18611:18611): Instruccion numero 2: NO_OP 
+
+[INFO] 14:21:53:360 cpu/(18611:18611): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 14:21:53:360 cpu/(18611:18611): Instruccion numero 4: COPY 0 4 
+
+[INFO] 14:21:53:360 cpu/(18611:18611): Instruccion numero 5: READ 0 
+
+[INFO] 14:21:53:361 cpu/(18611:18611): Instruccion numero 6: EXIT 
+
+[INFO] 14:21:53:361 cpu/(18611:18611): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 14:22:22:661 cpu/(18611:18611): DISCONNECT!
+[INFO] 14:36:23:662 cpu/(19649:19649): Ejecutando proceso pid=1
+[INFO] 14:36:23:663 cpu/(19649:19649): Instruccion numero 0: I/O 3000 
+
+[INFO] 14:36:23:663 cpu/(19649:19649): Instruccion numero 1: NO_OP 
+
+[INFO] 14:36:23:663 cpu/(19649:19649): Instruccion numero 2: NO_OP 
+
+[INFO] 14:36:23:663 cpu/(19649:19649): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 14:36:23:663 cpu/(19649:19649): Instruccion numero 4: COPY 0 4 
+
+[INFO] 14:36:23:663 cpu/(19649:19649): Instruccion numero 5: READ 0 
+
+[INFO] 14:36:23:663 cpu/(19649:19649): Instruccion numero 6: EXIT 
+
+[INFO] 14:36:23:663 cpu/(19649:19649): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 14:37:13:005 cpu/(19649:19649): DISCONNECT!
+[INFO] 14:41:41:250 cpu/(19995:19995): Ejecutando proceso pid=1
+[INFO] 14:41:41:250 cpu/(19995:19995): Instruccion numero 0: I/O 3000 
+
+[INFO] 14:41:41:250 cpu/(19995:19995): Instruccion numero 1: NO_OP 
+
+[INFO] 14:41:41:250 cpu/(19995:19995): Instruccion numero 2: NO_OP 
+
+[INFO] 14:41:41:250 cpu/(19995:19995): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 14:41:41:250 cpu/(19995:19995): Instruccion numero 4: COPY 0 4 
+
+[INFO] 14:41:41:250 cpu/(19995:19995): Instruccion numero 5: READ 0 
+
+[INFO] 14:41:41:250 cpu/(19995:19995): Instruccion numero 6: EXIT 
+
+[INFO] 14:41:41:250 cpu/(19995:19995): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 14:42:07:753 cpu/(19995:19995): DISCONNECT!
+[INFO] 14:46:00:981 cpu/(20346:20346): Ejecutando proceso pid=1
+[INFO] 14:46:00:981 cpu/(20346:20346): Instruccion numero 0: I/O 3000 
+
+[INFO] 14:46:00:981 cpu/(20346:20346): Instruccion numero 1: NO_OP 
+
+[INFO] 14:46:00:982 cpu/(20346:20346): Instruccion numero 2: NO_OP 
+
+[INFO] 14:46:00:982 cpu/(20346:20346): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 14:46:00:982 cpu/(20346:20346): Instruccion numero 4: COPY 0 4 
+
+[INFO] 14:46:00:982 cpu/(20346:20346): Instruccion numero 5: READ 0 
+
+[INFO] 14:46:00:982 cpu/(20346:20346): Instruccion numero 6: EXIT 
+
+[INFO] 14:46:00:982 cpu/(20346:20346): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 14:46:26:110 cpu/(20346:20346): DISCONNECT!
+[INFO] 15:13:02:861 cpu/(22193:22193): Ejecutando proceso pid=1
+[INFO] 15:13:02:862 cpu/(22193:22193): Instruccion numero 0: I/O 3000 
+
+[INFO] 15:13:02:862 cpu/(22193:22193): Instruccion numero 1: NO_OP 
+
+[INFO] 15:13:02:862 cpu/(22193:22193): Instruccion numero 2: NO_OP 
+
+[INFO] 15:13:02:862 cpu/(22193:22193): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 15:13:02:862 cpu/(22193:22193): Instruccion numero 4: COPY 0 4 
+
+[INFO] 15:13:02:862 cpu/(22193:22193): Instruccion numero 5: READ 0 
+
+[INFO] 15:13:02:862 cpu/(22193:22193): Instruccion numero 6: EXIT 
+
+[INFO] 15:13:02:862 cpu/(22193:22193): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 15:13:10:026 cpu/(22193:22193): DISCONNECT!
+[INFO] 15:20:28:831 cpu/(22745:22745): Ejecutando proceso pid=1
+[INFO] 15:20:28:832 cpu/(22745:22745): Instruccion numero 0: I/O 3000 
+
+[INFO] 15:20:28:832 cpu/(22745:22745): Instruccion numero 1: NO_OP 
+
+[INFO] 15:20:28:832 cpu/(22745:22745): Instruccion numero 2: NO_OP 
+
+[INFO] 15:20:28:832 cpu/(22745:22745): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 15:20:28:832 cpu/(22745:22745): Instruccion numero 4: COPY 0 4 
+
+[INFO] 15:20:28:832 cpu/(22745:22745): Instruccion numero 5: READ 0 
+
+[INFO] 15:20:28:832 cpu/(22745:22745): Instruccion numero 6: EXIT 
+
+[INFO] 15:20:28:832 cpu/(22745:22745): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 15:20:54:508 cpu/(22745:22745): DISCONNECT!
+[INFO] 15:40:58:519 cpu/(23761:23761): Ejecutando proceso pid=1
+[INFO] 15:40:58:520 cpu/(23761:23761): Instruccion numero 0: I/O 3000 
+
+[INFO] 15:40:58:520 cpu/(23761:23761): Instruccion numero 1: NO_OP 
+
+[INFO] 15:40:58:520 cpu/(23761:23761): Instruccion numero 2: NO_OP 
+
+[INFO] 15:40:58:520 cpu/(23761:23761): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 15:40:58:520 cpu/(23761:23761): Instruccion numero 4: COPY 0 4 
+
+[INFO] 15:40:58:520 cpu/(23761:23761): Instruccion numero 5: READ 0 
+
+[INFO] 15:40:58:520 cpu/(23761:23761): Instruccion numero 6: EXIT 
+
+[INFO] 15:40:58:520 cpu/(23761:23761): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 15:41:20:423 cpu/(23761:23761): DISCONNECT!
