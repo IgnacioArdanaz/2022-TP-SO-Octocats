@@ -1950,3 +1950,20 @@
 
 [INFO] 20:51:44:369 cpu/(13657:13657): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
 [INFO] 20:51:58:371 cpu/(13657:13657): DISCONNECT!
+[INFO] 09:47:53:169 cpu/(1228:1228): Ejecutando proceso pid=1
+[INFO] 09:47:53:170 cpu/(1228:1228): Instruccion numero 0: I/O 3000 
+
+[INFO] 09:47:53:170 cpu/(1228:1228): Instruccion numero 1: NO_OP 
+
+[INFO] 09:47:53:170 cpu/(1228:1228): Instruccion numero 2: NO_OP 
+
+[INFO] 09:47:53:170 cpu/(1228:1228): Instruccion numero 3: WRITE 4 42 
+
+[INFO] 09:47:53:170 cpu/(1228:1228): Instruccion numero 4: COPY 0 4 
+
+[INFO] 09:47:53:170 cpu/(1228:1228): Instruccion numero 5: READ 0 
+
+[INFO] 09:47:53:170 cpu/(1228:1228): Instruccion numero 6: EXIT 
+
+[INFO] 09:47:53:170 cpu/(1228:1228): PCB ---> pid=1 | tamanio=8 | pc=0 | tabla_paginas=0 | est_rafaga=0
+[INFO] 09:48:23:341 cpu/(1228:1228): DISCONNECT!

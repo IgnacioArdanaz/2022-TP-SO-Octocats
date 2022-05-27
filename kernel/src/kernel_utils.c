@@ -102,7 +102,7 @@ void procesar_socket(thread_args* argumentos){
 	while (cliente_socket != -1) {
 		if (recv(cliente_socket, &cop, sizeof(op_code), 0) <= 0) {
 			pthread_mutex_lock(&mx_logger);
-			log_info(logger, "DISCONNECT_FAILURE!");
+			//log_info(logger, "DISCONNECT_FAILURE!");
 			pthread_mutex_unlock(&mx_logger);
 			send(cliente_socket, &resultError, sizeof(uint32_t), NULL);
 			return;
@@ -115,23 +115,24 @@ void procesar_socket(thread_args* argumentos){
 
 				if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
 					pthread_mutex_lock(&mx_logger);
-					log_error(logger, "Fallo recibiendo PROGRAMA");
+					//log_info(logger, "Fallo recibiendo PROGRAMA");
 					pthread_mutex_unlock(&mx_logger);
 					break;
 				}
 
 				pthread_mutex_lock(&mx_logger);
-				log_info(logger, "Tamanio %d", tamanio);
+				//log_info(logger, "Tamanio %d", tamanio);
 				pthread_mutex_unlock(&mx_logger);
 
 				for(int i = 0; i <  string_array_size(instrucciones); i++){
-					pthread_mutex_lock(&mx_logger);
-					log_info(logger, "Instruccion numero %d: %s", i, instrucciones[i]);
-					pthread_mutex_unlock(&mx_logger);
+//					pthread_mutex_lock(&mx_logger);
+					//log_info(logger, "Instruccion numero %d: %s", i, instrucciones[i]);
+					printf("\nInstruccion numero %d: %s", i, instrucciones[i]);
+//					pthread_mutex_unlock(&mx_logger);
 				}
 
 				PCB_t* proceso = malloc(sizeof(PCB_t));
-				proceso->instrucciones = string_array_new();
+//				proceso->instrucciones = string_array_new();
 
 				pthread_mutex_lock(&mx_pid_sig);
 				proceso->pid = pid_sig;
@@ -161,12 +162,12 @@ void procesar_socket(thread_args* argumentos){
 			//cuando en la vida puede llegar a dar -1???
 			// Errores
 //			case -1:
-//				log_error(logger, "Cliente desconectado de kernel");
+//				//log_info(logger, "Cliente desconectado de kernel");
 //				break;
 			default:
 				pthread_mutex_lock(&mx_logger);
-				log_error(logger, "Algo anduvo mal en el server del kernel ");
-				log_info(logger, "Cop: %d", cop);
+				//log_info(logger, "Algo anduvo mal en el server del kernel ");
+				//log_info(logger, "Cop: %d", cop);
 				pthread_mutex_unlock(&mx_logger);
 		}
 	}
@@ -185,14 +186,19 @@ void pasaje_new_ready(){
 		//AGREGAR QUE SI HAY PCBS EN READY SUSPENDED TIENEN PRIORIDAD DE PASO
 		if(multiprogramacion_actual < grado_multiprogramacion){
 			PCB_t* p = queue_pop(cola_new);
+			pthread_mutex_lock(&mx_lista_ready);
 			list_add(cola_ready,p);
+			printf("\n(new -> ready) Cola de ready: %d",list_size(cola_ready));
+			printf("\n(new -> ready) Cola de new %d:\n", queue_size(cola_new));
+			pthread_mutex_unlock(&mx_lista_ready);
 			sem_post(&s_cont_ready); //Sumo uno al contador de ready
 			pthread_mutex_lock(&mx_multip_actual);
 			multiprogramacion_actual++;
 			pthread_mutex_unlock(&mx_multip_actual);
 			pthread_mutex_lock(&mx_logger);
-			log_info(logger,"(new -> ready) Cola de new: %d",queue_size(cola_new));
-			log_info(logger,"(new -> ready) Cola de ready: %d", list_size(cola_ready));
+			//log_info(logger,"(new -> ready) Cola de new: %d",queue_size(cola_new));
+//			printf("\n(new -> ready) Cola de new: %d",queue_size(cola_new));
+			//log_info(logger,"(new -> ready) Cola de ready: %d", list_size(cola_ready));
 			pthread_mutex_unlock(&mx_logger);
 			switch(algoritmo){
 				case FIFO:
@@ -223,8 +229,9 @@ void fifo_ready_execute(){
 			pthread_mutex_lock(&mx_lista_ready);
 			proceso = list_remove(cola_ready, 0);
 			pthread_mutex_unlock(&mx_lista_ready);
+			printf("\n Mandando proceso %d a ejecutar tam %d inst %s %s %s %s pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
 			pthread_mutex_lock(&mx_logger);
-			log_info(logger, "\n Mandando proceso %d a ejecutar tam %d inst %s %s %s %s pc %d tabla %d est %d \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
+			//log_info(logger, "\n Mandando proceso %d a ejecutar tam %d inst %s %s %s %s pc %d tabla %d est %d \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
 			pthread_mutex_unlock(&mx_logger);
 			cpu_desocupado = 0;
 			send_proceso(conexion_cpu_dispatch, proceso);
