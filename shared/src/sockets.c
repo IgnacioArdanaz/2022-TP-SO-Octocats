@@ -90,11 +90,12 @@ int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
 
     log_info(logger, "%s listo para recibir al cliente", name);
 
-    int socket_cliente = accept(socket_servidor, (void*) &dir_cliente, &tam_direccion);
+    int* socket_cliente = malloc(sizeof(int));
+    *socket_cliente = accept(socket_servidor, (void*) &dir_cliente, &tam_direccion);
 
     log_info(logger, "Cliente conectado (a %s)\n", name);
 
-    return socket_cliente;
+    return *socket_cliente;
 }
 
 // CERRAR CONEXION

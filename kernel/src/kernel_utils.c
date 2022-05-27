@@ -77,7 +77,7 @@ void inicializar(){
 
 int escuchar_servidor(char* name, int server_socket){
 	printf("Kernel esperando un nuevo cliente \n");
-	int cliente_socket = esperar_cliente(logger, name, server_socket);
+	int cliente_socket = cliente_socket = esperar_cliente(logger, name, server_socket);
 	printf("Socket del cliente recibido en kernel.\n ");
 	if (cliente_socket != -1){
 		pthread_t hilo;
@@ -227,7 +227,7 @@ void fifo_ready_execute(){
 			log_info(logger, "\n Mandando proceso %d a ejecutar tam %d inst %s %s %s %s pc %d tabla %d est %d \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
 			pthread_mutex_unlock(&mx_logger);
 			cpu_desocupado = 0;
-			//send_proceso(conexion_cpu_dispatch, proceso);
+			send_proceso(conexion_cpu_dispatch, proceso);
 			free(proceso);
 			}
 		pthread_mutex_unlock(&mx_cpu_desocupado);
