@@ -1,5 +1,7 @@
 #include "kernel_utils.h"
 
+
+
 pthread_mutex_t mx_multip_actual = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_pid_sig = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_logger = PTHREAD_MUTEX_INITIALIZER;
@@ -15,15 +17,14 @@ t_queue* cola_new;
 t_list* cola_ready;
 t_queue* cola_blocked;
 
-
 int pid_sig, estimacion_inicial, grado_multiprogramacion, multiprogramacion_actual, conexion_cpu_dispatch, cpu_desocupado = 1, aaa=1;
 char *algoritmo_config, *ip_cpu, *puerto_cpu_dispatch;
 
 algoritmo_t algoritmo;
 
-void inicializar(t_log* logger, t_config* config){
-//	logger = log_create("kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
-//	config = config_create("kernel.config");
+void inicializar_kernel(){
+	logger = log_create("kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
+	config = config_create("kernel.config");
 
 	cola_new = queue_create();
 	cola_blocked = queue_create();
@@ -93,7 +94,30 @@ int escuchar_servidor(char* name, int server_socket, t_log* logger){
 	return 0;
 }
 
+PCB_t* pcb_create(uint16_t pid,
+		uint16_t tamanio,
+		t_list* instrucciones,
+		uint32_t pc,
+		uint32_t tabla_paginas,
+		double est_rafaga){
+	PCB_t* proceso = malloc(sizeof(PCB_t));
+	proceso->instrucciones = list_create();
+	proceso->pid = pid;
+	proceso->tamanio = tamanio;
+	proceso->pc = pc;
+	proceso->instrucciones = instrucciones;
+	proceso->tabla_paginas = tabla_paginas;
+	proceso->est_rafaga = est_rafaga;
+	return proceso;
+}
+
+void pcb_destroy(PCB_t* pcb){
+	list_destroy_and_destroy_elements(pcb->instrucciones,free);
+	free(pcb);
+}
+
 void procesar_socket(thread_args* argumentos){
+	printf("Entrando al procesar socket :)\n");
 	int cliente_socket = argumentos->cliente;
 	char* server_name = string_duplicate(argumentos->server_name);
 	int32_t resultOk = 0;
@@ -103,48 +127,40 @@ void procesar_socket(thread_args* argumentos){
 	while (cliente_socket != -1) {
 		if (recv(cliente_socket, &cop, sizeof(op_code), 0) <= 0) {
 			pthread_mutex_lock(&mx_logger);
-			//log_info(logger, "DISCONNECT_FAILURE!");
+			log_info(logger, "DISCONNECT_FAILURE!");
 			pthread_mutex_unlock(&mx_logger);
-			send(cliente_socket, &resultError, sizeof(int32_t), NULL);
+			send(cliente_socket, &resultError, sizeof(int32_t), 0);
 			return;
 		}
 		switch (cop) {
 			case PROGRAMA:
 			{
-				char** instrucciones = string_array_new();
+				t_list* instrucciones = list_create();
 				uint16_t tamanio = 0;
 
-				if (!recv_programa(cliente_socket, &instrucciones, &tamanio)) {
+				if (!recv_programa(cliente_socket, instrucciones, &tamanio)) {
 					pthread_mutex_lock(&mx_logger);
-					//log_info(logger, "Fallo recibiendo PROGRAMA");
+					log_info(logger, "Fallo recibiendo PROGRAMA");
 					pthread_mutex_unlock(&mx_logger);
 					break;
 				}
 
 				pthread_mutex_lock(&mx_logger);
-				//log_info(logger, "Tamanio %d", tamanio);
+				log_info(logger, "Tamanio %d", tamanio);
 				pthread_mutex_unlock(&mx_logger);
 
-				for(int i = 0; i <  string_array_size(instrucciones); i++){
-//					pthread_mutex_lock(&mx_logger);
-					//log_info(logger, "Instruccion numero %d: %s", i, instrucciones[i]);
-					printf("\nInstruccion numero %d: %s", i, instrucciones[i]);
-//					pthread_mutex_unlock(&mx_logger);
+				for(int i = 0; i <  list_size(instrucciones); i++){
+					instruccion_t* instruccion = list_get(instrucciones,i);
+					pthread_mutex_lock(&mx_logger);
+					log_info(logger, "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+					pthread_mutex_unlock(&mx_logger);
 				}
 
-				PCB_t* proceso = malloc(sizeof(PCB_t));
-				proceso->instrucciones = string_array_new();
-
 				pthread_mutex_lock(&mx_pid_sig);
-				proceso->pid = pid_sig;
+				uint16_t pid_actual = pid_sig;
 				pid_sig+=1;
 				pthread_mutex_unlock(&mx_pid_sig);
-
-				proceso->tamanio = tamanio;
-				proceso->pc = 0;
-				proceso->instrucciones = instrucciones;
-				proceso->tabla_paginas = 0;   // SOLO LO INICIALIZAMOS, MEMORIA NOS VA A ENVIAR EL VALOR
-				proceso->est_rafaga = estimacion_inicial;  // ESTO VA POR ARCHIVO DE CONFIGURACION
+				PCB_t* proceso = pcb_create(pid_actual,tamanio,instrucciones,0,0,estimacion_inicial);
 
 				pthread_mutex_lock(&mx_cola_new);
 				queue_push(cola_new, proceso);
@@ -152,9 +168,7 @@ void procesar_socket(thread_args* argumentos){
 
 				sem_post(&s_new_ready); //Avisa al hilo planificador de pasaje de new a ready que debe ejecutarse.
 
-//				string_array_destroy(instrucciones);
-
-//				send(cliente_socket, &resultOk, sizeof(int32_t), NULL); // Forma de avisar a la consola, no iria aca
+//				send(cliente_socket, &resultOk, sizeof(int32_t), 0); // Forma de avisar a la consola, no iria aca
 
 				return;
 			}
@@ -167,8 +181,8 @@ void procesar_socket(thread_args* argumentos){
 //				break;
 			default:
 				pthread_mutex_lock(&mx_logger);
-				//log_info(logger, "Algo anduvo mal en el server del kernel ");
-				//log_info(logger, "Cop: %d", cop);
+				log_info(logger, "Algo anduvo mal en el server del kernel ");
+				log_info(logger, "Cop: %d", cop);
 				pthread_mutex_unlock(&mx_logger);
 		}
 	}
@@ -186,7 +200,7 @@ void pasaje_new_ready(){
 			pthread_mutex_lock(&mx_cola_new);
 			PCB_t* proceso = malloc(sizeof(PCB_t));
 			proceso = queue_pop(cola_new);
-			printf("\nPROCESO %d POPEADO COLA NEW ->  tam %d inst %s %s %s %s pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
+			printf("\nPROCESO %d POPEADO COLA NEW\n", proceso->pid);
 			pthread_mutex_unlock(&mx_cola_new);
 			pthread_mutex_lock(&mx_lista_ready);
 			printf("\nAntes de agregar un nuevo proceso a ready");
@@ -198,9 +212,9 @@ void pasaje_new_ready(){
 			multiprogramacion_actual++;
 			pthread_mutex_unlock(&mx_multip_actual);
 			pthread_mutex_lock(&mx_logger);
-			//log_info(logger,"(new -> ready) Cola de new: %d",queue_size(cola_new));
-//			printf("\n(new -> ready) Cola de new: %d",queue_size(cola_new));
-			//log_info(logger,"(new -> ready) Cola de ready: %d", list_size(cola_ready));
+			log_info(logger,"(new -> ready) Cola de new: %d",queue_size(cola_new));
+			printf("\n(new -> ready) Cola de new: %d",queue_size(cola_new));
+			log_info(logger,"(new -> ready) Cola de ready: %d", list_size(cola_ready));
 			pthread_mutex_unlock(&mx_logger);
 			switch(algoritmo){
 				case FIFO:
@@ -232,19 +246,17 @@ void fifo_ready_execute(){
 			pthread_mutex_lock(&mx_lista_ready);
 			proceso = list_remove(cola_ready, 0);
 			pthread_mutex_unlock(&mx_lista_ready);
-			printf("\n Mandando proceso %d a ejecutar tam %d inst %s %s %s %s pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
 			pthread_mutex_lock(&mx_logger);
-			//log_info(logger, "\n Mandando proceso %d a ejecutar tam %d inst %s %s %s %s pc %d tabla %d est %d \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
+			log_info(logger,"\n Mandando proceso %d a ejecutar",proceso->pid);
 			pthread_mutex_unlock(&mx_logger);
 			pthread_mutex_lock(&mx_cpu_desocupado);
 			cpu_desocupado = 0;
 			pthread_mutex_unlock(&mx_cpu_desocupado);
-			send_proceso(conexion_cpu_dispatch, proceso);
-//			free(proceso);
+			//send_proceso(conexion_cpu_dispatch, proceso);
+			pcb_destroy(proceso);
 			}
 	}
 }
-
 
 /****Hilo READY -> EXECUTE (SRT) ***/
 void srt_ready_execute(){
@@ -268,9 +280,12 @@ void imprimir_lista_ready(){
 	printf("\nIMPRIMIENDO LISTA READY");
 	t_list_iterator* list_iterator = list_iterator_create(cola_ready);
 	while(list_iterator_has_next(list_iterator)){
-		PCB_t* proceso = malloc(sizeof(PCB_t));
-		proceso = list_iterator_next(list_iterator);
-		printf("\n PROCESO %d -> tam %d inst %s %s %s %s pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
+		PCB_t* proceso = list_iterator_next(list_iterator);
+		printf("\n PROCESO %d -> tam %d pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
+		for(int i = 0; i < list_size(proceso->instrucciones); i++){
+			instruccion_t* inst = list_get(proceso->instrucciones,i);
+			printf("%c %d %d\n",inst->operacion,inst->arg1,inst->arg2);
+		}
 	}
 	list_iterator_destroy(list_iterator);
 }

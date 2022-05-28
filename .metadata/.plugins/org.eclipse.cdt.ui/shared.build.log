@@ -1,34 +1,18 @@
-<<<<<<< HEAD
-12:56:03 **** Incremental Build of configuration Debug for project shared ****
+18:03:12 **** Build of configuration Debug for project shared ****
 make all 
-Building file: ../src/sockets.c
+Building file: ../src/pcb.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sockets.d" -MT"src/sockets.o" -o "src/sockets.o" "../src/sockets.c"
-Finished building: ../src/sockets.c
-=======
-02:48:58 **** Incremental Build of configuration Debug for project shared ****
-make all 
-Building file: ../src/protocol.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/protocol.d" -MT"src/protocol.o" -o "src/protocol.o" "../src/protocol.c"
-Finished building: ../src/protocol.c
->>>>>>> solucionando_kernel
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/pcb.d" -MT"src/pcb.o" -o "src/pcb.o" "../src/pcb.c"
+Finished building: ../src/pcb.c
  
 Building target: shared
 Invoking: GCC C Linker
-gcc  -o "shared"  ./src/protocol.o ./src/sockets.o   -lcommons
+gcc  -o "shared"  ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
 /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o: In function `_start':
 (.text+0x18): undefined reference to `main'
 makefile:30: recipe for target 'shared' failed
 collect2: error: ld returned 1 exit status
-<<<<<<< HEAD
 make: *** [shared] Error 1
 
-12:56:04 Build Finished (took 744ms)
-=======
-makefile:30: recipe for target 'shared' failed
-make: *** [shared] Error 1
-
-02:48:59 Build Finished (took 1s.194ms)
->>>>>>> solucionando_kernel
+18:03:13 Build Finished (took 1s.98ms)
 

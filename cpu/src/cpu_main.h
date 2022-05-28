@@ -12,6 +12,7 @@
 #include "../../shared/src/sockets.c"
 #include "../../shared/src/protocol.c"
 #include "../../shared/src/structures.h"
+#include "../../shared/src/pcb.h"
 
 #define IP "127.0.0.1"
 

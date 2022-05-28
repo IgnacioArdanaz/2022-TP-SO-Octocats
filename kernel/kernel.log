@@ -2418,3 +2418,1518 @@
 [INFO] 20:51:44:368 KERNEL/(13842:13848): 
  Mandando proceso 1 a ejecutar tam 8 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 0 
 
+[INFO] 21:04:24:161 KERNEL/(17578:17595): Tamanio 200
+[INFO] 21:04:24:161 KERNEL/(17578:17595): Instruccion numero 0: I/O 3000
+[INFO] 21:04:24:161 KERNEL/(17578:17595): Instruccion numero 1: NO_OP
+[INFO] 21:04:24:161 KERNEL/(17578:17595): Instruccion numero 2: NO_OP
+[INFO] 21:04:24:161 KERNEL/(17578:17595): Instruccion numero 3: WRITE 4 42
+[INFO] 21:04:24:161 KERNEL/(17578:17595): Instruccion numero 4: COPY 0 4
+[INFO] 21:04:24:161 KERNEL/(17578:17595): Instruccion numero 5: READ 0
+[INFO] 21:04:24:161 KERNEL/(17578:17595): Instruccion numero 6: EXIT
+[INFO] 21:04:24:161 KERNEL/(17578:17583): (new -> ready) Cola de new: 0
+[INFO] 21:04:24:161 KERNEL/(17578:17583): (new -> ready) Cola de ready: 1
+[INFO] 21:04:24:161 KERNEL/(17578:17584): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 0 
+
+[INFO] 21:04:28:662 KERNEL/(17578:17607): Tamanio 200
+[INFO] 21:04:28:662 KERNEL/(17578:17607): Instruccion numero 0: I/O 3000
+[INFO] 21:04:28:662 KERNEL/(17578:17607): Instruccion numero 1: NO_OP
+[INFO] 21:04:28:664 KERNEL/(17578:17607): Instruccion numero 2: NO_OP
+[INFO] 21:04:28:664 KERNEL/(17578:17607): Instruccion numero 3: WRITE 4 42
+[INFO] 21:04:28:664 KERNEL/(17578:17607): Instruccion numero 4: COPY 0 4
+[INFO] 21:04:28:664 KERNEL/(17578:17607): Instruccion numero 5: READ 0
+[INFO] 21:04:28:665 KERNEL/(17578:17607): Instruccion numero 6: EXIT
+[INFO] 21:04:28:665 KERNEL/(17578:17583): (new -> ready) Cola de new: 0
+[INFO] 21:04:28:665 KERNEL/(17578:17583): (new -> ready) Cola de ready: 1
+[INFO] 21:04:31:794 KERNEL/(17578:17621): Tamanio 200
+[INFO] 21:04:31:794 KERNEL/(17578:17621): Instruccion numero 0: I/O 3000
+[INFO] 21:04:31:794 KERNEL/(17578:17621): Instruccion numero 1: NO_OP
+[INFO] 21:04:31:794 KERNEL/(17578:17621): Instruccion numero 2: NO_OP
+[INFO] 21:04:31:794 KERNEL/(17578:17621): Instruccion numero 3: WRITE 4 42
+[INFO] 21:04:31:794 KERNEL/(17578:17621): Instruccion numero 4: COPY 0 4
+[INFO] 21:04:31:795 KERNEL/(17578:17621): Instruccion numero 5: READ 0
+[INFO] 21:04:31:795 KERNEL/(17578:17621): Instruccion numero 6: EXIT
+[INFO] 21:04:31:795 KERNEL/(17578:17583): (new -> ready) Cola de new: 0
+[INFO] 21:04:31:795 KERNEL/(17578:17583): (new -> ready) Cola de ready: 2
+[INFO] 21:04:34:787 KERNEL/(17578:17633): Tamanio 200
+[INFO] 21:04:34:787 KERNEL/(17578:17633): Instruccion numero 0: I/O 3000
+[INFO] 21:04:34:787 KERNEL/(17578:17633): Instruccion numero 1: NO_OP
+[INFO] 21:04:34:787 KERNEL/(17578:17633): Instruccion numero 2: NO_OP
+[INFO] 21:04:34:787 KERNEL/(17578:17633): Instruccion numero 3: WRITE 4 42
+[INFO] 21:04:34:787 KERNEL/(17578:17633): Instruccion numero 4: COPY 0 4
+[INFO] 21:04:34:787 KERNEL/(17578:17633): Instruccion numero 5: READ 0
+[INFO] 21:04:34:787 KERNEL/(17578:17633): Instruccion numero 6: EXIT
+[INFO] 21:04:34:788 KERNEL/(17578:17583): (new -> ready) Cola de new: 0
+[INFO] 21:04:34:788 KERNEL/(17578:17583): (new -> ready) Cola de ready: 3
+[INFO] 21:04:37:651 KERNEL/(17578:17645): Tamanio 200
+[INFO] 21:04:37:651 KERNEL/(17578:17645): Instruccion numero 0: I/O 3000
+[INFO] 21:04:37:651 KERNEL/(17578:17645): Instruccion numero 1: NO_OP
+[INFO] 21:04:37:651 KERNEL/(17578:17645): Instruccion numero 2: NO_OP
+[INFO] 21:04:37:651 KERNEL/(17578:17645): Instruccion numero 3: WRITE 4 42
+[INFO] 21:04:37:651 KERNEL/(17578:17645): Instruccion numero 4: COPY 0 4
+[INFO] 21:04:37:651 KERNEL/(17578:17645): Instruccion numero 5: READ 0
+[INFO] 21:04:37:651 KERNEL/(17578:17645): Instruccion numero 6: EXIT
+[INFO] 21:04:37:651 KERNEL/(17578:17583): (new -> ready) Cola de new: 0
+[INFO] 21:04:37:652 KERNEL/(17578:17583): (new -> ready) Cola de ready: 4
+[INFO] 21:04:41:817 KERNEL/(17578:17656): Tamanio 200
+[INFO] 21:04:41:817 KERNEL/(17578:17656): Instruccion numero 0: I/O 3000
+[INFO] 21:04:41:817 KERNEL/(17578:17656): Instruccion numero 1: NO_OP
+[INFO] 21:04:41:817 KERNEL/(17578:17656): Instruccion numero 2: NO_OP
+[INFO] 21:04:41:817 KERNEL/(17578:17656): Instruccion numero 3: WRITE 4 42
+[INFO] 21:04:41:817 KERNEL/(17578:17656): Instruccion numero 4: COPY 0 4
+[INFO] 21:04:41:817 KERNEL/(17578:17656): Instruccion numero 5: READ 0
+[INFO] 21:04:41:817 KERNEL/(17578:17656): Instruccion numero 6: EXIT
+[INFO] 21:04:41:817 KERNEL/(17578:17583): (new -> ready) Cola de new: 0
+[INFO] 21:04:41:817 KERNEL/(17578:17583): (new -> ready) Cola de ready: 5
+[INFO] 11:30:30:168 KERNEL/(3352:3374): Tamanio 200
+[INFO] 11:30:30:169 KERNEL/(3352:3374): Instruccion numero 0: I/O 3000
+[INFO] 11:30:30:169 KERNEL/(3352:3374): Instruccion numero 1: NO_OP
+[INFO] 11:30:30:170 KERNEL/(3352:3374): Instruccion numero 2: NO_OP
+[INFO] 11:30:30:170 KERNEL/(3352:3374): Instruccion numero 3: WRITE 4 42
+[INFO] 11:30:30:171 KERNEL/(3352:3374): Instruccion numero 4: COPY 0 4
+[INFO] 11:30:30:171 KERNEL/(3352:3374): Instruccion numero 5: READ 0
+[INFO] 11:30:30:171 KERNEL/(3352:3374): Instruccion numero 6: EXIT
+[INFO] 11:30:30:172 KERNEL/(3352:3362): (new -> ready) Cola de new: 0
+[INFO] 11:30:30:172 KERNEL/(3352:3362): (new -> ready) Cola de ready: 1
+[INFO] 11:30:30:172 KERNEL/(3352:3363): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 0 
+
+[INFO] 11:30:37:956 KERNEL/(3352:3385): Tamanio 200
+[INFO] 11:30:37:956 KERNEL/(3352:3385): Instruccion numero 0: I/O 3000
+[INFO] 11:30:37:957 KERNEL/(3352:3385): Instruccion numero 1: NO_OP
+[INFO] 11:30:37:957 KERNEL/(3352:3385): Instruccion numero 2: NO_OP
+[INFO] 11:30:37:957 KERNEL/(3352:3385): Instruccion numero 3: WRITE 4 42
+[INFO] 11:30:37:958 KERNEL/(3352:3385): Instruccion numero 4: COPY 0 4
+[INFO] 11:30:37:958 KERNEL/(3352:3385): Instruccion numero 5: READ 0
+[INFO] 11:30:37:959 KERNEL/(3352:3385): Instruccion numero 6: EXIT
+[INFO] 11:30:37:959 KERNEL/(3352:3362): (new -> ready) Cola de new: 0
+[INFO] 11:30:37:959 KERNEL/(3352:3362): (new -> ready) Cola de ready: 1
+[INFO] 11:30:45:580 KERNEL/(3352:3396): Tamanio 200
+[INFO] 11:30:45:580 KERNEL/(3352:3396): Instruccion numero 0: I/O 3000
+[INFO] 11:30:45:580 KERNEL/(3352:3396): Instruccion numero 1: NO_OP
+[INFO] 11:30:45:583 KERNEL/(3352:3396): Instruccion numero 2: NO_OP
+[INFO] 11:30:45:583 KERNEL/(3352:3396): Instruccion numero 3: WRITE 4 42
+[INFO] 11:30:45:583 KERNEL/(3352:3396): Instruccion numero 4: COPY 0 4
+[INFO] 11:30:45:583 KERNEL/(3352:3396): Instruccion numero 5: READ 0
+[INFO] 11:30:45:584 KERNEL/(3352:3396): Instruccion numero 6: EXIT
+[INFO] 11:30:45:584 KERNEL/(3352:3362): (new -> ready) Cola de new: 0
+[INFO] 11:30:45:584 KERNEL/(3352:3362): (new -> ready) Cola de ready: 2
+[INFO] 11:30:48:912 KERNEL/(3352:3407): Tamanio 200
+[INFO] 11:30:48:912 KERNEL/(3352:3407): Instruccion numero 0: I/O 3000
+[INFO] 11:30:48:912 KERNEL/(3352:3407): Instruccion numero 1: NO_OP
+[INFO] 11:30:48:912 KERNEL/(3352:3407): Instruccion numero 2: NO_OP
+[INFO] 11:30:48:912 KERNEL/(3352:3407): Instruccion numero 3: WRITE 4 42
+[INFO] 11:30:48:912 KERNEL/(3352:3407): Instruccion numero 4: COPY 0 4
+[INFO] 11:30:48:912 KERNEL/(3352:3407): Instruccion numero 5: READ 0
+[INFO] 11:30:48:912 KERNEL/(3352:3407): Instruccion numero 6: EXIT
+[INFO] 11:30:48:912 KERNEL/(3352:3362): (new -> ready) Cola de new: 0
+[INFO] 11:30:48:912 KERNEL/(3352:3362): (new -> ready) Cola de ready: 3
+[INFO] 11:30:52:501 KERNEL/(3352:3418): Tamanio 200
+[INFO] 11:30:52:502 KERNEL/(3352:3418): Instruccion numero 0: I/O 3000
+[INFO] 11:30:52:502 KERNEL/(3352:3418): Instruccion numero 1: NO_OP
+[INFO] 11:30:52:502 KERNEL/(3352:3418): Instruccion numero 2: NO_OP
+[INFO] 11:30:52:502 KERNEL/(3352:3418): Instruccion numero 3: WRITE 4 42
+[INFO] 11:30:52:502 KERNEL/(3352:3418): Instruccion numero 4: COPY 0 4
+[INFO] 11:30:52:502 KERNEL/(3352:3418): Instruccion numero 5: READ 0
+[INFO] 11:30:52:502 KERNEL/(3352:3418): Instruccion numero 6: EXIT
+[INFO] 11:30:52:502 KERNEL/(3352:3362): (new -> ready) Cola de new: 0
+[INFO] 11:30:52:502 KERNEL/(3352:3362): (new -> ready) Cola de ready: 4
+[INFO] 11:30:55:582 KERNEL/(3352:3430): Tamanio 200
+[INFO] 11:30:55:582 KERNEL/(3352:3430): Instruccion numero 0: I/O 3000
+[INFO] 11:30:55:582 KERNEL/(3352:3430): Instruccion numero 1: NO_OP
+[INFO] 11:30:55:582 KERNEL/(3352:3430): Instruccion numero 2: NO_OP
+[INFO] 11:30:55:582 KERNEL/(3352:3430): Instruccion numero 3: WRITE 4 42
+[INFO] 11:30:55:582 KERNEL/(3352:3430): Instruccion numero 4: COPY 0 4
+[INFO] 11:30:55:582 KERNEL/(3352:3430): Instruccion numero 5: READ 0
+[INFO] 11:30:55:583 KERNEL/(3352:3430): Instruccion numero 6: EXIT
+[INFO] 11:30:55:583 KERNEL/(3352:3362): (new -> ready) Cola de new: 0
+[INFO] 11:30:55:583 KERNEL/(3352:3362): (new -> ready) Cola de ready: 5
+[INFO] 11:45:37:594 KERNEL/(3995:4012): Tamanio 200
+[INFO] 11:45:37:594 KERNEL/(3995:4012): Instruccion numero 0: I/O 3000
+[INFO] 11:45:37:594 KERNEL/(3995:4012): Instruccion numero 1: NO_OP
+[INFO] 11:45:37:594 KERNEL/(3995:4012): Instruccion numero 2: NO_OP
+[INFO] 11:45:37:594 KERNEL/(3995:4012): Instruccion numero 3: WRITE 4 42
+[INFO] 11:45:37:594 KERNEL/(3995:4012): Instruccion numero 4: COPY 0 4
+[INFO] 11:45:37:594 KERNEL/(3995:4012): Instruccion numero 5: READ 0
+[INFO] 11:45:37:594 KERNEL/(3995:4012): Instruccion numero 6: EXIT
+[INFO] 11:45:37:594 KERNEL/(3995:4000): (new -> ready) Cola de new: 0
+[INFO] 11:45:37:594 KERNEL/(3995:4000): (new -> ready) Cola de ready: 1
+[INFO] 11:45:37:594 KERNEL/(3995:4001): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 11:45:42:354 KERNEL/(3995:4025): Tamanio 200
+[INFO] 11:45:42:354 KERNEL/(3995:4025): Instruccion numero 0: I/O 3000
+[INFO] 11:45:42:354 KERNEL/(3995:4025): Instruccion numero 1: NO_OP
+[INFO] 11:45:42:355 KERNEL/(3995:4025): Instruccion numero 2: NO_OP
+[INFO] 11:45:42:355 KERNEL/(3995:4025): Instruccion numero 3: WRITE 4 42
+[INFO] 11:45:42:355 KERNEL/(3995:4025): Instruccion numero 4: COPY 0 4
+[INFO] 11:45:42:355 KERNEL/(3995:4025): Instruccion numero 5: READ 0
+[INFO] 11:45:42:355 KERNEL/(3995:4025): Instruccion numero 6: EXIT
+[INFO] 11:45:42:355 KERNEL/(3995:4000): (new -> ready) Cola de new: 0
+[INFO] 11:45:42:355 KERNEL/(3995:4000): (new -> ready) Cola de ready: 1
+[INFO] 11:45:45:753 KERNEL/(3995:4037): Tamanio 200
+[INFO] 11:45:45:753 KERNEL/(3995:4037): Instruccion numero 0: I/O 3000
+[INFO] 11:45:45:753 KERNEL/(3995:4037): Instruccion numero 1: NO_OP
+[INFO] 11:45:45:753 KERNEL/(3995:4037): Instruccion numero 2: NO_OP
+[INFO] 11:45:45:753 KERNEL/(3995:4037): Instruccion numero 3: WRITE 4 42
+[INFO] 11:45:45:753 KERNEL/(3995:4037): Instruccion numero 4: COPY 0 4
+[INFO] 11:45:45:754 KERNEL/(3995:4037): Instruccion numero 5: READ 0
+[INFO] 11:45:45:754 KERNEL/(3995:4037): Instruccion numero 6: EXIT
+[INFO] 11:45:45:754 KERNEL/(3995:4000): (new -> ready) Cola de new: 0
+[INFO] 11:45:45:754 KERNEL/(3995:4000): (new -> ready) Cola de ready: 2
+[INFO] 11:45:48:815 KERNEL/(3995:4048): Tamanio 200
+[INFO] 11:45:48:815 KERNEL/(3995:4048): Instruccion numero 0: I/O 3000
+[INFO] 11:45:48:815 KERNEL/(3995:4048): Instruccion numero 1: NO_OP
+[INFO] 11:45:48:815 KERNEL/(3995:4048): Instruccion numero 2: NO_OP
+[INFO] 11:45:48:815 KERNEL/(3995:4048): Instruccion numero 3: WRITE 4 42
+[INFO] 11:45:48:815 KERNEL/(3995:4048): Instruccion numero 4: COPY 0 4
+[INFO] 11:45:48:815 KERNEL/(3995:4048): Instruccion numero 5: READ 0
+[INFO] 11:45:48:815 KERNEL/(3995:4048): Instruccion numero 6: EXIT
+[INFO] 11:45:48:815 KERNEL/(3995:4000): (new -> ready) Cola de new: 0
+[INFO] 11:45:48:815 KERNEL/(3995:4000): (new -> ready) Cola de ready: 3
+[INFO] 11:45:53:885 KERNEL/(3995:4061): Tamanio 200
+[INFO] 11:45:53:885 KERNEL/(3995:4061): Instruccion numero 0: I/O 3000
+[INFO] 11:45:53:885 KERNEL/(3995:4061): Instruccion numero 1: NO_OP
+[INFO] 11:45:53:885 KERNEL/(3995:4061): Instruccion numero 2: NO_OP
+[INFO] 11:45:53:885 KERNEL/(3995:4061): Instruccion numero 3: WRITE 4 42
+[INFO] 11:45:53:885 KERNEL/(3995:4061): Instruccion numero 4: COPY 0 4
+[INFO] 11:45:53:885 KERNEL/(3995:4061): Instruccion numero 5: READ 0
+[INFO] 11:45:53:885 KERNEL/(3995:4061): Instruccion numero 6: EXIT
+[INFO] 11:45:53:885 KERNEL/(3995:4000): (new -> ready) Cola de new: 0
+[INFO] 11:45:53:885 KERNEL/(3995:4000): (new -> ready) Cola de ready: 4
+[INFO] 11:45:58:097 KERNEL/(3995:4073): Tamanio 200
+[INFO] 11:45:58:097 KERNEL/(3995:4073): Instruccion numero 0: I/O 3000
+[INFO] 11:45:58:097 KERNEL/(3995:4073): Instruccion numero 1: NO_OP
+[INFO] 11:45:58:097 KERNEL/(3995:4073): Instruccion numero 2: NO_OP
+[INFO] 11:45:58:097 KERNEL/(3995:4073): Instruccion numero 3: WRITE 4 42
+[INFO] 11:45:58:097 KERNEL/(3995:4073): Instruccion numero 4: COPY 0 4
+[INFO] 11:45:58:097 KERNEL/(3995:4073): Instruccion numero 5: READ 0
+[INFO] 11:45:58:097 KERNEL/(3995:4073): Instruccion numero 6: EXIT
+[INFO] 11:45:58:097 KERNEL/(3995:4000): (new -> ready) Cola de new: 0
+[INFO] 11:45:58:097 KERNEL/(3995:4000): (new -> ready) Cola de ready: 5
+[INFO] 11:55:42:646 KERNEL/(4358:4375): Tamanio 200
+[INFO] 11:55:42:646 KERNEL/(4358:4375): Instruccion numero 0: I/O 3000
+[INFO] 11:55:42:646 KERNEL/(4358:4375): Instruccion numero 1: NO_OP
+[INFO] 11:55:42:646 KERNEL/(4358:4375): Instruccion numero 2: NO_OP
+[INFO] 11:55:42:646 KERNEL/(4358:4375): Instruccion numero 3: WRITE 4 42
+[INFO] 11:55:42:646 KERNEL/(4358:4375): Instruccion numero 4: COPY 0 4
+[INFO] 11:55:42:646 KERNEL/(4358:4375): Instruccion numero 5: READ 0
+[INFO] 11:55:42:646 KERNEL/(4358:4375): Instruccion numero 6: EXIT
+[INFO] 11:55:42:646 KERNEL/(4358:4363): (new -> ready) Cola de new: 0
+[INFO] 11:55:42:646 KERNEL/(4358:4363): (new -> ready) Cola de ready: 1
+[INFO] 11:55:42:646 KERNEL/(4358:4364): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 11:55:46:597 KERNEL/(4358:4387): Tamanio 200
+[INFO] 11:55:46:597 KERNEL/(4358:4387): Instruccion numero 0: I/O 3000
+[INFO] 11:55:46:598 KERNEL/(4358:4387): Instruccion numero 1: NO_OP
+[INFO] 11:55:46:598 KERNEL/(4358:4387): Instruccion numero 2: NO_OP
+[INFO] 11:55:46:598 KERNEL/(4358:4387): Instruccion numero 3: WRITE 4 42
+[INFO] 11:55:46:598 KERNEL/(4358:4387): Instruccion numero 4: COPY 0 4
+[INFO] 11:55:46:598 KERNEL/(4358:4387): Instruccion numero 5: READ 0
+[INFO] 11:55:46:598 KERNEL/(4358:4387): Instruccion numero 6: EXIT
+[INFO] 11:55:46:598 KERNEL/(4358:4363): (new -> ready) Cola de new: 0
+[INFO] 11:55:46:598 KERNEL/(4358:4363): (new -> ready) Cola de ready: 1
+[INFO] 11:55:49:726 KERNEL/(4358:4400): Tamanio 200
+[INFO] 11:55:49:726 KERNEL/(4358:4400): Instruccion numero 0: I/O 3000
+[INFO] 11:55:49:726 KERNEL/(4358:4400): Instruccion numero 1: NO_OP
+[INFO] 11:55:49:726 KERNEL/(4358:4400): Instruccion numero 2: NO_OP
+[INFO] 11:55:49:726 KERNEL/(4358:4400): Instruccion numero 3: WRITE 4 42
+[INFO] 11:55:49:726 KERNEL/(4358:4400): Instruccion numero 4: COPY 0 4
+[INFO] 11:55:49:726 KERNEL/(4358:4400): Instruccion numero 5: READ 0
+[INFO] 11:55:49:726 KERNEL/(4358:4400): Instruccion numero 6: EXIT
+[INFO] 11:55:49:726 KERNEL/(4358:4363): (new -> ready) Cola de new: 0
+[INFO] 11:55:49:726 KERNEL/(4358:4363): (new -> ready) Cola de ready: 2
+[INFO] 11:55:52:641 KERNEL/(4358:4411): Tamanio 200
+[INFO] 11:55:52:641 KERNEL/(4358:4411): Instruccion numero 0: I/O 3000
+[INFO] 11:55:52:641 KERNEL/(4358:4411): Instruccion numero 1: NO_OP
+[INFO] 11:55:52:641 KERNEL/(4358:4411): Instruccion numero 2: NO_OP
+[INFO] 11:55:52:641 KERNEL/(4358:4411): Instruccion numero 3: WRITE 4 42
+[INFO] 11:55:52:641 KERNEL/(4358:4411): Instruccion numero 4: COPY 0 4
+[INFO] 11:55:52:641 KERNEL/(4358:4411): Instruccion numero 5: READ 0
+[INFO] 11:55:52:641 KERNEL/(4358:4411): Instruccion numero 6: EXIT
+[INFO] 11:55:52:641 KERNEL/(4358:4363): (new -> ready) Cola de new: 0
+[INFO] 11:55:52:641 KERNEL/(4358:4363): (new -> ready) Cola de ready: 3
+[INFO] 11:55:55:305 KERNEL/(4358:4425): Tamanio 200
+[INFO] 11:55:55:305 KERNEL/(4358:4425): Instruccion numero 0: I/O 3000
+[INFO] 11:55:55:305 KERNEL/(4358:4425): Instruccion numero 1: NO_OP
+[INFO] 11:55:55:305 KERNEL/(4358:4425): Instruccion numero 2: NO_OP
+[INFO] 11:55:55:305 KERNEL/(4358:4425): Instruccion numero 3: WRITE 4 42
+[INFO] 11:55:55:305 KERNEL/(4358:4425): Instruccion numero 4: COPY 0 4
+[INFO] 11:55:55:305 KERNEL/(4358:4425): Instruccion numero 5: READ 0
+[INFO] 11:55:55:305 KERNEL/(4358:4425): Instruccion numero 6: EXIT
+[INFO] 11:55:55:305 KERNEL/(4358:4363): (new -> ready) Cola de new: 0
+[INFO] 11:55:55:305 KERNEL/(4358:4363): (new -> ready) Cola de ready: 4
+[INFO] 11:55:58:023 KERNEL/(4358:4437): Tamanio 200
+[INFO] 11:55:58:023 KERNEL/(4358:4437): Instruccion numero 0: I/O 3000
+[INFO] 11:55:58:023 KERNEL/(4358:4437): Instruccion numero 1: NO_OP
+[INFO] 11:55:58:024 KERNEL/(4358:4437): Instruccion numero 2: NO_OP
+[INFO] 11:55:58:024 KERNEL/(4358:4437): Instruccion numero 3: WRITE 4 42
+[INFO] 11:55:58:024 KERNEL/(4358:4437): Instruccion numero 4: COPY 0 4
+[INFO] 11:55:58:024 KERNEL/(4358:4437): Instruccion numero 5: READ 0
+[INFO] 11:55:58:024 KERNEL/(4358:4437): Instruccion numero 6: EXIT
+[INFO] 11:55:58:024 KERNEL/(4358:4363): (new -> ready) Cola de new: 0
+[INFO] 11:55:58:024 KERNEL/(4358:4363): (new -> ready) Cola de ready: 5
+[INFO] 12:02:06:598 KERNEL/(4712:4729): Tamanio 200
+[INFO] 12:02:06:598 KERNEL/(4712:4729): Instruccion numero 0: I/O 3000
+[INFO] 12:02:06:598 KERNEL/(4712:4729): Instruccion numero 1: NO_OP
+[INFO] 12:02:06:598 KERNEL/(4712:4729): Instruccion numero 2: NO_OP
+[INFO] 12:02:06:598 KERNEL/(4712:4729): Instruccion numero 3: WRITE 4 42
+[INFO] 12:02:06:598 KERNEL/(4712:4729): Instruccion numero 4: COPY 0 4
+[INFO] 12:02:06:598 KERNEL/(4712:4729): Instruccion numero 5: READ 0
+[INFO] 12:02:06:598 KERNEL/(4712:4729): Instruccion numero 6: EXIT
+[INFO] 12:02:06:598 KERNEL/(4712:4717): (new -> ready) Cola de new: 0
+[INFO] 12:02:06:598 KERNEL/(4712:4717): (new -> ready) Cola de ready: 1
+[INFO] 12:02:06:599 KERNEL/(4712:4718): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 12:02:10:138 KERNEL/(4712:4742): Tamanio 200
+[INFO] 12:02:10:138 KERNEL/(4712:4742): Instruccion numero 0: I/O 3000
+[INFO] 12:02:10:138 KERNEL/(4712:4742): Instruccion numero 1: NO_OP
+[INFO] 12:02:10:140 KERNEL/(4712:4742): Instruccion numero 2: NO_OP
+[INFO] 12:02:10:140 KERNEL/(4712:4742): Instruccion numero 3: WRITE 4 42
+[INFO] 12:02:10:140 KERNEL/(4712:4742): Instruccion numero 4: COPY 0 4
+[INFO] 12:02:10:140 KERNEL/(4712:4742): Instruccion numero 5: READ 0
+[INFO] 12:02:10:140 KERNEL/(4712:4742): Instruccion numero 6: EXIT
+[INFO] 12:02:10:141 KERNEL/(4712:4717): (new -> ready) Cola de new: 0
+[INFO] 12:02:10:141 KERNEL/(4712:4717): (new -> ready) Cola de ready: 1
+[INFO] 12:02:13:104 KERNEL/(4712:4754): Tamanio 200
+[INFO] 12:02:13:104 KERNEL/(4712:4754): Instruccion numero 0: I/O 3000
+[INFO] 12:02:13:104 KERNEL/(4712:4754): Instruccion numero 1: NO_OP
+[INFO] 12:02:13:104 KERNEL/(4712:4754): Instruccion numero 2: NO_OP
+[INFO] 12:02:13:104 KERNEL/(4712:4754): Instruccion numero 3: WRITE 4 42
+[INFO] 12:02:13:104 KERNEL/(4712:4754): Instruccion numero 4: COPY 0 4
+[INFO] 12:02:13:104 KERNEL/(4712:4754): Instruccion numero 5: READ 0
+[INFO] 12:02:13:104 KERNEL/(4712:4754): Instruccion numero 6: EXIT
+[INFO] 12:02:13:104 KERNEL/(4712:4717): (new -> ready) Cola de new: 0
+[INFO] 12:02:13:104 KERNEL/(4712:4717): (new -> ready) Cola de ready: 2
+[INFO] 12:02:16:152 KERNEL/(4712:4765): Tamanio 200
+[INFO] 12:02:16:152 KERNEL/(4712:4765): Instruccion numero 0: I/O 3000
+[INFO] 12:02:16:153 KERNEL/(4712:4765): Instruccion numero 1: NO_OP
+[INFO] 12:02:16:153 KERNEL/(4712:4765): Instruccion numero 2: NO_OP
+[INFO] 12:02:16:153 KERNEL/(4712:4765): Instruccion numero 3: WRITE 4 42
+[INFO] 12:02:16:153 KERNEL/(4712:4765): Instruccion numero 4: COPY 0 4
+[INFO] 12:02:16:153 KERNEL/(4712:4765): Instruccion numero 5: READ 0
+[INFO] 12:02:16:153 KERNEL/(4712:4765): Instruccion numero 6: EXIT
+[INFO] 12:02:16:153 KERNEL/(4712:4717): (new -> ready) Cola de new: 0
+[INFO] 12:02:16:153 KERNEL/(4712:4717): (new -> ready) Cola de ready: 3
+[INFO] 12:02:19:202 KERNEL/(4712:4779): Tamanio 200
+[INFO] 12:02:19:202 KERNEL/(4712:4779): Instruccion numero 0: I/O 3000
+[INFO] 12:02:19:202 KERNEL/(4712:4779): Instruccion numero 1: NO_OP
+[INFO] 12:02:19:202 KERNEL/(4712:4779): Instruccion numero 2: NO_OP
+[INFO] 12:02:19:202 KERNEL/(4712:4779): Instruccion numero 3: WRITE 4 42
+[INFO] 12:02:19:202 KERNEL/(4712:4779): Instruccion numero 4: COPY 0 4
+[INFO] 12:02:19:202 KERNEL/(4712:4779): Instruccion numero 5: READ 0
+[INFO] 12:02:19:203 KERNEL/(4712:4779): Instruccion numero 6: EXIT
+[INFO] 12:02:19:203 KERNEL/(4712:4717): (new -> ready) Cola de new: 0
+[INFO] 12:02:19:203 KERNEL/(4712:4717): (new -> ready) Cola de ready: 4
+[INFO] 12:02:22:066 KERNEL/(4712:4791): Tamanio 200
+[INFO] 12:02:22:066 KERNEL/(4712:4791): Instruccion numero 0: I/O 3000
+[INFO] 12:02:22:066 KERNEL/(4712:4791): Instruccion numero 1: NO_OP
+[INFO] 12:02:22:066 KERNEL/(4712:4791): Instruccion numero 2: NO_OP
+[INFO] 12:02:22:066 KERNEL/(4712:4791): Instruccion numero 3: WRITE 4 42
+[INFO] 12:02:22:066 KERNEL/(4712:4791): Instruccion numero 4: COPY 0 4
+[INFO] 12:02:22:066 KERNEL/(4712:4791): Instruccion numero 5: READ 0
+[INFO] 12:02:22:066 KERNEL/(4712:4791): Instruccion numero 6: EXIT
+[INFO] 12:02:22:066 KERNEL/(4712:4717): (new -> ready) Cola de new: 0
+[INFO] 12:02:22:066 KERNEL/(4712:4717): (new -> ready) Cola de ready: 5
+[INFO] 12:39:29:873 KERNEL/(5316:5350): Tamanio 200
+[INFO] 12:39:29:873 KERNEL/(5316:5350): Instruccion numero 0: I/O 3000
+[INFO] 12:39:29:873 KERNEL/(5316:5350): Instruccion numero 1: NO_OP
+[INFO] 12:39:29:873 KERNEL/(5316:5350): Instruccion numero 2: NO_OP
+[INFO] 12:39:29:874 KERNEL/(5316:5350): Instruccion numero 3: WRITE 4 42
+[INFO] 12:39:29:874 KERNEL/(5316:5350): Instruccion numero 4: COPY 0 4
+[INFO] 12:39:29:874 KERNEL/(5316:5350): Instruccion numero 5: READ 0
+[INFO] 12:39:29:874 KERNEL/(5316:5350): Instruccion numero 6: EXIT
+[INFO] 12:39:29:874 KERNEL/(5316:5321): (new -> ready) Cola de new: 0
+[INFO] 12:39:29:874 KERNEL/(5316:5321): (new -> ready) Cola de ready: 1
+[INFO] 12:39:29:874 KERNEL/(5316:5322): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 12:39:33:134 KERNEL/(5316:5362): Tamanio 200
+[INFO] 12:39:33:134 KERNEL/(5316:5362): Instruccion numero 0: I/O 3000
+[INFO] 12:39:33:134 KERNEL/(5316:5362): Instruccion numero 1: NO_OP
+[INFO] 12:39:33:134 KERNEL/(5316:5362): Instruccion numero 2: NO_OP
+[INFO] 12:39:33:134 KERNEL/(5316:5362): Instruccion numero 3: WRITE 4 42
+[INFO] 12:39:33:134 KERNEL/(5316:5362): Instruccion numero 4: COPY 0 4
+[INFO] 12:39:33:134 KERNEL/(5316:5362): Instruccion numero 5: READ 0
+[INFO] 12:39:33:134 KERNEL/(5316:5362): Instruccion numero 6: EXIT
+[INFO] 12:39:33:134 KERNEL/(5316:5321): (new -> ready) Cola de new: 0
+[INFO] 12:39:33:134 KERNEL/(5316:5321): (new -> ready) Cola de ready: 1
+[INFO] 12:39:35:794 KERNEL/(5316:5376): Tamanio 200
+[INFO] 12:39:35:794 KERNEL/(5316:5376): Instruccion numero 0: I/O 3000
+[INFO] 12:39:35:795 KERNEL/(5316:5376): Instruccion numero 1: NO_OP
+[INFO] 12:39:35:795 KERNEL/(5316:5376): Instruccion numero 2: NO_OP
+[INFO] 12:39:35:795 KERNEL/(5316:5376): Instruccion numero 3: WRITE 4 42
+[INFO] 12:39:35:795 KERNEL/(5316:5376): Instruccion numero 4: COPY 0 4
+[INFO] 12:39:35:795 KERNEL/(5316:5376): Instruccion numero 5: READ 0
+[INFO] 12:39:35:795 KERNEL/(5316:5376): Instruccion numero 6: EXIT
+[INFO] 12:39:35:795 KERNEL/(5316:5321): (new -> ready) Cola de new: 0
+[INFO] 12:39:35:795 KERNEL/(5316:5321): (new -> ready) Cola de ready: 2
+[INFO] 12:39:38:317 KERNEL/(5316:5387): Tamanio 200
+[INFO] 12:39:38:317 KERNEL/(5316:5387): Instruccion numero 0: I/O 3000
+[INFO] 12:39:38:317 KERNEL/(5316:5387): Instruccion numero 1: NO_OP
+[INFO] 12:39:38:317 KERNEL/(5316:5387): Instruccion numero 2: NO_OP
+[INFO] 12:39:38:317 KERNEL/(5316:5387): Instruccion numero 3: WRITE 4 42
+[INFO] 12:39:38:317 KERNEL/(5316:5387): Instruccion numero 4: COPY 0 4
+[INFO] 12:39:38:317 KERNEL/(5316:5387): Instruccion numero 5: READ 0
+[INFO] 12:39:38:317 KERNEL/(5316:5387): Instruccion numero 6: EXIT
+[INFO] 12:39:38:317 KERNEL/(5316:5321): (new -> ready) Cola de new: 0
+[INFO] 12:39:38:317 KERNEL/(5316:5321): (new -> ready) Cola de ready: 3
+[INFO] 12:39:40:775 KERNEL/(5316:5399): Tamanio 200
+[INFO] 12:39:40:775 KERNEL/(5316:5399): Instruccion numero 0: I/O 3000
+[INFO] 12:39:40:775 KERNEL/(5316:5399): Instruccion numero 1: NO_OP
+[INFO] 12:39:40:775 KERNEL/(5316:5399): Instruccion numero 2: NO_OP
+[INFO] 12:39:40:775 KERNEL/(5316:5399): Instruccion numero 3: WRITE 4 42
+[INFO] 12:39:40:775 KERNEL/(5316:5399): Instruccion numero 4: COPY 0 4
+[INFO] 12:39:40:775 KERNEL/(5316:5399): Instruccion numero 5: READ 0
+[INFO] 12:39:40:775 KERNEL/(5316:5399): Instruccion numero 6: EXIT
+[INFO] 12:39:40:776 KERNEL/(5316:5321): (new -> ready) Cola de new: 0
+[INFO] 12:39:40:776 KERNEL/(5316:5321): (new -> ready) Cola de ready: 4
+[INFO] 12:39:43:570 KERNEL/(5316:5412): Tamanio 200
+[INFO] 12:39:43:570 KERNEL/(5316:5412): Instruccion numero 0: I/O 3000
+[INFO] 12:39:43:570 KERNEL/(5316:5412): Instruccion numero 1: NO_OP
+[INFO] 12:39:43:570 KERNEL/(5316:5412): Instruccion numero 2: NO_OP
+[INFO] 12:39:43:570 KERNEL/(5316:5412): Instruccion numero 3: WRITE 4 42
+[INFO] 12:39:43:570 KERNEL/(5316:5412): Instruccion numero 4: COPY 0 4
+[INFO] 12:39:43:570 KERNEL/(5316:5412): Instruccion numero 5: READ 0
+[INFO] 12:39:43:570 KERNEL/(5316:5412): Instruccion numero 6: EXIT
+[INFO] 12:39:43:570 KERNEL/(5316:5321): (new -> ready) Cola de new: 0
+[INFO] 12:39:43:570 KERNEL/(5316:5321): (new -> ready) Cola de ready: 5
+[ERROR] 12:40:34:190 KERNEL/(5506:5506): Error creando el socket :(
+[ERROR] 12:40:43:042 KERNEL/(5521:5521): Error creando el socket :(
+[ERROR] 12:40:45:836 KERNEL/(5533:5533): Error creando el socket :(
+[INFO] 12:40:52:532 KERNEL/(5545:5579): Tamanio 200
+[INFO] 12:40:52:532 KERNEL/(5545:5579): Instruccion numero 0: I/O 3000
+[INFO] 12:40:52:532 KERNEL/(5545:5579): Instruccion numero 1: NO_OP
+[INFO] 12:40:52:532 KERNEL/(5545:5579): Instruccion numero 2: NO_OP
+[INFO] 12:40:52:532 KERNEL/(5545:5579): Instruccion numero 3: WRITE 4 42
+[INFO] 12:40:52:532 KERNEL/(5545:5579): Instruccion numero 4: COPY 0 4
+[INFO] 12:40:52:532 KERNEL/(5545:5579): Instruccion numero 5: READ 0
+[INFO] 12:40:52:532 KERNEL/(5545:5579): Instruccion numero 6: EXIT
+[INFO] 12:40:52:532 KERNEL/(5545:5550): (new -> ready) Cola de new: 0
+[INFO] 12:40:52:532 KERNEL/(5545:5550): (new -> ready) Cola de ready: 1
+[INFO] 12:40:52:532 KERNEL/(5545:5551): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[ERROR] 12:41:14:321 KERNEL/(5597:5597): Error creando el socket :(
+[ERROR] 12:41:30:851 KERNEL/(5621:5621): Error creando el socket :(
+[ERROR] 12:41:43:206 KERNEL/(5684:5684): Error creando el socket :(
+[INFO] 12:42:40:943 KERNEL/(5759:5793): Tamanio 200
+[INFO] 12:42:40:943 KERNEL/(5759:5793): Instruccion numero 0: I/O 3000
+[INFO] 12:42:40:943 KERNEL/(5759:5793): Instruccion numero 1: NO_OP
+[INFO] 12:42:40:943 KERNEL/(5759:5793): Instruccion numero 2: NO_OP
+[INFO] 12:42:40:943 KERNEL/(5759:5793): Instruccion numero 3: WRITE 4 42
+[INFO] 12:42:40:944 KERNEL/(5759:5793): Instruccion numero 4: COPY 0 4
+[INFO] 12:42:40:944 KERNEL/(5759:5793): Instruccion numero 5: READ 0
+[INFO] 12:42:40:944 KERNEL/(5759:5793): Instruccion numero 6: EXIT
+[INFO] 12:42:40:944 KERNEL/(5759:5764): (new -> ready) Cola de new: 0
+[INFO] 12:42:40:944 KERNEL/(5759:5764): (new -> ready) Cola de ready: 1
+[INFO] 12:42:40:944 KERNEL/(5759:5765): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 12:42:44:847 KERNEL/(5759:5805): Tamanio 200
+[INFO] 12:42:44:847 KERNEL/(5759:5805): Instruccion numero 0: I/O 3000
+[INFO] 12:42:44:847 KERNEL/(5759:5805): Instruccion numero 1: NO_OP
+[INFO] 12:42:44:847 KERNEL/(5759:5805): Instruccion numero 2: NO_OP
+[INFO] 12:42:44:847 KERNEL/(5759:5805): Instruccion numero 3: WRITE 4 42
+[INFO] 12:42:44:847 KERNEL/(5759:5805): Instruccion numero 4: COPY 0 4
+[INFO] 12:42:44:847 KERNEL/(5759:5805): Instruccion numero 5: READ 0
+[INFO] 12:42:44:847 KERNEL/(5759:5805): Instruccion numero 6: EXIT
+[INFO] 12:42:44:847 KERNEL/(5759:5764): (new -> ready) Cola de new: 0
+[INFO] 12:42:44:847 KERNEL/(5759:5764): (new -> ready) Cola de ready: 1
+[INFO] 12:42:47:774 KERNEL/(5759:5821): Tamanio 200
+[INFO] 12:42:47:774 KERNEL/(5759:5821): Instruccion numero 0: I/O 3000
+[INFO] 12:42:47:774 KERNEL/(5759:5821): Instruccion numero 1: NO_OP
+[INFO] 12:42:47:774 KERNEL/(5759:5821): Instruccion numero 2: NO_OP
+[INFO] 12:42:47:774 KERNEL/(5759:5821): Instruccion numero 3: WRITE 4 42
+[INFO] 12:42:47:774 KERNEL/(5759:5821): Instruccion numero 4: COPY 0 4
+[INFO] 12:42:47:774 KERNEL/(5759:5821): Instruccion numero 5: READ 0
+[INFO] 12:42:47:774 KERNEL/(5759:5821): Instruccion numero 6: EXIT
+[INFO] 12:42:47:774 KERNEL/(5759:5764): (new -> ready) Cola de new: 0
+[INFO] 12:42:47:774 KERNEL/(5759:5764): (new -> ready) Cola de ready: 2
+[INFO] 12:42:50:450 KERNEL/(5759:5832): Tamanio 200
+[INFO] 12:42:50:450 KERNEL/(5759:5832): Instruccion numero 0: I/O 3000
+[INFO] 12:42:50:451 KERNEL/(5759:5832): Instruccion numero 1: NO_OP
+[INFO] 12:42:50:451 KERNEL/(5759:5832): Instruccion numero 2: NO_OP
+[INFO] 12:42:50:451 KERNEL/(5759:5832): Instruccion numero 3: WRITE 4 42
+[INFO] 12:42:50:451 KERNEL/(5759:5832): Instruccion numero 4: COPY 0 4
+[INFO] 12:42:50:451 KERNEL/(5759:5832): Instruccion numero 5: READ 0
+[INFO] 12:42:50:451 KERNEL/(5759:5832): Instruccion numero 6: EXIT
+[INFO] 12:42:50:451 KERNEL/(5759:5764): (new -> ready) Cola de new: 0
+[INFO] 12:42:50:451 KERNEL/(5759:5764): (new -> ready) Cola de ready: 3
+[INFO] 12:42:52:766 KERNEL/(5759:5843): Tamanio 200
+[INFO] 12:42:52:766 KERNEL/(5759:5843): Instruccion numero 0: I/O 3000
+[INFO] 12:42:52:766 KERNEL/(5759:5843): Instruccion numero 1: NO_OP
+[INFO] 12:42:52:767 KERNEL/(5759:5843): Instruccion numero 2: NO_OP
+[INFO] 12:42:52:767 KERNEL/(5759:5843): Instruccion numero 3: WRITE 4 42
+[INFO] 12:42:52:767 KERNEL/(5759:5843): Instruccion numero 4: COPY 0 4
+[INFO] 12:42:52:767 KERNEL/(5759:5843): Instruccion numero 5: READ 0
+[INFO] 12:42:52:767 KERNEL/(5759:5843): Instruccion numero 6: EXIT
+[INFO] 12:42:52:767 KERNEL/(5759:5764): (new -> ready) Cola de new: 0
+[INFO] 12:42:52:767 KERNEL/(5759:5764): (new -> ready) Cola de ready: 4
+[INFO] 12:42:55:547 KERNEL/(5759:5854): Tamanio 200
+[INFO] 12:42:55:547 KERNEL/(5759:5854): Instruccion numero 0: I/O 3000
+[INFO] 12:42:55:547 KERNEL/(5759:5854): Instruccion numero 1: NO_OP
+[INFO] 12:42:55:547 KERNEL/(5759:5854): Instruccion numero 2: NO_OP
+[INFO] 12:42:55:547 KERNEL/(5759:5854): Instruccion numero 3: WRITE 4 42
+[INFO] 12:42:55:547 KERNEL/(5759:5854): Instruccion numero 4: COPY 0 4
+[INFO] 12:42:55:547 KERNEL/(5759:5854): Instruccion numero 5: READ 0
+[INFO] 12:42:55:547 KERNEL/(5759:5854): Instruccion numero 6: EXIT
+[INFO] 12:42:55:547 KERNEL/(5759:5764): (new -> ready) Cola de new: 0
+[INFO] 12:42:55:547 KERNEL/(5759:5764): (new -> ready) Cola de ready: 5
+[ERROR] 12:43:45:590 KERNEL/(5906:5906): Error creando el socket :(
+[INFO] 12:44:03:723 KERNEL/(5929:5946): Tamanio 200
+[INFO] 12:44:03:723 KERNEL/(5929:5946): Instruccion numero 0: I/O 3000
+[INFO] 12:44:03:723 KERNEL/(5929:5946): Instruccion numero 1: NO_OP
+[INFO] 12:44:03:723 KERNEL/(5929:5946): Instruccion numero 2: NO_OP
+[INFO] 12:44:03:723 KERNEL/(5929:5946): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:03:723 KERNEL/(5929:5946): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:03:723 KERNEL/(5929:5946): Instruccion numero 5: READ 0
+[INFO] 12:44:03:723 KERNEL/(5929:5946): Instruccion numero 6: EXIT
+[INFO] 12:44:03:723 KERNEL/(5929:5934): (new -> ready) Cola de new: 0
+[INFO] 12:44:03:723 KERNEL/(5929:5934): (new -> ready) Cola de ready: 1
+[INFO] 12:44:03:723 KERNEL/(5929:5935): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 12:44:07:453 KERNEL/(5929:5957): Tamanio 200
+[INFO] 12:44:07:453 KERNEL/(5929:5957): Instruccion numero 0: I/O 3000
+[INFO] 12:44:07:454 KERNEL/(5929:5957): Instruccion numero 1: NO_OP
+[INFO] 12:44:07:454 KERNEL/(5929:5957): Instruccion numero 2: NO_OP
+[INFO] 12:44:07:455 KERNEL/(5929:5957): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:07:455 KERNEL/(5929:5957): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:07:455 KERNEL/(5929:5957): Instruccion numero 5: READ 0
+[INFO] 12:44:07:455 KERNEL/(5929:5957): Instruccion numero 6: EXIT
+[INFO] 12:44:07:455 KERNEL/(5929:5934): (new -> ready) Cola de new: 0
+[INFO] 12:44:07:455 KERNEL/(5929:5934): (new -> ready) Cola de ready: 1
+[INFO] 12:44:10:193 KERNEL/(5929:5968): Tamanio 200
+[INFO] 12:44:10:193 KERNEL/(5929:5968): Instruccion numero 0: I/O 3000
+[INFO] 12:44:10:193 KERNEL/(5929:5968): Instruccion numero 1: NO_OP
+[INFO] 12:44:10:193 KERNEL/(5929:5968): Instruccion numero 2: NO_OP
+[INFO] 12:44:10:193 KERNEL/(5929:5968): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:10:193 KERNEL/(5929:5968): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:10:193 KERNEL/(5929:5968): Instruccion numero 5: READ 0
+[INFO] 12:44:10:193 KERNEL/(5929:5968): Instruccion numero 6: EXIT
+[INFO] 12:44:10:193 KERNEL/(5929:5934): (new -> ready) Cola de new: 0
+[INFO] 12:44:10:193 KERNEL/(5929:5934): (new -> ready) Cola de ready: 2
+[INFO] 12:44:13:933 KERNEL/(5929:5979): Tamanio 200
+[INFO] 12:44:13:933 KERNEL/(5929:5979): Instruccion numero 0: I/O 3000
+[INFO] 12:44:13:933 KERNEL/(5929:5979): Instruccion numero 1: NO_OP
+[INFO] 12:44:13:933 KERNEL/(5929:5979): Instruccion numero 2: NO_OP
+[INFO] 12:44:13:933 KERNEL/(5929:5979): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:13:933 KERNEL/(5929:5979): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:13:933 KERNEL/(5929:5979): Instruccion numero 5: READ 0
+[INFO] 12:44:13:933 KERNEL/(5929:5979): Instruccion numero 6: EXIT
+[INFO] 12:44:13:933 KERNEL/(5929:5934): (new -> ready) Cola de new: 0
+[INFO] 12:44:13:933 KERNEL/(5929:5934): (new -> ready) Cola de ready: 3
+[INFO] 12:44:16:409 KERNEL/(5929:5990): Tamanio 200
+[INFO] 12:44:16:409 KERNEL/(5929:5990): Instruccion numero 0: I/O 3000
+[INFO] 12:44:16:409 KERNEL/(5929:5990): Instruccion numero 1: NO_OP
+[INFO] 12:44:16:409 KERNEL/(5929:5990): Instruccion numero 2: NO_OP
+[INFO] 12:44:16:409 KERNEL/(5929:5990): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:16:409 KERNEL/(5929:5990): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:16:409 KERNEL/(5929:5990): Instruccion numero 5: READ 0
+[INFO] 12:44:16:409 KERNEL/(5929:5990): Instruccion numero 6: EXIT
+[INFO] 12:44:16:409 KERNEL/(5929:5934): (new -> ready) Cola de new: 0
+[INFO] 12:44:16:409 KERNEL/(5929:5934): (new -> ready) Cola de ready: 4
+[INFO] 12:44:18:799 KERNEL/(5929:6001): Tamanio 200
+[INFO] 12:44:18:799 KERNEL/(5929:6001): Instruccion numero 0: I/O 3000
+[INFO] 12:44:18:799 KERNEL/(5929:6001): Instruccion numero 1: NO_OP
+[INFO] 12:44:18:799 KERNEL/(5929:6001): Instruccion numero 2: NO_OP
+[INFO] 12:44:18:799 KERNEL/(5929:6001): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:18:799 KERNEL/(5929:6001): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:18:799 KERNEL/(5929:6001): Instruccion numero 5: READ 0
+[INFO] 12:44:18:799 KERNEL/(5929:6001): Instruccion numero 6: EXIT
+[INFO] 12:44:18:799 KERNEL/(5929:5934): (new -> ready) Cola de new: 0
+[INFO] 12:44:18:799 KERNEL/(5929:5934): (new -> ready) Cola de ready: 5
+[INFO] 12:44:21:218 KERNEL/(5929:6014): Tamanio 200
+[INFO] 12:44:21:218 KERNEL/(5929:6014): Instruccion numero 0: I/O 3000
+[INFO] 12:44:21:218 KERNEL/(5929:6014): Instruccion numero 1: NO_OP
+[INFO] 12:44:21:218 KERNEL/(5929:6014): Instruccion numero 2: NO_OP
+[INFO] 12:44:21:218 KERNEL/(5929:6014): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:21:218 KERNEL/(5929:6014): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:21:218 KERNEL/(5929:6014): Instruccion numero 5: READ 0
+[INFO] 12:44:21:218 KERNEL/(5929:6014): Instruccion numero 6: EXIT
+[INFO] 12:44:21:218 KERNEL/(5929:5934): (new -> ready) Cola de new: 0
+[INFO] 12:44:21:218 KERNEL/(5929:5934): (new -> ready) Cola de ready: 6
+[INFO] 12:44:24:162 KERNEL/(5929:6025): Tamanio 200
+[INFO] 12:44:24:162 KERNEL/(5929:6025): Instruccion numero 0: I/O 3000
+[INFO] 12:44:24:162 KERNEL/(5929:6025): Instruccion numero 1: NO_OP
+[INFO] 12:44:24:162 KERNEL/(5929:6025): Instruccion numero 2: NO_OP
+[INFO] 12:44:24:162 KERNEL/(5929:6025): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:24:162 KERNEL/(5929:6025): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:24:162 KERNEL/(5929:6025): Instruccion numero 5: READ 0
+[INFO] 12:44:24:162 KERNEL/(5929:6025): Instruccion numero 6: EXIT
+[INFO] 12:44:24:162 KERNEL/(5929:5934): (new -> ready) Cola de new: 0
+[INFO] 12:44:24:162 KERNEL/(5929:5934): (new -> ready) Cola de ready: 7
+[INFO] 12:44:26:717 KERNEL/(5929:6037): Tamanio 200
+[INFO] 12:44:26:717 KERNEL/(5929:6037): Instruccion numero 0: I/O 3000
+[INFO] 12:44:26:717 KERNEL/(5929:6037): Instruccion numero 1: NO_OP
+[INFO] 12:44:26:717 KERNEL/(5929:6037): Instruccion numero 2: NO_OP
+[INFO] 12:44:26:717 KERNEL/(5929:6037): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:26:717 KERNEL/(5929:6037): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:26:718 KERNEL/(5929:6037): Instruccion numero 5: READ 0
+[INFO] 12:44:26:718 KERNEL/(5929:6037): Instruccion numero 6: EXIT
+[INFO] 12:44:30:964 KERNEL/(5929:6049): Tamanio 200
+[INFO] 12:44:30:964 KERNEL/(5929:6049): Instruccion numero 0: I/O 3000
+[INFO] 12:44:30:964 KERNEL/(5929:6049): Instruccion numero 1: NO_OP
+[INFO] 12:44:30:964 KERNEL/(5929:6049): Instruccion numero 2: NO_OP
+[INFO] 12:44:30:964 KERNEL/(5929:6049): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:30:964 KERNEL/(5929:6049): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:30:964 KERNEL/(5929:6049): Instruccion numero 5: READ 0
+[INFO] 12:44:30:964 KERNEL/(5929:6049): Instruccion numero 6: EXIT
+[INFO] 12:44:33:710 KERNEL/(5929:6061): Tamanio 200
+[INFO] 12:44:33:710 KERNEL/(5929:6061): Instruccion numero 0: I/O 3000
+[INFO] 12:44:33:710 KERNEL/(5929:6061): Instruccion numero 1: NO_OP
+[INFO] 12:44:33:710 KERNEL/(5929:6061): Instruccion numero 2: NO_OP
+[INFO] 12:44:33:710 KERNEL/(5929:6061): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:33:710 KERNEL/(5929:6061): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:33:711 KERNEL/(5929:6061): Instruccion numero 5: READ 0
+[INFO] 12:44:33:711 KERNEL/(5929:6061): Instruccion numero 6: EXIT
+[INFO] 12:44:36:416 KERNEL/(5929:6073): Tamanio 200
+[INFO] 12:44:36:416 KERNEL/(5929:6073): Instruccion numero 0: I/O 3000
+[INFO] 12:44:36:417 KERNEL/(5929:6073): Instruccion numero 1: NO_OP
+[INFO] 12:44:36:417 KERNEL/(5929:6073): Instruccion numero 2: NO_OP
+[INFO] 12:44:36:417 KERNEL/(5929:6073): Instruccion numero 3: WRITE 4 42
+[INFO] 12:44:36:417 KERNEL/(5929:6073): Instruccion numero 4: COPY 0 4
+[INFO] 12:44:36:417 KERNEL/(5929:6073): Instruccion numero 5: READ 0
+[INFO] 12:44:36:417 KERNEL/(5929:6073): Instruccion numero 6: EXIT
+[ERROR] 12:52:47:190 KERNEL/(6500:6500): Error creando el socket :(
+[ERROR] 12:52:54:530 KERNEL/(6526:6526): Error creando el socket :(
+[ERROR] 12:53:01:012 KERNEL/(6548:6548): Error creando el socket :(
+[INFO] 12:53:18:612 KERNEL/(6570:6605): Tamanio 200
+[INFO] 12:53:18:612 KERNEL/(6570:6605): Instruccion numero 0: I/O 3000
+[INFO] 12:53:18:612 KERNEL/(6570:6605): Instruccion numero 1: NO_OP
+[INFO] 12:53:18:613 KERNEL/(6570:6605): Instruccion numero 2: NO_OP
+[INFO] 12:53:18:613 KERNEL/(6570:6605): Instruccion numero 3: WRITE 4 42
+[INFO] 12:53:18:613 KERNEL/(6570:6605): Instruccion numero 4: COPY 0 4
+[INFO] 12:53:18:614 KERNEL/(6570:6605): Instruccion numero 5: READ 0
+[INFO] 12:53:18:614 KERNEL/(6570:6605): Instruccion numero 6: EXIT
+[INFO] 12:53:18:614 KERNEL/(6570:6576): (new -> ready) Cola de new: 0
+[INFO] 12:53:18:614 KERNEL/(6570:6576): (new -> ready) Cola de ready: 1
+[INFO] 12:53:18:614 KERNEL/(6570:6577): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 12:53:22:476 KERNEL/(6570:6619): Tamanio 200
+[INFO] 12:53:22:476 KERNEL/(6570:6619): Instruccion numero 0: I/O 3000
+[INFO] 12:53:22:476 KERNEL/(6570:6619): Instruccion numero 1: NO_OP
+[INFO] 12:53:22:476 KERNEL/(6570:6619): Instruccion numero 2: NO_OP
+[INFO] 12:53:22:476 KERNEL/(6570:6619): Instruccion numero 3: WRITE 4 42
+[INFO] 12:53:22:476 KERNEL/(6570:6619): Instruccion numero 4: COPY 0 4
+[INFO] 12:53:22:476 KERNEL/(6570:6619): Instruccion numero 5: READ 0
+[INFO] 12:53:22:476 KERNEL/(6570:6619): Instruccion numero 6: EXIT
+[INFO] 12:53:22:476 KERNEL/(6570:6576): (new -> ready) Cola de new: 0
+[INFO] 12:53:22:476 KERNEL/(6570:6576): (new -> ready) Cola de ready: 1
+[INFO] 12:53:26:536 KERNEL/(6570:6631): Tamanio 200
+[INFO] 12:53:26:536 KERNEL/(6570:6631): Instruccion numero 0: I/O 3000
+[INFO] 12:53:26:536 KERNEL/(6570:6631): Instruccion numero 1: NO_OP
+[INFO] 12:53:26:536 KERNEL/(6570:6631): Instruccion numero 2: NO_OP
+[INFO] 12:53:26:536 KERNEL/(6570:6631): Instruccion numero 3: WRITE 4 42
+[INFO] 12:53:26:536 KERNEL/(6570:6631): Instruccion numero 4: COPY 0 4
+[INFO] 12:53:26:536 KERNEL/(6570:6631): Instruccion numero 5: READ 0
+[INFO] 12:53:26:536 KERNEL/(6570:6631): Instruccion numero 6: EXIT
+[INFO] 12:53:26:537 KERNEL/(6570:6576): (new -> ready) Cola de new: 0
+[INFO] 12:53:26:537 KERNEL/(6570:6576): (new -> ready) Cola de ready: 2
+[INFO] 12:53:29:538 KERNEL/(6570:6643): Tamanio 200
+[INFO] 12:53:29:540 KERNEL/(6570:6643): Instruccion numero 0: I/O 3000
+[INFO] 12:53:29:540 KERNEL/(6570:6643): Instruccion numero 1: NO_OP
+[INFO] 12:53:29:540 KERNEL/(6570:6643): Instruccion numero 2: NO_OP
+[INFO] 12:53:29:540 KERNEL/(6570:6643): Instruccion numero 3: WRITE 4 42
+[INFO] 12:53:29:540 KERNEL/(6570:6643): Instruccion numero 4: COPY 0 4
+[INFO] 12:53:29:541 KERNEL/(6570:6643): Instruccion numero 5: READ 0
+[INFO] 12:53:29:541 KERNEL/(6570:6643): Instruccion numero 6: EXIT
+[INFO] 12:53:29:541 KERNEL/(6570:6576): (new -> ready) Cola de new: 0
+[INFO] 12:53:29:541 KERNEL/(6570:6576): (new -> ready) Cola de ready: 3
+[INFO] 12:53:32:182 KERNEL/(6570:6655): Tamanio 200
+[INFO] 12:53:32:182 KERNEL/(6570:6655): Instruccion numero 0: I/O 3000
+[INFO] 12:53:32:182 KERNEL/(6570:6655): Instruccion numero 1: NO_OP
+[INFO] 12:53:32:182 KERNEL/(6570:6655): Instruccion numero 2: NO_OP
+[INFO] 12:53:32:182 KERNEL/(6570:6655): Instruccion numero 3: WRITE 4 42
+[INFO] 12:53:32:182 KERNEL/(6570:6655): Instruccion numero 4: COPY 0 4
+[INFO] 12:53:32:182 KERNEL/(6570:6655): Instruccion numero 5: READ 0
+[INFO] 12:53:32:182 KERNEL/(6570:6655): Instruccion numero 6: EXIT
+[INFO] 12:53:32:182 KERNEL/(6570:6576): (new -> ready) Cola de new: 0
+[INFO] 12:53:32:182 KERNEL/(6570:6576): (new -> ready) Cola de ready: 4
+[INFO] 12:53:34:894 KERNEL/(6570:6667): Tamanio 200
+[INFO] 12:53:34:894 KERNEL/(6570:6667): Instruccion numero 0: I/O 3000
+[INFO] 12:53:34:894 KERNEL/(6570:6667): Instruccion numero 1: NO_OP
+[INFO] 12:53:34:894 KERNEL/(6570:6667): Instruccion numero 2: NO_OP
+[INFO] 12:53:34:894 KERNEL/(6570:6667): Instruccion numero 3: WRITE 4 42
+[INFO] 12:53:34:894 KERNEL/(6570:6667): Instruccion numero 4: COPY 0 4
+[INFO] 12:53:34:894 KERNEL/(6570:6667): Instruccion numero 5: READ 0
+[INFO] 12:53:34:894 KERNEL/(6570:6667): Instruccion numero 6: EXIT
+[INFO] 12:53:34:895 KERNEL/(6570:6576): (new -> ready) Cola de new: 0
+[INFO] 12:53:34:895 KERNEL/(6570:6576): (new -> ready) Cola de ready: 5
+[INFO] 12:55:14:131 KERNEL/(6772:6789): Tamanio 200
+[INFO] 12:55:14:131 KERNEL/(6772:6789): Instruccion numero 0: I/O 3000
+[INFO] 12:55:14:131 KERNEL/(6772:6789): Instruccion numero 1: NO_OP
+[INFO] 12:55:14:132 KERNEL/(6772:6789): Instruccion numero 2: NO_OP
+[INFO] 12:55:14:132 KERNEL/(6772:6789): Instruccion numero 3: WRITE 4 42
+[INFO] 12:55:14:132 KERNEL/(6772:6789): Instruccion numero 4: COPY 0 4
+[INFO] 12:55:14:132 KERNEL/(6772:6789): Instruccion numero 5: READ 0
+[INFO] 12:55:14:132 KERNEL/(6772:6789): Instruccion numero 6: EXIT
+[INFO] 12:55:14:132 KERNEL/(6772:6777): (new -> ready) Cola de new: 0
+[INFO] 12:55:14:132 KERNEL/(6772:6777): (new -> ready) Cola de ready: 1
+[INFO] 12:55:14:132 KERNEL/(6772:6778): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 12:55:17:383 KERNEL/(6772:6800): Tamanio 200
+[INFO] 12:55:17:383 KERNEL/(6772:6800): Instruccion numero 0: I/O 3000
+[INFO] 12:55:17:383 KERNEL/(6772:6800): Instruccion numero 1: NO_OP
+[INFO] 12:55:17:383 KERNEL/(6772:6800): Instruccion numero 2: NO_OP
+[INFO] 12:55:17:383 KERNEL/(6772:6800): Instruccion numero 3: WRITE 4 42
+[INFO] 12:55:17:384 KERNEL/(6772:6800): Instruccion numero 4: COPY 0 4
+[INFO] 12:55:17:384 KERNEL/(6772:6800): Instruccion numero 5: READ 0
+[INFO] 12:55:17:384 KERNEL/(6772:6800): Instruccion numero 6: EXIT
+[INFO] 12:55:17:384 KERNEL/(6772:6777): (new -> ready) Cola de new: 0
+[INFO] 12:55:17:384 KERNEL/(6772:6777): (new -> ready) Cola de ready: 1
+[INFO] 12:55:21:146 KERNEL/(6772:6816): Tamanio 200
+[INFO] 12:55:21:146 KERNEL/(6772:6816): Instruccion numero 0: I/O 3000
+[INFO] 12:55:21:146 KERNEL/(6772:6816): Instruccion numero 1: NO_OP
+[INFO] 12:55:21:146 KERNEL/(6772:6816): Instruccion numero 2: NO_OP
+[INFO] 12:55:21:146 KERNEL/(6772:6816): Instruccion numero 3: WRITE 4 42
+[INFO] 12:55:21:146 KERNEL/(6772:6816): Instruccion numero 4: COPY 0 4
+[INFO] 12:55:21:146 KERNEL/(6772:6816): Instruccion numero 5: READ 0
+[INFO] 12:55:21:147 KERNEL/(6772:6816): Instruccion numero 6: EXIT
+[INFO] 12:55:21:147 KERNEL/(6772:6777): (new -> ready) Cola de new: 0
+[INFO] 12:55:21:147 KERNEL/(6772:6777): (new -> ready) Cola de ready: 2
+[INFO] 12:55:23:568 KERNEL/(6772:6829): Tamanio 200
+[INFO] 12:55:23:568 KERNEL/(6772:6829): Instruccion numero 0: I/O 3000
+[INFO] 12:55:23:568 KERNEL/(6772:6829): Instruccion numero 1: NO_OP
+[INFO] 12:55:23:568 KERNEL/(6772:6829): Instruccion numero 2: NO_OP
+[INFO] 12:55:23:569 KERNEL/(6772:6829): Instruccion numero 3: WRITE 4 42
+[INFO] 12:55:23:569 KERNEL/(6772:6829): Instruccion numero 4: COPY 0 4
+[INFO] 12:55:23:569 KERNEL/(6772:6829): Instruccion numero 5: READ 0
+[INFO] 12:55:23:569 KERNEL/(6772:6829): Instruccion numero 6: EXIT
+[INFO] 12:55:23:569 KERNEL/(6772:6777): (new -> ready) Cola de new: 0
+[INFO] 12:55:23:569 KERNEL/(6772:6777): (new -> ready) Cola de ready: 3
+[INFO] 12:55:25:667 KERNEL/(6772:6840): Tamanio 200
+[INFO] 12:55:25:667 KERNEL/(6772:6840): Instruccion numero 0: I/O 3000
+[INFO] 12:55:25:667 KERNEL/(6772:6840): Instruccion numero 1: NO_OP
+[INFO] 12:55:25:667 KERNEL/(6772:6840): Instruccion numero 2: NO_OP
+[INFO] 12:55:25:667 KERNEL/(6772:6840): Instruccion numero 3: WRITE 4 42
+[INFO] 12:55:25:667 KERNEL/(6772:6840): Instruccion numero 4: COPY 0 4
+[INFO] 12:55:25:667 KERNEL/(6772:6840): Instruccion numero 5: READ 0
+[INFO] 12:55:25:667 KERNEL/(6772:6840): Instruccion numero 6: EXIT
+[INFO] 12:55:25:667 KERNEL/(6772:6777): (new -> ready) Cola de new: 0
+[INFO] 12:55:25:667 KERNEL/(6772:6777): (new -> ready) Cola de ready: 4
+[INFO] 12:55:28:892 KERNEL/(6772:6851): Tamanio 200
+[INFO] 12:55:28:892 KERNEL/(6772:6851): Instruccion numero 0: I/O 3000
+[INFO] 12:55:28:892 KERNEL/(6772:6851): Instruccion numero 1: NO_OP
+[INFO] 12:55:28:892 KERNEL/(6772:6851): Instruccion numero 2: NO_OP
+[INFO] 12:55:28:892 KERNEL/(6772:6851): Instruccion numero 3: WRITE 4 42
+[INFO] 12:55:28:892 KERNEL/(6772:6851): Instruccion numero 4: COPY 0 4
+[INFO] 12:55:28:892 KERNEL/(6772:6851): Instruccion numero 5: READ 0
+[INFO] 12:55:28:892 KERNEL/(6772:6851): Instruccion numero 6: EXIT
+[INFO] 12:55:28:892 KERNEL/(6772:6777): (new -> ready) Cola de new: 0
+[INFO] 12:55:28:892 KERNEL/(6772:6777): (new -> ready) Cola de ready: 5
+[ERROR] 12:56:01:106 KERNEL/(6925:6925): Error creando el socket :(
+[ERROR] 12:56:17:523 KERNEL/(6962:6962): Error creando el socket :(
+[ERROR] 12:56:25:603 KERNEL/(6986:6986): Error creando el socket :(
+[ERROR] 12:57:24:477 KERNEL/(7100:7100): Error creando el socket :(
+[INFO] 12:57:57:823 KERNEL/(7126:7160): Tamanio 200
+[ERROR] 12:58:39:113 KERNEL/(7235:7235): Error creando el socket :(
+[ERROR] 12:58:51:121 KERNEL/(7261:7261): Error creando el socket :(
+[INFO] 12:59:25:056 KERNEL/(7317:7363): Tamanio 200
+[INFO] 12:59:25:057 KERNEL/(7317:7363): Instruccion numero 0: I/O 3000
+[INFO] 12:59:25:057 KERNEL/(7317:7363): Instruccion numero 1: NO_OP
+[INFO] 12:59:25:057 KERNEL/(7317:7363): Instruccion numero 2: NO_OP
+[INFO] 12:59:25:057 KERNEL/(7317:7363): Instruccion numero 3: WRITE 4 42
+[INFO] 12:59:25:057 KERNEL/(7317:7363): Instruccion numero 4: COPY 0 4
+[INFO] 12:59:25:057 KERNEL/(7317:7363): Instruccion numero 5: READ 0
+[INFO] 12:59:25:057 KERNEL/(7317:7363): Instruccion numero 6: EXIT
+[INFO] 12:59:25:057 KERNEL/(7317:7324): (new -> ready) Cola de new: 0
+[INFO] 12:59:25:057 KERNEL/(7317:7324): (new -> ready) Cola de ready: 1
+[INFO] 12:59:25:057 KERNEL/(7317:7325): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 12:59:29:402 KERNEL/(7317:7375): Tamanio 200
+[INFO] 12:59:29:402 KERNEL/(7317:7375): Instruccion numero 0: I/O 3000
+[INFO] 12:59:29:402 KERNEL/(7317:7375): Instruccion numero 1: NO_OP
+[INFO] 12:59:29:402 KERNEL/(7317:7375): Instruccion numero 2: NO_OP
+[INFO] 12:59:29:402 KERNEL/(7317:7375): Instruccion numero 3: WRITE 4 42
+[INFO] 12:59:29:402 KERNEL/(7317:7375): Instruccion numero 4: COPY 0 4
+[INFO] 12:59:29:402 KERNEL/(7317:7375): Instruccion numero 5: READ 0
+[INFO] 12:59:29:402 KERNEL/(7317:7375): Instruccion numero 6: EXIT
+[INFO] 12:59:29:402 KERNEL/(7317:7324): (new -> ready) Cola de new: 0
+[INFO] 12:59:29:402 KERNEL/(7317:7324): (new -> ready) Cola de ready: 1
+[INFO] 12:59:32:001 KERNEL/(7317:7386): Tamanio 200
+[INFO] 12:59:32:001 KERNEL/(7317:7386): Instruccion numero 0: I/O 3000
+[INFO] 12:59:32:001 KERNEL/(7317:7386): Instruccion numero 1: NO_OP
+[INFO] 12:59:32:001 KERNEL/(7317:7386): Instruccion numero 2: NO_OP
+[INFO] 12:59:32:001 KERNEL/(7317:7386): Instruccion numero 3: WRITE 4 42
+[INFO] 12:59:32:001 KERNEL/(7317:7386): Instruccion numero 4: COPY 0 4
+[INFO] 12:59:32:001 KERNEL/(7317:7386): Instruccion numero 5: READ 0
+[INFO] 12:59:32:001 KERNEL/(7317:7386): Instruccion numero 6: EXIT
+[INFO] 12:59:32:001 KERNEL/(7317:7324): (new -> ready) Cola de new: 0
+[INFO] 12:59:32:001 KERNEL/(7317:7324): (new -> ready) Cola de ready: 2
+[INFO] 12:59:34:342 KERNEL/(7317:7397): Tamanio 200
+[INFO] 12:59:34:342 KERNEL/(7317:7397): Instruccion numero 0: I/O 3000
+[INFO] 12:59:34:342 KERNEL/(7317:7397): Instruccion numero 1: NO_OP
+[INFO] 12:59:34:342 KERNEL/(7317:7397): Instruccion numero 2: NO_OP
+[INFO] 12:59:34:343 KERNEL/(7317:7397): Instruccion numero 3: WRITE 4 42
+[INFO] 12:59:34:343 KERNEL/(7317:7397): Instruccion numero 4: COPY 0 4
+[INFO] 12:59:34:343 KERNEL/(7317:7397): Instruccion numero 5: READ 0
+[INFO] 12:59:34:344 KERNEL/(7317:7397): Instruccion numero 6: EXIT
+[INFO] 12:59:34:344 KERNEL/(7317:7324): (new -> ready) Cola de new: 0
+[INFO] 12:59:34:344 KERNEL/(7317:7324): (new -> ready) Cola de ready: 3
+[INFO] 12:59:37:232 KERNEL/(7317:7408): Tamanio 200
+[INFO] 12:59:37:232 KERNEL/(7317:7408): Instruccion numero 0: I/O 3000
+[INFO] 12:59:37:232 KERNEL/(7317:7408): Instruccion numero 1: NO_OP
+[INFO] 12:59:37:232 KERNEL/(7317:7408): Instruccion numero 2: NO_OP
+[INFO] 12:59:37:232 KERNEL/(7317:7408): Instruccion numero 3: WRITE 4 42
+[INFO] 12:59:37:232 KERNEL/(7317:7408): Instruccion numero 4: COPY 0 4
+[INFO] 12:59:37:233 KERNEL/(7317:7408): Instruccion numero 5: READ 0
+[INFO] 12:59:37:233 KERNEL/(7317:7408): Instruccion numero 6: EXIT
+[INFO] 12:59:37:233 KERNEL/(7317:7324): (new -> ready) Cola de new: 0
+[INFO] 12:59:37:233 KERNEL/(7317:7324): (new -> ready) Cola de ready: 4
+[INFO] 12:59:39:638 KERNEL/(7317:7419): Tamanio 200
+[INFO] 12:59:39:638 KERNEL/(7317:7419): Instruccion numero 0: I/O 3000
+[INFO] 12:59:39:638 KERNEL/(7317:7419): Instruccion numero 1: NO_OP
+[INFO] 12:59:39:638 KERNEL/(7317:7419): Instruccion numero 2: NO_OP
+[INFO] 12:59:39:638 KERNEL/(7317:7419): Instruccion numero 3: WRITE 4 42
+[INFO] 12:59:39:638 KERNEL/(7317:7419): Instruccion numero 4: COPY 0 4
+[INFO] 12:59:39:638 KERNEL/(7317:7419): Instruccion numero 5: READ 0
+[INFO] 12:59:39:638 KERNEL/(7317:7419): Instruccion numero 6: EXIT
+[INFO] 12:59:39:638 KERNEL/(7317:7324): (new -> ready) Cola de new: 0
+[INFO] 12:59:39:638 KERNEL/(7317:7324): (new -> ready) Cola de ready: 5
+[INFO] 13:17:46:909 KERNEL/(7614:7632): Tamanio 200
+[INFO] 13:17:46:909 KERNEL/(7614:7632): Instruccion numero 0: I/O 3000
+[INFO] 13:17:46:909 KERNEL/(7614:7632): Instruccion numero 1: NO_OP
+[INFO] 13:17:46:909 KERNEL/(7614:7632): Instruccion numero 2: NO_OP
+[INFO] 13:17:46:909 KERNEL/(7614:7632): Instruccion numero 3: WRITE 4 42
+[INFO] 13:17:46:909 KERNEL/(7614:7632): Instruccion numero 4: COPY 0 4
+[INFO] 13:17:46:909 KERNEL/(7614:7632): Instruccion numero 5: READ 0
+[INFO] 13:17:46:910 KERNEL/(7614:7632): Instruccion numero 6: EXIT
+[INFO] 13:17:46:910 KERNEL/(7614:7619): (new -> ready) Cola de new: 0
+[INFO] 13:17:46:910 KERNEL/(7614:7619): (new -> ready) Cola de ready: 1
+[INFO] 13:17:46:910 KERNEL/(7614:7620): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 13:17:49:872 KERNEL/(7614:7644): Tamanio 200
+[INFO] 13:17:49:872 KERNEL/(7614:7644): Instruccion numero 0: I/O 3000
+[INFO] 13:17:49:872 KERNEL/(7614:7644): Instruccion numero 1: NO_OP
+[INFO] 13:17:49:872 KERNEL/(7614:7644): Instruccion numero 2: NO_OP
+[INFO] 13:17:49:872 KERNEL/(7614:7644): Instruccion numero 3: WRITE 4 42
+[INFO] 13:17:49:872 KERNEL/(7614:7644): Instruccion numero 4: COPY 0 4
+[INFO] 13:17:49:872 KERNEL/(7614:7644): Instruccion numero 5: READ 0
+[INFO] 13:17:49:872 KERNEL/(7614:7644): Instruccion numero 6: EXIT
+[INFO] 13:17:49:872 KERNEL/(7614:7619): (new -> ready) Cola de new: 0
+[INFO] 13:17:49:872 KERNEL/(7614:7619): (new -> ready) Cola de ready: 1
+[INFO] 13:17:53:051 KERNEL/(7614:7656): Tamanio 200
+[INFO] 13:17:53:051 KERNEL/(7614:7656): Instruccion numero 0: I/O 3000
+[INFO] 13:17:53:051 KERNEL/(7614:7656): Instruccion numero 1: NO_OP
+[INFO] 13:17:53:051 KERNEL/(7614:7656): Instruccion numero 2: NO_OP
+[INFO] 13:17:53:051 KERNEL/(7614:7656): Instruccion numero 3: WRITE 4 42
+[INFO] 13:17:53:051 KERNEL/(7614:7656): Instruccion numero 4: COPY 0 4
+[INFO] 13:17:53:051 KERNEL/(7614:7656): Instruccion numero 5: READ 0
+[INFO] 13:17:53:051 KERNEL/(7614:7656): Instruccion numero 6: EXIT
+[INFO] 13:17:53:051 KERNEL/(7614:7619): (new -> ready) Cola de new: 0
+[INFO] 13:17:53:051 KERNEL/(7614:7619): (new -> ready) Cola de ready: 2
+[INFO] 13:17:56:676 KERNEL/(7614:7668): Tamanio 200
+[INFO] 13:17:56:676 KERNEL/(7614:7668): Instruccion numero 0: I/O 3000
+[INFO] 13:17:56:676 KERNEL/(7614:7668): Instruccion numero 1: NO_OP
+[INFO] 13:17:56:677 KERNEL/(7614:7668): Instruccion numero 2: NO_OP
+[INFO] 13:17:56:677 KERNEL/(7614:7668): Instruccion numero 3: WRITE 4 42
+[INFO] 13:17:56:677 KERNEL/(7614:7668): Instruccion numero 4: COPY 0 4
+[INFO] 13:17:56:677 KERNEL/(7614:7668): Instruccion numero 5: READ 0
+[INFO] 13:17:56:677 KERNEL/(7614:7668): Instruccion numero 6: EXIT
+[INFO] 13:17:56:677 KERNEL/(7614:7619): (new -> ready) Cola de new: 0
+[INFO] 13:17:56:677 KERNEL/(7614:7619): (new -> ready) Cola de ready: 3
+[INFO] 13:18:00:813 KERNEL/(7614:7680): Tamanio 200
+[INFO] 13:18:00:813 KERNEL/(7614:7680): Instruccion numero 0: I/O 3000
+[INFO] 13:18:00:813 KERNEL/(7614:7680): Instruccion numero 1: NO_OP
+[INFO] 13:18:00:813 KERNEL/(7614:7680): Instruccion numero 2: NO_OP
+[INFO] 13:18:00:813 KERNEL/(7614:7680): Instruccion numero 3: WRITE 4 42
+[INFO] 13:18:00:813 KERNEL/(7614:7680): Instruccion numero 4: COPY 0 4
+[INFO] 13:18:00:814 KERNEL/(7614:7680): Instruccion numero 5: READ 0
+[INFO] 13:18:00:814 KERNEL/(7614:7680): Instruccion numero 6: EXIT
+[INFO] 13:18:00:814 KERNEL/(7614:7619): (new -> ready) Cola de new: 0
+[INFO] 13:18:00:814 KERNEL/(7614:7619): (new -> ready) Cola de ready: 4
+[INFO] 13:18:04:833 KERNEL/(7614:7692): Tamanio 200
+[INFO] 13:18:04:833 KERNEL/(7614:7692): Instruccion numero 0: I/O 3000
+[INFO] 13:18:04:834 KERNEL/(7614:7692): Instruccion numero 1: NO_OP
+[INFO] 13:18:04:834 KERNEL/(7614:7692): Instruccion numero 2: NO_OP
+[INFO] 13:18:04:834 KERNEL/(7614:7692): Instruccion numero 3: WRITE 4 42
+[INFO] 13:18:04:834 KERNEL/(7614:7692): Instruccion numero 4: COPY 0 4
+[INFO] 13:18:04:834 KERNEL/(7614:7692): Instruccion numero 5: READ 0
+[INFO] 13:18:04:834 KERNEL/(7614:7692): Instruccion numero 6: EXIT
+[INFO] 13:18:04:834 KERNEL/(7614:7619): (new -> ready) Cola de new: 0
+[INFO] 13:18:04:834 KERNEL/(7614:7619): (new -> ready) Cola de ready: 5
+[INFO] 13:21:26:148 KERNEL/(7756:7776): Tamanio 200
+[INFO] 13:21:26:148 KERNEL/(7756:7776): Instruccion numero 0: I/O 3000
+[INFO] 13:21:26:148 KERNEL/(7756:7776): Instruccion numero 1: NO_OP
+[INFO] 13:21:26:148 KERNEL/(7756:7776): Instruccion numero 2: NO_OP
+[INFO] 13:21:26:148 KERNEL/(7756:7776): Instruccion numero 3: WRITE 4 42
+[INFO] 13:21:26:148 KERNEL/(7756:7776): Instruccion numero 4: COPY 0 4
+[INFO] 13:21:26:148 KERNEL/(7756:7776): Instruccion numero 5: READ 0
+[INFO] 13:21:26:148 KERNEL/(7756:7776): Instruccion numero 6: EXIT
+[INFO] 13:21:26:148 KERNEL/(7756:7763): (new -> ready) Cola de new: 0
+[INFO] 13:21:26:148 KERNEL/(7756:7763): (new -> ready) Cola de ready: 1
+[INFO] 13:21:26:148 KERNEL/(7756:7764): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 13:21:29:185 KERNEL/(7756:7789): Tamanio 200
+[INFO] 13:21:29:185 KERNEL/(7756:7789): Instruccion numero 0: I/O 3000
+[INFO] 13:21:29:185 KERNEL/(7756:7789): Instruccion numero 1: NO_OP
+[INFO] 13:21:29:185 KERNEL/(7756:7789): Instruccion numero 2: NO_OP
+[INFO] 13:21:29:185 KERNEL/(7756:7789): Instruccion numero 3: WRITE 4 42
+[INFO] 13:21:29:185 KERNEL/(7756:7789): Instruccion numero 4: COPY 0 4
+[INFO] 13:21:29:186 KERNEL/(7756:7789): Instruccion numero 5: READ 0
+[INFO] 13:21:29:186 KERNEL/(7756:7789): Instruccion numero 6: EXIT
+[INFO] 13:21:29:186 KERNEL/(7756:7763): (new -> ready) Cola de new: 0
+[INFO] 13:21:29:186 KERNEL/(7756:7763): (new -> ready) Cola de ready: 1
+[INFO] 13:21:32:074 KERNEL/(7756:7802): Tamanio 200
+[INFO] 13:21:32:074 KERNEL/(7756:7802): Instruccion numero 0: I/O 3000
+[INFO] 13:21:32:074 KERNEL/(7756:7802): Instruccion numero 1: NO_OP
+[INFO] 13:21:32:074 KERNEL/(7756:7802): Instruccion numero 2: NO_OP
+[INFO] 13:21:32:074 KERNEL/(7756:7802): Instruccion numero 3: WRITE 4 42
+[INFO] 13:21:32:074 KERNEL/(7756:7802): Instruccion numero 4: COPY 0 4
+[INFO] 13:21:32:074 KERNEL/(7756:7802): Instruccion numero 5: READ 0
+[INFO] 13:21:32:074 KERNEL/(7756:7802): Instruccion numero 6: EXIT
+[INFO] 13:21:32:074 KERNEL/(7756:7763): (new -> ready) Cola de new: 0
+[INFO] 13:21:32:074 KERNEL/(7756:7763): (new -> ready) Cola de ready: 2
+[INFO] 13:21:34:521 KERNEL/(7756:7814): Tamanio 200
+[INFO] 13:21:34:521 KERNEL/(7756:7814): Instruccion numero 0: I/O 3000
+[INFO] 13:21:34:521 KERNEL/(7756:7814): Instruccion numero 1: NO_OP
+[INFO] 13:21:34:521 KERNEL/(7756:7814): Instruccion numero 2: NO_OP
+[INFO] 13:21:34:521 KERNEL/(7756:7814): Instruccion numero 3: WRITE 4 42
+[INFO] 13:21:34:521 KERNEL/(7756:7814): Instruccion numero 4: COPY 0 4
+[INFO] 13:21:34:521 KERNEL/(7756:7814): Instruccion numero 5: READ 0
+[INFO] 13:21:34:521 KERNEL/(7756:7814): Instruccion numero 6: EXIT
+[INFO] 13:21:34:522 KERNEL/(7756:7763): (new -> ready) Cola de new: 0
+[INFO] 13:21:34:522 KERNEL/(7756:7763): (new -> ready) Cola de ready: 3
+[INFO] 13:21:38:719 KERNEL/(7756:7826): Tamanio 200
+[INFO] 13:21:38:719 KERNEL/(7756:7826): Instruccion numero 0: I/O 3000
+[INFO] 13:21:38:719 KERNEL/(7756:7826): Instruccion numero 1: NO_OP
+[INFO] 13:21:38:719 KERNEL/(7756:7826): Instruccion numero 2: NO_OP
+[INFO] 13:21:38:719 KERNEL/(7756:7826): Instruccion numero 3: WRITE 4 42
+[INFO] 13:21:38:719 KERNEL/(7756:7826): Instruccion numero 4: COPY 0 4
+[INFO] 13:21:38:719 KERNEL/(7756:7826): Instruccion numero 5: READ 0
+[INFO] 13:21:38:719 KERNEL/(7756:7826): Instruccion numero 6: EXIT
+[INFO] 13:21:38:719 KERNEL/(7756:7763): (new -> ready) Cola de new: 0
+[INFO] 13:21:38:719 KERNEL/(7756:7763): (new -> ready) Cola de ready: 4
+[INFO] 13:21:49:459 KERNEL/(7756:7839): Tamanio 200
+[INFO] 13:21:49:459 KERNEL/(7756:7839): Instruccion numero 0: I/O 3000
+[INFO] 13:21:49:459 KERNEL/(7756:7839): Instruccion numero 1: NO_OP
+[INFO] 13:21:49:459 KERNEL/(7756:7839): Instruccion numero 2: NO_OP
+[INFO] 13:21:49:459 KERNEL/(7756:7839): Instruccion numero 3: WRITE 4 42
+[INFO] 13:21:49:459 KERNEL/(7756:7839): Instruccion numero 4: COPY 0 4
+[INFO] 13:21:49:459 KERNEL/(7756:7839): Instruccion numero 5: READ 0
+[INFO] 13:21:49:459 KERNEL/(7756:7839): Instruccion numero 6: EXIT
+[INFO] 13:21:49:459 KERNEL/(7756:7763): (new -> ready) Cola de new: 0
+[INFO] 13:21:49:459 KERNEL/(7756:7763): (new -> ready) Cola de ready: 5
+[INFO] 13:25:26:022 KERNEL/(7936:7973): Tamanio 200
+[INFO] 13:25:26:022 KERNEL/(7936:7973): Instruccion numero 0: I/O 3000
+[INFO] 13:25:26:022 KERNEL/(7936:7973): Instruccion numero 1: NO_OP
+[INFO] 13:25:26:022 KERNEL/(7936:7973): Instruccion numero 2: NO_OP
+[INFO] 13:25:26:022 KERNEL/(7936:7973): Instruccion numero 3: WRITE 4 42
+[INFO] 13:25:26:022 KERNEL/(7936:7973): Instruccion numero 4: COPY 0 4
+[INFO] 13:25:26:022 KERNEL/(7936:7973): Instruccion numero 5: READ 0
+[INFO] 13:25:26:022 KERNEL/(7936:7973): Instruccion numero 6: EXIT
+[INFO] 13:25:26:022 KERNEL/(7936:7941): (new -> ready) Cola de new: 0
+[INFO] 13:25:26:022 KERNEL/(7936:7941): (new -> ready) Cola de ready: 1
+[INFO] 13:25:26:022 KERNEL/(7936:7942): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 13:28:43:554 KERNEL/(8051:8085): Tamanio 200
+[INFO] 13:28:43:554 KERNEL/(8051:8085): Instruccion numero 0: I/O 3000
+[INFO] 13:28:43:554 KERNEL/(8051:8085): Instruccion numero 1: NO_OP
+[INFO] 13:28:43:554 KERNEL/(8051:8085): Instruccion numero 2: NO_OP
+[INFO] 13:28:43:554 KERNEL/(8051:8085): Instruccion numero 3: WRITE 4 42
+[INFO] 13:28:43:554 KERNEL/(8051:8085): Instruccion numero 4: COPY 0 4
+[INFO] 13:28:43:555 KERNEL/(8051:8085): Instruccion numero 5: READ 0
+[INFO] 13:28:43:555 KERNEL/(8051:8085): Instruccion numero 6: EXIT
+[INFO] 13:28:43:555 KERNEL/(8051:8056): (new -> ready) Cola de new: 0
+[INFO] 13:28:43:555 KERNEL/(8051:8056): (new -> ready) Cola de ready: 1
+[INFO] 13:28:43:555 KERNEL/(8051:8057): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 13:28:55:981 KERNEL/(8051:8098): Tamanio 200
+[INFO] 13:28:55:981 KERNEL/(8051:8098): Instruccion numero 0: I/O 3000
+[INFO] 13:28:55:981 KERNEL/(8051:8098): Instruccion numero 1: NO_OP
+[INFO] 13:28:55:981 KERNEL/(8051:8098): Instruccion numero 2: NO_OP
+[INFO] 13:28:55:981 KERNEL/(8051:8098): Instruccion numero 3: WRITE 4 42
+[INFO] 13:28:55:981 KERNEL/(8051:8098): Instruccion numero 4: COPY 0 4
+[INFO] 13:28:55:981 KERNEL/(8051:8098): Instruccion numero 5: READ 0
+[INFO] 13:28:55:981 KERNEL/(8051:8098): Instruccion numero 6: EXIT
+[INFO] 13:28:55:981 KERNEL/(8051:8056): (new -> ready) Cola de new: 0
+[INFO] 13:28:55:982 KERNEL/(8051:8056): (new -> ready) Cola de ready: 1
+[INFO] 13:29:06:764 KERNEL/(8051:8109): Tamanio 200
+[INFO] 13:29:06:764 KERNEL/(8051:8109): Instruccion numero 0: I/O 3000
+[INFO] 13:29:06:764 KERNEL/(8051:8109): Instruccion numero 1: NO_OP
+[INFO] 13:29:06:764 KERNEL/(8051:8109): Instruccion numero 2: NO_OP
+[INFO] 13:29:06:764 KERNEL/(8051:8109): Instruccion numero 3: WRITE 4 42
+[INFO] 13:29:06:764 KERNEL/(8051:8109): Instruccion numero 4: COPY 0 4
+[INFO] 13:29:06:764 KERNEL/(8051:8109): Instruccion numero 5: READ 0
+[INFO] 13:29:06:764 KERNEL/(8051:8109): Instruccion numero 6: EXIT
+[INFO] 13:29:06:764 KERNEL/(8051:8056): (new -> ready) Cola de new: 0
+[INFO] 13:29:06:764 KERNEL/(8051:8056): (new -> ready) Cola de ready: 2
+[INFO] 13:29:10:299 KERNEL/(8051:8121): Tamanio 200
+[INFO] 13:29:10:299 KERNEL/(8051:8121): Instruccion numero 0: I/O 3000
+[INFO] 13:29:10:299 KERNEL/(8051:8121): Instruccion numero 1: NO_OP
+[INFO] 13:29:10:299 KERNEL/(8051:8121): Instruccion numero 2: NO_OP
+[INFO] 13:29:10:300 KERNEL/(8051:8121): Instruccion numero 3: WRITE 4 42
+[INFO] 13:29:10:300 KERNEL/(8051:8121): Instruccion numero 4: COPY 0 4
+[INFO] 13:29:10:300 KERNEL/(8051:8121): Instruccion numero 5: READ 0
+[INFO] 13:29:10:300 KERNEL/(8051:8121): Instruccion numero 6: EXIT
+[INFO] 13:29:10:300 KERNEL/(8051:8056): (new -> ready) Cola de new: 0
+[INFO] 13:29:10:300 KERNEL/(8051:8056): (new -> ready) Cola de ready: 3
+[INFO] 13:29:48:127 KERNEL/(8051:8135): Tamanio 200
+[INFO] 13:29:48:127 KERNEL/(8051:8135): Instruccion numero 0: I/O 3000
+[INFO] 13:29:48:127 KERNEL/(8051:8135): Instruccion numero 1: NO_OP
+[INFO] 13:29:48:127 KERNEL/(8051:8135): Instruccion numero 2: NO_OP
+[INFO] 13:29:48:127 KERNEL/(8051:8135): Instruccion numero 3: WRITE 4 42
+[INFO] 13:29:48:127 KERNEL/(8051:8135): Instruccion numero 4: COPY 0 4
+[INFO] 13:29:48:127 KERNEL/(8051:8135): Instruccion numero 5: READ 0
+[INFO] 13:29:48:127 KERNEL/(8051:8135): Instruccion numero 6: EXIT
+[INFO] 13:29:48:127 KERNEL/(8051:8056): (new -> ready) Cola de new: 0
+[INFO] 13:29:48:127 KERNEL/(8051:8056): (new -> ready) Cola de ready: 4
+[INFO] 13:29:57:541 KERNEL/(8051:8148): Tamanio 200
+[INFO] 13:29:57:541 KERNEL/(8051:8148): Instruccion numero 0: I/O 3000
+[INFO] 13:29:57:541 KERNEL/(8051:8148): Instruccion numero 1: NO_OP
+[INFO] 13:29:57:541 KERNEL/(8051:8148): Instruccion numero 2: NO_OP
+[INFO] 13:29:57:541 KERNEL/(8051:8148): Instruccion numero 3: WRITE 4 42
+[INFO] 13:29:57:541 KERNEL/(8051:8148): Instruccion numero 4: COPY 0 4
+[INFO] 13:29:57:541 KERNEL/(8051:8148): Instruccion numero 5: READ 0
+[INFO] 13:29:57:541 KERNEL/(8051:8148): Instruccion numero 6: EXIT
+[INFO] 13:29:57:541 KERNEL/(8051:8056): (new -> ready) Cola de new: 0
+[INFO] 13:29:57:542 KERNEL/(8051:8056): (new -> ready) Cola de ready: 5
+[INFO] 13:32:52:691 KERNEL/(8226:8243): Tamanio 200
+[INFO] 13:32:52:691 KERNEL/(8226:8243): Instruccion numero 0: I/O 3000
+[INFO] 13:32:52:691 KERNEL/(8226:8243): Instruccion numero 1: NO_OP
+[INFO] 13:32:52:692 KERNEL/(8226:8243): Instruccion numero 2: NO_OP
+[INFO] 13:32:52:692 KERNEL/(8226:8243): Instruccion numero 3: WRITE 4 42
+[INFO] 13:32:52:692 KERNEL/(8226:8243): Instruccion numero 4: COPY 0 4
+[INFO] 13:32:52:692 KERNEL/(8226:8243): Instruccion numero 5: READ 0
+[INFO] 13:32:52:692 KERNEL/(8226:8243): Instruccion numero 6: EXIT
+[INFO] 13:32:52:692 KERNEL/(8226:8231): (new -> ready) Cola de new: 0
+[INFO] 13:32:52:692 KERNEL/(8226:8231): (new -> ready) Cola de ready: 1
+[INFO] 13:32:52:692 KERNEL/(8226:8232): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 13:32:55:862 KERNEL/(8226:8255): Tamanio 200
+[INFO] 13:32:55:862 KERNEL/(8226:8255): Instruccion numero 0: I/O 3000
+[INFO] 13:32:55:862 KERNEL/(8226:8255): Instruccion numero 1: NO_OP
+[INFO] 13:32:55:862 KERNEL/(8226:8255): Instruccion numero 2: NO_OP
+[INFO] 13:32:55:862 KERNEL/(8226:8255): Instruccion numero 3: WRITE 4 42
+[INFO] 13:32:55:862 KERNEL/(8226:8255): Instruccion numero 4: COPY 0 4
+[INFO] 13:32:55:862 KERNEL/(8226:8255): Instruccion numero 5: READ 0
+[INFO] 13:32:55:862 KERNEL/(8226:8255): Instruccion numero 6: EXIT
+[INFO] 13:32:55:863 KERNEL/(8226:8231): (new -> ready) Cola de new: 0
+[INFO] 13:32:55:863 KERNEL/(8226:8231): (new -> ready) Cola de ready: 1
+[INFO] 13:32:58:815 KERNEL/(8226:8266): Tamanio 200
+[INFO] 13:32:58:815 KERNEL/(8226:8266): Instruccion numero 0: I/O 3000
+[INFO] 13:32:58:815 KERNEL/(8226:8266): Instruccion numero 1: NO_OP
+[INFO] 13:32:58:815 KERNEL/(8226:8266): Instruccion numero 2: NO_OP
+[INFO] 13:32:58:815 KERNEL/(8226:8266): Instruccion numero 3: WRITE 4 42
+[INFO] 13:32:58:815 KERNEL/(8226:8266): Instruccion numero 4: COPY 0 4
+[INFO] 13:32:58:815 KERNEL/(8226:8266): Instruccion numero 5: READ 0
+[INFO] 13:32:58:815 KERNEL/(8226:8266): Instruccion numero 6: EXIT
+[INFO] 13:32:58:815 KERNEL/(8226:8231): (new -> ready) Cola de new: 0
+[INFO] 13:32:58:816 KERNEL/(8226:8231): (new -> ready) Cola de ready: 2
+[INFO] 13:33:02:351 KERNEL/(8226:8278): Tamanio 200
+[INFO] 13:33:02:351 KERNEL/(8226:8278): Instruccion numero 0: I/O 3000
+[INFO] 13:33:02:351 KERNEL/(8226:8278): Instruccion numero 1: NO_OP
+[INFO] 13:33:02:351 KERNEL/(8226:8278): Instruccion numero 2: NO_OP
+[INFO] 13:33:02:351 KERNEL/(8226:8278): Instruccion numero 3: WRITE 4 42
+[INFO] 13:33:02:351 KERNEL/(8226:8278): Instruccion numero 4: COPY 0 4
+[INFO] 13:33:02:351 KERNEL/(8226:8278): Instruccion numero 5: READ 0
+[INFO] 13:33:02:351 KERNEL/(8226:8278): Instruccion numero 6: EXIT
+[INFO] 13:33:02:351 KERNEL/(8226:8231): (new -> ready) Cola de new: 0
+[INFO] 13:33:02:351 KERNEL/(8226:8231): (new -> ready) Cola de ready: 3
+[INFO] 13:33:05:417 KERNEL/(8226:8290): Tamanio 200
+[INFO] 13:33:05:417 KERNEL/(8226:8290): Instruccion numero 0: I/O 3000
+[INFO] 13:33:05:417 KERNEL/(8226:8290): Instruccion numero 1: NO_OP
+[INFO] 13:33:05:417 KERNEL/(8226:8290): Instruccion numero 2: NO_OP
+[INFO] 13:33:05:417 KERNEL/(8226:8290): Instruccion numero 3: WRITE 4 42
+[INFO] 13:33:05:417 KERNEL/(8226:8290): Instruccion numero 4: COPY 0 4
+[INFO] 13:33:05:417 KERNEL/(8226:8290): Instruccion numero 5: READ 0
+[INFO] 13:33:05:417 KERNEL/(8226:8290): Instruccion numero 6: EXIT
+[INFO] 13:33:05:417 KERNEL/(8226:8231): (new -> ready) Cola de new: 0
+[INFO] 13:33:05:417 KERNEL/(8226:8231): (new -> ready) Cola de ready: 4
+[INFO] 13:33:08:163 KERNEL/(8226:8302): Tamanio 200
+[INFO] 13:33:08:163 KERNEL/(8226:8302): Instruccion numero 0: I/O 3000
+[INFO] 13:33:08:163 KERNEL/(8226:8302): Instruccion numero 1: NO_OP
+[INFO] 13:33:08:164 KERNEL/(8226:8302): Instruccion numero 2: NO_OP
+[INFO] 13:33:08:164 KERNEL/(8226:8302): Instruccion numero 3: WRITE 4 42
+[INFO] 13:33:08:164 KERNEL/(8226:8302): Instruccion numero 4: COPY 0 4
+[INFO] 13:33:08:164 KERNEL/(8226:8302): Instruccion numero 5: READ 0
+[INFO] 13:33:08:164 KERNEL/(8226:8302): Instruccion numero 6: EXIT
+[INFO] 13:33:08:164 KERNEL/(8226:8231): (new -> ready) Cola de new: 0
+[INFO] 13:33:08:164 KERNEL/(8226:8231): (new -> ready) Cola de ready: 5
+[INFO] 13:38:24:809 KERNEL/(8444:8480): Tamanio 200
+[INFO] 13:38:24:809 KERNEL/(8444:8480): Instruccion numero 0: I/O 3000
+[INFO] 13:38:24:809 KERNEL/(8444:8480): Instruccion numero 1: NO_OP
+[INFO] 13:38:24:809 KERNEL/(8444:8480): Instruccion numero 2: NO_OP
+[INFO] 13:38:24:809 KERNEL/(8444:8480): Instruccion numero 3: WRITE 4 42
+[INFO] 13:38:24:809 KERNEL/(8444:8480): Instruccion numero 4: COPY 0 4
+[INFO] 13:38:24:809 KERNEL/(8444:8480): Instruccion numero 5: READ 0
+[INFO] 13:38:24:809 KERNEL/(8444:8480): Instruccion numero 6: EXIT
+[INFO] 13:38:24:809 KERNEL/(8444:8449): (new -> ready) Cola de new: 0
+[INFO] 13:38:24:809 KERNEL/(8444:8449): (new -> ready) Cola de ready: 1
+[INFO] 13:38:24:809 KERNEL/(8444:8450): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 13:38:27:889 KERNEL/(8444:8492): Tamanio 200
+[INFO] 13:38:27:889 KERNEL/(8444:8492): Instruccion numero 0: I/O 3000
+[INFO] 13:38:27:889 KERNEL/(8444:8492): Instruccion numero 1: NO_OP
+[INFO] 13:38:27:889 KERNEL/(8444:8492): Instruccion numero 2: NO_OP
+[INFO] 13:38:27:889 KERNEL/(8444:8492): Instruccion numero 3: WRITE 4 42
+[INFO] 13:38:27:889 KERNEL/(8444:8492): Instruccion numero 4: COPY 0 4
+[INFO] 13:38:27:889 KERNEL/(8444:8492): Instruccion numero 5: READ 0
+[INFO] 13:38:27:889 KERNEL/(8444:8492): Instruccion numero 6: EXIT
+[INFO] 13:38:27:889 KERNEL/(8444:8449): (new -> ready) Cola de new: 0
+[INFO] 13:38:27:889 KERNEL/(8444:8449): (new -> ready) Cola de ready: 1
+[INFO] 13:38:30:924 KERNEL/(8444:8504): Tamanio 200
+[INFO] 13:38:30:924 KERNEL/(8444:8504): Instruccion numero 0: I/O 3000
+[INFO] 13:38:30:924 KERNEL/(8444:8504): Instruccion numero 1: NO_OP
+[INFO] 13:38:30:924 KERNEL/(8444:8504): Instruccion numero 2: NO_OP
+[INFO] 13:38:30:924 KERNEL/(8444:8504): Instruccion numero 3: WRITE 4 42
+[INFO] 13:38:30:924 KERNEL/(8444:8504): Instruccion numero 4: COPY 0 4
+[INFO] 13:38:30:924 KERNEL/(8444:8504): Instruccion numero 5: READ 0
+[INFO] 13:38:30:924 KERNEL/(8444:8504): Instruccion numero 6: EXIT
+[INFO] 13:38:30:924 KERNEL/(8444:8449): (new -> ready) Cola de new: 0
+[INFO] 13:38:30:924 KERNEL/(8444:8449): (new -> ready) Cola de ready: 2
+[INFO] 13:38:34:522 KERNEL/(8444:8517): Tamanio 200
+[INFO] 13:38:34:522 KERNEL/(8444:8517): Instruccion numero 0: I/O 3000
+[INFO] 13:38:34:522 KERNEL/(8444:8517): Instruccion numero 1: NO_OP
+[INFO] 13:38:34:522 KERNEL/(8444:8517): Instruccion numero 2: NO_OP
+[INFO] 13:38:34:522 KERNEL/(8444:8517): Instruccion numero 3: WRITE 4 42
+[INFO] 13:38:34:522 KERNEL/(8444:8517): Instruccion numero 4: COPY 0 4
+[INFO] 13:38:34:522 KERNEL/(8444:8517): Instruccion numero 5: READ 0
+[INFO] 13:38:34:522 KERNEL/(8444:8517): Instruccion numero 6: EXIT
+[INFO] 13:38:34:522 KERNEL/(8444:8449): (new -> ready) Cola de new: 0
+[INFO] 13:38:34:522 KERNEL/(8444:8449): (new -> ready) Cola de ready: 3
+[INFO] 13:38:40:615 KERNEL/(8444:8529): Tamanio 200
+[INFO] 13:38:40:615 KERNEL/(8444:8529): Instruccion numero 0: I/O 3000
+[INFO] 13:38:40:615 KERNEL/(8444:8529): Instruccion numero 1: NO_OP
+[INFO] 13:38:40:615 KERNEL/(8444:8529): Instruccion numero 2: NO_OP
+[INFO] 13:38:40:615 KERNEL/(8444:8529): Instruccion numero 3: WRITE 4 42
+[INFO] 13:38:40:615 KERNEL/(8444:8529): Instruccion numero 4: COPY 0 4
+[INFO] 13:38:40:615 KERNEL/(8444:8529): Instruccion numero 5: READ 0
+[INFO] 13:38:40:615 KERNEL/(8444:8529): Instruccion numero 6: EXIT
+[INFO] 13:38:40:615 KERNEL/(8444:8449): (new -> ready) Cola de new: 0
+[INFO] 13:38:40:615 KERNEL/(8444:8449): (new -> ready) Cola de ready: 4
+[INFO] 13:38:44:796 KERNEL/(8444:8541): Tamanio 200
+[INFO] 13:38:44:796 KERNEL/(8444:8541): Instruccion numero 0: I/O 3000
+[INFO] 13:38:44:797 KERNEL/(8444:8541): Instruccion numero 1: NO_OP
+[INFO] 13:38:44:797 KERNEL/(8444:8541): Instruccion numero 2: NO_OP
+[INFO] 13:38:44:797 KERNEL/(8444:8541): Instruccion numero 3: WRITE 4 42
+[INFO] 13:38:44:797 KERNEL/(8444:8541): Instruccion numero 4: COPY 0 4
+[INFO] 13:38:44:797 KERNEL/(8444:8541): Instruccion numero 5: READ 0
+[INFO] 13:38:44:797 KERNEL/(8444:8541): Instruccion numero 6: EXIT
+[INFO] 13:38:44:797 KERNEL/(8444:8449): (new -> ready) Cola de new: 0
+[INFO] 13:38:44:797 KERNEL/(8444:8449): (new -> ready) Cola de ready: 5
+[INFO] 13:40:00:281 KERNEL/(8598:8615): Tamanio 200
+[INFO] 13:40:00:281 KERNEL/(8598:8615): Instruccion numero 0: I/O 3000
+[INFO] 13:40:00:281 KERNEL/(8598:8615): Instruccion numero 1: NO_OP
+[INFO] 13:40:00:281 KERNEL/(8598:8615): Instruccion numero 2: NO_OP
+[INFO] 13:40:00:281 KERNEL/(8598:8615): Instruccion numero 3: WRITE 4 42
+[INFO] 13:40:00:281 KERNEL/(8598:8615): Instruccion numero 4: COPY 0 4
+[INFO] 13:40:00:281 KERNEL/(8598:8615): Instruccion numero 5: READ 0
+[INFO] 13:40:00:281 KERNEL/(8598:8615): Instruccion numero 6: EXIT
+[INFO] 13:40:00:281 KERNEL/(8598:8603): (new -> ready) Cola de new: 0
+[INFO] 13:40:00:281 KERNEL/(8598:8603): (new -> ready) Cola de ready: 1
+[INFO] 13:40:00:281 KERNEL/(8598:8604): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 13:40:03:766 KERNEL/(8598:8626): Tamanio 200
+[INFO] 13:40:03:766 KERNEL/(8598:8626): Instruccion numero 0: I/O 3000
+[INFO] 13:40:03:766 KERNEL/(8598:8626): Instruccion numero 1: NO_OP
+[INFO] 13:40:03:767 KERNEL/(8598:8626): Instruccion numero 2: NO_OP
+[INFO] 13:40:03:767 KERNEL/(8598:8626): Instruccion numero 3: WRITE 4 42
+[INFO] 13:40:03:767 KERNEL/(8598:8626): Instruccion numero 4: COPY 0 4
+[INFO] 13:40:03:767 KERNEL/(8598:8626): Instruccion numero 5: READ 0
+[INFO] 13:40:03:767 KERNEL/(8598:8626): Instruccion numero 6: EXIT
+[INFO] 13:40:03:767 KERNEL/(8598:8603): (new -> ready) Cola de new: 0
+[INFO] 13:40:03:767 KERNEL/(8598:8603): (new -> ready) Cola de ready: 1
+[INFO] 13:40:07:748 KERNEL/(8598:8642): Tamanio 200
+[INFO] 13:40:07:748 KERNEL/(8598:8642): Instruccion numero 0: I/O 3000
+[INFO] 13:40:07:748 KERNEL/(8598:8642): Instruccion numero 1: NO_OP
+[INFO] 13:40:07:748 KERNEL/(8598:8642): Instruccion numero 2: NO_OP
+[INFO] 13:40:07:748 KERNEL/(8598:8642): Instruccion numero 3: WRITE 4 42
+[INFO] 13:40:07:748 KERNEL/(8598:8642): Instruccion numero 4: COPY 0 4
+[INFO] 13:40:07:748 KERNEL/(8598:8642): Instruccion numero 5: READ 0
+[INFO] 13:40:07:748 KERNEL/(8598:8642): Instruccion numero 6: EXIT
+[INFO] 13:40:07:748 KERNEL/(8598:8603): (new -> ready) Cola de new: 0
+[INFO] 13:40:07:748 KERNEL/(8598:8603): (new -> ready) Cola de ready: 2
+[INFO] 13:40:15:965 KERNEL/(8598:8653): Tamanio 200
+[INFO] 13:40:15:965 KERNEL/(8598:8653): Instruccion numero 0: I/O 3000
+[INFO] 13:40:15:965 KERNEL/(8598:8653): Instruccion numero 1: NO_OP
+[INFO] 13:40:15:965 KERNEL/(8598:8653): Instruccion numero 2: NO_OP
+[INFO] 13:40:15:965 KERNEL/(8598:8653): Instruccion numero 3: WRITE 4 42
+[INFO] 13:40:15:966 KERNEL/(8598:8653): Instruccion numero 4: COPY 0 4
+[INFO] 13:40:15:966 KERNEL/(8598:8653): Instruccion numero 5: READ 0
+[INFO] 13:40:15:966 KERNEL/(8598:8653): Instruccion numero 6: EXIT
+[INFO] 13:40:15:966 KERNEL/(8598:8603): (new -> ready) Cola de new: 0
+[INFO] 13:40:15:966 KERNEL/(8598:8603): (new -> ready) Cola de ready: 3
+[INFO] 13:40:19:903 KERNEL/(8598:8670): Tamanio 200
+[INFO] 13:40:19:903 KERNEL/(8598:8670): Instruccion numero 0: I/O 3000
+[INFO] 13:40:19:904 KERNEL/(8598:8670): Instruccion numero 1: NO_OP
+[INFO] 13:40:19:904 KERNEL/(8598:8670): Instruccion numero 2: NO_OP
+[INFO] 13:40:19:904 KERNEL/(8598:8670): Instruccion numero 3: WRITE 4 42
+[INFO] 13:40:19:904 KERNEL/(8598:8670): Instruccion numero 4: COPY 0 4
+[INFO] 13:40:19:904 KERNEL/(8598:8670): Instruccion numero 5: READ 0
+[INFO] 13:40:19:904 KERNEL/(8598:8670): Instruccion numero 6: EXIT
+[INFO] 13:40:19:904 KERNEL/(8598:8603): (new -> ready) Cola de new: 0
+[INFO] 13:40:19:904 KERNEL/(8598:8603): (new -> ready) Cola de ready: 4
+[INFO] 13:40:40:469 KERNEL/(8598:8684): Tamanio 200
+[INFO] 13:40:40:469 KERNEL/(8598:8684): Instruccion numero 0: I/O 3000
+[INFO] 13:40:40:469 KERNEL/(8598:8684): Instruccion numero 1: NO_OP
+[INFO] 13:40:40:469 KERNEL/(8598:8684): Instruccion numero 2: NO_OP
+[INFO] 13:40:40:469 KERNEL/(8598:8684): Instruccion numero 3: WRITE 4 42
+[INFO] 13:40:40:469 KERNEL/(8598:8684): Instruccion numero 4: COPY 0 4
+[INFO] 13:40:40:469 KERNEL/(8598:8684): Instruccion numero 5: READ 0
+[INFO] 13:40:40:469 KERNEL/(8598:8684): Instruccion numero 6: EXIT
+[INFO] 13:57:32:350 KERNEL/(9022:9040): Tamanio 200
+[INFO] 13:57:32:350 KERNEL/(9022:9040): Instruccion numero 0: I/O 3000
+[INFO] 13:57:32:350 KERNEL/(9022:9040): Instruccion numero 1: NO_OP
+[INFO] 13:57:32:351 KERNEL/(9022:9040): Instruccion numero 2: NO_OP
+[INFO] 13:57:32:351 KERNEL/(9022:9040): Instruccion numero 3: WRITE 4 42
+[INFO] 13:57:32:351 KERNEL/(9022:9040): Instruccion numero 4: COPY 0 4
+[INFO] 13:57:32:351 KERNEL/(9022:9040): Instruccion numero 5: READ 0
+[INFO] 13:57:32:351 KERNEL/(9022:9040): Instruccion numero 6: EXIT
+[INFO] 13:57:32:351 KERNEL/(9022:9027): (new -> ready) Cola de new: 0
+[INFO] 13:57:32:351 KERNEL/(9022:9027): (new -> ready) Cola de ready: 1
+[INFO] 13:57:32:351 KERNEL/(9022:9028): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 13:57:47:351 KERNEL/(9022:9058): Tamanio 200
+[INFO] 13:57:47:351 KERNEL/(9022:9058): Instruccion numero 0: I/O 3000
+[INFO] 13:57:47:351 KERNEL/(9022:9058): Instruccion numero 1: NO_OP
+[INFO] 13:57:47:351 KERNEL/(9022:9058): Instruccion numero 2: NO_OP
+[INFO] 13:57:47:351 KERNEL/(9022:9058): Instruccion numero 3: WRITE 4 42
+[INFO] 13:57:47:351 KERNEL/(9022:9058): Instruccion numero 4: COPY 0 4
+[INFO] 13:57:47:351 KERNEL/(9022:9058): Instruccion numero 5: READ 0
+[INFO] 13:57:47:351 KERNEL/(9022:9058): Instruccion numero 6: EXIT
+[INFO] 13:57:47:351 KERNEL/(9022:9027): (new -> ready) Cola de new: 0
+[INFO] 13:57:47:351 KERNEL/(9022:9027): (new -> ready) Cola de ready: 1
+[INFO] 13:58:30:956 KERNEL/(9022:9072): Tamanio 200
+[INFO] 13:58:30:957 KERNEL/(9022:9072): Instruccion numero 0: I/O 3000
+[INFO] 13:58:30:957 KERNEL/(9022:9072): Instruccion numero 1: NO_OP
+[INFO] 13:58:30:957 KERNEL/(9022:9072): Instruccion numero 2: NO_OP
+[INFO] 13:58:30:957 KERNEL/(9022:9072): Instruccion numero 3: WRITE 4 42
+[INFO] 13:58:30:957 KERNEL/(9022:9072): Instruccion numero 4: COPY 0 4
+[INFO] 13:58:30:957 KERNEL/(9022:9072): Instruccion numero 5: READ 0
+[INFO] 13:58:30:957 KERNEL/(9022:9072): Instruccion numero 6: EXIT
+[INFO] 13:58:30:957 KERNEL/(9022:9027): (new -> ready) Cola de new: 0
+[INFO] 13:58:30:957 KERNEL/(9022:9027): (new -> ready) Cola de ready: 2
+[INFO] 13:58:35:358 KERNEL/(9022:9085): Tamanio 200
+[INFO] 13:58:35:358 KERNEL/(9022:9085): Instruccion numero 0: I/O 3000
+[INFO] 13:58:35:358 KERNEL/(9022:9085): Instruccion numero 1: NO_OP
+[INFO] 13:58:35:358 KERNEL/(9022:9085): Instruccion numero 2: NO_OP
+[INFO] 13:58:35:358 KERNEL/(9022:9085): Instruccion numero 3: WRITE 4 42
+[INFO] 13:58:35:358 KERNEL/(9022:9085): Instruccion numero 4: COPY 0 4
+[INFO] 13:58:35:358 KERNEL/(9022:9085): Instruccion numero 5: READ 0
+[INFO] 13:58:35:358 KERNEL/(9022:9085): Instruccion numero 6: EXIT
+[INFO] 13:58:35:358 KERNEL/(9022:9027): (new -> ready) Cola de new: 0
+[INFO] 13:58:35:358 KERNEL/(9022:9027): (new -> ready) Cola de ready: 3
+[INFO] 13:58:39:507 KERNEL/(9022:9096): Tamanio 200
+[INFO] 13:58:39:507 KERNEL/(9022:9096): Instruccion numero 0: I/O 3000
+[INFO] 13:58:39:507 KERNEL/(9022:9096): Instruccion numero 1: NO_OP
+[INFO] 13:58:39:507 KERNEL/(9022:9096): Instruccion numero 2: NO_OP
+[INFO] 13:58:39:507 KERNEL/(9022:9096): Instruccion numero 3: WRITE 4 42
+[INFO] 13:58:39:507 KERNEL/(9022:9096): Instruccion numero 4: COPY 0 4
+[INFO] 13:58:39:507 KERNEL/(9022:9096): Instruccion numero 5: READ 0
+[INFO] 13:58:39:507 KERNEL/(9022:9096): Instruccion numero 6: EXIT
+[INFO] 13:58:48:514 KERNEL/(9022:9108): Tamanio 200
+[INFO] 13:58:48:514 KERNEL/(9022:9108): Instruccion numero 0: I/O 3000
+[INFO] 13:58:48:514 KERNEL/(9022:9108): Instruccion numero 1: NO_OP
+[INFO] 13:58:48:514 KERNEL/(9022:9108): Instruccion numero 2: NO_OP
+[INFO] 13:58:48:514 KERNEL/(9022:9108): Instruccion numero 3: WRITE 4 42
+[INFO] 13:58:48:514 KERNEL/(9022:9108): Instruccion numero 4: COPY 0 4
+[INFO] 13:58:48:514 KERNEL/(9022:9108): Instruccion numero 5: READ 0
+[INFO] 13:58:48:514 KERNEL/(9022:9108): Instruccion numero 6: EXIT
+[INFO] 14:05:36:446 KERNEL/(9525:9568): Tamanio 200
+[INFO] 14:05:36:446 KERNEL/(9525:9568): Instruccion numero 0: I/O 3000
+[INFO] 14:05:36:446 KERNEL/(9525:9568): Instruccion numero 1: NO_OP
+[INFO] 14:05:36:446 KERNEL/(9525:9568): Instruccion numero 2: NO_OP
+[INFO] 14:05:36:446 KERNEL/(9525:9568): Instruccion numero 3: WRITE 4 42
+[INFO] 14:05:36:446 KERNEL/(9525:9568): Instruccion numero 4: COPY 0 4
+[INFO] 14:05:36:446 KERNEL/(9525:9568): Instruccion numero 5: READ 0
+[INFO] 14:05:36:446 KERNEL/(9525:9568): Instruccion numero 6: EXIT
+[INFO] 14:05:36:446 KERNEL/(9525:9554): (new -> ready) Cola de new: 0
+[INFO] 14:05:36:446 KERNEL/(9525:9554): (new -> ready) Cola de ready: 1
+[INFO] 14:05:36:447 KERNEL/(9525:9555): 
+ Mandando proceso 1 a ejecutar tam 200 inst I/O 3000 NO_OP NO_OP WRITE 4 42 pc 0 tabla 0 est 10000.00 
+
+[INFO] 17:39:19:876 KERNEL/(14639:14657): Tamanio 200
+[INFO] 17:39:19:876 KERNEL/(14639:14657): Instruccion numero 0: I 3000 -1
+[INFO] 17:39:19:876 KERNEL/(14639:14657): Instruccion numero 1: N -1 -1
+[INFO] 17:39:19:876 KERNEL/(14639:14657): Instruccion numero 2: N -1 -1
+[INFO] 17:39:19:876 KERNEL/(14639:14657): Instruccion numero 3: W 4 42
+[INFO] 17:39:19:876 KERNEL/(14639:14657): Instruccion numero 4: C 0 4
+[INFO] 17:39:19:876 KERNEL/(14639:14657): Instruccion numero 5: R 0 -1
+[INFO] 17:39:19:876 KERNEL/(14639:14657): Instruccion numero 6: E -1 -1
+[INFO] 17:39:34:000 KERNEL/(14639:14669): Tamanio 200
+[INFO] 17:39:34:000 KERNEL/(14639:14669): Instruccion numero 0: I 3000 -1
+[INFO] 17:39:34:000 KERNEL/(14639:14669): Instruccion numero 1: N -1 -1
+[INFO] 17:39:34:005 KERNEL/(14639:14669): Instruccion numero 2: N -1 -1
+[INFO] 17:39:34:005 KERNEL/(14639:14669): Instruccion numero 3: W 4 42
+[INFO] 17:39:34:005 KERNEL/(14639:14669): Instruccion numero 4: C 0 4
+[INFO] 17:39:34:006 KERNEL/(14639:14669): Instruccion numero 5: R 0 -1
+[INFO] 17:39:34:006 KERNEL/(14639:14669): Instruccion numero 6: E -1 -1
+[INFO] 17:39:40:989 KERNEL/(14639:14682): Tamanio 200
+[INFO] 17:39:40:989 KERNEL/(14639:14682): Instruccion numero 0: I 3000 -1
+[INFO] 17:39:40:989 KERNEL/(14639:14682): Instruccion numero 1: N -1 -1
+[INFO] 17:39:40:989 KERNEL/(14639:14682): Instruccion numero 2: N -1 -1
+[INFO] 17:39:40:989 KERNEL/(14639:14682): Instruccion numero 3: W 4 42
+[INFO] 17:39:40:989 KERNEL/(14639:14682): Instruccion numero 4: C 0 4
+[INFO] 17:39:40:989 KERNEL/(14639:14682): Instruccion numero 5: R 0 -1
+[INFO] 17:39:40:989 KERNEL/(14639:14682): Instruccion numero 6: E -1 -1
+[INFO] 17:39:44:382 KERNEL/(14639:14694): Tamanio 200
+[INFO] 17:39:44:382 KERNEL/(14639:14694): Instruccion numero 0: I 3000 -1
+[INFO] 17:39:44:382 KERNEL/(14639:14694): Instruccion numero 1: N -1 -1
+[INFO] 17:39:44:382 KERNEL/(14639:14694): Instruccion numero 2: N -1 -1
+[INFO] 17:39:44:382 KERNEL/(14639:14694): Instruccion numero 3: W 4 42
+[INFO] 17:39:44:382 KERNEL/(14639:14694): Instruccion numero 4: C 0 4
+[INFO] 17:39:44:382 KERNEL/(14639:14694): Instruccion numero 5: R 0 -1
+[INFO] 17:39:44:382 KERNEL/(14639:14694): Instruccion numero 6: E -1 -1
+[INFO] 17:39:48:198 KERNEL/(14639:14707): Tamanio 200
+[INFO] 17:39:48:198 KERNEL/(14639:14707): Instruccion numero 0: I 3000 -1
+[INFO] 17:39:48:198 KERNEL/(14639:14707): Instruccion numero 1: N -1 -1
+[INFO] 17:39:48:198 KERNEL/(14639:14707): Instruccion numero 2: N -1 -1
+[INFO] 17:39:48:198 KERNEL/(14639:14707): Instruccion numero 3: W 4 42
+[INFO] 17:39:48:198 KERNEL/(14639:14707): Instruccion numero 4: C 0 4
+[INFO] 17:39:48:198 KERNEL/(14639:14707): Instruccion numero 5: R 0 -1
+[INFO] 17:39:48:198 KERNEL/(14639:14707): Instruccion numero 6: E -1 -1
+[INFO] 17:39:51:512 KERNEL/(14639:14718): Tamanio 200
+[INFO] 17:39:51:512 KERNEL/(14639:14718): Instruccion numero 0: I 3000 -1
+[INFO] 17:39:51:512 KERNEL/(14639:14718): Instruccion numero 1: N -1 -1
+[INFO] 17:39:51:512 KERNEL/(14639:14718): Instruccion numero 2: N -1 -1
+[INFO] 17:39:51:512 KERNEL/(14639:14718): Instruccion numero 3: W 4 42
+[INFO] 17:39:51:512 KERNEL/(14639:14718): Instruccion numero 4: C 0 4
+[INFO] 17:39:51:512 KERNEL/(14639:14718): Instruccion numero 5: R 0 -1
+[INFO] 17:39:51:512 KERNEL/(14639:14718): Instruccion numero 6: E -1 -1
+[INFO] 17:39:54:730 KERNEL/(14639:14730): Tamanio 200
+[INFO] 17:39:54:730 KERNEL/(14639:14730): Instruccion numero 0: I 3000 -1
+[INFO] 17:39:54:730 KERNEL/(14639:14730): Instruccion numero 1: N -1 -1
+[INFO] 17:39:54:730 KERNEL/(14639:14730): Instruccion numero 2: N -1 -1
+[INFO] 17:39:54:730 KERNEL/(14639:14730): Instruccion numero 3: W 4 42
+[INFO] 17:39:54:730 KERNEL/(14639:14730): Instruccion numero 4: C 0 4
+[INFO] 17:39:54:730 KERNEL/(14639:14730): Instruccion numero 5: R 0 -1
+[INFO] 17:39:54:730 KERNEL/(14639:14730): Instruccion numero 6: E -1 -1
+[INFO] 17:39:57:801 KERNEL/(14639:14742): Tamanio 200
+[INFO] 17:39:57:801 KERNEL/(14639:14742): Instruccion numero 0: I 3000 -1
+[INFO] 17:39:57:801 KERNEL/(14639:14742): Instruccion numero 1: N -1 -1
+[INFO] 17:39:57:801 KERNEL/(14639:14742): Instruccion numero 2: N -1 -1
+[INFO] 17:39:57:802 KERNEL/(14639:14742): Instruccion numero 3: W 4 42
+[INFO] 17:39:57:802 KERNEL/(14639:14742): Instruccion numero 4: C 0 4
+[INFO] 17:39:57:802 KERNEL/(14639:14742): Instruccion numero 5: R 0 -1
+[INFO] 17:39:57:802 KERNEL/(14639:14742): Instruccion numero 6: E -1 -1
+[INFO] 17:42:46:537 KERNEL/(14899:14932): Tamanio 200
+[INFO] 17:42:46:537 KERNEL/(14899:14932): Instruccion numero 0: I 3000 -1
+[INFO] 17:42:46:537 KERNEL/(14899:14932): Instruccion numero 1: N -1 -1
+[INFO] 17:42:46:537 KERNEL/(14899:14932): Instruccion numero 2: N -1 -1
+[INFO] 17:42:46:537 KERNEL/(14899:14932): Instruccion numero 3: W 4 42
+[INFO] 17:42:46:538 KERNEL/(14899:14932): Instruccion numero 4: C 0 4
+[INFO] 17:42:46:538 KERNEL/(14899:14932): Instruccion numero 5: R 0 -1
+[INFO] 17:42:46:538 KERNEL/(14899:14932): Instruccion numero 6: E -1 -1
+[INFO] 17:42:50:592 KERNEL/(14899:14943): Tamanio 200
+[INFO] 17:42:50:593 KERNEL/(14899:14943): Instruccion numero 0: I 3000 -1
+[INFO] 17:42:50:593 KERNEL/(14899:14943): Instruccion numero 1: N -1 -1
+[INFO] 17:42:50:593 KERNEL/(14899:14943): Instruccion numero 2: N -1 -1
+[INFO] 17:42:50:593 KERNEL/(14899:14943): Instruccion numero 3: W 4 42
+[INFO] 17:42:50:593 KERNEL/(14899:14943): Instruccion numero 4: C 0 4
+[INFO] 17:42:50:593 KERNEL/(14899:14943): Instruccion numero 5: R 0 -1
+[INFO] 17:42:50:593 KERNEL/(14899:14943): Instruccion numero 6: E -1 -1
+[INFO] 17:42:53:731 KERNEL/(14899:14954): Tamanio 200
+[INFO] 17:42:53:731 KERNEL/(14899:14954): Instruccion numero 0: I 3000 -1
+[INFO] 17:42:53:731 KERNEL/(14899:14954): Instruccion numero 1: N -1 -1
+[INFO] 17:42:53:731 KERNEL/(14899:14954): Instruccion numero 2: N -1 -1
+[INFO] 17:42:53:731 KERNEL/(14899:14954): Instruccion numero 3: W 4 42
+[INFO] 17:42:53:731 KERNEL/(14899:14954): Instruccion numero 4: C 0 4
+[INFO] 17:42:53:731 KERNEL/(14899:14954): Instruccion numero 5: R 0 -1
+[INFO] 17:42:53:731 KERNEL/(14899:14954): Instruccion numero 6: E -1 -1
+[INFO] 18:03:47:016 KERNEL/(16023:16041): Tamanio 200
+[INFO] 18:03:47:017 KERNEL/(16023:16041): Instruccion numero 0: I 3000 -1
+[INFO] 18:03:47:017 KERNEL/(16023:16041): Instruccion numero 1: N -1 -1
+[INFO] 18:03:47:017 KERNEL/(16023:16041): Instruccion numero 2: N -1 -1
+[INFO] 18:03:47:020 KERNEL/(16023:16041): Instruccion numero 3: W 4 42
+[INFO] 18:03:47:020 KERNEL/(16023:16041): Instruccion numero 4: C 0 4
+[INFO] 18:03:47:020 KERNEL/(16023:16041): Instruccion numero 5: R 0 -1
+[INFO] 18:03:47:020 KERNEL/(16023:16041): Instruccion numero 6: E -1 -1
+[INFO] 18:05:22:441 KERNEL/(16087:16104): Tamanio 200
+[INFO] 18:05:22:441 KERNEL/(16087:16104): Instruccion numero 0: I 3000 -1
+[INFO] 18:05:22:441 KERNEL/(16087:16104): Instruccion numero 1: N -1 -1
+[INFO] 18:05:22:441 KERNEL/(16087:16104): Instruccion numero 2: N -1 -1
+[INFO] 18:05:22:441 KERNEL/(16087:16104): Instruccion numero 3: W 4 42
+[INFO] 18:05:22:441 KERNEL/(16087:16104): Instruccion numero 4: C 0 4
+[INFO] 18:05:22:441 KERNEL/(16087:16104): Instruccion numero 5: R 0 -1
+[INFO] 18:05:22:441 KERNEL/(16087:16104): Instruccion numero 6: E -1 -1
+[INFO] 18:05:30:017 KERNEL/(16087:16115): Tamanio 200
+[INFO] 18:05:30:017 KERNEL/(16087:16115): Instruccion numero 0: I 3000 -1
+[INFO] 18:05:30:018 KERNEL/(16087:16115): Instruccion numero 1: N -1 -1
+[INFO] 18:05:30:018 KERNEL/(16087:16115): Instruccion numero 2: N -1 -1
+[INFO] 18:05:30:018 KERNEL/(16087:16115): Instruccion numero 3: W 4 42
+[INFO] 18:05:30:018 KERNEL/(16087:16115): Instruccion numero 4: C 0 4
+[INFO] 18:05:30:018 KERNEL/(16087:16115): Instruccion numero 5: R 0 -1
+[INFO] 18:05:30:018 KERNEL/(16087:16115): Instruccion numero 6: E -1 -1
+[INFO] 18:05:37:166 KERNEL/(16087:16126): Tamanio 200
+[INFO] 18:05:37:166 KERNEL/(16087:16126): Instruccion numero 0: I 3000 -1
+[INFO] 18:05:37:166 KERNEL/(16087:16126): Instruccion numero 1: N -1 -1
+[INFO] 18:05:37:166 KERNEL/(16087:16126): Instruccion numero 2: N -1 -1
+[INFO] 18:05:37:166 KERNEL/(16087:16126): Instruccion numero 3: W 4 42
+[INFO] 18:05:37:166 KERNEL/(16087:16126): Instruccion numero 4: C 0 4
+[INFO] 18:05:37:166 KERNEL/(16087:16126): Instruccion numero 5: R 0 -1
+[INFO] 18:05:37:166 KERNEL/(16087:16126): Instruccion numero 6: E -1 -1
+[ERROR] 18:08:03:606 KERNEL/(16180:16180): Error creando el socket :(
+[ERROR] 18:08:18:556 KERNEL/(16203:16203): Error creando el socket :(
+[ERROR] 18:08:31:269 KERNEL/(16225:16225): Error creando el socket :(
+[INFO] 18:09:03:957 KERNEL/(16249:16266): Tamanio 200
+[INFO] 18:09:03:957 KERNEL/(16249:16266): Instruccion numero 0: I 3000 -1
+[INFO] 18:09:03:957 KERNEL/(16249:16266): Instruccion numero 1: N -1 -1
+[INFO] 18:09:03:957 KERNEL/(16249:16266): Instruccion numero 2: N -1 -1
+[INFO] 18:09:03:957 KERNEL/(16249:16266): Instruccion numero 3: W 4 42
+[INFO] 18:09:03:957 KERNEL/(16249:16266): Instruccion numero 4: C 0 4
+[INFO] 18:09:03:958 KERNEL/(16249:16266): Instruccion numero 5: R 0 -1
+[INFO] 18:09:03:958 KERNEL/(16249:16266): Instruccion numero 6: E -1 -1
+[INFO] 18:09:18:010 KERNEL/(16249:16285): Tamanio 200
+[INFO] 18:09:18:011 KERNEL/(16249:16285): Instruccion numero 0: I 3000 -1
+[INFO] 18:09:18:011 KERNEL/(16249:16285): Instruccion numero 1: N -1 -1
+[INFO] 18:09:18:011 KERNEL/(16249:16285): Instruccion numero 2: N -1 -1
+[INFO] 18:09:18:011 KERNEL/(16249:16285): Instruccion numero 3: W 4 42
+[INFO] 18:09:18:015 KERNEL/(16249:16285): Instruccion numero 4: C 0 4
+[INFO] 18:09:18:015 KERNEL/(16249:16285): Instruccion numero 5: R 0 -1
+[INFO] 18:09:18:016 KERNEL/(16249:16285): Instruccion numero 6: E -1 -1
+[INFO] 18:09:23:717 KERNEL/(16249:16296): Tamanio 200
+[INFO] 18:09:23:717 KERNEL/(16249:16296): Instruccion numero 0: I 3000 -1
+[INFO] 18:09:23:717 KERNEL/(16249:16296): Instruccion numero 1: N -1 -1
+[INFO] 18:09:23:717 KERNEL/(16249:16296): Instruccion numero 2: N -1 -1
+[INFO] 18:09:23:717 KERNEL/(16249:16296): Instruccion numero 3: W 4 42
+[INFO] 18:09:23:717 KERNEL/(16249:16296): Instruccion numero 4: C 0 4
+[INFO] 18:09:23:717 KERNEL/(16249:16296): Instruccion numero 5: R 0 -1
+[INFO] 18:09:23:717 KERNEL/(16249:16296): Instruccion numero 6: E -1 -1
+[INFO] 18:14:45:098 KERNEL/(16456:16473): Tamanio 200
+[INFO] 18:14:45:098 KERNEL/(16456:16473): Instruccion numero 0: I 3000 -1
+[INFO] 18:14:45:098 KERNEL/(16456:16473): Instruccion numero 1: N -1 -1
+[INFO] 18:14:45:098 KERNEL/(16456:16473): Instruccion numero 2: N -1 -1
+[INFO] 18:14:45:098 KERNEL/(16456:16473): Instruccion numero 3: W 4 42
+[INFO] 18:14:45:098 KERNEL/(16456:16473): Instruccion numero 4: C 0 4
+[INFO] 18:14:45:098 KERNEL/(16456:16473): Instruccion numero 5: R 0 -1
+[INFO] 18:14:45:098 KERNEL/(16456:16473): Instruccion numero 6: E -1 -1
+[INFO] 18:14:45:098 KERNEL/(16456:16461): (new -> ready) Cola de new: 0
+[INFO] 18:14:45:098 KERNEL/(16456:16461): (new -> ready) Cola de ready: 1
+[ERROR] 18:15:33:230 KERNEL/(16521:16521): Error creando el socket :(
+[INFO] 18:16:13:401 KERNEL/(16548:16565): Tamanio 200
+[INFO] 18:16:13:401 KERNEL/(16548:16565): Instruccion numero 0: I 3000 -1
+[INFO] 18:16:13:401 KERNEL/(16548:16565): Instruccion numero 1: N -1 -1
+[INFO] 18:16:13:401 KERNEL/(16548:16565): Instruccion numero 2: N -1 -1
+[INFO] 18:16:13:401 KERNEL/(16548:16565): Instruccion numero 3: W 4 42
+[INFO] 18:16:13:401 KERNEL/(16548:16565): Instruccion numero 4: C 0 4
+[INFO] 18:16:13:401 KERNEL/(16548:16565): Instruccion numero 5: R 0 -1
+[INFO] 18:16:13:401 KERNEL/(16548:16565): Instruccion numero 6: E -1 -1
+[INFO] 18:16:13:401 KERNEL/(16548:16553): (new -> ready) Cola de new: 0
+[INFO] 18:16:13:401 KERNEL/(16548:16553): (new -> ready) Cola de ready: 1
+[INFO] 18:18:22:155 KERNEL/(16629:16646): Tamanio 200
+[INFO] 18:18:22:155 KERNEL/(16629:16646): Instruccion numero 0: I 3000 -1
+[INFO] 18:18:22:155 KERNEL/(16629:16646): Instruccion numero 1: N -1 -1
+[INFO] 18:18:22:155 KERNEL/(16629:16646): Instruccion numero 2: N -1 -1
+[INFO] 18:18:22:155 KERNEL/(16629:16646): Instruccion numero 3: W 4 42
+[INFO] 18:18:22:155 KERNEL/(16629:16646): Instruccion numero 4: C 0 4
+[INFO] 18:18:22:155 KERNEL/(16629:16646): Instruccion numero 5: R 0 -1
+[INFO] 18:18:22:155 KERNEL/(16629:16646): Instruccion numero 6: E -1 -1
+[INFO] 18:18:22:155 KERNEL/(16629:16634): (new -> ready) Cola de new: 0
+[INFO] 18:18:22:155 KERNEL/(16629:16634): (new -> ready) Cola de ready: 1
+[INFO] 18:18:22:155 KERNEL/(16629:16635): 
+ Mandando proceso 1 a ejecutar
+[INFO] 18:18:33:614 KERNEL/(16629:16657): Tamanio 200
+[INFO] 18:18:33:614 KERNEL/(16629:16657): Instruccion numero 0: I 3000 -1
+[INFO] 18:18:33:614 KERNEL/(16629:16657): Instruccion numero 1: N -1 -1
+[INFO] 18:18:33:614 KERNEL/(16629:16657): Instruccion numero 2: N -1 -1
+[INFO] 18:18:33:614 KERNEL/(16629:16657): Instruccion numero 3: W 4 42
+[INFO] 18:18:33:614 KERNEL/(16629:16657): Instruccion numero 4: C 0 4
+[INFO] 18:18:33:614 KERNEL/(16629:16657): Instruccion numero 5: R 0 -1
+[INFO] 18:18:33:614 KERNEL/(16629:16657): Instruccion numero 6: E -1 -1
+[INFO] 18:18:33:614 KERNEL/(16629:16634): (new -> ready) Cola de new: 0
+[INFO] 18:18:33:614 KERNEL/(16629:16634): (new -> ready) Cola de ready: 1
+[INFO] 18:18:37:964 KERNEL/(16629:16669): Tamanio 200
+[INFO] 18:18:37:964 KERNEL/(16629:16669): Instruccion numero 0: I 3000 -1
+[INFO] 18:18:37:964 KERNEL/(16629:16669): Instruccion numero 1: N -1 -1
+[INFO] 18:18:37:964 KERNEL/(16629:16669): Instruccion numero 2: N -1 -1
+[INFO] 18:18:37:964 KERNEL/(16629:16669): Instruccion numero 3: W 4 42
+[INFO] 18:18:37:964 KERNEL/(16629:16669): Instruccion numero 4: C 0 4
+[INFO] 18:18:37:964 KERNEL/(16629:16669): Instruccion numero 5: R 0 -1
+[INFO] 18:18:37:964 KERNEL/(16629:16669): Instruccion numero 6: E -1 -1
+[INFO] 18:18:37:964 KERNEL/(16629:16634): (new -> ready) Cola de new: 0
+[INFO] 18:18:37:965 KERNEL/(16629:16634): (new -> ready) Cola de ready: 2
+[INFO] 18:18:41:664 KERNEL/(16629:16682): Tamanio 200
+[INFO] 18:18:41:664 KERNEL/(16629:16682): Instruccion numero 0: I 3000 -1
+[INFO] 18:18:41:664 KERNEL/(16629:16682): Instruccion numero 1: N -1 -1
+[INFO] 18:18:41:664 KERNEL/(16629:16682): Instruccion numero 2: N -1 -1
+[INFO] 18:18:41:664 KERNEL/(16629:16682): Instruccion numero 3: W 4 42
+[INFO] 18:18:41:664 KERNEL/(16629:16682): Instruccion numero 4: C 0 4
+[INFO] 18:18:41:664 KERNEL/(16629:16682): Instruccion numero 5: R 0 -1
+[INFO] 18:18:41:664 KERNEL/(16629:16682): Instruccion numero 6: E -1 -1
+[INFO] 18:18:41:664 KERNEL/(16629:16634): (new -> ready) Cola de new: 0
+[INFO] 18:18:41:664 KERNEL/(16629:16634): (new -> ready) Cola de ready: 3
+[INFO] 18:18:46:890 KERNEL/(16629:16693): Tamanio 200
+[INFO] 18:18:46:891 KERNEL/(16629:16693): Instruccion numero 0: I 3000 -1
+[INFO] 18:18:46:891 KERNEL/(16629:16693): Instruccion numero 1: N -1 -1
+[INFO] 18:18:46:891 KERNEL/(16629:16693): Instruccion numero 2: N -1 -1
+[INFO] 18:18:46:891 KERNEL/(16629:16693): Instruccion numero 3: W 4 42
+[INFO] 18:18:46:891 KERNEL/(16629:16693): Instruccion numero 4: C 0 4
+[INFO] 18:18:46:891 KERNEL/(16629:16693): Instruccion numero 5: R 0 -1
+[INFO] 18:18:46:891 KERNEL/(16629:16693): Instruccion numero 6: E -1 -1
+[INFO] 18:18:54:784 KERNEL/(16629:16704): Tamanio 200
+[INFO] 18:18:54:784 KERNEL/(16629:16704): Instruccion numero 0: I 3000 -1
+[INFO] 18:18:54:784 KERNEL/(16629:16704): Instruccion numero 1: N -1 -1
+[INFO] 18:18:54:784 KERNEL/(16629:16704): Instruccion numero 2: N -1 -1
+[INFO] 18:18:54:784 KERNEL/(16629:16704): Instruccion numero 3: W 4 42
+[INFO] 18:18:54:784 KERNEL/(16629:16704): Instruccion numero 4: C 0 4
+[INFO] 18:18:54:784 KERNEL/(16629:16704): Instruccion numero 5: R 0 -1
+[INFO] 18:18:54:784 KERNEL/(16629:16704): Instruccion numero 6: E -1 -1
+[INFO] 18:18:58:969 KERNEL/(16629:16715): Tamanio 200
+[INFO] 18:18:58:969 KERNEL/(16629:16715): Instruccion numero 0: I 3000 -1
+[INFO] 18:18:58:969 KERNEL/(16629:16715): Instruccion numero 1: N -1 -1
+[INFO] 18:18:58:969 KERNEL/(16629:16715): Instruccion numero 2: N -1 -1
+[INFO] 18:18:58:969 KERNEL/(16629:16715): Instruccion numero 3: W 4 42
+[INFO] 18:18:58:969 KERNEL/(16629:16715): Instruccion numero 4: C 0 4
+[INFO] 18:18:58:969 KERNEL/(16629:16715): Instruccion numero 5: R 0 -1
+[INFO] 18:18:58:969 KERNEL/(16629:16715): Instruccion numero 6: E -1 -1
+[INFO] 18:22:04:620 KERNEL/(16853:16870): Tamanio 200
+[INFO] 18:22:04:620 KERNEL/(16853:16870): Instruccion numero 0: I 3000 -1
+[INFO] 18:22:04:620 KERNEL/(16853:16870): Instruccion numero 1: N -1 -1
+[INFO] 18:22:04:620 KERNEL/(16853:16870): Instruccion numero 2: N -1 -1
+[INFO] 18:22:04:620 KERNEL/(16853:16870): Instruccion numero 3: W 4 42
+[INFO] 18:22:04:620 KERNEL/(16853:16870): Instruccion numero 4: C 0 4
+[INFO] 18:22:04:620 KERNEL/(16853:16870): Instruccion numero 5: R 0 -1
+[INFO] 18:22:04:620 KERNEL/(16853:16870): Instruccion numero 6: E -1 -1
+[INFO] 18:22:04:620 KERNEL/(16853:16858): (new -> ready) Cola de new: 0
+[INFO] 18:22:04:620 KERNEL/(16853:16858): (new -> ready) Cola de ready: 1
+[INFO] 18:22:04:620 KERNEL/(16853:16859): 
+ Mandando proceso 1 a ejecutar
+[ERROR] 18:22:58:380 KERNEL/(16919:16919): Error creando el socket :(
+[INFO] 18:23:55:068 KERNEL/(16946:16963): Tamanio 200
+[INFO] 18:23:55:068 KERNEL/(16946:16963): Instruccion numero 0: I 3000 -1
+[INFO] 18:23:55:068 KERNEL/(16946:16963): Instruccion numero 1: N -1 -1
+[INFO] 18:23:55:068 KERNEL/(16946:16963): Instruccion numero 2: N -1 -1
+[INFO] 18:23:55:068 KERNEL/(16946:16963): Instruccion numero 3: W 4 42
+[INFO] 18:23:55:068 KERNEL/(16946:16963): Instruccion numero 4: C 0 4
+[INFO] 18:23:55:068 KERNEL/(16946:16963): Instruccion numero 5: R 0 -1
+[INFO] 18:23:55:068 KERNEL/(16946:16963): Instruccion numero 6: E -1 -1
+[INFO] 18:23:55:068 KERNEL/(16946:16951): (new -> ready) Cola de new: 0
+[INFO] 18:23:55:068 KERNEL/(16946:16951): (new -> ready) Cola de ready: 1
+[INFO] 18:23:55:068 KERNEL/(16946:16952): 
+ Mandando proceso 1 a ejecutar
+[INFO] 18:24:07:681 KERNEL/(16946:16974): Tamanio 200
+[INFO] 18:24:07:681 KERNEL/(16946:16974): Instruccion numero 0: I 3000 -1
+[INFO] 18:24:07:681 KERNEL/(16946:16974): Instruccion numero 1: N -1 -1
+[INFO] 18:24:07:681 KERNEL/(16946:16974): Instruccion numero 2: N -1 -1
+[INFO] 18:24:07:681 KERNEL/(16946:16974): Instruccion numero 3: W 4 42
+[INFO] 18:24:07:682 KERNEL/(16946:16974): Instruccion numero 4: C 0 4
+[INFO] 18:24:07:682 KERNEL/(16946:16974): Instruccion numero 5: R 0 -1
+[INFO] 18:24:07:682 KERNEL/(16946:16974): Instruccion numero 6: E -1 -1
+[INFO] 18:24:07:682 KERNEL/(16946:16951): (new -> ready) Cola de new: 0
+[INFO] 18:24:07:682 KERNEL/(16946:16951): (new -> ready) Cola de ready: 1
+[INFO] 18:24:16:469 KERNEL/(16946:16985): Tamanio 200
+[INFO] 18:24:16:469 KERNEL/(16946:16985): Instruccion numero 0: I 3000 -1
+[INFO] 18:24:16:469 KERNEL/(16946:16985): Instruccion numero 1: N -1 -1
+[INFO] 18:24:16:469 KERNEL/(16946:16985): Instruccion numero 2: N -1 -1
+[INFO] 18:24:16:469 KERNEL/(16946:16985): Instruccion numero 3: W 4 42
+[INFO] 18:24:16:469 KERNEL/(16946:16985): Instruccion numero 4: C 0 4
+[INFO] 18:24:16:470 KERNEL/(16946:16985): Instruccion numero 5: R 0 -1
+[INFO] 18:24:16:470 KERNEL/(16946:16985): Instruccion numero 6: E -1 -1
+[INFO] 18:24:16:470 KERNEL/(16946:16951): (new -> ready) Cola de new: 0
+[INFO] 18:24:16:470 KERNEL/(16946:16951): (new -> ready) Cola de ready: 2

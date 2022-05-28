@@ -15,6 +15,7 @@
 #include "../../shared/src/sockets.h"
 #include "../../shared/src/protocol.h"
 #include "../../shared/src/structures.h"
+#include "../../shared/src/pcb.h"
 
 typedef struct{
 	int cliente;
@@ -26,7 +27,8 @@ typedef enum {
 	SRT,
 } algoritmo_t;
 
-void inicializar(t_log* logger, t_config* config);
+void inicializar_kernel();
+void cerrar_kernel();
 int escuchar_servidor(char* name, int server_socket, t_log* logger);
 void procesar_socket(thread_args* argumentos);
 void pasaje_new_ready();
@@ -35,5 +37,7 @@ void srt_ready_execute();
 void imprimir_lista_ready();
 PCB_t* fifo();
 PCB_t* sjf();
+t_log* logger;
+t_config* config;
 
 #endif /* KERNEL_UTILS_H_ */
