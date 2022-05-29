@@ -4080,3 +4080,43 @@
 [INFO] 19:01:52:433 KERNEL/(18169:18304): Instruccion numero 4: C 0 4
 [INFO] 19:01:52:433 KERNEL/(18169:18304): Instruccion numero 5: R 0 -1
 [INFO] 19:01:52:433 KERNEL/(18169:18304): Instruccion numero 6: E -1 -1
+[INFO] 12:25:07:194 KERNEL/(5432:5451): Tamanio del programa: 200
+[INFO] 12:25:07:211 KERNEL/(5432:5451): Instruccion numero 0: I 3000 -1
+[INFO] 12:25:07:211 KERNEL/(5432:5451): Instruccion numero 1: N -1 -1
+[INFO] 12:25:07:211 KERNEL/(5432:5451): Instruccion numero 2: N -1 -1
+[INFO] 12:25:07:211 KERNEL/(5432:5451): Instruccion numero 3: W 4 42
+[INFO] 12:25:07:211 KERNEL/(5432:5451): Instruccion numero 4: C 0 4
+[INFO] 12:25:07:211 KERNEL/(5432:5451): Instruccion numero 5: R 0 -1
+[INFO] 12:25:07:211 KERNEL/(5432:5451): Instruccion numero 6: E -1 -1
+[INFO] 12:25:07:212 KERNEL/(5432:5437): (new -> ready) Cola de new: 0
+(new -> ready) Cola de ready: 1
+[INFO] 12:25:12:024 KERNEL/(5432:5462): Tamanio del programa: 200
+[INFO] 12:25:12:024 KERNEL/(5432:5462): Instruccion numero 0: I 3000 -1
+[INFO] 12:25:12:026 KERNEL/(5432:5462): Instruccion numero 1: N -1 -1
+[INFO] 12:25:12:026 KERNEL/(5432:5462): Instruccion numero 2: N -1 -1
+[INFO] 12:25:12:026 KERNEL/(5432:5462): Instruccion numero 3: W 4 42
+[INFO] 12:25:12:026 KERNEL/(5432:5462): Instruccion numero 4: C 0 4
+[INFO] 12:25:12:027 KERNEL/(5432:5462): Instruccion numero 5: R 0 -1
+[INFO] 12:25:12:027 KERNEL/(5432:5462): Instruccion numero 6: E -1 -1
+[INFO] 12:25:12:027 KERNEL/(5432:5437): (new -> ready) Cola de new: 0
+(new -> ready) Cola de ready: 2
+[INFO] 12:25:15:730 KERNEL/(5432:5479): Tamanio del programa: 200
+[INFO] 12:25:15:730 KERNEL/(5432:5479): Instruccion numero 0: I 3000 -1
+[INFO] 12:25:15:730 KERNEL/(5432:5479): Instruccion numero 1: N -1 -1
+[INFO] 12:25:15:730 KERNEL/(5432:5479): Instruccion numero 2: N -1 -1
+[INFO] 12:25:15:730 KERNEL/(5432:5479): Instruccion numero 3: W 4 42
+[INFO] 12:25:15:730 KERNEL/(5432:5479): Instruccion numero 4: C 0 4
+[INFO] 12:25:15:730 KERNEL/(5432:5479): Instruccion numero 5: R 0 -1
+[INFO] 12:25:15:730 KERNEL/(5432:5479): Instruccion numero 6: E -1 -1
+[INFO] 12:25:15:730 KERNEL/(5432:5437): (new -> ready) Cola de new: 0
+(new -> ready) Cola de ready: 3
+[INFO] 12:25:19:277 KERNEL/(5432:5491): Tamanio del programa: 200
+[INFO] 12:25:19:278 KERNEL/(5432:5491): Instruccion numero 0: I 3000 -1
+[INFO] 12:25:19:279 KERNEL/(5432:5491): Instruccion numero 1: N -1 -1
+[INFO] 12:25:19:279 KERNEL/(5432:5491): Instruccion numero 2: N -1 -1
+[INFO] 12:25:19:279 KERNEL/(5432:5491): Instruccion numero 3: W 4 42
+[INFO] 12:25:19:279 KERNEL/(5432:5491): Instruccion numero 4: C 0 4
+[INFO] 12:25:19:279 KERNEL/(5432:5491): Instruccion numero 5: R 0 -1
+[INFO] 12:25:19:279 KERNEL/(5432:5491): Instruccion numero 6: E -1 -1
+[INFO] 12:25:19:279 KERNEL/(5432:5437): (new -> ready) Cola de new: 0
+(new -> ready) Cola de ready: 4

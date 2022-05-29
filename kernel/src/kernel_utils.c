@@ -2,26 +2,49 @@
 
 pthread_mutex_t mx_multip_actual = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_pid_sig = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t mx_logger = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cpu_desocupado = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_new = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_lista_ready = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_socket = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_log = PTHREAD_MUTEX_INITIALIZER;
 
-sem_t s_new_ready, s_fifo_ready_execute, s_srt_ready_execute, s_cont_ready;
+sem_t s_new_ready, s_ready_execute, s_cont_ready;
 
 t_dictionary* sockets;
 t_queue* cola_new;
 t_list* cola_ready;
 t_queue* cola_blocked;
 
-int pid_sig, estimacion_inicial, grado_multiprogramacion, multiprogramacion_actual, conexion_cpu_dispatch, cpu_desocupado = 1, aaa=1;
+//safe_log* safe_logger;
+
+int pid_sig, estimacion_inicial, grado_multiprogramacion, multiprogramacion_actual, conexion_cpu_dispatch, cpu_desocupado = 1;
 char *algoritmo_config, *ip_cpu, *puerto_cpu_dispatch;
 
-algoritmo_t algoritmo;
+PCB_t* pcb_create(uint16_t pid,
+		uint16_t tamanio,
+		t_list* instrucciones,
+		uint32_t pc,
+		uint32_t tabla_paginas,
+		double est_rafaga){
+	PCB_t* proceso = malloc(sizeof(PCB_t));
+	proceso->instrucciones = list_create();
+	proceso->pid = pid;
+	proceso->tamanio = tamanio;
+	proceso->pc = pc;
+	proceso->instrucciones = instrucciones;
+	proceso->tabla_paginas = tabla_paginas;
+	proceso->est_rafaga = est_rafaga;
+	return proceso;
+}
+
+void pcb_destroy(PCB_t* pcb){
+	list_destroy_and_destroy_elements(pcb->instrucciones,free);
+	free(pcb);
+}
 
 void inicializar_kernel(){
 	logger = log_create("kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
+	//safe_logger = safe_log_create(logger);
 	config = config_create("kernel.config");
 
 	cola_new = queue_create();
@@ -47,35 +70,21 @@ void inicializar_kernel(){
 	pthread_create(&hilo_pasaje_new_ready,NULL,(void*)pasaje_new_ready,NULL);
 	pthread_detach(hilo_pasaje_new_ready);
 
-	if(strcmp(algoritmo_config, "FIFO") == 0){
-		algoritmo = FIFO;
-	} else {
-		algoritmo = SRT;
+	sem_init(&s_ready_execute, 0, 0);
+	pthread_t hilo_ready_execute;
+	if (strcmp(algoritmo_config, "FIFO"))
+		pthread_create(&hilo_ready_execute,NULL,(void*)fifo_ready_execute,NULL);
+	else if (strcmp(algoritmo_config, "SRT"))
+		pthread_create(&hilo_ready_execute,NULL,(void*)srt_ready_execute,NULL);
+	else{ //si no es ni FIFO ni SRT, loggea el error y sale del programa
+		log_error(logger,"Error en la configuracion: \"ALGORITMO_PLANIFICACION\" debe ser \"FIFO\" o \"SRT\"");
+		exit(-1);
 	}
-	switch(algoritmo){
-		case FIFO:
-		{
-			printf("FIFO %d", algoritmo);
-			sem_init(&s_fifo_ready_execute, 0, 0);
-			pthread_t hilo_fifo_ready_execute;
-			pthread_create(&hilo_fifo_ready_execute,NULL,(void*)fifo_ready_execute,NULL);
-			pthread_detach(hilo_fifo_ready_execute);
-			break;
-		}
-		case SRT:
-		{
-			printf("SRT %d", algoritmo);
-			sem_init(&s_srt_ready_execute, 0, 0);
-			pthread_t hilo_srt_ready_execute;
-			pthread_create(&hilo_srt_ready_execute,NULL,(void*)srt_ready_execute,NULL);
-			pthread_detach(hilo_srt_ready_execute);
-			break;
-		}
-	}
+	pthread_detach(hilo_ready_execute);
 
 }
 
-int escuchar_servidor(char* name, int server_socket, t_log* logger){
+int escuchar_servidor(char* name, int server_socket){
 	printf("Kernel esperando un nuevo cliente \n");
 	int cliente_socket = cliente_socket = esperar_cliente(logger, name, server_socket);
 	printf("Socket del cliente recibido en kernel.\n ");
@@ -92,28 +101,6 @@ int escuchar_servidor(char* name, int server_socket, t_log* logger){
 	return 0;
 }
 
-PCB_t* pcb_create(uint16_t pid,
-		uint16_t tamanio,
-		t_list* instrucciones,
-		uint32_t pc,
-		uint32_t tabla_paginas,
-		double est_rafaga){
-	PCB_t* proceso = malloc(sizeof(PCB_t));
-	proceso->instrucciones = list_create();
-	proceso->pid = pid;
-	proceso->tamanio = tamanio;
-	proceso->pc = pc;
-	proceso->instrucciones = instrucciones;
-	proceso->tabla_paginas = tabla_paginas;
-	proceso->est_rafaga = est_rafaga;
-	return proceso;
-}
-
-void pcb_destroy(PCB_t* pcb){
-	list_destroy_and_destroy_elements(pcb->instrucciones,free);
-	free(pcb);
-}
-
 void procesar_socket(thread_args* argumentos){
 	printf("Entrando al procesar socket :)\n");
 	int cliente_socket = argumentos->cliente;
@@ -124,9 +111,9 @@ void procesar_socket(thread_args* argumentos){
 	op_code cop;
 	while (cliente_socket != -1) {
 		if (recv(cliente_socket, &cop, sizeof(op_code), 0) <= 0) {
-			pthread_mutex_lock(&mx_logger);
-			log_info(logger, "DISCONNECT_FAILURE!");
-			pthread_mutex_unlock(&mx_logger);
+			pthread_mutex_lock(&mx_log);
+			log_error(logger,"DISCONNECT FAILURE!");
+			pthread_mutex_unlock(&mx_log);
 			send(cliente_socket, &resultError, sizeof(int32_t), 0);
 			return;
 		}
@@ -137,21 +124,20 @@ void procesar_socket(thread_args* argumentos){
 				uint16_t tamanio = 0;
 
 				if (!recv_programa(cliente_socket, instrucciones, &tamanio)) {
-					pthread_mutex_lock(&mx_logger);
-					log_info(logger, "Fallo recibiendo PROGRAMA");
-					pthread_mutex_unlock(&mx_logger);
+					pthread_mutex_lock(&mx_log);
+					log_error(logger,"Fallo recibiendo PROGRAMA");
+					pthread_mutex_unlock(&mx_log);
 					break;
 				}
-
-				pthread_mutex_lock(&mx_logger);
-				log_info(logger, "Tamanio %d", tamanio);
-				pthread_mutex_unlock(&mx_logger);
+				pthread_mutex_lock(&mx_log);
+				log_info(logger,"Tamanio del programa: %d", tamanio);
+				pthread_mutex_unlock(&mx_log);
 
 				for(int i = 0; i <  list_size(instrucciones); i++){
 					instruccion_t* instruccion = list_get(instrucciones,i);
-					pthread_mutex_lock(&mx_logger);
+					pthread_mutex_lock(&mx_log);
 					log_info(logger, "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
-					pthread_mutex_unlock(&mx_logger);
+					pthread_mutex_unlock(&mx_log);
 				}
 
 				pthread_mutex_lock(&mx_pid_sig);
@@ -166,22 +152,14 @@ void procesar_socket(thread_args* argumentos){
 
 				sem_post(&s_new_ready); //Avisa al hilo planificador de pasaje de new a ready que debe ejecutarse.
 
-//				send(cliente_socket, &resultOk, sizeof(int32_t), 0); // Forma de avisar a la consola, no iria aca
 
 				return;
 			}
-			//si la variable que evaluamos en el switch es un op_code
-			//que tiene de posibilidades definidas 0 (PROGRAMA) o 1 (PROCESO)
-			//cuando en la vida puede llegar a dar -1???
-			// Errores
-//			case -1:
-//				//log_info(logger, "Cliente desconectado de kernel");
-//				break;
+
 			default:
-				pthread_mutex_lock(&mx_logger);
-				log_info(logger, "Algo anduvo mal en el server del kernel ");
-				log_info(logger, "Cop: %d", cop);
-				pthread_mutex_unlock(&mx_logger);
+				pthread_mutex_lock(&mx_log);
+				log_error(logger, "Algo anduvo mal en el server del kernel\n Cop: %d",cop);
+				pthread_mutex_unlock(&mx_log);
 		}
 	}
 
@@ -201,7 +179,6 @@ void pasaje_new_ready(){
 			printf("\nPROCESO %d POPEADO COLA NEW\n", proceso->pid);
 			pthread_mutex_unlock(&mx_cola_new);
 			pthread_mutex_lock(&mx_lista_ready);
-			printf("\nAntes de agregar un nuevo proceso a ready");
 			imprimir_lista_ready();
 			list_add(cola_ready,proceso);
 			pthread_mutex_unlock(&mx_lista_ready);
@@ -209,23 +186,8 @@ void pasaje_new_ready(){
 			pthread_mutex_lock(&mx_multip_actual);
 			multiprogramacion_actual++;
 			pthread_mutex_unlock(&mx_multip_actual);
-			pthread_mutex_lock(&mx_logger);
-			log_info(logger,"(new -> ready) Cola de new: %d",queue_size(cola_new));
-			printf("\n(new -> ready) Cola de new: %d",queue_size(cola_new));
-			log_info(logger,"(new -> ready) Cola de ready: %d", list_size(cola_ready));
-			pthread_mutex_unlock(&mx_logger);
-			switch(algoritmo){
-				case FIFO:
-				{
-					sem_post(&s_fifo_ready_execute);
-					break;
-				}
-				case SRT:
-				{
-					sem_post(&s_srt_ready_execute);
-					break;
-				}
-			}
+			loggear_estado_de_colas();
+			sem_post(&s_ready_execute);
 		}
 		printf("\n(new -> ready) Cola de ready: %d",list_size(cola_ready));
 		imprimir_lista_ready();
@@ -234,19 +196,28 @@ void pasaje_new_ready(){
 
 }
 
+void loggear_estado_de_colas(){
+	pthread_mutex_lock(&mx_log);
+	log_info(logger,
+			"(new -> ready) Cola de new: %d\n(new -> ready) Cola de ready: %d",
+			queue_size(cola_new),
+			list_size(cola_ready));
+	pthread_mutex_unlock(&mx_log);
+}
+
 /****Hilo READY -> EXECUTE (FIFO) ***/
 void fifo_ready_execute(){
 	while(1){
-		sem_wait(&s_fifo_ready_execute);
+		sem_wait(&s_ready_execute);
 		if(cpu_desocupado){ // Para que no ejecute cada vez que un proceso pasa de new a ready
 			sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
 			PCB_t* proceso = malloc(sizeof(PCB_t));
 			pthread_mutex_lock(&mx_lista_ready);
 			proceso = list_remove(cola_ready, 0);
 			pthread_mutex_unlock(&mx_lista_ready);
-			pthread_mutex_lock(&mx_logger);
+			pthread_mutex_lock(&mx_log);
 			log_info(logger,"\n Mandando proceso %d a ejecutar",proceso->pid);
-			pthread_mutex_unlock(&mx_logger);
+			pthread_mutex_unlock(&mx_log);
 			pthread_mutex_lock(&mx_cpu_desocupado);
 			cpu_desocupado = 0;
 			pthread_mutex_unlock(&mx_cpu_desocupado);
@@ -259,7 +230,7 @@ void fifo_ready_execute(){
 /****Hilo READY -> EXECUTE (SRT) ***/
 void srt_ready_execute(){
 	while(1){
-		sem_wait(&s_srt_ready_execute);
+//		sem_wait(&s_algorithm_ready_execute);
 //		pthread_mutex_lock(&mx_cola_new);
 //		//AGREGAR QUE SI HAY PCBS EN READY SUSPENDED TIENEN PRIORIDAD DE PASO
 //		if(multiprogramacion_actual < grado_multiprogramacion){

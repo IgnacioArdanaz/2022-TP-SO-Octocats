@@ -19,7 +19,7 @@ int main(void) {
 		log_error(logger,"Error creando el socket :(");
 		printf("Error creando el socket :(");
 		result = EXIT_FAILURE;
-	} else while(escuchar_servidor("KERNEL",server_socket, logger));
+	} else while(escuchar_servidor("KERNEL",server_socket));
 
 	return result;
 }

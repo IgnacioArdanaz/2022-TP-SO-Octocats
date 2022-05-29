@@ -1,18 +1,6 @@
-18:58:28 **** Incremental Build of configuration Debug for project shared ****
+12:24:26 **** Incremental Build of configuration Debug for project shared ****
 make all 
-Building file: ../src/protocol.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/protocol.d" -MT"src/protocol.o" -o "src/protocol.o" "../src/protocol.c"
-Finished building: ../src/protocol.c
- 
-Building target: shared
-Invoking: GCC C Linker
-gcc  -o "shared"  ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
-/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o: In function `_start':
-(.text+0x18): undefined reference to `main'
-makefile:30: recipe for target 'shared' failed
-collect2: error: ld returned 1 exit status
-make: *** [shared] Error 1
+make: Nothing to be done for 'all'.
 
-18:58:29 Build Finished (took 786ms)
+12:24:27 Build Finished (took 530ms)
 

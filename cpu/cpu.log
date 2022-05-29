@@ -2669,3 +2669,4 @@
 [INFO] 19:00:15:736 cpu/(18159:18159): Ejecutando proceso pid=1
 [INFO] 19:00:15:737 cpu/(18159:18159): PCB ---> pid=1 | tamanio=200 | pc=0 | tabla_paginas=0 | est_rafaga=0
 [INFO] 19:03:08:996 cpu/(18159:18159): DISCONNECT!
+[INFO] 12:25:21:673 cpu/(3054:3054): DISCONNECT!

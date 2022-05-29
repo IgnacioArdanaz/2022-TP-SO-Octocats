@@ -1,404 +1,13 @@
-18:14:31 **** Incremental Build of configuration Debug for project kernel ****
+11:28:45 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
-../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:123:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
-  int32_t resultOk = 0;
-          ^
-../src/kernel_utils.c:122:8: warning: unused variable ‘server_name’ [-Wunused-variable]
-  char* server_name = string_duplicate(argumentos->server_name);
-        ^
-../src/kernel_utils.c: In function ‘fifo_ready_execute’:
-../src/kernel_utils.c:249:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-    printf("\n Mandando proceso %d a ejecutar tam %d inst %s %s %s %s pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
-           ^
-../src/kernel_utils.c:249:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 5 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c:249:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 6 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c:249:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 7 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c: In function ‘imprimir_lista_ready’:
-../src/kernel_utils.c:286:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-   printf("\n PROCESO %d -> tam %d inst %s %s %s %s pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
-          ^
-../src/kernel_utils.c:286:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 5 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c:286:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 6 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c:286:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 7 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_utils.c:1:
-../src/kernel_utils.c: At top level:
-../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso);
-              ^
-../src/../../shared/src/protocol.h:31:14: warning: ‘serializar_instrucciones_cpu’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-../src/../../shared/src/protocol.h:33:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-Finished building: ../src/kernel_utils.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
-Finished building target: kernel
- 
-18:14:36 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:14:39 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-make: Nothing to be done for 'all'.
-18:14:43 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:15:28 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:15:31 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-Building file: ../src/kernel_utils.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
-../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:123:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
-  int32_t resultOk = 0;
-          ^
-../src/kernel_utils.c:122:8: warning: unused variable ‘server_name’ [-Wunused-variable]
-  char* server_name = string_duplicate(argumentos->server_name);
-        ^
-../src/kernel_utils.c: In function ‘fifo_ready_execute’:
-../src/kernel_utils.c:249:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-    printf("\n Mandando proceso %d a ejecutar tam %d inst %s %s %s %s pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
-           ^
-../src/kernel_utils.c:249:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 5 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c:249:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 6 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c:249:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 7 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c: In function ‘imprimir_lista_ready’:
-../src/kernel_utils.c:286:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-   printf("\n PROCESO %d -> tam %d inst %s %s %s %s pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
-          ^
-../src/kernel_utils.c:286:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 5 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c:286:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 6 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c:286:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 7 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_utils.c:1:
-../src/kernel_utils.c: At top level:
-../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso);
-              ^
-../src/../../shared/src/protocol.h:31:14: warning: ‘serializar_instrucciones_cpu’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-../src/../../shared/src/protocol.h:33:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-Finished building: ../src/kernel_utils.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
-Finished building target: kernel
- 
-18:16:04 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:16:07 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-make: Nothing to be done for 'all'.
-18:16:11 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:18:11 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:18:15 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-Building file: ../src/kernel_utils.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
-../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:123:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
-  int32_t resultOk = 0;
-          ^
-../src/kernel_utils.c:122:8: warning: unused variable ‘server_name’ [-Wunused-variable]
-  char* server_name = string_duplicate(argumentos->server_name);
-        ^
-../src/kernel_utils.c: In function ‘imprimir_lista_ready’:
-../src/kernel_utils.c:285:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-   printf("\n PROCESO %d -> tam %d inst %s %s %s %s pc %d tabla %d est %f \n", proceso->pid, proceso->tamanio, proceso->instrucciones[0], proceso->instrucciones[1], proceso->instrucciones[2], proceso->instrucciones[3], proceso->pc, proceso->tabla_paginas, proceso->est_rafaga);
-          ^
-../src/kernel_utils.c:285:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 5 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c:285:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 6 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-../src/kernel_utils.c:285:10: warning: format ‘%s’ expects argument of type ‘char *’, but argument 7 has type ‘t_list {aka struct <anonymous>}’ [-Wformat=]
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_utils.c:1:
-../src/kernel_utils.c: At top level:
-../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso);
-              ^
-../src/../../shared/src/protocol.h:31:14: warning: ‘serializar_instrucciones_cpu’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-../src/../../shared/src/protocol.h:33:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-Finished building: ../src/kernel_utils.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
-Finished building target: kernel
- 
-18:18:20 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:18:31 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:18:36 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:18:40 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:18:45 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:18:53 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:18:57 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:21:28 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:21:56 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:21:59 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-Building file: ../src/kernel_utils.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
-../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:123:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
-  int32_t resultOk = 0;
-          ^
-../src/kernel_utils.c:122:8: warning: unused variable ‘server_name’ [-Wunused-variable]
-  char* server_name = string_duplicate(argumentos->server_name);
-        ^
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_utils.c:1:
-../src/kernel_utils.c: At top level:
-../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso);
-              ^
-../src/../../shared/src/protocol.h:31:14: warning: ‘serializar_instrucciones_cpu’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-../src/../../shared/src/protocol.h:33:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-Finished building: ../src/kernel_utils.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
-Finished building target: kernel
- 
-18:22:03 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:22:52 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:22:56 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-Building file: ../src/kernel_utils.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
-../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:123:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
-  int32_t resultOk = 0;
-          ^
-../src/kernel_utils.c:122:8: warning: unused variable ‘server_name’ [-Wunused-variable]
-  char* server_name = string_duplicate(argumentos->server_name);
-        ^
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_utils.c:1:
-../src/kernel_utils.c: At top level:
-../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso);
-              ^
-../src/../../shared/src/protocol.h:31:14: warning: ‘serializar_instrucciones_cpu’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-../src/../../shared/src/protocol.h:33:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-Finished building: ../src/kernel_utils.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
-Finished building target: kernel
- 
-18:23:47 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:23:50 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-make: Nothing to be done for 'all'.
-18:23:53 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:24:06 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:24:14 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:28:38 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:28:42 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-Building file: ../src/kernel_utils.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
-../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:101:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
-  int32_t resultOk = 0;
-          ^
-../src/kernel_utils.c:100:8: warning: unused variable ‘server_name’ [-Wunused-variable]
-  char* server_name = string_duplicate(argumentos->server_name);
-        ^
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_utils.c:1:
-../src/kernel_utils.c: At top level:
-../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso);
-              ^
-../src/../../shared/src/protocol.h:31:14: warning: ‘serializar_instrucciones_cpu’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-../src/../../shared/src/protocol.h:33:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-Finished building: ../src/kernel_utils.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
-./src/kernel_utils.o: In function `procesar_socket':
-/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:141: undefined reference to `pcb_create'
-./src/kernel_utils.o: In function `fifo_ready_execute':
-/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:234: undefined reference to `pcb_destroy'
-collect2: error: ld returned 1 exit status
-make: *** [kernel] Error 1
-makefile:30: recipe for target 'kernel' failed
-18:35:53 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:36:04 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:36:08 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-In file included from ../src/kernel_main.h:10:0,
-Building file: ../src/kernel_main.c
-                 from ../src/kernel_main.c:1:
-../src/../../shared/src/protocol.c: In function ‘serializar_proceso’:
-../src/../../shared/src/protocol.c:109:74: warning: passing argument 2 of ‘serializar_instrucciones_cpu’ from incompatible pointer type [-Wincompatible-pointer-types]
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
-     void * stream_inst = serializar_instrucciones_cpu(&size_stream_inst, proceso->instrucciones, &length_lista);
-                                                                          ^
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_main.h:8,
-                 from ../src/kernel_main.c:1:
-../src/../../shared/src/protocol.h:31:14: note: expected ‘char **’ but argument is of type ‘t_list * {aka struct <anonymous> *}’
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-In file included from ../src/kernel_main.h:10:0,
-                 from ../src/kernel_main.c:1:
-../src/../../shared/src/protocol.c: In function ‘deserializar_proceso’:
-../src/../../shared/src/protocol.c:196:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
-      string_array_push(&(proceso->instrucciones), r_instruccion);
-                        ^
-In file included from ../src/kernel_utils.h:8:0,
-                 from ../src/kernel_main.h:8,
-                 from ../src/kernel_main.c:1:
-/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘t_list ** {aka struct <anonymous> **}’
-  void    string_array_push(char*** array, char* text);
-          ^
-../src/kernel_main.c: In function ‘main’:
-../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
-  char* puerto_memoria;
-        ^
-../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
-  char* puerto_cpu_interrupt;
-        ^
-../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
-  char* puerto_cpu_dispatch;
-        ^
-../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
-  char* ip_cpu;
-        ^
-../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
-  int conexion_memoria;
-      ^
-../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
-  int conexion_cpu_dispatch;
-      ^
-Finished building: ../src/kernel_main.c
- 
-Building file: ../src/kernel_utils.c
-Invoking: GCC C Compiler
 ../src/kernel_utils.c: In function ‘procesar_socket’:
 ../src/kernel_utils.c:99:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
   int32_t resultOk = 0;
           ^
 ../src/kernel_utils.c:98:8: warning: unused variable ‘server_name’ [-Wunused-variable]
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
   char* server_name = string_duplicate(argumentos->server_name);
         ^
 In file included from ../src/kernel_utils.h:16:0,
@@ -413,10 +22,7 @@ In file included from ../src/kernel_utils.h:16:0,
 ../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
  static void* serializar_proceso(size_t* size, PCB_t* proceso);
               ^
-../src/../../shared/src/protocol.h:31:14: warning: ‘serializar_instrucciones_cpu’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-../src/../../shared/src/protocol.h:33:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
  static void deserializar_proceso(void* stream, PCB_t* proceso);
              ^
 Finished building: ../src/kernel_utils.c
@@ -426,236 +32,18 @@ Invoking: GCC C Linker
 gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
 ./src/kernel_utils.o: In function `procesar_socket':
 /home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:139: undefined reference to `pcb_create'
+makefile:30: recipe for target 'kernel' failed
 ./src/kernel_utils.o: In function `fifo_ready_execute':
 /home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:232: undefined reference to `pcb_destroy'
-makefile:30: recipe for target 'kernel' failed
 collect2: error: ld returned 1 exit status
 make: *** [kernel] Error 1
-18:36:41 **** Incremental Build of configuration Debug for project cpu ****
+11:29:02 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-18:36:49 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-Building file: ../src/kernel_utils.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
-../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:121:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
-  int32_t resultOk = 0;
-          ^
-../src/kernel_utils.c:120:8: warning: unused variable ‘server_name’ [-Wunused-variable]
-  char* server_name = string_duplicate(argumentos->server_name);
-        ^
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_utils.c:1:
-../src/kernel_utils.c: At top level:
-../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso);
-              ^
-../src/../../shared/src/protocol.h:31:14: warning: ‘serializar_instrucciones_cpu’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-../src/../../shared/src/protocol.h:33:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-Finished building: ../src/kernel_utils.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
-Finished building target: kernel
- 
-18:36:57 **** Incremental Build of configuration Debug for project consola ****
-make all 
-Building file: ../src/consola_main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/consola_main.d" -MT"src/consola_main.o" -o "src/consola_main.o" "../src/consola_main.c"
-In file included from ../src/consola_main.h:11:0,
-                 from ../src/consola_main.c:1:
-../src/../../shared/src/protocol.c: In function ‘serializar_proceso’:
-../src/../../shared/src/protocol.c:109:74: warning: passing argument 2 of ‘serializar_instrucciones_cpu’ from incompatible pointer type [-Wincompatible-pointer-types]
-     void * stream_inst = serializar_instrucciones_cpu(&size_stream_inst, proceso->instrucciones, &length_lista);
-                                                                          ^
-In file included from ../src/../../shared/src/protocol.c:1:0,
-                 from ../src/consola_main.h:11,
-                 from ../src/consola_main.c:1:
-../src/../../shared/src/protocol.h:31:14: note: expected ‘char **’ but argument is of type ‘t_list * {aka struct <anonymous> *}’
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-In file included from ../src/consola_main.h:11:0,
-                 from ../src/consola_main.c:1:
-../src/../../shared/src/protocol.c: In function ‘deserializar_proceso’:
-../src/../../shared/src/protocol.c:196:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
-      string_array_push(&(proceso->instrucciones), r_instruccion);
-                        ^
-In file included from ../src/consola_main.h:7:0,
-                 from ../src/consola_main.c:1:
-/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘t_list ** {aka struct <anonymous> **}’
-  void    string_array_push(char*** array, char* text);
-          ^
-Finished building: ../src/consola_main.c
- 
-Building target: consola
-Invoking: GCC C Linker
-gcc  -o "consola"  ./src/consola_main.o ./src/parser.o   -lcommons
-Finished building target: consola
- 
-18:37:01 **** Incremental Build of configuration Debug for project consola ****
+11:29:04 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-18:37:31 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:37:35 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-Building file: ../src/kernel_main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
-../src/kernel_main.c: In function ‘main’:
-../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
-  char* puerto_memoria;
-        ^
-../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
-  char* puerto_cpu_interrupt;
-        ^
-../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
-  char* puerto_cpu_dispatch;
-        ^
-../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
-  char* ip_cpu;
-        ^
-../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
-  int conexion_memoria;
-      ^
-../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
-  int conexion_cpu_dispatch;
-      ^
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_main.h:4,
-                 from ../src/kernel_main.c:1:
-../src/kernel_main.c: At top level:
-../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso);
-              ^
-../src/../../shared/src/protocol.h:31:14: warning: ‘serializar_instrucciones_cpu’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-../src/../../shared/src/protocol.h:33:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-Finished building: ../src/kernel_main.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
-./src/kernel_main.o: In function `main':
-/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_main.c:16: undefined reference to `iniciar_servidor'
-./src/kernel_utils.o: In function `inicializar_kernel':
-/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:41: undefined reference to `crear_conexion'
-./src/kernel_utils.o: In function `escuchar_servidor':
-/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:80: undefined reference to `esperar_cliente'
-./src/kernel_utils.o: In function `procesar_socket':
-makefile:30: recipe for target 'kernel' failed
-/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:139: undefined reference to `recv_programa'
-/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:188: undefined reference to `liberar_conexion'
-collect2: error: ld returned 1 exit status
-make: *** [kernel] Error 1
-18:38:04 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:38:10 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-Building file: ../src/kernel_main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
-In file included from ../src/kernel_main.h:10:0,
-                 from ../src/kernel_main.c:1:
-../src/../../shared/src/protocol.c: In function ‘serializar_proceso’:
-../src/../../shared/src/protocol.c:109:74: warning: passing argument 2 of ‘serializar_instrucciones_cpu’ from incompatible pointer type [-Wincompatible-pointer-types]
-     void * stream_inst = serializar_instrucciones_cpu(&size_stream_inst, proceso->instrucciones, &length_lista);
-                                                                          ^
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_main.h:8,
-                 from ../src/kernel_main.c:1:
-../src/../../shared/src/protocol.h:31:14: note: expected ‘char **’ but argument is of type ‘t_list * {aka struct <anonymous> *}’
- static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
-              ^
-In file included from ../src/kernel_main.h:10:0,
-                 from ../src/kernel_main.c:1:
-../src/../../shared/src/protocol.c: In function ‘deserializar_proceso’:
-../src/../../shared/src/protocol.c:196:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
-      string_array_push(&(proceso->instrucciones), r_instruccion);
-                        ^
-In file included from ../src/kernel_utils.h:8:0,
-                 from ../src/kernel_main.h:8,
-                 from ../src/kernel_main.c:1:
-/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘t_list ** {aka struct <anonymous> **}’
-  void    string_array_push(char*** array, char* text);
-          ^
-../src/kernel_main.c: In function ‘main’:
-../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
-  char* puerto_memoria;
-        ^
-../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
-  char* puerto_cpu_interrupt;
-        ^
-../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
-  char* puerto_cpu_dispatch;
-        ^
-../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
-  char* ip_cpu;
-        ^
-../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
-  int conexion_memoria;
-      ^
-../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
-  int conexion_cpu_dispatch;
-      ^
-Finished building: ../src/kernel_main.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
-Finished building target: kernel
- 
-18:38:16 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:38:29 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:57:38 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-Building file: ../src/cpu_main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cpu_main.d" -MT"src/cpu_main.o" -o "src/cpu_main.o" "../src/cpu_main.c"
-../src/cpu_main.c: In function ‘main’:
-../src/cpu_main.c:79:24: warning: format ‘%d’ expects argument of type ‘int’, but argument 7 has type ‘double’ [-Wformat=]
-       log_info(logger, "PCB ---> pid=%d | tamanio=%d | pc=%d | tabla_paginas=%d | est_rafaga=%d", proceso->pid, proceso->tamanio, proceso->pc, proceso->tabla_paginas, proceso->est_rafaga );
-                        ^
-../src/cpu_main.c:7:8: warning: unused variable ‘puerto_interrupt’ [-Wunused-variable]
-  char* puerto_interrupt;
-        ^
-Finished building: ../src/cpu_main.c
- 
-Building target: cpu
-Invoking: GCC C Linker
-gcc  -o "cpu"  ./src/cpu_main.o   -lcommons
-Finished building target: cpu
- 
-18:57:42 **** Incremental Build of configuration Debug for project kernel ****
+11:29:05 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 Building file: ../src/kernel_main.c
 Invoking: GCC C Compiler
@@ -685,10 +73,10 @@ Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
 ../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:121:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+../src/kernel_utils.c:99:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
   int32_t resultOk = 0;
           ^
-../src/kernel_utils.c:120:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+../src/kernel_utils.c:98:8: warning: unused variable ‘server_name’ [-Wunused-variable]
   char* server_name = string_duplicate(argumentos->server_name);
         ^
 In file included from ../src/kernel_utils.h:16:0,
@@ -711,67 +99,17 @@ Finished building: ../src/kernel_utils.c
 Building target: kernel
 Invoking: GCC C Linker
 gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
-Finished building target: kernel
- 
-18:57:47 **** Incremental Build of configuration Debug for project consola ****
+./src/kernel_utils.o: In function `pcb_create':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:8: multiple definition of `pcb_create'
+makefile:30: recipe for target 'kernel' failed
+./src/kernel_main.o:/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:8: first defined here
+./src/kernel_utils.o: In function `pcb_destroy':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:20: multiple definition of `pcb_destroy'
+./src/kernel_main.o:/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:20: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [kernel] Error 1
+11:29:07 **** Incremental Build of configuration Debug for project shared ****
 make all 
-Building file: ../src/consola_main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/consola_main.d" -MT"src/consola_main.o" -o "src/consola_main.o" "../src/consola_main.c"
-Finished building: ../src/consola_main.c
- 
-Building target: consola
-Invoking: GCC C Linker
-gcc  -o "consola"  ./src/consola_main.o ./src/parser.o   -lcommons
-Finished building target: consola
- 
-18:58:24 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-18:58:26 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-18:58:27 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-Building file: ../src/kernel_utils.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
-../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:121:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
-  int32_t resultOk = 0;
-          ^
-../src/kernel_utils.c:120:8: warning: unused variable ‘server_name’ [-Wunused-variable]
-  char* server_name = string_duplicate(argumentos->server_name);
-        ^
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_utils.c:1:
-../src/kernel_utils.c: At top level:
-../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso);
-              ^
-../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-Finished building: ../src/kernel_utils.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
-Finished building target: kernel
- 
-18:58:28 **** Incremental Build of configuration Debug for project shared ****
-make all 
-Building file: ../src/protocol.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/protocol.d" -MT"src/protocol.o" -o "src/protocol.o" "../src/protocol.c"
-Finished building: ../src/protocol.c
- 
 Building target: shared
 Invoking: GCC C Linker
 gcc  -o "shared"  ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
@@ -780,45 +118,1622 @@ gcc  -o "shared"  ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o 
 makefile:30: recipe for target 'shared' failed
 collect2: error: ld returned 1 exit status
 make: *** [shared] Error 1
-18:58:52 **** Incremental Build of configuration Debug for project cpu ****
+11:29:27 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-18:58:55 **** Incremental Build of configuration Debug for project kernel ****
+11:29:31 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+./src/kernel_utils.o: In function `pcb_create':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:8: multiple definition of `pcb_create'
+makefile:30: recipe for target 'kernel' failed
+./src/kernel_main.o:/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:8: first defined here
+./src/kernel_utils.o: In function `pcb_destroy':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:20: multiple definition of `pcb_destroy'
+./src/kernel_main.o:/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:20: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [kernel] Error 1
+11:30:07 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-19:00:04 **** Incremental Build of configuration Debug for project cpu ****
+11:30:08 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-19:00:09 **** Incremental Build of configuration Debug for project kernel ****
+11:30:09 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+./src/kernel_utils.o: In function `pcb_create':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:8: multiple definition of `pcb_create'
+makefile:30: recipe for target 'kernel' failed
+./src/kernel_main.o:/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:8: first defined here
+./src/kernel_utils.o: In function `pcb_destroy':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:20: multiple definition of `pcb_destroy'
+./src/kernel_main.o:/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/../../shared/src/pcb.c:20: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [kernel] Error 1
+11:30:11 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building target: shared
+Invoking: GCC C Linker
+gcc  -o "shared"  ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
+/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o: In function `_start':
+(.text+0x18): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'shared' failed
+make: *** [shared] Error 1
+11:30:48 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-19:00:13 **** Incremental Build of configuration Debug for project consola ****
+11:30:49 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-19:01:16 **** Incremental Build of configuration Debug for project consola ****
+11:30:50 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:99:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+../src/kernel_utils.c:98:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/kernel_utils.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+./src/kernel_utils.o: In function `procesar_socket':
+makefile:30: recipe for target 'kernel' failed
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:139: undefined reference to `pcb_create'
+./src/kernel_utils.o: In function `fifo_ready_execute':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:232: undefined reference to `pcb_destroy'
+collect2: error: ld returned 1 exit status
+make: *** [kernel] Error 1
+11:30:51 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building target: shared
+Invoking: GCC C Linker
+gcc  -o "shared"  ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
+/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o: In function `_start':
+(.text+0x18): undefined reference to `main'
+makefile:30: recipe for target 'shared' failed
+collect2: error: ld returned 1 exit status
+make: *** [shared] Error 1
+11:32:05 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-19:01:22 **** Incremental Build of configuration Debug for project consola ****
+11:32:06 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-19:01:27 **** Incremental Build of configuration Debug for project consola ****
+11:32:07 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+./src/kernel_utils.o: In function `procesar_socket':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:139: undefined reference to `pcb_create'
+./src/kernel_utils.o: In function `fifo_ready_execute':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:232: undefined reference to `pcb_destroy'
+collect2: error: ld returned 1 exit status
+make: *** [kernel] Error 1
+makefile:30: recipe for target 'kernel' failed
+11:32:08 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: shared
+Invoking: GCC C Linker
+gcc  -o "shared"  ./src/main.o ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
+Finished building target: shared
+ 
+11:59:54 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-19:01:32 **** Incremental Build of configuration Debug for project consola ****
+11:59:55 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-19:01:36 **** Incremental Build of configuration Debug for project consola ****
+11:59:56 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_main.h:8,
+                 from ../src/kernel_main.c:1:
+../src/../../shared/src/safe_log.h:19:11: error: conflicting types for ‘safe_log_create’
+ safe_log* safe_log_create(t_log* logger);
+           ^
+../src/../../shared/src/safe_log.h:16:11: note: previous declaration of ‘safe_log_create’ was here
+ safe_log* safe_log_create(char* filename, char* process_name,
+           ^
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:22:15: error: too many arguments to function ‘escuchar_servidor’
+  } else while(escuchar_servidor("KERNEL",server_socket, logger));
+               ^
+In file included from ../src/kernel_main.h:8:0,
+                 from ../src/kernel_main.c:1:
+../src/kernel_utils.h:30:5: note: declared here
+ int escuchar_servidor(char* name, int server_socket);
+     ^
+../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+src/subdir.mk:21: recipe for target 'src/kernel_main.o' failed
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+make: *** [src/kernel_main.o] Error 1
+11:59:57 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+In file included from ../src/safe_log.c:1:0:
+../src/safe_log.h:19:11: error: conflicting types for ‘safe_log_create’
+ safe_log* safe_log_create(t_log* logger);
+           ^
+../src/safe_log.h:16:11: note: previous declaration of ‘safe_log_create’ was here
+ safe_log* safe_log_create(char* filename, char* process_name,
+           ^
+../src/safe_log.c: In function ‘safe_log_info’:
+../src/safe_log.c:5:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_info(safe_logger->logger,msg);
+  ^
+../src/safe_log.c: In function ‘safe_log_error’:
+../src/safe_log.c:11:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_error(safe_logger->logger,msg);
+  ^
+src/subdir.mk:30: recipe for target 'src/safe_log.o' failed
+../src/safe_log.c: At top level:
+../src/safe_log.c:24:11: error: conflicting types for ‘safe_log_create’
+ safe_log* safe_log_create(t_log* logger){
+           ^
+../src/safe_log.c:15:11: note: previous definition of ‘safe_log_create’ was here
+ safe_log* safe_log_create(char* filename, char* process_name,
+           ^
+make: *** [src/safe_log.o] Error 1
+12:01:12 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-19:01:40 **** Incremental Build of configuration Debug for project consola ****
+12:01:12 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-19:01:43 **** Incremental Build of configuration Debug for project consola ****
+12:01:13 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:22:15: error: too many arguments to function ‘escuchar_servidor’
+  } else while(escuchar_servidor("KERNEL",server_socket, logger));
+               ^
+In file included from ../src/kernel_main.h:8:0,
+                 from ../src/kernel_main.c:1:
+../src/kernel_utils.h:30:5: note: declared here
+ int escuchar_servidor(char* name, int server_socket);
+     ^
+../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+src/subdir.mk:21: recipe for target 'src/kernel_main.o' failed
+make: *** [src/kernel_main.o] Error 1
+12:01:14 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+../src/safe_log.c: In function ‘safe_log_info’:
+../src/safe_log.c:5:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_info(safe_logger->logger,msg);
+  ^
+../src/safe_log.c: In function ‘safe_log_error’:
+../src/safe_log.c:11:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_error(safe_logger->logger,msg);
+  ^
+../src/safe_log.c: In function ‘safe_log_create’:
+../src/safe_log.c:18:22: warning: ‘safe_logger’ is used uninitialized in this function [-Wuninitialized]
+  safe_logger->logger = logger;
+                      ^
+Finished building: ../src/safe_log.c
+ 
+Building target: shared
+Invoking: GCC C Linker
+gcc  -o "shared"  ./src/main.o ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
+Finished building target: shared
+ 
+12:02:23 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-19:01:47 **** Incremental Build of configuration Debug for project consola ****
+12:02:24 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-19:01:50 **** Incremental Build of configuration Debug for project consola ****
+12:02:24 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:22:15: error: too many arguments to function ‘escuchar_servidor’
+  } else while(escuchar_servidor("KERNEL",server_socket, logger));
+               ^
+In file included from ../src/kernel_main.h:8:0,
+                 from ../src/kernel_main.c:1:
+../src/kernel_utils.h:30:5: note: declared here
+ int escuchar_servidor(char* name, int server_socket);
+     ^
+../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+src/subdir.mk:21: recipe for target 'src/kernel_main.o' failed
+make: *** [src/kernel_main.o] Error 1
+12:02:25 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+../src/safe_log.c: In function ‘safe_log_info’:
+../src/safe_log.c:5:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_info(safe_logger->logger,msg);
+  ^
+../src/safe_log.c: In function ‘safe_log_error’:
+../src/safe_log.c:11:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_error(safe_logger->logger,msg);
+  ^
+../src/safe_log.c: In function ‘safe_log_create’:
+../src/safe_log.c:17:26: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+  safe_log* safe_logger = malloc(safe_logger);
+                          ^
+../src/safe_log.c:17:26: warning: incompatible implicit declaration of built-in function ‘malloc’
+../src/safe_log.c:17:26: note: include ‘<stdlib.h>’ or provide a declaration of ‘malloc’
+../src/safe_log.c:17:33: warning: passing argument 1 of ‘malloc’ makes integer from pointer without a cast [-Wint-conversion]
+  safe_log* safe_logger = malloc(safe_logger);
+                                 ^
+../src/safe_log.c:17:33: note: expected ‘unsigned int’ but argument is of type ‘safe_log * {aka struct <anonymous> *}’
+../src/safe_log.c: In function ‘safe_log_destroy’:
+../src/safe_log.c:28:2: warning: implicit declaration of function ‘free’ [-Wimplicit-function-declaration]
+  free(safe_logger);
+  ^
+../src/safe_log.c:28:2: warning: incompatible implicit declaration of built-in function ‘free’
+../src/safe_log.c:28:2: note: include ‘<stdlib.h>’ or provide a declaration of ‘free’
+../src/safe_log.c: In function ‘safe_log_create’:
+../src/safe_log.c:17:26: warning: ‘safe_logger’ is used uninitialized in this function [-Wuninitialized]
+  safe_log* safe_logger = malloc(safe_logger);
+                          ^
+Finished building: ../src/safe_log.c
+ 
+Building target: shared
+Invoking: GCC C Linker
+gcc  -o "shared"  ./src/main.o ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
+Finished building target: shared
+ 
+12:02:42 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:02:43 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:02:44 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:22:15: error: too many arguments to function ‘escuchar_servidor’
+  } else while(escuchar_servidor("KERNEL",server_socket, logger));
+               ^
+In file included from ../src/kernel_main.h:8:0,
+                 from ../src/kernel_main.c:1:
+../src/kernel_utils.h:30:5: note: declared here
+ int escuchar_servidor(char* name, int server_socket);
+     ^
+../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+src/subdir.mk:21: recipe for target 'src/kernel_main.o' failed
+  int conexion_cpu_dispatch;
+      ^
+make: *** [src/kernel_main.o] Error 1
+12:02:44 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+../src/safe_log.c: In function ‘safe_log_info’:
+../src/safe_log.c:5:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_info(safe_logger->logger,msg);
+  ^
+../src/safe_log.c: In function ‘safe_log_error’:
+../src/safe_log.c:11:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_error(safe_logger->logger,msg);
+  ^
+../src/safe_log.c: In function ‘safe_log_create’:
+../src/safe_log.c:17:33: warning: passing argument 1 of ‘malloc’ makes integer from pointer without a cast [-Wint-conversion]
+  safe_log* safe_logger = malloc(safe_logger);
+                                 ^
+In file included from ../src/safe_log.h:4:0,
+                 from ../src/safe_log.c:1:
+/usr/include/stdlib.h:466:14: note: expected ‘size_t {aka unsigned int}’ but argument is of type ‘safe_log * {aka struct <anonymous> *}’
+ extern void *malloc (size_t __size) __THROW __attribute_malloc__ __wur;
+              ^
+../src/safe_log.c:17:26: warning: ‘safe_logger’ is used uninitialized in this function [-Wuninitialized]
+  safe_log* safe_logger = malloc(safe_logger);
+                          ^
+Finished building: ../src/safe_log.c
+ 
+Building target: shared
+Invoking: GCC C Linker
+gcc  -o "shared"  ./src/main.o ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
+Finished building target: shared
+ 
+12:03:08 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:03:09 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:03:10 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:22:15: error: too many arguments to function ‘escuchar_servidor’
+  } else while(escuchar_servidor("KERNEL",server_socket, logger));
+               ^
+In file included from ../src/kernel_main.h:8:0,
+                 from ../src/kernel_main.c:1:
+../src/kernel_utils.h:30:5: note: declared here
+ int escuchar_servidor(char* name, int server_socket);
+     ^
+../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+src/subdir.mk:21: recipe for target 'src/kernel_main.o' failed
+make: *** [src/kernel_main.o] Error 1
+12:03:11 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+../src/safe_log.c: In function ‘safe_log_info’:
+../src/safe_log.c:5:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_info(safe_logger->logger,msg);
+  ^
+../src/safe_log.c: In function ‘safe_log_error’:
+../src/safe_log.c:11:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_error(safe_logger->logger,msg);
+  ^
+Finished building: ../src/safe_log.c
+ 
+Building target: shared
+Invoking: GCC C Linker
+gcc  -o "shared"  ./src/main.o ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
+Finished building target: shared
+ 
+12:03:55 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:03:56 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:03:56 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:22:15: error: too many arguments to function ‘escuchar_servidor’
+  } else while(escuchar_servidor("KERNEL",server_socket, logger));
+               ^
+In file included from ../src/kernel_main.h:8:0,
+                 from ../src/kernel_main.c:1:
+../src/kernel_utils.h:30:5: note: declared here
+ int escuchar_servidor(char* name, int server_socket);
+     ^
+../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+src/subdir.mk:21: recipe for target 'src/kernel_main.o' failed
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+make: *** [src/kernel_main.o] Error 1
+12:03:57 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+Finished building: ../src/safe_log.c
+ 
+Building target: shared
+Invoking: GCC C Linker
+gcc  -o "shared"  ./src/main.o ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
+Finished building target: shared
+ 
+12:04:40 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:04:40 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:04:41 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:106:5: error: too many arguments to function ‘safe_log_info’
+     safe_log_info(safe_logger, "Tamanio %d", tamanio);
+     ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: declared here
+ void safe_log_info(safe_log* safe_logger, char* msg);
+      ^
+src/subdir.mk:21: recipe for target 'src/kernel_utils.o' failed
+../src/kernel_utils.c:110:6: error: too many arguments to function ‘safe_log_info’
+      safe_log_info(safe_logger, "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+      ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: declared here
+ void safe_log_info(safe_log* safe_logger, char* msg);
+      ^
+../src/kernel_utils.c:130:5: error: too many arguments to function ‘safe_log_error’
+     safe_log_error(safe_logger, "Algo anduvo mal en el server del kernel\n Cop: %d",cop);
+     ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:15:6: note: declared here
+ void safe_log_error(safe_log* safe_logger, char* msg);
+      ^
+../src/kernel_utils.c:85:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+../src/kernel_utils.c:84:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+../src/kernel_utils.c: In function ‘pasaje_new_ready’:
+../src/kernel_utils.c:158:4: warning: implicit declaration of function ‘loggear_estado_de_colas’ [-Wimplicit-function-declaration]
+    loggear_estado_de_colas();
+    ^
+../src/kernel_utils.c: At top level:
+../src/kernel_utils.c:168:6: warning: conflicting types for ‘loggear_estado_de_colas’
+ void loggear_estado_de_colas(){
+      ^
+../src/kernel_utils.c:158:4: note: previous implicit declaration of ‘loggear_estado_de_colas’ was here
+    loggear_estado_de_colas();
+    ^
+../src/kernel_utils.c: In function ‘loggear_estado_de_colas’:
+../src/kernel_utils.c:169:63: error: invalid operands to binary + (have ‘char *’ and ‘char *’)
+  safe_log_info(safe_logger,"(new -> ready) Cola de new: %d\n" +
+                                                               ^
+../src/kernel_utils.c:169:2: error: too many arguments to function ‘safe_log_info’
+  safe_log_info(safe_logger,"(new -> ready) Cola de new: %d\n" +
+  ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: declared here
+ void safe_log_info(safe_log* safe_logger, char* msg);
+      ^
+../src/kernel_utils.c: In function ‘fifo_ready_execute’:
+../src/kernel_utils.c:185:4: error: too many arguments to function ‘safe_log_info’
+    safe_log_info(safe_logger,"\n Mandando proceso %d a ejecutar",proceso->pid);
+    ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: declared here
+ void safe_log_info(safe_log* safe_logger, char* msg);
+      ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+make: *** [src/kernel_utils.o] Error 1
+12:04:42 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:05:51 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:05:52 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:05:53 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:91:4: error: too few arguments to function ‘safe_log_error’
+    safe_log_error(safe_logger,"DISCONNECT FAILURE!");
+    ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:15:6: note: declared here
+ void safe_log_error(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:102:6: error: too few arguments to function ‘safe_log_error’
+      safe_log_error(safe_logger, "Fallo recibiendo PROGRAMA");
+      ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:15:6: note: declared here
+ void safe_log_error(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:106:46: warning: passing argument 3 of ‘safe_log_info’ makes pointer from integer without a cast [-Wint-conversion]
+     safe_log_info(safe_logger, "Tamanio %d", tamanio);
+                                              ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: expected ‘char *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+src/subdir.mk:21: recipe for target 'src/kernel_utils.o' failed
+../src/kernel_utils.c:110:68: warning: passing argument 3 of ‘safe_log_info’ makes pointer from integer without a cast [-Wint-conversion]
+      safe_log_info(safe_logger, "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+                                                                    ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: expected ‘char *’ but argument is of type ‘int’
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:110:6: error: too many arguments to function ‘safe_log_info’
+      safe_log_info(safe_logger, "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+      ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: declared here
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:130:85: error: incompatible type for argument 3 of ‘safe_log_error’
+     safe_log_error(safe_logger, "Algo anduvo mal en el server del kernel\n Cop: %d",cop);
+                                                                                     ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:15:6: note: expected ‘char *’ but argument is of type ‘op_code {aka enum <anonymous>}’
+ void safe_log_error(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:85:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+../src/kernel_utils.c:84:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+../src/kernel_utils.c: In function ‘pasaje_new_ready’:
+../src/kernel_utils.c:158:4: warning: implicit declaration of function ‘loggear_estado_de_colas’ [-Wimplicit-function-declaration]
+    loggear_estado_de_colas();
+    ^
+../src/kernel_utils.c: At top level:
+../src/kernel_utils.c:168:6: warning: conflicting types for ‘loggear_estado_de_colas’
+ void loggear_estado_de_colas(){
+      ^
+../src/kernel_utils.c:158:4: note: previous implicit declaration of ‘loggear_estado_de_colas’ was here
+    loggear_estado_de_colas();
+    ^
+../src/kernel_utils.c: In function ‘loggear_estado_de_colas’:
+../src/kernel_utils.c:169:63: error: invalid operands to binary + (have ‘char *’ and ‘char *’)
+  safe_log_info(safe_logger,"(new -> ready) Cola de new: %d\n" +
+                                                               ^
+../src/kernel_utils.c:171:4: warning: passing argument 3 of ‘safe_log_info’ makes pointer from integer without a cast [-Wint-conversion]
+    queue_size(cola_new),
+    ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: expected ‘char *’ but argument is of type ‘int’
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:169:2: error: too many arguments to function ‘safe_log_info’
+  safe_log_info(safe_logger,"(new -> ready) Cola de new: %d\n" +
+  ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: declared here
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c: In function ‘fifo_ready_execute’:
+../src/kernel_utils.c:185:66: warning: passing argument 3 of ‘safe_log_info’ makes pointer from integer without a cast [-Wint-conversion]
+    safe_log_info(safe_logger,"\n Mandando proceso %d a ejecutar",proceso->pid);
+                                                                  ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: expected ‘char *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+make: *** [src/kernel_utils.o] Error 1
+12:05:54 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+Finished building: ../src/safe_log.c
+ 
+Building target: shared
+Invoking: GCC C Linker
+gcc  -o "shared"  ./src/main.o ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
+Finished building target: shared
+ 
+12:06:15 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:06:16 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:06:16 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:102:6: error: too few arguments to function ‘safe_log_error’
+      safe_log_error(safe_logger, "Fallo recibiendo PROGRAMA");
+      ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:15:6: note: declared here
+ void safe_log_error(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:106:46: warning: passing argument 3 of ‘safe_log_info’ makes pointer from integer without a cast [-Wint-conversion]
+     safe_log_info(safe_logger, "Tamanio %d", tamanio);
+                                              ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: expected ‘char *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:110:68: warning: passing argument 3 of ‘safe_log_info’ makes pointer from integer without a cast [-Wint-conversion]
+src/subdir.mk:21: recipe for target 'src/kernel_utils.o' failed
+      safe_log_info(safe_logger, "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+                                                                    ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: expected ‘char *’ but argument is of type ‘int’
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:110:6: error: too many arguments to function ‘safe_log_info’
+      safe_log_info(safe_logger, "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+      ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: declared here
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:130:85: error: incompatible type for argument 3 of ‘safe_log_error’
+     safe_log_error(safe_logger, "Algo anduvo mal en el server del kernel\n Cop: %d",cop);
+                                                                                     ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:15:6: note: expected ‘char *’ but argument is of type ‘op_code {aka enum <anonymous>}’
+ void safe_log_error(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:85:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+../src/kernel_utils.c:84:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+../src/kernel_utils.c: In function ‘pasaje_new_ready’:
+../src/kernel_utils.c:158:4: warning: implicit declaration of function ‘loggear_estado_de_colas’ [-Wimplicit-function-declaration]
+    loggear_estado_de_colas();
+    ^
+../src/kernel_utils.c: At top level:
+../src/kernel_utils.c:168:6: warning: conflicting types for ‘loggear_estado_de_colas’
+ void loggear_estado_de_colas(){
+      ^
+../src/kernel_utils.c:158:4: note: previous implicit declaration of ‘loggear_estado_de_colas’ was here
+    loggear_estado_de_colas();
+    ^
+../src/kernel_utils.c: In function ‘loggear_estado_de_colas’:
+../src/kernel_utils.c:169:63: error: invalid operands to binary + (have ‘char *’ and ‘char *’)
+  safe_log_info(safe_logger,"(new -> ready) Cola de new: %d\n" +
+                                                               ^
+../src/kernel_utils.c:171:4: warning: passing argument 3 of ‘safe_log_info’ makes pointer from integer without a cast [-Wint-conversion]
+    queue_size(cola_new),
+    ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: expected ‘char *’ but argument is of type ‘int’
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:169:2: error: too many arguments to function ‘safe_log_info’
+  safe_log_info(safe_logger,"(new -> ready) Cola de new: %d\n" +
+  ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: declared here
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c: In function ‘fifo_ready_execute’:
+../src/kernel_utils.c:185:66: warning: passing argument 3 of ‘safe_log_info’ makes pointer from integer without a cast [-Wint-conversion]
+    safe_log_info(safe_logger,"\n Mandando proceso %d a ejecutar",proceso->pid);
+                                                                  ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: expected ‘char *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+make: *** [src/kernel_utils.o] Error 1
+12:06:17 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:06:47 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:06:47 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:06:48 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:106:46: warning: passing argument 3 of ‘safe_log_info’ makes pointer from integer without a cast [-Wint-conversion]
+     safe_log_info(safe_logger, "Tamanio %d", tamanio);
+                                              ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: expected ‘char *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:110:6: error: too many arguments to function ‘safe_log_info’
+      safe_log_info(safe_logger,"%s", "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+      ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: declared here
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:130:85: error: incompatible type for argument 3 of ‘safe_log_error’
+src/subdir.mk:21: recipe for target 'src/kernel_utils.o' failed
+     safe_log_error(safe_logger, "Algo anduvo mal en el server del kernel\n Cop: %d",cop);
+                                                                                     ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:15:6: note: expected ‘char *’ but argument is of type ‘op_code {aka enum <anonymous>}’
+ void safe_log_error(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:85:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+../src/kernel_utils.c:84:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+../src/kernel_utils.c: In function ‘pasaje_new_ready’:
+../src/kernel_utils.c:158:4: warning: implicit declaration of function ‘loggear_estado_de_colas’ [-Wimplicit-function-declaration]
+    loggear_estado_de_colas();
+    ^
+../src/kernel_utils.c: At top level:
+../src/kernel_utils.c:168:6: warning: conflicting types for ‘loggear_estado_de_colas’
+ void loggear_estado_de_colas(){
+      ^
+../src/kernel_utils.c:158:4: note: previous implicit declaration of ‘loggear_estado_de_colas’ was here
+    loggear_estado_de_colas();
+    ^
+../src/kernel_utils.c: In function ‘loggear_estado_de_colas’:
+../src/kernel_utils.c:169:63: error: invalid operands to binary + (have ‘char *’ and ‘char *’)
+  safe_log_info(safe_logger,"(new -> ready) Cola de new: %d\n" +
+                                                               ^
+../src/kernel_utils.c:171:4: warning: passing argument 3 of ‘safe_log_info’ makes pointer from integer without a cast [-Wint-conversion]
+    queue_size(cola_new),
+    ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: expected ‘char *’ but argument is of type ‘int’
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c:169:2: error: too many arguments to function ‘safe_log_info’
+  safe_log_info(safe_logger,"(new -> ready) Cola de new: %d\n" +
+  ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: declared here
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+../src/kernel_utils.c: In function ‘fifo_ready_execute’:
+../src/kernel_utils.c:185:66: warning: passing argument 3 of ‘safe_log_info’ makes pointer from integer without a cast [-Wint-conversion]
+    safe_log_info(safe_logger,"\n Mandando proceso %d a ejecutar",proceso->pid);
+                                                                  ^
+In file included from ../src/kernel_utils.h:19:0,
+                 from ../src/kernel_utils.c:1:
+../src/../../shared/src/safe_log.h:13:6: note: expected ‘char *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+ void safe_log_info(safe_log* safe_logger,char* format, char* msg);
+      ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+make: *** [src/kernel_utils.o] Error 1
+12:06:49 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:13:35 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:13:36 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:13:37 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:105:5: error: too few arguments to function ‘printf’
+     printf();
+     ^
+../src/kernel_utils.c:85:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+../src/kernel_utils.c:84:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+src/subdir.mk:21: recipe for target 'src/kernel_utils.o' failed
+../src/kernel_utils.c: In function ‘pasaje_new_ready’:
+../src/kernel_utils.c:158:4: warning: implicit declaration of function ‘loggear_estado_de_colas’ [-Wimplicit-function-declaration]
+    loggear_estado_de_colas();
+    ^
+../src/kernel_utils.c: At top level:
+../src/kernel_utils.c:168:6: warning: conflicting types for ‘loggear_estado_de_colas’
+ void loggear_estado_de_colas(){
+      ^
+../src/kernel_utils.c:158:4: note: previous implicit declaration of ‘loggear_estado_de_colas’ was here
+    loggear_estado_de_colas();
+    ^
+../src/kernel_utils.c: In function ‘loggear_estado_de_colas’:
+../src/kernel_utils.c:169:63: error: invalid operands to binary + (have ‘char *’ and ‘char *’)
+  safe_log_info(safe_logger,"(new -> ready) Cola de new: %d\n" +
+                                                               ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+make: *** [src/kernel_utils.o] Error 1
+12:13:37 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+../src/safe_log.c:3:6: error: conflicting types for ‘safe_log_info’
+ void safe_log_info(safe_log* safe_logger,char* message, ...){
+      ^
+In file included from ../src/safe_log.c:1:0:
+../src/safe_log.h:13:6: note: previous declaration of ‘safe_log_info’ was here
+ void safe_log_info(safe_log* logger, const char* message, ...);
+      ^
+../src/safe_log.c: In function ‘safe_log_info’:
+../src/safe_log.c:5:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_info(safe_logger->logger,message);
+  ^
+../src/safe_log.c: In function ‘safe_log_error’:
+../src/safe_log.c:11:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_error(safe_logger->logger,message);
+  ^
+src/subdir.mk:30: recipe for target 'src/safe_log.o' failed
+make: *** [src/safe_log.o] Error 1
+12:20:07 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:20:08 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:20:08 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+../src/kernel_main.c: In function ‘main’:
+../src/kernel_main.c:12:8: warning: unused variable ‘puerto_memoria’ [-Wunused-variable]
+  char* puerto_memoria;
+        ^
+../src/kernel_main.c:11:8: warning: unused variable ‘puerto_cpu_interrupt’ [-Wunused-variable]
+  char* puerto_cpu_interrupt;
+        ^
+../src/kernel_main.c:10:8: warning: unused variable ‘puerto_cpu_dispatch’ [-Wunused-variable]
+  char* puerto_cpu_dispatch;
+        ^
+../src/kernel_main.c:9:8: warning: unused variable ‘ip_cpu’ [-Wunused-variable]
+  char* ip_cpu;
+        ^
+../src/kernel_main.c:7:6: warning: unused variable ‘conexion_memoria’ [-Wunused-variable]
+  int conexion_memoria;
+      ^
+../src/kernel_main.c:6:6: warning: unused variable ‘conexion_cpu_dispatch’ [-Wunused-variable]
+  int conexion_cpu_dispatch;
+      ^
+Finished building: ../src/kernel_main.c
+ 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:117:22: warning: too many arguments for format [-Wformat-extra-args]
+      log_info(logger,"%s", "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+                      ^
+../src/kernel_utils.c:86:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+src/subdir.mk:21: recipe for target 'src/kernel_utils.o' failed
+../src/kernel_utils.c:85:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+../src/kernel_utils.c: In function ‘loggear_estado_de_colas’:
+../src/kernel_utils.c:179:53: error: invalid operands to binary + (have ‘char *’ and ‘char *’)
+  log_info(logger,"(new -> ready) Cola de new: %d\n" +
+                                                     ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+make: *** [src/kernel_utils.o] Error 1
+12:20:09 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+../src/safe_log.c:3:6: error: conflicting types for ‘safe_log_info’
+ void safe_log_info(safe_log* safe_logger,char* message, ...){
+      ^
+In file included from ../src/safe_log.c:1:0:
+../src/safe_log.h:13:6: note: previous declaration of ‘safe_log_info’ was here
+ void safe_log_info(safe_log* logger, const char* message, ...);
+      ^
+../src/safe_log.c: In function ‘safe_log_info’:
+src/subdir.mk:30: recipe for target 'src/safe_log.o' failed
+../src/safe_log.c:5:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_info(safe_logger->logger,message);
+  ^
+../src/safe_log.c: In function ‘safe_log_error’:
+../src/safe_log.c:11:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_error(safe_logger->logger,message);
+  ^
+make: *** [src/safe_log.o] Error 1
+12:20:33 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:20:34 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:20:34 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:117:22: warning: too many arguments for format [-Wformat-extra-args]
+      log_info(logger,"%s", "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+                      ^
+../src/kernel_utils.c:86:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+../src/kernel_utils.c:85:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/kernel_utils.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+./src/kernel_utils.o: In function `procesar_socket':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:125: undefined reference to `pcb_create'
+./src/kernel_utils.o: In function `fifo_ready_execute':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:202: undefined reference to `pcb_destroy'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'kernel' failed
+make: *** [kernel] Error 1
+12:20:35 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+../src/safe_log.c:3:6: error: conflicting types for ‘safe_log_info’
+ void safe_log_info(safe_log* safe_logger,char* message, ...){
+      ^
+In file included from ../src/safe_log.c:1:0:
+../src/safe_log.h:13:6: note: previous declaration of ‘safe_log_info’ was here
+ void safe_log_info(safe_log* logger, const char* message, ...);
+      ^
+../src/safe_log.c: In function ‘safe_log_info’:
+../src/safe_log.c:5:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_info(safe_logger->logger,message);
+  ^
+../src/safe_log.c: In function ‘safe_log_error’:
+../src/safe_log.c:11:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_error(safe_logger->logger,message);
+  ^
+src/subdir.mk:30: recipe for target 'src/safe_log.o' failed
+make: *** [src/safe_log.o] Error 1
+12:20:41 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:20:41 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:20:42 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+./src/kernel_utils.o: In function `procesar_socket':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:125: undefined reference to `pcb_create'
+./src/kernel_utils.o: In function `fifo_ready_execute':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:202: undefined reference to `pcb_destroy'
+collect2: error: ld returned 1 exit status
+make: *** [kernel] Error 1
+makefile:30: recipe for target 'kernel' failed
+12:20:43 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+../src/safe_log.c:3:6: error: conflicting types for ‘safe_log_info’
+ void safe_log_info(safe_log* safe_logger,char* message, ...){
+      ^
+In file included from ../src/safe_log.c:1:0:
+../src/safe_log.h:13:6: note: previous declaration of ‘safe_log_info’ was here
+ void safe_log_info(safe_log* logger, const char* message, ...);
+      ^
+../src/safe_log.c: In function ‘safe_log_info’:
+../src/safe_log.c:5:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_info(safe_logger->logger,message);
+  ^
+src/subdir.mk:30: recipe for target 'src/safe_log.o' failed
+../src/safe_log.c: In function ‘safe_log_error’:
+../src/safe_log.c:11:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_error(safe_logger->logger,message);
+  ^
+make: *** [src/safe_log.o] Error 1
+12:20:45 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:20:45 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:20:46 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:117:22: warning: too many arguments for format [-Wformat-extra-args]
+      log_info(logger,"%s", "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+                      ^
+../src/kernel_utils.c:86:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+../src/kernel_utils.c:85:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/kernel_utils.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+./src/kernel_utils.o: In function `procesar_socket':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:125: undefined reference to `pcb_create'
+./src/kernel_utils.o: In function `fifo_ready_execute':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:203: undefined reference to `pcb_destroy'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'kernel' failed
+make: *** [kernel] Error 1
+12:20:47 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+../src/safe_log.c:3:6: error: conflicting types for ‘safe_log_info’
+ void safe_log_info(safe_log* safe_logger,char* message, ...){
+      ^
+In file included from ../src/safe_log.c:1:0:
+../src/safe_log.h:13:6: note: previous declaration of ‘safe_log_info’ was here
+ void safe_log_info(safe_log* logger, const char* message, ...);
+      ^
+../src/safe_log.c: In function ‘safe_log_info’:
+../src/safe_log.c:5:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_info(safe_logger->logger,message);
+  ^
+src/subdir.mk:30: recipe for target 'src/safe_log.o' failed
+../src/safe_log.c: In function ‘safe_log_error’:
+../src/safe_log.c:11:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  log_error(safe_logger->logger,message);
+  ^
+make: *** [src/safe_log.o] Error 1
+12:21:36 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:21:37 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:21:37 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+./src/kernel_utils.o: In function `procesar_socket':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:125: undefined reference to `pcb_create'
+./src/kernel_utils.o: In function `fifo_ready_execute':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:203: undefined reference to `pcb_destroy'
+makefile:30: recipe for target 'kernel' failed
+collect2: error: ld returned 1 exit status
+make: *** [kernel] Error 1
+12:21:38 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/safe_log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/safe_log.d" -MT"src/safe_log.o" -o "src/safe_log.o" "../src/safe_log.c"
+Finished building: ../src/safe_log.c
+ 
+Building target: shared
+Invoking: GCC C Linker
+gcc  -o "shared"  ./src/main.o ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
+Finished building target: shared
+ 
+12:23:31 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:23:32 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:23:33 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:117:22: warning: too many arguments for format [-Wformat-extra-args]
+      log_info(logger,"%s", "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+                      ^
+../src/kernel_utils.c:86:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+../src/kernel_utils.c:85:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/kernel_utils.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+./src/kernel_utils.o: In function `procesar_socket':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:125: undefined reference to `pcb_create'
+./src/kernel_utils.o: In function `fifo_ready_execute':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:203: undefined reference to `pcb_destroy'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'kernel' failed
+make: *** [kernel] Error 1
+12:23:34 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:23:54 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:23:55 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:23:56 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:86:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+../src/kernel_utils.c:85:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/kernel_utils.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+./src/kernel_utils.o: In function `procesar_socket':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:125: undefined reference to `pcb_create'
+./src/kernel_utils.o: In function `fifo_ready_execute':
+/home/utnso/tp-2022-1c-Octocats/kernel/Debug/../src/kernel_utils.c:203: undefined reference to `pcb_destroy'
+collect2: error: ld returned 1 exit status
+make: *** [kernel] Error 1
+makefile:30: recipe for target 'kernel' failed
+12:23:57 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:24:24 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:24:24 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:24:25 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:108:10: warning: unused variable ‘resultOk’ [-Wunused-variable]
+  int32_t resultOk = 0;
+          ^
+../src/kernel_utils.c:107:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+  char* server_name = string_duplicate(argumentos->server_name);
+        ^
+In file included from ../src/kernel_utils.h:16:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+../src/../../shared/src/protocol.h:25:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+../src/../../shared/src/protocol.h:26:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+../src/../../shared/src/protocol.h:30:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso);
+              ^
+../src/../../shared/src/protocol.h:32:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/kernel_utils.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc  -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lpthread
+Finished building target: kernel
+ 
+12:24:26 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:24:32 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:24:40 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:25:00 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+12:25:04 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:25:10 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:25:13 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:25:17 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
