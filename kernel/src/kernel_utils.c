@@ -1,7 +1,5 @@
 #include "kernel_utils.h"
 
-
-
 pthread_mutex_t mx_multip_actual = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_pid_sig = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_logger = PTHREAD_MUTEX_INITIALIZER;
@@ -252,7 +250,7 @@ void fifo_ready_execute(){
 			pthread_mutex_lock(&mx_cpu_desocupado);
 			cpu_desocupado = 0;
 			pthread_mutex_unlock(&mx_cpu_desocupado);
-			//send_proceso(conexion_cpu_dispatch, proceso);
+			send_proceso(conexion_cpu_dispatch, proceso);
 			pcb_destroy(proceso);
 			}
 	}

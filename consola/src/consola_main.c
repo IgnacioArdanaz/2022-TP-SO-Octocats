@@ -44,9 +44,8 @@ int main(int argc, char** argv){
 		log_error(logger,"Por desgracia no se pudo enviar el programa :(");
 	}
 
-
 	list_destroy_and_destroy_elements(codigo,free);
-	log_destroy(logger);   //ESTO DA EL SGMENTATION FAULT POR ALGUNA RAZON ...?
+	log_destroy(logger);
 	config_destroy(config);
 	liberar_conexion(&conexion);
 

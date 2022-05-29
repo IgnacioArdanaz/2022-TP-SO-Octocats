@@ -3933,3 +3933,150 @@
 [INFO] 18:24:16:470 KERNEL/(16946:16985): Instruccion numero 6: E -1 -1
 [INFO] 18:24:16:470 KERNEL/(16946:16951): (new -> ready) Cola de new: 0
 [INFO] 18:24:16:470 KERNEL/(16946:16951): (new -> ready) Cola de ready: 2
+[INFO] 18:36:59:557 KERNEL/(17364:17399): Tamanio 200
+[INFO] 18:36:59:557 KERNEL/(17364:17399): Instruccion numero 0: I 3000 -1
+[INFO] 18:36:59:557 KERNEL/(17364:17399): Instruccion numero 1: N -1 -1
+[INFO] 18:36:59:557 KERNEL/(17364:17399): Instruccion numero 2: N -1 -1
+[INFO] 18:36:59:557 KERNEL/(17364:17399): Instruccion numero 3: W 4 42
+[INFO] 18:36:59:557 KERNEL/(17364:17399): Instruccion numero 4: C 0 4
+[INFO] 18:36:59:557 KERNEL/(17364:17399): Instruccion numero 5: R 0 -1
+[INFO] 18:36:59:557 KERNEL/(17364:17399): Instruccion numero 6: E -1 -1
+[INFO] 18:36:59:557 KERNEL/(17364:17369): (new -> ready) Cola de new: 0
+[INFO] 18:36:59:557 KERNEL/(17364:17369): (new -> ready) Cola de ready: 1
+[INFO] 18:36:59:558 KERNEL/(17364:17370): 
+ Mandando proceso 1 a ejecutar
+[INFO] 18:37:04:153 KERNEL/(17364:17412): Tamanio 200
+[INFO] 18:37:04:153 KERNEL/(17364:17412): Instruccion numero 0: I 3000 -1
+[INFO] 18:37:04:154 KERNEL/(17364:17412): Instruccion numero 1: N -1 -1
+[INFO] 18:37:04:154 KERNEL/(17364:17412): Instruccion numero 2: N -1 -1
+[INFO] 18:37:04:154 KERNEL/(17364:17412): Instruccion numero 3: W 4 42
+[INFO] 18:37:04:154 KERNEL/(17364:17412): Instruccion numero 4: C 0 4
+[INFO] 18:37:04:154 KERNEL/(17364:17412): Instruccion numero 5: R 0 -1
+[INFO] 18:37:04:154 KERNEL/(17364:17412): Instruccion numero 6: E -1 -1
+[INFO] 18:37:04:154 KERNEL/(17364:17369): (new -> ready) Cola de new: 0
+[INFO] 18:37:04:154 KERNEL/(17364:17369): (new -> ready) Cola de ready: 1
+[INFO] 18:38:17:656 KERNEL/(17486:17503): Tamanio 200
+[INFO] 18:38:17:656 KERNEL/(17486:17503): Instruccion numero 0: I 3000 -1
+[INFO] 18:38:17:656 KERNEL/(17486:17503): Instruccion numero 1: N -1 -1
+[INFO] 18:38:17:656 KERNEL/(17486:17503): Instruccion numero 2: N -1 -1
+[INFO] 18:38:17:656 KERNEL/(17486:17503): Instruccion numero 3: W 4 42
+[INFO] 18:38:17:656 KERNEL/(17486:17503): Instruccion numero 4: C 0 4
+[INFO] 18:38:17:656 KERNEL/(17486:17503): Instruccion numero 5: R 0 -1
+[INFO] 18:38:17:656 KERNEL/(17486:17503): Instruccion numero 6: E -1 -1
+[INFO] 18:38:17:656 KERNEL/(17486:17491): (new -> ready) Cola de new: 0
+[INFO] 18:38:17:656 KERNEL/(17486:17491): (new -> ready) Cola de ready: 1
+[INFO] 18:38:17:656 KERNEL/(17486:17492): 
+ Mandando proceso 1 a ejecutar
+[INFO] 18:38:31:711 KERNEL/(17486:17514): Tamanio 200
+[INFO] 18:38:31:711 KERNEL/(17486:17514): Instruccion numero 0: I 3000 -1
+[INFO] 18:38:31:711 KERNEL/(17486:17514): Instruccion numero 1: N -1 -1
+[INFO] 18:38:31:711 KERNEL/(17486:17514): Instruccion numero 2: N -1 -1
+[INFO] 18:38:31:711 KERNEL/(17486:17514): Instruccion numero 3: W 4 42
+[INFO] 18:38:31:711 KERNEL/(17486:17514): Instruccion numero 4: C 0 4
+[INFO] 18:38:31:711 KERNEL/(17486:17514): Instruccion numero 5: R 0 -1
+[INFO] 18:38:31:711 KERNEL/(17486:17514): Instruccion numero 6: E -1 -1
+[INFO] 18:38:31:711 KERNEL/(17486:17491): (new -> ready) Cola de new: 0
+[INFO] 18:38:31:711 KERNEL/(17486:17491): (new -> ready) Cola de ready: 1
+[INFO] 18:57:49:038 KERNEL/(18031:18064): Tamanio 200
+[INFO] 18:57:49:038 KERNEL/(18031:18064): Instruccion numero 0: I 3000 -1
+[INFO] 18:57:49:038 KERNEL/(18031:18064): Instruccion numero 1: N -1 -1
+[INFO] 18:57:49:038 KERNEL/(18031:18064): Instruccion numero 2: N -1 -1
+[INFO] 18:57:49:038 KERNEL/(18031:18064): Instruccion numero 3: W 4 42
+[INFO] 18:57:49:038 KERNEL/(18031:18064): Instruccion numero 4: C 0 4
+[INFO] 18:57:49:038 KERNEL/(18031:18064): Instruccion numero 5: R 0 -1
+[INFO] 18:57:49:038 KERNEL/(18031:18064): Instruccion numero 6: E -1 -1
+[INFO] 18:57:49:038 KERNEL/(18031:18036): (new -> ready) Cola de new: 0
+[INFO] 18:57:49:038 KERNEL/(18031:18036): (new -> ready) Cola de ready: 1
+[INFO] 18:57:49:038 KERNEL/(18031:18037): 
+ Mandando proceso 1 a ejecutar
+[ERROR] 18:58:57:125 KERNEL/(18143:18143): Error creando el socket :(
+[INFO] 19:00:15:736 KERNEL/(18169:18188): Tamanio 200
+[INFO] 19:00:15:736 KERNEL/(18169:18188): Instruccion numero 0: I 3000 -1
+[INFO] 19:00:15:736 KERNEL/(18169:18188): Instruccion numero 1: N -1 -1
+[INFO] 19:00:15:736 KERNEL/(18169:18188): Instruccion numero 2: N -1 -1
+[INFO] 19:00:15:736 KERNEL/(18169:18188): Instruccion numero 3: W 4 42
+[INFO] 19:00:15:736 KERNEL/(18169:18188): Instruccion numero 4: C 0 4
+[INFO] 19:00:15:736 KERNEL/(18169:18188): Instruccion numero 5: R 0 -1
+[INFO] 19:00:15:736 KERNEL/(18169:18188): Instruccion numero 6: E -1 -1
+[INFO] 19:00:15:736 KERNEL/(18169:18174): (new -> ready) Cola de new: 0
+[INFO] 19:00:15:736 KERNEL/(18169:18174): (new -> ready) Cola de ready: 1
+[INFO] 19:00:15:736 KERNEL/(18169:18175): 
+ Mandando proceso 1 a ejecutar
+[INFO] 19:01:18:408 KERNEL/(18169:18203): Tamanio 200
+[INFO] 19:01:18:408 KERNEL/(18169:18203): Instruccion numero 0: I 3000 -1
+[INFO] 19:01:18:409 KERNEL/(18169:18203): Instruccion numero 1: N -1 -1
+[INFO] 19:01:18:409 KERNEL/(18169:18203): Instruccion numero 2: N -1 -1
+[INFO] 19:01:18:409 KERNEL/(18169:18203): Instruccion numero 3: W 4 42
+[INFO] 19:01:18:409 KERNEL/(18169:18203): Instruccion numero 4: C 0 4
+[INFO] 19:01:18:409 KERNEL/(18169:18203): Instruccion numero 5: R 0 -1
+[INFO] 19:01:18:409 KERNEL/(18169:18203): Instruccion numero 6: E -1 -1
+[INFO] 19:01:18:409 KERNEL/(18169:18174): (new -> ready) Cola de new: 0
+[INFO] 19:01:18:409 KERNEL/(18169:18174): (new -> ready) Cola de ready: 1
+[INFO] 19:01:23:800 KERNEL/(18169:18214): Tamanio 200
+[INFO] 19:01:23:800 KERNEL/(18169:18214): Instruccion numero 0: I 3000 -1
+[INFO] 19:01:23:800 KERNEL/(18169:18214): Instruccion numero 1: N -1 -1
+[INFO] 19:01:23:801 KERNEL/(18169:18214): Instruccion numero 2: N -1 -1
+[INFO] 19:01:23:801 KERNEL/(18169:18214): Instruccion numero 3: W 4 42
+[INFO] 19:01:23:801 KERNEL/(18169:18214): Instruccion numero 4: C 0 4
+[INFO] 19:01:23:801 KERNEL/(18169:18214): Instruccion numero 5: R 0 -1
+[INFO] 19:01:23:801 KERNEL/(18169:18214): Instruccion numero 6: E -1 -1
+[INFO] 19:01:23:801 KERNEL/(18169:18174): (new -> ready) Cola de new: 0
+[INFO] 19:01:23:801 KERNEL/(18169:18174): (new -> ready) Cola de ready: 2
+[INFO] 19:01:29:602 KERNEL/(18169:18227): Tamanio 200
+[INFO] 19:01:29:602 KERNEL/(18169:18227): Instruccion numero 0: I 3000 -1
+[INFO] 19:01:29:602 KERNEL/(18169:18227): Instruccion numero 1: N -1 -1
+[INFO] 19:01:29:602 KERNEL/(18169:18227): Instruccion numero 2: N -1 -1
+[INFO] 19:01:29:602 KERNEL/(18169:18227): Instruccion numero 3: W 4 42
+[INFO] 19:01:29:602 KERNEL/(18169:18227): Instruccion numero 4: C 0 4
+[INFO] 19:01:29:602 KERNEL/(18169:18227): Instruccion numero 5: R 0 -1
+[INFO] 19:01:29:602 KERNEL/(18169:18227): Instruccion numero 6: E -1 -1
+[INFO] 19:01:29:602 KERNEL/(18169:18174): (new -> ready) Cola de new: 0
+[INFO] 19:01:29:602 KERNEL/(18169:18174): (new -> ready) Cola de ready: 3
+[INFO] 19:01:34:074 KERNEL/(18169:18239): Tamanio 200
+[INFO] 19:01:34:074 KERNEL/(18169:18239): Instruccion numero 0: I 3000 -1
+[INFO] 19:01:34:074 KERNEL/(18169:18239): Instruccion numero 1: N -1 -1
+[INFO] 19:01:34:074 KERNEL/(18169:18239): Instruccion numero 2: N -1 -1
+[INFO] 19:01:34:074 KERNEL/(18169:18239): Instruccion numero 3: W 4 42
+[INFO] 19:01:34:074 KERNEL/(18169:18239): Instruccion numero 4: C 0 4
+[INFO] 19:01:34:074 KERNEL/(18169:18239): Instruccion numero 5: R 0 -1
+[INFO] 19:01:34:074 KERNEL/(18169:18239): Instruccion numero 6: E -1 -1
+[INFO] 19:01:38:016 KERNEL/(18169:18251): Tamanio 200
+[INFO] 19:01:38:016 KERNEL/(18169:18251): Instruccion numero 0: I 3000 -1
+[INFO] 19:01:38:016 KERNEL/(18169:18251): Instruccion numero 1: N -1 -1
+[INFO] 19:01:38:016 KERNEL/(18169:18251): Instruccion numero 2: N -1 -1
+[INFO] 19:01:38:016 KERNEL/(18169:18251): Instruccion numero 3: W 4 42
+[INFO] 19:01:38:016 KERNEL/(18169:18251): Instruccion numero 4: C 0 4
+[INFO] 19:01:38:016 KERNEL/(18169:18251): Instruccion numero 5: R 0 -1
+[INFO] 19:01:38:016 KERNEL/(18169:18251): Instruccion numero 6: E -1 -1
+[INFO] 19:01:41:706 KERNEL/(18169:18263): Tamanio 200
+[INFO] 19:01:41:707 KERNEL/(18169:18263): Instruccion numero 0: I 3000 -1
+[INFO] 19:01:41:707 KERNEL/(18169:18263): Instruccion numero 1: N -1 -1
+[INFO] 19:01:41:707 KERNEL/(18169:18263): Instruccion numero 2: N -1 -1
+[INFO] 19:01:41:707 KERNEL/(18169:18263): Instruccion numero 3: W 4 42
+[INFO] 19:01:41:708 KERNEL/(18169:18263): Instruccion numero 4: C 0 4
+[INFO] 19:01:41:708 KERNEL/(18169:18263): Instruccion numero 5: R 0 -1
+[INFO] 19:01:41:708 KERNEL/(18169:18263): Instruccion numero 6: E -1 -1
+[INFO] 19:01:45:095 KERNEL/(18169:18279): Tamanio 200
+[INFO] 19:01:45:095 KERNEL/(18169:18279): Instruccion numero 0: I 3000 -1
+[INFO] 19:01:45:095 KERNEL/(18169:18279): Instruccion numero 1: N -1 -1
+[INFO] 19:01:45:095 KERNEL/(18169:18279): Instruccion numero 2: N -1 -1
+[INFO] 19:01:45:095 KERNEL/(18169:18279): Instruccion numero 3: W 4 42
+[INFO] 19:01:45:095 KERNEL/(18169:18279): Instruccion numero 4: C 0 4
+[INFO] 19:01:45:095 KERNEL/(18169:18279): Instruccion numero 5: R 0 -1
+[INFO] 19:01:45:095 KERNEL/(18169:18279): Instruccion numero 6: E -1 -1
+[INFO] 19:01:48:925 KERNEL/(18169:18292): Tamanio 200
+[INFO] 19:01:48:925 KERNEL/(18169:18292): Instruccion numero 0: I 3000 -1
+[INFO] 19:01:48:925 KERNEL/(18169:18292): Instruccion numero 1: N -1 -1
+[INFO] 19:01:48:925 KERNEL/(18169:18292): Instruccion numero 2: N -1 -1
+[INFO] 19:01:48:925 KERNEL/(18169:18292): Instruccion numero 3: W 4 42
+[INFO] 19:01:48:925 KERNEL/(18169:18292): Instruccion numero 4: C 0 4
+[INFO] 19:01:48:925 KERNEL/(18169:18292): Instruccion numero 5: R 0 -1
+[INFO] 19:01:48:925 KERNEL/(18169:18292): Instruccion numero 6: E -1 -1
+[INFO] 19:01:52:433 KERNEL/(18169:18304): Tamanio 200
+[INFO] 19:01:52:433 KERNEL/(18169:18304): Instruccion numero 0: I 3000 -1
+[INFO] 19:01:52:433 KERNEL/(18169:18304): Instruccion numero 1: N -1 -1
+[INFO] 19:01:52:433 KERNEL/(18169:18304): Instruccion numero 2: N -1 -1
+[INFO] 19:01:52:433 KERNEL/(18169:18304): Instruccion numero 3: W 4 42
+[INFO] 19:01:52:433 KERNEL/(18169:18304): Instruccion numero 4: C 0 4
+[INFO] 19:01:52:433 KERNEL/(18169:18304): Instruccion numero 5: R 0 -1
+[INFO] 19:01:52:433 KERNEL/(18169:18304): Instruccion numero 6: E -1 -1

@@ -63,19 +63,20 @@ int main(void) {
 				switch (cop) {
 					case PROCESO:
 					{
-//						PCB_t* proceso = malloc(sizeof(PCB_t));
-//						proceso->instrucciones = string_array_new();
-//
-//						if (!recv_proceso(fd, proceso)) {
-//							log_error(logger, "Fallo recibiendo PROCESO");
-//							break;
-//						}
-//
-//						log_info(logger, "Ejecutando proceso pid=%d", proceso->pid);
-//						for(int i = 0; (proceso->instrucciones)[i] != NULL; i++){
-//							log_info(logger, "Instruccion numero %d: %s \n", i, (proceso->instrucciones)[i]);
-//						}
-//						log_info(logger, "PCB ---> pid=%d | tamanio=%d | pc=%d | tabla_paginas=%d | est_rafaga=%d", proceso->pid, proceso->tamanio, proceso->pc, proceso->tabla_paginas, proceso->est_rafaga );
+						PCB_t* proceso = malloc(sizeof(PCB_t));
+						proceso->instrucciones = list_create();
+
+						if (!recv_proceso(fd, proceso)) {
+							log_error(logger, "Fallo recibiendo PROCESO");
+							break;
+						}
+
+						log_info(logger, "Ejecutando proceso pid=%d", proceso->pid);
+						for(int i = 0; i < list_size(proceso->instrucciones); i++){
+							instruccion_t* inst = list_get(proceso->instrucciones,i);
+							printf("%c %d %d\n",inst->operacion,inst->arg1,inst->arg2);
+						}
+						log_info(logger, "PCB ---> pid=%d | tamanio=%d | pc=%d | tabla_paginas=%d | est_rafaga=%d", proceso->pid, proceso->tamanio, proceso->pc, proceso->tabla_paginas, proceso->est_rafaga );
 						break;
 					}
 					default:

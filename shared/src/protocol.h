@@ -28,7 +28,6 @@ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t*
 //PROCESO
 bool send_proceso(int fd, PCB_t* proceso);
 static void* serializar_proceso(size_t* size, PCB_t* proceso);
-static void* serializar_instrucciones_cpu(size_t* size_stream_inst, char** instrucciones, size_t* length_instrucciones);
 bool recv_proceso(int fd, PCB_t* proceso);
 static void deserializar_proceso(void* stream, PCB_t* proceso);
 

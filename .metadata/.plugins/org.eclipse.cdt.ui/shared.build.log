@@ -1,9 +1,9 @@
-18:03:12 **** Build of configuration Debug for project shared ****
+18:58:28 **** Incremental Build of configuration Debug for project shared ****
 make all 
-Building file: ../src/pcb.c
+Building file: ../src/protocol.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/pcb.d" -MT"src/pcb.o" -o "src/pcb.o" "../src/pcb.c"
-Finished building: ../src/pcb.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/protocol.d" -MT"src/protocol.o" -o "src/protocol.o" "../src/protocol.c"
+Finished building: ../src/protocol.c
  
 Building target: shared
 Invoking: GCC C Linker
@@ -14,5 +14,5 @@ makefile:30: recipe for target 'shared' failed
 collect2: error: ld returned 1 exit status
 make: *** [shared] Error 1
 
-18:03:13 Build Finished (took 1s.98ms)
+18:58:29 Build Finished (took 786ms)
 
