@@ -17,6 +17,10 @@
 typedef enum {
     PROGRAMA,
 	PROCESO,
+	INTERRUPTION,
+	EXIT,
+	CONTINUE,
+	BLOCKED
 } op_code;
 
 //PROGRAMA
@@ -26,7 +30,7 @@ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t t
 static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
 
 //PROCESO
-bool send_proceso(int fd, PCB_t* proceso);
+bool send_proceso(int fd, PCB_t* proceso, op_code codigo);
 static void* serializar_proceso(size_t* size, PCB_t* proceso);
 bool recv_proceso(int fd, PCB_t* proceso);
 static void deserializar_proceso(void* stream, PCB_t* proceso);

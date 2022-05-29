@@ -89,7 +89,7 @@ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t*
 
 /***************************** PROCESO *****************************/
 // Envio y serializacion PROGRAMA
-bool send_proceso(int fd, PCB_t *proceso) {
+bool send_proceso(int fd, PCB_t *proceso, op_code codigo) {
     size_t size;
     printf("A punto de serializar un proceso!!!");
     void* stream = serializar_proceso(&size, proceso);
@@ -195,4 +195,3 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
     memcpy(&proceso->est_rafaga, stream + acumulador, sizeof(double));
 
 }
-

@@ -1,142 +1,157 @@
 #include "cpu_main.h"
 
+t_log* logger;
+t_config* config;
+int espera, server_cpu_dispatch, server_cpu_interrupt, cliente_socket_interrupt,
+	cliente_socket_dispatch;
+bool hay_interrupcion;
+
 int main(void) {
-	t_log* logger = log_create("cpu.log", "cpu", 1, LOG_LEVEL_INFO);
-	t_config* config = config_create("cpu.config");
-	char* puerto_dispatch;
-	char* puerto_interrupt;
 
-	puerto_dispatch = config_get_string_value(config, "PUERTO_ESCUCHA_DISPATCH");
-	int server_cpu_dispatch = iniciar_servidor(logger, "CPU_DISPATCH", IP, puerto_dispatch);
+	inicializar_cpu();
 
-	//puerto_interrupt = config_get_string_value(config, "PUERTO_ESCUCHA_INTERRUPT");
-	//int server_cpu_interrupt = iniciar_servidor(logger, "CPU_INTERRUPT", IP, puerto_interrupt);
+	while(1){
+		PCB_t* pcb = malloc(sizeof(PCB_t));
+		recv_proceso(cliente_socket_dispatch,pcb);
+		log_info(logger,"Program counter %d\n",pcb->pc);
 
-	fd_set readSet;
-	fd_set tempReadSet;
-	int maximoFD;
-	int resultado;
+		op_code estado = iniciar_ciclo_instruccion(pcb);
 
-	int fd;
-	int nuevaConexion;
-
-	FD_ZERO(&readSet);
-	FD_ZERO(&tempReadSet);
-
-	FD_SET(server_cpu_dispatch,&readSet);
-	maximoFD = server_cpu_dispatch;
-	int i = 0;
-	while(i < 15) //1)  //OJO ACA !!!
-	{
-		FD_ZERO(&tempReadSet);
-		tempReadSet = readSet; //NOSE SI ESTA BIEN ASI DE PREPO
-		//memset(tempReadSet,readSet,sizeof(readSet));
-
-		//memcpy(&tempReadSet, &readSet, sizeof(tempReadSet));
-		resultado = select(maximoFD + 1, &tempReadSet, NULL, NULL, NULL);
-		//printf("\nResultadoSELECT: %d\n",resultado); ///
-
-		if(resultado == -1)
-		{
-			printf("Fallo en select().\n");
-		}
-		//VERIFICO SI HAY NUEVA CONEXION
-		if (FD_ISSET(server_cpu_dispatch, &tempReadSet))
-		{
-			nuevaConexion = esperar_cliente(logger, "CPU_DISPACHT",server_cpu_dispatch);
-			FD_SET(nuevaConexion,&readSet);
-			maximoFD = (nuevaConexion > maximoFD) ? nuevaConexion : maximoFD;
-			FD_CLR(server_cpu_dispatch,&tempReadSet); //LO SACO PARA Q SOLO ME QUEDEN FDs DE CONEXIONES PARA RECIVIR ALGUN PAQUETE
-		}
-		//BUSCO EN EL CONJUNTO, si hay datos para leer
-		for(fd = 0; fd <= maximoFD; fd++)
-		{
-			if (FD_ISSET(fd, &tempReadSet)) //HAY UN PAQUETE PARA RECIBIR
-			{
-				op_code cop;
-
-				if (recv(fd, &cop, sizeof(op_code), 0) <= 0) {
-					log_info(logger, "DISCONNECT!");
-					return EXIT_FAILURE;
-				}
-
-				switch (cop) {
-					case PROCESO:
-					{
-						PCB_t* proceso = malloc(sizeof(PCB_t));
-						proceso->instrucciones = list_create();
-
-						if (!recv_proceso(fd, proceso)) {
-							log_error(logger, "Fallo recibiendo PROCESO");
-							break;
-						}
-
-						log_info(logger, "Ejecutando proceso pid=%d", proceso->pid);
-						for(int i = 0; i < list_size(proceso->instrucciones); i++){
-							instruccion_t* inst = list_get(proceso->instrucciones,i);
-							printf("%c %d %d\n",inst->operacion,inst->arg1,inst->arg2);
-						}
-						log_info(logger, "PCB ---> pid=%d | tamanio=%d | pc=%d | tabla_paginas=%d | est_rafaga=%d", proceso->pid, proceso->tamanio, proceso->pc, proceso->tabla_paginas, proceso->est_rafaga );
-						break;
-					}
-					default:
-						log_error(logger, "Algo anduvo mal en el server del kernel ");
-						log_info(logger, "Cop: %d", cop);
-						return EXIT_FAILURE;
-				}
-
-			}
-			FD_CLR(fd,&tempReadSet);
-		}
-		i++;
+		log_info(logger,"Program counter %d\n",pcb->pc);
+		send_proceso(cliente_socket_dispatch,pcb,estado);
+		pcb_destroy(pcb);
+		break;
 	}
 
-	/* VIEJO QUE NO FUNCIONA MULTIPLES CONEXIONES ****************************************************+
-
-	int cliente_socket_dispatch = esperar_cliente(logger, "CPU_DISPACHT",server_cpu_dispatch);
-
-	//int cliente_socket_interrupt = esperar_cliente(logger, "CPU_INTERRUPT", server_cpu_interrupt);
-
-	op_code cop;
-	while (cliente_socket_dispatch != -1) {
-
-		if (recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0) <= 0) {
-			log_info(logger, "DISCONNECT!");
-			return EXIT_FAILURE;
-		}
-		cop = PROCESO;
-		switch (cop) {
-			case PROCESO:
-			{
-				PCB_t proceso;
-				proceso.instrucciones = string_array_new();
-
-				if (!recv_proceso(cliente_socket_dispatch, &proceso)) {
-					log_error(logger, "Fallo recibiendo PROCESO");
-					break;
-				}
-
-				log_info(logger, "Ejecutando proceso pid=%d", proceso.pid);
-				for(int i = 0; (proceso.instrucciones)[i] != NULL; i++){
-					log_info(logger, "Instruccion numero %d: %s \n", i, (proceso.instrucciones)[i]);
-				}
-				log_info(logger, "PCB ---> pid=%d | tamanio=%d | pc=%d | tabla_paginas=%d | est_rafaga=%d", proceso.pid, proceso.tamanio, proceso.pc, proceso.tabla_paginas, proceso.est_rafaga );
-				break;
-			}
-			default:
-				log_error(logger, "Algo anduvo mal en el server del kernel ");
-				log_info(logger, "Cop: %d", cop);
-				return EXIT_FAILURE;
-		}
-	}
-
-
-	*******************************************************************************************************************/
-
-//	liberar_conexion(&cliente_socket_dispatch);
-	//liberar_conexion(&cliente_socket_interrupt);
-	log_destroy(logger);
-	config_destroy(config);
+	apagar_cpu();
 
 	return EXIT_SUCCESS;
+}
+
+void pcb_destroy(PCB_t* pcb){
+	list_destroy_and_destroy_elements(pcb->instrucciones,free);
+	free(pcb);
+}
+
+void inicializar_cpu(){
+	logger = log_create("cpu.log", "cpu", 1, LOG_LEVEL_INFO);
+	config = config_create("cpu.config");
+	espera = config_get_int_value(config, "RETARDO_NOOP");
+
+	hay_interrupcion = false;
+
+	char* puerto_dispatch = config_get_string_value(config, "PUERTO_ESCUCHA_DISPATCH");
+	char* puerto_interrupt = config_get_string_value(config, "PUERTO_ESCUCHA_INTERRUPT");
+	server_cpu_dispatch = iniciar_servidor(logger, "CPU_DISPATCH", IP, puerto_dispatch);
+	server_cpu_interrupt = iniciar_servidor(logger, "CPU_INTERRUPT", IP, puerto_interrupt);
+
+	cliente_socket_dispatch = esperar_cliente(logger, "CPU_DISPATCH",server_cpu_dispatch);
+	cliente_socket_interrupt = esperar_cliente(logger, "CPU_INTERRUPT", server_cpu_interrupt);
+
+	pthread_t hilo_interrupciones;
+	pthread_create(&hilo_interrupciones,NULL,(void*)interrupcion,NULL);
+	pthread_detach(hilo_interrupciones);
+
+}
+
+void apagar_cpu(){
+	log_destroy(logger);
+	config_destroy(config);
+	liberar_conexion(&server_cpu_dispatch);
+	liberar_conexion(&server_cpu_interrupt);
+}
+
+op_code iniciar_ciclo_instruccion(PCB_t* pcb){
+	op_code estado = CONTINUE;
+	while (estado == CONTINUE){ // Solo sale si hay una interrupcion, un pedido de I/O, o fin de ejecucion
+		instruccion_t* instruccion_ejecutar = fetch(pcb->instrucciones, pcb->pc);
+
+		if(decode(instruccion_ejecutar)){
+			log_info(logger,"No copio nada :P");
+		//Aca iria fetch operands y la ejecucion de copy
+		} else {
+			estado = execute(instruccion_ejecutar);
+		}
+		if(estado == CONTINUE){
+			estado = check_interrupt();
+		}
+		pcb->pc++;
+	}
+	return estado;
+}
+
+instruccion_t* fetch(t_list* instrucciones, uint32_t pc){
+	return list_get(instrucciones,pc);
+}
+
+int check_interrupt(){
+	if (hay_interrupcion){
+		hay_interrupcion = false;
+		return INTERRUPTION;
+	}
+	return CONTINUE;
+}
+
+int decode(instruccion_t* instruccion_ejecutar ){
+	return instruccion_ejecutar->operacion == 'C';
+}
+
+void ejecutarIO(){
+
+}
+
+void ejecutarRead(){
+
+}
+
+void ejecutarCopy(){
+
+}
+
+void ejecutarWrite(){
+
+}
+
+int execute(instruccion_t* instruccion_ejecutar){
+
+	switch (instruccion_ejecutar->operacion) {
+		case 'N':
+			printf("Vas a tener que esperar perro\n");
+			usleep(espera);
+			break;
+		case 'I':
+			printf("Andate con la IO\n");
+			return BLOCKED;
+			break;
+		case 'R':
+			printf("Que queres que lea boludo\n");
+			ejecutarRead();
+			break;
+		case 'C':
+			printf("No te copio nada\n");
+			ejecutarCopy();
+			break;
+		case 'W':
+			printf("Como voy a leer sin ojos\n");
+			ejecutarWrite();
+			break;
+		case 'E':
+			printf("Hasta la proxima\n");
+			return EXIT;
+			break;
+		default:
+			log_error(logger,"La instruccion se la come\n");
+			break;
+	}
+
+	return 0;
+}
+
+void interrupcion(){
+	//cambia hay_interrupcion a true
+	while(1){
+		void* opcode;
+		recv(cliente_socket_interrupt, opcode, 0, 0);
+		hay_interrupcion = true;
+	}
 }

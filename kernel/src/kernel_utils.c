@@ -8,7 +8,7 @@ pthread_mutex_t mx_lista_ready = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_socket = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_log = PTHREAD_MUTEX_INITIALIZER;
 
-sem_t s_new_ready, s_ready_execute, s_cont_ready;
+sem_t s_new_ready, s_ready_execute, s_cont_ready, s_cpu_desocupado;
 
 t_dictionary* sockets;
 t_queue* cola_new;
@@ -17,7 +17,7 @@ t_queue* cola_blocked;
 
 //safe_log* safe_logger;
 
-int pid_sig, estimacion_inicial, grado_multiprogramacion, multiprogramacion_actual, conexion_cpu_dispatch, cpu_desocupado = 1;
+int pid_sig, estimacion_inicial, grado_multiprogramacion, multiprogramacion_actual, conexion_cpu_dispatch;
 char *algoritmo_config, *ip_cpu, *puerto_cpu_dispatch;
 
 PCB_t* pcb_create(uint16_t pid,
@@ -65,6 +65,7 @@ void inicializar_kernel(){
 
 	sem_init(&s_new_ready, 0, 0);
 	sem_init(&s_cont_ready, 0, 0); // Incrementa al sumar un proceso a ready y decrementa al ejecutarlo
+	sem_init(&s_cpu_desocupado, 0, 1);
 
 	pthread_t hilo_pasaje_new_ready;
 	pthread_create(&hilo_pasaje_new_ready,NULL,(void*)pasaje_new_ready,NULL);
@@ -105,7 +106,6 @@ void procesar_socket(thread_args* argumentos){
 	printf("Entrando al procesar socket :)\n");
 	int cliente_socket = argumentos->cliente;
 	char* server_name = string_duplicate(argumentos->server_name);
-	int32_t resultOk = 0;
 	int32_t resultError = -1;
 	free(argumentos);
 	op_code cop;
@@ -209,22 +209,67 @@ void loggear_estado_de_colas(){
 void fifo_ready_execute(){
 	while(1){
 		sem_wait(&s_ready_execute);
-		if(cpu_desocupado){ // Para que no ejecute cada vez que un proceso pasa de new a ready
-			sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
-			PCB_t* proceso = malloc(sizeof(PCB_t));
-			pthread_mutex_lock(&mx_lista_ready);
-			proceso = list_remove(cola_ready, 0);
-			pthread_mutex_unlock(&mx_lista_ready);
-			pthread_mutex_lock(&mx_log);
-			log_info(logger,"\n Mandando proceso %d a ejecutar",proceso->pid);
-			pthread_mutex_unlock(&mx_log);
-			pthread_mutex_lock(&mx_cpu_desocupado);
-			cpu_desocupado = 0;
-			pthread_mutex_unlock(&mx_cpu_desocupado);
-			send_proceso(conexion_cpu_dispatch, proceso);
-			pcb_destroy(proceso);
-			}
+		sem_wait(&s_cpu_desocupado);
+		// Para que no ejecute cada vez que un proceso pasa de new a ready
+		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
+		PCB_t* proceso = malloc(sizeof(PCB_t));
+		pthread_mutex_lock(&mx_lista_ready);
+		proceso = list_remove(cola_ready, 0);
+		pthread_mutex_unlock(&mx_lista_ready);
+		pthread_mutex_lock(&mx_log);
+		log_info(logger,"\n Mandando proceso %d a ejecutar",proceso->pid);
+		pthread_mutex_unlock(&mx_log);
+		pthread_mutex_lock(&mx_cpu_desocupado);
+		pthread_mutex_unlock(&mx_cpu_desocupado);
+		send_proceso(conexion_cpu_dispatch, proceso, PROCESO);
+		pcb_destroy(proceso);
+		esperar_cpu();
 	}
+}
+
+void esperar_cpu(){
+	op_code cop;
+	int32_t resultOk = 0;
+	while (conexion_cpu_dispatch != -1) {
+		if (recv(conexion_cpu_dispatch, &cop, sizeof(op_code), 0) <= 0) {
+			pthread_mutex_lock(&mx_log);
+			log_error(logger,"DISCONNECT FAILURE!");
+			pthread_mutex_unlock(&mx_log);
+			return;
+		}
+		PCB_t* pcb = malloc(sizeof(pcb));
+		if (!recv_proceso(conexion_cpu_dispatch, pcb)) {
+			pthread_mutex_lock(&mx_log);
+			log_error(logger,"Fallo recibiendo PROGRAMA");
+			pthread_mutex_unlock(&mx_log);
+			break;
+		}
+		switch (cop) {
+			case EXIT:
+				//le avisamos a la consola que se termino de ejecutar el proceso
+				int cliente_socket = dictionary_get(sockets,itoa(pcb->pid));
+				send(cliente_socket,&resultOk,sizeof(resultOk),0);
+				log_info(logger, "Proceso %d terminado :) siiiii",pcb->pid);
+				break;
+			case INTERRUPTION:
+				log_info(logger,"Proceso %d desalojado :( lo siento",pcb->pid);
+				list_add(cola_ready,pcb);
+				break;
+			case BLOCKED:
+				//bloqueamos el proceso
+				queue_push(cola_blocked,pcb);
+				log_info(logger, "Proceso %d bloqueado :( mal ahi pa",pcb->pid);
+				break;
+			default:
+				pthread_mutex_lock(&mx_log);
+				log_error(logger, "Algo anduvo mal en el server del kernel\n Cop: %d",cop);
+				pthread_mutex_unlock(&mx_log);
+		}
+		sem_post(&s_cpu_desocupado);
+		sem_post(&s_ready_execute);
+
+	}
+
 }
 
 /****Hilo READY -> EXECUTE (SRT) ***/

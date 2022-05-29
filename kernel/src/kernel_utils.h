@@ -17,6 +17,15 @@
 #include "../../shared/src/structures.h"
 #include "../../shared/src/pcb.h"
 
+typedef enum {
+    PROGRAMA,
+	PROCESO,
+	INTERRUPTION,
+	EXIT,
+	CONTINUE,
+	BLOCKED
+} op_code;
+
 typedef struct{
 	int cliente;
 	char* server_name;
