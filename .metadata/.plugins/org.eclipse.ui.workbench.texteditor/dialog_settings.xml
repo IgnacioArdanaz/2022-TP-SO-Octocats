@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="aaa" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="resultado"/>
+			<item value="resultado_ok"/>
+			<item value="send_proce"/>
+			<item value="recibir"/>
 			<item value="aaa"/>
 			<item value="safe"/>
 			<item value="impri"/>
@@ -19,10 +23,6 @@
 			<item value="send_pr"/>
 			<item value="sendf"/>
 			<item value="atoi"/>
-			<item value="//&#x09;&#x09;&#x09;&#x09;pthread_t hilo_pasaje_new_ready;"/>
-			<item value="//#include &quot;kernel_utils.h&quot;"/>
-			<item value="#include &quot;kernel_utils.h&quot;"/>
-			<item value="iota"/>
 		</list>
 		<list key="replacehistory">
 		</list>

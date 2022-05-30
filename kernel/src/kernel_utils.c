@@ -17,30 +17,9 @@ t_queue* cola_blocked;
 
 //safe_log* safe_logger;
 
-int pid_sig, estimacion_inicial, grado_multiprogramacion, multiprogramacion_actual, conexion_cpu_dispatch;
-char *algoritmo_config, *ip_cpu, *puerto_cpu_dispatch;
-
-PCB_t* pcb_create(uint16_t pid,
-		uint16_t tamanio,
-		t_list* instrucciones,
-		uint32_t pc,
-		uint32_t tabla_paginas,
-		double est_rafaga){
-	PCB_t* proceso = malloc(sizeof(PCB_t));
-	proceso->instrucciones = list_create();
-	proceso->pid = pid;
-	proceso->tamanio = tamanio;
-	proceso->pc = pc;
-	proceso->instrucciones = instrucciones;
-	proceso->tabla_paginas = tabla_paginas;
-	proceso->est_rafaga = est_rafaga;
-	return proceso;
-}
-
-void pcb_destroy(PCB_t* pcb){
-	list_destroy_and_destroy_elements(pcb->instrucciones,free);
-	free(pcb);
-}
+int pid_sig, estimacion_inicial, grado_multiprogramacion,
+	multiprogramacion_actual, conexion_cpu_dispatch, conexion_cpu_interrupt;
+char *algoritmo_config, *ip_cpu, *puerto_cpu_dispatch, *puerto_cpu_interrupt;
 
 void inicializar_kernel(){
 	logger = log_create("kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
@@ -59,10 +38,11 @@ void inicializar_kernel(){
 	estimacion_inicial = config_get_double_value(config,"ESTIMACION_INICIAL");
 	ip_cpu = config_get_string_value(config,"IP_CPU");
 	puerto_cpu_dispatch = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
+	puerto_cpu_interrupt = config_get_string_value(config,"PUERTO_CPU_INTERRUPT");
 	algoritmo_config = config_get_string_value(config,"ALGORITMO_PLANIFICACION");
 
 	conexion_cpu_dispatch = crear_conexion(logger, "CPU DISPATCH", ip_cpu, puerto_cpu_dispatch);
-
+	conexion_cpu_interrupt= crear_conexion(logger, "CPU INTERRUPT", ip_cpu, puerto_cpu_interrupt);
 	sem_init(&s_new_ready, 0, 0);
 	sem_init(&s_cont_ready, 0, 0); // Incrementa al sumar un proceso a ready y decrementa al ejecutarlo
 	sem_init(&s_cpu_desocupado, 0, 1);
@@ -73,9 +53,9 @@ void inicializar_kernel(){
 
 	sem_init(&s_ready_execute, 0, 0);
 	pthread_t hilo_ready_execute;
-	if (strcmp(algoritmo_config, "FIFO"))
+	if (strcmp(algoritmo_config, "FIFO") == 0)
 		pthread_create(&hilo_ready_execute,NULL,(void*)fifo_ready_execute,NULL);
-	else if (strcmp(algoritmo_config, "SRT"))
+	else if (strcmp(algoritmo_config, "SRT") == 0)
 		pthread_create(&hilo_ready_execute,NULL,(void*)srt_ready_execute,NULL);
 	else{ //si no es ni FIFO ni SRT, loggea el error y sale del programa
 		log_error(logger,"Error en la configuracion: \"ALGORITMO_PLANIFICACION\" debe ser \"FIFO\" o \"SRT\"");
@@ -150,6 +130,11 @@ void procesar_socket(thread_args* argumentos){
 				queue_push(cola_new, proceso);
 				pthread_mutex_unlock(&mx_cola_new);
 
+//				char* key;
+//				pthread_mutex_lock(&mx_socket);
+//				dictionary_put(sockets,,cliente_socket);
+//				pthread_mutex_unlock(&mx_socket);
+
 				sem_post(&s_new_ready); //Avisa al hilo planificador de pasaje de new a ready que debe ejecutarse.
 
 
@@ -208,6 +193,7 @@ void loggear_estado_de_colas(){
 /****Hilo READY -> EXECUTE (FIFO) ***/
 void fifo_ready_execute(){
 	while(1){
+		log_info(logger,"Llamado a fifo");
 		sem_wait(&s_ready_execute);
 		sem_wait(&s_cpu_desocupado);
 		// Para que no ejecute cada vez que un proceso pasa de new a ready
@@ -245,12 +231,13 @@ void esperar_cpu(){
 			break;
 		}
 		switch (cop) {
-			case EXIT:
-				//le avisamos a la consola que se termino de ejecutar el proceso
-				int cliente_socket = dictionary_get(sockets,itoa(pcb->pid));
-				send(cliente_socket,&resultOk,sizeof(resultOk),0);
+			case EXIT:{
+//				int* el_socket = dictionary_get(sockets,atoi(pcb->pid));
+				int el_socket = 0;
+				send(el_socket,&resultOk,sizeof(resultOk),0);
 				log_info(logger, "Proceso %d terminado :) siiiii",pcb->pid);
 				break;
+			}
 			case INTERRUPTION:
 				log_info(logger,"Proceso %d desalojado :( lo siento",pcb->pid);
 				list_add(cola_ready,pcb);

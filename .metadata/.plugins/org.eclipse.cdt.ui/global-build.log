@@ -1,77 +1,80 @@
-17:26:00 **** Incremental Build of configuration Debug for project cpu ****
+21:17:14 **** Incremental Build of configuration Debug for project shared ****
+make all 
+Building file: ../src/protocol.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/protocol.d" -MT"src/protocol.o" -o "src/protocol.o" "../src/protocol.c"
+Finished building: ../src/protocol.c
+ 
+Building target: libshared.so
+Invoking: Cross GCC Linker
+gcc -shared -o "libshared.so"  ./src/pcb.o ./src/protocol.o ./src/safe_log.o ./src/sockets.o   -lcommons
+Finished building target: libshared.so
+ 
+21:22:02 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+Building target: cpu
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "cpu"  ./src/cpu_main.o   -lcommons -lshared -lpthread
+Finished building target: cpu
+ 
+21:22:12 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building target: kernel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lshared -lpthread
+Finished building target: kernel
+ 
+21:22:36 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+21:22:47 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+21:23:00 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+21:23:06 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+21:26:42 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 Building file: ../src/cpu_main.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cpu_main.d" -MT"src/cpu_main.o" -o "src/cpu_main.o" "../src/cpu_main.c"
-In file included from ../src/cpu_main.c:1:0:
-../src/cpu_main.h:20:5: error: redeclaration of enumerator ‘PROGRAMA’
-     PROGRAMA,
-     ^
-In file included from ../src/../../shared/src/protocol.c:1:0,
-                 from ../src/cpu_main.h:14,
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cpu_main.d" -MT"src/cpu_main.o" -o "src/cpu_main.o" "../src/cpu_main.c"
+In file included from ../src/cpu_main.h:14:0,
                  from ../src/cpu_main.c:1:
-../src/../../shared/src/protocol.h:18:5: note: previous definition of ‘PROGRAMA’ was here
-     PROGRAMA,
-     ^
-In file included from ../src/cpu_main.c:1:0:
-../src/cpu_main.h:21:2: error: redeclaration of enumerator ‘PROCESO’
-  PROCESO,
-  ^
-In file included from ../src/../../shared/src/protocol.c:1:0,
-                 from ../src/cpu_main.h:14,
-                 from ../src/cpu_main.c:1:
-../src/../../shared/src/protocol.h:19:2: note: previous definition of ‘PROCESO’ was here
-  PROCESO,
-  ^
-In file included from ../src/cpu_main.c:1:0:
-../src/cpu_main.h:22:2: error: redeclaration of enumerator ‘INTERRUPTION’
-  INTERRUPTION,
-  ^
-In file included from ../src/../../shared/src/protocol.c:1:0,
-                 from ../src/cpu_main.h:14,
-                 from ../src/cpu_main.c:1:
-../src/../../shared/src/protocol.h:20:2: note: previous definition of ‘INTERRUPTION’ was here
-src/subdir.mk:18: recipe for target 'src/cpu_main.o' failed
-  INTERRUPTION,
-  ^
-In file included from ../src/cpu_main.c:1:0:
-../src/cpu_main.h:23:2: error: redeclaration of enumerator ‘EXIT’
-  EXIT,
-  ^
-In file included from ../src/../../shared/src/protocol.c:1:0,
-                 from ../src/cpu_main.h:14,
-                 from ../src/cpu_main.c:1:
-../src/../../shared/src/protocol.h:21:2: note: previous definition of ‘EXIT’ was here
-  EXIT,
-  ^
-In file included from ../src/cpu_main.c:1:0:
-../src/cpu_main.h:24:2: error: redeclaration of enumerator ‘CONTINUE’
-  CONTINUE,
-  ^
-In file included from ../src/../../shared/src/protocol.c:1:0,
-                 from ../src/cpu_main.h:14,
-                 from ../src/cpu_main.c:1:
-../src/../../shared/src/protocol.h:22:2: note: previous definition of ‘CONTINUE’ was here
-  CONTINUE,
-  ^
-In file included from ../src/cpu_main.c:1:0:
-../src/cpu_main.h:25:2: error: redeclaration of enumerator ‘BLOCKED’
-  BLOCKED
-  ^
-In file included from ../src/../../shared/src/protocol.c:1:0,
-                 from ../src/cpu_main.h:14,
-                 from ../src/cpu_main.c:1:
-../src/../../shared/src/protocol.h:23:2: note: previous definition of ‘BLOCKED’ was here
-  BLOCKED
-  ^
-In file included from ../src/cpu_main.c:1:0:
-../src/cpu_main.h:26:3: error: conflicting types for ‘op_code’
- } op_code;
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/cpu_main.c: In function ‘interrupcion’:
+../src/cpu_main.c:153:3: warning: ‘opcode’ is used uninitialized in this function [-Wuninitialized]
+   recv(cliente_socket_interrupt, opcode, 0, 0);
    ^
-In file included from ../src/../../shared/src/protocol.c:1:0,
-                 from ../src/cpu_main.h:14,
-                 from ../src/cpu_main.c:1:
-../src/../../shared/src/protocol.h:24:3: note: previous declaration of ‘op_code’ was here
- } op_code;
-   ^
-make: *** [src/cpu_main.o] Error 1
+Finished building: ../src/cpu_main.c
+ 
+Building target: cpu
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "cpu"  ./src/cpu_main.o   -lcommons -lshared -lpthread
+Finished building target: cpu
+ 
+21:26:46 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+21:27:00 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+21:27:04 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+21:27:07 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.

@@ -2358,3 +2358,53 @@
 
 [INFO] 12:25:21:667 CONSOLA/(5446:5446): resultado -> 5
 
+[INFO] 20:40:05:205 CONSOLA/(4935:4935): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 20:40:05:217 CONSOLA/(4935:4935): Programa enviado al kernel correctamente!
+[INFO] 20:40:35:492 CONSOLA/(4950:4950): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 20:40:35:496 CONSOLA/(4950:4950): Programa enviado al kernel correctamente!
+[INFO] 20:40:41:123 CONSOLA/(4963:4963): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 20:40:41:124 CONSOLA/(4963:4963): Programa enviado al kernel correctamente!
+[INFO] 20:42:42:789 CONSOLA/(4963:4963): resultado -> 5
+
+[INFO] 20:42:42:789 CONSOLA/(4950:4950): resultado -> 5
+
+[INFO] 20:42:42:790 CONSOLA/(4935:4935): resultado -> 5
+
+[INFO] 20:45:39:542 CONSOLA/(5108:5108): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 20:45:39:542 CONSOLA/(5108:5108): Programa enviado al kernel correctamente!
+[INFO] 20:49:34:208 CONSOLA/(5186:5186): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 20:49:34:209 CONSOLA/(5186:5186): Programa enviado al kernel correctamente!
+[INFO] 20:49:51:644 CONSOLA/(5186:5186): resultado -> 5
+
+[INFO] 20:51:40:776 CONSOLA/(5232:5232): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 20:51:40:776 CONSOLA/(5232:5232): Programa enviado al kernel correctamente!
+[INFO] 20:52:36:521 CONSOLA/(5232:5232): resultado -> 5
+
+[INFO] 20:53:59:671 CONSOLA/(5306:5306): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 20:53:59:672 CONSOLA/(5306:5306): Programa enviado al kernel correctamente!
+[INFO] 20:54:42:941 CONSOLA/(5306:5306): resultado -> 5
+
+[INFO] 20:56:20:327 CONSOLA/(5384:5384): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 20:56:20:328 CONSOLA/(5384:5384): Programa enviado al kernel correctamente!
+[INFO] 20:56:52:872 CONSOLA/(5384:5384): resultado -> 5
+
+[INFO] 21:02:03:808 CONSOLA/(5646:5646): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 21:02:03:808 CONSOLA/(5646:5646): Programa enviado al kernel correctamente!
+[INFO] 21:02:39:771 CONSOLA/(5646:5646): resultado -> 5
+
+[INFO] 21:05:51:871 CONSOLA/(5799:5799): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 21:05:51:871 CONSOLA/(5799:5799): Programa enviado al kernel correctamente!
+[INFO] 21:07:51:816 CONSOLA/(5888:5888): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 21:07:51:817 CONSOLA/(5888:5888): Programa enviado al kernel correctamente!
+[INFO] 21:13:21:812 CONSOLA/(6021:6021): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 21:13:21:813 CONSOLA/(6021:6021): Programa enviado al kernel correctamente!
+[INFO] 21:16:59:128 CONSOLA/(6118:6118): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 21:16:59:128 CONSOLA/(6118:6118): Programa enviado al kernel correctamente!
+[INFO] 21:17:08:184 CONSOLA/(6118:6118): resultado -> 5
+
+[INFO] 21:23:08:155 CONSOLA/(6765:6765): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 21:23:08:155 CONSOLA/(6765:6765): Programa enviado al kernel correctamente!
+[INFO] 21:27:09:474 CONSOLA/(6914:6914): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 21:27:09:474 CONSOLA/(6914:6914): Programa enviado al kernel correctamente!
+[INFO] 21:27:09:922 CONSOLA/(6914:6914): resultado -> 5
+

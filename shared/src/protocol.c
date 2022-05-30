@@ -92,7 +92,7 @@ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t*
 bool send_proceso(int fd, PCB_t *proceso, op_code codigo) {
     size_t size;
     printf("A punto de serializar un proceso!!!");
-    void* stream = serializar_proceso(&size, proceso);
+    void* stream = serializar_proceso(&size, proceso, codigo);
     if (send(fd, stream, size, 0) != size) {
         free(stream);
         return false;
@@ -102,7 +102,7 @@ bool send_proceso(int fd, PCB_t *proceso, op_code codigo) {
     return true;
 }
 
-static void* serializar_proceso(size_t* size, PCB_t *proceso) {
+static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
     size_t inst_size = sizeof(char) + sizeof(int32_t)*2;
     size_t length_lista = list_size(proceso->instrucciones);
     size_t codigo_size = inst_size*length_lista;
@@ -120,7 +120,7 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso) {
 
     void* stream = malloc(*size);
 	size_t acumulador = 0;
-    op_code cop = PROCESO;
+    op_code cop = codigo;
     memcpy(stream + acumulador, &cop, sizeof(op_code));
     acumulador += sizeof(op_code);
     memcpy(stream + acumulador, &size_payload, sizeof(size_t));

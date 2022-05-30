@@ -10,20 +10,12 @@
 #include<commons/config.h>
 #include<readline/readline.h>
 #include<semaphore.h>
-#include "../../shared/src/sockets.c"
-#include "../../shared/src/protocol.c"
-#include "../../shared/src/structures.h"
+#include<sockets.h>
+#include<protocol.h>
+#include<structures.h>
+#include<pcb.h>
 
 #define IP "127.0.0.1"
-
-typedef enum {
-    PROGRAMA,
-	PROCESO,
-	INTERRUPTION,
-	EXIT,
-	CONTINUE,
-	BLOCKED
-} op_code;
 
 void inicializar_cpu();
 void apagar_cpu();

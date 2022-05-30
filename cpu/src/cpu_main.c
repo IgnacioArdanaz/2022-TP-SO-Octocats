@@ -12,6 +12,10 @@ int main(void) {
 
 	while(1){
 		PCB_t* pcb = malloc(sizeof(PCB_t));
+		pcb->instrucciones = list_create();
+		op_code cop;
+		recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0);
+		log_info(logger,"CO OP: %d",cop);
 		recv_proceso(cliente_socket_dispatch,pcb);
 		log_info(logger,"Program counter %d\n",pcb->pc);
 
@@ -26,11 +30,6 @@ int main(void) {
 	apagar_cpu();
 
 	return EXIT_SUCCESS;
-}
-
-void pcb_destroy(PCB_t* pcb){
-	list_destroy_and_destroy_elements(pcb->instrucciones,free);
-	free(pcb);
 }
 
 void inicializar_cpu(){

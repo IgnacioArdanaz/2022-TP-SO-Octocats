@@ -12,19 +12,10 @@
 #include<commons/collections/queue.h>
 #include<commons/collections/list.h>
 #include<commons/collections/dictionary.h>
-#include "../../shared/src/sockets.h"
-#include "../../shared/src/protocol.h"
-#include "../../shared/src/structures.h"
-#include "../../shared/src/pcb.h"
-
-typedef enum {
-    PROGRAMA,
-	PROCESO,
-	INTERRUPTION,
-	EXIT,
-	CONTINUE,
-	BLOCKED
-} op_code;
+#include <sockets.h>
+#include <protocol.h>
+#include <structures.h>
+#include <pcb.h>
 
 typedef struct{
 	int cliente;
@@ -42,6 +33,7 @@ void fifo_ready_execute();
 void srt_ready_execute();
 void loggear_estado_de_colas();
 void imprimir_lista_ready();
+void esperar_cpu();
 PCB_t* fifo();
 PCB_t* sjf();
 
