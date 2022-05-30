@@ -14,13 +14,12 @@ int main(void) {
 		PCB_t* pcb = pcb_create();
 		op_code cop;
 		recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0);
-		log_info(logger,"CO OP: %d",cop);
 		recv_proceso(cliente_socket_dispatch,pcb);
-		log_info(logger,"Program counter %d\n",pcb->pc);
+		log_info(logger,"Program counter %d",pcb->pc);
 
 		op_code estado = iniciar_ciclo_instruccion(pcb);
 
-		log_info(logger,"Program counter %d\n",pcb->pc);
+		log_info(logger,"Program counter %d (despues de ejecutar)",pcb->pc);
 		send_proceso(cliente_socket_dispatch,pcb,estado);
 		pcb_destroy(pcb);
 	}

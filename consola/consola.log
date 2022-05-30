@@ -2440,3 +2440,35 @@
 
 [INFO] 22:52:04:776 CONSOLA/(5152:5152): resultado -> 5
 
+[INFO] 16:37:31:080 CONSOLA/(13070:13070): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 16:37:31:082 CONSOLA/(13070:13070): Programa enviado al kernel correctamente!
+[INFO] 16:37:36:135 CONSOLA/(13070:13070): resultado -> 5
+
+[INFO] 16:45:43:735 CONSOLA/(13639:13639): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 16:45:43:737 CONSOLA/(13639:13639): Programa enviado al kernel correctamente!
+[INFO] 16:49:46:845 CONSOLA/(13639:13639): resultado -> 5
+
+[INFO] 16:51:30:420 CONSOLA/(14053:14053): IP: 127.0.0.1 | Puerto: 8000
+[INFO] 16:51:30:427 CONSOLA/(14053:14053): Programa enviado al kernel correctamente!
+[INFO] 16:52:21:635 CONSOLA/(14053:14053): resultado -> 5
+
+[INFO] 17:11:44:606 CONSOLA/(15195:15195): Instruccion numero 0: I 3000 -1
+[INFO] 17:11:44:761 CONSOLA/(15195:15195): Instruccion numero 1: N -1 -1
+[INFO] 17:11:44:761 CONSOLA/(15195:15195): Instruccion numero 2: N -1 -1
+[INFO] 17:11:44:761 CONSOLA/(15195:15195): Instruccion numero 3: W 4 42
+[INFO] 17:11:44:761 CONSOLA/(15195:15195): Instruccion numero 4: C 0 4
+[INFO] 17:11:44:762 CONSOLA/(15195:15195): Instruccion numero 5: R 0 -1
+[INFO] 17:11:44:762 CONSOLA/(15195:15195): Instruccion numero 6: E -1 -1
+[INFO] 17:11:44:762 CONSOLA/(15195:15195): Programa enviado al kernel correctamente!
+[INFO] 17:11:51:228 CONSOLA/(15209:15209): Instruccion numero 0: I 3000 -1
+[INFO] 17:11:51:228 CONSOLA/(15209:15209): Instruccion numero 1: N -1 -1
+[INFO] 17:11:51:228 CONSOLA/(15209:15209): Instruccion numero 2: N -1 -1
+[INFO] 17:11:51:228 CONSOLA/(15209:15209): Instruccion numero 3: W 4 42
+[INFO] 17:11:51:228 CONSOLA/(15209:15209): Instruccion numero 4: C 0 4
+[INFO] 17:11:51:228 CONSOLA/(15209:15209): Instruccion numero 5: R 0 -1
+[INFO] 17:11:51:228 CONSOLA/(15209:15209): Instruccion numero 6: E -1 -1
+[INFO] 17:11:51:228 CONSOLA/(15209:15209): Programa enviado al kernel correctamente!
+[INFO] 17:12:09:793 CONSOLA/(15209:15209): Resultado -> 3
+
+[INFO] 17:12:09:793 CONSOLA/(15195:15195): Resultado -> 3
+

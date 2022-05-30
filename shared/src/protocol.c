@@ -58,7 +58,6 @@ bool recv_programa(int fd, t_list* instrucciones, uint16_t* tamanio) {
         free(stream);
         return false;
     }
-    printf("A punto de deserializar un programa!!!\n");
     deserializar_programa(stream, instrucciones, tamanio);
     free(stream);
     return true;
@@ -91,13 +90,11 @@ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t*
 // Envio y serializacion PROGRAMA
 bool send_proceso(int fd, PCB_t *proceso, op_code codigo) {
     size_t size;
-    printf("A punto de serializar un proceso!!!");
     void* stream = serializar_proceso(&size, proceso, codigo);
     if (send(fd, stream, size, 0) != size) {
         free(stream);
         return false;
     }
-    printf("Si lees esto sos un groso!!\n");
     free(stream);
     return true;
 }

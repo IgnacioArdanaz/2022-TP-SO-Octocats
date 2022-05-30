@@ -65,3 +65,35 @@
 [INFO] 22:52:04:778 cpu/(5110:5110): CO OP: 1
 [INFO] 22:52:04:778 cpu/(5110:5110): Program counter 1
 
+[INFO] 16:37:31:093 cpu/(13038:13038): CO OP: 1
+[INFO] 16:37:31:108 cpu/(13038:13038): Program counter 0
+
+[INFO] 16:37:31:109 cpu/(13038:13038): Program counter 1
+
+[INFO] 16:45:43:749 cpu/(13603:13603): CO OP: 1
+[INFO] 16:45:43:750 cpu/(13603:13603): Program counter 0
+
+[INFO] 16:45:43:750 cpu/(13603:13603): Program counter 1
+
+[INFO] 16:49:46:848 cpu/(13603:13603): CO OP: 1
+[INFO] 16:49:46:848 cpu/(13603:13603): Program counter 1
+
+[INFO] 16:50:12:218 cpu/(13880:13880): CO OP: 1
+[INFO] 16:50:12:218 cpu/(13880:13880): Program counter 155391160
+
+[INFO] 16:50:33:192 cpu/(13938:13938): CO OP: 1
+[INFO] 16:50:33:192 cpu/(13938:13938): Program counter 164766904
+
+[INFO] 16:51:30:427 cpu/(14016:14016): CO OP: 1
+[INFO] 16:51:30:428 cpu/(14016:14016): Program counter 0
+
+[INFO] 16:51:30:432 cpu/(14016:14016): Program counter 1
+
+[INFO] 16:52:21:636 cpu/(14016:14016): CO OP: 1
+[INFO] 16:52:21:636 cpu/(14016:14016): Program counter 1
+
+[INFO] 17:11:44:779 cpu/(14943:14943): Program counter 0
+[INFO] 17:11:44:798 cpu/(14943:14943): Program counter 1 (despues de ejecutar)
+[INFO] 17:11:51:234 cpu/(14943:14943): Program counter 0
+[INFO] 17:11:51:234 cpu/(14943:14943): Program counter 1 (despues de ejecutar)
+[INFO] 17:12:09:796 cpu/(14943:14943): Program counter 1

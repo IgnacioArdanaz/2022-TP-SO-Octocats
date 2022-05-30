@@ -245,3 +245,45 @@
 [INFO] 22:51:36:166 KERNEL/(5138:5170): Instruccion numero 6: E -1 -1
 [INFO] 22:51:36:167 KERNEL/(5138:5145): (new -> ready) Cola de new: 0
 (new -> ready) Cola de ready: 1
+[INFO] 16:37:26:371 KERNEL/(13054:13061): Llamado a fifo
+[INFO] 16:37:31:088 KERNEL/(13054:13075): Tamanio del programa: 200
+[INFO] 16:37:31:088 KERNEL/(13054:13075): Instruccion numero 0: I 3000 -1
+[INFO] 16:37:31:088 KERNEL/(13054:13075): Instruccion numero 1: N -1 -1
+[INFO] 16:37:31:090 KERNEL/(13054:13075): Instruccion numero 2: N -1 -1
+[INFO] 16:37:31:092 KERNEL/(13054:13075): Instruccion numero 3: W 4 42
+[INFO] 16:37:31:092 KERNEL/(13054:13075): Instruccion numero 4: C 0 4
+[INFO] 16:37:31:093 KERNEL/(13054:13075): Instruccion numero 5: R 0 -1
+[INFO] 16:37:31:093 KERNEL/(13054:13075): Instruccion numero 6: E -1 -1
+[INFO] 16:37:31:093 KERNEL/(13054:13060): (new -> ready) Cola de new: 0
+(new -> ready) Cola de ready: 1
+[INFO] 16:37:31:093 KERNEL/(13054:13061): 
+ Mandando proceso 1 a ejecutar
+[INFO] 16:37:31:109 KERNEL/(13054:13061): Proceso 1 bloqueado :( mal ahi pa
+[ERROR] 16:37:34:124 KERNEL/(13054:13061): DISCONNECT FAILURE!
+[INFO] 16:37:34:125 KERNEL/(13054:13061): Llamado a fifo
+[INFO] 16:45:26:184 KERNEL/(13614:13621): Llamado a fifo
+[INFO] 16:45:43:744 KERNEL/(13614:13644): Tamanio del programa: 200
+[INFO] 16:45:43:748 KERNEL/(13614:13644): Instruccion numero 0: I 3000 -1
+[INFO] 16:45:43:748 KERNEL/(13614:13644): Instruccion numero 1: N -1 -1
+[INFO] 16:45:43:748 KERNEL/(13614:13644): Instruccion numero 2: N -1 -1
+[INFO] 16:45:43:748 KERNEL/(13614:13644): Instruccion numero 3: W 4 42
+[INFO] 16:45:43:748 KERNEL/(13614:13644): Instruccion numero 4: C 0 4
+[INFO] 16:45:43:749 KERNEL/(13614:13644): Instruccion numero 5: R 0 -1
+[INFO] 16:45:43:749 KERNEL/(13614:13644): Instruccion numero 6: E -1 -1
+[INFO] 16:45:43:749 KERNEL/(13614:13620): (new -> ready) Cola de new: 0
+(new -> ready) Cola de ready: 1
+[INFO] 16:45:43:749 KERNEL/(13614:13621): 
+ Mandando proceso 1 a ejecutar
+[INFO] 16:45:43:750 KERNEL/(13614:13621): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 16:45:43:750 KERNEL/(13614:13621): Llamado a fifo
+[ERROR] 16:50:12:213 KERNEL/(13910:13910): Error creando el socket :(
+[ERROR] 16:50:33:191 KERNEL/(13952:13952): Error creando el socket :(
+[INFO] 16:51:30:427 KERNEL/(14029:14035): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 16:51:30:427 KERNEL/(14029:14036): Mandando proceso 1 a ejecutar
+[INFO] 16:51:30:432 KERNEL/(14029:14036): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 17:11:44:764 KERNEL/(15070:15076): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 17:11:44:779 KERNEL/(15070:15077): Mandando proceso 1 a ejecutar
+[INFO] 17:11:44:798 KERNEL/(15070:15077): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 17:11:51:233 KERNEL/(15070:15076): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 17:11:51:234 KERNEL/(15070:15077): Mandando proceso 2 a ejecutar
+[INFO] 17:11:51:234 KERNEL/(15070:15077): Proceso 2 bloqueado :( mal ahi pa

@@ -76,14 +76,12 @@ int escuchar_servidor(char* name, int server_socket){
 		arg->server_name = name;
 		pthread_create(&hilo, NULL, (void*) procesar_socket, (void*) arg);
 		pthread_detach(hilo);
-		printf("Cliente procesado por kernel\n");
 		return 1;
 	}
 	return 0;
 }
 
 void procesar_socket(thread_args* argumentos){
-	printf("Entrando al procesar socket :)\n");
 	int cliente_socket = argumentos->cliente;
 	char* server_name = string_duplicate(argumentos->server_name);
 	int32_t resultError = -1;
@@ -108,16 +106,6 @@ void procesar_socket(thread_args* argumentos){
 					log_error(logger,"Fallo recibiendo PROGRAMA");
 					pthread_mutex_unlock(&mx_log);
 					break;
-				}
-				pthread_mutex_lock(&mx_log);
-				log_info(logger,"Tamanio del programa: %d", tamanio);
-				pthread_mutex_unlock(&mx_log);
-
-				for(int i = 0; i <  list_size(instrucciones); i++){
-					instruccion_t* instruccion = list_get(instrucciones,i);
-					pthread_mutex_lock(&mx_log);
-					log_info(logger, "Instruccion numero %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
-					pthread_mutex_unlock(&mx_log);
 				}
 
 				pthread_mutex_lock(&mx_pid_sig);
@@ -165,19 +153,16 @@ void pasaje_new_ready(){
 			printf("\nPROCESO %d POPEADO COLA NEW\n", proceso->pid);
 			pthread_mutex_unlock(&mx_cola_new);
 			pthread_mutex_lock(&mx_lista_ready);
-			imprimir_lista_ready();
 			list_add(cola_ready,proceso);
 			pthread_mutex_unlock(&mx_lista_ready);
 			sem_post(&s_cont_ready); //Sumo uno al contador de ready
 			pthread_mutex_lock(&mx_multip_actual);
 			multiprogramacion_actual++;
 			pthread_mutex_unlock(&mx_multip_actual);
-			loggear_estado_de_colas();
 			sem_post(&s_ready_execute);
 		}
-		printf("\n(new -> ready) Cola de ready: %d",list_size(cola_ready));
-		imprimir_lista_ready();
-		printf("\n(new -> ready) Cola de new : %d\n", queue_size(cola_new));
+		loggear_estado_de_colas();
+		//imprimir_lista_ready();
 	}
 
 }
@@ -185,7 +170,7 @@ void pasaje_new_ready(){
 void loggear_estado_de_colas(){
 	pthread_mutex_lock(&mx_log);
 	log_info(logger,
-			"(new -> ready) Cola de new: %d\n(new -> ready) Cola de ready: %d",
+			"(new -> ready) Cola de new: %d | (new -> ready) Cola de ready: %d",
 			queue_size(cola_new),
 			list_size(cola_ready));
 	pthread_mutex_unlock(&mx_log);
@@ -194,7 +179,6 @@ void loggear_estado_de_colas(){
 /****Hilo READY -> EXECUTE (FIFO) ***/
 void fifo_ready_execute(){
 	while(1){
-		log_info(logger,"Llamado a fifo");
 		sem_wait(&s_ready_execute);
 		sem_wait(&s_cpu_desocupado);
 		// Para que no ejecute cada vez que un proceso pasa de new a ready
@@ -204,7 +188,7 @@ void fifo_ready_execute(){
 		proceso = list_remove(cola_ready, 0);
 		pthread_mutex_unlock(&mx_lista_ready);
 		pthread_mutex_lock(&mx_log);
-		log_info(logger,"\n Mandando proceso %d a ejecutar",proceso->pid);
+		log_info(logger,"Mandando proceso %d a ejecutar",proceso->pid);
 		pthread_mutex_unlock(&mx_log);
 		pthread_mutex_lock(&mx_cpu_desocupado);
 		pthread_mutex_unlock(&mx_cpu_desocupado);
@@ -217,46 +201,45 @@ void fifo_ready_execute(){
 void esperar_cpu(){
 	op_code cop;
 	int32_t resultOk = 0;
-	while (conexion_cpu_dispatch != -1) {
-		if (recv(conexion_cpu_dispatch, &cop, sizeof(op_code), 0) <= 0) {
-			pthread_mutex_lock(&mx_log);
-			log_error(logger,"DISCONNECT FAILURE!");
-			pthread_mutex_unlock(&mx_log);
-			return;
-		}
-		PCB_t* pcb = pcb_create();
-		if (!recv_proceso(conexion_cpu_dispatch, pcb)) {
-			pthread_mutex_lock(&mx_log);
-			log_error(logger,"Fallo recibiendo PROGRAMA");
-			pthread_mutex_unlock(&mx_log);
+	if (recv(conexion_cpu_dispatch, &cop, sizeof(op_code), 0) <= 0) {
+		pthread_mutex_lock(&mx_log);
+		log_error(logger,"DISCONNECT FAILURE!");
+		pthread_mutex_unlock(&mx_log);
+		return;
+	}
+	PCB_t* pcb = pcb_create();
+	if (!recv_proceso(conexion_cpu_dispatch, pcb)) {
+		pthread_mutex_lock(&mx_log);
+		log_error(logger,"Fallo recibiendo PROGRAMA");
+		pthread_mutex_unlock(&mx_log);
+		return;
+	}
+	switch (cop) {
+		case EXIT:{
+//				int* el_socket = dictionary_get(sockets,atoi(pcb->pid));
+			// Hay q avisarle a memoria que finalizo para q borre todo.
+			int el_socket = 0;
+			send(el_socket,&resultOk,sizeof(resultOk),0);
+			log_info(logger, "Proceso %d terminado :) siiiii",pcb->pid);
 			break;
 		}
-		switch (cop) {
-			case EXIT:{
-//				int* el_socket = dictionary_get(sockets,atoi(pcb->pid));
-				int el_socket = 0;
-				send(el_socket,&resultOk,sizeof(resultOk),0);
-				log_info(logger, "Proceso %d terminado :) siiiii",pcb->pid);
-				break;
-			}
-			case INTERRUPTION:
-				log_info(logger,"Proceso %d desalojado :( lo siento",pcb->pid);
-				list_add(cola_ready,pcb);
-				break;
-			case BLOCKED:
-				//bloqueamos el proceso
-				queue_push(cola_blocked,pcb);
-				log_info(logger, "Proceso %d bloqueado :( mal ahi pa",pcb->pid);
-				break;
-			default:
-				pthread_mutex_lock(&mx_log);
-				log_error(logger, "Algo anduvo mal en el server del kernel\n Cop: %d",cop);
-				pthread_mutex_unlock(&mx_log);
-		}
-		sem_post(&s_cpu_desocupado);
-		sem_post(&s_ready_execute);
-
+		case INTERRUPTION:
+			log_info(logger,"Proceso %d desalojado :( lo siento",pcb->pid);
+			list_add(cola_ready,pcb);
+			break;
+		case BLOCKED:
+			//bloqueamos el proceso
+			queue_push(cola_blocked,pcb);
+			log_info(logger, "Proceso %d bloqueado :( mal ahi pa",pcb->pid);
+			break;
+		default:
+			pthread_mutex_lock(&mx_log);
+			log_error(logger, "Algo anduvo mal en el server del kernel\n Cop: %d",cop);
+			pthread_mutex_unlock(&mx_log);
 	}
+	sem_post(&s_cpu_desocupado);
+	sem_post(&s_ready_execute);
+
 
 }
 

@@ -1,38 +1,19 @@
-12:56:02 **** Incremental Build of configuration Debug for project memoria ****
+16:50:56 **** Incremental Build of configuration Debug for project memoria ****
 make all 
-Building file: ../src/memoria_main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
-In file included from ../src/memoria_main.h:11:0,
-                 from ../src/memoria_main.c:1:
-../src/../../shared/src/protocol.c: In function ‘deserializar_programa’:
-../src/../../shared/src/protocol.c:74:24: warning: passing argument 1 of ‘string_array_push’ from incompatible pointer type [-Wincompatible-pointer-types]
-      string_array_push(instrucciones, r_instruccion);
-                        ^
-In file included from ../src/memoria_main.h:7:0,
-                 from ../src/memoria_main.c:1:
-/usr/include/commons/string.h:281:10: note: expected ‘char ***’ but argument is of type ‘char **’
-  void    string_array_push(char*** array, char* text);
-          ^
-Finished building: ../src/memoria_main.c
- 
 Building target: memoria
 Invoking: GCC C Linker
 gcc  -o "memoria"  ./src/memoria_main.o   
-./src/memoria_main.o: In function `crear_conexion':
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:22: undefined reference to `log_error'
-makefile:30: recipe for target 'memoria' failed
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:28: undefined reference to `log_error'
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:33: undefined reference to `log_info'
-./src/memoria_main.o: In function `iniciar_servidor':
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:79: undefined reference to `log_info'
-./src/memoria_main.o: In function `esperar_cliente':
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:91: undefined reference to `log_info'
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/sockets.c:95: undefined reference to `log_info'
+./src/memoria_main.o: In function `serializar_programa':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:18: undefined reference to `list_size'
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:38: undefined reference to `list_get'
 ./src/memoria_main.o: In function `deserializar_programa':
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:74: undefined reference to `string_array_push'
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:81: undefined reference to `list_add'
+./src/memoria_main.o: In function `serializar_proceso':
+makefile:30: recipe for target 'memoria' failed
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:104: undefined reference to `list_size'
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:133: undefined reference to `list_get'
 ./src/memoria_main.o: In function `deserializar_proceso':
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:186: undefined reference to `string_array_push'
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:184: undefined reference to `list_add'
 ./src/memoria_main.o: In function `main':
 /home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:4: undefined reference to `log_create'
 /home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:5: undefined reference to `config_create'
@@ -42,5 +23,5 @@ makefile:30: recipe for target 'memoria' failed
 collect2: error: ld returned 1 exit status
 make: *** [memoria] Error 1
 
-12:56:03 Build Finished (took 896ms)
+16:50:57 Build Finished (took 753ms)
 

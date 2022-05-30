@@ -13,6 +13,9 @@
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
 </listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="LD_LIBRARY_PATH" value="${workspace_loc}/shared/Debug"/>
+</mapAttribute>
 <booleanAttribute key="org.eclipse.linuxtools.internal.perf.attr.DefaultEvent" value="true"/>
 <booleanAttribute key="org.eclipse.linuxtools.internal.perf.attr.HideUnresolvedSymbols" value="true"/>
 <stringAttribute key="org.eclipse.linuxtools.internal.perf.attr.Kernel.Location" value=""/>
