@@ -10,7 +10,7 @@
 #include<commons/string.h>
 #include<commons/config.h>
 #include<commons/collections/list.h>
-#include "../../shared/src/structures.h"
+#include <structures.h>
 
 typedef struct {
 	char *operacion;

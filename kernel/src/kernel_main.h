@@ -6,9 +6,9 @@
 #include<commons/log.h>
 #include<commons/config.h>
 #include "kernel_utils.h"
-#include "../../shared/src/sockets.c"
-#include "../../shared/src/protocol.c"
-#include "../../shared/src/structures.h"
+#include <sockets.c>
+#include <protocol.c>
+#include <structures.h>
 
 
 #define IP "127.0.0.1"

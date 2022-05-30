@@ -11,8 +11,7 @@ int main(void) {
 	inicializar_cpu();
 
 	while(1){
-		PCB_t* pcb = malloc(sizeof(PCB_t));
-		pcb->instrucciones = list_create();
+		PCB_t* pcb = pcb_create();
 		op_code cop;
 		recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0);
 		log_info(logger,"CO OP: %d",cop);
@@ -24,7 +23,6 @@ int main(void) {
 		log_info(logger,"Program counter %d\n",pcb->pc);
 		send_proceso(cliente_socket_dispatch,pcb,estado);
 		pcb_destroy(pcb);
-		break;
 	}
 
 	apagar_cpu();

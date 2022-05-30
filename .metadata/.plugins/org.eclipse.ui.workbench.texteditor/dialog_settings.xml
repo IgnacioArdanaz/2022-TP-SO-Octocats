@@ -8,23 +8,28 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="resultado"/>
-			<item value="resultado_ok"/>
-			<item value="send_proce"/>
-			<item value="recibir"/>
-			<item value="aaa"/>
-			<item value="safe"/>
-			<item value="impri"/>
-			<item value="imprimir"/>
-			<item value="imprimitr"/>
-			<item value="uint"/>
-			<item value="cliente pr"/>
-			<item value="a punto"/>
-			<item value="send_pr"/>
-			<item value="sendf"/>
-			<item value="atoi"/>
+			<item value="malloc(PCB_t)"/>
+			<item value="malloc(PCB)"/>
+			<item value="4"/>
+			<item value="3"/>
+			<item value="2"/>
+			<item value="pcb_destroy"/>
+			<item value="free"/>
+			<item value="pcb_create"/>
+			<item value="proceso"/>
+			<item value="llamado"/>
+			<item value="l"/>
+			<item value="Cliente con"/>
+			<item value="Cliente"/>
+			<item value="send"/>
+			<item value="mx_socket"/>
 		</list>
 		<list key="replacehistory">
+			<item value="3"/>
+			<item value="2"/>
+			<item value="4"/>
+			<item value="pcb"/>
+			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

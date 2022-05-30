@@ -14,7 +14,10 @@ typedef struct {
 	double est_rafaga;
 }PCB_t;
 
-PCB_t* pcb_create(uint16_t pid,
+PCB_t* pcb_create();
+
+void pcb_set(PCB_t* pcb,
+		uint16_t pid,
 		uint16_t tamanio,
 		t_list* instrucciones,
 		uint32_t pc,

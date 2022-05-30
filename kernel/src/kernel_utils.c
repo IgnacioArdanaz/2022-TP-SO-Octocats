@@ -124,7 +124,8 @@ void procesar_socket(thread_args* argumentos){
 				uint16_t pid_actual = pid_sig;
 				pid_sig+=1;
 				pthread_mutex_unlock(&mx_pid_sig);
-				PCB_t* proceso = pcb_create(pid_actual,tamanio,instrucciones,0,0,estimacion_inicial);
+				PCB_t* proceso = pcb_create();
+				pcb_set(proceso, pid_actual,tamanio,instrucciones,0,0,estimacion_inicial);
 
 				pthread_mutex_lock(&mx_cola_new);
 				queue_push(cola_new, proceso);
@@ -223,7 +224,7 @@ void esperar_cpu(){
 			pthread_mutex_unlock(&mx_log);
 			return;
 		}
-		PCB_t* pcb = malloc(sizeof(pcb));
+		PCB_t* pcb = pcb_create();
 		if (!recv_proceso(conexion_cpu_dispatch, pcb)) {
 			pthread_mutex_lock(&mx_log);
 			log_error(logger,"Fallo recibiendo PROGRAMA");

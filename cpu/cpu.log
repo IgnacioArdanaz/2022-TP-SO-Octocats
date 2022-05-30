@@ -18,3 +18,50 @@
 
 [INFO] 21:27:09:476 cpu/(6887:6887): Program counter 1
 
+[INFO] 22:20:58:033 cpu/(3518:3518): CO OP: 1
+[INFO] 22:20:58:034 cpu/(3518:3518): Program counter 0
+
+[INFO] 22:23:23:029 cpu/(3598:3598): CO OP: 1
+[INFO] 22:23:23:029 cpu/(3598:3598): Program counter 0
+
+[INFO] 22:27:07:487 cpu/(3718:3718): CO OP: 1
+[INFO] 22:27:07:487 cpu/(3718:3718): Program counter 0
+
+[INFO] 22:45:36:720 cpu/(4675:4675): CO OP: 1
+[INFO] 22:45:36:720 cpu/(4675:4675): Program counter 0
+
+[INFO] 22:45:36:720 cpu/(4675:4675): Program counter 1
+
+[INFO] 22:45:36:994 cpu/(4675:4675): CO OP: 1
+[INFO] 22:45:36:995 cpu/(4675:4675): Program counter 1
+
+[INFO] 22:46:31:655 cpu/(4752:4752): CO OP: 1
+[INFO] 22:46:31:655 cpu/(4752:4752): Program counter 155473080
+
+[INFO] 22:47:43:192 cpu/(4801:4801): CO OP: 1
+[INFO] 22:47:43:192 cpu/(4801:4801): Program counter 0
+
+[INFO] 22:47:43:192 cpu/(4801:4801): Program counter 1
+
+[INFO] 22:47:59:154 cpu/(4801:4801): CO OP: 1
+[INFO] 22:47:59:156 cpu/(4801:4801): Program counter 1
+
+[INFO] 22:48:50:078 cpu/(4962:4962): CO OP: 1
+[INFO] 22:48:50:079 cpu/(4962:4962): Program counter 140903608
+
+[INFO] 22:49:17:402 cpu/(5017:5017): CO OP: 1
+[INFO] 22:49:17:402 cpu/(5017:5017): Program counter 0
+
+[INFO] 22:49:17:402 cpu/(5017:5017): Program counter 1
+
+[INFO] 22:50:11:498 cpu/(5017:5017): CO OP: 1
+[INFO] 22:50:11:500 cpu/(5017:5017): Program counter 1
+
+[INFO] 22:51:21:502 cpu/(5110:5110): CO OP: 1
+[INFO] 22:51:21:502 cpu/(5110:5110): Program counter 0
+
+[INFO] 22:51:21:502 cpu/(5110:5110): Program counter 1
+
+[INFO] 22:52:04:778 cpu/(5110:5110): CO OP: 1
+[INFO] 22:52:04:778 cpu/(5110:5110): Program counter 1
+

@@ -7,8 +7,8 @@
 #include<commons/string.h>
 #include<commons/config.h>
 #include<readline/readline.h>
-#include "../../shared/src/sockets.c"
-#include "../../shared/src/protocol.c"
+#include <sockets.c>
+#include <protocol.c>
 #include "parser.h"
 
 #endif /* CONSOLA_MAIN_H_ */
