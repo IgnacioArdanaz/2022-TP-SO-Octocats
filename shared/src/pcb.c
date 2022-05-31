@@ -24,6 +24,6 @@ void pcb_set(PCB_t* pcb,
 }
 
 void pcb_destroy(PCB_t* pcb){
-	free(pcb);
 	list_destroy_and_destroy_elements(pcb->instrucciones,free);
+	free(pcb);
 }

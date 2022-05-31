@@ -1,10 +1,10 @@
-22:26:55 **** Incremental Build of configuration Debug for project kernel ****
+00:47:49 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
 gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
 ../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:98:8: warning: unused variable ‘server_name’ [-Wunused-variable]
+../src/kernel_utils.c:99:8: warning: unused variable ‘server_name’ [-Wunused-variable]
   char* server_name = string_duplicate(argumentos->server_name);
         ^
 In file included from ../src/kernel_utils.h:16:0,
@@ -30,5 +30,5 @@ gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_m
 Finished building target: kernel
  
 
-22:26:57 Build Finished (took 1s.725ms)
+00:47:50 Build Finished (took 731ms)
 

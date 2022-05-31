@@ -27,8 +27,12 @@ int main(int argc, char** argv){
 
 	if (send_programa(conexion, codigo, tamanio)){
 		log_info(logger,"Programa enviado al kernel correctamente!");
-		recv(conexion, &resultado, sizeof(int32_t), MSG_WAITALL); // Cada consola espera respuesta del kernel, puede recibir 0 (resultOK) o -1 (resultError)
-		log_info(logger,"Resultado -> %d\n", resultado);
+		recv(conexion, &resultado, sizeof(op_code), MSG_WAITALL); // Cada consola espera respuesta del kernel, puede recibir 0 (resultOK) o -1 (resultError)
+		if (resultado == EXIT){
+			log_info(logger,"El proceso se finalizó exitosamente :)");
+		} else{
+			log_error(logger,"El proceso NO se finalizó exitosamente :(");
+		}
 	}
 	else{
 		log_error(logger,"Por desgracia no se pudo enviar el programa :(");

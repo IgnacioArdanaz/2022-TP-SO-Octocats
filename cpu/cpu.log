@@ -396,3 +396,52 @@
 [INFO] 22:27:35:707 cpu/(9122:9122): Aca busco el operando
 [INFO] 22:27:35:707 cpu/(9122:9122): Program counter 7 (despues de ejecutar)
 [INFO] 22:27:36:281 cpu/(9122:9122): Proceso 18600 -> program counter 7
+[INFO] 00:11:35:264 cpu/(3262:3262): Proceso 1 -> program counter 0
+[INFO] 00:11:35:265 cpu/(3262:3262): Program counter 1 (despues de ejecutar)
+[INFO] 00:11:44:266 cpu/(3262:3262): Proceso 1 -> program counter 1
+[INFO] 00:11:54:269 cpu/(3262:3262): Aca busco el operando
+[INFO] 00:11:54:269 cpu/(3262:3262): Program counter 7 (despues de ejecutar)
+[INFO] 00:11:55:079 cpu/(3262:3262): Proceso 51400 -> program counter 7
+[INFO] 00:18:02:435 cpu/(3628:3628): Proceso 1 -> program counter 0
+[INFO] 00:18:02:435 cpu/(3628:3628): Program counter 1 (despues de ejecutar)
+[INFO] 00:18:11:436 cpu/(3628:3628): Proceso 1 -> program counter 1
+[INFO] 00:18:21:438 cpu/(3628:3628): Aca busco el operando
+[INFO] 00:18:21:439 cpu/(3628:3628): Program counter 7 (despues de ejecutar)
+[INFO] 00:18:21:935 cpu/(3628:3628): Proceso 59592 -> program counter 7
+[INFO] 00:23:21:155 cpu/(3817:3817): Proceso 1 -> program counter 0
+[INFO] 00:23:21:155 cpu/(3817:3817): Program counter 1 (despues de ejecutar)
+[INFO] 00:23:30:156 cpu/(3817:3817): Proceso 1 -> program counter 1
+[INFO] 00:23:40:158 cpu/(3817:3817): Aca busco el operando
+[INFO] 00:23:40:159 cpu/(3817:3817): Program counter 7 (despues de ejecutar)
+[INFO] 00:23:40:495 cpu/(3817:3817): Proceso 35016 -> program counter 7
+[INFO] 00:27:28:724 cpu/(3950:3950): Proceso 1 -> program counter 0
+[INFO] 00:27:28:724 cpu/(3950:3950): Program counter 1 (despues de ejecutar)
+[INFO] 00:27:37:726 cpu/(3950:3950): Proceso 1 -> program counter 1
+[INFO] 00:27:47:731 cpu/(3950:3950): Aca busco el operando
+[INFO] 00:27:47:732 cpu/(3950:3950): Program counter 7 (despues de ejecutar)
+[INFO] 00:28:44:059 cpu/(3950:3950): Proceso 22728 -> program counter 7
+[INFO] 00:31:14:085 cpu/(4070:4070): Proceso 1 -> program counter 0
+[INFO] 00:31:14:085 cpu/(4070:4070): Program counter 1 (despues de ejecutar)
+[INFO] 00:31:28:473 cpu/(4070:4070): Proceso 1 -> program counter 1
+[INFO] 00:31:33:474 cpu/(4070:4070): Program counter 2 (despues de ejecutar)
+[INFO] 00:33:21:679 cpu/(4070:4070): Proceso 0 -> program counter 2
+[INFO] 00:36:18:761 cpu/(4234:4234): Proceso 1 -> program counter 0
+[INFO] 00:36:18:762 cpu/(4234:4234): Program counter 1 (despues de ejecutar)
+[INFO] 00:36:27:763 cpu/(4234:4234): Proceso 1 -> program counter 1
+[INFO] 00:36:37:765 cpu/(4234:4234): Aca busco el operando
+[INFO] 00:36:37:765 cpu/(4234:4234): Program counter 7 (despues de ejecutar)
+[INFO] 00:36:38:067 cpu/(4234:4234): Proceso 26824 -> program counter 7
+[INFO] 00:37:20:731 cpu/(4295:4295): Proceso 47024 -> program counter 160318648
+[INFO] 00:38:17:870 cpu/(4422:4422): Proceso 18352 -> program counter 140084408
+[INFO] 00:38:36:639 cpu/(4467:4467): Proceso 59312 -> program counter 166429880
+[INFO] 00:39:26:136 cpu/(4518:4518): Proceso 1 -> program counter 0
+[INFO] 00:39:26:136 cpu/(4518:4518): Program counter 1 (despues de ejecutar)
+[INFO] 00:39:35:137 cpu/(4518:4518): Proceso 1 -> program counter 1
+[INFO] 00:39:45:141 cpu/(4518:4518): Aca busco el operando
+[INFO] 00:39:45:141 cpu/(4518:4518): Program counter 7 (despues de ejecutar)
+[INFO] 00:40:40:071 cpu/(4518:4518): Proceso 63688 -> program counter 7
+[INFO] 00:47:55:038 cpu/(4735:4735): Proceso 1 -> program counter 0
+[INFO] 00:47:55:039 cpu/(4735:4735): Program counter 1 (despues de ejecutar)
+[INFO] 00:48:04:040 cpu/(4735:4735): Proceso 1 -> program counter 1
+[INFO] 00:48:14:041 cpu/(4735:4735): Aca busco el operando
+[INFO] 00:48:14:041 cpu/(4735:4735): Program counter 7 (despues de ejecutar)
