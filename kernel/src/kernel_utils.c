@@ -10,24 +10,23 @@ pthread_mutex_t mx_log = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_blocked = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_suspended_blocked = PTHREAD_MUTEX_INITIALIZER;
 
-
-sem_t s_new_ready, s_ready_execute, s_cont_ready, s_cpu_desocupado, s_blocked, s_suspended_ready, s_multiprogramacion_actual;
+sem_t s_new_ready, s_ready_execute, s_cont_ready, s_cpu_desocupado, s_blocked,
+	s_suspended_ready, s_multiprogramacion_actual;
 
 t_dictionary* sockets;
-t_dictionary* hilos_suspensores; //indexado por pid
 t_queue* cola_new;
 t_list* lista_ready;
 t_list* cola_blocked;
 t_list* cola_suspended_blocked;
 
+// CHEQUEAR SI ALGUNO DE ESTAS VARIABLES PUEDEN SER LOCALES DE LA FUNCION INICIALIZAR
+// ES PREFERIBLE QUE SEAN LOCALES A QUE SEAN GLOBALES
+int pid_sig, estimacion_inicial, grado_multiprogramacion, multiprogramacion_actual,
+	conexion_cpu_dispatch, conexion_cpu_interrupt, tiempo_suspended, conexion_memoria;
 
-//safe_log* safe_logger;
-
-int pid_sig, estimacion_inicial, grado_multiprogramacion,
-	multiprogramacion_actual, conexion_cpu_dispatch, conexion_cpu_interrupt, tiempo_suspended;
-char *algoritmo_config, *ip_cpu, *puerto_cpu_dispatch, *puerto_cpu_interrupt;
 
 void inicializar_kernel(){
+
 	logger = log_create("kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
 	config = config_create("kernel.config");
 
@@ -35,20 +34,24 @@ void inicializar_kernel(){
 	cola_blocked = list_create();
 	lista_ready = list_create();
 	cola_suspended_blocked = list_create();
-
-	hilos_suspensores = dictionary_create();
 	sockets = dictionary_create();
 
 	pid_sig = 1;
 
 	grado_multiprogramacion = config_get_int_value(config,"GRADO_MULTIPROGRAMACION");
 	estimacion_inicial = config_get_double_value(config,"ESTIMACION_INICIAL");
-	ip_cpu = config_get_string_value(config,"IP_CPU");
-	puerto_cpu_dispatch = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
-	puerto_cpu_interrupt = config_get_string_value(config,"PUERTO_CPU_INTERRUPT");
-	algoritmo_config = config_get_string_value(config,"ALGORITMO_PLANIFICACION");
+	char* algoritmo_config = config_get_string_value(config,"ALGORITMO_PLANIFICACION");
 	tiempo_suspended = config_get_int_value(config,"TIEMPO_MAXIMO_BLOQUEADO");
 
+	//conectando con MEMORIA
+//	char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
+//	char* puerto_memoria = config_get_string_value(config,"PUERTO_MEMORIA");
+//	conexion_memoria = crear_conexion(logger, "MEMORIA", ip_memoria, puerto_memoria);
+
+	//conectando con CPU
+	char* ip_cpu = config_get_string_value(config,"IP_CPU");
+	char* puerto_cpu_dispatch = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
+	char* puerto_cpu_interrupt = config_get_string_value(config,"PUERTO_CPU_INTERRUPT");
 	conexion_cpu_dispatch = crear_conexion(logger, "CPU DISPATCH", ip_cpu, puerto_cpu_dispatch);
 	conexion_cpu_interrupt= crear_conexion(logger, "CPU INTERRUPT", ip_cpu, puerto_cpu_interrupt);
 
@@ -82,9 +85,9 @@ void inicializar_kernel(){
 }
 
 int escuchar_servidor(char* name, int server_socket){
-	printf("Kernel esperando un nuevo cliente \n");
+	log_info(logger,"Kernel esperando un nuevo cliente");
 	int cliente_socket = cliente_socket = esperar_cliente(logger, name, server_socket);
-	printf("Socket del cliente recibido en kernel.\n ");
+	log_info(logger,"Socket del cliente recibido en kernel.");
 	if (cliente_socket != -1){
 		pthread_t hilo;
 		thread_args* arg = malloc(sizeof(thread_args));
@@ -164,7 +167,7 @@ void pasaje_new_ready(){
 		sem_wait(&s_multiprogramacion_actual);
 		pthread_mutex_lock(&mx_cola_new);
 		PCB_t* proceso = queue_pop(cola_new);
-		printf("PROCESO %d POPEADO COLA NEW\n", proceso->pid);
+		log_info(logger,"PROCESO %d POPEADO COLA NEW", proceso->pid);
 		pthread_mutex_unlock(&mx_cola_new);
 		pthread_mutex_lock(&mx_lista_ready);
 		list_add(lista_ready,proceso);
@@ -228,7 +231,6 @@ void esperar_cpu(){
 	switch (cop) {
 		case EXIT:{
 			int socket_pcb = (int) dictionary_get(sockets,string_itoa(pcb->pid));
-			printf("Socket: %d", socket_pcb);
 			// Hay q avisarle a memoria que finalizo para q borre todo.
 			//int el_socket = 0;
 			sem_post(&s_multiprogramacion_actual);
@@ -265,7 +267,7 @@ void suspendiendo(PCB_t* pcb){
 	pthread_mutex_lock(&mx_cola_blocked);
 	pthread_mutex_lock(&mx_cola_suspended_blocked);
 	int i = pcb_find_index(cola_blocked,pcb->pid);
-	printf("Index del suspended: %d",i);
+	printf("Index del suspended: %d\n",i);
 	if (i == -1)
 		pthread_mutex_unlock(&mx_cola_blocked);
 		pthread_mutex_unlock(&mx_cola_suspended_blocked);
@@ -275,6 +277,7 @@ void suspendiendo(PCB_t* pcb){
 	list_add(cola_suspended_blocked,pcb);
 	pthread_mutex_unlock(&mx_cola_blocked);
 	pthread_mutex_unlock(&mx_cola_suspended_blocked);
+	sem_wait(&s_blocked); //le restamos uno a la cola de blocked
 	//hay que pedir las colas y liberarlas en el mismo orden para evitar deadlocks
 	sem_post(&s_multiprogramacion_actual);
 }
@@ -283,6 +286,9 @@ void ejecutar_io() {
 	while(1) {
 		sem_wait(&s_blocked);
 		pthread_mutex_lock(&mx_cola_blocked);
+		if (list_size(cola_blocked) == 0){
+			log_error(logger,"Blocked ejecutó sin un proceso bloqueado");
+		}
 		PCB_t* proceso = list_remove(cola_blocked,0);
 		pthread_mutex_unlock(&mx_cola_blocked);
 		instruccion_t* inst = list_get(proceso->instrucciones, proceso->pc - 1);

@@ -2,8 +2,11 @@
 
 t_log* logger;
 t_config* config;
+
+//VER SI ALGUNO DE ESTOS PUEDE SER LOCAL
 int espera, server_cpu_dispatch, server_cpu_interrupt, cliente_socket_interrupt,
-	cliente_socket_dispatch, operando_copy;
+	cliente_socket_dispatch, operando_copy, entradas_tlb, conexion_memoria;
+char* reemplazo_tlb;
 bool hay_interrupcion;
 
 int main(void) {
@@ -20,7 +23,7 @@ int main(void) {
 		op_code estado = iniciar_ciclo_instruccion(pcb);
 
 		log_info(logger,"Program counter %d (despues de ejecutar)",pcb->pc);
-		printf("==============================================================\n");
+		log_info(logger,"==============================================================");
 		send_proceso(cliente_socket_dispatch,pcb,estado);
 		pcb_destroy(pcb);
 	}
@@ -34,10 +37,15 @@ void inicializar_cpu(){
 	logger = log_create("cpu.log", "cpu", 1, LOG_LEVEL_INFO);
 	config = config_create("cpu.config");
 	espera = config_get_int_value(config, "RETARDO_NOOP");
-
+	entradas_tlb = config_get_int_value(config, "ENTRADAS_TLB");
+	reemplazo_tlb = config_get_string_value(config, "REEMPLAZO_TLB");
 	hay_interrupcion = false;
 
 	operando_copy = 0;
+
+//	char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
+//	char* puerto_memoria = config_get_string_value(config,"PUERTO_MEMORIA");
+//	int conexion_memoria = crear_conexion(logger, "MEMORIA", ip_memoria, puerto_memoria);
 
 	char* puerto_dispatch = config_get_string_value(config, "PUERTO_ESCUCHA_DISPATCH");
 	char* puerto_interrupt = config_get_string_value(config, "PUERTO_ESCUCHA_INTERRUPT");
@@ -114,31 +122,31 @@ int execute(instruccion_t* instruccion_ejecutar){
 
 	switch (instruccion_ejecutar->operacion) {
 		case 'N':
-			printf("Ejecutando NOOP\n");
+			log_info(logger,"Ejecutando NOOP");
 			usleep(espera * 1000);
 			break;
 		case 'I':
-			printf("Ejecutando IO\n");
+			log_info(logger,"Ejecutando IO");
 			return BLOCKED;
 			break;
 		case 'R':
-			printf("Ejecutando READ\n");
+			log_info(logger,"Ejecutando READ");
 			ejecutarRead();
 			break;
 		case 'C':
-			printf("Ejecutando COPY\n");
+			log_info(logger,"Ejecutando COPY");
 			ejecutarCopy();
 			break;
 		case 'W':
-			printf("Ejecutando WRITE\n");
+			log_info(logger,"Ejecutando WRITE");
 			ejecutarWrite();
 			break;
 		case 'E':
-			printf("Ejecutando EXIT\n");
+			log_info(logger,"Ejecutando EXIT");
 			return EXIT;
 			break;
 		default:
-			log_error(logger,"La instruccion se la come\n");
+			log_error(logger,"La instruccion se la come");
 			break;
 	}
 

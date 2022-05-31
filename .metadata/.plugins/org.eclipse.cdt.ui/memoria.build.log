@@ -1,27 +1,6 @@
-18:52:32 **** Incremental Build of configuration Debug for project memoria ****
+20:46:50 **** Incremental Build of configuration Debug for project memoria ****
 make all 
-Building target: memoria
-Invoking: GCC C Linker
-gcc  -o "memoria"  ./src/memoria_main.o   
-makefile:30: recipe for target 'memoria' failed
-./src/memoria_main.o: In function `serializar_programa':
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:18: undefined reference to `list_size'
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:38: undefined reference to `list_get'
-./src/memoria_main.o: In function `deserializar_programa':
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:81: undefined reference to `list_add'
-./src/memoria_main.o: In function `serializar_proceso':
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:104: undefined reference to `list_size'
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:133: undefined reference to `list_get'
-./src/memoria_main.o: In function `deserializar_proceso':
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:184: undefined reference to `list_add'
-./src/memoria_main.o: In function `main':
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:4: undefined reference to `log_create'
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:5: undefined reference to `config_create'
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:8: undefined reference to `config_get_string_value'
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:14: undefined reference to `log_destroy'
-/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_main.c:15: undefined reference to `config_destroy'
-collect2: error: ld returned 1 exit status
-make: *** [memoria] Error 1
+make: Nothing to be done for 'all'.
 
-18:52:33 Build Finished (took 1s.200ms)
+20:46:51 Build Finished (took 952ms)
 

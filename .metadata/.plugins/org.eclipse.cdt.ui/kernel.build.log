@@ -1,10 +1,10 @@
-19:28:30 **** Incremental Build of configuration Debug for project kernel ****
+20:46:49 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
 gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
 ../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:140:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+../src/kernel_utils.c:143:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
      dictionary_put(sockets, key, cliente_socket);
                                   ^
 In file included from /usr/include/commons/config.h:20:0,
@@ -36,5 +36,5 @@ gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_m
 Finished building target: kernel
  
 
-19:28:31 Build Finished (took 884ms)
+20:46:50 Build Finished (took 792ms)
 
