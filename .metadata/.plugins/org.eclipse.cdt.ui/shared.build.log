@@ -1,6 +1,6 @@
-16:50:57 **** Incremental Build of configuration Debug for project shared ****
+20:23:52 **** Incremental Build of configuration Debug for project shared ****
 make all 
 make: Nothing to be done for 'all'.
 
-16:50:58 Build Finished (took 566ms)
+20:23:54 Build Finished (took 1s.157ms)
 

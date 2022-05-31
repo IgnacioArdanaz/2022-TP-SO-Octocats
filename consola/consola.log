@@ -2472,3 +2472,837 @@
 
 [INFO] 17:12:09:793 CONSOLA/(15195:15195): Resultado -> 3
 
+[INFO] 20:24:22:653 CONSOLA/(32420:32420): Instruccion numero 0: I 3000 -1
+[INFO] 20:24:22:654 CONSOLA/(32420:32420): Instruccion numero 1: N -1 -1
+[INFO] 20:24:22:654 CONSOLA/(32420:32420): Instruccion numero 2: N -1 -1
+[INFO] 20:24:22:654 CONSOLA/(32420:32420): Instruccion numero 3: W 4 42
+[INFO] 20:24:22:654 CONSOLA/(32420:32420): Instruccion numero 4: C 0 4
+[INFO] 20:24:22:654 CONSOLA/(32420:32420): Instruccion numero 5: R 0 -1
+[INFO] 20:24:22:654 CONSOLA/(32420:32420): Instruccion numero 6: E -1 -1
+[INFO] 20:24:22:663 CONSOLA/(32420:32420): Programa enviado al kernel correctamente!
+[INFO] 20:24:37:109 CONSOLA/(32440:32440): Instruccion numero 0: I 3000 -1
+[INFO] 20:24:37:110 CONSOLA/(32440:32440): Instruccion numero 1: N -1 -1
+[INFO] 20:24:37:110 CONSOLA/(32440:32440): Instruccion numero 2: N -1 -1
+[INFO] 20:24:37:110 CONSOLA/(32440:32440): Instruccion numero 3: W 4 42
+[INFO] 20:24:37:110 CONSOLA/(32440:32440): Instruccion numero 4: C 0 4
+[INFO] 20:24:37:110 CONSOLA/(32440:32440): Instruccion numero 5: R 0 -1
+[INFO] 20:24:37:110 CONSOLA/(32440:32440): Instruccion numero 6: E -1 -1
+[INFO] 20:24:37:121 CONSOLA/(32440:32440): Programa enviado al kernel correctamente!
+[INFO] 20:58:10:453 CONSOLA/(2135:2135): Instruccion numero 0: I 3000 -1
+[INFO] 20:58:10:453 CONSOLA/(2135:2135): Instruccion numero 1: N -1 -1
+[INFO] 20:58:10:453 CONSOLA/(2135:2135): Instruccion numero 2: N -1 -1
+[INFO] 20:58:10:453 CONSOLA/(2135:2135): Instruccion numero 3: W 4 42
+[INFO] 20:58:10:453 CONSOLA/(2135:2135): Instruccion numero 4: C 0 4
+[INFO] 20:58:10:454 CONSOLA/(2135:2135): Instruccion numero 5: R 0 -1
+[INFO] 20:58:10:454 CONSOLA/(2135:2135): Instruccion numero 6: E -1 -1
+[INFO] 20:58:10:454 CONSOLA/(2135:2135): Programa enviado al kernel correctamente!
+[INFO] 21:01:19:318 CONSOLA/(2135:2135): Resultado -> 3
+
+[INFO] 21:02:38:811 CONSOLA/(2509:2509): Instruccion numero 0: I 3000 -1
+[INFO] 21:02:38:812 CONSOLA/(2509:2509): Instruccion numero 1: N -1 -1
+[INFO] 21:02:38:812 CONSOLA/(2509:2509): Instruccion numero 2: N -1 -1
+[INFO] 21:02:38:812 CONSOLA/(2509:2509): Instruccion numero 3: W 4 42
+[INFO] 21:02:38:812 CONSOLA/(2509:2509): Instruccion numero 4: C 0 4
+[INFO] 21:02:38:813 CONSOLA/(2509:2509): Instruccion numero 5: R 0 -1
+[INFO] 21:02:38:813 CONSOLA/(2509:2509): Instruccion numero 6: E -1 -1
+[INFO] 21:02:38:814 CONSOLA/(2509:2509): Programa enviado al kernel correctamente!
+[INFO] 21:04:06:448 CONSOLA/(2509:2509): Resultado -> 3
+
+[INFO] 21:05:14:936 CONSOLA/(2860:2860): Instruccion numero 0: I 3000 -1
+[INFO] 21:05:14:937 CONSOLA/(2860:2860): Instruccion numero 1: N -1 -1
+[INFO] 21:05:14:937 CONSOLA/(2860:2860): Instruccion numero 2: N -1 -1
+[INFO] 21:05:14:937 CONSOLA/(2860:2860): Instruccion numero 3: W 4 42
+[INFO] 21:05:14:937 CONSOLA/(2860:2860): Instruccion numero 4: C 0 4
+[INFO] 21:05:14:939 CONSOLA/(2860:2860): Instruccion numero 5: R 0 -1
+[INFO] 21:05:14:939 CONSOLA/(2860:2860): Instruccion numero 6: E -1 -1
+[INFO] 21:05:14:946 CONSOLA/(2860:2860): Programa enviado al kernel correctamente!
+[INFO] 21:07:26:477 CONSOLA/(2860:2860): Resultado -> 3
+
+[INFO] 21:08:40:143 CONSOLA/(3222:3222): Instruccion numero 0: I 3000 -1
+[INFO] 21:08:40:143 CONSOLA/(3222:3222): Instruccion numero 1: N -1 -1
+[INFO] 21:08:40:143 CONSOLA/(3222:3222): Instruccion numero 2: N -1 -1
+[INFO] 21:08:40:143 CONSOLA/(3222:3222): Instruccion numero 3: W 4 42
+[INFO] 21:08:40:143 CONSOLA/(3222:3222): Instruccion numero 4: C 0 4
+[INFO] 21:08:40:144 CONSOLA/(3222:3222): Instruccion numero 5: R 0 -1
+[INFO] 21:08:40:144 CONSOLA/(3222:3222): Instruccion numero 6: E -1 -1
+[INFO] 21:08:40:144 CONSOLA/(3222:3222): Programa enviado al kernel correctamente!
+[INFO] 21:10:11:365 CONSOLA/(3222:3222): Resultado -> 3
+
+[INFO] 21:11:28:781 CONSOLA/(3576:3576): Instruccion numero 0: I 3000 -1
+[INFO] 21:11:28:782 CONSOLA/(3576:3576): Instruccion numero 1: N -1 -1
+[INFO] 21:11:28:782 CONSOLA/(3576:3576): Instruccion numero 2: N -1 -1
+[INFO] 21:11:28:782 CONSOLA/(3576:3576): Instruccion numero 3: W 4 42
+[INFO] 21:11:28:782 CONSOLA/(3576:3576): Instruccion numero 4: C 0 4
+[INFO] 21:11:28:782 CONSOLA/(3576:3576): Instruccion numero 5: R 0 -1
+[INFO] 21:11:28:783 CONSOLA/(3576:3576): Instruccion numero 6: E -1 -1
+[INFO] 21:11:28:783 CONSOLA/(3576:3576): Programa enviado al kernel correctamente!
+[INFO] 21:15:16:714 CONSOLA/(3576:3576): Resultado -> 3
+
+[INFO] 21:16:02:437 CONSOLA/(3848:3848): Instruccion numero 0: I 3000 -1
+[INFO] 21:16:02:440 CONSOLA/(3848:3848): Instruccion numero 1: N -1 -1
+[INFO] 21:16:02:440 CONSOLA/(3848:3848): Instruccion numero 2: N -1 -1
+[INFO] 21:16:02:440 CONSOLA/(3848:3848): Instruccion numero 3: W 4 42
+[INFO] 21:16:02:440 CONSOLA/(3848:3848): Instruccion numero 4: C 0 4
+[INFO] 21:16:02:440 CONSOLA/(3848:3848): Instruccion numero 5: R 0 -1
+[INFO] 21:16:02:441 CONSOLA/(3848:3848): Instruccion numero 6: E -1 -1
+[ERROR] 21:16:02:441 CONSOLA/(3848:3848): Por desgracia no se pudo enviar el programa :(
+[INFO] 21:16:58:825 CONSOLA/(3946:3946): Instruccion numero 0: I 3000 -1
+[INFO] 21:16:58:825 CONSOLA/(3946:3946): Instruccion numero 1: N -1 -1
+[INFO] 21:16:58:829 CONSOLA/(3946:3946): Instruccion numero 2: N -1 -1
+[INFO] 21:16:58:829 CONSOLA/(3946:3946): Instruccion numero 3: W 4 42
+[INFO] 21:16:58:829 CONSOLA/(3946:3946): Instruccion numero 4: C 0 4
+[INFO] 21:16:58:829 CONSOLA/(3946:3946): Instruccion numero 5: R 0 -1
+[INFO] 21:16:58:830 CONSOLA/(3946:3946): Instruccion numero 6: E -1 -1
+[INFO] 21:16:58:830 CONSOLA/(3946:3946): Programa enviado al kernel correctamente!
+[INFO] 21:25:32:865 CONSOLA/(4427:4427): Instruccion numero 0: I 3000 -1
+[INFO] 21:25:32:866 CONSOLA/(4427:4427): Instruccion numero 1: N -1 -1
+[INFO] 21:25:32:870 CONSOLA/(4427:4427): Instruccion numero 2: N -1 -1
+[INFO] 21:25:32:870 CONSOLA/(4427:4427): Instruccion numero 3: W 4 42
+[INFO] 21:25:32:870 CONSOLA/(4427:4427): Instruccion numero 4: C 0 4
+[INFO] 21:25:32:870 CONSOLA/(4427:4427): Instruccion numero 5: R 0 -1
+[INFO] 21:25:32:870 CONSOLA/(4427:4427): Instruccion numero 6: E -1 -1
+[INFO] 21:25:32:871 CONSOLA/(4427:4427): Programa enviado al kernel correctamente!
+[INFO] 21:25:37:487 CONSOLA/(4450:4450): Instruccion numero 0: I 3000 -1
+[INFO] 21:25:37:487 CONSOLA/(4450:4450): Instruccion numero 1: N -1 -1
+[INFO] 21:25:37:488 CONSOLA/(4450:4450): Instruccion numero 2: N -1 -1
+[INFO] 21:25:37:488 CONSOLA/(4450:4450): Instruccion numero 3: W 4 42
+[INFO] 21:25:37:493 CONSOLA/(4450:4450): Instruccion numero 4: C 0 4
+[INFO] 21:25:37:493 CONSOLA/(4450:4450): Instruccion numero 5: R 0 -1
+[INFO] 21:25:37:493 CONSOLA/(4450:4450): Instruccion numero 6: E -1 -1
+[INFO] 21:25:37:496 CONSOLA/(4450:4450): Programa enviado al kernel correctamente!
+[INFO] 21:25:39:713 CONSOLA/(4461:4461): Instruccion numero 0: I 3000 -1
+[INFO] 21:25:39:714 CONSOLA/(4461:4461): Instruccion numero 1: N -1 -1
+[INFO] 21:25:39:714 CONSOLA/(4461:4461): Instruccion numero 2: N -1 -1
+[INFO] 21:25:39:714 CONSOLA/(4461:4461): Instruccion numero 3: W 4 42
+[INFO] 21:25:39:717 CONSOLA/(4461:4461): Instruccion numero 4: C 0 4
+[INFO] 21:25:39:717 CONSOLA/(4461:4461): Instruccion numero 5: R 0 -1
+[INFO] 21:25:39:717 CONSOLA/(4461:4461): Instruccion numero 6: E -1 -1
+[INFO] 21:25:39:718 CONSOLA/(4461:4461): Programa enviado al kernel correctamente!
+[INFO] 21:25:40:314 CONSOLA/(4467:4467): Instruccion numero 0: I 3000 -1
+[INFO] 21:25:40:317 CONSOLA/(4467:4467): Instruccion numero 1: N -1 -1
+[INFO] 21:25:40:317 CONSOLA/(4467:4467): Instruccion numero 2: N -1 -1
+[INFO] 21:25:40:318 CONSOLA/(4467:4467): Instruccion numero 3: W 4 42
+[INFO] 21:25:40:318 CONSOLA/(4467:4467): Instruccion numero 4: C 0 4
+[INFO] 21:25:40:319 CONSOLA/(4467:4467): Instruccion numero 5: R 0 -1
+[INFO] 21:25:40:319 CONSOLA/(4467:4467): Instruccion numero 6: E -1 -1
+[INFO] 21:25:40:322 CONSOLA/(4467:4467): Programa enviado al kernel correctamente!
+[INFO] 21:25:41:710 CONSOLA/(4482:4482): Instruccion numero 0: I 3000 -1
+[INFO] 21:25:41:710 CONSOLA/(4482:4482): Instruccion numero 1: N -1 -1
+[INFO] 21:25:41:710 CONSOLA/(4482:4482): Instruccion numero 2: N -1 -1
+[INFO] 21:25:41:710 CONSOLA/(4482:4482): Instruccion numero 3: W 4 42
+[INFO] 21:25:41:710 CONSOLA/(4482:4482): Instruccion numero 4: C 0 4
+[INFO] 21:25:41:710 CONSOLA/(4482:4482): Instruccion numero 5: R 0 -1
+[INFO] 21:25:41:711 CONSOLA/(4482:4482): Instruccion numero 6: E -1 -1
+[INFO] 21:25:41:711 CONSOLA/(4482:4482): Programa enviado al kernel correctamente!
+[INFO] 21:29:18:065 CONSOLA/(4427:4427): Resultado -> 3
+
+[INFO] 21:29:18:065 CONSOLA/(3946:3946): Resultado -> 3
+
+[INFO] 21:30:44:742 CONSOLA/(4801:4801): Instruccion numero 0: I 3000 -1
+[INFO] 21:30:44:742 CONSOLA/(4801:4801): Instruccion numero 1: N -1 -1
+[INFO] 21:30:44:742 CONSOLA/(4801:4801): Instruccion numero 2: N -1 -1
+[INFO] 21:30:44:742 CONSOLA/(4801:4801): Instruccion numero 3: W 4 42
+[INFO] 21:30:44:742 CONSOLA/(4801:4801): Instruccion numero 4: C 0 4
+[INFO] 21:30:44:742 CONSOLA/(4801:4801): Instruccion numero 5: R 0 -1
+[INFO] 21:30:44:743 CONSOLA/(4801:4801): Instruccion numero 6: E -1 -1
+[INFO] 21:30:44:743 CONSOLA/(4801:4801): Programa enviado al kernel correctamente!
+[INFO] 21:30:47:429 CONSOLA/(4815:4815): Instruccion numero 0: I 3000 -1
+[INFO] 21:30:47:430 CONSOLA/(4815:4815): Instruccion numero 1: N -1 -1
+[INFO] 21:30:47:430 CONSOLA/(4815:4815): Instruccion numero 2: N -1 -1
+[INFO] 21:30:47:430 CONSOLA/(4815:4815): Instruccion numero 3: W 4 42
+[INFO] 21:30:47:430 CONSOLA/(4815:4815): Instruccion numero 4: C 0 4
+[INFO] 21:30:47:430 CONSOLA/(4815:4815): Instruccion numero 5: R 0 -1
+[INFO] 21:30:47:430 CONSOLA/(4815:4815): Instruccion numero 6: E -1 -1
+[INFO] 21:30:47:431 CONSOLA/(4815:4815): Programa enviado al kernel correctamente!
+[INFO] 21:30:50:673 CONSOLA/(4828:4828): Instruccion numero 0: I 3000 -1
+[INFO] 21:30:50:673 CONSOLA/(4828:4828): Instruccion numero 1: N -1 -1
+[INFO] 21:30:50:673 CONSOLA/(4828:4828): Instruccion numero 2: N -1 -1
+[INFO] 21:30:50:673 CONSOLA/(4828:4828): Instruccion numero 3: W 4 42
+[INFO] 21:30:50:673 CONSOLA/(4828:4828): Instruccion numero 4: C 0 4
+[INFO] 21:30:50:673 CONSOLA/(4828:4828): Instruccion numero 5: R 0 -1
+[INFO] 21:30:50:677 CONSOLA/(4828:4828): Instruccion numero 6: E -1 -1
+[INFO] 21:30:50:678 CONSOLA/(4828:4828): Programa enviado al kernel correctamente!
+[INFO] 21:30:55:093 CONSOLA/(4849:4849): Instruccion numero 0: I 3000 -1
+[INFO] 21:30:55:097 CONSOLA/(4849:4849): Instruccion numero 1: N -1 -1
+[INFO] 21:30:55:100 CONSOLA/(4849:4849): Instruccion numero 2: N -1 -1
+[INFO] 21:30:55:101 CONSOLA/(4849:4849): Instruccion numero 3: W 4 42
+[INFO] 21:30:55:101 CONSOLA/(4849:4849): Instruccion numero 4: C 0 4
+[INFO] 21:30:55:105 CONSOLA/(4849:4849): Instruccion numero 5: R 0 -1
+[INFO] 21:30:55:106 CONSOLA/(4849:4849): Instruccion numero 6: E -1 -1
+[INFO] 21:30:55:106 CONSOLA/(4849:4849): Programa enviado al kernel correctamente!
+[INFO] 21:30:55:333 CONSOLA/(4851:4851): Instruccion numero 0: I 3000 -1
+[INFO] 21:30:55:333 CONSOLA/(4851:4851): Instruccion numero 1: N -1 -1
+[INFO] 21:30:55:333 CONSOLA/(4851:4851): Instruccion numero 2: N -1 -1
+[INFO] 21:30:55:333 CONSOLA/(4851:4851): Instruccion numero 3: W 4 42
+[INFO] 21:30:55:333 CONSOLA/(4851:4851): Instruccion numero 4: C 0 4
+[INFO] 21:30:55:333 CONSOLA/(4851:4851): Instruccion numero 5: R 0 -1
+[INFO] 21:30:55:334 CONSOLA/(4851:4851): Instruccion numero 6: E -1 -1
+[INFO] 21:30:55:334 CONSOLA/(4851:4851): Programa enviado al kernel correctamente!
+[INFO] 21:30:57:341 CONSOLA/(4869:4869): Instruccion numero 0: I 3000 -1
+[INFO] 21:30:57:342 CONSOLA/(4869:4869): Instruccion numero 1: N -1 -1
+[INFO] 21:30:57:342 CONSOLA/(4869:4869): Instruccion numero 2: N -1 -1
+[INFO] 21:30:57:342 CONSOLA/(4869:4869): Instruccion numero 3: W 4 42
+[INFO] 21:30:57:342 CONSOLA/(4869:4869): Instruccion numero 4: C 0 4
+[INFO] 21:30:57:342 CONSOLA/(4869:4869): Instruccion numero 5: R 0 -1
+[INFO] 21:30:57:342 CONSOLA/(4869:4869): Instruccion numero 6: E -1 -1
+[INFO] 21:30:57:343 CONSOLA/(4869:4869): Programa enviado al kernel correctamente!
+[INFO] 21:32:40:219 CONSOLA/(4869:4869): Resultado -> 3
+
+[INFO] 21:32:40:219 CONSOLA/(4851:4851): Resultado -> 3
+
+[INFO] 21:32:40:219 CONSOLA/(4849:4849): Resultado -> 3
+
+[INFO] 21:32:40:219 CONSOLA/(4828:4828): Resultado -> 3
+
+[INFO] 21:32:40:219 CONSOLA/(4815:4815): Resultado -> 3
+
+[INFO] 21:32:40:219 CONSOLA/(4801:4801): Resultado -> 3
+
+[INFO] 21:33:46:428 CONSOLA/(5058:5058): Instruccion numero 0: I 9000 -1
+[INFO] 21:33:46:428 CONSOLA/(5058:5058): Instruccion numero 1: N -1 -1
+[INFO] 21:33:46:428 CONSOLA/(5058:5058): Instruccion numero 2: N -1 -1
+[INFO] 21:33:46:429 CONSOLA/(5058:5058): Instruccion numero 3: W 4 42
+[INFO] 21:33:46:429 CONSOLA/(5058:5058): Instruccion numero 4: C 0 4
+[INFO] 21:33:46:431 CONSOLA/(5058:5058): Instruccion numero 5: R 0 -1
+[INFO] 21:33:46:431 CONSOLA/(5058:5058): Instruccion numero 6: E -1 -1
+[INFO] 21:33:46:431 CONSOLA/(5058:5058): Programa enviado al kernel correctamente!
+[INFO] 21:33:50:358 CONSOLA/(5076:5076): Instruccion numero 0: I 9000 -1
+[INFO] 21:33:50:359 CONSOLA/(5076:5076): Instruccion numero 1: N -1 -1
+[INFO] 21:33:50:359 CONSOLA/(5076:5076): Instruccion numero 2: N -1 -1
+[INFO] 21:33:50:359 CONSOLA/(5076:5076): Instruccion numero 3: W 4 42
+[INFO] 21:33:50:359 CONSOLA/(5076:5076): Instruccion numero 4: C 0 4
+[INFO] 21:33:50:359 CONSOLA/(5076:5076): Instruccion numero 5: R 0 -1
+[INFO] 21:33:50:359 CONSOLA/(5076:5076): Instruccion numero 6: E -1 -1
+[INFO] 21:33:50:360 CONSOLA/(5076:5076): Programa enviado al kernel correctamente!
+[INFO] 21:33:52:228 CONSOLA/(5086:5086): Instruccion numero 0: I 9000 -1
+[INFO] 21:33:52:229 CONSOLA/(5086:5086): Instruccion numero 1: N -1 -1
+[INFO] 21:33:52:229 CONSOLA/(5086:5086): Instruccion numero 2: N -1 -1
+[INFO] 21:33:52:229 CONSOLA/(5086:5086): Instruccion numero 3: W 4 42
+[INFO] 21:33:52:229 CONSOLA/(5086:5086): Instruccion numero 4: C 0 4
+[INFO] 21:33:52:229 CONSOLA/(5086:5086): Instruccion numero 5: R 0 -1
+[INFO] 21:33:52:229 CONSOLA/(5086:5086): Instruccion numero 6: E -1 -1
+[INFO] 21:33:52:229 CONSOLA/(5086:5086): Programa enviado al kernel correctamente!
+[INFO] 21:33:55:692 CONSOLA/(5104:5104): Instruccion numero 0: I 9000 -1
+[INFO] 21:33:55:692 CONSOLA/(5104:5104): Instruccion numero 1: N -1 -1
+[INFO] 21:33:55:693 CONSOLA/(5104:5104): Instruccion numero 2: N -1 -1
+[INFO] 21:33:55:693 CONSOLA/(5104:5104): Instruccion numero 3: W 4 42
+[INFO] 21:33:55:693 CONSOLA/(5104:5104): Instruccion numero 4: C 0 4
+[INFO] 21:33:55:693 CONSOLA/(5104:5104): Instruccion numero 5: R 0 -1
+[INFO] 21:33:55:693 CONSOLA/(5104:5104): Instruccion numero 6: E -1 -1
+[INFO] 21:33:55:702 CONSOLA/(5104:5104): Programa enviado al kernel correctamente!
+[INFO] 21:33:58:383 CONSOLA/(5121:5121): Instruccion numero 0: I 9000 -1
+[INFO] 21:33:58:384 CONSOLA/(5121:5121): Instruccion numero 1: N -1 -1
+[INFO] 21:33:58:384 CONSOLA/(5121:5121): Instruccion numero 2: N -1 -1
+[INFO] 21:33:58:384 CONSOLA/(5121:5121): Instruccion numero 3: W 4 42
+[INFO] 21:33:58:385 CONSOLA/(5121:5121): Instruccion numero 4: C 0 4
+[INFO] 21:33:58:385 CONSOLA/(5121:5121): Instruccion numero 5: R 0 -1
+[INFO] 21:33:58:386 CONSOLA/(5121:5121): Instruccion numero 6: E -1 -1
+[INFO] 21:33:58:390 CONSOLA/(5121:5121): Programa enviado al kernel correctamente!
+[INFO] 21:34:04:457 CONSOLA/(5149:5149): Instruccion numero 0: I 9000 -1
+[INFO] 21:34:04:457 CONSOLA/(5149:5149): Instruccion numero 1: N -1 -1
+[INFO] 21:34:04:457 CONSOLA/(5149:5149): Instruccion numero 2: N -1 -1
+[INFO] 21:34:04:458 CONSOLA/(5149:5149): Instruccion numero 3: W 4 42
+[INFO] 21:34:04:458 CONSOLA/(5149:5149): Instruccion numero 4: C 0 4
+[INFO] 21:34:04:458 CONSOLA/(5149:5149): Instruccion numero 5: R 0 -1
+[INFO] 21:34:04:458 CONSOLA/(5149:5149): Instruccion numero 6: E -1 -1
+[INFO] 21:34:04:459 CONSOLA/(5149:5149): Programa enviado al kernel correctamente!
+[INFO] 21:38:34:948 CONSOLA/(5121:5121): Resultado -> 3
+
+[INFO] 21:38:34:948 CONSOLA/(5104:5104): Resultado -> 3
+
+[INFO] 21:38:34:948 CONSOLA/(5086:5086): Resultado -> 3
+
+[INFO] 21:38:34:948 CONSOLA/(5076:5076): Resultado -> 3
+
+[INFO] 21:38:34:948 CONSOLA/(5058:5058): Resultado -> 3
+
+[INFO] 21:39:56:107 CONSOLA/(5572:5572): Instruccion numero 0: I 9000 -1
+[INFO] 21:39:56:108 CONSOLA/(5572:5572): Instruccion numero 1: N -1 -1
+[INFO] 21:39:56:108 CONSOLA/(5572:5572): Instruccion numero 2: N -1 -1
+[INFO] 21:39:56:108 CONSOLA/(5572:5572): Instruccion numero 3: W 4 42
+[INFO] 21:39:56:108 CONSOLA/(5572:5572): Instruccion numero 4: C 0 4
+[INFO] 21:39:56:108 CONSOLA/(5572:5572): Instruccion numero 5: R 0 -1
+[INFO] 21:39:56:109 CONSOLA/(5572:5572): Instruccion numero 6: E -1 -1
+[INFO] 21:39:56:110 CONSOLA/(5572:5572): Programa enviado al kernel correctamente!
+[INFO] 21:39:59:337 CONSOLA/(5586:5586): Instruccion numero 0: I 9000 -1
+[INFO] 21:39:59:337 CONSOLA/(5586:5586): Instruccion numero 1: N -1 -1
+[INFO] 21:39:59:337 CONSOLA/(5586:5586): Instruccion numero 2: N -1 -1
+[INFO] 21:39:59:337 CONSOLA/(5586:5586): Instruccion numero 3: W 4 42
+[INFO] 21:39:59:337 CONSOLA/(5586:5586): Instruccion numero 4: C 0 4
+[INFO] 21:39:59:337 CONSOLA/(5586:5586): Instruccion numero 5: R 0 -1
+[INFO] 21:39:59:337 CONSOLA/(5586:5586): Instruccion numero 6: E -1 -1
+[INFO] 21:39:59:341 CONSOLA/(5586:5586): Programa enviado al kernel correctamente!
+[INFO] 21:40:03:767 CONSOLA/(5601:5601): Instruccion numero 0: I 9000 -1
+[INFO] 21:40:03:769 CONSOLA/(5601:5601): Instruccion numero 1: N -1 -1
+[INFO] 21:40:03:769 CONSOLA/(5601:5601): Instruccion numero 2: N -1 -1
+[INFO] 21:40:03:769 CONSOLA/(5601:5601): Instruccion numero 3: W 4 42
+[INFO] 21:40:03:769 CONSOLA/(5601:5601): Instruccion numero 4: C 0 4
+[INFO] 21:40:03:769 CONSOLA/(5601:5601): Instruccion numero 5: R 0 -1
+[INFO] 21:40:03:769 CONSOLA/(5601:5601): Instruccion numero 6: E -1 -1
+[INFO] 21:40:03:769 CONSOLA/(5601:5601): Programa enviado al kernel correctamente!
+[INFO] 21:40:05:989 CONSOLA/(5615:5615): Instruccion numero 0: I 9000 -1
+[INFO] 21:40:05:989 CONSOLA/(5615:5615): Instruccion numero 1: N -1 -1
+[INFO] 21:40:05:989 CONSOLA/(5615:5615): Instruccion numero 2: N -1 -1
+[INFO] 21:40:05:990 CONSOLA/(5615:5615): Instruccion numero 3: W 4 42
+[INFO] 21:40:05:991 CONSOLA/(5615:5615): Instruccion numero 4: C 0 4
+[INFO] 21:40:05:992 CONSOLA/(5615:5615): Instruccion numero 5: R 0 -1
+[INFO] 21:40:05:993 CONSOLA/(5615:5615): Instruccion numero 6: E -1 -1
+[INFO] 21:40:05:993 CONSOLA/(5615:5615): Programa enviado al kernel correctamente!
+[INFO] 21:40:06:926 CONSOLA/(5625:5625): Instruccion numero 0: I 9000 -1
+[INFO] 21:40:06:926 CONSOLA/(5625:5625): Instruccion numero 1: N -1 -1
+[INFO] 21:40:06:926 CONSOLA/(5625:5625): Instruccion numero 2: N -1 -1
+[INFO] 21:40:06:926 CONSOLA/(5625:5625): Instruccion numero 3: W 4 42
+[INFO] 21:40:06:926 CONSOLA/(5625:5625): Instruccion numero 4: C 0 4
+[INFO] 21:40:06:926 CONSOLA/(5625:5625): Instruccion numero 5: R 0 -1
+[INFO] 21:40:06:927 CONSOLA/(5625:5625): Instruccion numero 6: E -1 -1
+[INFO] 21:40:06:927 CONSOLA/(5625:5625): Programa enviado al kernel correctamente!
+[INFO] 21:43:57:372 CONSOLA/(5625:5625): Resultado -> 3
+
+[INFO] 21:43:57:372 CONSOLA/(5615:5615): Resultado -> 3
+
+[INFO] 21:43:57:372 CONSOLA/(5601:5601): Resultado -> 3
+
+[INFO] 21:43:57:372 CONSOLA/(5586:5586): Resultado -> 3
+
+[INFO] 21:43:57:372 CONSOLA/(5572:5572): Resultado -> 3
+
+[INFO] 21:45:13:884 CONSOLA/(6035:6035): Instruccion numero 0: I 9000 -1
+[INFO] 21:45:13:885 CONSOLA/(6035:6035): Instruccion numero 1: N -1 -1
+[INFO] 21:45:13:885 CONSOLA/(6035:6035): Instruccion numero 2: N -1 -1
+[INFO] 21:45:13:885 CONSOLA/(6035:6035): Instruccion numero 3: W 4 42
+[INFO] 21:45:13:887 CONSOLA/(6035:6035): Instruccion numero 4: C 0 4
+[INFO] 21:45:13:887 CONSOLA/(6035:6035): Instruccion numero 5: R 0 -1
+[INFO] 21:45:13:887 CONSOLA/(6035:6035): Instruccion numero 6: E -1 -1
+[INFO] 21:45:13:888 CONSOLA/(6035:6035): Programa enviado al kernel correctamente!
+[INFO] 21:45:18:800 CONSOLA/(6053:6053): Instruccion numero 0: I 9000 -1
+[INFO] 21:45:18:800 CONSOLA/(6053:6053): Instruccion numero 1: N -1 -1
+[INFO] 21:45:18:800 CONSOLA/(6053:6053): Instruccion numero 2: N -1 -1
+[INFO] 21:45:18:800 CONSOLA/(6053:6053): Instruccion numero 3: W 4 42
+[INFO] 21:45:18:800 CONSOLA/(6053:6053): Instruccion numero 4: C 0 4
+[INFO] 21:45:18:800 CONSOLA/(6053:6053): Instruccion numero 5: R 0 -1
+[INFO] 21:45:18:800 CONSOLA/(6053:6053): Instruccion numero 6: E -1 -1
+[INFO] 21:45:18:801 CONSOLA/(6053:6053): Programa enviado al kernel correctamente!
+[INFO] 21:45:19:533 CONSOLA/(6059:6059): Instruccion numero 0: I 9000 -1
+[INFO] 21:45:19:533 CONSOLA/(6059:6059): Instruccion numero 1: N -1 -1
+[INFO] 21:45:19:533 CONSOLA/(6059:6059): Instruccion numero 2: N -1 -1
+[INFO] 21:45:19:534 CONSOLA/(6059:6059): Instruccion numero 3: W 4 42
+[INFO] 21:45:19:534 CONSOLA/(6059:6059): Instruccion numero 4: C 0 4
+[INFO] 21:45:19:534 CONSOLA/(6059:6059): Instruccion numero 5: R 0 -1
+[INFO] 21:45:19:534 CONSOLA/(6059:6059): Instruccion numero 6: E -1 -1
+[INFO] 21:45:19:535 CONSOLA/(6059:6059): Programa enviado al kernel correctamente!
+[INFO] 21:45:21:353 CONSOLA/(6074:6074): Instruccion numero 0: I 9000 -1
+[INFO] 21:45:21:353 CONSOLA/(6074:6074): Instruccion numero 1: N -1 -1
+[INFO] 21:45:21:353 CONSOLA/(6074:6074): Instruccion numero 2: N -1 -1
+[INFO] 21:45:21:353 CONSOLA/(6074:6074): Instruccion numero 3: W 4 42
+[INFO] 21:45:21:353 CONSOLA/(6074:6074): Instruccion numero 4: C 0 4
+[INFO] 21:45:21:353 CONSOLA/(6074:6074): Instruccion numero 5: R 0 -1
+[INFO] 21:45:21:353 CONSOLA/(6074:6074): Instruccion numero 6: E -1 -1
+[INFO] 21:45:21:354 CONSOLA/(6074:6074): Programa enviado al kernel correctamente!
+[INFO] 21:45:24:537 CONSOLA/(6085:6085): Instruccion numero 0: I 9000 -1
+[INFO] 21:45:24:537 CONSOLA/(6085:6085): Instruccion numero 1: N -1 -1
+[INFO] 21:45:24:537 CONSOLA/(6085:6085): Instruccion numero 2: N -1 -1
+[INFO] 21:45:24:537 CONSOLA/(6085:6085): Instruccion numero 3: W 4 42
+[INFO] 21:45:24:537 CONSOLA/(6085:6085): Instruccion numero 4: C 0 4
+[INFO] 21:45:24:538 CONSOLA/(6085:6085): Instruccion numero 5: R 0 -1
+[INFO] 21:45:24:538 CONSOLA/(6085:6085): Instruccion numero 6: E -1 -1
+[INFO] 21:45:24:540 CONSOLA/(6085:6085): Programa enviado al kernel correctamente!
+[INFO] 21:45:26:520 CONSOLA/(6099:6099): Instruccion numero 0: I 9000 -1
+[INFO] 21:45:26:520 CONSOLA/(6099:6099): Instruccion numero 1: N -1 -1
+[INFO] 21:45:26:520 CONSOLA/(6099:6099): Instruccion numero 2: N -1 -1
+[INFO] 21:45:26:520 CONSOLA/(6099:6099): Instruccion numero 3: W 4 42
+[INFO] 21:45:26:520 CONSOLA/(6099:6099): Instruccion numero 4: C 0 4
+[INFO] 21:45:26:520 CONSOLA/(6099:6099): Instruccion numero 5: R 0 -1
+[INFO] 21:45:26:520 CONSOLA/(6099:6099): Instruccion numero 6: E -1 -1
+[INFO] 21:45:26:522 CONSOLA/(6099:6099): Programa enviado al kernel correctamente!
+[INFO] 21:52:25:390 CONSOLA/(6099:6099): Resultado -> 3
+
+[INFO] 21:52:25:391 CONSOLA/(6085:6085): Resultado -> 3
+
+[INFO] 21:52:25:391 CONSOLA/(6074:6074): Resultado -> 3
+
+[INFO] 21:52:25:391 CONSOLA/(6059:6059): Resultado -> 3
+
+[INFO] 21:52:25:391 CONSOLA/(6053:6053): Resultado -> 3
+
+[INFO] 21:52:25:391 CONSOLA/(6035:6035): Resultado -> 3
+
+[INFO] 21:54:16:678 CONSOLA/(6669:6669): Instruccion numero 0: I 9000 -1
+[INFO] 21:54:16:681 CONSOLA/(6669:6669): Instruccion numero 1: N -1 -1
+[INFO] 21:54:16:681 CONSOLA/(6669:6669): Instruccion numero 2: N -1 -1
+[INFO] 21:54:16:685 CONSOLA/(6669:6669): Instruccion numero 3: W 4 42
+[INFO] 21:54:16:685 CONSOLA/(6669:6669): Instruccion numero 4: C 0 4
+[INFO] 21:54:16:685 CONSOLA/(6669:6669): Instruccion numero 5: R 0 -1
+[INFO] 21:54:16:685 CONSOLA/(6669:6669): Instruccion numero 6: E -1 -1
+[INFO] 21:54:16:686 CONSOLA/(6669:6669): Programa enviado al kernel correctamente!
+[INFO] 21:54:22:044 CONSOLA/(6684:6684): Instruccion numero 0: I 9000 -1
+[INFO] 21:54:22:053 CONSOLA/(6684:6684): Instruccion numero 1: N -1 -1
+[INFO] 21:54:22:061 CONSOLA/(6684:6684): Instruccion numero 2: N -1 -1
+[INFO] 21:54:22:061 CONSOLA/(6684:6684): Instruccion numero 3: W 4 42
+[INFO] 21:54:22:062 CONSOLA/(6684:6684): Instruccion numero 4: C 0 4
+[INFO] 21:54:22:062 CONSOLA/(6684:6684): Instruccion numero 5: R 0 -1
+[INFO] 21:54:22:062 CONSOLA/(6684:6684): Instruccion numero 6: E -1 -1
+[INFO] 21:54:22:065 CONSOLA/(6684:6684): Programa enviado al kernel correctamente!
+[INFO] 21:54:25:701 CONSOLA/(6695:6695): Instruccion numero 0: I 9000 -1
+[INFO] 21:54:25:701 CONSOLA/(6695:6695): Instruccion numero 1: N -1 -1
+[INFO] 21:54:25:701 CONSOLA/(6695:6695): Instruccion numero 2: N -1 -1
+[INFO] 21:54:25:701 CONSOLA/(6695:6695): Instruccion numero 3: W 4 42
+[INFO] 21:54:25:702 CONSOLA/(6695:6695): Instruccion numero 4: C 0 4
+[INFO] 21:54:25:702 CONSOLA/(6695:6695): Instruccion numero 5: R 0 -1
+[INFO] 21:54:25:702 CONSOLA/(6695:6695): Instruccion numero 6: E -1 -1
+[INFO] 21:54:25:703 CONSOLA/(6695:6695): Programa enviado al kernel correctamente!
+[INFO] 21:54:28:199 CONSOLA/(6709:6709): Instruccion numero 0: I 9000 -1
+[INFO] 21:54:28:199 CONSOLA/(6709:6709): Instruccion numero 1: N -1 -1
+[INFO] 21:54:28:199 CONSOLA/(6709:6709): Instruccion numero 2: N -1 -1
+[INFO] 21:54:28:199 CONSOLA/(6709:6709): Instruccion numero 3: W 4 42
+[INFO] 21:54:28:199 CONSOLA/(6709:6709): Instruccion numero 4: C 0 4
+[INFO] 21:54:28:199 CONSOLA/(6709:6709): Instruccion numero 5: R 0 -1
+[INFO] 21:54:28:199 CONSOLA/(6709:6709): Instruccion numero 6: E -1 -1
+[INFO] 21:54:28:203 CONSOLA/(6709:6709): Programa enviado al kernel correctamente!
+[INFO] 21:54:30:050 CONSOLA/(6720:6720): Instruccion numero 0: I 9000 -1
+[INFO] 21:54:30:053 CONSOLA/(6720:6720): Instruccion numero 1: N -1 -1
+[INFO] 21:54:30:053 CONSOLA/(6720:6720): Instruccion numero 2: N -1 -1
+[INFO] 21:54:30:053 CONSOLA/(6720:6720): Instruccion numero 3: W 4 42
+[INFO] 21:54:30:053 CONSOLA/(6720:6720): Instruccion numero 4: C 0 4
+[INFO] 21:54:30:053 CONSOLA/(6720:6720): Instruccion numero 5: R 0 -1
+[INFO] 21:54:30:053 CONSOLA/(6720:6720): Instruccion numero 6: E -1 -1
+[INFO] 21:54:30:054 CONSOLA/(6720:6720): Programa enviado al kernel correctamente!
+[INFO] 21:54:33:781 CONSOLA/(6738:6738): Instruccion numero 0: I 9000 -1
+[INFO] 21:54:33:782 CONSOLA/(6738:6738): Instruccion numero 1: N -1 -1
+[INFO] 21:54:33:782 CONSOLA/(6738:6738): Instruccion numero 2: N -1 -1
+[INFO] 21:54:33:782 CONSOLA/(6738:6738): Instruccion numero 3: W 4 42
+[INFO] 21:54:33:785 CONSOLA/(6738:6738): Instruccion numero 4: C 0 4
+[INFO] 21:54:33:788 CONSOLA/(6738:6738): Instruccion numero 5: R 0 -1
+[INFO] 21:54:33:789 CONSOLA/(6738:6738): Instruccion numero 6: E -1 -1
+[INFO] 21:54:33:789 CONSOLA/(6738:6738): Programa enviado al kernel correctamente!
+[INFO] 21:54:34:937 CONSOLA/(6745:6745): Instruccion numero 0: I 9000 -1
+[INFO] 21:54:34:938 CONSOLA/(6745:6745): Instruccion numero 1: N -1 -1
+[INFO] 21:54:34:938 CONSOLA/(6745:6745): Instruccion numero 2: N -1 -1
+[INFO] 21:54:34:938 CONSOLA/(6745:6745): Instruccion numero 3: W 4 42
+[INFO] 21:54:34:938 CONSOLA/(6745:6745): Instruccion numero 4: C 0 4
+[INFO] 21:54:34:938 CONSOLA/(6745:6745): Instruccion numero 5: R 0 -1
+[INFO] 21:54:34:938 CONSOLA/(6745:6745): Instruccion numero 6: E -1 -1
+[INFO] 21:54:34:939 CONSOLA/(6745:6745): Programa enviado al kernel correctamente!
+[INFO] 21:58:09:021 CONSOLA/(6745:6745): Resultado -> 3
+
+[INFO] 21:58:09:021 CONSOLA/(6738:6738): Resultado -> 3
+
+[INFO] 21:58:09:021 CONSOLA/(6720:6720): Resultado -> 3
+
+[INFO] 21:58:09:021 CONSOLA/(6709:6709): Resultado -> 3
+
+[INFO] 21:58:09:021 CONSOLA/(6695:6695): Resultado -> 3
+
+[INFO] 21:58:09:021 CONSOLA/(6684:6684): Resultado -> 3
+
+[INFO] 21:58:09:021 CONSOLA/(6669:6669): Resultado -> 3
+
+[INFO] 21:59:23:836 CONSOLA/(7102:7102): Instruccion numero 0: I 9000 -1
+[INFO] 21:59:23:836 CONSOLA/(7102:7102): Instruccion numero 1: N -1 -1
+[INFO] 21:59:23:836 CONSOLA/(7102:7102): Instruccion numero 2: N -1 -1
+[INFO] 21:59:23:836 CONSOLA/(7102:7102): Instruccion numero 3: W 4 42
+[INFO] 21:59:23:836 CONSOLA/(7102:7102): Instruccion numero 4: C 0 4
+[INFO] 21:59:23:836 CONSOLA/(7102:7102): Instruccion numero 5: R 0 -1
+[INFO] 21:59:23:837 CONSOLA/(7102:7102): Instruccion numero 6: E -1 -1
+[INFO] 21:59:23:837 CONSOLA/(7102:7102): Programa enviado al kernel correctamente!
+[INFO] 21:59:27:056 CONSOLA/(7113:7113): Instruccion numero 0: I 9000 -1
+[INFO] 21:59:27:057 CONSOLA/(7113:7113): Instruccion numero 1: N -1 -1
+[INFO] 21:59:27:057 CONSOLA/(7113:7113): Instruccion numero 2: N -1 -1
+[INFO] 21:59:27:057 CONSOLA/(7113:7113): Instruccion numero 3: W 4 42
+[INFO] 21:59:27:057 CONSOLA/(7113:7113): Instruccion numero 4: C 0 4
+[INFO] 21:59:27:057 CONSOLA/(7113:7113): Instruccion numero 5: R 0 -1
+[INFO] 21:59:27:061 CONSOLA/(7113:7113): Instruccion numero 6: E -1 -1
+[INFO] 21:59:27:061 CONSOLA/(7113:7113): Programa enviado al kernel correctamente!
+[INFO] 21:59:29:369 CONSOLA/(7127:7127): Instruccion numero 0: I 9000 -1
+[INFO] 21:59:29:369 CONSOLA/(7127:7127): Instruccion numero 1: N -1 -1
+[INFO] 21:59:29:369 CONSOLA/(7127:7127): Instruccion numero 2: N -1 -1
+[INFO] 21:59:29:369 CONSOLA/(7127:7127): Instruccion numero 3: W 4 42
+[INFO] 21:59:29:369 CONSOLA/(7127:7127): Instruccion numero 4: C 0 4
+[INFO] 21:59:29:369 CONSOLA/(7127:7127): Instruccion numero 5: R 0 -1
+[INFO] 21:59:29:369 CONSOLA/(7127:7127): Instruccion numero 6: E -1 -1
+[INFO] 21:59:29:370 CONSOLA/(7127:7127): Programa enviado al kernel correctamente!
+[INFO] 21:59:31:749 CONSOLA/(7138:7138): Instruccion numero 0: I 9000 -1
+[INFO] 21:59:31:753 CONSOLA/(7138:7138): Instruccion numero 1: N -1 -1
+[INFO] 21:59:31:753 CONSOLA/(7138:7138): Instruccion numero 2: N -1 -1
+[INFO] 21:59:31:753 CONSOLA/(7138:7138): Instruccion numero 3: W 4 42
+[INFO] 21:59:31:753 CONSOLA/(7138:7138): Instruccion numero 4: C 0 4
+[INFO] 21:59:31:754 CONSOLA/(7138:7138): Instruccion numero 5: R 0 -1
+[INFO] 21:59:31:754 CONSOLA/(7138:7138): Instruccion numero 6: E -1 -1
+[INFO] 21:59:31:754 CONSOLA/(7138:7138): Programa enviado al kernel correctamente!
+[INFO] 21:59:35:581 CONSOLA/(7152:7152): Instruccion numero 0: I 9000 -1
+[INFO] 21:59:35:582 CONSOLA/(7152:7152): Instruccion numero 1: N -1 -1
+[INFO] 21:59:35:582 CONSOLA/(7152:7152): Instruccion numero 2: N -1 -1
+[INFO] 21:59:35:582 CONSOLA/(7152:7152): Instruccion numero 3: W 4 42
+[INFO] 21:59:35:582 CONSOLA/(7152:7152): Instruccion numero 4: C 0 4
+[INFO] 21:59:35:585 CONSOLA/(7152:7152): Instruccion numero 5: R 0 -1
+[INFO] 21:59:35:585 CONSOLA/(7152:7152): Instruccion numero 6: E -1 -1
+[INFO] 21:59:35:586 CONSOLA/(7152:7152): Programa enviado al kernel correctamente!
+[INFO] 21:59:40:169 CONSOLA/(7171:7171): Instruccion numero 0: I 9000 -1
+[INFO] 21:59:40:170 CONSOLA/(7171:7171): Instruccion numero 1: N -1 -1
+[INFO] 21:59:40:170 CONSOLA/(7171:7171): Instruccion numero 2: N -1 -1
+[INFO] 21:59:40:170 CONSOLA/(7171:7171): Instruccion numero 3: W 4 42
+[INFO] 21:59:40:170 CONSOLA/(7171:7171): Instruccion numero 4: C 0 4
+[INFO] 21:59:40:170 CONSOLA/(7171:7171): Instruccion numero 5: R 0 -1
+[INFO] 21:59:40:170 CONSOLA/(7171:7171): Instruccion numero 6: E -1 -1
+[INFO] 21:59:40:170 CONSOLA/(7171:7171): Programa enviado al kernel correctamente!
+[INFO] 21:59:43:320 CONSOLA/(7187:7187): Instruccion numero 0: I 9000 -1
+[INFO] 21:59:43:320 CONSOLA/(7187:7187): Instruccion numero 1: N -1 -1
+[INFO] 21:59:43:320 CONSOLA/(7187:7187): Instruccion numero 2: N -1 -1
+[INFO] 21:59:43:320 CONSOLA/(7187:7187): Instruccion numero 3: W 4 42
+[INFO] 21:59:43:320 CONSOLA/(7187:7187): Instruccion numero 4: C 0 4
+[INFO] 21:59:43:320 CONSOLA/(7187:7187): Instruccion numero 5: R 0 -1
+[INFO] 21:59:43:320 CONSOLA/(7187:7187): Instruccion numero 6: E -1 -1
+[INFO] 21:59:43:321 CONSOLA/(7187:7187): Programa enviado al kernel correctamente!
+[INFO] 21:59:46:669 CONSOLA/(7200:7200): Instruccion numero 0: I 9000 -1
+[INFO] 21:59:46:673 CONSOLA/(7200:7200): Instruccion numero 1: N -1 -1
+[INFO] 21:59:46:673 CONSOLA/(7200:7200): Instruccion numero 2: N -1 -1
+[INFO] 21:59:46:673 CONSOLA/(7200:7200): Instruccion numero 3: W 4 42
+[INFO] 21:59:46:673 CONSOLA/(7200:7200): Instruccion numero 4: C 0 4
+[INFO] 21:59:46:673 CONSOLA/(7200:7200): Instruccion numero 5: R 0 -1
+[INFO] 21:59:46:673 CONSOLA/(7200:7200): Instruccion numero 6: E -1 -1
+[INFO] 21:59:46:673 CONSOLA/(7200:7200): Programa enviado al kernel correctamente!
+[INFO] 21:59:46:729 CONSOLA/(7201:7201): Instruccion numero 0: I 9000 -1
+[INFO] 21:59:46:732 CONSOLA/(7201:7201): Instruccion numero 1: N -1 -1
+[INFO] 21:59:46:732 CONSOLA/(7201:7201): Instruccion numero 2: N -1 -1
+[INFO] 21:59:46:732 CONSOLA/(7201:7201): Instruccion numero 3: W 4 42
+[INFO] 21:59:46:732 CONSOLA/(7201:7201): Instruccion numero 4: C 0 4
+[INFO] 21:59:46:732 CONSOLA/(7201:7201): Instruccion numero 5: R 0 -1
+[INFO] 21:59:46:732 CONSOLA/(7201:7201): Instruccion numero 6: E -1 -1
+[INFO] 21:59:46:733 CONSOLA/(7201:7201): Programa enviado al kernel correctamente!
+[INFO] 21:59:48:750 CONSOLA/(7220:7220): Instruccion numero 0: I 9000 -1
+[INFO] 21:59:48:750 CONSOLA/(7220:7220): Instruccion numero 1: N -1 -1
+[INFO] 21:59:48:750 CONSOLA/(7220:7220): Instruccion numero 2: N -1 -1
+[INFO] 21:59:48:751 CONSOLA/(7220:7220): Instruccion numero 3: W 4 42
+[INFO] 21:59:48:751 CONSOLA/(7220:7220): Instruccion numero 4: C 0 4
+[INFO] 21:59:48:751 CONSOLA/(7220:7220): Instruccion numero 5: R 0 -1
+[INFO] 21:59:48:751 CONSOLA/(7220:7220): Instruccion numero 6: E -1 -1
+[INFO] 21:59:48:757 CONSOLA/(7220:7220): Programa enviado al kernel correctamente!
+[INFO] 21:59:54:048 CONSOLA/(7236:7236): Instruccion numero 0: I 9000 -1
+[INFO] 21:59:54:048 CONSOLA/(7236:7236): Instruccion numero 1: N -1 -1
+[INFO] 21:59:54:048 CONSOLA/(7236:7236): Instruccion numero 2: N -1 -1
+[INFO] 21:59:54:048 CONSOLA/(7236:7236): Instruccion numero 3: W 4 42
+[INFO] 21:59:54:049 CONSOLA/(7236:7236): Instruccion numero 4: C 0 4
+[INFO] 21:59:54:049 CONSOLA/(7236:7236): Instruccion numero 5: R 0 -1
+[INFO] 21:59:54:050 CONSOLA/(7236:7236): Instruccion numero 6: E -1 -1
+[INFO] 21:59:54:051 CONSOLA/(7236:7236): Programa enviado al kernel correctamente!
+[INFO] 22:02:12:041 CONSOLA/(7236:7236): Resultado -> 3
+
+[INFO] 22:02:12:041 CONSOLA/(7220:7220): Resultado -> 3
+
+[INFO] 22:02:12:041 CONSOLA/(7201:7201): Resultado -> 3
+
+[INFO] 22:02:12:042 CONSOLA/(7200:7200): Resultado -> 3
+
+[INFO] 22:02:12:042 CONSOLA/(7187:7187): Resultado -> 3
+
+[INFO] 22:02:12:042 CONSOLA/(7171:7171): Resultado -> 3
+
+[INFO] 22:02:12:042 CONSOLA/(7152:7152): Resultado -> 3
+
+[INFO] 22:02:12:042 CONSOLA/(7138:7138): Resultado -> 3
+
+[INFO] 22:02:12:042 CONSOLA/(7127:7127): Resultado -> 3
+
+[INFO] 22:02:12:042 CONSOLA/(7113:7113): Resultado -> 3
+
+[INFO] 22:02:12:042 CONSOLA/(7102:7102): Resultado -> 3
+
+[INFO] 22:04:06:024 CONSOLA/(7464:7464): Instruccion numero 0: I 9000 -1
+[INFO] 22:04:06:024 CONSOLA/(7464:7464): Instruccion numero 1: N -1 -1
+[INFO] 22:04:06:024 CONSOLA/(7464:7464): Instruccion numero 2: N -1 -1
+[INFO] 22:04:06:024 CONSOLA/(7464:7464): Instruccion numero 3: W 4 42
+[INFO] 22:04:06:025 CONSOLA/(7464:7464): Instruccion numero 4: C 0 4
+[INFO] 22:04:06:025 CONSOLA/(7464:7464): Instruccion numero 5: R 0 -1
+[INFO] 22:04:06:025 CONSOLA/(7464:7464): Instruccion numero 6: E -1 -1
+[INFO] 22:04:06:026 CONSOLA/(7464:7464): Programa enviado al kernel correctamente!
+[INFO] 22:04:09:251 CONSOLA/(7478:7478): Instruccion numero 0: I 9000 -1
+[INFO] 22:04:09:252 CONSOLA/(7478:7478): Instruccion numero 1: N -1 -1
+[INFO] 22:04:09:252 CONSOLA/(7478:7478): Instruccion numero 2: N -1 -1
+[INFO] 22:04:09:252 CONSOLA/(7478:7478): Instruccion numero 3: W 4 42
+[INFO] 22:04:09:252 CONSOLA/(7478:7478): Instruccion numero 4: C 0 4
+[INFO] 22:04:09:252 CONSOLA/(7478:7478): Instruccion numero 5: R 0 -1
+[INFO] 22:04:09:252 CONSOLA/(7478:7478): Instruccion numero 6: E -1 -1
+[INFO] 22:04:09:253 CONSOLA/(7478:7478): Programa enviado al kernel correctamente!
+[INFO] 22:04:11:537 CONSOLA/(7489:7489): Instruccion numero 0: I 9000 -1
+[INFO] 22:04:11:537 CONSOLA/(7489:7489): Instruccion numero 1: N -1 -1
+[INFO] 22:04:11:537 CONSOLA/(7489:7489): Instruccion numero 2: N -1 -1
+[INFO] 22:04:11:537 CONSOLA/(7489:7489): Instruccion numero 3: W 4 42
+[INFO] 22:04:11:538 CONSOLA/(7489:7489): Instruccion numero 4: C 0 4
+[INFO] 22:04:11:538 CONSOLA/(7489:7489): Instruccion numero 5: R 0 -1
+[INFO] 22:04:11:538 CONSOLA/(7489:7489): Instruccion numero 6: E -1 -1
+[INFO] 22:04:11:538 CONSOLA/(7489:7489): Programa enviado al kernel correctamente!
+[INFO] 22:04:14:433 CONSOLA/(7503:7503): Instruccion numero 0: I 9000 -1
+[INFO] 22:04:14:437 CONSOLA/(7503:7503): Instruccion numero 1: N -1 -1
+[INFO] 22:04:14:437 CONSOLA/(7503:7503): Instruccion numero 2: N -1 -1
+[INFO] 22:04:14:437 CONSOLA/(7503:7503): Instruccion numero 3: W 4 42
+[INFO] 22:04:14:437 CONSOLA/(7503:7503): Instruccion numero 4: C 0 4
+[INFO] 22:04:14:437 CONSOLA/(7503:7503): Instruccion numero 5: R 0 -1
+[INFO] 22:04:14:437 CONSOLA/(7503:7503): Instruccion numero 6: E -1 -1
+[INFO] 22:04:14:438 CONSOLA/(7503:7503): Programa enviado al kernel correctamente!
+[INFO] 22:04:16:714 CONSOLA/(7514:7514): Instruccion numero 0: I 9000 -1
+[INFO] 22:04:16:714 CONSOLA/(7514:7514): Instruccion numero 1: N -1 -1
+[INFO] 22:04:16:714 CONSOLA/(7514:7514): Instruccion numero 2: N -1 -1
+[INFO] 22:04:16:717 CONSOLA/(7514:7514): Instruccion numero 3: W 4 42
+[INFO] 22:04:16:721 CONSOLA/(7514:7514): Instruccion numero 4: C 0 4
+[INFO] 22:04:16:721 CONSOLA/(7514:7514): Instruccion numero 5: R 0 -1
+[INFO] 22:04:16:721 CONSOLA/(7514:7514): Instruccion numero 6: E -1 -1
+[INFO] 22:04:16:721 CONSOLA/(7514:7514): Programa enviado al kernel correctamente!
+[INFO] 22:04:20:141 CONSOLA/(7534:7534): Instruccion numero 0: I 9000 -1
+[INFO] 22:04:20:141 CONSOLA/(7534:7534): Instruccion numero 1: N -1 -1
+[INFO] 22:04:20:141 CONSOLA/(7534:7534): Instruccion numero 2: N -1 -1
+[INFO] 22:04:20:141 CONSOLA/(7534:7534): Instruccion numero 3: W 4 42
+[INFO] 22:04:20:141 CONSOLA/(7534:7534): Instruccion numero 4: C 0 4
+[INFO] 22:04:20:141 CONSOLA/(7534:7534): Instruccion numero 5: R 0 -1
+[INFO] 22:04:20:141 CONSOLA/(7534:7534): Instruccion numero 6: E -1 -1
+[INFO] 22:04:20:142 CONSOLA/(7534:7534): Programa enviado al kernel correctamente!
+[INFO] 22:04:20:291 CONSOLA/(7539:7539): Instruccion numero 0: I 9000 -1
+[INFO] 22:04:20:291 CONSOLA/(7539:7539): Instruccion numero 1: N -1 -1
+[INFO] 22:04:20:292 CONSOLA/(7539:7539): Instruccion numero 2: N -1 -1
+[INFO] 22:04:20:292 CONSOLA/(7539:7539): Instruccion numero 3: W 4 42
+[INFO] 22:04:20:292 CONSOLA/(7539:7539): Instruccion numero 4: C 0 4
+[INFO] 22:04:20:292 CONSOLA/(7539:7539): Instruccion numero 5: R 0 -1
+[INFO] 22:04:20:292 CONSOLA/(7539:7539): Instruccion numero 6: E -1 -1
+[INFO] 22:04:20:293 CONSOLA/(7539:7539): Programa enviado al kernel correctamente!
+[INFO] 22:04:22:653 CONSOLA/(7551:7551): Instruccion numero 0: I 9000 -1
+[INFO] 22:04:22:653 CONSOLA/(7551:7551): Instruccion numero 1: N -1 -1
+[INFO] 22:04:22:653 CONSOLA/(7551:7551): Instruccion numero 2: N -1 -1
+[INFO] 22:04:22:653 CONSOLA/(7551:7551): Instruccion numero 3: W 4 42
+[INFO] 22:04:22:657 CONSOLA/(7551:7551): Instruccion numero 4: C 0 4
+[INFO] 22:04:22:657 CONSOLA/(7551:7551): Instruccion numero 5: R 0 -1
+[INFO] 22:04:22:657 CONSOLA/(7551:7551): Instruccion numero 6: E -1 -1
+[INFO] 22:04:22:659 CONSOLA/(7551:7551): Programa enviado al kernel correctamente!
+[INFO] 22:04:25:951 CONSOLA/(7570:7570): Instruccion numero 0: I 9000 -1
+[INFO] 22:04:25:952 CONSOLA/(7570:7570): Instruccion numero 1: N -1 -1
+[INFO] 22:04:25:952 CONSOLA/(7570:7570): Instruccion numero 2: N -1 -1
+[INFO] 22:04:25:952 CONSOLA/(7570:7570): Instruccion numero 3: W 4 42
+[INFO] 22:04:25:953 CONSOLA/(7570:7570): Instruccion numero 4: C 0 4
+[INFO] 22:04:25:953 CONSOLA/(7570:7570): Instruccion numero 5: R 0 -1
+[INFO] 22:04:25:953 CONSOLA/(7570:7570): Instruccion numero 6: E -1 -1
+[INFO] 22:04:25:954 CONSOLA/(7570:7570): Programa enviado al kernel correctamente!
+[INFO] 22:04:25:984 CONSOLA/(7571:7571): Instruccion numero 0: I 9000 -1
+[INFO] 22:04:25:984 CONSOLA/(7571:7571): Instruccion numero 1: N -1 -1
+[INFO] 22:04:25:984 CONSOLA/(7571:7571): Instruccion numero 2: N -1 -1
+[INFO] 22:04:25:984 CONSOLA/(7571:7571): Instruccion numero 3: W 4 42
+[INFO] 22:04:25:984 CONSOLA/(7571:7571): Instruccion numero 4: C 0 4
+[INFO] 22:04:25:985 CONSOLA/(7571:7571): Instruccion numero 5: R 0 -1
+[INFO] 22:04:25:985 CONSOLA/(7571:7571): Instruccion numero 6: E -1 -1
+[INFO] 22:04:25:986 CONSOLA/(7571:7571): Programa enviado al kernel correctamente!
+[INFO] 22:04:30:213 CONSOLA/(7590:7590): Instruccion numero 0: I 9000 -1
+[INFO] 22:04:30:213 CONSOLA/(7590:7590): Instruccion numero 1: N -1 -1
+[INFO] 22:04:30:213 CONSOLA/(7590:7590): Instruccion numero 2: N -1 -1
+[INFO] 22:04:30:213 CONSOLA/(7590:7590): Instruccion numero 3: W 4 42
+[INFO] 22:04:30:214 CONSOLA/(7590:7590): Instruccion numero 4: C 0 4
+[INFO] 22:04:30:214 CONSOLA/(7590:7590): Instruccion numero 5: R 0 -1
+[INFO] 22:04:30:214 CONSOLA/(7590:7590): Instruccion numero 6: E -1 -1
+[INFO] 22:04:30:215 CONSOLA/(7590:7590): Programa enviado al kernel correctamente!
+[INFO] 22:07:30:080 CONSOLA/(7590:7590): Resultado -> 3
+
+[INFO] 22:07:30:080 CONSOLA/(7571:7571): Resultado -> 3
+
+[INFO] 22:07:30:080 CONSOLA/(7570:7570): Resultado -> 3
+
+[INFO] 22:07:30:080 CONSOLA/(7551:7551): Resultado -> 3
+
+[INFO] 22:07:30:080 CONSOLA/(7539:7539): Resultado -> 3
+
+[INFO] 22:07:30:080 CONSOLA/(7534:7534): Resultado -> 3
+
+[INFO] 22:07:30:080 CONSOLA/(7514:7514): Resultado -> 3
+
+[INFO] 22:07:30:080 CONSOLA/(7503:7503): Resultado -> 3
+
+[INFO] 22:07:30:080 CONSOLA/(7489:7489): Resultado -> 3
+
+[INFO] 22:07:30:080 CONSOLA/(7478:7478): Resultado -> 3
+
+[INFO] 22:07:30:080 CONSOLA/(7464:7464): Resultado -> 3
+
+[INFO] 22:10:59:168 CONSOLA/(8029:8029): Instruccion numero 0: I 9000 -1
+[INFO] 22:10:59:168 CONSOLA/(8029:8029): Instruccion numero 1: N -1 -1
+[INFO] 22:10:59:168 CONSOLA/(8029:8029): Instruccion numero 2: N -1 -1
+[INFO] 22:10:59:168 CONSOLA/(8029:8029): Instruccion numero 3: W 4 42
+[INFO] 22:10:59:169 CONSOLA/(8029:8029): Instruccion numero 4: C 0 4
+[INFO] 22:10:59:169 CONSOLA/(8029:8029): Instruccion numero 5: R 0 -1
+[INFO] 22:10:59:169 CONSOLA/(8029:8029): Instruccion numero 6: E -1 -1
+[INFO] 22:10:59:170 CONSOLA/(8029:8029): Programa enviado al kernel correctamente!
+[INFO] 22:11:02:947 CONSOLA/(8040:8040): Instruccion numero 0: I 9000 -1
+[INFO] 22:11:02:948 CONSOLA/(8040:8040): Instruccion numero 1: N -1 -1
+[INFO] 22:11:02:948 CONSOLA/(8040:8040): Instruccion numero 2: N -1 -1
+[INFO] 22:11:02:948 CONSOLA/(8040:8040): Instruccion numero 3: W 4 42
+[INFO] 22:11:02:948 CONSOLA/(8040:8040): Instruccion numero 4: C 0 4
+[INFO] 22:11:02:948 CONSOLA/(8040:8040): Instruccion numero 5: R 0 -1
+[INFO] 22:11:02:948 CONSOLA/(8040:8040): Instruccion numero 6: E -1 -1
+[INFO] 22:11:02:949 CONSOLA/(8040:8040): Programa enviado al kernel correctamente!
+[INFO] 22:11:07:693 CONSOLA/(8065:8065): Instruccion numero 0: I 9000 -1
+[INFO] 22:11:07:694 CONSOLA/(8065:8065): Instruccion numero 1: N -1 -1
+[INFO] 22:11:07:694 CONSOLA/(8065:8065): Instruccion numero 2: N -1 -1
+[INFO] 22:11:07:694 CONSOLA/(8065:8065): Instruccion numero 3: W 4 42
+[INFO] 22:11:07:694 CONSOLA/(8065:8065): Instruccion numero 4: C 0 4
+[INFO] 22:11:07:694 CONSOLA/(8065:8065): Instruccion numero 5: R 0 -1
+[INFO] 22:11:07:695 CONSOLA/(8065:8065): Instruccion numero 6: E -1 -1
+[INFO] 22:11:07:697 CONSOLA/(8065:8065): Programa enviado al kernel correctamente!
+[INFO] 22:11:09:437 CONSOLA/(8075:8075): Instruccion numero 0: I 9000 -1
+[INFO] 22:11:09:438 CONSOLA/(8075:8075): Instruccion numero 1: N -1 -1
+[INFO] 22:11:09:438 CONSOLA/(8075:8075): Instruccion numero 2: N -1 -1
+[INFO] 22:11:09:438 CONSOLA/(8075:8075): Instruccion numero 3: W 4 42
+[INFO] 22:11:09:438 CONSOLA/(8075:8075): Instruccion numero 4: C 0 4
+[INFO] 22:11:09:438 CONSOLA/(8075:8075): Instruccion numero 5: R 0 -1
+[INFO] 22:11:09:438 CONSOLA/(8075:8075): Instruccion numero 6: E -1 -1
+[INFO] 22:11:09:439 CONSOLA/(8075:8075): Programa enviado al kernel correctamente!
+[INFO] 22:11:12:761 CONSOLA/(8086:8086): Instruccion numero 0: I 9000 -1
+[INFO] 22:11:12:761 CONSOLA/(8086:8086): Instruccion numero 1: N -1 -1
+[INFO] 22:11:12:761 CONSOLA/(8086:8086): Instruccion numero 2: N -1 -1
+[INFO] 22:11:12:761 CONSOLA/(8086:8086): Instruccion numero 3: W 4 42
+[INFO] 22:11:12:761 CONSOLA/(8086:8086): Instruccion numero 4: C 0 4
+[INFO] 22:11:12:762 CONSOLA/(8086:8086): Instruccion numero 5: R 0 -1
+[INFO] 22:11:12:762 CONSOLA/(8086:8086): Instruccion numero 6: E -1 -1
+[INFO] 22:11:12:763 CONSOLA/(8086:8086): Programa enviado al kernel correctamente!
+[INFO] 22:11:15:373 CONSOLA/(8100:8100): Instruccion numero 0: I 9000 -1
+[INFO] 22:11:15:373 CONSOLA/(8100:8100): Instruccion numero 1: N -1 -1
+[INFO] 22:11:15:373 CONSOLA/(8100:8100): Instruccion numero 2: N -1 -1
+[INFO] 22:11:15:373 CONSOLA/(8100:8100): Instruccion numero 3: W 4 42
+[INFO] 22:11:15:374 CONSOLA/(8100:8100): Instruccion numero 4: C 0 4
+[INFO] 22:11:15:374 CONSOLA/(8100:8100): Instruccion numero 5: R 0 -1
+[INFO] 22:11:15:374 CONSOLA/(8100:8100): Instruccion numero 6: E -1 -1
+[INFO] 22:11:15:376 CONSOLA/(8100:8100): Programa enviado al kernel correctamente!
+[INFO] 22:11:17:294 CONSOLA/(8111:8111): Instruccion numero 0: I 9000 -1
+[INFO] 22:11:17:294 CONSOLA/(8111:8111): Instruccion numero 1: N -1 -1
+[INFO] 22:11:17:294 CONSOLA/(8111:8111): Instruccion numero 2: N -1 -1
+[INFO] 22:11:17:295 CONSOLA/(8111:8111): Instruccion numero 3: W 4 42
+[INFO] 22:11:17:295 CONSOLA/(8111:8111): Instruccion numero 4: C 0 4
+[INFO] 22:11:17:295 CONSOLA/(8111:8111): Instruccion numero 5: R 0 -1
+[INFO] 22:11:17:295 CONSOLA/(8111:8111): Instruccion numero 6: E -1 -1
+[INFO] 22:11:17:296 CONSOLA/(8111:8111): Programa enviado al kernel correctamente!
+[INFO] 22:11:48:923 CONSOLA/(8111:8111): Resultado -> 3
+
+[INFO] 22:11:48:923 CONSOLA/(8100:8100): Resultado -> 3
+
+[INFO] 22:11:48:923 CONSOLA/(8086:8086): Resultado -> 3
+
+[INFO] 22:11:48:923 CONSOLA/(8075:8075): Resultado -> 3
+
+[INFO] 22:11:48:923 CONSOLA/(8065:8065): Resultado -> 3
+
+[INFO] 22:11:48:923 CONSOLA/(8040:8040): Resultado -> 3
+
+[INFO] 22:11:48:923 CONSOLA/(8029:8029): Resultado -> 3
+
+[INFO] 22:18:45:741 CONSOLA/(8586:8586): Instruccion numero 0: I 9000 -1
+[INFO] 22:18:45:741 CONSOLA/(8586:8586): Instruccion numero 1: N -1 -1
+[INFO] 22:18:45:744 CONSOLA/(8586:8586): Instruccion numero 2: N -1 -1
+[INFO] 22:18:45:744 CONSOLA/(8586:8586): Instruccion numero 3: W 4 42
+[INFO] 22:18:45:744 CONSOLA/(8586:8586): Instruccion numero 4: C 0 4
+[INFO] 22:18:45:744 CONSOLA/(8586:8586): Instruccion numero 5: R 0 -1
+[INFO] 22:18:45:744 CONSOLA/(8586:8586): Instruccion numero 6: E -1 -1
+[INFO] 22:18:45:745 CONSOLA/(8586:8586): Programa enviado al kernel correctamente!
+[INFO] 22:18:49:427 CONSOLA/(8600:8600): Instruccion numero 0: I 9000 -1
+[INFO] 22:18:49:428 CONSOLA/(8600:8600): Instruccion numero 1: N -1 -1
+[INFO] 22:18:49:428 CONSOLA/(8600:8600): Instruccion numero 2: N -1 -1
+[INFO] 22:18:49:428 CONSOLA/(8600:8600): Instruccion numero 3: W 4 42
+[INFO] 22:18:49:428 CONSOLA/(8600:8600): Instruccion numero 4: C 0 4
+[INFO] 22:18:49:428 CONSOLA/(8600:8600): Instruccion numero 5: R 0 -1
+[INFO] 22:18:49:428 CONSOLA/(8600:8600): Instruccion numero 6: E -1 -1
+[INFO] 22:18:49:428 CONSOLA/(8600:8600): Programa enviado al kernel correctamente!
+[INFO] 22:18:51:179 CONSOLA/(8615:8615): Instruccion numero 0: I 9000 -1
+[INFO] 22:18:51:179 CONSOLA/(8615:8615): Instruccion numero 1: N -1 -1
+[INFO] 22:18:51:180 CONSOLA/(8615:8615): Instruccion numero 2: N -1 -1
+[INFO] 22:18:51:180 CONSOLA/(8615:8615): Instruccion numero 3: W 4 42
+[INFO] 22:18:51:180 CONSOLA/(8615:8615): Instruccion numero 4: C 0 4
+[INFO] 22:18:51:180 CONSOLA/(8615:8615): Instruccion numero 5: R 0 -1
+[INFO] 22:18:51:180 CONSOLA/(8615:8615): Instruccion numero 6: E -1 -1
+[INFO] 22:18:51:181 CONSOLA/(8615:8615): Programa enviado al kernel correctamente!
+[INFO] 22:18:53:977 CONSOLA/(8629:8629): Instruccion numero 0: I 9000 -1
+[INFO] 22:18:53:977 CONSOLA/(8629:8629): Instruccion numero 1: N -1 -1
+[INFO] 22:18:53:977 CONSOLA/(8629:8629): Instruccion numero 2: N -1 -1
+[INFO] 22:18:53:977 CONSOLA/(8629:8629): Instruccion numero 3: W 4 42
+[INFO] 22:18:53:977 CONSOLA/(8629:8629): Instruccion numero 4: C 0 4
+[INFO] 22:18:53:977 CONSOLA/(8629:8629): Instruccion numero 5: R 0 -1
+[INFO] 22:18:53:977 CONSOLA/(8629:8629): Instruccion numero 6: E -1 -1
+[INFO] 22:18:53:978 CONSOLA/(8629:8629): Programa enviado al kernel correctamente!
+[INFO] 22:18:55:789 CONSOLA/(8644:8644): Instruccion numero 0: I 9000 -1
+[INFO] 22:18:55:789 CONSOLA/(8644:8644): Instruccion numero 1: N -1 -1
+[INFO] 22:18:55:789 CONSOLA/(8644:8644): Instruccion numero 2: N -1 -1
+[INFO] 22:18:55:791 CONSOLA/(8644:8644): Instruccion numero 3: W 4 42
+[INFO] 22:18:55:791 CONSOLA/(8644:8644): Instruccion numero 4: C 0 4
+[INFO] 22:18:55:791 CONSOLA/(8644:8644): Instruccion numero 5: R 0 -1
+[INFO] 22:18:55:791 CONSOLA/(8644:8644): Instruccion numero 6: E -1 -1
+[INFO] 22:18:55:792 CONSOLA/(8644:8644): Programa enviado al kernel correctamente!
+[INFO] 22:19:01:613 CONSOLA/(8665:8665): Instruccion numero 0: I 9000 -1
+[INFO] 22:19:01:613 CONSOLA/(8665:8665): Instruccion numero 1: N -1 -1
+[INFO] 22:19:01:614 CONSOLA/(8665:8665): Instruccion numero 2: N -1 -1
+[INFO] 22:19:01:614 CONSOLA/(8665:8665): Instruccion numero 3: W 4 42
+[INFO] 22:19:01:614 CONSOLA/(8665:8665): Instruccion numero 4: C 0 4
+[INFO] 22:19:01:615 CONSOLA/(8665:8665): Instruccion numero 5: R 0 -1
+[INFO] 22:19:01:615 CONSOLA/(8665:8665): Instruccion numero 6: E -1 -1
+[INFO] 22:19:01:616 CONSOLA/(8665:8665): Programa enviado al kernel correctamente!
+[INFO] 22:19:01:686 CONSOLA/(8669:8669): Instruccion numero 0: I 9000 -1
+[INFO] 22:19:01:686 CONSOLA/(8669:8669): Instruccion numero 1: N -1 -1
+[INFO] 22:19:01:686 CONSOLA/(8669:8669): Instruccion numero 2: N -1 -1
+[INFO] 22:19:01:687 CONSOLA/(8669:8669): Instruccion numero 3: W 4 42
+[INFO] 22:19:01:687 CONSOLA/(8669:8669): Instruccion numero 4: C 0 4
+[INFO] 22:19:01:687 CONSOLA/(8669:8669): Instruccion numero 5: R 0 -1
+[INFO] 22:19:01:687 CONSOLA/(8669:8669): Instruccion numero 6: E -1 -1
+[INFO] 22:19:01:688 CONSOLA/(8669:8669): Programa enviado al kernel correctamente!
+[INFO] 22:19:35:373 CONSOLA/(8669:8669): Resultado -> 3
+
+[INFO] 22:19:35:373 CONSOLA/(8665:8665): Resultado -> 3
+
+[INFO] 22:19:35:373 CONSOLA/(8644:8644): Resultado -> 3
+
+[INFO] 22:19:35:373 CONSOLA/(8629:8629): Resultado -> 3
+
+[INFO] 22:19:35:373 CONSOLA/(8615:8615): Resultado -> 3
+
+[INFO] 22:19:35:373 CONSOLA/(8600:8600): Resultado -> 3
+
+[INFO] 22:19:35:373 CONSOLA/(8586:8586): Resultado -> 3
+
+[INFO] 22:27:06:697 CONSOLA/(9178:9178): Instruccion numero 0: I 9000 -1
+[INFO] 22:27:06:697 CONSOLA/(9178:9178): Instruccion numero 1: N -1 -1
+[INFO] 22:27:06:697 CONSOLA/(9178:9178): Instruccion numero 2: N -1 -1
+[INFO] 22:27:06:697 CONSOLA/(9178:9178): Instruccion numero 3: W 4 42
+[INFO] 22:27:06:697 CONSOLA/(9178:9178): Instruccion numero 4: C 0 4
+[INFO] 22:27:06:697 CONSOLA/(9178:9178): Instruccion numero 5: R 0 -1
+[INFO] 22:27:06:697 CONSOLA/(9178:9178): Instruccion numero 6: E -1 -1
+[INFO] 22:27:06:698 CONSOLA/(9178:9178): Programa enviado al kernel correctamente!
+[INFO] 22:27:09:128 CONSOLA/(9189:9189): Instruccion numero 0: I 9000 -1
+[INFO] 22:27:09:128 CONSOLA/(9189:9189): Instruccion numero 1: N -1 -1
+[INFO] 22:27:09:128 CONSOLA/(9189:9189): Instruccion numero 2: N -1 -1
+[INFO] 22:27:09:129 CONSOLA/(9189:9189): Instruccion numero 3: W 4 42
+[INFO] 22:27:09:129 CONSOLA/(9189:9189): Instruccion numero 4: C 0 4
+[INFO] 22:27:09:129 CONSOLA/(9189:9189): Instruccion numero 5: R 0 -1
+[INFO] 22:27:09:133 CONSOLA/(9189:9189): Instruccion numero 6: E -1 -1
+[INFO] 22:27:09:133 CONSOLA/(9189:9189): Programa enviado al kernel correctamente!
+[INFO] 22:27:11:489 CONSOLA/(9203:9203): Instruccion numero 0: I 9000 -1
+[INFO] 22:27:11:489 CONSOLA/(9203:9203): Instruccion numero 1: N -1 -1
+[INFO] 22:27:11:489 CONSOLA/(9203:9203): Instruccion numero 2: N -1 -1
+[INFO] 22:27:11:489 CONSOLA/(9203:9203): Instruccion numero 3: W 4 42
+[INFO] 22:27:11:489 CONSOLA/(9203:9203): Instruccion numero 4: C 0 4
+[INFO] 22:27:11:490 CONSOLA/(9203:9203): Instruccion numero 5: R 0 -1
+[INFO] 22:27:11:490 CONSOLA/(9203:9203): Instruccion numero 6: E -1 -1
+[INFO] 22:27:11:490 CONSOLA/(9203:9203): Programa enviado al kernel correctamente!
+[INFO] 22:27:13:465 CONSOLA/(9219:9219): Instruccion numero 0: I 9000 -1
+[INFO] 22:27:13:466 CONSOLA/(9219:9219): Instruccion numero 1: N -1 -1
+[INFO] 22:27:13:466 CONSOLA/(9219:9219): Instruccion numero 2: N -1 -1
+[INFO] 22:27:13:466 CONSOLA/(9219:9219): Instruccion numero 3: W 4 42
+[INFO] 22:27:13:466 CONSOLA/(9219:9219): Instruccion numero 4: C 0 4
+[INFO] 22:27:13:466 CONSOLA/(9219:9219): Instruccion numero 5: R 0 -1
+[INFO] 22:27:13:466 CONSOLA/(9219:9219): Instruccion numero 6: E -1 -1
+[INFO] 22:27:13:467 CONSOLA/(9219:9219): Programa enviado al kernel correctamente!
+[INFO] 22:27:14:335 CONSOLA/(9228:9228): Instruccion numero 0: I 9000 -1
+[INFO] 22:27:14:335 CONSOLA/(9228:9228): Instruccion numero 1: N -1 -1
+[INFO] 22:27:14:335 CONSOLA/(9228:9228): Instruccion numero 2: N -1 -1
+[INFO] 22:27:14:335 CONSOLA/(9228:9228): Instruccion numero 3: W 4 42
+[INFO] 22:27:14:335 CONSOLA/(9228:9228): Instruccion numero 4: C 0 4
+[INFO] 22:27:14:336 CONSOLA/(9228:9228): Instruccion numero 5: R 0 -1
+[INFO] 22:27:14:336 CONSOLA/(9228:9228): Instruccion numero 6: E -1 -1
+[INFO] 22:27:14:336 CONSOLA/(9228:9228): Programa enviado al kernel correctamente!
+[INFO] 22:27:36:279 CONSOLA/(9228:9228): Resultado -> 3
+
+[INFO] 22:27:36:279 CONSOLA/(9219:9219): Resultado -> 3
+
+[INFO] 22:27:36:279 CONSOLA/(9203:9203): Resultado -> 3
+
+[INFO] 22:27:36:279 CONSOLA/(9189:9189): Resultado -> 3
+
+[INFO] 22:27:36:279 CONSOLA/(9178:9178): Resultado -> 3
+

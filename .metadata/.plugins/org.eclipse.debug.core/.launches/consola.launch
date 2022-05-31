@@ -7,6 +7,7 @@
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="consola"/>
 <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="false"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="cdt.managedbuild.config.gnu.exe.debug.2127658807"/>
+<booleanAttribute key="org.eclipse.cdt.launch.use_terminal" value="true"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/consola"/>
 </listAttribute>
@@ -31,4 +32,5 @@
 <booleanAttribute key="org.eclipse.linuxtools.internal.perf.attr.SourceLineNumbers" value="true"/>
 <intAttribute key="org.eclipse.linuxtools.internal.perf.attr.StatRunCount" value="1"/>
 <stringAttribute key="process_factory_id" value="org.eclipse.cdt.dsf.gdb.GdbProcessFactory"/>
+<stringAttribute key="provider" value="org.eclipse.linuxtools.perf.provider"/>
 </launchConfiguration>

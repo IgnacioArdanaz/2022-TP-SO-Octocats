@@ -3,7 +3,7 @@
 t_log* logger;
 t_config* config;
 int espera, server_cpu_dispatch, server_cpu_interrupt, cliente_socket_interrupt,
-	cliente_socket_dispatch;
+	cliente_socket_dispatch, operando_copy;
 bool hay_interrupcion;
 
 int main(void) {
@@ -15,11 +15,12 @@ int main(void) {
 		op_code cop;
 		recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0);
 		recv_proceso(cliente_socket_dispatch,pcb);
-		log_info(logger,"Program counter %d",pcb->pc);
+		log_info(logger,"Proceso %d -> program counter %d", pcb->pid, pcb->pc);
 
 		op_code estado = iniciar_ciclo_instruccion(pcb);
 
 		log_info(logger,"Program counter %d (despues de ejecutar)",pcb->pc);
+		printf("==============================================================\n");
 		send_proceso(cliente_socket_dispatch,pcb,estado);
 		pcb_destroy(pcb);
 	}
@@ -35,6 +36,8 @@ void inicializar_cpu(){
 	espera = config_get_int_value(config, "RETARDO_NOOP");
 
 	hay_interrupcion = false;
+
+	operando_copy = 0;
 
 	char* puerto_dispatch = config_get_string_value(config, "PUERTO_ESCUCHA_DISPATCH");
 	char* puerto_interrupt = config_get_string_value(config, "PUERTO_ESCUCHA_INTERRUPT");
@@ -63,11 +66,10 @@ op_code iniciar_ciclo_instruccion(PCB_t* pcb){
 		instruccion_t* instruccion_ejecutar = fetch(pcb->instrucciones, pcb->pc);
 
 		if(decode(instruccion_ejecutar)){
-			log_info(logger,"No copio nada :P");
+			log_info(logger,"Aca busco el operando");
 		//Aca iria fetch operands y la ejecucion de copy
-		} else {
-			estado = execute(instruccion_ejecutar);
 		}
+		estado = execute(instruccion_ejecutar);
 		if(estado == CONTINUE){
 			estado = check_interrupt();
 		}
@@ -112,27 +114,27 @@ int execute(instruccion_t* instruccion_ejecutar){
 
 	switch (instruccion_ejecutar->operacion) {
 		case 'N':
-			printf("Vas a tener que esperar perro\n");
-			usleep(espera);
+			printf("Ejecutando NOOP\n");
+			usleep(espera * 1000);
 			break;
 		case 'I':
-			printf("Andate con la IO\n");
+			printf("Ejecutando IO\n");
 			return BLOCKED;
 			break;
 		case 'R':
-			printf("Que queres que lea boludo\n");
+			printf("Ejecutando READ\n");
 			ejecutarRead();
 			break;
 		case 'C':
-			printf("No te copio nada\n");
+			printf("Ejecutando COPY\n");
 			ejecutarCopy();
 			break;
 		case 'W':
-			printf("Como voy a leer sin ojos\n");
+			printf("Ejecutando WRITE\n");
 			ejecutarWrite();
 			break;
 		case 'E':
-			printf("Hasta la proxima\n");
+			printf("Ejecutando EXIT\n");
 			return EXIT;
 			break;
 		default:
@@ -140,7 +142,7 @@ int execute(instruccion_t* instruccion_ejecutar){
 			break;
 	}
 
-	return 0;
+	return CONTINUE;
 }
 
 void interrupcion(){

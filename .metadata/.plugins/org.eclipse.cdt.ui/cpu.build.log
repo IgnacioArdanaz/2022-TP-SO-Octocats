@@ -1,33 +1,6 @@
-17:08:30 **** Incremental Build of configuration Debug for project cpu ****
+22:26:46 **** Incremental Build of configuration Debug for project cpu ****
 make all 
-Building file: ../src/cpu_main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cpu_main.d" -MT"src/cpu_main.o" -o "src/cpu_main.o" "../src/cpu_main.c"
-In file included from ../src/cpu_main.h:14:0,
-                 from ../src/cpu_main.c:1:
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
-              ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-../src/cpu_main.c: In function ‘interrupcion’:
-../src/cpu_main.c:150:3: warning: ‘opcode’ is used uninitialized in this function [-Wuninitialized]
-   recv(cliente_socket_interrupt, opcode, 0, 0);
-   ^
-Finished building: ../src/cpu_main.c
- 
-Building target: cpu
-Invoking: GCC C Linker
-gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "cpu"  ./src/cpu_main.o   -lcommons -lshared -lpthread
-Finished building target: cpu
- 
+make: Nothing to be done for 'all'.
 
-17:09:01 Build Finished (took 31s.516ms)
+22:26:46 Build Finished (took 841ms)
 

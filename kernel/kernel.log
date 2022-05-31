@@ -287,3 +287,434 @@
 [INFO] 17:11:51:233 KERNEL/(15070:15076): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
 [INFO] 17:11:51:234 KERNEL/(15070:15077): Mandando proceso 2 a ejecutar
 [INFO] 17:11:51:234 KERNEL/(15070:15077): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 20:24:22:661 KERNEL/(32403:32412): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 20:24:22:661 KERNEL/(32403:32413): Mandando proceso 1 a ejecutar
+[INFO] 20:24:22:662 KERNEL/(32403:32413): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 20:24:37:128 KERNEL/(32403:32412): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 20:24:37:128 KERNEL/(32403:32413): Mandando proceso 2 a ejecutar
+[INFO] 20:24:37:129 KERNEL/(32403:32413): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 20:58:10:454 KERNEL/(2115:2121): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 20:58:10:454 KERNEL/(2115:2123): Mandando proceso 1 a ejecutar
+[INFO] 20:58:10:455 KERNEL/(2115:2123): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 20:58:10:455 KERNEL/(2115:2122): Proceso 1 esperando 139381072 milisegundos
+[INFO] 21:00:29:836 KERNEL/(2115:2122): Proceso ya espero
+[ERROR] 21:01:41:469 KERNEL/(2364:2364): Error creando el socket :(
+[ERROR] 21:02:01:096 KERNEL/(2405:2405): Error creando el socket :(
+[ERROR] 21:02:15:739 KERNEL/(2439:2439): Error creando el socket :(
+[INFO] 21:02:38:818 KERNEL/(2492:2498): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:02:38:821 KERNEL/(2492:2500): Mandando proceso 1 a ejecutar
+[INFO] 21:02:38:821 KERNEL/(2492:2500): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:02:38:822 KERNEL/(2492:2499): Proceso 1 esperando 136075600 milisegundos
+[ERROR] 21:04:20:983 KERNEL/(2694:2694): Error creando el socket :(
+[ERROR] 21:04:32:506 KERNEL/(2743:2743): Error creando el socket :(
+[ERROR] 21:04:45:023 KERNEL/(2775:2775): Error creando el socket :(
+[ERROR] 21:04:57:111 KERNEL/(2811:2811): Error creando el socket :(
+[INFO] 21:05:14:946 KERNEL/(2842:2848): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:05:14:946 KERNEL/(2842:2850): Mandando proceso 1 a ejecutar
+[INFO] 21:05:14:947 KERNEL/(2842:2850): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:05:14:947 KERNEL/(2842:2849): Proceso 1 esperando 3000 milisegundos
+[INFO] 21:05:14:954 KERNEL/(2842:2849): Proceso ya espero
+[ERROR] 21:07:45:660 KERNEL/(3057:3057): Error creando el socket :(
+[ERROR] 21:08:06:575 KERNEL/(3107:3107): Error creando el socket :(
+[ERROR] 21:08:19:154 KERNEL/(3159:3159): Error creando el socket :(
+[INFO] 21:08:40:148 KERNEL/(3198:3204): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:08:40:149 KERNEL/(3198:3207): Mandando proceso 1 a ejecutar
+[INFO] 21:08:40:150 KERNEL/(3198:3207): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:08:40:150 KERNEL/(3198:3206): Proceso 1 esperando 3000 milisegundos
+[INFO] 21:08:40:153 KERNEL/(3198:3206): Proceso ya espero
+[INFO] 21:08:40:154 KERNEL/(3198:3207): Mandando proceso 1 a ejecutar
+[ERROR] 21:08:40:156 KERNEL/(3198:3207): Algo anduvo mal en el server del kernel
+ Cop: 0
+[ERROR] 21:10:27:193 KERNEL/(3418:3418): Error creando el socket :(
+[ERROR] 21:10:39:370 KERNEL/(3453:3453): Error creando el socket :(
+[ERROR] 21:10:53:809 KERNEL/(3490:3490): Error creando el socket :(
+[ERROR] 21:11:10:064 KERNEL/(3524:3524): Error creando el socket :(
+[INFO] 21:11:28:785 KERNEL/(3559:3565): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:11:28:785 KERNEL/(3559:3567): Mandando proceso 1 a ejecutar
+[INFO] 21:11:28:786 KERNEL/(3559:3567): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:11:28:786 KERNEL/(3559:3566): Proceso 1 esperando 3000 milisegundos
+[INFO] 21:11:28:789 KERNEL/(3559:3566): Proceso ya espero
+[INFO] 21:11:28:790 KERNEL/(3559:3567): Mandando proceso 1 a ejecutar
+[ERROR] 21:11:28:792 KERNEL/(3559:3567): AAAAlgo anduvo mal en el server del kernel
+ Cop: 0
+[INFO] 21:16:58:831 KERNEL/(3928:3938): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:16:58:833 KERNEL/(3928:3940): Mandando proceso 1 a ejecutar
+[INFO] 21:16:58:834 KERNEL/(3928:3940): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:16:58:838 KERNEL/(3928:3939): Proceso 1 esperando 3000 milisegundos
+[INFO] 21:16:58:842 KERNEL/(3928:3939): Proceso ya espero
+[INFO] 21:16:58:842 KERNEL/(3928:3940): Mandando proceso 1 a ejecutar
+[INFO] 21:16:58:845 KERNEL/(3928:3940): Proceso 1 terminado :) siiiii
+[INFO] 21:25:32:871 KERNEL/(3928:3938): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:25:32:871 KERNEL/(3928:3940): Mandando proceso 2 a ejecutar
+[INFO] 21:25:32:872 KERNEL/(3928:3940): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 21:25:32:872 KERNEL/(3928:3939): Proceso 2 esperando 3000 milisegundos
+[INFO] 21:25:32:875 KERNEL/(3928:3939): Proceso ya espero
+[INFO] 21:25:32:875 KERNEL/(3928:3940): Mandando proceso 2 a ejecutar
+[INFO] 21:25:32:879 KERNEL/(3928:3940): Proceso 2 terminado :) siiiii
+[INFO] 21:25:37:498 KERNEL/(3928:3938): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:25:37:498 KERNEL/(3928:3940): Mandando proceso 3 a ejecutar
+[INFO] 21:25:37:498 KERNEL/(3928:3940): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 21:25:37:500 KERNEL/(3928:3939): Proceso 3 esperando 3000 milisegundos
+[INFO] 21:25:37:503 KERNEL/(3928:3939): Proceso ya espero
+[INFO] 21:25:37:503 KERNEL/(3928:3940): Mandando proceso 3 a ejecutar
+[INFO] 21:25:37:507 KERNEL/(3928:3940): Proceso 3 terminado :) siiiii
+[INFO] 21:25:39:718 KERNEL/(3928:3938): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:25:39:718 KERNEL/(3928:3940): Mandando proceso 4 a ejecutar
+[INFO] 21:25:39:719 KERNEL/(3928:3940): Proceso 4 bloqueado :( mal ahi pa
+[INFO] 21:25:39:719 KERNEL/(3928:3939): Proceso 4 esperando 3000 milisegundos
+[INFO] 21:25:39:722 KERNEL/(3928:3939): Proceso ya espero
+[INFO] 21:25:39:722 KERNEL/(3928:3940): Mandando proceso 4 a ejecutar
+[INFO] 21:25:39:725 KERNEL/(3928:3940): Proceso 4 terminado :) siiiii
+[INFO] 21:25:40:323 KERNEL/(3928:3938): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 0
+[INFO] 21:25:41:712 KERNEL/(3928:3938): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 0
+[INFO] 21:30:44:744 KERNEL/(4781:4787): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:30:44:745 KERNEL/(4781:4789): Mandando proceso 1 a ejecutar
+[INFO] 21:30:44:745 KERNEL/(4781:4789): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:30:44:745 KERNEL/(4781:4788): Proceso 1 esperando 3000 milisegundos
+[INFO] 21:30:44:749 KERNEL/(4781:4788): Proceso ya espero
+[INFO] 21:30:44:749 KERNEL/(4781:4789): Mandando proceso 1 a ejecutar
+[INFO] 21:30:44:753 KERNEL/(4781:4789): Proceso 1 terminado :) siiiii
+[INFO] 21:30:47:431 KERNEL/(4781:4787): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:30:47:431 KERNEL/(4781:4789): Mandando proceso 2 a ejecutar
+[INFO] 21:30:47:432 KERNEL/(4781:4789): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 21:30:47:432 KERNEL/(4781:4788): Proceso 2 esperando 3000 milisegundos
+[INFO] 21:30:47:435 KERNEL/(4781:4788): Proceso ya espero
+[INFO] 21:30:47:436 KERNEL/(4781:4789): Mandando proceso 2 a ejecutar
+[INFO] 21:30:47:439 KERNEL/(4781:4789): Proceso 2 terminado :) siiiii
+[INFO] 21:30:50:681 KERNEL/(4781:4787): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:30:50:681 KERNEL/(4781:4789): Mandando proceso 3 a ejecutar
+[INFO] 21:30:50:681 KERNEL/(4781:4789): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 21:30:50:681 KERNEL/(4781:4788): Proceso 3 esperando 3000 milisegundos
+[INFO] 21:30:50:685 KERNEL/(4781:4788): Proceso ya espero
+[INFO] 21:30:50:685 KERNEL/(4781:4789): Mandando proceso 3 a ejecutar
+[INFO] 21:30:50:688 KERNEL/(4781:4789): Proceso 3 terminado :) siiiii
+[INFO] 21:30:55:113 KERNEL/(4781:4787): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:30:55:113 KERNEL/(4781:4789): Mandando proceso 4 a ejecutar
+[INFO] 21:30:55:113 KERNEL/(4781:4789): Proceso 4 bloqueado :( mal ahi pa
+[INFO] 21:30:55:113 KERNEL/(4781:4788): Proceso 4 esperando 3000 milisegundos
+[INFO] 21:30:55:117 KERNEL/(4781:4788): Proceso ya espero
+[INFO] 21:30:55:117 KERNEL/(4781:4789): Mandando proceso 4 a ejecutar
+[INFO] 21:30:55:119 KERNEL/(4781:4789): Proceso 4 terminado :) siiiii
+[INFO] 21:30:55:335 KERNEL/(4781:4787): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 0
+[INFO] 21:30:57:348 KERNEL/(4781:4787): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 0
+[ERROR] 21:33:13:891 KERNEL/(5001:5001): Error creando el socket :(
+[INFO] 21:33:46:432 KERNEL/(5041:5050): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:33:46:432 KERNEL/(5041:5052): Mandando proceso 1 a ejecutar
+[INFO] 21:33:46:432 KERNEL/(5041:5052): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:33:46:432 KERNEL/(5041:5051): Proceso 1 esperando 9000 milisegundos
+[INFO] 21:33:46:442 KERNEL/(5041:5051): Proceso ya espero
+[INFO] 21:33:46:442 KERNEL/(5041:5052): Mandando proceso 1 a ejecutar
+[INFO] 21:33:46:445 KERNEL/(5041:5052): Proceso 1 terminado :) siiiii
+[INFO] 21:33:50:360 KERNEL/(5041:5050): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:33:50:360 KERNEL/(5041:5052): Mandando proceso 2 a ejecutar
+[INFO] 21:33:50:360 KERNEL/(5041:5052): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 21:33:50:360 KERNEL/(5041:5051): Proceso 2 esperando 9000 milisegundos
+[INFO] 21:33:50:370 KERNEL/(5041:5051): Proceso ya espero
+[INFO] 21:33:50:370 KERNEL/(5041:5052): Mandando proceso 2 a ejecutar
+[INFO] 21:33:50:373 KERNEL/(5041:5052): Proceso 2 terminado :) siiiii
+[INFO] 21:33:52:233 KERNEL/(5041:5050): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:33:52:233 KERNEL/(5041:5052): Mandando proceso 3 a ejecutar
+[INFO] 21:33:52:234 KERNEL/(5041:5052): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 21:33:52:234 KERNEL/(5041:5051): Proceso 3 esperando 9000 milisegundos
+[INFO] 21:33:52:244 KERNEL/(5041:5051): Proceso ya espero
+[INFO] 21:33:52:244 KERNEL/(5041:5052): Mandando proceso 3 a ejecutar
+[INFO] 21:33:52:250 KERNEL/(5041:5052): Proceso 3 terminado :) siiiii
+[INFO] 21:33:55:717 KERNEL/(5041:5050): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:33:55:717 KERNEL/(5041:5052): Mandando proceso 4 a ejecutar
+[INFO] 21:33:55:718 KERNEL/(5041:5052): Proceso 4 bloqueado :( mal ahi pa
+[INFO] 21:33:55:718 KERNEL/(5041:5051): Proceso 4 esperando 9000 milisegundos
+[INFO] 21:33:55:727 KERNEL/(5041:5051): Proceso ya espero
+[INFO] 21:33:55:727 KERNEL/(5041:5052): Mandando proceso 4 a ejecutar
+[INFO] 21:33:55:730 KERNEL/(5041:5052): Proceso 4 terminado :) siiiii
+[INFO] 21:33:58:394 KERNEL/(5041:5050): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 0
+[INFO] 21:34:04:465 KERNEL/(5041:5050): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 0
+[INFO] 21:39:56:113 KERNEL/(5550:5556): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:39:56:113 KERNEL/(5550:5558): Mandando proceso 1 a ejecutar
+[INFO] 21:39:56:114 KERNEL/(5550:5558): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:39:56:114 KERNEL/(5550:5557): Proceso 1 esperando 9000 milisegundos
+[INFO] 21:39:56:124 KERNEL/(5550:5557): Proceso ya espero
+[INFO] 21:39:56:124 KERNEL/(5550:5558): Mandando proceso 1 a ejecutar
+[INFO] 21:39:56:141 KERNEL/(5550:5558): Proceso 1 terminado :) siiiii
+[INFO] 21:39:59:341 KERNEL/(5550:5556): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:39:59:341 KERNEL/(5550:5558): Mandando proceso 2 a ejecutar
+[INFO] 21:39:59:342 KERNEL/(5550:5558): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 21:39:59:342 KERNEL/(5550:5557): Proceso 2 esperando 9000 milisegundos
+[INFO] 21:39:59:351 KERNEL/(5550:5557): Proceso ya espero
+[INFO] 21:39:59:351 KERNEL/(5550:5558): Mandando proceso 2 a ejecutar
+[INFO] 21:39:59:366 KERNEL/(5550:5558): Proceso 2 terminado :) siiiii
+[INFO] 21:40:03:777 KERNEL/(5550:5556): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:40:03:777 KERNEL/(5550:5558): Mandando proceso 3 a ejecutar
+[INFO] 21:40:03:777 KERNEL/(5550:5558): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 21:40:03:778 KERNEL/(5550:5557): Proceso 3 esperando 9000 milisegundos
+[INFO] 21:40:03:787 KERNEL/(5550:5557): Proceso ya espero
+[INFO] 21:40:03:787 KERNEL/(5550:5558): Mandando proceso 3 a ejecutar
+[INFO] 21:40:03:798 KERNEL/(5550:5558): Proceso 3 terminado :) siiiii
+[INFO] 21:40:06:000 KERNEL/(5550:5556): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:40:06:000 KERNEL/(5550:5558): Mandando proceso 4 a ejecutar
+[INFO] 21:40:06:001 KERNEL/(5550:5558): Proceso 4 bloqueado :( mal ahi pa
+[INFO] 21:40:06:001 KERNEL/(5550:5557): Proceso 4 esperando 9000 milisegundos
+[INFO] 21:40:06:010 KERNEL/(5550:5557): Proceso ya espero
+[INFO] 21:40:06:010 KERNEL/(5550:5558): Mandando proceso 4 a ejecutar
+[INFO] 21:40:06:041 KERNEL/(5550:5558): Proceso 4 terminado :) siiiii
+[INFO] 21:40:06:927 KERNEL/(5550:5556): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 0
+[ERROR] 21:44:14:331 KERNEL/(5882:5882): Error creando el socket :(
+[ERROR] 21:44:31:021 KERNEL/(5920:5920): Error creando el socket :(
+[ERROR] 21:44:41:799 KERNEL/(5951:5951): Error creando el socket :(
+[ERROR] 21:44:52:970 KERNEL/(5984:5984): Error creando el socket :(
+[INFO] 21:45:13:893 KERNEL/(6018:6027): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:45:13:893 KERNEL/(6018:6029): Mandando proceso 1 a ejecutar
+[INFO] 21:45:13:894 KERNEL/(6018:6029): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:45:13:894 KERNEL/(6018:6028): Proceso 1 esperando 9000 milisegundos
+[INFO] 21:45:18:810 KERNEL/(6018:6027): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:45:18:810 KERNEL/(6018:6029): Mandando proceso 2 a ejecutar
+[INFO] 21:45:18:810 KERNEL/(6018:6029): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 21:45:19:537 KERNEL/(6018:6027): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:45:19:538 KERNEL/(6018:6029): Mandando proceso 3 a ejecutar
+[INFO] 21:45:19:538 KERNEL/(6018:6029): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 21:45:21:357 KERNEL/(6018:6027): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:45:21:357 KERNEL/(6018:6029): Mandando proceso 4 a ejecutar
+[INFO] 21:45:21:358 KERNEL/(6018:6029): Proceso 4 bloqueado :( mal ahi pa
+[INFO] 21:45:22:895 KERNEL/(6018:6028): Proceso ya espero
+[INFO] 21:45:22:895 KERNEL/(6018:6029): Mandando proceso 1 a ejecutar
+[INFO] 21:45:22:895 KERNEL/(6018:6028): Proceso 2 esperando 9000 milisegundos
+[INFO] 21:45:24:542 KERNEL/(6018:6027): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 0
+[INFO] 21:45:26:524 KERNEL/(6018:6027): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 0
+[INFO] 21:45:31:897 KERNEL/(6018:6028): Proceso ya espero
+[INFO] 21:45:31:898 KERNEL/(6018:6028): Proceso 3 esperando 9000 milisegundos
+[INFO] 21:45:32:896 KERNEL/(6018:6029): Proceso 1 terminado :) siiiii
+[INFO] 21:45:32:896 KERNEL/(6018:6029): Mandando proceso 2 a ejecutar
+[INFO] 21:45:40:898 KERNEL/(6018:6028): Proceso ya espero
+[INFO] 21:45:40:899 KERNEL/(6018:6028): Proceso 4 esperando 9000 milisegundos
+[INFO] 21:45:42:899 KERNEL/(6018:6029): Proceso 2 terminado :) siiiii
+[INFO] 21:45:42:899 KERNEL/(6018:6029): Mandando proceso 3 a ejecutar
+[INFO] 21:45:49:899 KERNEL/(6018:6028): Proceso ya espero
+[INFO] 21:45:52:900 KERNEL/(6018:6029): Proceso 3 terminado :) siiiii
+[INFO] 21:45:52:900 KERNEL/(6018:6029): Mandando proceso 4 a ejecutar
+[INFO] 21:46:02:902 KERNEL/(6018:6029): Proceso 4 terminado :) siiiii
+[INFO] 21:54:16:688 KERNEL/(6640:6646): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:54:16:688 KERNEL/(6640:6648): Mandando proceso 1 a ejecutar
+[INFO] 21:54:16:689 KERNEL/(6640:6648): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:54:16:689 KERNEL/(6640:6647): Proceso 1 esperando 9000 milisegundos
+[INFO] 21:54:22:066 KERNEL/(6640:6646): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:54:22:066 KERNEL/(6640:6648): Mandando proceso 2 a ejecutar
+[INFO] 21:54:22:067 KERNEL/(6640:6648): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 21:54:25:691 KERNEL/(6640:6647): Proceso ya espero
+[INFO] 21:54:25:693 KERNEL/(6640:6648): Mandando proceso 1 a ejecutar
+[INFO] 21:54:25:693 KERNEL/(6640:6647): Proceso 2 esperando 9000 milisegundos
+[INFO] 21:54:25:708 KERNEL/(6640:6646): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:54:28:205 KERNEL/(6640:6646): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 2
+[INFO] 21:54:30:054 KERNEL/(6640:6646): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 2
+[INFO] 21:54:33:793 KERNEL/(6640:6646): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 2
+[INFO] 21:54:34:693 KERNEL/(6640:6647): Proceso ya espero
+[INFO] 21:54:34:942 KERNEL/(6640:6646): (new -> ready) Cola de new: 3 | (new -> ready) Cola de ready: 3
+[INFO] 21:54:35:697 KERNEL/(6640:6648): Proceso 1 terminado :) siiiii
+[INFO] 21:54:35:697 KERNEL/(6640:6648): Mandando proceso 3 a ejecutar
+[INFO] 21:54:35:699 KERNEL/(6640:6648): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 21:54:35:699 KERNEL/(6640:6648): Mandando proceso 4 a ejecutar
+[INFO] 21:54:35:699 KERNEL/(6640:6647): Proceso 3 esperando 9000 milisegundos
+[INFO] 21:54:35:700 KERNEL/(6640:6648): Proceso 4 bloqueado :( mal ahi pa
+[INFO] 21:54:35:700 KERNEL/(6640:6648): Mandando proceso 2 a ejecutar
+[INFO] 21:54:44:700 KERNEL/(6640:6647): Proceso ya espero
+[INFO] 21:54:44:700 KERNEL/(6640:6647): Proceso 4 esperando 9000 milisegundos
+[INFO] 21:54:45:701 KERNEL/(6640:6648): Proceso 2 terminado :) siiiii
+[INFO] 21:54:45:701 KERNEL/(6640:6648): Mandando proceso 3 a ejecutar
+[INFO] 21:54:53:701 KERNEL/(6640:6647): Proceso ya espero
+[INFO] 21:54:55:702 KERNEL/(6640:6648): Proceso 3 terminado :) siiiii
+[INFO] 21:54:55:702 KERNEL/(6640:6648): Mandando proceso 4 a ejecutar
+[INFO] 21:55:05:703 KERNEL/(6640:6648): Proceso 4 terminado :) siiiii
+[ERROR] 21:59:07:264 KERNEL/(7052:7052): Error creando el socket :(
+[INFO] 21:59:23:838 KERNEL/(7085:7091): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:59:23:838 KERNEL/(7085:7093): Mandando proceso 1 a ejecutar
+[INFO] 21:59:23:838 KERNEL/(7085:7093): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:59:23:838 KERNEL/(7085:7092): Proceso 1 esperando 9000 milisegundos
+[INFO] 21:59:27:067 KERNEL/(7085:7091): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:59:27:067 KERNEL/(7085:7093): Mandando proceso 2 a ejecutar
+[INFO] 21:59:27:068 KERNEL/(7085:7093): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 21:59:29:370 KERNEL/(7085:7091): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:59:29:370 KERNEL/(7085:7093): Mandando proceso 3 a ejecutar
+[INFO] 21:59:29:370 KERNEL/(7085:7093): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 21:59:31:755 KERNEL/(7085:7091): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:59:31:756 KERNEL/(7085:7093): Mandando proceso 4 a ejecutar
+[INFO] 21:59:31:757 KERNEL/(7085:7093): Proceso 4 bloqueado :( mal ahi pa
+[INFO] 21:59:32:839 KERNEL/(7085:7092): Proceso ya espero
+[INFO] 21:59:32:839 KERNEL/(7085:7093): Mandando proceso 1 a ejecutar
+[INFO] 21:59:32:839 KERNEL/(7085:7092): Proceso 2 esperando 9000 milisegundos
+[INFO] 21:59:35:589 KERNEL/(7085:7091): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 0
+[INFO] 21:59:40:170 KERNEL/(7085:7091): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 0
+[INFO] 21:59:41:839 KERNEL/(7085:7092): Proceso ya espero
+[INFO] 21:59:41:841 KERNEL/(7085:7092): Proceso 3 esperando 9000 milisegundos
+[INFO] 21:59:42:843 KERNEL/(7085:7093): Proceso 1 terminado :) siiiii
+[INFO] 21:59:42:844 KERNEL/(7085:7093): Mandando proceso 2 a ejecutar
+[INFO] 21:59:43:322 KERNEL/(7085:7091): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 1
+[INFO] 21:59:46:677 KERNEL/(7085:7091): (new -> ready) Cola de new: 3 | (new -> ready) Cola de ready: 1
+[INFO] 21:59:46:733 KERNEL/(7085:7091): (new -> ready) Cola de new: 4 | (new -> ready) Cola de ready: 1
+[INFO] 21:59:48:762 KERNEL/(7085:7091): (new -> ready) Cola de new: 5 | (new -> ready) Cola de ready: 1
+[INFO] 21:59:50:841 KERNEL/(7085:7092): Proceso ya espero
+[INFO] 21:59:50:843 KERNEL/(7085:7092): Proceso 4 esperando 9000 milisegundos
+[INFO] 21:59:52:847 KERNEL/(7085:7093): Proceso 2 terminado :) siiiii
+[INFO] 21:59:52:847 KERNEL/(7085:7093): Mandando proceso 5 a ejecutar
+[INFO] 21:59:52:849 KERNEL/(7085:7093): Proceso 5 bloqueado :( mal ahi pa
+[INFO] 21:59:52:849 KERNEL/(7085:7093): Mandando proceso 3 a ejecutar
+[INFO] 21:59:54:051 KERNEL/(7085:7091): (new -> ready) Cola de new: 5 | (new -> ready) Cola de ready: 1
+[INFO] 21:59:59:844 KERNEL/(7085:7092): Proceso ya espero
+[INFO] 21:59:59:844 KERNEL/(7085:7092): Proceso 5 esperando 9000 milisegundos
+[INFO] 22:00:02:851 KERNEL/(7085:7093): Proceso 3 terminado :) siiiii
+[INFO] 22:00:02:851 KERNEL/(7085:7093): Mandando proceso 6 a ejecutar
+[INFO] 22:00:02:851 KERNEL/(7085:7093): Proceso 6 bloqueado :( mal ahi pa
+[INFO] 22:00:02:851 KERNEL/(7085:7093): Mandando proceso 4 a ejecutar
+[INFO] 22:00:08:844 KERNEL/(7085:7092): Proceso ya espero
+[INFO] 22:00:08:844 KERNEL/(7085:7092): Proceso 6 esperando 9000 milisegundos
+[INFO] 22:00:12:853 KERNEL/(7085:7093): Proceso 4 terminado :) siiiii
+[INFO] 22:00:12:853 KERNEL/(7085:7093): Mandando proceso 5 a ejecutar
+[INFO] 22:00:17:845 KERNEL/(7085:7092): Proceso ya espero
+[INFO] 22:00:22:855 KERNEL/(7085:7093): Proceso 5 terminado :) siiiii
+[INFO] 22:00:22:855 KERNEL/(7085:7093): Mandando proceso 6 a ejecutar
+[INFO] 22:00:32:856 KERNEL/(7085:7093): Proceso 6 terminado :) siiiii
+[INFO] 22:04:06:027 KERNEL/(7433:7439): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:04:06:027 KERNEL/(7433:7441): Mandando proceso 1 a ejecutar
+[INFO] 22:04:06:028 KERNEL/(7433:7441): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 22:04:06:028 KERNEL/(7433:7440): Proceso 1 esperando 9000 milisegundos
+[INFO] 22:04:09:257 KERNEL/(7433:7439): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:04:09:257 KERNEL/(7433:7441): Mandando proceso 2 a ejecutar
+[INFO] 22:04:09:258 KERNEL/(7433:7441): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 22:04:11:539 KERNEL/(7433:7439): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:04:11:539 KERNEL/(7433:7441): Mandando proceso 3 a ejecutar
+[INFO] 22:04:11:539 KERNEL/(7433:7441): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 22:04:14:441 KERNEL/(7433:7439): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:04:14:441 KERNEL/(7433:7441): Mandando proceso 4 a ejecutar
+[INFO] 22:04:14:441 KERNEL/(7433:7441): Proceso 4 bloqueado :( mal ahi pa
+[INFO] 22:04:15:030 KERNEL/(7433:7440): Proceso ya espero
+[INFO] 22:04:15:030 KERNEL/(7433:7441): Mandando proceso 1 a ejecutar
+[INFO] 22:04:15:030 KERNEL/(7433:7440): Proceso 2 esperando 9000 milisegundos
+[INFO] 22:04:16:721 KERNEL/(7433:7439): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 0
+[INFO] 22:04:20:153 KERNEL/(7433:7439): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 0
+[INFO] 22:04:20:299 KERNEL/(7433:7439): (new -> ready) Cola de new: 3 | (new -> ready) Cola de ready: 0
+[INFO] 22:04:22:665 KERNEL/(7433:7439): (new -> ready) Cola de new: 4 | (new -> ready) Cola de ready: 0
+[INFO] 22:04:24:030 KERNEL/(7433:7440): Proceso ya espero
+[INFO] 22:04:24:031 KERNEL/(7433:7440): Proceso 3 esperando 9000 milisegundos
+[INFO] 22:04:25:034 KERNEL/(7433:7441): Proceso 1 terminado :) siiiii
+[INFO] 22:04:25:036 KERNEL/(7433:7441): Mandando proceso 2 a ejecutar
+[INFO] 22:04:25:955 KERNEL/(7433:7439): (new -> ready) Cola de new: 4 | (new -> ready) Cola de ready: 1
+[INFO] 22:04:25:989 KERNEL/(7433:7439): (new -> ready) Cola de new: 5 | (new -> ready) Cola de ready: 1
+[INFO] 22:04:30:215 KERNEL/(7433:7439): (new -> ready) Cola de new: 6 | (new -> ready) Cola de ready: 1
+[INFO] 22:04:33:031 KERNEL/(7433:7440): Proceso ya espero
+[INFO] 22:04:33:032 KERNEL/(7433:7440): Proceso 4 esperando 9000 milisegundos
+[INFO] 22:04:35:041 KERNEL/(7433:7441): Proceso 2 terminado :) siiiii
+[INFO] 22:04:35:041 KERNEL/(7433:7441): Mandando proceso 5 a ejecutar
+[INFO] 22:04:35:042 KERNEL/(7433:7441): Proceso 5 bloqueado :( mal ahi pa
+[INFO] 22:04:35:042 KERNEL/(7433:7441): Mandando proceso 3 a ejecutar
+[INFO] 22:04:42:033 KERNEL/(7433:7440): Proceso ya espero
+[INFO] 22:04:42:033 KERNEL/(7433:7440): Proceso 5 esperando 9000 milisegundos
+[INFO] 22:04:45:043 KERNEL/(7433:7441): Proceso 3 terminado :) siiiii
+[INFO] 22:04:45:043 KERNEL/(7433:7441): Mandando proceso 4 a ejecutar
+[INFO] 22:04:51:033 KERNEL/(7433:7440): Proceso ya espero
+[INFO] 22:04:55:045 KERNEL/(7433:7441): Proceso 4 terminado :) siiiii
+[INFO] 22:04:55:045 KERNEL/(7433:7441): Mandando proceso 5 a ejecutar
+[INFO] 22:05:05:046 KERNEL/(7433:7441): Proceso 5 terminado :) siiiii
+[INFO] 22:10:59:177 KERNEL/(8007:8015): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:10:59:177 KERNEL/(8007:8017): Mandando proceso 1 a ejecutar
+[INFO] 22:10:59:178 KERNEL/(8007:8017): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 22:10:59:178 KERNEL/(8007:8016): Proceso 1 esperando 9000 milisegundos
+[INFO] 22:11:02:949 KERNEL/(8007:8015): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:11:02:949 KERNEL/(8007:8017): Mandando proceso 2 a ejecutar
+[INFO] 22:11:02:949 KERNEL/(8007:8017): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 22:11:07:697 KERNEL/(8007:8015): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:11:07:697 KERNEL/(8007:8017): Mandando proceso 3 a ejecutar
+[INFO] 22:11:07:698 KERNEL/(8007:8017): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 22:11:08:178 KERNEL/(8007:8016): Proceso ya espero
+[INFO] 22:11:08:179 KERNEL/(8007:8017): Mandando proceso 1 a ejecutar
+[INFO] 22:11:08:179 KERNEL/(8007:8016): Proceso 2 esperando 9000 milisegundos
+[INFO] 22:11:09:439 KERNEL/(8007:8015): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:11:12:767 KERNEL/(8007:8015): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 1
+[INFO] 22:11:15:377 KERNEL/(8007:8015): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 1
+[INFO] 22:11:17:181 KERNEL/(8007:8016): Proceso ya espero
+[INFO] 22:11:17:182 KERNEL/(8007:8016): Proceso 3 esperando 9000 milisegundos
+[INFO] 22:11:17:300 KERNEL/(8007:8015): (new -> ready) Cola de new: 3 | (new -> ready) Cola de ready: 2
+[INFO] 22:11:18:180 KERNEL/(8007:8017): Proceso 1 terminado :) siiiii
+[INFO] 22:11:18:180 KERNEL/(8007:8017): Mandando proceso 4 a ejecutar
+[INFO] 22:11:18:180 KERNEL/(8007:8015): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 2
+[INFO] 22:11:18:181 KERNEL/(8007:8017): Proceso 4 bloqueado :( mal ahi pa
+[INFO] 22:11:18:181 KERNEL/(8007:8017): Mandando proceso 2 a ejecutar
+[INFO] 22:11:26:182 KERNEL/(8007:8016): Proceso ya espero
+[INFO] 22:11:26:182 KERNEL/(8007:8016): Proceso 4 esperando 9000 milisegundos
+[INFO] 22:11:28:182 KERNEL/(8007:8017): Proceso 2 terminado :) siiiii
+[INFO] 22:11:28:182 KERNEL/(8007:8017): Mandando proceso 5 a ejecutar
+[INFO] 22:11:28:182 KERNEL/(8007:8015): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 2
+[INFO] 22:11:28:182 KERNEL/(8007:8017): Proceso 5 bloqueado :( mal ahi pa
+[INFO] 22:11:28:182 KERNEL/(8007:8017): Mandando proceso 3 a ejecutar
+[INFO] 22:11:35:183 KERNEL/(8007:8016): Proceso ya espero
+[INFO] 22:11:35:183 KERNEL/(8007:8016): Proceso 5 esperando 9000 milisegundos
+[INFO] 22:11:38:184 KERNEL/(8007:8017): Proceso 3 terminado :) siiiii
+[INFO] 22:11:38:184 KERNEL/(8007:8017): Mandando proceso 6 a ejecutar
+[INFO] 22:11:38:184 KERNEL/(8007:8015): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 2
+[INFO] 22:11:38:184 KERNEL/(8007:8017): Proceso 6 bloqueado :( mal ahi pa
+[INFO] 22:11:38:184 KERNEL/(8007:8017): Mandando proceso 4 a ejecutar
+[INFO] 22:11:44:184 KERNEL/(8007:8016): Proceso ya espero
+[INFO] 22:11:44:184 KERNEL/(8007:8016): Proceso 6 esperando 9000 milisegundos
+[INFO] 22:11:48:185 KERNEL/(8007:8017): Proceso 4 terminado :) siiiii
+[INFO] 22:18:45:745 KERNEL/(8568:8575): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:18:45:745 KERNEL/(8568:8577): Mandando proceso 1 a ejecutar
+[INFO] 22:18:45:746 KERNEL/(8568:8577): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 22:18:45:746 KERNEL/(8568:8576): Proceso 1 esperando 9000 milisegundos
+[INFO] 22:18:49:430 KERNEL/(8568:8575): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:18:49:430 KERNEL/(8568:8577): Mandando proceso 2 a ejecutar
+[INFO] 22:18:49:430 KERNEL/(8568:8577): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 22:18:51:181 KERNEL/(8568:8575): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:18:51:181 KERNEL/(8568:8577): Mandando proceso 3 a ejecutar
+[INFO] 22:18:51:182 KERNEL/(8568:8577): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 22:18:53:989 KERNEL/(8568:8575): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:18:53:989 KERNEL/(8568:8577): Mandando proceso 4 a ejecutar
+[INFO] 22:18:53:991 KERNEL/(8568:8577): Proceso 4 bloqueado :( mal ahi pa
+[INFO] 22:18:54:746 KERNEL/(8568:8576): Proceso ya espero
+[INFO] 22:18:54:747 KERNEL/(8568:8576): Proceso 2 esperando 9000 milisegundos
+[INFO] 22:18:54:747 KERNEL/(8568:8577): Mandando proceso 1 a ejecutar
+[INFO] 22:18:55:794 KERNEL/(8568:8575): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 0
+[INFO] 22:19:01:616 KERNEL/(8568:8575): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 0
+[INFO] 22:19:01:693 KERNEL/(8568:8575): (new -> ready) Cola de new: 3 | (new -> ready) Cola de ready: 0
+[INFO] 22:19:03:747 KERNEL/(8568:8576): Proceso ya espero
+[INFO] 22:19:03:748 KERNEL/(8568:8576): Proceso 3 esperando 9000 milisegundos
+[INFO] 22:19:04:748 KERNEL/(8568:8577): Proceso 1 terminado :) siiiii
+[INFO] 22:19:04:749 KERNEL/(8568:8577): Mandando proceso 2 a ejecutar
+[INFO] 22:19:04:749 KERNEL/(8568:8575): (new -> ready) Cola de new: 2 | (new -> ready) Cola de ready: 1
+[INFO] 22:19:12:749 KERNEL/(8568:8576): Proceso ya espero
+[INFO] 22:19:12:749 KERNEL/(8568:8576): Proceso 4 esperando 9000 milisegundos
+[INFO] 22:19:14:750 KERNEL/(8568:8577): Proceso 2 terminado :) siiiii
+[INFO] 22:19:14:750 KERNEL/(8568:8577): Mandando proceso 5 a ejecutar
+[INFO] 22:19:14:750 KERNEL/(8568:8575): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 2
+[INFO] 22:19:14:750 KERNEL/(8568:8577): Proceso 5 bloqueado :( mal ahi pa
+[INFO] 22:19:14:751 KERNEL/(8568:8577): Mandando proceso 3 a ejecutar
+[INFO] 22:19:21:749 KERNEL/(8568:8576): Proceso ya espero
+[INFO] 22:19:21:750 KERNEL/(8568:8576): Proceso 5 esperando 9000 milisegundos
+[INFO] 22:19:24:752 KERNEL/(8568:8577): Proceso 3 terminado :) siiiii
+[INFO] 22:19:24:752 KERNEL/(8568:8577): Mandando proceso 6 a ejecutar
+[INFO] 22:19:24:753 KERNEL/(8568:8575): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 2
+[INFO] 22:19:24:753 KERNEL/(8568:8577): Proceso 6 bloqueado :( mal ahi pa
+[INFO] 22:19:24:753 KERNEL/(8568:8577): Mandando proceso 4 a ejecutar
+[INFO] 22:19:30:750 KERNEL/(8568:8576): Proceso ya espero
+[INFO] 22:19:30:750 KERNEL/(8568:8576): Proceso 6 esperando 9000 milisegundos
+[INFO] 22:19:34:754 KERNEL/(8568:8577): Proceso 4 terminado :) siiiii
+[INFO] 22:27:06:701 KERNEL/(9158:9164): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:27:06:702 KERNEL/(9158:9166): Mandando proceso 1 a ejecutar
+[INFO] 22:27:06:702 KERNEL/(9158:9166): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 22:27:06:702 KERNEL/(9158:9165): Proceso 1 esperando 9000 milisegundos
+[INFO] 22:27:09:137 KERNEL/(9158:9164): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:27:09:137 KERNEL/(9158:9166): Mandando proceso 2 a ejecutar
+[INFO] 22:27:09:138 KERNEL/(9158:9166): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 22:27:11:493 KERNEL/(9158:9164): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:27:11:493 KERNEL/(9158:9166): Mandando proceso 3 a ejecutar
+[INFO] 22:27:11:493 KERNEL/(9158:9166): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 22:27:13:467 KERNEL/(9158:9164): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:27:13:467 KERNEL/(9158:9166): Mandando proceso 4 a ejecutar
+[INFO] 22:27:13:468 KERNEL/(9158:9166): Proceso 4 bloqueado :( mal ahi pa
+[INFO] 22:27:14:336 KERNEL/(9158:9164): (new -> ready) Cola de new: 1 | (new -> ready) Cola de ready: 0
+[INFO] 22:27:15:703 KERNEL/(9158:9165): Proceso ya espero
+[INFO] 22:27:15:703 KERNEL/(9158:9165): Proceso 2 esperando 9000 milisegundos
+[INFO] 22:27:15:703 KERNEL/(9158:9166): Mandando proceso 1 a ejecutar
+[INFO] 22:27:24:703 KERNEL/(9158:9165): Proceso ya espero
+[INFO] 22:27:24:704 KERNEL/(9158:9165): Proceso 3 esperando 9000 milisegundos
+[INFO] 22:27:25:705 KERNEL/(9158:9166): Proceso 1 terminado :) siiiii
+[INFO] 22:27:25:705 KERNEL/(9158:9166): Mandando proceso 2 a ejecutar
+[INFO] 22:27:25:705 KERNEL/(9158:9164): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:27:33:704 KERNEL/(9158:9165): Proceso ya espero
+[INFO] 22:27:33:704 KERNEL/(9158:9165): Proceso 4 esperando 9000 milisegundos
+[INFO] 22:27:35:707 KERNEL/(9158:9166): Proceso 2 terminado :) siiiii

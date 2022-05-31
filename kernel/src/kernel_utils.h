@@ -34,7 +34,8 @@ void srt_ready_execute();
 void loggear_estado_de_colas();
 void imprimir_lista_ready();
 void esperar_cpu();
-PCB_t* fifo();
-PCB_t* sjf();
+void ejecutar_io();
+//PCB_t* fifo();
+//PCB_t* sjf();
 
 #endif /* KERNEL_UTILS_H_ */

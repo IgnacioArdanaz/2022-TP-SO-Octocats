@@ -1,15 +1,20 @@
-16:50:56 **** Incremental Build of configuration Debug for project memoria ****
+20:23:50 **** Build of configuration Debug for project memoria ****
 make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
 Building target: memoria
 Invoking: GCC C Linker
 gcc  -o "memoria"  ./src/memoria_main.o   
+makefile:30: recipe for target 'memoria' failed
 ./src/memoria_main.o: In function `serializar_programa':
 /home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:18: undefined reference to `list_size'
 /home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:38: undefined reference to `list_get'
 ./src/memoria_main.o: In function `deserializar_programa':
 /home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:81: undefined reference to `list_add'
 ./src/memoria_main.o: In function `serializar_proceso':
-makefile:30: recipe for target 'memoria' failed
 /home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:104: undefined reference to `list_size'
 /home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/../../shared/src/protocol.c:133: undefined reference to `list_get'
 ./src/memoria_main.o: In function `deserializar_proceso':
@@ -23,5 +28,5 @@ makefile:30: recipe for target 'memoria' failed
 collect2: error: ld returned 1 exit status
 make: *** [memoria] Error 1
 
-16:50:57 Build Finished (took 753ms)
+20:23:52 Build Finished (took 1s.860ms)
 

@@ -2,12 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="printf" key="selection"/>
+		<item value="multiprogramacion_actual" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="multiprogramacion_actual"/>
+			<item value="sem_wait(&amp;s_new_ready)"/>
+			<item value="sem_post(&amp;s_new_ready)"/>
+			<item value="proceso bloq"/>
+			<item value="execute"/>
+			<item value="sem_wait"/>
+			<item value="sem_post"/>
 			<item value="printf"/>
 			<item value="log_info"/>
 			<item value="log"/>
@@ -16,13 +23,6 @@
 			<item value="4"/>
 			<item value="3"/>
 			<item value="2"/>
-			<item value="pcb_destroy"/>
-			<item value="free"/>
-			<item value="pcb_create"/>
-			<item value="proceso"/>
-			<item value="llamado"/>
-			<item value="l"/>
-			<item value="Cliente con"/>
 		</list>
 		<list key="replacehistory">
 			<item value="3"/>
@@ -36,7 +36,7 @@
 		<item value="340" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="436" key="DIALOG_HEIGHT"/>
-		<item value="1308" key="DIALOG_X_ORIGIN"/>
+		<item value="940" key="DIALOG_X_ORIGIN"/>
 		<item value="135" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
