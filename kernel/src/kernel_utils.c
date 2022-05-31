@@ -126,17 +126,16 @@ void procesar_socket(thread_args* argumentos){
 				pid_sig+=1;
 				pthread_mutex_unlock(&mx_pid_sig);
 				PCB_t* proceso = pcb_create();
-				pcb_set(proceso, pid_actual,tamanio,instrucciones,0,0,estimacion_inicial);
+				pcb_set(proceso, pid_actual, tamanio, instrucciones, 0, 0, estimacion_inicial);
 
 				pthread_mutex_lock(&mx_cola_new);
 				queue_push(cola_new, proceso);
 				pthread_mutex_unlock(&mx_cola_new);
 
-//				char* key;
-//				pthread_mutex_lock(&mx_socket);
-//				dictionary_put(sockets,,cliente_socket);
-//				pthread_mutex_unlock(&mx_socket);
-
+				char* key = string_itoa(pid_actual);
+				pthread_mutex_lock(&mx_socket);
+				dictionary_put(sockets, key, cliente_socket);
+				pthread_mutex_unlock(&mx_socket);
 				sem_post(&s_new_ready); //Avisa al hilo planificador de pasaje de new a ready que debe ejecutarse.
 
 
@@ -168,9 +167,9 @@ void pasaje_new_ready(){
 		list_add(lista_ready,proceso);
 		pthread_mutex_unlock(&mx_lista_ready);
 		sem_post(&s_cont_ready); //Sumo uno al contador de ready
-		pthread_mutex_lock(&mx_multip_actual);
-		sem_post(&s_multiprogramacion_actual);
-		pthread_mutex_unlock(&mx_multip_actual);
+//		pthread_mutex_lock(&mx_multip_actual);
+//		sem_post(&s_multiprogramacion_actual);
+//		pthread_mutex_unlock(&mx_multip_actual);
 		sem_post(&s_ready_execute);
 		loggear_estado_de_colas();
 		//imprimir_lista_ready();
@@ -228,13 +227,13 @@ void esperar_cpu(){
 	sem_post(&s_ready_execute);
 	switch (cop) {
 		case EXIT:{
-			// int* el_socket = dictionary_get(sockets,atoi(pcb->pid));
+			int socket_pcb = dictionary_get(sockets,string_itoa(pcb->pid));
 			// Hay q avisarle a memoria que finalizo para q borre todo.
 			int el_socket = 0;
 			pthread_mutex_lock(&mx_multip_actual);
 			sem_post(&s_multiprogramacion_actual);
 			pthread_mutex_unlock(&mx_multip_actual);
-			send(el_socket,&resultOk,sizeof(int32_t),0);
+			send(socket_pcb,&resultOk,sizeof(int32_t),0);
 			log_info(logger, "Proceso %d terminado :) siiiii",pcb->pid);
 			break;
 		}
