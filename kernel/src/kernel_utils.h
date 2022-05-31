@@ -35,6 +35,7 @@ void loggear_estado_de_colas();
 void imprimir_lista_ready();
 void esperar_cpu();
 void ejecutar_io();
+void suspendiendo(PCB_t* pcb);
 //PCB_t* fifo();
 //PCB_t* sjf();
 

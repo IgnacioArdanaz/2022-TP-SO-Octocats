@@ -1,10 +1,10 @@
-12:00:37 **** Incremental Build of configuration Debug for project kernel ****
+19:28:30 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
 gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
 ../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:137:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+../src/kernel_utils.c:140:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
      dictionary_put(sockets, key, cliente_socket);
                                   ^
 In file included from /usr/include/commons/config.h:20:0,
@@ -13,16 +13,6 @@ In file included from /usr/include/commons/config.h:20:0,
 /usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
   void     dictionary_put(t_dictionary *, char *key, void *data);
            ^
-../src/kernel_utils.c:99:8: warning: unused variable ‘server_name’ [-Wunused-variable]
-  char* server_name = string_duplicate(argumentos->server_name);
-        ^
-../src/kernel_utils.c: In function ‘esperar_cpu’:
-../src/kernel_utils.c:230:21: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-    int socket_pcb = dictionary_get(sockets,string_itoa(pcb->pid));
-                     ^
-../src/kernel_utils.c:232:8: warning: unused variable ‘el_socket’ [-Wunused-variable]
-    int el_socket = 0;
-        ^
 In file included from ../src/kernel_utils.h:16:0,
                  from ../src/kernel_utils.c:1:
 ../src/kernel_utils.c: At top level:
@@ -46,5 +36,5 @@ gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_m
 Finished building target: kernel
  
 
-12:00:38 Build Finished (took 688ms)
+19:28:31 Build Finished (took 884ms)
 

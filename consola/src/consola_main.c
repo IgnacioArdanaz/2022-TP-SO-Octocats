@@ -31,7 +31,7 @@ int main(int argc, char** argv){
 		if (resultado == EXIT){
 			log_info(logger,"El proceso se finalizó exitosamente :)");
 		} else{
-			log_error(logger,"El proceso NO se finalizó exitosamente :(");
+			log_error(logger,"El proceso NO se finalizó exitosamente (co op %d):(", resultado);
 		}
 	}
 	else{

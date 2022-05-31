@@ -23,6 +23,15 @@ void pcb_set(PCB_t* pcb,
 	pcb->est_rafaga = est_rafaga;
 }
 
+int pcb_find_index(t_list* lista, uint16_t pid){
+	for (int i = 0; i < list_size(lista); i++){
+		PCB_t* otro_pcb = list_get(lista,i);
+		if (otro_pcb->pid == pid)
+			return i;
+	}
+	return -1;
+}
+
 void pcb_destroy(PCB_t* pcb){
 	list_destroy_and_destroy_elements(pcb->instrucciones,free);
 	free(pcb);
