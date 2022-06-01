@@ -47,6 +47,12 @@ void inicializar_kernel(){
 //	char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
 //	char* puerto_memoria = config_get_string_value(config,"PUERTO_MEMORIA");
 //	conexion_memoria = crear_conexion(logger, "MEMORIA", ip_memoria, puerto_memoria);
+//
+//	if (conexion_memoria == 0){
+//		log_error(logger,"Error al intentar conectarse a memoria :-(");
+//		exit(EXIT_FAILURE);
+//	}
+
 
 	//conectando con CPU
 	char* ip_cpu = config_get_string_value(config,"IP_CPU");

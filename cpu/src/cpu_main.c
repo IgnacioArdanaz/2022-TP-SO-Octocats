@@ -43,10 +43,17 @@ void inicializar_cpu(){
 
 	operando_copy = 0;
 
+	//conexion con MEMORIA
 //	char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
 //	char* puerto_memoria = config_get_string_value(config,"PUERTO_MEMORIA");
 //	int conexion_memoria = crear_conexion(logger, "MEMORIA", ip_memoria, puerto_memoria);
+//
+//	if (conexion_memoria == 0){
+//		log_error(logger,"Error al intentar conectarse a memoria :-(");
+//		exit(EXIT_FAILURE);
+//	}
 
+	log_info(logger, "CONEXION MEMORIA: %d",conexion_memoria);
 	char* puerto_dispatch = config_get_string_value(config, "PUERTO_ESCUCHA_DISPATCH");
 	char* puerto_interrupt = config_get_string_value(config, "PUERTO_ESCUCHA_INTERRUPT");
 	server_cpu_dispatch = iniciar_servidor(logger, "CPU_DISPATCH", IP, puerto_dispatch);

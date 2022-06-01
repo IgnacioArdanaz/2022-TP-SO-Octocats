@@ -43,3 +43,37 @@
 [INFO] 20:39:30:454 cpu/(5724:5724): Program counter 9 (despues de ejecutar)
 [INFO] 20:39:30:454 cpu/(5724:5724): ==============================================================
 [INFO] 20:39:35:394 cpu/(5724:5724): Proceso 52216 -> program counter 9
+[INFO] 21:06:08:361 cpu/(6389:6389): Error al conectar (a MEMORIA)
+[INFO] 21:06:08:362 cpu/(6389:6389): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 21:06:08:362 cpu/(6389:6389): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 21:06:08:362 cpu/(6389:6389): CPU_DISPATCH listo para recibir al cliente
+[INFO] 21:07:31:553 cpu/(6473:6473): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 21:07:31:553 cpu/(6473:6473): CONEXION MEMORIA: 4
+[INFO] 21:07:31:553 cpu/(6473:6473): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 21:07:31:553 cpu/(6473:6473): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 21:07:31:562 cpu/(6473:6473): CPU_DISPATCH listo para recibir al cliente
+[INFO] 21:07:39:919 cpu/(6473:6473): Cliente conectado (a CPU_DISPATCH)
+[INFO] 21:07:39:919 cpu/(6473:6473): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 21:07:39:919 cpu/(6473:6473): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 21:08:00:106 cpu/(6473:6473): Proceso 26568 -> program counter 540160048
+[INFO] 21:10:14:144 cpu/(6589:6589): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 21:10:14:145 cpu/(6589:6589): CONEXION MEMORIA: 4
+[INFO] 21:10:14:145 cpu/(6589:6589): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 21:10:14:145 cpu/(6589:6589): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 21:10:14:145 cpu/(6589:6589): CPU_DISPATCH listo para recibir al cliente
+[INFO] 21:10:18:854 cpu/(6589:6589): Cliente conectado (a CPU_DISPATCH)
+[INFO] 21:10:18:854 cpu/(6589:6589): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 21:10:18:854 cpu/(6589:6589): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 21:10:28:658 cpu/(6589:6589): Proceso 1 -> program counter 0
+[INFO] 21:10:28:659 cpu/(6589:6589): Ejecutando IO
+[INFO] 21:10:28:659 cpu/(6589:6589): Program counter 1 (despues de ejecutar)
+[INFO] 21:10:28:659 cpu/(6589:6589): ==============================================================
+[INFO] 21:10:37:659 cpu/(6589:6589): Proceso 1 -> program counter 1
+[INFO] 21:10:37:660 cpu/(6589:6589): Ejecutando IO
+[INFO] 21:10:37:660 cpu/(6589:6589): Program counter 2 (despues de ejecutar)
+[INFO] 21:10:37:660 cpu/(6589:6589): ==============================================================
+[INFO] 21:12:05:564 cpu/(6683:6683): Error al conectar (a MEMORIA)
+[INFO] 21:12:05:565 cpu/(6683:6683): CONEXION MEMORIA: 0
+[INFO] 21:12:05:565 cpu/(6683:6683): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 21:12:05:565 cpu/(6683:6683): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 21:12:05:565 cpu/(6683:6683): CPU_DISPATCH listo para recibir al cliente

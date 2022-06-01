@@ -48,3 +48,31 @@
 [INFO] 20:39:20:452 KERNEL/(5735:5743): [IO] Proceso 1 saliendo de blocked :)
 [INFO] 20:39:20:452 KERNEL/(5735:5744): Mandando proceso 1 a ejecutar
 [INFO] 20:39:30:455 KERNEL/(5735:5744): Proceso 1 terminado :) siiiii
+[INFO] 21:07:39:907 KERNEL/(6500:6500): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 21:07:39:919 KERNEL/(6500:6500): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 21:07:39:919 KERNEL/(6500:6500): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 21:07:39:919 KERNEL/(6500:6500): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 21:07:39:919 KERNEL/(6500:6500): Kernel esperando un nuevo cliente
+[INFO] 21:07:39:919 KERNEL/(6500:6500): KERNEL listo para recibir al cliente
+[INFO] 21:10:18:853 KERNEL/(6600:6600): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 21:10:18:854 KERNEL/(6600:6600): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 21:10:18:854 KERNEL/(6600:6600): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 21:10:18:854 KERNEL/(6600:6600): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 21:10:18:854 KERNEL/(6600:6600): Kernel esperando un nuevo cliente
+[INFO] 21:10:18:858 KERNEL/(6600:6600): KERNEL listo para recibir al cliente
+[INFO] 21:10:28:658 KERNEL/(6600:6600): Cliente conectado (a KERNEL)
+[INFO] 21:10:28:658 KERNEL/(6600:6600): Socket del cliente recibido en kernel.
+[INFO] 21:10:28:658 KERNEL/(6600:6600): Kernel esperando un nuevo cliente
+[INFO] 21:10:28:658 KERNEL/(6600:6600): KERNEL listo para recibir al cliente
+[INFO] 21:10:28:658 KERNEL/(6600:6607): PROCESO 1 POPEADO COLA NEW
+[INFO] 21:10:28:658 KERNEL/(6600:6607): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:10:28:658 KERNEL/(6600:6609): Mandando proceso 1 a ejecutar
+[INFO] 21:10:28:659 KERNEL/(6600:6609): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:10:28:659 KERNEL/(6600:6608): [IO] Proceso 1 esperando 9000 milisegundos
+[INFO] 21:10:37:659 KERNEL/(6600:6608): [IO] Proceso 1 saliendo de blocked :)
+[INFO] 21:10:37:659 KERNEL/(6600:6609): Mandando proceso 1 a ejecutar
+[INFO] 21:10:37:660 KERNEL/(6600:6609): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 21:10:37:660 KERNEL/(6600:6608): [IO] Proceso 1 esperando 9000 milisegundos
+[INFO] 21:10:46:660 KERNEL/(6600:6608): [IO] Proceso 1 saliendo de blocked :)
+[INFO] 21:10:46:660 KERNEL/(6600:6609): Mandando proceso 1 a ejecutar
+[ERROR] 21:10:46:660 KERNEL/(6600:6609): DISCONNECT FAILURE!
