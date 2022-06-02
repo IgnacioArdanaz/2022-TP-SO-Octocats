@@ -924,3 +924,28 @@
 [INFO] 17:08:29:711 KERNEL/(1075:1085): Proceso 2 terminado
 [INFO] 17:08:29:712 KERNEL/(1075:1085): Mandando proceso 3 a ejecutar
 [INFO] 17:08:39:714 KERNEL/(1075:1085): Proceso 3 terminado
+[INFO] 19:38:55:639 KERNEL/(16485:16485): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 19:38:55:640 KERNEL/(16485:16485): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 19:38:55:641 KERNEL/(16485:16485): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 19:38:55:641 KERNEL/(16485:16485): Kernel esperando un nuevo cliente
+[INFO] 19:38:55:641 KERNEL/(16485:16485): KERNEL listo para recibir al cliente
+[INFO] 19:39:09:359 KERNEL/(16485:16485): Cliente conectado (a KERNEL)
+[INFO] 19:39:09:359 KERNEL/(16485:16485): Socket del cliente recibido en kernel.
+[INFO] 19:39:09:359 KERNEL/(16485:16485): Kernel esperando un nuevo cliente
+[INFO] 19:39:09:359 KERNEL/(16485:16485): KERNEL listo para recibir al cliente
+[INFO] 19:39:09:359 KERNEL/(16485:16491): PROCESO 1 POPEADO COLA NEW
+[INFO] 19:39:09:359 KERNEL/(16485:16491): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 19:39:09:359 KERNEL/(16485:16493): Mandando proceso 1 a ejecutar
+[INFO] 19:39:09:360 KERNEL/(16485:16493): Proceso 1 bloqueado
+[INFO] 19:39:09:360 KERNEL/(16485:16492): [IO] Proceso 1 esperando 9000 milisegundos
+[INFO] 19:39:18:360 KERNEL/(16485:16492): [IO] Proceso 1 saliendo de blocked hacia ready :)
+[INFO] 19:39:18:360 KERNEL/(16485:16493): Mandando proceso 1 a ejecutar
+[INFO] 19:39:18:361 KERNEL/(16485:16493): Proceso 1 bloqueado
+[INFO] 19:39:18:361 KERNEL/(16485:16492): [IO] Proceso 1 esperando 9000 milisegundos
+[INFO] 19:39:27:362 KERNEL/(16485:16492): [IO] Proceso 1 saliendo de blocked hacia ready :)
+[INFO] 19:39:27:362 KERNEL/(16485:16493): Mandando proceso 1 a ejecutar
+[INFO] 19:39:27:362 KERNEL/(16485:16493): Proceso 1 bloqueado
+[INFO] 19:39:27:362 KERNEL/(16485:16492): [IO] Proceso 1 esperando 9000 milisegundos
+[INFO] 19:39:35:961 KERNEL/(16485:16492): [IO] Proceso 1 saliendo de blocked hacia ready :)
+[INFO] 19:39:35:962 KERNEL/(16485:16493): Mandando proceso 1 a ejecutar
+[INFO] 19:39:45:967 KERNEL/(16485:16493): Proceso 1 terminado

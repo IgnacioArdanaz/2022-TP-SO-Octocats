@@ -501,3 +501,15 @@
 [INFO] 17:07:36:925 CONSOLA/(1222:1222): Programa enviado al kernel correctamente!
 [INFO] 17:08:29:711 CONSOLA/(1200:1200): El proceso se finalizó exitosamente :)
 [INFO] 17:08:39:714 CONSOLA/(1222:1222): El proceso se finalizó exitosamente :)
+[INFO] 19:39:09:354 CONSOLA/(16499:16499): Instruccion numero 0: I 9000 -1
+[INFO] 19:39:09:354 CONSOLA/(16499:16499): Instruccion numero 1: I 9000 -1
+[INFO] 19:39:09:357 CONSOLA/(16499:16499): Instruccion numero 2: I 9000 -1
+[INFO] 19:39:09:357 CONSOLA/(16499:16499): Instruccion numero 3: N -1 -1
+[INFO] 19:39:09:357 CONSOLA/(16499:16499): Instruccion numero 4: N -1 -1
+[INFO] 19:39:09:358 CONSOLA/(16499:16499): Instruccion numero 5: W 4 42
+[INFO] 19:39:09:358 CONSOLA/(16499:16499): Instruccion numero 6: C 0 4
+[INFO] 19:39:09:358 CONSOLA/(16499:16499): Instruccion numero 7: R 0 -1
+[INFO] 19:39:09:358 CONSOLA/(16499:16499): Instruccion numero 8: E -1 -1
+[INFO] 19:39:09:359 CONSOLA/(16499:16499): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 19:39:09:359 CONSOLA/(16499:16499): Programa enviado al kernel correctamente!
+[INFO] 19:39:45:967 CONSOLA/(16499:16499): El proceso se finalizó exitosamente :)

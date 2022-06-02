@@ -1,15 +1,6 @@
-18:04:52 **** Incremental Build of configuration Debug for project consola ****
+19:39:07 **** Incremental Build of configuration Debug for project consola ****
 make all 
-Building file: ../src/consola_main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/consola_main.d" -MT"src/consola_main.o" -o "src/consola_main.o" "../src/consola_main.c"
-Finished building: ../src/consola_main.c
- 
-Building target: consola
-Invoking: GCC C Linker
-gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "consola"  ./src/consola_main.o ./src/parser.o   -lcommons -lshared
-Finished building target: consola
- 
+make: Nothing to be done for 'all'.
 
-18:04:55 Build Finished (took 2s.886ms)
+19:39:08 Build Finished (took 748ms)
 

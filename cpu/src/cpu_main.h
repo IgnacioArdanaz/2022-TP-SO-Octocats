@@ -20,6 +20,7 @@
 void inicializar_cpu();
 void apagar_cpu();
 void interrupcion();
+void calculo_estimacion(PCB_t *pcb);
 op_code iniciar_ciclo_instruccion(PCB_t *pcb);
 instruccion_t* fetch(t_list* instrucciones, uint32_t pc);
 int decode(instruccion_t* instruccion_ejecutar );

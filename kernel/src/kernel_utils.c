@@ -47,6 +47,7 @@ void inicializar_kernel(){
 	estimacion_inicial = config_get_double_value(config,"ESTIMACION_INICIAL");
 	char* algoritmo_config = config_get_string_value(config,"ALGORITMO_PLANIFICACION");
 	tiempo_suspended = config_get_int_value(config,"TIEMPO_MAXIMO_BLOQUEADO");
+	double alfa = config_get_double_value(config,"ALFA");
 
 	//conectando con MEMORIA
 //	char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
@@ -65,6 +66,8 @@ void inicializar_kernel(){
 	char* puerto_cpu_interrupt = config_get_string_value(config,"PUERTO_CPU_INTERRUPT");
 	conexion_cpu_dispatch = crear_conexion(logger, "CPU DISPATCH", ip_cpu, puerto_cpu_dispatch);
 	conexion_cpu_interrupt= crear_conexion(logger, "CPU INTERRUPT", ip_cpu, puerto_cpu_interrupt);
+	send(conexion_cpu_dispatch,&alfa,sizeof(alfa),0);
+
 
 	sem_init(&s_pasaje_a_ready, 0, 0);
 	sem_init(&s_cont_ready, 0, 0); // Incrementa al sumar un proceso a ready y decrementa al ejecutarlo

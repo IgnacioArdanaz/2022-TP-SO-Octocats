@@ -8,7 +8,8 @@ int espera, server_cpu_dispatch, server_cpu_interrupt, cliente_socket_interrupt,
 	cliente_socket_dispatch, operando_copy, entradas_tlb, conexion_memoria;
 char* reemplazo_tlb;
 bool hay_interrupcion;
-
+double alfa;
+uint64_t rafaga_real;
 int main(void) {
 
 	inicializar_cpu();
@@ -20,7 +21,13 @@ int main(void) {
 		recv_proceso(cliente_socket_dispatch,pcb);
 		log_info(logger,"Proceso %d -> program counter %d", pcb->pid, pcb->pc);
 
+		struct timespec start;
+		clock_gettime(CLOCK_REALTIME,&start);
 		op_code estado = iniciar_ciclo_instruccion(pcb);
+		struct timespec end;
+		clock_gettime(CLOCK_REALTIME, &end);
+		rafaga_real = (end.tv_sec - start.tv_sec) * 1000 + (end.tv_nsec - start.tv_nsec) / 1000000;
+		calculo_estimacion(pcb);
 
 		log_info(logger,"Program counter %d (despues de ejecutar)",pcb->pc);
 		log_info(logger,"==============================================================");
@@ -31,6 +38,15 @@ int main(void) {
 	apagar_cpu();
 
 	return EXIT_SUCCESS;
+}
+
+void calculo_estimacion(PCB_t *pcb){
+
+
+	log_info(logger, "Rafaga real %" PRIu64 , rafaga_real);
+
+	pcb->est_rafaga = pcb->est_rafaga *alfa + (double)rafaga_real*(1-alfa); //Calculo estimacion rafaga siguiente
+	log_info(logger, "Proceso %d estimacion rafaga siguiente %f",pcb->pid, pcb->est_rafaga);
 }
 
 void inicializar_cpu(){
@@ -60,7 +76,8 @@ void inicializar_cpu(){
 
 	cliente_socket_dispatch = esperar_cliente(logger, "CPU_DISPATCH",server_cpu_dispatch);
 	cliente_socket_interrupt = esperar_cliente(logger, "CPU_INTERRUPT", server_cpu_interrupt);
-
+	recv(cliente_socket_dispatch,&alfa, sizeof(double), 0);
+	log_info(logger,"Valor alfa %.2f",alfa);
 	pthread_t hilo_interrupciones;
 	pthread_create(&hilo_interrupciones,NULL,(void*)interrupcion,NULL);
 	pthread_detach(hilo_interrupciones);
