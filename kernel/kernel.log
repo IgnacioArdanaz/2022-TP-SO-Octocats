@@ -76,3 +76,91 @@
 [INFO] 21:10:46:660 KERNEL/(6600:6608): [IO] Proceso 1 saliendo de blocked :)
 [INFO] 21:10:46:660 KERNEL/(6600:6609): Mandando proceso 1 a ejecutar
 [ERROR] 21:10:46:660 KERNEL/(6600:6609): DISCONNECT FAILURE!
+[INFO] 23:55:51:351 KERNEL/(3680:3680): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 23:55:51:351 KERNEL/(3680:3680): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 23:55:51:351 KERNEL/(3680:3680): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 23:55:51:352 KERNEL/(3680:3680): Kernel esperando un nuevo cliente
+[INFO] 23:55:51:352 KERNEL/(3680:3680): KERNEL listo para recibir al cliente
+[INFO] 23:55:56:295 KERNEL/(3680:3680): Cliente conectado (a KERNEL)
+[INFO] 23:55:56:296 KERNEL/(3680:3680): Socket del cliente recibido en kernel.
+[INFO] 23:55:56:296 KERNEL/(3680:3680): Kernel esperando un nuevo cliente
+[INFO] 23:55:56:296 KERNEL/(3680:3680): KERNEL listo para recibir al cliente
+[INFO] 23:55:56:304 KERNEL/(3680:3686): PROCESO 1 POPEADO COLA NEW
+[INFO] 23:55:56:305 KERNEL/(3680:3686): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 23:55:56:305 KERNEL/(3680:3688): Mandando proceso 1 a ejecutar
+[INFO] 23:55:56:307 KERNEL/(3680:3688): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 23:55:56:308 KERNEL/(3680:3687): [IO] Proceso 1 esperando 9000 milisegundos
+[INFO] 23:55:59:620 KERNEL/(3680:3680): Cliente conectado (a KERNEL)
+[INFO] 23:55:59:620 KERNEL/(3680:3680): Socket del cliente recibido en kernel.
+[INFO] 23:55:59:620 KERNEL/(3680:3680): Kernel esperando un nuevo cliente
+[INFO] 23:55:59:620 KERNEL/(3680:3680): KERNEL listo para recibir al cliente
+[INFO] 23:55:59:627 KERNEL/(3680:3686): PROCESO 2 POPEADO COLA NEW
+[INFO] 23:55:59:627 KERNEL/(3680:3686): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 23:55:59:627 KERNEL/(3680:3688): Mandando proceso 2 a ejecutar
+[INFO] 23:55:59:627 KERNEL/(3680:3688): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 23:56:00:643 KERNEL/(3680:3680): Cliente conectado (a KERNEL)
+[INFO] 23:56:00:643 KERNEL/(3680:3680): Socket del cliente recibido en kernel.
+[INFO] 23:56:00:643 KERNEL/(3680:3680): Kernel esperando un nuevo cliente
+[INFO] 23:56:00:643 KERNEL/(3680:3680): KERNEL listo para recibir al cliente
+[INFO] 23:56:00:644 KERNEL/(3680:3686): PROCESO 3 POPEADO COLA NEW
+[INFO] 23:56:00:644 KERNEL/(3680:3686): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 23:56:00:644 KERNEL/(3680:3688): Mandando proceso 3 a ejecutar
+[INFO] 23:56:00:645 KERNEL/(3680:3688): Proceso 3 bloqueado :( mal ahi pa
+[INFO] 23:56:05:309 KERNEL/(3680:3687): [IO] Proceso 1 saliendo de blocked :)
+[INFO] 23:56:05:310 KERNEL/(3680:3687): [IO] Proceso 2 esperando 9000 milisegundos
+[INFO] 23:56:05:310 KERNEL/(3680:3688): Mandando proceso 1 a ejecutar
+[INFO] 23:56:05:312 KERNEL/(3680:3688): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 23:56:06:310 KERNEL/(3680:3700): Suspendiendo proceso 1 que bajon :(
+[INFO] 23:56:10:647 KERNEL/(3680:3726): Suspendiendo proceso 3 que bajon :(
+[INFO] 23:56:14:311 KERNEL/(3680:3687): [IO] Proceso 2 saliendo de blocked :)
+[INFO] 23:56:14:311 KERNEL/(3680:3688): Mandando proceso 2 a ejecutar
+[INFO] 23:56:14:313 KERNEL/(3680:3688): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 23:56:14:313 KERNEL/(3680:3687): [IO] Proceso 2 esperando 9000 milisegundos
+[INFO] 23:56:23:314 KERNEL/(3680:3687): [IO] Proceso 2 saliendo de blocked :)
+[INFO] 23:56:23:314 KERNEL/(3680:3688): Mandando proceso 2 a ejecutar
+[INFO] 23:56:23:316 KERNEL/(3680:3688): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 23:56:23:316 KERNEL/(3680:3687): [IO] Proceso 2 esperando 9000 milisegundos
+[INFO] 23:56:32:317 KERNEL/(3680:3687): [IO] Proceso 2 saliendo de blocked :)
+[INFO] 23:56:32:318 KERNEL/(3680:3688): Mandando proceso 2 a ejecutar
+[INFO] 23:56:42:328 KERNEL/(3680:3688): Proceso 2 terminado :) siiiii
+[INFO] 23:59:04:262 KERNEL/(3795:3795): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 23:59:04:267 KERNEL/(3795:3795): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[ERROR] 23:59:04:267 KERNEL/(3795:3795): Error creando el socket :(
+[INFO] 23:59:15:008 KERNEL/(3822:3822): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 23:59:15:009 KERNEL/(3822:3822): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 23:59:15:009 KERNEL/(3822:3822): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 23:59:15:009 KERNEL/(3822:3822): Kernel esperando un nuevo cliente
+[INFO] 23:59:15:010 KERNEL/(3822:3822): KERNEL listo para recibir al cliente
+[INFO] 23:59:19:163 KERNEL/(3822:3822): Cliente conectado (a KERNEL)
+[INFO] 23:59:19:163 KERNEL/(3822:3822): Socket del cliente recibido en kernel.
+[INFO] 23:59:19:163 KERNEL/(3822:3822): Kernel esperando un nuevo cliente
+[INFO] 23:59:19:163 KERNEL/(3822:3822): KERNEL listo para recibir al cliente
+[INFO] 23:59:19:164 KERNEL/(3822:3828): PROCESO 1 POPEADO COLA NEW
+[INFO] 23:59:19:164 KERNEL/(3822:3828): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 23:59:19:164 KERNEL/(3822:3830): Mandando proceso 1 a ejecutar
+[INFO] 23:59:19:164 KERNEL/(3822:3830): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 23:59:19:165 KERNEL/(3822:3829): [IO] Proceso 1 esperando 9000 milisegundos
+[INFO] 23:59:23:708 KERNEL/(3822:3822): Cliente conectado (a KERNEL)
+[INFO] 23:59:23:708 KERNEL/(3822:3822): Socket del cliente recibido en kernel.
+[INFO] 23:59:23:708 KERNEL/(3822:3822): Kernel esperando un nuevo cliente
+[INFO] 23:59:23:708 KERNEL/(3822:3822): KERNEL listo para recibir al cliente
+[INFO] 23:59:23:709 KERNEL/(3822:3828): PROCESO 2 POPEADO COLA NEW
+[INFO] 23:59:23:709 KERNEL/(3822:3828): (new -> ready) Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 23:59:23:709 KERNEL/(3822:3830): Mandando proceso 2 a ejecutar
+[INFO] 23:59:23:709 KERNEL/(3822:3830): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 23:59:28:165 KERNEL/(3822:3829): [IO] Proceso 1 saliendo de blocked :)
+[INFO] 23:59:28:165 KERNEL/(3822:3829): [IO] Proceso 2 esperando 9000 milisegundos
+[INFO] 23:59:28:165 KERNEL/(3822:3830): Mandando proceso 1 a ejecutar
+[INFO] 23:59:28:165 KERNEL/(3822:3830): Proceso 1 bloqueado :( mal ahi pa
+[INFO] 23:59:29:165 KERNEL/(3822:3842): Suspendiendo proceso 1 que bajon :(
+[INFO] 23:59:37:165 KERNEL/(3822:3829): [IO] Proceso 2 saliendo de blocked :)
+[INFO] 23:59:37:166 KERNEL/(3822:3830): Mandando proceso 2 a ejecutar
+[INFO] 23:59:37:167 KERNEL/(3822:3830): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 23:59:37:167 KERNEL/(3822:3829): [IO] Proceso 2 esperando 9000 milisegundos
+[INFO] 23:59:46:168 KERNEL/(3822:3829): [IO] Proceso 2 saliendo de blocked :)
+[INFO] 23:59:46:168 KERNEL/(3822:3830): Mandando proceso 2 a ejecutar
+[INFO] 23:59:46:169 KERNEL/(3822:3830): Proceso 2 bloqueado :( mal ahi pa
+[INFO] 23:59:46:169 KERNEL/(3822:3829): [IO] Proceso 2 esperando 9000 milisegundos
+[INFO] 23:59:55:170 KERNEL/(3822:3829): [IO] Proceso 2 saliendo de blocked :)
+[INFO] 23:59:55:170 KERNEL/(3822:3830): Mandando proceso 2 a ejecutar
+[INFO] 00:00:05:176 KERNEL/(3822:3830): Proceso 2 terminado :) siiiii

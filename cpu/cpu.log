@@ -77,3 +77,92 @@
 [INFO] 21:12:05:565 cpu/(6683:6683): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
 [INFO] 21:12:05:565 cpu/(6683:6683): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
 [INFO] 21:12:05:565 cpu/(6683:6683): CPU_DISPATCH listo para recibir al cliente
+[INFO] 23:55:07:279 cpu/(3598:3598): CONEXION MEMORIA: 0
+[INFO] 23:55:07:310 cpu/(3598:3598): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 23:55:07:310 cpu/(3598:3598): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 23:55:07:310 cpu/(3598:3598): CPU_DISPATCH listo para recibir al cliente
+[INFO] 23:55:46:093 cpu/(3652:3652): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 23:55:46:093 cpu/(3652:3652): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 23:55:46:093 cpu/(3652:3652): CPU_DISPATCH listo para recibir al cliente
+[INFO] 23:55:51:351 cpu/(3652:3652): Cliente conectado (a CPU_DISPATCH)
+[INFO] 23:55:51:351 cpu/(3652:3652): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 23:55:51:351 cpu/(3652:3652): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 23:55:56:305 cpu/(3652:3652): Proceso 1 -> program counter 0
+[INFO] 23:55:56:306 cpu/(3652:3652): Ejecutando IO
+[INFO] 23:55:56:306 cpu/(3652:3652): Program counter 1 (despues de ejecutar)
+[INFO] 23:55:56:306 cpu/(3652:3652): ==============================================================
+[INFO] 23:55:59:627 cpu/(3652:3652): Proceso 2 -> program counter 0
+[INFO] 23:55:59:627 cpu/(3652:3652): Ejecutando IO
+[INFO] 23:55:59:627 cpu/(3652:3652): Program counter 1 (despues de ejecutar)
+[INFO] 23:55:59:627 cpu/(3652:3652): ==============================================================
+[INFO] 23:56:00:644 cpu/(3652:3652): Proceso 3 -> program counter 0
+[INFO] 23:56:00:644 cpu/(3652:3652): Ejecutando IO
+[INFO] 23:56:00:644 cpu/(3652:3652): Program counter 1 (despues de ejecutar)
+[INFO] 23:56:00:644 cpu/(3652:3652): ==============================================================
+[INFO] 23:56:05:310 cpu/(3652:3652): Proceso 1 -> program counter 1
+[INFO] 23:56:05:311 cpu/(3652:3652): Ejecutando IO
+[INFO] 23:56:05:311 cpu/(3652:3652): Program counter 2 (despues de ejecutar)
+[INFO] 23:56:05:311 cpu/(3652:3652): ==============================================================
+[INFO] 23:56:14:312 cpu/(3652:3652): Proceso 2 -> program counter 1
+[INFO] 23:56:14:312 cpu/(3652:3652): Ejecutando IO
+[INFO] 23:56:14:312 cpu/(3652:3652): Program counter 2 (despues de ejecutar)
+[INFO] 23:56:14:313 cpu/(3652:3652): ==============================================================
+[INFO] 23:56:23:315 cpu/(3652:3652): Proceso 2 -> program counter 2
+[INFO] 23:56:23:315 cpu/(3652:3652): Ejecutando IO
+[INFO] 23:56:23:315 cpu/(3652:3652): Program counter 3 (despues de ejecutar)
+[INFO] 23:56:23:315 cpu/(3652:3652): ==============================================================
+[INFO] 23:56:32:318 cpu/(3652:3652): Proceso 2 -> program counter 3
+[INFO] 23:56:32:323 cpu/(3652:3652): Ejecutando NOOP
+[INFO] 23:56:37:324 cpu/(3652:3652): Ejecutando NOOP
+[INFO] 23:56:42:325 cpu/(3652:3652): Ejecutando WRITE
+[INFO] 23:56:42:327 cpu/(3652:3652): Aca busco el operando
+[INFO] 23:56:42:327 cpu/(3652:3652): Ejecutando COPY
+[INFO] 23:56:42:327 cpu/(3652:3652): Ejecutando READ
+[INFO] 23:56:42:327 cpu/(3652:3652): Ejecutando EXIT
+[INFO] 23:56:42:327 cpu/(3652:3652): Program counter 9 (despues de ejecutar)
+[INFO] 23:56:42:327 cpu/(3652:3652): ==============================================================
+[INFO] 23:58:05:774 cpu/(3652:3652): Proceso 19448 -> program counter 9
+[INFO] 23:59:00:348 cpu/(3768:3768): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 23:59:00:348 cpu/(3768:3768): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 23:59:00:348 cpu/(3768:3768): CPU_DISPATCH listo para recibir al cliente
+[INFO] 23:59:04:261 cpu/(3768:3768): Cliente conectado (a CPU_DISPATCH)
+[INFO] 23:59:04:261 cpu/(3768:3768): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 23:59:04:263 cpu/(3768:3768): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 23:59:04:267 cpu/(3768:3768): Proceso 51120 -> program counter 1768030218
+[INFO] 23:59:11:938 cpu/(3811:3811): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 23:59:11:938 cpu/(3811:3811): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 23:59:11:938 cpu/(3811:3811): CPU_DISPATCH listo para recibir al cliente
+[INFO] 23:59:15:001 cpu/(3811:3811): Cliente conectado (a CPU_DISPATCH)
+[INFO] 23:59:15:001 cpu/(3811:3811): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 23:59:15:009 cpu/(3811:3811): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 23:59:19:164 cpu/(3811:3811): Proceso 1 -> program counter 0
+[INFO] 23:59:19:164 cpu/(3811:3811): Ejecutando IO
+[INFO] 23:59:19:164 cpu/(3811:3811): Program counter 1 (despues de ejecutar)
+[INFO] 23:59:19:164 cpu/(3811:3811): ==============================================================
+[INFO] 23:59:23:709 cpu/(3811:3811): Proceso 2 -> program counter 0
+[INFO] 23:59:23:709 cpu/(3811:3811): Ejecutando IO
+[INFO] 23:59:23:709 cpu/(3811:3811): Program counter 1 (despues de ejecutar)
+[INFO] 23:59:23:709 cpu/(3811:3811): ==============================================================
+[INFO] 23:59:28:165 cpu/(3811:3811): Proceso 1 -> program counter 1
+[INFO] 23:59:28:165 cpu/(3811:3811): Ejecutando IO
+[INFO] 23:59:28:165 cpu/(3811:3811): Program counter 2 (despues de ejecutar)
+[INFO] 23:59:28:165 cpu/(3811:3811): ==============================================================
+[INFO] 23:59:37:166 cpu/(3811:3811): Proceso 2 -> program counter 1
+[INFO] 23:59:37:166 cpu/(3811:3811): Ejecutando IO
+[INFO] 23:59:37:167 cpu/(3811:3811): Program counter 2 (despues de ejecutar)
+[INFO] 23:59:37:167 cpu/(3811:3811): ==============================================================
+[INFO] 23:59:46:168 cpu/(3811:3811): Proceso 2 -> program counter 2
+[INFO] 23:59:46:169 cpu/(3811:3811): Ejecutando IO
+[INFO] 23:59:46:169 cpu/(3811:3811): Program counter 3 (despues de ejecutar)
+[INFO] 23:59:46:169 cpu/(3811:3811): ==============================================================
+[INFO] 23:59:55:171 cpu/(3811:3811): Proceso 2 -> program counter 3
+[INFO] 23:59:55:171 cpu/(3811:3811): Ejecutando NOOP
+[INFO] 00:00:00:172 cpu/(3811:3811): Ejecutando NOOP
+[INFO] 00:00:05:173 cpu/(3811:3811): Ejecutando WRITE
+[INFO] 00:00:05:175 cpu/(3811:3811): Aca busco el operando
+[INFO] 00:00:05:175 cpu/(3811:3811): Ejecutando COPY
+[INFO] 00:00:05:175 cpu/(3811:3811): Ejecutando READ
+[INFO] 00:00:05:175 cpu/(3811:3811): Ejecutando EXIT
+[INFO] 00:00:05:175 cpu/(3811:3811): Program counter 9 (despues de ejecutar)
+[INFO] 00:00:05:175 cpu/(3811:3811): ==============================================================
+[INFO] 00:00:39:915 cpu/(3811:3811): Proceso 15352 -> program counter 9

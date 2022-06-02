@@ -53,7 +53,6 @@ void inicializar_cpu(){
 //		exit(EXIT_FAILURE);
 //	}
 
-	log_info(logger, "CONEXION MEMORIA: %d",conexion_memoria);
 	char* puerto_dispatch = config_get_string_value(config, "PUERTO_ESCUCHA_DISPATCH");
 	char* puerto_interrupt = config_get_string_value(config, "PUERTO_ESCUCHA_INTERRUPT");
 	server_cpu_dispatch = iniciar_servidor(logger, "CPU_DISPATCH", IP, puerto_dispatch);

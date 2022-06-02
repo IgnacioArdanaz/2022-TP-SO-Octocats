@@ -1,6 +1,6 @@
-21:10:16 **** Incremental Build of configuration Debug for project kernel ****
+00:00:49 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 make: Nothing to be done for 'all'.
 
-21:10:17 Build Finished (took 899ms)
+00:00:50 Build Finished (took 540ms)
 

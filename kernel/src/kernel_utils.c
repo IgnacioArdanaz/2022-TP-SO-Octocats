@@ -254,8 +254,8 @@ void esperar_cpu(){
 			pthread_mutex_lock(&mx_cola_blocked);
 			list_add(cola_blocked,pcb);
 			pthread_mutex_unlock(&mx_cola_blocked);
-//			pthread_t hilo_suspendido;
-//			pthread_create(&hilo_suspendido,NULL,(void*)suspendiendo,pcb);
+			pthread_t hilo_suspendido;
+			pthread_create(&hilo_suspendido,NULL,(void*)suspendiendo,pcb);
 			log_info(logger, "Proceso %d bloqueado :( mal ahi pa",pcb->pid);
 			sem_post(&s_blocked);
 			break;
@@ -266,18 +266,16 @@ void esperar_cpu(){
 	sem_post(&s_ready_execute);
 }
 
-// ESTA OPCION NO SIRVE
-// QUIZAS DEBAMOS MANDARLE UNA SEÑAL AL THREAD CUANDO
 void suspendiendo(PCB_t* pcb){
 	usleep(tiempo_suspended*1000);
 	pthread_mutex_lock(&mx_cola_blocked);
 	pthread_mutex_lock(&mx_cola_suspended_blocked);
 	int i = pcb_find_index(cola_blocked,pcb->pid);
-	printf("Index del suspended: %d\n",i);
-	if (i == -1)
+	if (i == -1){
 		pthread_mutex_unlock(&mx_cola_blocked);
 		pthread_mutex_unlock(&mx_cola_suspended_blocked);
-		return;
+		pthread_exit(0);
+	}
 	log_info(logger,"Suspendiendo proceso %d que bajon :(",pcb->pid);
 	list_remove(cola_blocked,i);
 	list_add(cola_suspended_blocked,pcb);
