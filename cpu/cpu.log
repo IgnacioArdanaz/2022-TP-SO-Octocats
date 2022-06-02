@@ -166,3 +166,50 @@
 [INFO] 00:00:05:175 cpu/(3811:3811): Program counter 9 (despues de ejecutar)
 [INFO] 00:00:05:175 cpu/(3811:3811): ==============================================================
 [INFO] 00:00:39:915 cpu/(3811:3811): Proceso 15352 -> program counter 9
+[INFO] 12:55:49:190 cpu/(10856:10856): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 12:55:49:217 cpu/(10856:10856): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 12:55:49:218 cpu/(10856:10856): CPU_DISPATCH listo para recibir al cliente
+[INFO] 12:55:59:453 cpu/(10856:10856): Cliente conectado (a CPU_DISPATCH)
+[INFO] 12:55:59:453 cpu/(10856:10856): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 12:55:59:454 cpu/(10856:10856): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 12:56:26:574 cpu/(10856:10856): Proceso 1 -> program counter 0
+[INFO] 12:56:26:574 cpu/(10856:10856): Ejecutando IO
+[INFO] 12:56:26:574 cpu/(10856:10856): Program counter 1 (despues de ejecutar)
+[INFO] 12:56:26:574 cpu/(10856:10856): ==============================================================
+[INFO] 12:56:31:901 cpu/(10856:10856): Proceso 2 -> program counter 0
+[INFO] 12:56:31:901 cpu/(10856:10856): Ejecutando IO
+[INFO] 12:56:31:901 cpu/(10856:10856): Program counter 1 (despues de ejecutar)
+[INFO] 12:56:31:901 cpu/(10856:10856): ==============================================================
+[INFO] 12:56:33:444 cpu/(10856:10856): Proceso 3 -> program counter 0
+[INFO] 12:56:33:444 cpu/(10856:10856): Ejecutando IO
+[INFO] 12:56:33:444 cpu/(10856:10856): Program counter 1 (despues de ejecutar)
+[INFO] 12:56:33:444 cpu/(10856:10856): ==============================================================
+[INFO] 12:56:35:576 cpu/(10856:10856): Proceso 1 -> program counter 1
+[INFO] 12:56:35:580 cpu/(10856:10856): Ejecutando IO
+[INFO] 12:56:35:580 cpu/(10856:10856): Program counter 2 (despues de ejecutar)
+[INFO] 12:56:35:580 cpu/(10856:10856): ==============================================================
+[INFO] 12:56:36:417 cpu/(10856:10856): Proceso 4 -> program counter 0
+[INFO] 12:56:36:418 cpu/(10856:10856): Ejecutando IO
+[INFO] 12:56:36:418 cpu/(10856:10856): Program counter 1 (despues de ejecutar)
+[INFO] 12:56:36:419 cpu/(10856:10856): ==============================================================
+[INFO] 12:56:38:594 cpu/(10856:10856): Proceso 5 -> program counter 0
+[INFO] 12:56:38:595 cpu/(10856:10856): Ejecutando IO
+[INFO] 12:56:38:595 cpu/(10856:10856): Program counter 1 (despues de ejecutar)
+[INFO] 12:56:38:595 cpu/(10856:10856): ==============================================================
+[INFO] 12:56:43:445 cpu/(10856:10856): Proceso 6 -> program counter 0
+[INFO] 12:56:43:446 cpu/(10856:10856): Ejecutando IO
+[INFO] 12:56:43:446 cpu/(10856:10856): Program counter 1 (despues de ejecutar)
+[INFO] 12:56:43:446 cpu/(10856:10856): ==============================================================
+[INFO] 12:56:44:576 cpu/(10856:10856): Proceso 2 -> program counter 1
+[INFO] 12:56:44:579 cpu/(10856:10856): Ejecutando IO
+[INFO] 12:56:44:579 cpu/(10856:10856): Program counter 2 (despues de ejecutar)
+[INFO] 12:56:44:579 cpu/(10856:10856): ==============================================================
+[INFO] 12:56:48:214 cpu/(10856:10856): Proceso 7 -> program counter 0
+[INFO] 12:56:48:214 cpu/(10856:10856): Ejecutando IO
+[INFO] 12:56:48:214 cpu/(10856:10856): Program counter 1 (despues de ejecutar)
+[INFO] 12:56:48:214 cpu/(10856:10856): ==============================================================
+[INFO] 12:56:50:037 cpu/(10856:10856): Proceso 8 -> program counter 0
+[INFO] 12:56:50:037 cpu/(10856:10856): Ejecutando IO
+[INFO] 12:56:50:037 cpu/(10856:10856): Program counter 1 (despues de ejecutar)
+[INFO] 12:56:50:037 cpu/(10856:10856): ==============================================================
+[INFO] 12:58:36:489 cpu/(10856:10856): Proceso 0 -> program counter 1

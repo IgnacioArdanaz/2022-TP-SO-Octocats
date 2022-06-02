@@ -9,6 +9,7 @@ pthread_mutex_t mx_socket = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_log = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_blocked = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_suspended_blocked = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_cola_suspended_ready = PTHREAD_MUTEX_INITIALIZER;
 
 sem_t s_new_ready, s_ready_execute, s_cont_ready, s_cpu_desocupado, s_blocked,
 	s_suspended_ready, s_multiprogramacion_actual;
@@ -18,6 +19,7 @@ t_queue* cola_new;
 t_list* lista_ready;
 t_list* cola_blocked;
 t_list* cola_suspended_blocked;
+t_queue* cola_suspended_ready;
 
 // CHEQUEAR SI ALGUNO DE ESTAS VARIABLES PUEDEN SER LOCALES DE LA FUNCION INICIALIZAR
 // ES PREFERIBLE QUE SEAN LOCALES A QUE SEAN GLOBALES
@@ -34,6 +36,7 @@ void inicializar_kernel(){
 	cola_blocked = list_create();
 	lista_ready = list_create();
 	cola_suspended_blocked = list_create();
+	cola_suspended_ready = queue_create();
 	sockets = dictionary_create();
 
 	pid_sig = 1;
@@ -271,17 +274,17 @@ void suspendiendo(PCB_t* pcb){
 	pthread_mutex_lock(&mx_cola_blocked);
 	pthread_mutex_lock(&mx_cola_suspended_blocked);
 	int i = pcb_find_index(cola_blocked,pcb->pid);
+	pthread_mutex_unlock(&mx_cola_blocked);
 	if (i == -1){
-		pthread_mutex_unlock(&mx_cola_blocked);
 		pthread_mutex_unlock(&mx_cola_suspended_blocked);
 		pthread_exit(0);
 	}
 	log_info(logger,"Suspendiendo proceso %d que bajon :(",pcb->pid);
-	list_remove(cola_blocked,i);
-	list_add(cola_suspended_blocked,pcb);
-	pthread_mutex_unlock(&mx_cola_blocked);
+	//list_remove(cola_blocked,i);
+	list_add(cola_suspended_blocked,pcb->pid);
+	//pthread_mutex_unlock(&mx_cola_blocked);
 	pthread_mutex_unlock(&mx_cola_suspended_blocked);
-	sem_wait(&s_blocked); //le restamos uno a la cola de blocked
+	//sem_wait(&s_blocked); //le restamos uno a la cola de blocked
 	//hay que pedir las colas y liberarlas en el mismo orden para evitar deadlocks
 	sem_post(&s_multiprogramacion_actual);
 }
@@ -299,14 +302,42 @@ void ejecutar_io() {
 		int32_t tiempo = inst->arg1; // Se hace - 1 porque ya se incremento el PC
 		log_info(logger, "[IO] Proceso %d esperando %d milisegundos", proceso->pid, tiempo);
 		usleep(tiempo * 1000);
-		log_info(logger, "[IO] Proceso %d saliendo de blocked :)",proceso->pid);
-		pthread_mutex_lock(&mx_lista_ready);
-		list_add(lista_ready, proceso);
-		pthread_mutex_unlock(&mx_lista_ready);
-		sem_post(&s_ready_execute);
-		sem_post(&s_cont_ready);
+		if (esta_suspendido(proceso->pid)){
+			log_info(logger, "[IO] Proceso %d saliendo de blocked hacia suspended-ready :)",proceso->pid);
+			pthread_mutex_lock(&mx_cola_suspended_ready);
+			queue_push(cola_suspended_ready, proceso);
+			pthread_mutex_unlock(&mx_cola_suspended_ready);
 		}
+		else{
+			log_info(logger, "[IO] Proceso %d saliendo de blocked hacia ready :)",proceso->pid);
+			pthread_mutex_lock(&mx_lista_ready);
+			list_add(lista_ready, proceso);
+			pthread_mutex_unlock(&mx_lista_ready);
+			sem_post(&s_ready_execute);
+			sem_post(&s_cont_ready);
+		}
+
+	}
 }
+
+
+bool esta_suspendido(uint16_t pid){
+	pthread_mutex_lock(&mx_cola_suspended_blocked);
+	t_list_iterator* list_iterator = list_iterator_create(cola_suspended_blocked);
+	while(list_iterator_has_next(list_iterator)){
+		uint16_t pid_actual = list_iterator_next(list_iterator);
+		if (pid == pid_actual){
+			list_iterator_remove(list_iterator); //Remueve de la lista de suspendidos al elemento
+			list_iterator_destroy(list_iterator);
+			pthread_mutex_unlock(&mx_cola_suspended_blocked);
+			return true;
+		}
+	}
+	list_iterator_destroy(list_iterator);
+	pthread_mutex_unlock(&mx_cola_suspended_blocked);
+	return false;
+}
+
 
 /****Hilo READY -> EXECUTE (SRT) ***/
 void srt_ready_execute(){
@@ -325,6 +356,7 @@ void srt_ready_execute(){
 	}
 
 }
+
 
 //Este no va pero se puede usar la logica para hacer srt_ready_execute
 //PCB_t* sjf(){

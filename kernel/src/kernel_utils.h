@@ -3,6 +3,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
 #include<pthread.h>
 #include<commons/log.h>
 #include<commons/string.h>
@@ -36,6 +37,7 @@ void imprimir_lista_ready();
 void esperar_cpu();
 void ejecutar_io();
 void suspendiendo(PCB_t* pcb);
+bool esta_suspendido(uint16_t pid);
 //PCB_t* fifo();
 //PCB_t* sjf();
 

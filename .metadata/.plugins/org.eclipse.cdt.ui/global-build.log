@@ -1,168 +1,43 @@
-23:49:23 **** Incremental Build of configuration Debug for project testing ****
+12:53:42 **** Build of configuration Debug for project shared ****
 make all 
-Building file: ../src/testing.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.c"
-src/subdir.mk:18: recipe for target 'src/testing.o' failed
-../src/testing.c: In function ‘suspender’:
-../src/testing.c:18:3: warning: implicit declaration of function ‘usleep’ [-Wimplicit-function-declaration]
-   usleep(tiempo);
-   ^
-../src/testing.c: In function ‘main’:
-../src/testing.c:25:18: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
-  list_add(lista, 1);
-                  ^
-In file included from ../src/testing.c:3:0:
-/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘int’
-  int list_add(t_list *, void *element);
-      ^
-../src/testing.c:26:18: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
-  list_add(lista, 2);
-                  ^
-In file included from ../src/testing.c:3:0:
-/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘int’
-  int list_add(t_list *, void *element);
-      ^
-../src/testing.c:29:54: warning: passing argument 4 of ‘pthread_create’ makes pointer from integer without a cast [-Wint-conversion]
-  pthread_create(&hilo_suspended,NULL,(void*)blockear,1);
-                                                      ^
-In file included from ../src/testing.c:5:0:
-/usr/include/pthread.h:233:12: note: expected ‘void * restrict’ but argument is of type ‘int’
- extern int pthread_create (pthread_t *__restrict __newthread,
-            ^
-../src/testing.c:38:42: error: ‘pcb_destroy’ undeclared (first use in this function)
-  list_destroy_and_destroy_elements(lista,pcb_destroy);
-                                          ^
-../src/testing.c:38:42: note: each undeclared identifier is reported only once for each function it appears in
-../src/testing.c:23:16: warning: unused variable ‘estados’ [-Wunused-variable]
-  t_dictionary* estados = dictionary_create();
-                ^
-make: *** [src/testing.o] Error 1
-23:50:13 **** Incremental Build of configuration Debug for project consola ****
-make all 
-make: Nothing to be done for 'all'.
-23:50:17 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-Building file: ../src/cpu_main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cpu_main.d" -MT"src/cpu_main.o" -o "src/cpu_main.o" "../src/cpu_main.c"
-In file included from ../src/cpu_main.h:14:0,
-                 from ../src/cpu_main.c:1:
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
-              ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-../src/cpu_main.c: In function ‘interrupcion’:
-../src/cpu_main.c:167:3: warning: ‘opcode’ is used uninitialized in this function [-Wuninitialized]
-   recv(cliente_socket_interrupt, opcode, 0, 0);
-   ^
-Finished building: ../src/cpu_main.c
+Building file: ../src/pcb.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/pcb.d" -MT"src/pcb.o" -o "src/pcb.o" "../src/pcb.c"
+Finished building: ../src/pcb.c
  
-Building target: cpu
+Building file: ../src/protocol.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/protocol.d" -MT"src/protocol.o" -o "src/protocol.o" "../src/protocol.c"
+Finished building: ../src/protocol.c
+ 
+Building file: ../src/sockets.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/sockets.d" -MT"src/sockets.o" -o "src/sockets.o" "../src/sockets.c"
+Finished building: ../src/sockets.c
+ 
+Building target: libshared.so
+Invoking: Cross GCC Linker
+gcc -shared -o "libshared.so"  ./src/pcb.o ./src/protocol.o ./src/sockets.o   -lcommons
+Finished building target: libshared.so
+ 
+12:55:02 **** Build of configuration Debug for project consola ****
+make all 
+Building file: ../src/consola_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/consola_main.d" -MT"src/consola_main.o" -o "src/consola_main.o" "../src/consola_main.c"
+Finished building: ../src/consola_main.c
+ 
+Building file: ../src/parser.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
+Finished building: ../src/parser.c
+ 
+Building target: consola
 Invoking: GCC C Linker
-gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "cpu"  ./src/cpu_main.o   -lcommons -lshared -lpthread
-Finished building target: cpu
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "consola"  ./src/consola_main.o ./src/parser.o   -lcommons -lshared
+Finished building target: consola
  
-23:50:20 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-Building file: ../src/kernel_utils.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
-../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:149:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
-     dictionary_put(sockets, key, cliente_socket);
-                                  ^
-In file included from /usr/include/commons/config.h:20:0,
-                 from ../src/kernel_utils.h:9,
-                 from ../src/kernel_utils.c:1:
-/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
-  void     dictionary_put(t_dictionary *, char *key, void *data);
-           ^
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_utils.c:1:
-../src/kernel_utils.c: At top level:
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
-              ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-Finished building: ../src/kernel_utils.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lshared -lpthread
-Finished building target: kernel
- 
-23:50:24 **** Incremental Build of configuration Debug for project memoria ****
-make all 
-Building file: ../src/memoria_main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
-Finished building: ../src/memoria_main.c
- 
-Building target: memoria
-Invoking: GCC C Linker
-gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o   -lcommons -lshared
-Finished building target: memoria
- 
-23:50:27 **** Incremental Build of configuration Debug for project shared ****
-make all 
-make: Nothing to be done for 'all'.
-23:50:29 **** Incremental Build of configuration Debug for project testing ****
-make all 
-Building file: ../src/testing.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.c"
-../src/testing.c: In function ‘main’:
-../src/testing.c:26:18: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
-  list_add(lista, 1);
-                  ^
-In file included from ../src/testing.c:3:0:
-/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘int’
-  int list_add(t_list *, void *element);
-      ^
-../src/testing.c:27:18: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
-  list_add(lista, 2);
-                  ^
-In file included from ../src/testing.c:3:0:
-/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘int’
-src/subdir.mk:18: recipe for target 'src/testing.o' failed
-  int list_add(t_list *, void *element);
-      ^
-../src/testing.c:30:54: warning: passing argument 4 of ‘pthread_create’ makes pointer from integer without a cast [-Wint-conversion]
-  pthread_create(&hilo_suspended,NULL,(void*)blockear,1);
-                                                      ^
-In file included from ../src/testing.c:5:0:
-/usr/include/pthread.h:233:12: note: expected ‘void * restrict’ but argument is of type ‘int’
- extern int pthread_create (pthread_t *__restrict __newthread,
-            ^
-../src/testing.c:39:42: error: ‘pcb_destroy’ undeclared (first use in this function)
-  list_destroy_and_destroy_elements(lista,pcb_destroy);
-                                          ^
-../src/testing.c:39:42: note: each undeclared identifier is reported only once for each function it appears in
-../src/testing.c:24:16: warning: unused variable ‘estados’ [-Wunused-variable]
-  t_dictionary* estados = dictionary_create();
-                ^
-make: *** [src/testing.o] Error 1
-23:55:02 **** Incremental Build of configuration Debug for project cpu ****
-make all 
-make: Nothing to be done for 'all'.
-23:55:44 **** Incremental Build of configuration Debug for project cpu ****
+12:55:04 **** Build of configuration Debug for project cpu ****
 make all 
 Building file: ../src/cpu_main.c
 Invoking: GCC C Compiler
@@ -192,22 +67,124 @@ Invoking: GCC C Linker
 gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "cpu"  ./src/cpu_main.o   -lcommons -lshared -lpthread
 Finished building target: cpu
  
-23:55:49 **** Incremental Build of configuration Debug for project kernel ****
+12:55:06 **** Build of configuration Debug for project kernel ****
 make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+Finished building: ../src/kernel_main.c
+ 
 Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
 gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
 ../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:149:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+../src/kernel_utils.c:152:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
      dictionary_put(sockets, key, cliente_socket);
                                   ^
 In file included from /usr/include/commons/config.h:20:0,
-                 from ../src/kernel_utils.h:9,
+                 from ../src/kernel_utils.h:10,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+src/subdir.mk:21: recipe for target 'src/kernel_utils.o' failed
+           ^
+../src/kernel_utils.c: In function ‘suspendiendo’:
+../src/kernel_utils.c:284:34: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
+  list_add(cola_suspended_blocked,pcb->pid);
+                                  ^
+In file included from /usr/include/commons/collections/queue.h:20:0,
+                 from ../src/kernel_utils.h:13,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+  int list_add(t_list *, void *element);
+      ^
+../src/kernel_utils.c: In function ‘ejecutar_io’:
+../src/kernel_utils.c:305:7: warning: implicit declaration of function ‘esta_suspendido’ [-Wimplicit-function-declaration]
+   if (esta_suspendido(proceso->pid)){
+       ^
+../src/kernel_utils.c: At top level:
+../src/kernel_utils.c:324:6: error: conflicting types for ‘esta_suspendido’
+ bool esta_suspendido(uint16_t pid){
+      ^
+../src/kernel_utils.c:305:7: note: previous implicit declaration of ‘esta_suspendido’ was here
+   if (esta_suspendido(proceso->pid)){
+       ^
+../src/kernel_utils.c: In function ‘esta_suspendido’:
+../src/kernel_utils.c:328:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint16_t pid_actual = list_iterator_next(list_iterator);
+                         ^
+In file included from ../src/kernel_utils.h:17:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+make: *** [src/kernel_utils.o] Error 1
+12:55:08 **** Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:55:09 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:55:38 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:55:38 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:55:39 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+Finished building: ../src/kernel_main.c
+ 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:152:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+     dictionary_put(sockets, key, cliente_socket);
+                                  ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/kernel_utils.h:10,
                  from ../src/kernel_utils.c:1:
 /usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
   void     dictionary_put(t_dictionary *, char *key, void *data);
            ^
-In file included from ../src/kernel_utils.h:16:0,
+../src/kernel_utils.c: In function ‘suspendiendo’:
+../src/kernel_utils.c:284:34: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
+  list_add(cola_suspended_blocked,pcb->pid);
+                                  ^
+In file included from /usr/include/commons/collections/queue.h:20:0,
+                 from ../src/kernel_utils.h:13,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+  int list_add(t_list *, void *element);
+      ^
+../src/kernel_utils.c: In function ‘esta_suspendido’:
+../src/kernel_utils.c:328:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint16_t pid_actual = list_iterator_next(list_iterator);
+                         ^
+In file included from ../src/kernel_utils.h:17:0,
                  from ../src/kernel_utils.c:1:
 ../src/kernel_utils.c: At top level:
 /home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
@@ -229,91 +206,42 @@ Invoking: GCC C Linker
 gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lshared -lpthread
 Finished building target: kernel
  
-23:55:54 **** Incremental Build of configuration Debug for project consola ****
+12:55:40 **** Incremental Build of configuration Debug for project memoria ****
 make all 
 make: Nothing to be done for 'all'.
-23:55:57 **** Incremental Build of configuration Debug for project consola ****
+12:55:41 **** Incremental Build of configuration Debug for project shared ****
 make all 
 make: Nothing to be done for 'all'.
-23:55:58 **** Incremental Build of configuration Debug for project consola ****
+12:55:47 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-23:58:58 **** Incremental Build of configuration Debug for project cpu ****
+12:55:57 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 make: Nothing to be done for 'all'.
-23:59:02 **** Incremental Build of configuration Debug for project kernel ****
-make all 
-Building file: ../src/kernel_utils.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
-../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:149:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
-     dictionary_put(sockets, key, cliente_socket);
-                                  ^
-In file included from /usr/include/commons/config.h:20:0,
-                 from ../src/kernel_utils.h:9,
-                 from ../src/kernel_utils.c:1:
-/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
-  void     dictionary_put(t_dictionary *, char *key, void *data);
-           ^
-In file included from ../src/kernel_utils.h:16:0,
-                 from ../src/kernel_utils.c:1:
-../src/kernel_utils.c: At top level:
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
-              ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
-             ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
-              ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
- static void deserializar_proceso(void* stream, PCB_t* proceso);
-             ^
-Finished building: ../src/kernel_utils.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lshared -lpthread
-Finished building target: kernel
- 
-23:59:10 **** Incremental Build of configuration Debug for project cpu ****
+12:56:04 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 make: Nothing to be done for 'all'.
-23:59:13 **** Incremental Build of configuration Debug for project kernel ****
+12:56:24 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-23:59:17 **** Incremental Build of configuration Debug for project consola ****
+12:56:30 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-23:59:21 **** Incremental Build of configuration Debug for project consola ****
+12:56:32 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-00:00:47 **** Incremental Build of configuration Debug for project consola ****
+12:56:34 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-00:00:48 **** Incremental Build of configuration Debug for project cpu ****
+12:56:35 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-00:00:49 **** Incremental Build of configuration Debug for project kernel ****
+12:56:38 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-00:00:50 **** Incremental Build of configuration Debug for project memoria ****
+12:56:46 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-00:00:51 **** Incremental Build of configuration Debug for project shared ****
+12:56:48 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-00:00:52 **** Incremental Build of configuration Debug for project testing ****
-make all 
-Building file: ../src/testing.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/testing.d" -MT"src/testing.o" -o "src/testing.o" "../src/testing.c"
-Finished building: ../src/testing.c
- 
-Building target: testing
-Invoking: GCC C Linker
-gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "testing"  ./src/testing.o   -lshared -lcommons
-Finished building target: testing
- 
