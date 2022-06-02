@@ -29,7 +29,7 @@ t_config* config;
 void inicializar_kernel();
 int escuchar_servidor(char* name, int server_socket);
 void procesar_socket(thread_args* argumentos);
-void pasaje_new_ready();
+void pasaje_a_ready();
 void fifo_ready_execute();
 void srt_ready_execute();
 void loggear_estado_de_colas();

@@ -245,3 +245,590 @@ make: Nothing to be done for 'all'.
 12:56:48 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
+13:15:48 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:16:04 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘inicializar_kernel’:
+../src/kernel_utils.c:76:50: error: ‘pasaje_a_ready’ undeclared (first use in this function)
+  pthread_create(&hilo_pasaje_a_ready,NULL,(void*)pasaje_a_ready,NULL);
+                                                  ^
+../src/kernel_utils.c:76:50: note: each undeclared identifier is reported only once for each function it appears in
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:152:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+     dictionary_put(sockets, key, cliente_socket);
+                                  ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/kernel_utils.h:10,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/kernel_utils.c: In function ‘pasaje_a_ready’:
+../src/kernel_utils.c:177:21: warning: passing argument 1 of ‘queue_is_empty’ from incompatible pointer type [-Wincompatible-pointer-types]
+   if(queue_is_empty(cola_suspended_blocked)){ //Si no hay suspendidos, agarro uno de new
+                     ^
+In file included from ../src/kernel_utils.h:13:0,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/queue.h:85:7: note: expected ‘t_queue * {aka struct <anonymous> *}’ but argument is of type ‘t_list * {aka struct <anonymous> *}’
+  bool queue_is_empty(t_queue *);
+       ^
+../src/kernel_utils.c: In function ‘suspendiendo’:
+../src/kernel_utils.c:292:34: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
+  list_add(cola_suspended_blocked,pcb->pid);
+                                  ^
+In file included from /usr/include/commons/collections/queue.h:20:0,
+                 from ../src/kernel_utils.h:13,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+  int list_add(t_list *, void *element);
+      ^
+../src/kernel_utils.c: In function ‘ejecutar_io’:
+src/subdir.mk:21: recipe for target 'src/kernel_utils.o' failed
+../src/kernel_utils.c:318:13: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+    sem_post(pasaje_a_ready);
+             ^
+In file included from ../src/kernel_utils.h:12:0,
+                 from ../src/kernel_utils.c:1:
+/usr/include/semaphore.h:69:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘void (*)()’
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^
+../src/kernel_utils.c: In function ‘esta_suspendido’:
+../src/kernel_utils.c:337:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint16_t pid_actual = list_iterator_next(list_iterator);
+                         ^
+In file included from ../src/kernel_utils.h:17:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+make: *** [src/kernel_utils.o] Error 1
+13:16:35 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘inicializar_kernel’:
+../src/kernel_utils.c:76:50: error: ‘pasaje_a_ready’ undeclared (first use in this function)
+  pthread_create(&hilo_pasaje_a_ready,NULL,(void*)pasaje_a_ready,NULL);
+                                                  ^
+../src/kernel_utils.c:76:50: note: each undeclared identifier is reported only once for each function it appears in
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:152:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+     dictionary_put(sockets, key, cliente_socket);
+                                  ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/kernel_utils.h:10,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/kernel_utils.c: In function ‘pasaje_a_ready’:
+../src/kernel_utils.c:177:21: warning: passing argument 1 of ‘queue_is_empty’ from incompatible pointer type [-Wincompatible-pointer-types]
+   if(queue_is_empty(cola_suspended_blocked)){ //Si no hay suspendidos, agarro uno de new
+                     ^
+In file included from ../src/kernel_utils.h:13:0,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/queue.h:85:7: note: expected ‘t_queue * {aka struct <anonymous> *}’ but argument is of type ‘t_list * {aka struct <anonymous> *}’
+src/subdir.mk:21: recipe for target 'src/kernel_utils.o' failed
+  bool queue_is_empty(t_queue *);
+       ^
+../src/kernel_utils.c: In function ‘suspendiendo’:
+../src/kernel_utils.c:292:34: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
+  list_add(cola_suspended_blocked,pcb->pid);
+                                  ^
+In file included from /usr/include/commons/collections/queue.h:20:0,
+                 from ../src/kernel_utils.h:13,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+  int list_add(t_list *, void *element);
+      ^
+../src/kernel_utils.c: In function ‘ejecutar_io’:
+../src/kernel_utils.c:318:13: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+    sem_post(&pasaje_a_ready);
+             ^
+In file included from ../src/kernel_utils.h:12:0,
+                 from ../src/kernel_utils.c:1:
+/usr/include/semaphore.h:69:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘void (*)()’
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^
+../src/kernel_utils.c: In function ‘esta_suspendido’:
+../src/kernel_utils.c:337:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint16_t pid_actual = list_iterator_next(list_iterator);
+                         ^
+In file included from ../src/kernel_utils.h:17:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+make: *** [src/kernel_utils.o] Error 1
+13:17:01 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘inicializar_kernel’:
+../src/kernel_utils.c:76:50: error: ‘pasaje_a_ready’ undeclared (first use in this function)
+  pthread_create(&hilo_pasaje_a_ready,NULL,(void*)pasaje_a_ready,NULL);
+                                                  ^
+../src/kernel_utils.c:76:50: note: each undeclared identifier is reported only once for each function it appears in
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:152:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+     dictionary_put(sockets, key, cliente_socket);
+                                  ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/kernel_utils.h:10,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/kernel_utils.c: In function ‘pasaje_a_ready’:
+../src/kernel_utils.c:177:21: warning: passing argument 1 of ‘queue_is_empty’ from incompatible pointer type [-Wincompatible-pointer-types]
+   if(queue_is_empty(cola_suspended_blocked)){ //Si no hay suspendidos, agarro uno de new
+                     ^
+In file included from ../src/kernel_utils.h:13:0,
+src/subdir.mk:21: recipe for target 'src/kernel_utils.o' failed
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/queue.h:85:7: note: expected ‘t_queue * {aka struct <anonymous> *}’ but argument is of type ‘t_list * {aka struct <anonymous> *}’
+  bool queue_is_empty(t_queue *);
+       ^
+../src/kernel_utils.c: In function ‘suspendiendo’:
+../src/kernel_utils.c:292:34: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
+  list_add(cola_suspended_blocked,pcb->pid);
+                                  ^
+In file included from /usr/include/commons/collections/queue.h:20:0,
+                 from ../src/kernel_utils.h:13,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+  int list_add(t_list *, void *element);
+      ^
+../src/kernel_utils.c: In function ‘esta_suspendido’:
+../src/kernel_utils.c:337:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint16_t pid_actual = list_iterator_next(list_iterator);
+                         ^
+In file included from ../src/kernel_utils.h:17:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+make: *** [src/kernel_utils.o] Error 1
+13:17:27 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+In file included from ../src/kernel_main.h:9:0,
+                 from ../src/kernel_main.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/sockets.c: In function ‘pasaje_a_ready’:
+/home/utnso/tp-2022-1c-Octocats/shared/src/sockets.c:3:84: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ int crear_conexion(t_log* logger, const char* server_name, char* ip, char* puerto) {
+                                                                                    ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/sockets.c:40:79: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
+                                                                               ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/sockets.c:87:75: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
+                                                                           ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/sockets.c:101:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ void liberar_conexion(int* socket_cliente) {
+                                            ^
+In file included from ../src/kernel_main.h:10:0,
+                 from ../src/kernel_main.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.c:5:69: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+src/subdir.mk:21: recipe for target 'src/kernel_main.o' failed
+ bool send_programa(int fd, t_list* instrucciones, uint16_t tamanio) {
+                                                                     ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.c:16:89: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio) {
+                                                                                         ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.c:52:70: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ bool recv_programa(int fd, t_list* instrucciones, uint16_t* tamanio) {
+                                                                      ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.c:66:91: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio) {
+                                                                                           ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.c:91:59: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ bool send_proceso(int fd, PCB_t *proceso, op_code codigo) {
+                                                           ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.c:102:79: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
+                                                                               ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.c:151:43: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ bool recv_proceso(int fd, PCB_t* proceso) {
+                                           ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.c:165:64: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ static void deserializar_proceso(void* stream, PCB_t* proceso) {
+                                                                ^
+../src/kernel_main.c:4:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ int main(void) {
+                ^
+In file included from ../src/kernel_main.h:8:0,
+                 from ../src/kernel_main.c:1:
+../src/kernel_utils.h:40:6: error: declaration for parameter ‘esta_suspendido’ but no such parameter
+ bool esta_suspendido(uint16_t pid);
+      ^
+../src/kernel_utils.h:39:6: error: declaration for parameter ‘suspendiendo’ but no such parameter
+ void suspendiendo(PCB_t* pcb);
+      ^
+../src/kernel_utils.h:38:6: error: declaration for parameter ‘ejecutar_io’ but no such parameter
+ void ejecutar_io();
+      ^
+../src/kernel_utils.h:37:6: error: declaration for parameter ‘esperar_cpu’ but no such parameter
+ void esperar_cpu();
+      ^
+../src/kernel_utils.h:36:6: error: declaration for parameter ‘imprimir_lista_ready’ but no such parameter
+ void imprimir_lista_ready();
+      ^
+../src/kernel_utils.h:35:6: error: declaration for parameter ‘loggear_estado_de_colas’ but no such parameter
+ void loggear_estado_de_colas();
+      ^
+../src/kernel_utils.h:34:6: error: declaration for parameter ‘srt_ready_execute’ but no such parameter
+ void srt_ready_execute();
+      ^
+../src/kernel_utils.h:33:6: error: declaration for parameter ‘fifo_ready_execute’ but no such parameter
+ void fifo_ready_execute();
+      ^
+../src/kernel_main.c:17:1: error: expected ‘{’ at end of input
+ }
+ ^
+In file included from ../src/kernel_utils.h:17:0,
+                 from ../src/kernel_main.h:8,
+                 from ../src/kernel_main.c:1:
+../src/kernel_main.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+make: *** [src/kernel_main.o] Error 1
+13:17:48 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+Finished building: ../src/kernel_main.c
+ 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:152:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+     dictionary_put(sockets, key, cliente_socket);
+                                  ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/kernel_utils.h:10,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/kernel_utils.c: In function ‘pasaje_a_ready’:
+../src/kernel_utils.c:177:21: warning: passing argument 1 of ‘queue_is_empty’ from incompatible pointer type [-Wincompatible-pointer-types]
+   if(queue_is_empty(cola_suspended_blocked)){ //Si no hay suspendidos, agarro uno de new
+                     ^
+In file included from ../src/kernel_utils.h:13:0,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/queue.h:85:7: note: expected ‘t_queue * {aka struct <anonymous> *}’ but argument is of type ‘t_list * {aka struct <anonymous> *}’
+  bool queue_is_empty(t_queue *);
+       ^
+../src/kernel_utils.c: In function ‘suspendiendo’:
+../src/kernel_utils.c:292:34: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
+  list_add(cola_suspended_blocked,pcb->pid);
+                                  ^
+In file included from /usr/include/commons/collections/queue.h:20:0,
+                 from ../src/kernel_utils.h:13,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+  int list_add(t_list *, void *element);
+      ^
+../src/kernel_utils.c: In function ‘esta_suspendido’:
+../src/kernel_utils.c:337:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint16_t pid_actual = list_iterator_next(list_iterator);
+                         ^
+In file included from ../src/kernel_utils.h:17:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/kernel_utils.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lshared -lpthread
+Finished building target: kernel
+ 
+13:17:59 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:18:53 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:18:57 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:152:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+     dictionary_put(sockets, key, cliente_socket);
+                                  ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/kernel_utils.h:10,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/kernel_utils.c: In function ‘suspendiendo’:
+../src/kernel_utils.c:292:34: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
+  list_add(cola_suspended_blocked,pcb->pid);
+                                  ^
+In file included from /usr/include/commons/collections/queue.h:20:0,
+                 from ../src/kernel_utils.h:13,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+  int list_add(t_list *, void *element);
+      ^
+../src/kernel_utils.c: In function ‘esta_suspendido’:
+../src/kernel_utils.c:337:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint16_t pid_actual = list_iterator_next(list_iterator);
+                         ^
+In file included from ../src/kernel_utils.h:17:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/kernel_utils.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lshared -lpthread
+Finished building target: kernel
+ 
+13:19:13 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:19:18 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+13:19:24 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:19:29 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:19:31 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:19:32 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:19:34 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:22:48 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:22:56 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:00 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:06 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:07 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:30:15 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:30:17 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+13:30:29 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:30:31 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:38:07 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:38:11 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:152:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+     dictionary_put(sockets, key, cliente_socket);
+                                  ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/kernel_utils.h:10,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/kernel_utils.c: In function ‘suspendiendo’:
+../src/kernel_utils.c:293:34: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
+  list_add(cola_suspended_blocked,pcb->pid);
+                                  ^
+In file included from /usr/include/commons/collections/queue.h:20:0,
+                 from ../src/kernel_utils.h:13,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+  int list_add(t_list *, void *element);
+      ^
+../src/kernel_utils.c: In function ‘esta_suspendido’:
+../src/kernel_utils.c:338:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint16_t pid_actual = list_iterator_next(list_iterator);
+                         ^
+In file included from ../src/kernel_utils.h:17:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/kernel_utils.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lshared -lpthread
+Finished building target: kernel
+ 
+13:38:17 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:38:21 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:45:26 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:45:33 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
+../src/kernel_utils.c: In function ‘procesar_socket’:
+../src/kernel_utils.c:152:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+     dictionary_put(sockets, key, cliente_socket);
+                                  ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/kernel_utils.h:10,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/kernel_utils.c: In function ‘suspendiendo’:
+../src/kernel_utils.c:293:34: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
+  list_add(cola_suspended_blocked,pcb->pid);
+                                  ^
+In file included from /usr/include/commons/collections/queue.h:20:0,
+                 from ../src/kernel_utils.h:13,
+                 from ../src/kernel_utils.c:1:
+/usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘uint16_t {aka short unsigned int}’
+  int list_add(t_list *, void *element);
+      ^
+../src/kernel_utils.c: In function ‘esta_suspendido’:
+../src/kernel_utils.c:339:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint16_t pid_actual = list_iterator_next(list_iterator);
+                         ^
+In file included from ../src/kernel_utils.h:17:0,
+                 from ../src/kernel_utils.c:1:
+../src/kernel_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/kernel_utils.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lshared -lpthread
+Finished building target: kernel
+ 
+13:46:01 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:46:03 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.

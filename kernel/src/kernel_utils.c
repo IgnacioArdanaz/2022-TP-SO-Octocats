@@ -11,7 +11,7 @@ pthread_mutex_t mx_cola_blocked = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_suspended_blocked = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_suspended_ready = PTHREAD_MUTEX_INITIALIZER;
 
-sem_t s_new_ready, s_ready_execute, s_cont_ready, s_cpu_desocupado, s_blocked,
+sem_t s_pasaje_a_ready, s_ready_execute, s_cont_ready, s_cpu_desocupado, s_blocked,
 	s_suspended_ready, s_multiprogramacion_actual;
 
 t_dictionary* sockets;
@@ -64,7 +64,7 @@ void inicializar_kernel(){
 	conexion_cpu_dispatch = crear_conexion(logger, "CPU DISPATCH", ip_cpu, puerto_cpu_dispatch);
 	conexion_cpu_interrupt= crear_conexion(logger, "CPU INTERRUPT", ip_cpu, puerto_cpu_interrupt);
 
-	sem_init(&s_new_ready, 0, 0);
+	sem_init(&s_pasaje_a_ready, 0, 0);
 	sem_init(&s_cont_ready, 0, 0); // Incrementa al sumar un proceso a ready y decrementa al ejecutarlo
 	sem_init(&s_blocked, 0, 0);
 	sem_init(&s_suspended_ready, 0, 0);
@@ -72,9 +72,9 @@ void inicializar_kernel(){
 	sem_init(&s_multiprogramacion_actual, 0, grado_multiprogramacion);
 	sem_init(&s_ready_execute, 0, 0);
 
-	pthread_t hilo_pasaje_new_ready;
-	pthread_create(&hilo_pasaje_new_ready,NULL,(void*)pasaje_new_ready,NULL);
-	pthread_detach(hilo_pasaje_new_ready);
+	pthread_t hilo_pasaje_a_ready;
+	pthread_create(&hilo_pasaje_a_ready,NULL,(void*)pasaje_a_ready,NULL);
+	pthread_detach(hilo_pasaje_a_ready);
 
 	pthread_t hilo_blocked;
 	pthread_create(&hilo_blocked,NULL,(void*)ejecutar_io,NULL);
@@ -151,7 +151,7 @@ void procesar_socket(thread_args* argumentos){
 				pthread_mutex_lock(&mx_socket);
 				dictionary_put(sockets, key, cliente_socket);
 				pthread_mutex_unlock(&mx_socket);
-				sem_post(&s_new_ready); //Avisa al hilo planificador de pasaje de new a ready que debe ejecutarse.
+				sem_post(&s_pasaje_a_ready); //Avisa al hilo planificador de pasaje de new a ready que debe ejecutarse.
 
 
 				return;
@@ -169,15 +169,23 @@ void procesar_socket(thread_args* argumentos){
 }
 
 /****Hilo NEW -> READY ***/
-void pasaje_new_ready(){
+void pasaje_a_ready(){
 	while(1){
-		sem_wait(&s_new_ready);
-		//AGREGAR QUE SI HAY PCBS EN READY SUSPENDED TIENEN PRIORIDAD DE PASO
+		sem_wait(&s_pasaje_a_ready);
 		sem_wait(&s_multiprogramacion_actual);
-		pthread_mutex_lock(&mx_cola_new);
-		PCB_t* proceso = queue_pop(cola_new);
-		log_info(logger,"PROCESO %d POPEADO COLA NEW", proceso->pid);
-		pthread_mutex_unlock(&mx_cola_new);
+		PCB_t* proceso;
+		if(queue_is_empty(cola_suspended_ready)){ //Si no hay suspendidos, agarro uno de new
+			pthread_mutex_lock(&mx_cola_new);
+			proceso = queue_pop(cola_new);
+			log_info(logger,"PROCESO %d POPEADO COLA NEW", proceso->pid);
+			pthread_mutex_unlock(&mx_cola_new);
+		}
+		else{
+			pthread_mutex_lock(&mx_cola_suspended_ready);
+			proceso = queue_pop(cola_suspended_ready);
+			log_info(logger,"PROCESO %d POPEADO COLA SUSPENDED READY", proceso->pid);
+			pthread_mutex_unlock(&mx_cola_suspended_ready);
+		}
 		pthread_mutex_lock(&mx_lista_ready);
 		list_add(lista_ready,proceso);
 		pthread_mutex_unlock(&mx_lista_ready);
@@ -259,6 +267,7 @@ void esperar_cpu(){
 			pthread_mutex_unlock(&mx_cola_blocked);
 			pthread_t hilo_suspendido;
 			pthread_create(&hilo_suspendido,NULL,(void*)suspendiendo,pcb);
+			pthread_detach(hilo_suspendido);
 			log_info(logger, "Proceso %d bloqueado :( mal ahi pa",pcb->pid);
 			sem_post(&s_blocked);
 			break;
@@ -296,7 +305,7 @@ void ejecutar_io() {
 		if (list_size(cola_blocked) == 0){
 			log_error(logger,"Blocked ejecutó sin un proceso bloqueado");
 		}
-		PCB_t* proceso = list_remove(cola_blocked,0);
+		PCB_t* proceso = list_get(cola_blocked,0);
 		pthread_mutex_unlock(&mx_cola_blocked);
 		instruccion_t* inst = list_get(proceso->instrucciones, proceso->pc - 1);
 		int32_t tiempo = inst->arg1; // Se hace - 1 porque ya se incremento el PC
@@ -307,6 +316,7 @@ void ejecutar_io() {
 			pthread_mutex_lock(&mx_cola_suspended_ready);
 			queue_push(cola_suspended_ready, proceso);
 			pthread_mutex_unlock(&mx_cola_suspended_ready);
+			sem_post(&s_pasaje_a_ready);
 		}
 		else{
 			log_info(logger, "[IO] Proceso %d saliendo de blocked hacia ready :)",proceso->pid);
@@ -316,6 +326,7 @@ void ejecutar_io() {
 			sem_post(&s_ready_execute);
 			sem_post(&s_cont_ready);
 		}
+		list_remove(cola_blocked,0);
 
 	}
 }
