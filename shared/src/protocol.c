@@ -192,3 +192,4 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
     memcpy(&proceso->est_rafaga, stream + acumulador, sizeof(double));
 
 }
+

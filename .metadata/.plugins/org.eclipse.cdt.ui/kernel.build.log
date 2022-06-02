@@ -1,10 +1,15 @@
-13:45:33 **** Incremental Build of configuration Debug for project kernel ****
+18:04:56 **** Incremental Build of configuration Debug for project kernel ****
 make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+Finished building: ../src/kernel_main.c
+ 
 Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
 gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
 ../src/kernel_utils.c: In function ‘procesar_socket’:
-../src/kernel_utils.c:152:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+../src/kernel_utils.c:155:34: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
      dictionary_put(sockets, key, cliente_socket);
                                   ^
 In file included from /usr/include/commons/config.h:20:0,
@@ -14,7 +19,7 @@ In file included from /usr/include/commons/config.h:20:0,
   void     dictionary_put(t_dictionary *, char *key, void *data);
            ^
 ../src/kernel_utils.c: In function ‘suspendiendo’:
-../src/kernel_utils.c:293:34: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
+../src/kernel_utils.c:288:34: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
   list_add(cola_suspended_blocked,pcb->pid);
                                   ^
 In file included from /usr/include/commons/collections/queue.h:20:0,
@@ -24,12 +29,22 @@ In file included from /usr/include/commons/collections/queue.h:20:0,
   int list_add(t_list *, void *element);
       ^
 ../src/kernel_utils.c: In function ‘esta_suspendido’:
-../src/kernel_utils.c:339:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+../src/kernel_utils.c:334:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
    uint16_t pid_actual = list_iterator_next(list_iterator);
                          ^
+../src/kernel_utils.c: In function ‘srt_ready_execute’:
+../src/kernel_utils.c:353:4: warning: implicit declaration of function ‘desalojar_cpu’ [-Wimplicit-function-declaration]
+    desalojar_cpu();
+    ^
+../src/kernel_utils.c: At top level:
+../src/kernel_utils.c:384:6: warning: conflicting types for ‘desalojar_cpu’
+ void desalojar_cpu(){
+      ^
+../src/kernel_utils.c:353:4: note: previous implicit declaration of ‘desalojar_cpu’ was here
+    desalojar_cpu();
+    ^
 In file included from ../src/kernel_utils.h:17:0,
                  from ../src/kernel_utils.c:1:
-../src/kernel_utils.c: At top level:
 /home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
  static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
               ^
@@ -50,5 +65,5 @@ gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_m
 Finished building target: kernel
  
 
-13:45:34 Build Finished (took 1s.350ms)
+18:04:58 Build Finished (took 2s.6ms)
 

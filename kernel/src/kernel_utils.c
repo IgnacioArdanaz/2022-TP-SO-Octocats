@@ -2,7 +2,6 @@
 
 pthread_mutex_t mx_multip_actual = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_pid_sig = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t mx_cpu_desocupado = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_new = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_lista_ready = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_socket = PTHREAD_MUTEX_INITIALIZER;
@@ -12,7 +11,7 @@ pthread_mutex_t mx_cola_suspended_blocked = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_suspended_ready = PTHREAD_MUTEX_INITIALIZER;
 
 sem_t s_pasaje_a_ready, s_ready_execute, s_cont_ready, s_cpu_desocupado, s_blocked,
-	s_suspended_ready, s_multiprogramacion_actual;
+	s_suspended_ready, s_multiprogramacion_actual, s_pcb_desalojado;
 
 t_dictionary* sockets;
 t_queue* cola_new;
@@ -20,6 +19,8 @@ t_list* lista_ready;
 t_list* cola_blocked;
 t_list* cola_suspended_blocked;
 t_queue* cola_suspended_ready;
+
+bool cpu_desocupado;
 
 // CHEQUEAR SI ALGUNO DE ESTAS VARIABLES PUEDEN SER LOCALES DE LA FUNCION INICIALIZAR
 // ES PREFERIBLE QUE SEAN LOCALES A QUE SEAN GLOBALES
@@ -40,6 +41,7 @@ void inicializar_kernel(){
 	sockets = dictionary_create();
 
 	pid_sig = 1;
+	cpu_desocupado = true;
 
 	grado_multiprogramacion = config_get_int_value(config,"GRADO_MULTIPROGRAMACION");
 	estimacion_inicial = config_get_double_value(config,"ESTIMACION_INICIAL");
@@ -71,6 +73,7 @@ void inicializar_kernel(){
 	sem_init(&s_cpu_desocupado, 0, 1);
 	sem_init(&s_multiprogramacion_actual, 0, grado_multiprogramacion);
 	sem_init(&s_ready_execute, 0, 0);
+	sem_init(&s_pcb_desalojado, 0, 0);
 
 	pthread_t hilo_pasaje_a_ready;
 	pthread_create(&hilo_pasaje_a_ready,NULL,(void*)pasaje_a_ready,NULL);
@@ -151,8 +154,7 @@ void procesar_socket(thread_args* argumentos){
 				pthread_mutex_lock(&mx_socket);
 				dictionary_put(sockets, key, cliente_socket);
 				pthread_mutex_unlock(&mx_socket);
-				sem_post(&s_pasaje_a_ready); //Avisa al hilo planificador de pasaje de new a ready que debe ejecutarse.
-
+				sem_post(&s_pasaje_a_ready); //Avisa al hilo planificador de pasaje a ready que debe ejecutarse.
 
 				return;
 			}
@@ -168,7 +170,7 @@ void procesar_socket(thread_args* argumentos){
 
 }
 
-/****Hilo NEW -> READY ***/
+/****Hilo NEW -> READY ||| SUSPENDED_READY -> READY***/
 void pasaje_a_ready(){
 	while(1){
 		sem_wait(&s_pasaje_a_ready);
@@ -187,17 +189,12 @@ void pasaje_a_ready(){
 			pthread_mutex_unlock(&mx_cola_suspended_ready);
 		}
 		pthread_mutex_lock(&mx_lista_ready);
-		list_add(lista_ready,proceso);
+		list_add(lista_ready, proceso);
 		pthread_mutex_unlock(&mx_lista_ready);
-		sem_post(&s_cont_ready); //Sumo uno al contador de ready
-//		pthread_mutex_lock(&mx_multip_actual);
-//		sem_post(&s_multiprogramacion_actual);
-//		pthread_mutex_unlock(&mx_multip_actual);
-		sem_post(&s_ready_execute);
+		sem_post(&s_cont_ready); //Sumo uno al contador de pcbs en ready
+		sem_post(&s_ready_execute); // Aviso al hilo de ready que ya se puede ejecutar
 		loggear_estado_de_colas();
-		//imprimir_lista_ready();
 	}
-
 }
 
 void loggear_estado_de_colas(){
@@ -213,8 +210,7 @@ void loggear_estado_de_colas(){
 void fifo_ready_execute(){
 	while(1){
 		sem_wait(&s_ready_execute);
-		sem_wait(&s_cpu_desocupado);
-		// Para que no ejecute cada vez que un proceso pasa de new a ready
+		sem_wait(&s_cpu_desocupado); // Para que no ejecute cada vez que un proceso llega a ready
 		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
 		pthread_mutex_lock(&mx_lista_ready);
 		PCB_t* proceso = list_remove(lista_ready, 0);
@@ -222,8 +218,6 @@ void fifo_ready_execute(){
 		pthread_mutex_lock(&mx_log);
 		log_info(logger,"Mandando proceso %d a ejecutar",proceso->pid);
 		pthread_mutex_unlock(&mx_log);
-		pthread_mutex_lock(&mx_cpu_desocupado);
-		pthread_mutex_unlock(&mx_cpu_desocupado);
 		send_proceso(conexion_cpu_dispatch, proceso, PROCESO);
 		pcb_destroy(proceso);
 		esperar_cpu();
@@ -249,32 +243,34 @@ void esperar_cpu(){
 		case EXIT:{
 			int socket_pcb = (int) dictionary_get(sockets,string_itoa(pcb->pid));
 			// Hay q avisarle a memoria que finalizo para q borre todo.
-			//int el_socket = 0;
 			sem_post(&s_multiprogramacion_actual);
 			send(socket_pcb,&cop,sizeof(op_code),0);
-			log_info(logger, "Proceso %d terminado :) siiiii",pcb->pid);
+			log_info(logger, "Proceso %d terminado",pcb->pid);
 			pcb_destroy(pcb);
 			break;
 		}
 		case INTERRUPTION:
-			log_info(logger,"Proceso %d desalojado :( lo siento",pcb->pid);
-			list_add(lista_ready,pcb);
-			break;
+			log_info(logger,"Proceso %d desalojado",pcb->pid);
+			pthread_mutex_lock(&mx_lista_ready);
+			list_add(lista_ready, pcb);
+			pthread_mutex_unlock(&mx_lista_ready);
+			sem_post(&s_pcb_desalojado);
+			return; //Porque no quiero que haga los sem_post de despues del switch
 		case BLOCKED:
-			//bloqueamos el proceso
 			pthread_mutex_lock(&mx_cola_blocked);
 			list_add(cola_blocked,pcb);
 			pthread_mutex_unlock(&mx_cola_blocked);
 			pthread_t hilo_suspendido;
 			pthread_create(&hilo_suspendido,NULL,(void*)suspendiendo,pcb);
 			pthread_detach(hilo_suspendido);
-			log_info(logger, "Proceso %d bloqueado :( mal ahi pa",pcb->pid);
+			log_info(logger, "Proceso %d bloqueado",pcb->pid);
 			sem_post(&s_blocked);
 			break;
 		default:
 			log_error(logger, "AAAlgo anduvo mal en el server del kernel\n Cop: %d",cop);
 	}
 	sem_post(&s_cpu_desocupado);
+	cpu_desocupado = true;
 	sem_post(&s_ready_execute);
 }
 
@@ -283,19 +279,18 @@ void suspendiendo(PCB_t* pcb){
 	pthread_mutex_lock(&mx_cola_blocked);
 	pthread_mutex_lock(&mx_cola_suspended_blocked);
 	int i = pcb_find_index(cola_blocked,pcb->pid);
-	pthread_mutex_unlock(&mx_cola_blocked);
-	if (i == -1){
+	if (i == -1){ //No lo encuentra en blocked porque ya finalizo su io.
+		pthread_mutex_unlock(&mx_cola_blocked);
 		pthread_mutex_unlock(&mx_cola_suspended_blocked);
 		pthread_exit(0);
 	}
-	log_info(logger,"Suspendiendo proceso %d que bajon :(",pcb->pid);
-	//list_remove(cola_blocked,i);
+	log_info(logger,"Suspendiendo proceso %d",pcb->pid);
 	list_add(cola_suspended_blocked,pcb->pid);
-	//pthread_mutex_unlock(&mx_cola_blocked);
+	pthread_mutex_unlock(&mx_cola_blocked);
 	pthread_mutex_unlock(&mx_cola_suspended_blocked);
-	//sem_wait(&s_blocked); //le restamos uno a la cola de blocked
 	//hay que pedir las colas y liberarlas en el mismo orden para evitar deadlocks
 	sem_post(&s_multiprogramacion_actual);
+	pthread_exit(0);
 }
 
 void ejecutar_io() {
@@ -305,12 +300,15 @@ void ejecutar_io() {
 		if (list_size(cola_blocked) == 0){
 			log_error(logger,"Blocked ejecutó sin un proceso bloqueado");
 		}
-		PCB_t* proceso = list_get(cola_blocked,0);
+		PCB_t* proceso = list_remove(cola_blocked,0);
 		pthread_mutex_unlock(&mx_cola_blocked);
-		instruccion_t* inst = list_get(proceso->instrucciones, proceso->pc - 1);
-		int32_t tiempo = inst->arg1; // Se hace - 1 porque ya se incremento el PC
+		instruccion_t* inst = list_get(proceso->instrucciones, proceso->pc - 1); //-1 porque ya se incremento el PC
+		int32_t tiempo = inst->arg1;
 		log_info(logger, "[IO] Proceso %d esperando %d milisegundos", proceso->pid, tiempo);
 		usleep(tiempo * 1000);
+//		pthread_mutex_lock(&mx_cola_blocked);
+//		list_remove(cola_blocked,0);
+//		pthread_mutex_unlock(&mx_cola_blocked);
 		if (esta_suspendido(proceso->pid)){
 			log_info(logger, "[IO] Proceso %d saliendo de blocked hacia suspended-ready :)",proceso->pid);
 			pthread_mutex_lock(&mx_cola_suspended_ready);
@@ -326,11 +324,8 @@ void ejecutar_io() {
 			sem_post(&s_ready_execute);
 			sem_post(&s_cont_ready);
 		}
-		list_remove(cola_blocked,0);
-
 	}
 }
-
 
 bool esta_suspendido(uint16_t pid){
 	pthread_mutex_lock(&mx_cola_suspended_blocked);
@@ -349,43 +344,45 @@ bool esta_suspendido(uint16_t pid){
 	return false;
 }
 
-
 /****Hilo READY -> EXECUTE (SRT) ***/
 void srt_ready_execute(){
 	while(1){
-//		sem_wait(&s_algorithm_ready_execute);
-//		pthread_mutex_lock(&mx_cola_new);
-//		//AGREGAR QUE SI HAY PCBS EN READY SUSPENDED TIENEN PRIORIDAD DE PASO
-//		if(multiprogramacion_actual < grado_multiprogramacion){
-//			PCB_t* p = queue_pop(cola_new);
-//			list_add(lista_ready,p);
-//			pthread_mutex_lock(&mx_multip_actual);
-//			multiprogramacion_actual++;
-//			pthread_mutex_unlock(&mx_multip_actual);
-//		}
-//		pthread_mutex_unlock(&mx_cola_new);
+		sem_wait(&s_ready_execute);
+		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
+		if(!cpu_desocupado){
+			desalojar_cpu();
+		}
+		pthread_mutex_lock(&mx_lista_ready);
+		PCB_t* proceso = seleccionar_proceso_srt(); // mx porque la funcion usa a la cola de ready
+		pthread_mutex_unlock(&mx_lista_ready);
+		pthread_mutex_lock(&mx_log);
+		log_info(logger,"Mandando proceso %d a ejecutar",proceso->pid);
+		pthread_mutex_unlock(&mx_log);
+		cpu_desocupado = false;
+		send_proceso(conexion_cpu_dispatch, proceso, PROCESO);
+		pcb_destroy(proceso);
+		esperar_cpu();
 	}
-
 }
 
 
-//Este no va pero se puede usar la logica para hacer srt_ready_execute
-//PCB_t* sjf(){
-//
-//	PCB_t* primer_pcb = list_get(lista_ready,0);
-//	double raf_min = primer_pcb->est_rafaga;
-//	int index_pcb = 0;
-//	int i;
-//	for (i = 1;i<list_size(lista_ready);i++){
-//		PCB_t* pcb = list_get(lista_ready,i);
-//		double est_raf = pcb->est_rafaga;
-//		//si el sjf luego sigue con FIFO, entonces tiene que ser >
-//		//si el sjf luego sigue con LIFO, entonces tiene que ser >=
-//		if(raf_min >= est_raf){
-//			raf_min = est_raf;
-//			index_pcb = i;
-//		}
-//	}
-//	return list_remove(lista_ready,index_pcb);
-//
-//}
+PCB_t* seleccionar_proceso_srt(){
+	PCB_t* primer_pcb = list_get(lista_ready,0);
+	double raf_min = primer_pcb->est_rafaga;
+	int index_pcb = 0;
+	for (int i = 1; i < list_size(lista_ready); i++){
+		PCB_t* pcb = list_get(lista_ready,i);
+		double est_raf = pcb->est_rafaga;
+		if(est_raf < raf_min){ //Asumimos que en caso de empate es FIFO.
+			raf_min = est_raf; //Solo se reemplaza si la nueva es menor.
+			index_pcb = i;
+		}
+	}
+	return list_remove(lista_ready, index_pcb);
+}
+
+void desalojar_cpu(){
+	op_code codigo = INTERRUPTION;
+	send(conexion_cpu_interrupt, &codigo, sizeof(op_code), 0);
+	sem_wait(&s_pcb_desalojado);
+}

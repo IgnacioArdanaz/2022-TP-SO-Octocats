@@ -33,12 +33,10 @@ void pasaje_a_ready();
 void fifo_ready_execute();
 void srt_ready_execute();
 void loggear_estado_de_colas();
-void imprimir_lista_ready();
 void esperar_cpu();
 void ejecutar_io();
 void suspendiendo(PCB_t* pcb);
 bool esta_suspendido(uint16_t pid);
-//PCB_t* fifo();
-//PCB_t* sjf();
+PCB_t* seleccionar_proceso_srt();
 
 #endif /* KERNEL_UTILS_H_ */
