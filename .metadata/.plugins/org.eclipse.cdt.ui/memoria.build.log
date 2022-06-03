@@ -1,15 +1,6 @@
-11:55:46 **** Build of configuration Debug for project memoria ****
+12:55:02 **** Build of configuration Debug for project memoria ****
 make all 
-Building file: ../src/memoria_main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
-Finished building: ../src/memoria_main.c
- 
-Building target: memoria
-Invoking: GCC C Linker
-gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o   -lcommons -lshared
-Finished building target: memoria
- 
+make: Nothing to be done for 'all'.
 
-11:55:47 Build Finished (took 1s.261ms)
+12:55:03 Build Finished (took 1s.196ms)
 

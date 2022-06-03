@@ -5,14 +5,6 @@
 		<item value="/home/utnso/kernel"/>
 		<item value="/home/utnso/tp-2022-1c-Octocats"/>
 	</list>
-	<section name="WORKBENCH_SETTINGS">
-		<list key="ENABLED_TRANSFERS">
-		</list>
-	</section>
 	<section name="NewWizardAction">
-	</section>
-	<section name="ChooseWorkspaceDialogSettings">
-		<item value="616" key="DIALOG_X_ORIGIN"/>
-		<item value="286" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

@@ -12,7 +12,7 @@ pthread_mutex_t mx_cola_suspended_ready = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_iteracion_blocked = PTHREAD_MUTEX_INITIALIZER;
 
 sem_t s_pasaje_a_ready, s_ready_execute, s_cont_ready, s_cpu_desocupado, s_blocked,
-	s_suspended_ready, s_multiprogramacion_actual, s_pcb_desalojado;
+	s_suspended_ready, s_multiprogramacion_actual, s_pcb_desalojado, s_esperar_cpu;
 
 t_dictionary* sockets;
 t_queue* cola_new;
@@ -82,6 +82,7 @@ void inicializar_kernel(){
 	sem_init(&s_multiprogramacion_actual, 0, grado_multiprogramacion);
 	sem_init(&s_ready_execute, 0, 0);
 	sem_init(&s_pcb_desalojado, 0, 0);
+	sem_init(&s_esperar_cpu, 0, 0);
 
 	pthread_t hilo_pasaje_a_ready;
 	pthread_create(&hilo_pasaje_a_ready,NULL,(void*)pasaje_a_ready,NULL);
@@ -90,6 +91,10 @@ void inicializar_kernel(){
 	pthread_t hilo_blocked;
 	pthread_create(&hilo_blocked,NULL,(void*)ejecutar_io,NULL);
 	pthread_detach(hilo_blocked);
+
+	pthread_t hilo_esperar_cpu;
+	pthread_create(&hilo_esperar_cpu,NULL,(void*)esperar_cpu,NULL);
+	pthread_detach(hilo_esperar_cpu);
 
 	pthread_t hilo_ready_execute;
 	if (strcmp(algoritmo_config, "FIFO") == 0)
@@ -202,8 +207,8 @@ void pasaje_a_ready(){
 		pthread_mutex_lock(&mx_lista_ready);
 		list_add(lista_ready, proceso);
 		pthread_mutex_unlock(&mx_lista_ready);
-		sem_post(&s_cont_ready); //Sumo uno al contador de pcbs en ready
 		sem_post(&s_ready_execute); // Aviso al hilo de ready que ya se puede ejecutar
+		sem_post(&s_cont_ready); //Sumo uno al contador de pcbs en ready
 		loggear_estado_de_colas();
 	}
 }
@@ -231,58 +236,64 @@ void fifo_ready_execute(){
 		pthread_mutex_unlock(&mx_log);
 		send_proceso(conexion_cpu_dispatch, proceso, PROCESO);
 		pcb_destroy(proceso);
-		esperar_cpu();
+		sem_post(&s_esperar_cpu);
 	}
 }
 
 void esperar_cpu(){
-	op_code cop;
-	if (recv(conexion_cpu_dispatch, &cop, sizeof(op_code), 0) <= 0) {
-		pthread_mutex_lock(&mx_log);
-		log_error(logger,"DISCONNECT FAILURE!");
-		pthread_mutex_unlock(&mx_log);
-		return;
-	}
-	PCB_t* pcb = pcb_create();
-	if (!recv_proceso(conexion_cpu_dispatch, pcb)) {
-		pthread_mutex_lock(&mx_log);
-		log_error(logger,"Fallo recibiendo PROGRAMA");
-		pthread_mutex_unlock(&mx_log);
-		return;
-	}
-	switch (cop) {
-		case EXIT:{
-			int socket_pcb = (int) dictionary_get(sockets,string_itoa(pcb->pid));
-			// Hay q avisarle a memoria que finalizo para q borre todo.
-			sem_post(&s_multiprogramacion_actual);
-			send(socket_pcb,&cop,sizeof(op_code),0);
-			log_info(logger, "Proceso %d terminado",pcb->pid);
-			pcb_destroy(pcb);
-			break;
+	while(1){
+		sem_wait(&s_esperar_cpu);
+		op_code cop;
+		if (recv(conexion_cpu_dispatch, &cop, sizeof(op_code), 0) <= 0) {
+			pthread_mutex_lock(&mx_log);
+			log_error(logger,"DISCONNECT FAILURE!");
+			pthread_mutex_unlock(&mx_log);
+			return;
 		}
-		case INTERRUPTION:
-			log_info(logger,"Proceso %d desalojado",pcb->pid);
-			pthread_mutex_lock(&mx_lista_ready);
-			list_add(lista_ready, pcb);
-			pthread_mutex_unlock(&mx_lista_ready);
-			sem_post(&s_pcb_desalojado);
-			return; //Porque no quiero que haga los sem_post de despues del switch
-		case BLOCKED:
-			pthread_mutex_lock(&mx_cola_blocked);
-			list_add(cola_blocked,pcb);
-			pthread_mutex_unlock(&mx_cola_blocked);
-			pthread_t hilo_suspendido;
-			pthread_create(&hilo_suspendido,NULL,(void*)suspendiendo,pcb);
-			pthread_detach(hilo_suspendido);
-			log_info(logger, "Proceso %d bloqueado",pcb->pid);
-			sem_post(&s_blocked);
-			break;
-		default:
-			log_error(logger, "AAAlgo anduvo mal en el server del kernel\n Cop: %d",cop);
+		PCB_t* pcb = pcb_create();
+		if (!recv_proceso(conexion_cpu_dispatch, pcb)) {
+			pthread_mutex_lock(&mx_log);
+			log_error(logger,"Fallo recibiendo PROGRAMA");
+			pthread_mutex_unlock(&mx_log);
+			return;
+		}
+		cpu_desocupado = true;
+		switch (cop) {
+			case EXIT:{
+				int socket_pcb = (int) dictionary_get(sockets,string_itoa(pcb->pid));
+				// Hay q avisarle a memoria que finalizo para q borre todo.
+				sem_post(&s_multiprogramacion_actual);
+				send(socket_pcb,&cop,sizeof(op_code),0);
+				log_info(logger, "Proceso %d terminado",pcb->pid);
+				pcb_destroy(pcb);
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_ready_execute);
+				break;
+			}
+			case INTERRUPTION:
+				log_info(logger,"Proceso %d desalojado",pcb->pid);
+				pthread_mutex_lock(&mx_lista_ready);
+				list_add(lista_ready, pcb);
+				pthread_mutex_unlock(&mx_lista_ready);
+				sem_post(&s_cont_ready);
+				sem_post(&s_pcb_desalojado);
+				break; //Porque no quiero que haga los sem_post de despues del switch
+			case BLOCKED:
+				pthread_mutex_lock(&mx_cola_blocked);
+				list_add(cola_blocked,pcb);
+				pthread_mutex_unlock(&mx_cola_blocked);
+				pthread_t hilo_suspendido;
+				pthread_create(&hilo_suspendido,NULL,(void*)suspendiendo,pcb);
+				pthread_detach(hilo_suspendido);
+				log_info(logger, "Proceso %d bloqueado",pcb->pid);
+				sem_post(&s_blocked);
+				sem_post(&s_cpu_desocupado);
+				sem_post(&s_ready_execute);
+				break;
+			default:
+				log_error(logger, "AAAlgo anduvo mal en el server del kernel\n Cop: %d",cop);
+		}
 	}
-	sem_post(&s_cpu_desocupado);
-	cpu_desocupado = true;
-	sem_post(&s_ready_execute);
 }
 
 void suspendiendo(PCB_t* pcb){
@@ -379,6 +390,7 @@ void srt_ready_execute(){
 		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
 		if(!cpu_desocupado){
 			desalojar_cpu();
+			sem_wait(&s_pcb_desalojado);
 		}
 		pthread_mutex_lock(&mx_lista_ready);
 		PCB_t* proceso = seleccionar_proceso_srt(); // mx porque la funcion usa a la cola de ready
@@ -389,7 +401,7 @@ void srt_ready_execute(){
 		cpu_desocupado = false;
 		send_proceso(conexion_cpu_dispatch, proceso, PROCESO);
 		pcb_destroy(proceso);
-		esperar_cpu();
+		sem_post(&s_esperar_cpu);
 	}
 }
 
@@ -411,6 +423,6 @@ PCB_t* seleccionar_proceso_srt(){
 
 void desalojar_cpu(){
 	op_code codigo = INTERRUPTION;
+	log_info(logger, "Mandando interrupcion");
 	send(conexion_cpu_interrupt, &codigo, sizeof(op_code), 0);
-	sem_wait(&s_pcb_desalojado);
 }
