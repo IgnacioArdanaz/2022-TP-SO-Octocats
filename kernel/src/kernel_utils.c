@@ -24,8 +24,10 @@ bool cpu_desocupado;
 
 // CHEQUEAR SI ALGUNO DE ESTAS VARIABLES PUEDEN SER LOCALES DE LA FUNCION INICIALIZAR
 // ES PREFERIBLE QUE SEAN LOCALES A QUE SEAN GLOBALES
-int pid_sig, estimacion_inicial, grado_multiprogramacion, multiprogramacion_actual,
+int pid_sig, grado_multiprogramacion, multiprogramacion_actual,
 	conexion_cpu_dispatch, conexion_cpu_interrupt, tiempo_suspended, conexion_memoria;
+
+double estimacion_inicial;
 
 
 void inicializar_kernel(){
@@ -303,15 +305,15 @@ void ejecutar_io() {
 		if (list_size(cola_blocked) == 0){
 			log_error(logger,"Blocked ejecutó sin un proceso bloqueado");
 		}
-		PCB_t* proceso = list_remove(cola_blocked,0);
+		PCB_t* proceso = list_get(cola_blocked,0);
 		pthread_mutex_unlock(&mx_cola_blocked);
 		instruccion_t* inst = list_get(proceso->instrucciones, proceso->pc - 1); //-1 porque ya se incremento el PC
 		int32_t tiempo = inst->arg1;
 		log_info(logger, "[IO] Proceso %d esperando %d milisegundos", proceso->pid, tiempo);
 		usleep(tiempo * 1000);
-//		pthread_mutex_lock(&mx_cola_blocked);
-//		list_remove(cola_blocked,0);
-//		pthread_mutex_unlock(&mx_cola_blocked);
+		pthread_mutex_lock(&mx_cola_blocked);
+		list_remove(cola_blocked,0);
+		pthread_mutex_unlock(&mx_cola_blocked);
 		if (esta_suspendido(proceso->pid)){
 			log_info(logger, "[IO] Proceso %d saliendo de blocked hacia suspended-ready :)",proceso->pid);
 			pthread_mutex_lock(&mx_cola_suspended_ready);
@@ -373,7 +375,7 @@ PCB_t* seleccionar_proceso_srt(){
 	PCB_t* primer_pcb = list_get(lista_ready,0);
 	double raf_min = primer_pcb->est_rafaga;
 	int index_pcb = 0;
-	for (int i = 1; i < list_size(lista_ready); i++){
+	for (int i = 0; i < list_size(lista_ready); i++){
 		PCB_t* pcb = list_get(lista_ready,i);
 		double est_raf = pcb->est_rafaga;
 		if(est_raf < raf_min){ //Asumimos que en caso de empate es FIFO.

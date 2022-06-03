@@ -19,7 +19,7 @@ int main(void) {
 		op_code cop;
 		recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0);
 		recv_proceso(cliente_socket_dispatch,pcb);
-		log_info(logger,"Proceso %d -> program counter %d", pcb->pid, pcb->pc);
+		log_info(logger,"Proceso %d -> program counter %d - est %f", pcb->pid, pcb->pc, pcb->est_rafaga);
 
 		struct timespec start;
 		clock_gettime(CLOCK_REALTIME,&start);
@@ -41,8 +41,6 @@ int main(void) {
 }
 
 void calculo_estimacion(PCB_t *pcb){
-
-
 	log_info(logger, "Rafaga real %" PRIu64 , rafaga_real);
 
 	pcb->est_rafaga = pcb->est_rafaga *alfa + (double)rafaga_real*(1-alfa); //Calculo estimacion rafaga siguiente
@@ -179,8 +177,8 @@ int execute(instruccion_t* instruccion_ejecutar){
 void interrupcion(){
 	//cambia hay_interrupcion a true
 	while(1){
-		void* opcode;
-		recv(cliente_socket_interrupt, opcode, 0, 0);
+		op_code opcode;
+		recv(cliente_socket_interrupt, &opcode, sizeof(op_code), 0);
 		hay_interrupcion = true;
 	}
 }
