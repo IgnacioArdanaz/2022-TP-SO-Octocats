@@ -1,10 +1,11 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:consola (BASE_1),org.eclipse.launchbar.core.descriptorType.default\:consola (BASE_2),org.eclipse.launchbar.core.descriptorType.default\:consola (SUSPE_1),org.eclipse.launchbar.core.descriptorType.default\:consola (SUSPE_2),org.eclipse.launchbar.core.descriptorType.default\:consola (SUSPE_3),org.eclipse.launchbar.core.descriptorType.default\:cpu,org.eclipse.launchbar.core.descriptorType.default\:kernel,org.eclipse.launchbar.core.descriptorType.default\:consola (PLANI_1),org.eclipse.launchbar.core.descriptorType.default\:consola (PLANI_2)
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:cpu,org.eclipse.launchbar.core.descriptorType.default\:kernel,org.eclipse.launchbar.core.descriptorType.default\:consola
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:consola\ (1)/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:consola/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:consola/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:cpu/activeLaunchMode=profile
-org.eclipse.launchbar.core.descriptorType.default\:kernel/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:cpu/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:kernel/activeLaunchMode=profile

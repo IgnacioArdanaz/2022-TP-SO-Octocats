@@ -1200,3 +1200,136 @@
 [INFO] 00:15:59:489 CONSOLA/(3078:3078): El proceso se finalizó exitosamente :)
 [INFO] 00:16:02:495 CONSOLA/(3058:3058): El proceso se finalizó exitosamente :)
 [INFO] 00:16:05:501 CONSOLA/(3042:3042): El proceso se finalizó exitosamente :)
+[ERROR] 11:57:54:452 CONSOLA/(10120:10120): Uso incorrecto :(
+	Ejemplo: ./a.out un_tamanio ruta_de_pseudocodigo
+[INFO] 11:58:41:916 CONSOLA/(10184:10184): Instruccion numero 0: I 9000 -1
+[INFO] 11:58:41:917 CONSOLA/(10184:10184): Instruccion numero 1: I 9000 -1
+[INFO] 11:58:41:917 CONSOLA/(10184:10184): Instruccion numero 2: I 9000 -1
+[INFO] 11:58:41:918 CONSOLA/(10184:10184): Instruccion numero 3: N -1 -1
+[INFO] 11:58:41:918 CONSOLA/(10184:10184): Instruccion numero 4: N -1 -1
+[INFO] 11:58:41:918 CONSOLA/(10184:10184): Instruccion numero 5: W 4 42
+[INFO] 11:58:41:918 CONSOLA/(10184:10184): Instruccion numero 6: C 0 4
+[INFO] 11:58:41:918 CONSOLA/(10184:10184): Instruccion numero 7: R 0 -1
+[INFO] 11:58:41:918 CONSOLA/(10184:10184): Instruccion numero 8: E -1 -1
+[INFO] 11:58:41:919 CONSOLA/(10184:10184): Error al conectar (a KERNEL)
+[ERROR] 11:58:41:919 CONSOLA/(10184:10184): Por desgracia no se pudo enviar el programa :(
+[INFO] 11:59:02:674 CONSOLA/(10231:10231): Instruccion numero 0: I 9000 -1
+[INFO] 11:59:02:674 CONSOLA/(10231:10231): Instruccion numero 1: I 9000 -1
+[INFO] 11:59:02:674 CONSOLA/(10231:10231): Instruccion numero 2: I 9000 -1
+[INFO] 11:59:02:675 CONSOLA/(10231:10231): Instruccion numero 3: N -1 -1
+[INFO] 11:59:02:675 CONSOLA/(10231:10231): Instruccion numero 4: N -1 -1
+[INFO] 11:59:02:675 CONSOLA/(10231:10231): Instruccion numero 5: W 4 42
+[INFO] 11:59:02:675 CONSOLA/(10231:10231): Instruccion numero 6: C 0 4
+[INFO] 11:59:02:675 CONSOLA/(10231:10231): Instruccion numero 7: R 0 -1
+[INFO] 11:59:02:675 CONSOLA/(10231:10231): Instruccion numero 8: E -1 -1
+[INFO] 11:59:02:676 CONSOLA/(10231:10231): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 11:59:02:676 CONSOLA/(10231:10231): Programa enviado al kernel correctamente!
+[INFO] 11:59:31:694 CONSOLA/(10231:10231): El proceso se finalizó exitosamente :)
+[INFO] 12:02:15:195 CONSOLA/(10450:10450): Instruccion numero 0: I 9000 -1
+[INFO] 12:02:15:195 CONSOLA/(10450:10450): Instruccion numero 1: I 9000 -1
+[INFO] 12:02:15:196 CONSOLA/(10450:10450): Instruccion numero 2: I 9000 -1
+[INFO] 12:02:15:196 CONSOLA/(10450:10450): Instruccion numero 3: N -1 -1
+[INFO] 12:02:15:196 CONSOLA/(10450:10450): Instruccion numero 4: N -1 -1
+[INFO] 12:02:15:196 CONSOLA/(10450:10450): Instruccion numero 5: W 4 42
+[INFO] 12:02:15:196 CONSOLA/(10450:10450): Instruccion numero 6: C 0 4
+[INFO] 12:02:15:196 CONSOLA/(10450:10450): Instruccion numero 7: R 0 -1
+[INFO] 12:02:15:196 CONSOLA/(10450:10450): Instruccion numero 8: E -1 -1
+[INFO] 12:02:15:198 CONSOLA/(10450:10450): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:02:15:198 CONSOLA/(10450:10450): Programa enviado al kernel correctamente!
+[INFO] 12:02:17:182 CONSOLA/(10464:10464): Instruccion numero 0: I 9000 -1
+[INFO] 12:02:17:182 CONSOLA/(10464:10464): Instruccion numero 1: I 9000 -1
+[INFO] 12:02:17:182 CONSOLA/(10464:10464): Instruccion numero 2: I 9000 -1
+[INFO] 12:02:17:182 CONSOLA/(10464:10464): Instruccion numero 3: N -1 -1
+[INFO] 12:02:17:182 CONSOLA/(10464:10464): Instruccion numero 4: N -1 -1
+[INFO] 12:02:17:182 CONSOLA/(10464:10464): Instruccion numero 5: W 4 42
+[INFO] 12:02:17:182 CONSOLA/(10464:10464): Instruccion numero 6: C 0 4
+[INFO] 12:02:17:184 CONSOLA/(10464:10464): Instruccion numero 7: R 0 -1
+[INFO] 12:02:17:184 CONSOLA/(10464:10464): Instruccion numero 8: E -1 -1
+[INFO] 12:02:17:185 CONSOLA/(10464:10464): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:02:17:185 CONSOLA/(10464:10464): Programa enviado al kernel correctamente!
+[INFO] 12:02:19:329 CONSOLA/(10477:10477): Instruccion numero 0: I 9000 -1
+[INFO] 12:02:19:332 CONSOLA/(10477:10477): Instruccion numero 1: I 9000 -1
+[INFO] 12:02:19:332 CONSOLA/(10477:10477): Instruccion numero 2: I 9000 -1
+[INFO] 12:02:19:332 CONSOLA/(10477:10477): Instruccion numero 3: N -1 -1
+[INFO] 12:02:19:332 CONSOLA/(10477:10477): Instruccion numero 4: N -1 -1
+[INFO] 12:02:19:332 CONSOLA/(10477:10477): Instruccion numero 5: W 4 42
+[INFO] 12:02:19:332 CONSOLA/(10477:10477): Instruccion numero 6: C 0 4
+[INFO] 12:02:19:332 CONSOLA/(10477:10477): Instruccion numero 7: R 0 -1
+[INFO] 12:02:19:332 CONSOLA/(10477:10477): Instruccion numero 8: E -1 -1
+[INFO] 12:02:19:337 CONSOLA/(10477:10477): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:02:19:338 CONSOLA/(10477:10477): Programa enviado al kernel correctamente!
+[INFO] 12:03:20:212 CONSOLA/(10450:10450): El proceso se finalizó exitosamente :)
+[INFO] 12:03:29:213 CONSOLA/(10464:10464): El proceso se finalizó exitosamente :)
+[INFO] 12:03:38:213 CONSOLA/(10477:10477): El proceso se finalizó exitosamente :)
+[INFO] 12:10:32:393 CONSOLA/(10939:10939): Instruccion numero 0: I 9000 -1
+[INFO] 12:10:32:393 CONSOLA/(10939:10939): Instruccion numero 1: I 9000 -1
+[INFO] 12:10:32:393 CONSOLA/(10939:10939): Instruccion numero 2: I 9000 -1
+[INFO] 12:10:32:393 CONSOLA/(10939:10939): Instruccion numero 3: N -1 -1
+[INFO] 12:10:32:393 CONSOLA/(10939:10939): Instruccion numero 4: N -1 -1
+[INFO] 12:10:32:393 CONSOLA/(10939:10939): Instruccion numero 5: W 4 42
+[INFO] 12:10:32:393 CONSOLA/(10939:10939): Instruccion numero 6: C 0 4
+[INFO] 12:10:32:393 CONSOLA/(10939:10939): Instruccion numero 7: R 0 -1
+[INFO] 12:10:32:393 CONSOLA/(10939:10939): Instruccion numero 8: E -1 -1
+[INFO] 12:10:32:394 CONSOLA/(10939:10939): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:10:32:394 CONSOLA/(10939:10939): Programa enviado al kernel correctamente!
+[INFO] 12:10:36:957 CONSOLA/(10955:10955): Instruccion numero 0: I 9000 -1
+[INFO] 12:10:36:958 CONSOLA/(10955:10955): Instruccion numero 1: I 9000 -1
+[INFO] 12:10:36:958 CONSOLA/(10955:10955): Instruccion numero 2: I 9000 -1
+[INFO] 12:10:36:958 CONSOLA/(10955:10955): Instruccion numero 3: N -1 -1
+[INFO] 12:10:36:958 CONSOLA/(10955:10955): Instruccion numero 4: N -1 -1
+[INFO] 12:10:36:958 CONSOLA/(10955:10955): Instruccion numero 5: W 4 42
+[INFO] 12:10:36:958 CONSOLA/(10955:10955): Instruccion numero 6: C 0 4
+[INFO] 12:10:36:958 CONSOLA/(10955:10955): Instruccion numero 7: R 0 -1
+[INFO] 12:10:36:958 CONSOLA/(10955:10955): Instruccion numero 8: E -1 -1
+[INFO] 12:10:36:958 CONSOLA/(10955:10955): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:10:36:958 CONSOLA/(10955:10955): Programa enviado al kernel correctamente!
+[INFO] 12:10:39:158 CONSOLA/(10968:10968): Instruccion numero 0: I 9000 -1
+[INFO] 12:10:39:158 CONSOLA/(10968:10968): Instruccion numero 1: I 9000 -1
+[INFO] 12:10:39:158 CONSOLA/(10968:10968): Instruccion numero 2: I 9000 -1
+[INFO] 12:10:39:158 CONSOLA/(10968:10968): Instruccion numero 3: N -1 -1
+[INFO] 12:10:39:158 CONSOLA/(10968:10968): Instruccion numero 4: N -1 -1
+[INFO] 12:10:39:158 CONSOLA/(10968:10968): Instruccion numero 5: W 4 42
+[INFO] 12:10:39:158 CONSOLA/(10968:10968): Instruccion numero 6: C 0 4
+[INFO] 12:10:39:158 CONSOLA/(10968:10968): Instruccion numero 7: R 0 -1
+[INFO] 12:10:39:158 CONSOLA/(10968:10968): Instruccion numero 8: E -1 -1
+[INFO] 12:10:39:159 CONSOLA/(10968:10968): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:10:39:159 CONSOLA/(10968:10968): Programa enviado al kernel correctamente!
+[INFO] 12:12:37:979 CONSOLA/(10968:10968): El proceso se finalizó exitosamente :)
+[INFO] 12:12:37:979 CONSOLA/(10955:10955): El proceso se finalizó exitosamente :)
+[INFO] 12:12:37:979 CONSOLA/(10939:10939): El proceso se finalizó exitosamente :)
+[INFO] 12:14:21:350 CONSOLA/(11257:11257): Instruccion numero 0: I 9000 -1
+[INFO] 12:14:21:350 CONSOLA/(11257:11257): Instruccion numero 1: I 9000 -1
+[INFO] 12:14:21:350 CONSOLA/(11257:11257): Instruccion numero 2: I 9000 -1
+[INFO] 12:14:21:350 CONSOLA/(11257:11257): Instruccion numero 3: N -1 -1
+[INFO] 12:14:21:350 CONSOLA/(11257:11257): Instruccion numero 4: N -1 -1
+[INFO] 12:14:21:350 CONSOLA/(11257:11257): Instruccion numero 5: W 4 42
+[INFO] 12:14:21:351 CONSOLA/(11257:11257): Instruccion numero 6: C 0 4
+[INFO] 12:14:21:351 CONSOLA/(11257:11257): Instruccion numero 7: R 0 -1
+[INFO] 12:14:21:351 CONSOLA/(11257:11257): Instruccion numero 8: E -1 -1
+[INFO] 12:14:21:351 CONSOLA/(11257:11257): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:14:21:351 CONSOLA/(11257:11257): Programa enviado al kernel correctamente!
+[INFO] 12:14:24:243 CONSOLA/(11272:11272): Instruccion numero 0: I 9000 -1
+[INFO] 12:14:24:243 CONSOLA/(11272:11272): Instruccion numero 1: I 9000 -1
+[INFO] 12:14:24:243 CONSOLA/(11272:11272): Instruccion numero 2: I 9000 -1
+[INFO] 12:14:24:243 CONSOLA/(11272:11272): Instruccion numero 3: N -1 -1
+[INFO] 12:14:24:243 CONSOLA/(11272:11272): Instruccion numero 4: N -1 -1
+[INFO] 12:14:24:243 CONSOLA/(11272:11272): Instruccion numero 5: W 4 42
+[INFO] 12:14:24:243 CONSOLA/(11272:11272): Instruccion numero 6: C 0 4
+[INFO] 12:14:24:243 CONSOLA/(11272:11272): Instruccion numero 7: R 0 -1
+[INFO] 12:14:24:245 CONSOLA/(11272:11272): Instruccion numero 8: E -1 -1
+[INFO] 12:14:24:246 CONSOLA/(11272:11272): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:14:24:246 CONSOLA/(11272:11272): Programa enviado al kernel correctamente!
+[INFO] 12:14:25:434 CONSOLA/(11284:11284): Instruccion numero 0: I 9000 -1
+[INFO] 12:14:25:434 CONSOLA/(11284:11284): Instruccion numero 1: I 9000 -1
+[INFO] 12:14:25:434 CONSOLA/(11284:11284): Instruccion numero 2: I 9000 -1
+[INFO] 12:14:25:434 CONSOLA/(11284:11284): Instruccion numero 3: N -1 -1
+[INFO] 12:14:25:435 CONSOLA/(11284:11284): Instruccion numero 4: N -1 -1
+[INFO] 12:14:25:435 CONSOLA/(11284:11284): Instruccion numero 5: W 4 42
+[INFO] 12:14:25:435 CONSOLA/(11284:11284): Instruccion numero 6: C 0 4
+[INFO] 12:14:25:435 CONSOLA/(11284:11284): Instruccion numero 7: R 0 -1
+[INFO] 12:14:25:435 CONSOLA/(11284:11284): Instruccion numero 8: E -1 -1
+[INFO] 12:14:25:436 CONSOLA/(11284:11284): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:14:25:436 CONSOLA/(11284:11284): Programa enviado al kernel correctamente!
+[INFO] 12:15:26:367 CONSOLA/(11257:11257): El proceso se finalizó exitosamente :)
+[INFO] 12:15:35:369 CONSOLA/(11272:11272): El proceso se finalizó exitosamente :)
+[INFO] 12:15:44:369 CONSOLA/(11284:11284): El proceso se finalizó exitosamente :)

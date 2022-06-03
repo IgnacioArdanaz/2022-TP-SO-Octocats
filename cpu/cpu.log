@@ -1928,3 +1928,310 @@
 [INFO] 00:16:05:500 cpu/(2993:2993): Program counter 8 (despues de ejecutar)
 [INFO] 00:16:05:500 cpu/(2993:2993): ==============================================================
 [INFO] 00:17:47:733 cpu/(2993:2993): Proceso 0 -> program counter 8 - est 7253.000000
+[INFO] 11:58:56:009 cpu/(10204:10204): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 11:58:56:038 cpu/(10204:10204): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 11:58:56:038 cpu/(10204:10204): CPU_DISPATCH listo para recibir al cliente
+[INFO] 11:59:00:617 cpu/(10204:10204): Cliente conectado (a CPU_DISPATCH)
+[INFO] 11:59:00:617 cpu/(10204:10204): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 11:59:00:623 cpu/(10204:10204): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 11:59:00:624 cpu/(10204:10204): Valor alfa 0.50
+[INFO] 11:59:02:676 cpu/(10204:10204): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 11:59:02:676 cpu/(10204:10204): Ejecutando IO
+[INFO] 11:59:02:676 cpu/(10204:10204): Rafaga real 0
+[INFO] 11:59:02:676 cpu/(10204:10204): Proceso 1 estimacion rafaga siguiente 10000.000000
+[INFO] 11:59:02:676 cpu/(10204:10204): Program counter 1 (despues de ejecutar)
+[INFO] 11:59:02:676 cpu/(10204:10204): ==============================================================
+[INFO] 11:59:11:678 cpu/(10204:10204): Proceso 1 -> program counter 1 - est 10000.000000
+[INFO] 11:59:11:679 cpu/(10204:10204): Ejecutando IO
+[INFO] 11:59:11:679 cpu/(10204:10204): Rafaga real 0
+[INFO] 11:59:11:679 cpu/(10204:10204): Proceso 1 estimacion rafaga siguiente 5000.000000
+[INFO] 11:59:11:679 cpu/(10204:10204): Program counter 2 (despues de ejecutar)
+[INFO] 11:59:11:679 cpu/(10204:10204): ==============================================================
+[INFO] 11:59:20:682 cpu/(10204:10204): Proceso 1 -> program counter 2 - est 5000.000000
+[INFO] 11:59:20:682 cpu/(10204:10204): Ejecutando IO
+[INFO] 11:59:20:683 cpu/(10204:10204): Rafaga real 0
+[INFO] 11:59:20:683 cpu/(10204:10204): Proceso 1 estimacion rafaga siguiente 2500.000000
+[INFO] 11:59:20:683 cpu/(10204:10204): Program counter 3 (despues de ejecutar)
+[INFO] 11:59:20:683 cpu/(10204:10204): ==============================================================
+[INFO] 11:59:29:686 cpu/(10204:10204): Proceso 1 -> program counter 3 - est 2500.000000
+[INFO] 11:59:29:687 cpu/(10204:10204): Ejecutando NOOP
+[INFO] 11:59:30:689 cpu/(10204:10204): Ejecutando NOOP
+[INFO] 11:59:31:693 cpu/(10204:10204): Ejecutando WRITE
+[INFO] 11:59:31:693 cpu/(10204:10204): Aca busco el operando
+[INFO] 11:59:31:693 cpu/(10204:10204): Ejecutando COPY
+[INFO] 11:59:31:693 cpu/(10204:10204): Ejecutando READ
+[INFO] 11:59:31:694 cpu/(10204:10204): Ejecutando EXIT
+[INFO] 11:59:31:694 cpu/(10204:10204): Rafaga real 2006
+[INFO] 11:59:31:694 cpu/(10204:10204): Proceso 1 estimacion rafaga siguiente 2253.000000
+[INFO] 11:59:31:694 cpu/(10204:10204): Program counter 9 (despues de ejecutar)
+[INFO] 11:59:31:694 cpu/(10204:10204): ==============================================================
+[INFO] 12:01:06:618 cpu/(10330:10330): CPU_DISPATCH listo para recibir al cliente
+[INFO] 12:01:06:619 cpu/(10330:10330): Cliente conectado (a CPU_DISPATCH)
+[INFO] 12:01:06:619 cpu/(10330:10330): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 12:01:06:619 cpu/(10330:10330): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 12:01:06:619 cpu/(10330:10330): Valor alfa 0.00
+[INFO] 12:01:06:619 cpu/(10330:10330): Proceso 14256 -> program counter 1163152969 - est 0.000000
+[INFO] 12:01:26:464 cpu/(10369:10369): CPU_DISPATCH listo para recibir al cliente
+[INFO] 12:01:26:470 cpu/(10369:10369): Cliente conectado (a CPU_DISPATCH)
+[INFO] 12:01:26:470 cpu/(10369:10369): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 12:01:26:474 cpu/(10369:10369): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 12:01:26:474 cpu/(10369:10369): Valor alfa 0.00
+[INFO] 12:01:26:474 cpu/(10369:10369): Proceso 63408 -> program counter 1163152969 - est 0.000000
+[INFO] 12:01:43:818 cpu/(10390:10390): CPU_DISPATCH listo para recibir al cliente
+[INFO] 12:01:43:819 cpu/(10390:10390): Cliente conectado (a CPU_DISPATCH)
+[INFO] 12:01:43:819 cpu/(10390:10390): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 12:01:43:819 cpu/(10390:10390): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 12:01:43:819 cpu/(10390:10390): Valor alfa 0.00
+[INFO] 12:01:43:823 cpu/(10390:10390): Proceso 14256 -> program counter 1163152969 - est 0.000000
+[INFO] 12:02:01:435 cpu/(10414:10414): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 12:02:01:436 cpu/(10414:10414): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 12:02:01:449 cpu/(10414:10414): CPU_DISPATCH listo para recibir al cliente
+[INFO] 12:02:08:135 cpu/(10414:10414): Cliente conectado (a CPU_DISPATCH)
+[INFO] 12:02:08:135 cpu/(10414:10414): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 12:02:08:136 cpu/(10414:10414): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 12:02:08:136 cpu/(10414:10414): Valor alfa 0.50
+[INFO] 12:02:15:199 cpu/(10414:10414): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 12:02:15:199 cpu/(10414:10414): Ejecutando IO
+[INFO] 12:02:15:199 cpu/(10414:10414): Rafaga real 0
+[INFO] 12:02:15:199 cpu/(10414:10414): Proceso 1 estimacion rafaga siguiente 10000.000000
+[INFO] 12:02:15:199 cpu/(10414:10414): Program counter 1 (despues de ejecutar)
+[INFO] 12:02:15:199 cpu/(10414:10414): ==============================================================
+[INFO] 12:02:17:185 cpu/(10414:10414): Proceso 2 -> program counter 0 - est 20000.000000
+[INFO] 12:02:17:185 cpu/(10414:10414): Ejecutando IO
+[INFO] 12:02:17:186 cpu/(10414:10414): Rafaga real 0
+[INFO] 12:02:17:186 cpu/(10414:10414): Proceso 2 estimacion rafaga siguiente 10000.000000
+[INFO] 12:02:17:187 cpu/(10414:10414): Program counter 1 (despues de ejecutar)
+[INFO] 12:02:17:187 cpu/(10414:10414): ==============================================================
+[INFO] 12:02:19:342 cpu/(10414:10414): Proceso 3 -> program counter 0 - est 20000.000000
+[INFO] 12:02:19:342 cpu/(10414:10414): Ejecutando IO
+[INFO] 12:02:19:342 cpu/(10414:10414): Rafaga real 0
+[INFO] 12:02:19:342 cpu/(10414:10414): Proceso 3 estimacion rafaga siguiente 10000.000000
+[INFO] 12:02:19:342 cpu/(10414:10414): Program counter 1 (despues de ejecutar)
+[INFO] 12:02:19:342 cpu/(10414:10414): ==============================================================
+[INFO] 12:02:24:201 cpu/(10414:10414): Proceso 1 -> program counter 1 - est 10000.000000
+[INFO] 12:02:24:201 cpu/(10414:10414): Ejecutando IO
+[INFO] 12:02:24:201 cpu/(10414:10414): Rafaga real 0
+[INFO] 12:02:24:201 cpu/(10414:10414): Proceso 1 estimacion rafaga siguiente 5000.000000
+[INFO] 12:02:24:201 cpu/(10414:10414): Program counter 2 (despues de ejecutar)
+[INFO] 12:02:24:201 cpu/(10414:10414): ==============================================================
+[INFO] 12:02:33:202 cpu/(10414:10414): Proceso 2 -> program counter 1 - est 10000.000000
+[INFO] 12:02:33:202 cpu/(10414:10414): Ejecutando IO
+[INFO] 12:02:33:202 cpu/(10414:10414): Rafaga real 0
+[INFO] 12:02:33:202 cpu/(10414:10414): Proceso 2 estimacion rafaga siguiente 5000.000000
+[INFO] 12:02:33:202 cpu/(10414:10414): Program counter 2 (despues de ejecutar)
+[INFO] 12:02:33:202 cpu/(10414:10414): ==============================================================
+[INFO] 12:02:42:202 cpu/(10414:10414): Proceso 3 -> program counter 1 - est 10000.000000
+[INFO] 12:02:42:202 cpu/(10414:10414): Ejecutando IO
+[INFO] 12:02:42:202 cpu/(10414:10414): Rafaga real 0
+[INFO] 12:02:42:202 cpu/(10414:10414): Proceso 3 estimacion rafaga siguiente 5000.000000
+[INFO] 12:02:42:202 cpu/(10414:10414): Program counter 2 (despues de ejecutar)
+[INFO] 12:02:42:202 cpu/(10414:10414): ==============================================================
+[INFO] 12:02:51:204 cpu/(10414:10414): Proceso 1 -> program counter 2 - est 5000.000000
+[INFO] 12:02:51:205 cpu/(10414:10414): Ejecutando IO
+[INFO] 12:02:51:205 cpu/(10414:10414): Rafaga real 0
+[INFO] 12:02:51:205 cpu/(10414:10414): Proceso 1 estimacion rafaga siguiente 2500.000000
+[INFO] 12:02:51:205 cpu/(10414:10414): Program counter 3 (despues de ejecutar)
+[INFO] 12:02:51:205 cpu/(10414:10414): ==============================================================
+[INFO] 12:03:00:205 cpu/(10414:10414): Proceso 2 -> program counter 2 - est 5000.000000
+[INFO] 12:03:00:206 cpu/(10414:10414): Ejecutando IO
+[INFO] 12:03:00:206 cpu/(10414:10414): Rafaga real 0
+[INFO] 12:03:00:206 cpu/(10414:10414): Proceso 2 estimacion rafaga siguiente 2500.000000
+[INFO] 12:03:00:206 cpu/(10414:10414): Program counter 3 (despues de ejecutar)
+[INFO] 12:03:00:206 cpu/(10414:10414): ==============================================================
+[INFO] 12:03:09:207 cpu/(10414:10414): Proceso 3 -> program counter 2 - est 5000.000000
+[INFO] 12:03:09:207 cpu/(10414:10414): Ejecutando IO
+[INFO] 12:03:09:207 cpu/(10414:10414): Rafaga real 0
+[INFO] 12:03:09:207 cpu/(10414:10414): Proceso 3 estimacion rafaga siguiente 2500.000000
+[INFO] 12:03:09:207 cpu/(10414:10414): Program counter 3 (despues de ejecutar)
+[INFO] 12:03:09:207 cpu/(10414:10414): ==============================================================
+[INFO] 12:03:18:208 cpu/(10414:10414): Proceso 1 -> program counter 3 - est 2500.000000
+[INFO] 12:03:18:208 cpu/(10414:10414): Ejecutando NOOP
+[INFO] 12:03:19:209 cpu/(10414:10414): Ejecutando NOOP
+[INFO] 12:03:20:209 cpu/(10414:10414): Ejecutando WRITE
+[INFO] 12:03:20:210 cpu/(10414:10414): Aca busco el operando
+[INFO] 12:03:20:210 cpu/(10414:10414): Ejecutando COPY
+[INFO] 12:03:20:210 cpu/(10414:10414): Ejecutando READ
+[INFO] 12:03:20:211 cpu/(10414:10414): Ejecutando EXIT
+[INFO] 12:03:20:211 cpu/(10414:10414): Rafaga real 2002
+[INFO] 12:03:20:211 cpu/(10414:10414): Proceso 1 estimacion rafaga siguiente 2251.000000
+[INFO] 12:03:20:211 cpu/(10414:10414): Program counter 9 (despues de ejecutar)
+[INFO] 12:03:20:211 cpu/(10414:10414): ==============================================================
+[INFO] 12:03:27:209 cpu/(10414:10414): Proceso 2 -> program counter 3 - est 2500.000000
+[INFO] 12:03:27:210 cpu/(10414:10414): Ejecutando NOOP
+[INFO] 12:03:28:210 cpu/(10414:10414): Ejecutando NOOP
+[INFO] 12:03:29:211 cpu/(10414:10414): Ejecutando WRITE
+[INFO] 12:03:29:212 cpu/(10414:10414): Aca busco el operando
+[INFO] 12:03:29:212 cpu/(10414:10414): Ejecutando COPY
+[INFO] 12:03:29:212 cpu/(10414:10414): Ejecutando READ
+[INFO] 12:03:29:212 cpu/(10414:10414): Ejecutando EXIT
+[INFO] 12:03:29:212 cpu/(10414:10414): Rafaga real 2002
+[INFO] 12:03:29:213 cpu/(10414:10414): Proceso 2 estimacion rafaga siguiente 2251.000000
+[INFO] 12:03:29:213 cpu/(10414:10414): Program counter 9 (despues de ejecutar)
+[INFO] 12:03:29:213 cpu/(10414:10414): ==============================================================
+[INFO] 12:03:36:210 cpu/(10414:10414): Proceso 3 -> program counter 3 - est 2500.000000
+[INFO] 12:03:36:210 cpu/(10414:10414): Ejecutando NOOP
+[INFO] 12:03:37:211 cpu/(10414:10414): Ejecutando NOOP
+[INFO] 12:03:38:211 cpu/(10414:10414): Ejecutando WRITE
+[INFO] 12:03:38:212 cpu/(10414:10414): Aca busco el operando
+[INFO] 12:03:38:212 cpu/(10414:10414): Ejecutando COPY
+[INFO] 12:03:38:212 cpu/(10414:10414): Ejecutando READ
+[INFO] 12:03:38:212 cpu/(10414:10414): Ejecutando EXIT
+[INFO] 12:03:38:212 cpu/(10414:10414): Rafaga real 2001
+[INFO] 12:03:38:212 cpu/(10414:10414): Proceso 3 estimacion rafaga siguiente 2250.500000
+[INFO] 12:03:38:212 cpu/(10414:10414): Program counter 9 (despues de ejecutar)
+[INFO] 12:03:38:212 cpu/(10414:10414): ==============================================================
+[INFO] 12:06:39:661 cpu/(10414:10414): Proceso 45728 -> program counter 9 - est 2250.500000
+[INFO] 12:09:47:042 cpu/(10859:10859): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 12:09:47:042 cpu/(10859:10859): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 12:09:47:042 cpu/(10859:10859): CPU_DISPATCH listo para recibir al cliente
+[INFO] 12:10:08:227 cpu/(10859:10859): Cliente conectado (a CPU_DISPATCH)
+[INFO] 12:10:08:227 cpu/(10859:10859): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 12:10:08:229 cpu/(10859:10859): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 12:10:08:230 cpu/(10859:10859): Valor alfa 0.50
+[INFO] 12:10:32:395 cpu/(10859:10859): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 12:10:32:395 cpu/(10859:10859): Ejecutando IO
+[INFO] 12:10:32:395 cpu/(10859:10859): Rafaga real 0
+[INFO] 12:10:32:395 cpu/(10859:10859): Proceso 1 estimacion rafaga siguiente 10000.000000
+[INFO] 12:10:32:395 cpu/(10859:10859): Program counter 1 (despues de ejecutar)
+[INFO] 12:10:32:395 cpu/(10859:10859): ==============================================================
+[INFO] 12:10:36:960 cpu/(10859:10859): Proceso 2 -> program counter 0 - est 20000.000000
+[INFO] 12:10:36:960 cpu/(10859:10859): Ejecutando IO
+[INFO] 12:10:36:960 cpu/(10859:10859): Rafaga real 0
+[INFO] 12:10:36:960 cpu/(10859:10859): Proceso 2 estimacion rafaga siguiente 10000.000000
+[INFO] 12:10:36:960 cpu/(10859:10859): Program counter 1 (despues de ejecutar)
+[INFO] 12:10:36:960 cpu/(10859:10859): ==============================================================
+[INFO] 12:10:39:161 cpu/(10859:10859): Proceso 3 -> program counter 0 - est 20000.000000
+[INFO] 12:10:39:162 cpu/(10859:10859): Ejecutando IO
+[INFO] 12:10:39:162 cpu/(10859:10859): Rafaga real 0
+[INFO] 12:10:39:162 cpu/(10859:10859): Proceso 3 estimacion rafaga siguiente 10000.000000
+[INFO] 12:10:39:162 cpu/(10859:10859): Program counter 1 (despues de ejecutar)
+[INFO] 12:10:39:162 cpu/(10859:10859): ==============================================================
+[INFO] 12:10:41:396 cpu/(10859:10859): Proceso 1 -> program counter 1 - est 10000.000000
+[INFO] 12:10:41:396 cpu/(10859:10859): Ejecutando IO
+[INFO] 12:10:41:396 cpu/(10859:10859): Rafaga real 0
+[INFO] 12:10:41:396 cpu/(10859:10859): Proceso 1 estimacion rafaga siguiente 5000.000000
+[INFO] 12:10:41:396 cpu/(10859:10859): Program counter 2 (despues de ejecutar)
+[INFO] 12:10:41:396 cpu/(10859:10859): ==============================================================
+[INFO] 12:12:37:981 cpu/(10859:10859): Proceso 0 -> program counter 2 - est 5000.000000
+[INFO] 12:12:43:530 cpu/(11071:11071): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 12:12:43:531 cpu/(11071:11071): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 12:12:43:531 cpu/(11071:11071): CPU_DISPATCH listo para recibir al cliente
+[INFO] 12:12:51:771 cpu/(11071:11071): Cliente conectado (a CPU_DISPATCH)
+[INFO] 12:12:51:772 cpu/(11071:11071): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 12:12:51:774 cpu/(11071:11071): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 12:12:51:774 cpu/(11071:11071): Valor alfa 0.50
+[INFO] 12:12:51:780 cpu/(11071:11071): Proceso 59312 -> program counter 825700401 - est 30939524865200248584321269938970075975740205249834274324077105423491629252116749535579645540685084556434856174457339998113622751534664185884395158004389562489983169724416.000000
+[INFO] 12:13:02:949 cpu/(11125:11125): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 12:13:02:950 cpu/(11125:11125): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 12:13:02:950 cpu/(11125:11125): CPU_DISPATCH listo para recibir al cliente
+[INFO] 12:13:14:598 cpu/(11125:11125): Cliente conectado (a CPU_DISPATCH)
+[INFO] 12:13:14:605 cpu/(11125:11125): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 12:13:14:607 cpu/(11125:11125): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 12:13:14:607 cpu/(11125:11125): Valor alfa 0.50
+[INFO] 12:13:14:609 cpu/(11125:11125): Proceso 51120 -> program counter 892481841 - est 30939524865200248584321269938970075975740205249834274324077105423491629252116749535579645540685084556434856174457339998113622751534664185884395158004389562489983169724416.000000
+[INFO] 12:13:28:778 cpu/(11174:11174): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 12:13:28:778 cpu/(11174:11174): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 12:13:28:779 cpu/(11174:11174): CPU_DISPATCH listo para recibir al cliente
+[INFO] 12:13:32:659 cpu/(11174:11174): Cliente conectado (a CPU_DISPATCH)
+[INFO] 12:13:32:660 cpu/(11174:11174): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 12:13:32:660 cpu/(11174:11174): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 12:13:32:660 cpu/(11174:11174): Valor alfa 0.50
+[INFO] 12:13:32:661 cpu/(11174:11174): Proceso 42928 -> program counter 876032305 - est 30939524865200248584321269938970075975740205249834274324077105423491629252116749535579645540685084556434856174457339998113622751534664185884395158004389562489983169724416.000000
+[INFO] 12:13:40:764 cpu/(11205:11205): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 12:13:40:765 cpu/(11205:11205): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 12:13:40:765 cpu/(11205:11205): CPU_DISPATCH listo para recibir al cliente
+[INFO] 12:14:07:511 cpu/(11205:11205): Cliente conectado (a CPU_DISPATCH)
+[INFO] 12:14:07:511 cpu/(11205:11205): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 12:14:07:512 cpu/(11205:11205): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 12:14:07:512 cpu/(11205:11205): Valor alfa 0.50
+[INFO] 12:14:21:351 cpu/(11205:11205): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 12:14:21:352 cpu/(11205:11205): Ejecutando IO
+[INFO] 12:14:21:352 cpu/(11205:11205): Rafaga real 0
+[INFO] 12:14:21:352 cpu/(11205:11205): Proceso 1 estimacion rafaga siguiente 10000.000000
+[INFO] 12:14:21:352 cpu/(11205:11205): Program counter 1 (despues de ejecutar)
+[INFO] 12:14:21:352 cpu/(11205:11205): ==============================================================
+[INFO] 12:14:24:249 cpu/(11205:11205): Proceso 2 -> program counter 0 - est 20000.000000
+[INFO] 12:14:24:249 cpu/(11205:11205): Ejecutando IO
+[INFO] 12:14:24:249 cpu/(11205:11205): Rafaga real 0
+[INFO] 12:14:24:249 cpu/(11205:11205): Proceso 2 estimacion rafaga siguiente 10000.000000
+[INFO] 12:14:24:249 cpu/(11205:11205): Program counter 1 (despues de ejecutar)
+[INFO] 12:14:24:249 cpu/(11205:11205): ==============================================================
+[INFO] 12:14:25:440 cpu/(11205:11205): Proceso 3 -> program counter 0 - est 20000.000000
+[INFO] 12:14:25:440 cpu/(11205:11205): Ejecutando IO
+[INFO] 12:14:25:440 cpu/(11205:11205): Rafaga real 0
+[INFO] 12:14:25:440 cpu/(11205:11205): Proceso 3 estimacion rafaga siguiente 10000.000000
+[INFO] 12:14:25:440 cpu/(11205:11205): Program counter 1 (despues de ejecutar)
+[INFO] 12:14:25:440 cpu/(11205:11205): ==============================================================
+[INFO] 12:14:30:354 cpu/(11205:11205): Proceso 1 -> program counter 1 - est 10000.000000
+[INFO] 12:14:30:355 cpu/(11205:11205): Ejecutando IO
+[INFO] 12:14:30:355 cpu/(11205:11205): Rafaga real 0
+[INFO] 12:14:30:355 cpu/(11205:11205): Proceso 1 estimacion rafaga siguiente 5000.000000
+[INFO] 12:14:30:355 cpu/(11205:11205): Program counter 2 (despues de ejecutar)
+[INFO] 12:14:30:355 cpu/(11205:11205): ==============================================================
+[INFO] 12:14:39:356 cpu/(11205:11205): Proceso 2 -> program counter 1 - est 10000.000000
+[INFO] 12:14:39:357 cpu/(11205:11205): Ejecutando IO
+[INFO] 12:14:39:357 cpu/(11205:11205): Rafaga real 0
+[INFO] 12:14:39:357 cpu/(11205:11205): Proceso 2 estimacion rafaga siguiente 5000.000000
+[INFO] 12:14:39:357 cpu/(11205:11205): Program counter 2 (despues de ejecutar)
+[INFO] 12:14:39:357 cpu/(11205:11205): ==============================================================
+[INFO] 12:14:48:357 cpu/(11205:11205): Proceso 3 -> program counter 1 - est 10000.000000
+[INFO] 12:14:48:358 cpu/(11205:11205): Ejecutando IO
+[INFO] 12:14:48:358 cpu/(11205:11205): Rafaga real 0
+[INFO] 12:14:48:358 cpu/(11205:11205): Proceso 3 estimacion rafaga siguiente 5000.000000
+[INFO] 12:14:48:358 cpu/(11205:11205): Program counter 2 (despues de ejecutar)
+[INFO] 12:14:48:358 cpu/(11205:11205): ==============================================================
+[INFO] 12:14:57:362 cpu/(11205:11205): Proceso 1 -> program counter 2 - est 5000.000000
+[INFO] 12:14:57:362 cpu/(11205:11205): Ejecutando IO
+[INFO] 12:14:57:362 cpu/(11205:11205): Rafaga real 0
+[INFO] 12:14:57:362 cpu/(11205:11205): Proceso 1 estimacion rafaga siguiente 2500.000000
+[INFO] 12:14:57:362 cpu/(11205:11205): Program counter 3 (despues de ejecutar)
+[INFO] 12:14:57:363 cpu/(11205:11205): ==============================================================
+[INFO] 12:15:06:363 cpu/(11205:11205): Proceso 2 -> program counter 2 - est 5000.000000
+[INFO] 12:15:06:363 cpu/(11205:11205): Ejecutando IO
+[INFO] 12:15:06:363 cpu/(11205:11205): Rafaga real 0
+[INFO] 12:15:06:363 cpu/(11205:11205): Proceso 2 estimacion rafaga siguiente 2500.000000
+[INFO] 12:15:06:363 cpu/(11205:11205): Program counter 3 (despues de ejecutar)
+[INFO] 12:15:06:364 cpu/(11205:11205): ==============================================================
+[INFO] 12:15:15:364 cpu/(11205:11205): Proceso 3 -> program counter 2 - est 5000.000000
+[INFO] 12:15:15:364 cpu/(11205:11205): Ejecutando IO
+[INFO] 12:15:15:364 cpu/(11205:11205): Rafaga real 0
+[INFO] 12:15:15:364 cpu/(11205:11205): Proceso 3 estimacion rafaga siguiente 2500.000000
+[INFO] 12:15:15:364 cpu/(11205:11205): Program counter 3 (despues de ejecutar)
+[INFO] 12:15:15:364 cpu/(11205:11205): ==============================================================
+[INFO] 12:15:24:364 cpu/(11205:11205): Proceso 1 -> program counter 3 - est 2500.000000
+[INFO] 12:15:24:364 cpu/(11205:11205): Ejecutando NOOP
+[INFO] 12:15:25:365 cpu/(11205:11205): Ejecutando NOOP
+[INFO] 12:15:26:366 cpu/(11205:11205): Ejecutando WRITE
+[INFO] 12:15:26:366 cpu/(11205:11205): Aca busco el operando
+[INFO] 12:15:26:366 cpu/(11205:11205): Ejecutando COPY
+[INFO] 12:15:26:366 cpu/(11205:11205): Ejecutando READ
+[INFO] 12:15:26:366 cpu/(11205:11205): Ejecutando EXIT
+[INFO] 12:15:26:366 cpu/(11205:11205): Rafaga real 2001
+[INFO] 12:15:26:366 cpu/(11205:11205): Proceso 1 estimacion rafaga siguiente 2250.500000
+[INFO] 12:15:26:367 cpu/(11205:11205): Program counter 9 (despues de ejecutar)
+[INFO] 12:15:26:367 cpu/(11205:11205): ==============================================================
+[INFO] 12:15:33:365 cpu/(11205:11205): Proceso 2 -> program counter 3 - est 2500.000000
+[INFO] 12:15:33:366 cpu/(11205:11205): Ejecutando NOOP
+[INFO] 12:15:34:367 cpu/(11205:11205): Ejecutando NOOP
+[INFO] 12:15:35:367 cpu/(11205:11205): Ejecutando WRITE
+[INFO] 12:15:35:368 cpu/(11205:11205): Aca busco el operando
+[INFO] 12:15:35:368 cpu/(11205:11205): Ejecutando COPY
+[INFO] 12:15:35:368 cpu/(11205:11205): Ejecutando READ
+[INFO] 12:15:35:368 cpu/(11205:11205): Ejecutando EXIT
+[INFO] 12:15:35:368 cpu/(11205:11205): Rafaga real 2002
+[INFO] 12:15:35:368 cpu/(11205:11205): Proceso 2 estimacion rafaga siguiente 2251.000000
+[INFO] 12:15:35:368 cpu/(11205:11205): Program counter 9 (despues de ejecutar)
+[INFO] 12:15:35:369 cpu/(11205:11205): ==============================================================
+[INFO] 12:15:42:366 cpu/(11205:11205): Proceso 3 -> program counter 3 - est 2500.000000
+[INFO] 12:15:42:367 cpu/(11205:11205): Ejecutando NOOP
+[INFO] 12:15:43:367 cpu/(11205:11205): Ejecutando NOOP
+[INFO] 12:15:44:367 cpu/(11205:11205): Ejecutando WRITE
+[INFO] 12:15:44:368 cpu/(11205:11205): Aca busco el operando
+[INFO] 12:15:44:368 cpu/(11205:11205): Ejecutando COPY
+[INFO] 12:15:44:368 cpu/(11205:11205): Ejecutando READ
+[INFO] 12:15:44:368 cpu/(11205:11205): Ejecutando EXIT
+[INFO] 12:15:44:368 cpu/(11205:11205): Rafaga real 2001
+[INFO] 12:15:44:368 cpu/(11205:11205): Proceso 3 estimacion rafaga siguiente 2250.500000
+[INFO] 12:15:44:368 cpu/(11205:11205): Program counter 9 (despues de ejecutar)
+[INFO] 12:15:44:368 cpu/(11205:11205): ==============================================================
+[INFO] 12:16:03:073 cpu/(11205:11205): Proceso 45728 -> program counter 9 - est 2250.500000
