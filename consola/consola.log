@@ -2936,3 +2936,118 @@
 [INFO] 23:52:23:712 CONSOLA/(994:994): El proceso se finalizó exitosamente :)
 [INFO] 23:52:28:721 CONSOLA/(1013:1013): El proceso se finalizó exitosamente :)
 [INFO] 23:52:31:727 CONSOLA/(1029:1029): El proceso se finalizó exitosamente :)
+[INFO] 12:07:43:317 CONSOLA/(5573:5573): Instruccion numero 0: N -1 -1
+[INFO] 12:07:43:318 CONSOLA/(5573:5573): Instruccion numero 1: N -1 -1
+[INFO] 12:07:43:318 CONSOLA/(5573:5573): Instruccion numero 2: N -1 -1
+[INFO] 12:07:43:318 CONSOLA/(5573:5573): Instruccion numero 3: I 13000 -1
+[INFO] 12:07:43:318 CONSOLA/(5573:5573): Instruccion numero 4: N -1 -1
+[INFO] 12:07:43:318 CONSOLA/(5573:5573): Instruccion numero 5: N -1 -1
+[INFO] 12:07:43:318 CONSOLA/(5573:5573): Instruccion numero 6: N -1 -1
+[INFO] 12:07:43:318 CONSOLA/(5573:5573): Instruccion numero 7: E -1 -1
+[INFO] 12:07:43:322 CONSOLA/(5573:5573): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:07:43:322 CONSOLA/(5573:5573): Programa enviado al kernel correctamente!
+[INFO] 12:07:45:295 CONSOLA/(5585:5585): Instruccion numero 0: N -1 -1
+[INFO] 12:07:45:295 CONSOLA/(5585:5585): Instruccion numero 1: N -1 -1
+[INFO] 12:07:45:295 CONSOLA/(5585:5585): Instruccion numero 2: N -1 -1
+[INFO] 12:07:45:295 CONSOLA/(5585:5585): Instruccion numero 3: I 5000 -1
+[INFO] 12:07:45:295 CONSOLA/(5585:5585): Instruccion numero 4: N -1 -1
+[INFO] 12:07:45:295 CONSOLA/(5585:5585): Instruccion numero 5: N -1 -1
+[INFO] 12:07:45:295 CONSOLA/(5585:5585): Instruccion numero 6: N -1 -1
+[INFO] 12:07:45:295 CONSOLA/(5585:5585): Instruccion numero 7: E -1 -1
+[INFO] 12:07:45:295 CONSOLA/(5585:5585): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:07:45:295 CONSOLA/(5585:5585): Programa enviado al kernel correctamente!
+[INFO] 12:07:46:835 CONSOLA/(5597:5597): Instruccion numero 0: N -1 -1
+[INFO] 12:07:46:835 CONSOLA/(5597:5597): Instruccion numero 1: N -1 -1
+[INFO] 12:07:46:835 CONSOLA/(5597:5597): Instruccion numero 2: N -1 -1
+[INFO] 12:07:46:835 CONSOLA/(5597:5597): Instruccion numero 3: N -1 -1
+[INFO] 12:07:46:835 CONSOLA/(5597:5597): Instruccion numero 4: N -1 -1
+[INFO] 12:07:46:835 CONSOLA/(5597:5597): Instruccion numero 5: N -1 -1
+[INFO] 12:07:46:835 CONSOLA/(5597:5597): Instruccion numero 6: N -1 -1
+[INFO] 12:07:46:836 CONSOLA/(5597:5597): Instruccion numero 7: N -1 -1
+[INFO] 12:07:46:836 CONSOLA/(5597:5597): Instruccion numero 8: N -1 -1
+[INFO] 12:07:46:836 CONSOLA/(5597:5597): Instruccion numero 9: N -1 -1
+[INFO] 12:07:46:836 CONSOLA/(5597:5597): Instruccion numero 10: E -1 -1
+[INFO] 12:07:46:836 CONSOLA/(5597:5597): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 12:07:46:836 CONSOLA/(5597:5597): Programa enviado al kernel correctamente!
+[INFO] 12:08:02:340 CONSOLA/(5573:5573): El proceso se finalizó exitosamente :)
+[INFO] 12:08:07:346 CONSOLA/(5585:5585): El proceso se finalizó exitosamente :)
+[INFO] 12:08:10:349 CONSOLA/(5597:5597): El proceso se finalizó exitosamente :)
+[INFO] 15:33:01:354 CONSOLA/(2752:2752): Instruccion numero 0: N -1 -1
+[INFO] 15:33:01:370 CONSOLA/(2752:2752): Instruccion numero 1: N -1 -1
+[INFO] 15:33:01:370 CONSOLA/(2752:2752): Instruccion numero 2: N -1 -1
+[INFO] 15:33:01:370 CONSOLA/(2752:2752): Instruccion numero 3: N -1 -1
+[INFO] 15:33:01:370 CONSOLA/(2752:2752): Instruccion numero 4: N -1 -1
+[INFO] 15:33:01:371 CONSOLA/(2752:2752): Instruccion numero 5: I 3000 -1
+[INFO] 15:33:01:371 CONSOLA/(2752:2752): Instruccion numero 6: N -1 -1
+[INFO] 15:33:01:371 CONSOLA/(2752:2752): Instruccion numero 7: N -1 -1
+[INFO] 15:33:01:371 CONSOLA/(2752:2752): Instruccion numero 8: N -1 -1
+[INFO] 15:33:01:371 CONSOLA/(2752:2752): Instruccion numero 9: E -1 -1
+[INFO] 15:33:01:371 CONSOLA/(2752:2752): Error al conectar (a KERNEL)
+[ERROR] 15:33:01:371 CONSOLA/(2752:2752): Por desgracia no se pudo enviar el programa :(
+[INFO] 15:33:11:451 CONSOLA/(2762:2762): Instruccion numero 0: N -1 -1
+[INFO] 15:33:11:451 CONSOLA/(2762:2762): Instruccion numero 1: N -1 -1
+[INFO] 15:33:11:451 CONSOLA/(2762:2762): Instruccion numero 2: N -1 -1
+[INFO] 15:33:11:452 CONSOLA/(2762:2762): Instruccion numero 3: N -1 -1
+[INFO] 15:33:11:452 CONSOLA/(2762:2762): Instruccion numero 4: N -1 -1
+[INFO] 15:33:11:452 CONSOLA/(2762:2762): Instruccion numero 5: E -1 -1
+[INFO] 15:33:11:452 CONSOLA/(2762:2762): Error al conectar (a KERNEL)
+[ERROR] 15:33:11:452 CONSOLA/(2762:2762): Por desgracia no se pudo enviar el programa :(
+[INFO] 15:33:24:853 CONSOLA/(2775:2775): Instruccion numero 0: N -1 -1
+[INFO] 15:33:24:854 CONSOLA/(2775:2775): Instruccion numero 1: N -1 -1
+[INFO] 15:33:24:854 CONSOLA/(2775:2775): Instruccion numero 2: N -1 -1
+[INFO] 15:33:24:854 CONSOLA/(2775:2775): Instruccion numero 3: I 5000 -1
+[INFO] 15:33:24:854 CONSOLA/(2775:2775): Instruccion numero 4: N -1 -1
+[INFO] 15:33:24:854 CONSOLA/(2775:2775): Instruccion numero 5: N -1 -1
+[INFO] 15:33:24:854 CONSOLA/(2775:2775): Instruccion numero 6: N -1 -1
+[INFO] 15:33:24:854 CONSOLA/(2775:2775): Instruccion numero 7: E -1 -1
+[INFO] 15:33:24:854 CONSOLA/(2775:2775): Error al conectar (a KERNEL)
+[ERROR] 15:33:24:855 CONSOLA/(2775:2775): Por desgracia no se pudo enviar el programa :(
+[INFO] 15:33:30:292 CONSOLA/(2786:2786): Instruccion numero 0: N -1 -1
+[INFO] 15:33:30:292 CONSOLA/(2786:2786): Instruccion numero 1: N -1 -1
+[INFO] 15:33:30:293 CONSOLA/(2786:2786): Instruccion numero 2: N -1 -1
+[INFO] 15:33:30:293 CONSOLA/(2786:2786): Instruccion numero 3: N -1 -1
+[INFO] 15:33:30:293 CONSOLA/(2786:2786): Instruccion numero 4: N -1 -1
+[INFO] 15:33:30:293 CONSOLA/(2786:2786): Instruccion numero 5: N -1 -1
+[INFO] 15:33:30:293 CONSOLA/(2786:2786): Instruccion numero 6: N -1 -1
+[INFO] 15:33:30:293 CONSOLA/(2786:2786): Instruccion numero 7: N -1 -1
+[INFO] 15:33:30:293 CONSOLA/(2786:2786): Instruccion numero 8: N -1 -1
+[INFO] 15:33:30:293 CONSOLA/(2786:2786): Instruccion numero 9: N -1 -1
+[INFO] 15:33:30:294 CONSOLA/(2786:2786): Instruccion numero 10: E -1 -1
+[INFO] 15:33:30:296 CONSOLA/(2786:2786): Error al conectar (a KERNEL)
+[ERROR] 15:33:30:296 CONSOLA/(2786:2786): Por desgracia no se pudo enviar el programa :(
+[INFO] 15:33:52:805 CONSOLA/(2837:2837): Instruccion numero 0: N -1 -1
+[INFO] 15:33:52:805 CONSOLA/(2837:2837): Instruccion numero 1: N -1 -1
+[INFO] 15:33:52:805 CONSOLA/(2837:2837): Instruccion numero 2: N -1 -1
+[INFO] 15:33:52:805 CONSOLA/(2837:2837): Instruccion numero 3: I 13000 -1
+[INFO] 15:33:52:805 CONSOLA/(2837:2837): Instruccion numero 4: N -1 -1
+[INFO] 15:33:52:805 CONSOLA/(2837:2837): Instruccion numero 5: N -1 -1
+[INFO] 15:33:52:805 CONSOLA/(2837:2837): Instruccion numero 6: N -1 -1
+[INFO] 15:33:52:805 CONSOLA/(2837:2837): Instruccion numero 7: E -1 -1
+[INFO] 15:33:52:806 CONSOLA/(2837:2837): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 15:33:52:806 CONSOLA/(2837:2837): Programa enviado al kernel correctamente!
+[INFO] 15:33:56:241 CONSOLA/(2848:2848): Instruccion numero 0: N -1 -1
+[INFO] 15:33:56:241 CONSOLA/(2848:2848): Instruccion numero 1: N -1 -1
+[INFO] 15:33:56:241 CONSOLA/(2848:2848): Instruccion numero 2: N -1 -1
+[INFO] 15:33:56:242 CONSOLA/(2848:2848): Instruccion numero 3: I 5000 -1
+[INFO] 15:33:56:242 CONSOLA/(2848:2848): Instruccion numero 4: N -1 -1
+[INFO] 15:33:56:242 CONSOLA/(2848:2848): Instruccion numero 5: N -1 -1
+[INFO] 15:33:56:242 CONSOLA/(2848:2848): Instruccion numero 6: N -1 -1
+[INFO] 15:33:56:242 CONSOLA/(2848:2848): Instruccion numero 7: E -1 -1
+[INFO] 15:33:56:243 CONSOLA/(2848:2848): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 15:33:56:243 CONSOLA/(2848:2848): Programa enviado al kernel correctamente!
+[INFO] 15:34:00:871 CONSOLA/(2862:2862): Instruccion numero 0: N -1 -1
+[INFO] 15:34:00:872 CONSOLA/(2862:2862): Instruccion numero 1: N -1 -1
+[INFO] 15:34:00:872 CONSOLA/(2862:2862): Instruccion numero 2: N -1 -1
+[INFO] 15:34:00:872 CONSOLA/(2862:2862): Instruccion numero 3: N -1 -1
+[INFO] 15:34:00:872 CONSOLA/(2862:2862): Instruccion numero 4: N -1 -1
+[INFO] 15:34:00:872 CONSOLA/(2862:2862): Instruccion numero 5: N -1 -1
+[INFO] 15:34:00:872 CONSOLA/(2862:2862): Instruccion numero 6: N -1 -1
+[INFO] 15:34:00:872 CONSOLA/(2862:2862): Instruccion numero 7: N -1 -1
+[INFO] 15:34:00:872 CONSOLA/(2862:2862): Instruccion numero 8: N -1 -1
+[INFO] 15:34:00:872 CONSOLA/(2862:2862): Instruccion numero 9: N -1 -1
+[INFO] 15:34:00:872 CONSOLA/(2862:2862): Instruccion numero 10: E -1 -1
+[INFO] 15:34:00:875 CONSOLA/(2862:2862): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 15:34:00:875 CONSOLA/(2862:2862): Programa enviado al kernel correctamente!
+[INFO] 15:34:11:843 CONSOLA/(2837:2837): El proceso se finalizó exitosamente :)
+[INFO] 15:34:16:860 CONSOLA/(2848:2848): El proceso se finalizó exitosamente :)
+[INFO] 15:34:19:880 CONSOLA/(2862:2862): El proceso se finalizó exitosamente :)

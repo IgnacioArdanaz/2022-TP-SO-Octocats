@@ -1,6 +1,5 @@
 #include "kernel_utils.h"
 
-pthread_mutex_t mx_multip_actual = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_pid_sig = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_new = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_lista_ready = PTHREAD_MUTEX_INITIALIZER;
@@ -24,13 +23,9 @@ t_dictionary* iteracion_blocked;
 
 bool cpu_desocupado;
 
-// CHEQUEAR SI ALGUNO DE ESTAS VARIABLES PUEDEN SER LOCALES DE LA FUNCION INICIALIZAR
-// ES PREFERIBLE QUE SEAN LOCALES A QUE SEAN GLOBALES
-int pid_sig, grado_multiprogramacion, multiprogramacion_actual,
-	conexion_cpu_dispatch, conexion_cpu_interrupt, tiempo_suspended, conexion_memoria;
+int pid_sig, conexion_cpu_dispatch, conexion_cpu_interrupt, tiempo_suspended, conexion_memoria;
 
 double estimacion_inicial;
-
 
 void inicializar_kernel(){
 
@@ -48,11 +43,9 @@ void inicializar_kernel(){
 	pid_sig = 1;
 	cpu_desocupado = true;
 
-	grado_multiprogramacion = config_get_int_value(config,"GRADO_MULTIPROGRAMACION");
 	estimacion_inicial = config_get_double_value(config,"ESTIMACION_INICIAL");
 	char* algoritmo_config = config_get_string_value(config,"ALGORITMO_PLANIFICACION");
 	tiempo_suspended = config_get_int_value(config,"TIEMPO_MAXIMO_BLOQUEADO");
-	double alfa = config_get_double_value(config,"ALFA");
 
 	//conectando con MEMORIA
 //	char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
@@ -71,6 +64,7 @@ void inicializar_kernel(){
 	char* puerto_cpu_interrupt = config_get_string_value(config,"PUERTO_CPU_INTERRUPT");
 	conexion_cpu_dispatch = crear_conexion(logger, "CPU DISPATCH", ip_cpu, puerto_cpu_dispatch);
 	conexion_cpu_interrupt= crear_conexion(logger, "CPU INTERRUPT", ip_cpu, puerto_cpu_interrupt);
+	double alfa = config_get_double_value(config,"ALFA");
 	send(conexion_cpu_dispatch,&alfa,sizeof(alfa),0);
 
 
@@ -79,7 +73,7 @@ void inicializar_kernel(){
 	sem_init(&s_blocked, 0, 0);
 	sem_init(&s_suspended_ready, 0, 0);
 	sem_init(&s_cpu_desocupado, 0, 1);
-	sem_init(&s_multiprogramacion_actual, 0, grado_multiprogramacion);
+	sem_init(&s_multiprogramacion_actual, 0, config_get_int_value(config,"GRADO_MULTIPROGRAMACION"));
 	sem_init(&s_ready_execute, 0, 0);
 	sem_init(&s_pcb_desalojado, 0, 0);
 	sem_init(&s_esperar_cpu, 0, 0);
@@ -128,7 +122,6 @@ int escuchar_servidor(char* name, int server_socket){
 void procesar_socket(thread_args* argumentos){
 	int cliente_socket = argumentos->cliente;
 	//char* server_name = string_duplicate(argumentos->server_name);
-	int32_t resultError = -1;
 	free(argumentos);
 	op_code cop;
 	while (cliente_socket != -1) {
@@ -136,6 +129,7 @@ void procesar_socket(thread_args* argumentos){
 			pthread_mutex_lock(&mx_log);
 			log_error(logger,"DISCONNECT FAILURE!");
 			pthread_mutex_unlock(&mx_log);
+			int32_t resultError = -1;
 			send(cliente_socket, &resultError, sizeof(int32_t), 0);
 			return;
 		}
@@ -261,7 +255,7 @@ void esperar_cpu(){
 		switch (cop) {
 			case EXIT:{
 				int socket_pcb = (int) dictionary_get(sockets,string_itoa(pcb->pid));
-				// Hay q avisarle a memoria que finalizo para q borre todo.
+				// Hay q avisarle a memoria que finalizo para q borre to-do.
 				sem_post(&s_multiprogramacion_actual);
 				send(socket_pcb,&cop,sizeof(op_code),0);
 				log_info(logger, "[EXECUTE -> EXIT] Proceso %d terminado",pcb->pid);
