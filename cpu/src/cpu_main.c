@@ -27,7 +27,7 @@ int main(void) {
 		struct timespec end;
 		clock_gettime(CLOCK_REALTIME, &end);
 		rafaga_real = (end.tv_sec - start.tv_sec) * 1000 + (end.tv_nsec - start.tv_nsec) / 1000000;
-		calculo_estimacion(pcb);
+		calculo_estimacion(pcb, estado);
 
 		log_info(logger,"Program counter %d (despues de ejecutar)",pcb->pc);
 		log_info(logger,"==============================================================");
@@ -40,10 +40,14 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 
-void calculo_estimacion(PCB_t *pcb){
+void calculo_estimacion(PCB_t *pcb, op_code estado){
 	log_info(logger, "Rafaga real %" PRIu64 , rafaga_real);
 
-	pcb->est_rafaga = pcb->est_rafaga *alfa + (double)rafaga_real*(1-alfa); //Calculo estimacion rafaga siguiente
+	if(estado == INTERRUPTION){
+		pcb->est_rafaga = pcb->est_rafaga - (double)rafaga_real;
+	} else {
+		pcb->est_rafaga = pcb->est_rafaga *alfa + (double)rafaga_real*(1-alfa); //Calculo estimacion rafaga siguiente
+	}
 	log_info(logger, "Proceso %d estimacion rafaga siguiente %f",pcb->pid, pcb->est_rafaga);
 }
 

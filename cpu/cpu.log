@@ -5066,3 +5066,116 @@
 [INFO] 23:30:03:765 cpu/(31902:31902): Proceso 2 estimacion rafaga siguiente 7252.750000
 [INFO] 23:30:03:765 cpu/(31902:31902): Program counter 8 (despues de ejecutar)
 [INFO] 23:30:03:765 cpu/(31902:31902): ==============================================================
+[INFO] 23:48:19:679 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:679 cpu/(31902:31902): Proceso 0 -> program counter 8 - est 7252.750000
+[INFO] 23:48:19:679 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:679 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:679 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:679 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:679 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:680 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:681 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:681 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:681 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:48:19:681 cpu/(31902:31923): Interrucion recibida
+[INFO] 23:51:58:292 cpu/(960:960): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 23:51:58:298 cpu/(960:960): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 23:51:58:298 cpu/(960:960): CPU_DISPATCH listo para recibir al cliente
+[INFO] 23:52:01:872 cpu/(960:960): Cliente conectado (a CPU_DISPATCH)
+[INFO] 23:52:01:873 cpu/(960:960): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 23:52:01:875 cpu/(960:960): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 23:52:01:875 cpu/(960:960): Valor alfa 0.50
+[INFO] 23:52:04:692 cpu/(960:960): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 23:52:04:692 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:05:692 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:06:691 cpu/(960:981): Interrucion recibida
+[INFO] 23:52:06:692 cpu/(960:960): Rafaga real 2000
+[INFO] 23:52:06:692 cpu/(960:960): Proceso 1 estimacion rafaga siguiente 18000.000000
+[INFO] 23:52:06:692 cpu/(960:960): Program counter 2 (despues de ejecutar)
+[INFO] 23:52:06:692 cpu/(960:960): ==============================================================
+[INFO] 23:52:06:693 cpu/(960:960): Proceso 1 -> program counter 2 - est 18000.000000
+[INFO] 23:52:06:693 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:07:693 cpu/(960:960): Ejecutando IO
+[INFO] 23:52:07:694 cpu/(960:960): Rafaga real 1001
+[INFO] 23:52:07:694 cpu/(960:960): Proceso 1 estimacion rafaga siguiente 9500.500000
+[INFO] 23:52:07:694 cpu/(960:960): Program counter 4 (despues de ejecutar)
+[INFO] 23:52:07:694 cpu/(960:960): ==============================================================
+[INFO] 23:52:07:695 cpu/(960:960): Proceso 2 -> program counter 0 - est 20000.000000
+[INFO] 23:52:07:695 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:08:695 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:09:696 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:10:697 cpu/(960:960): Ejecutando IO
+[INFO] 23:52:10:697 cpu/(960:960): Rafaga real 3001
+[INFO] 23:52:10:697 cpu/(960:960): Proceso 2 estimacion rafaga siguiente 11500.500000
+[INFO] 23:52:10:697 cpu/(960:960): Program counter 4 (despues de ejecutar)
+[INFO] 23:52:10:698 cpu/(960:960): ==============================================================
+[INFO] 23:52:15:703 cpu/(960:960): Proceso 3 -> program counter 0 - est 20000.000000
+[INFO] 23:52:15:704 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:16:704 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:17:704 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:18:705 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:19:705 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:20:696 cpu/(960:981): Interrucion recibida
+[INFO] 23:52:20:705 cpu/(960:960): Rafaga real 5001
+[INFO] 23:52:20:705 cpu/(960:960): Proceso 3 estimacion rafaga siguiente 14999.000000
+[INFO] 23:52:20:706 cpu/(960:960): Program counter 5 (despues de ejecutar)
+[INFO] 23:52:20:706 cpu/(960:960): ==============================================================
+[INFO] 23:52:20:706 cpu/(960:981): Interrucion recibida
+[INFO] 23:52:20:707 cpu/(960:960): Proceso 1 -> program counter 4 - est 9500.500000
+[INFO] 23:52:20:707 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:21:707 cpu/(960:960): Rafaga real 1000
+[INFO] 23:52:21:708 cpu/(960:960): Proceso 1 estimacion rafaga siguiente 8500.500000
+[INFO] 23:52:21:708 cpu/(960:960): Program counter 5 (despues de ejecutar)
+[INFO] 23:52:21:708 cpu/(960:960): ==============================================================
+[INFO] 23:52:21:709 cpu/(960:960): Proceso 1 -> program counter 5 - est 8500.500000
+[INFO] 23:52:21:710 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:22:711 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:23:711 cpu/(960:960): Ejecutando EXIT
+[INFO] 23:52:23:712 cpu/(960:960): Rafaga real 2001
+[INFO] 23:52:23:712 cpu/(960:960): Proceso 1 estimacion rafaga siguiente 5250.750000
+[INFO] 23:52:23:712 cpu/(960:960): Program counter 8 (despues de ejecutar)
+[INFO] 23:52:23:712 cpu/(960:960): ==============================================================
+[INFO] 23:52:23:716 cpu/(960:960): Proceso 3 -> program counter 5 - est 14999.000000
+[INFO] 23:52:23:716 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:24:717 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:25:698 cpu/(960:981): Interrucion recibida
+[INFO] 23:52:25:717 cpu/(960:960): Rafaga real 2000
+[INFO] 23:52:25:717 cpu/(960:960): Proceso 3 estimacion rafaga siguiente 12999.000000
+[INFO] 23:52:25:717 cpu/(960:960): Program counter 7 (despues de ejecutar)
+[INFO] 23:52:25:717 cpu/(960:960): ==============================================================
+[INFO] 23:52:25:718 cpu/(960:960): Proceso 2 -> program counter 4 - est 11500.500000
+[INFO] 23:52:25:718 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:26:718 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:27:719 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:28:720 cpu/(960:960): Ejecutando EXIT
+[INFO] 23:52:28:720 cpu/(960:960): Rafaga real 3002
+[INFO] 23:52:28:720 cpu/(960:960): Proceso 2 estimacion rafaga siguiente 7251.250000
+[INFO] 23:52:28:721 cpu/(960:960): Program counter 8 (despues de ejecutar)
+[INFO] 23:52:28:721 cpu/(960:960): ==============================================================
+[INFO] 23:52:28:723 cpu/(960:960): Proceso 3 -> program counter 7 - est 12999.000000
+[INFO] 23:52:28:723 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:29:724 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:30:725 cpu/(960:960): Ejecutando NOOP
+[INFO] 23:52:31:725 cpu/(960:960): Ejecutando EXIT
+[INFO] 23:52:31:726 cpu/(960:960): Rafaga real 3003
+[INFO] 23:52:31:726 cpu/(960:960): Proceso 3 estimacion rafaga siguiente 8001.000000
+[INFO] 23:52:31:726 cpu/(960:960): Program counter 11 (despues de ejecutar)
+[INFO] 23:52:31:726 cpu/(960:960): ==============================================================
