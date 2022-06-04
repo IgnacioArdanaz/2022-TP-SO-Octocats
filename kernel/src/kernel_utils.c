@@ -195,13 +195,13 @@ void pasaje_a_ready(){
 		if(queue_is_empty(cola_suspended_ready)){ //Si no hay suspendidos, agarro uno de new
 			pthread_mutex_lock(&mx_cola_new);
 			proceso = queue_pop(cola_new);
-			log_info(logger,"PROCESO %d POPEADO COLA NEW", proceso->pid);
+			log_info(logger,"[NEW -> READY] PROCESO %d AGREGADO A READY", proceso->pid);
 			pthread_mutex_unlock(&mx_cola_new);
 		}
 		else{
 			pthread_mutex_lock(&mx_cola_suspended_ready);
 			proceso = queue_pop(cola_suspended_ready);
-			log_info(logger,"PROCESO %d POPEADO COLA SUSPENDED READY", proceso->pid);
+			log_info(logger,"[SUSP_READY -> READY] PROCESO %d AGREGADO A READY", proceso->pid);
 			pthread_mutex_unlock(&mx_cola_suspended_ready);
 		}
 		pthread_mutex_lock(&mx_lista_ready);
@@ -216,7 +216,7 @@ void pasaje_a_ready(){
 void loggear_estado_de_colas(){
 	pthread_mutex_lock(&mx_log);
 	log_info(logger,
-			"(new -> ready) Cola de new: %d | (new -> ready) Cola de ready: %d",
+			"[NEW/SUSP_READY -> READY] Cola de new: %d | (new -> ready) Cola de ready: %d",
 			queue_size(cola_new),
 			list_size(lista_ready));
 	pthread_mutex_unlock(&mx_log);
@@ -232,7 +232,7 @@ void fifo_ready_execute(){
 		PCB_t* proceso = list_remove(lista_ready, 0);
 		pthread_mutex_unlock(&mx_lista_ready);
 		pthread_mutex_lock(&mx_log);
-		log_info(logger,"Mandando proceso %d a ejecutar",proceso->pid);
+		log_info(logger,"[READY -> EXECUTE] MANDANDO PROCESO %d A EJECUTAR", proceso->pid);
 		pthread_mutex_unlock(&mx_log);
 		send_proceso(conexion_cpu_dispatch, proceso, PROCESO);
 		pcb_destroy(proceso);
@@ -264,20 +264,20 @@ void esperar_cpu(){
 				// Hay q avisarle a memoria que finalizo para q borre todo.
 				sem_post(&s_multiprogramacion_actual);
 				send(socket_pcb,&cop,sizeof(op_code),0);
-				log_info(logger, "Proceso %d terminado",pcb->pid);
+				log_info(logger, "[EXECUTE -> EXIT] Proceso %d terminado",pcb->pid);
 				pcb_destroy(pcb);
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
 				break;
 			}
 			case INTERRUPTION:
-				log_info(logger,"Proceso %d desalojado",pcb->pid);
+				log_info(logger,"[EXECUTE -> READY] Proceso %d desalojado",pcb->pid);
 				pthread_mutex_lock(&mx_lista_ready);
 				list_add(lista_ready, pcb);
 				pthread_mutex_unlock(&mx_lista_ready);
 				sem_post(&s_cont_ready);
 				sem_post(&s_pcb_desalojado);
-				break; //Porque no quiero que haga los sem_post de despues del switch
+				break;
 			case BLOCKED:
 				pthread_mutex_lock(&mx_cola_blocked);
 				list_add(cola_blocked,pcb);
@@ -285,7 +285,7 @@ void esperar_cpu(){
 				pthread_t hilo_suspendido;
 				pthread_create(&hilo_suspendido,NULL,(void*)suspendiendo,pcb);
 				pthread_detach(hilo_suspendido);
-				log_info(logger, "Proceso %d bloqueado",pcb->pid);
+				log_info(logger, "[EXECUTE -> BLOCKED] Proceso %d bloqueado",pcb->pid);
 				sem_post(&s_blocked);
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
@@ -313,7 +313,7 @@ void suspendiendo(PCB_t* pcb){
 	pthread_mutex_lock(&mx_iteracion_blocked);
 	if(iteracion_actual == dictionary_get(iteracion_blocked, key)){
 		pthread_mutex_unlock(&mx_iteracion_blocked);
-		log_info(logger,"Suspendiendo proceso %d",pcb->pid);
+		log_info(logger,"[BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso %d",pcb->pid);
 		list_add(cola_suspended_blocked,pcb->pid);
 		pthread_mutex_unlock(&mx_cola_blocked);
 		pthread_mutex_unlock(&mx_cola_suspended_blocked);
@@ -349,14 +349,14 @@ void ejecutar_io() {
 		dictionary_put(iteracion_blocked, key, iteracion_actual + 1);
 		pthread_mutex_unlock(&mx_iteracion_blocked);
 		if (esta_suspendido(proceso->pid)){
-			log_info(logger, "[IO] Proceso %d saliendo de blocked hacia suspended-ready :)",proceso->pid);
+			log_info(logger, "[SUSP_BLOCKED -> SUSP_READY] Proceso %d saliendo de suspended-blocked hacia suspended-ready :)",proceso->pid);
 			pthread_mutex_lock(&mx_cola_suspended_ready);
 			queue_push(cola_suspended_ready, proceso);
 			pthread_mutex_unlock(&mx_cola_suspended_ready);
 			sem_post(&s_pasaje_a_ready);
 		}
 		else{
-			log_info(logger, "[IO] Proceso %d saliendo de blocked hacia ready :)",proceso->pid);
+			log_info(logger, "[BLOCKED -> SUSP_READY] Proceso %d saliendo de blocked hacia ready :)",proceso->pid);
 			pthread_mutex_lock(&mx_lista_ready);
 			list_add(lista_ready, proceso);
 			pthread_mutex_unlock(&mx_lista_ready);
@@ -396,7 +396,7 @@ void srt_ready_execute(){
 		PCB_t* proceso = seleccionar_proceso_srt(); // mx porque la funcion usa a la cola de ready
 		pthread_mutex_unlock(&mx_lista_ready);
 		pthread_mutex_lock(&mx_log);
-		log_info(logger,"Mandando proceso %d a ejecutar",proceso->pid);
+		log_info(logger,"[READY -> EXECUTE] Mandando proceso %d a ejecutar",proceso->pid);
 		pthread_mutex_unlock(&mx_log);
 		cpu_desocupado = false;
 		send_proceso(conexion_cpu_dispatch, proceso, PROCESO);
@@ -423,6 +423,6 @@ PCB_t* seleccionar_proceso_srt(){
 
 void desalojar_cpu(){
 	op_code codigo = INTERRUPTION;
-	log_info(logger, "Mandando interrupcion");
+	log_info(logger, "[INTERRUPT] Mandando interrupcion");
 	send(conexion_cpu_interrupt, &codigo, sizeof(op_code), 0);
 }
