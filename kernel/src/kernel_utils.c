@@ -356,7 +356,7 @@ void ejecutar_io() {
 			sem_post(&s_pasaje_a_ready);
 		}
 		else{
-			log_info(logger, "[BLOCKED -> SUSP_READY] Proceso %d saliendo de blocked hacia ready :)",proceso->pid);
+			log_info(logger, "[BLOCKED -> READY] Proceso %d saliendo de blocked hacia ready :)",proceso->pid);
 			pthread_mutex_lock(&mx_lista_ready);
 			list_add(lista_ready, proceso);
 			pthread_mutex_unlock(&mx_lista_ready);
