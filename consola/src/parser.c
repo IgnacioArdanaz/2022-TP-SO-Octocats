@@ -34,54 +34,69 @@ void validarParametro(char *auxP){
 	}
 }
 
-void leerParametros(FILE *archivo,char** instruccion, char *auxP, int cantParametros){
+void leerParametros(FILE *archivo, int cantParametros,int32_t* arg1, int32_t* arg2){
 	int j;
+	char* string_aux = string_new();
+	int32_t args[2] = {-1,-1};
 	for(j=0;j<cantParametros;j++){
-		fscanf(archivo, "%s",auxP);
-		validarParametro(auxP);
+		fscanf(archivo, "%s",string_aux);
+		validarParametro(string_aux);
 		//si es valido el parametro lo concatena a la instruccion
-		string_append_with_format(instruccion," %s",auxP);
+		args[j] = atoi(string_aux);
 	}
+	*arg1 = args[0];
+	*arg2 = args[1];
+	free(string_aux);
 }
 
-void iterarNOOP(FILE *archivo, char* instruccion, char *auxP, char*** tabla){
+instruccion_t* instruccion_crear(){
+	instruccion_t* inst = malloc(sizeof(instruccion_t));
+	inst->arg1 = -1;
+	inst->arg2 = -1;
+	return inst;
+}
+
+void iterarNOOP(FILE *archivo, t_list* codigo){
 	int repeticiones;
-	fscanf(archivo, "%s",auxP);
-	validarParametro(auxP);
-	repeticiones = atoi(auxP);
+	char* string_aux = string_new();
+	fscanf(archivo, "%s",string_aux);
+	validarParametro(string_aux);
+	repeticiones = atoi(string_aux);
 	printf("cant de NOOP: %d\n",repeticiones);
-	for(int i=0;i<repeticiones-1;i++){
+	for(int i=0;i<repeticiones;i++){
 		//iteramos hasta cantidad de repeticiones menos uno para al final
 		//utilizar el puntero leido
-		char *copia = string_duplicate(instruccion);
-		string_array_push(tabla, copia);
+		instruccion_t* inst = instruccion_crear();
+		inst->operacion = 'N'; //N de NOOP
+		list_add(codigo, inst);
 	}
-	string_array_push(tabla, instruccion);
+	free(string_aux);
 }
 
-void parser(char* path, char*** tabla) {
+void parser(char* path, t_list* codigo) {
+
 	// Puntero que nos ayuda a leer cada palabra
 	char *auxP = string_new();
     int cant; // Cantidad de parametros
     FILE *archivo;
     archivo= fopen(path,"r");
-
     while(!feof(archivo)){
         //leemos la primer palabra de la instruccion (una operacion)
         fscanf(archivo, "%s",auxP);
         //asignamos la cantidad de parametros que tiene la operacion
         cant = cantParametros(auxP);
-        //creamos el puntero de la instruccion
-        char *instruccion = string_new();
-        //guardar la operacion en el puntero instruccion
-        strcpy(instruccion, auxP);
-
-        if(strcmp(instruccion, "NO_OP")==0){
-        	iterarNOOP(archivo, instruccion, auxP, tabla);
-        }else{
-        	leerParametros(archivo,&instruccion,auxP,cant);
-        	string_array_push(tabla, instruccion);
+        char operacion = auxP[0];
+        if(operacion == 'N'){
+        	iterarNOOP(archivo, codigo);
         }
+        else{
+        	instruccion_t* inst = instruccion_crear();
+        	inst->operacion = operacion;
+        	//en leerParametros directamente modifica las variables de la instruccion
+        	leerParametros(archivo,cant,&inst->arg1,&inst->arg2);
+        	list_add(codigo,inst);
+        }
+
     }
 
     printf("\n------------------\nParser termino bien\n------------------\n\n");

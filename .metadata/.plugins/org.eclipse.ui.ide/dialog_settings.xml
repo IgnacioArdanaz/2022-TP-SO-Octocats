@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/utnso/kernel-main"/>
+		<item value="/home/utnso/kernel"/>
+		<item value="/home/utnso/tp-2022-1c-Octocats"/>
+	</list>
+	<section name="NewWizardAction">
+	</section>
+</section>

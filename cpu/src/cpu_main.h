@@ -3,14 +3,28 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
+#include<pthread.h>
 #include<commons/log.h>
 #include<commons/string.h>
 #include<commons/config.h>
 #include<readline/readline.h>
-#include "../../shared/src/sockets.c"
-#include "../../shared/src/protocol.c"
-#include "../../shared/src/structures.h"
+#include<semaphore.h>
+#include<sockets.h>
+#include<protocol.h>
+#include<structures.h>
+#include<pcb.h>
 
 #define IP "127.0.0.1"
+
+void inicializar_cpu();
+void apagar_cpu();
+void interrupcion();
+void calculo_estimacion(PCB_t *pcb, op_code estado);
+op_code iniciar_ciclo_instruccion(PCB_t *pcb);
+instruccion_t* fetch(t_list* instrucciones, uint32_t pc);
+int decode(instruccion_t* instruccion_ejecutar );
+int execute(instruccion_t* instruccion_ejecutar);
+int check_interrupt();
 
 #endif /* CPU_MAIN_H_ */

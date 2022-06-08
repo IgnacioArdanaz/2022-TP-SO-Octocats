@@ -1,0 +1,136 @@
+#include "kernel_utils.h"
+
+int multiprogramacion_actual = 0;
+
+pthread_mutex_t sem_ready = PTHREAD_MUTEX_INITIALIZER;
+t_queue* cola_new;
+t_list* cola_ready;
+
+void inicializar_estructuras(){
+	logger = log_create("kernel.log", "kernel", 1, LOG_LEVEL_INFO);
+	config = config_create("kernel.config");
+	cola_new = queue_create();
+	cola_ready = list_create();
+	pthread_t hilo_pasaje_new_ready;
+	pthread_create(&hilo_pasaje_new_ready,NULL,(void*)pasaje_new_ready,NULL);
+	pthread_detach(hilo_pasaje_new_ready);
+}
+
+void procesar_consola(procesar_consola_args* argumentos){
+	int cliente_socket = argumentos->cliente;
+	char* server_name = argumentos->server_name;
+	op_code cop;
+	while (cliente_socket != -1) {
+
+		if (recv(cliente_socket, &cop, sizeof(op_code), 0) <= 0) {
+			log_info(logger, "DISCONNECT_FAILURE!");
+			return;
+		}
+
+		switch (cop) {
+			case PROGRAMA:
+			{
+				char** instrucciones = string_array_new();
+				uint16_t tamanio;
+
+				if (!recv_programa(cliente_socket, instrucciones, &tamanio)) {
+					log_error(logger, "Fallo recibiendo PROGRAMA");
+					break;
+				}
+
+				log_info(logger, "Tamanio %d", tamanio);
+
+
+				for(int i = 0; instrucciones[i] != NULL; i++){
+					log_info(logger, "Instruccion numero %d: %s \n", i, instrucciones[i]);
+				}
+
+
+				PCB_t proceso;
+				proceso.instrucciones = string_array_new();
+				proceso.instrucciones = instrucciones;
+				proceso.pid = 1;
+				proceso.tamanio = tamanio;
+				proceso.pc = 0;
+				proceso.tabla_paginas = 0;
+				proceso.est_rafaga = 5;
+
+				queue_push(cola_new,&proceso);
+
+/****************ESTO LO VA A HACER LA COLA DE READY********************************************************/
+
+//				ip_cpu = config_get_string_value(config,"IP_CPU");
+//				puerto_cpu_dispatch = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
+//
+//				conexion_cpu_dispatch = crear_conexion(logger, "CPU DISPATCH", ip_cpu, puerto_cpu_dispatch);
+//
+//				send_proceso(conexion_cpu_dispatch, proceso);
+/**********************************************************************************************************/
+
+				string_array_destroy(instrucciones);
+
+				break;
+			}
+
+			// Errores
+			case -1:
+				log_error(logger, "Cliente desconectado de kernel");
+				break;
+			default:
+				log_error(logger, "Algo anduvo mal en el server del kernel ");
+				log_info(logger, "Cop: %d", cop);
+		}
+	}
+
+	liberar_conexion(&cliente_socket);
+
+}
+
+int escuchar_servidor(char* name, int server_socket){
+	printf("Nro de socket (4 por favor): %d\n",server_socket);
+	int cliente_socket = esperar_cliente(logger, name, server_socket);
+	printf("(?)\n");
+	if (cliente_socket != -1){
+		pthread_t hilo_procesar_consola;
+		procesar_consola_args* arg = malloc(sizeof(procesar_consola_args));
+		arg->cliente = cliente_socket;
+		arg->server_name = name;
+		printf("Creando un hilo, maestro\n");
+		pthread_create(&hilo_procesar_consola,NULL,(void*)procesar_consola,(void*)arg);
+		pthread_detach(hilo_procesar_consola);
+		printf("Pude crear el hilo todo bien mostro\n");
+		return 1;
+	}
+	return 0;
+}
+
+//HILO
+void pasaje_new_ready(){
+
+	int grado_multiprogramacion = config_get_int_value(config, "GRADO_MULTIPROGRAMACION");
+	while(1){
+		pthread_mutex_lock(&sem_ready);
+		if(multiprogramacion_actual < grado_multiprogramacion){
+			PCB_t* p = queue_pop(cola_new);
+			list_add(cola_ready,p);
+		}
+		pthread_mutex_unlock(&sem_ready);
+	}
+
+}
+
+void sjf(){
+	int raf_min = 0;
+	int primera = 1
+	int i;
+	for (i = 0:i<list_size(cola_ready):i++){
+		if(primera){
+			primera = 0;
+
+		}
+	}
+	//por cada iteracion
+	PCB_t* pcb;
+	est_raf = pcb->est_rafaga;
+}
+
