@@ -183,7 +183,7 @@ void interrupcion(){
 	while(1){
 		op_code opcode;
 		recv(cliente_socket_interrupt, &opcode, sizeof(op_code), 0);
-		log_info(logger, "Interrucion recibida");
+		log_info(logger, "Interrupcion recibida");
 		hay_interrupcion = true;
 	}
 }

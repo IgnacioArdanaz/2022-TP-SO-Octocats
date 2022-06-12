@@ -1,5 +1,10 @@
-15:33:45 **** Incremental Build of configuration Debug for project kernel ****
+23:33:27 **** Incremental Build of configuration Debug for project kernel ****
 make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+Finished building: ../src/kernel_main.c
+ 
 Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
 gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
@@ -69,5 +74,5 @@ gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_m
 Finished building target: kernel
  
 
-15:33:47 Build Finished (took 2s.555ms)
+23:33:30 Build Finished (took 3s.290ms)
 

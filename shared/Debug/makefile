@@ -1,40 +1,43 @@
-RM=rm -rf
-CC=gcc
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
 
-C_SRCS=$(shell find . -iname "*.c" | tr '\n' ' ')
-H_SRCS=$(shell find . -iname "*.h" | tr '\n' ' ')
-OBJS=$(C_SRCS:./%.c=build/%.o)
+-include ../makefile.init
 
-# Clean and compile .so
-all: build/libcommons.so
+RM := rm -rf
 
-build/commons/collections:
-	mkdir -p $@
+# All of the sources participating in the build are defined here
+-include sources.mk
+-include src/subdir.mk
+-include subdir.mk
+-include objects.mk
 
-build/libcommons.so: build/commons/collections $(OBJS)
-	$(CC) -shared -o "$@" $(OBJS)
+ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
+endif
+endif
 
-build/%.o: %.c
-	$(CC) -c -fmessage-length=0 -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+-include ../makefile.defs
 
-# Add debug parameters and compile
-debug: CC += -DDEBUG -g
-debug: all
+# Add inputs and outputs from these tool invocations to the build variables 
 
-# Print all sources
-sources:
-	@echo $(C_SRCS) $(H_SRCS)
+# All Target
+all: libshared.so
 
-# Clean build files
+# Tool invocations
+libshared.so: $(OBJS) $(USER_OBJS)
+	@echo 'Building target: $@'
+	@echo 'Invoking: Cross GCC Linker'
+	gcc -shared -o "libshared.so" $(OBJS) $(USER_OBJS) $(LIBS)
+	@echo 'Finished building target: $@'
+	@echo ' '
+
+# Other Targets
 clean:
-	$(RM) build
+	-$(RM) $(LIBRARIES)$(OBJS)$(C_DEPS) libshared.so
+	-@echo ' '
 
-install: all
-	sudo cp -u build/libcommons.so /usr/lib
-	sudo cp --parents -u $(H_SRCS) /usr/include
+.PHONY: all clean dependents
 
-uninstall:
-	sudo rm -f /usr/lib/libcommons.so
-	sudo rm -rf /usr/include/commons
-
-.PHONY: all debug sources clean install uninstall
+-include ../makefile.targets

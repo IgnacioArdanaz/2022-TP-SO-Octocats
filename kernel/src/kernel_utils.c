@@ -10,6 +10,7 @@ pthread_mutex_t mx_cola_suspended_blocked = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_suspended_ready = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_iteracion_blocked = PTHREAD_MUTEX_INITIALIZER;
 
+
 sem_t s_pasaje_a_ready, s_ready_execute, s_cont_ready, s_cpu_desocupado, s_blocked,
 	s_suspended_ready, s_multiprogramacion_actual, s_pcb_desalojado, s_esperar_cpu;
 
@@ -380,6 +381,10 @@ bool esta_suspendido(uint16_t pid){
 /****Hilo READY -> EXECUTE (SRT) ***/
 void srt_ready_execute(){
 	while(1){
+		int sem_valor;
+		sem_getvalue (&s_ready_execute, &sem_valor);
+		if(sem_valor == 1) //Se le dio post mientras no se habia terminado de mandar a otro a ejecutar
+			sem_wait(&s_ready_execute);
 		sem_wait(&s_ready_execute);
 		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
 		if(!cpu_desocupado){
@@ -398,7 +403,6 @@ void srt_ready_execute(){
 		sem_post(&s_esperar_cpu);
 	}
 }
-
 
 PCB_t* seleccionar_proceso_srt(){
 	PCB_t* primer_pcb = list_get(lista_ready,0);

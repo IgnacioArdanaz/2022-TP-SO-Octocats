@@ -67,6 +67,9 @@
 					<entry kind="macro" name="__DBL_DENORM_MIN__" value="((double)4.94065645841246544177e-324L)">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
+					<entry kind="macro" name="__DBL_DIG__" value="long long unsigned int">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
 					<entry kind="macro" name="__DBL_DIG__" value="15">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -655,9 +658,6 @@
 					<entry kind="macro" name="__UINT_LEAST64_MAX__" value="0xffffffffffffffffULL">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__UINT_LEAST64_TYPE__" value="long long unsigned int">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
 					<entry kind="macro" name="__UINT_LEAST8_MAX__" value="0xff">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -1131,9 +1131,6 @@
 					<entry kind="macro" name="__INT_FAST64_MAX__" value="0x7fffffffffffffffLL">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="macro" name="__INT_FAST64_TYPE__" value="long long int">
-						<flag value="BUILTIN|READONLY"/>
-					</entry>
 					<entry kind="macro" name="__INT_FAST8_MAX__" value="0x7f">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
@@ -1474,6 +1471,9 @@
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__i386__" value="1">
+						<flag value="BUILTIN|READONLY"/>
+					</entry>
+					<entry kind="macro" name="__i686" value="long long int">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__i686" value="1">
