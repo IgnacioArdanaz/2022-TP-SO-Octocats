@@ -20,15 +20,3 @@ int main(void) {
 	return EXIT_SUCCESS;
 
 }
-
-void inicializar_memoria(){
-	logger = log_create("memoria.log", "memoria", 1, LOG_LEVEL_INFO);
-	config = config_create("memoria.config");
-}
-
-void apagar_memoria(){
-	liberar_conexion(&cliente_cpu);
-	liberar_conexion(&cliente_kernel);
-	log_destroy(logger);
-	config_destroy(config);
-}

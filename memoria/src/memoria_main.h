@@ -7,6 +7,7 @@
 #include<commons/config.h>
 #include <sockets.c>
 #include <protocol.c>
+#include "memoria_utils.h"
 
 #define IP "127.0.0.1"
 #define PUERTO "4444"
@@ -15,6 +16,3 @@
 
 t_log* logger;
 t_config* config;
-
-void inicializar_memoria();
-void apagar_memoria();
