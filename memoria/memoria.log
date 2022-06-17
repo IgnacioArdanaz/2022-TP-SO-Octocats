@@ -12,3 +12,8 @@
 [INFO] 21:10:18:846 memoria/(6577:6577): Cliente conectado (a MEMORIA)
 [INFO] 21:12:00:342 memoria/(6655:6655): Escuchando en 127.0.0.1:(null) (MEMORIA)
 [INFO] 21:12:00:342 memoria/(6655:6655): MEMORIA listo para recibir al cliente
+[INFO] 19:23:13:418 memoria/(5096:5096): Escuchando en 127.0.0.1:8002 (MEMORIA)
+[INFO] 19:23:13:420 memoria/(5096:5096): MEMORIA listo para recibir al cliente
+[INFO] 19:23:19:767 memoria/(5096:5096): Cliente conectado (a MEMORIA)
+[INFO] 19:23:19:767 memoria/(5096:5096): MEMORIA listo para recibir al cliente
+[INFO] 19:23:29:490 memoria/(5096:5096): Cliente conectado (a MEMORIA)

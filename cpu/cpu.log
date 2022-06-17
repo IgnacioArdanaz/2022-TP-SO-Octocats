@@ -7400,3 +7400,61 @@
 [INFO] 23:34:02:669 cpu/(18263:18263): Proceso 3 estimacion rafaga siguiente 7998.500000
 [INFO] 23:34:02:669 cpu/(18263:18263): Program counter 11 (despues de ejecutar)
 [INFO] 23:34:02:669 cpu/(18263:18263): ==============================================================
+[INFO] 11:59:29:374 cpu/(4088:4088): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 11:59:29:377 cpu/(4088:4088): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 11:59:29:383 cpu/(4088:4088): CPU_DISPATCH listo para recibir al cliente
+[INFO] 12:05:21:111 cpu/(4336:4336): Escuchando en localhost:8001 (CPU_DISPATCH)
+[INFO] 12:05:21:112 cpu/(4336:4336): Escuchando en localhost:8005 (CPU_INTERRUPT)
+[INFO] 12:05:21:112 cpu/(4336:4336): CPU_DISPATCH listo para recibir al cliente
+[INFO] 19:23:19:768 cpu/(5111:5111): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 19:23:19:773 cpu/(5111:5111): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 19:23:19:773 cpu/(5111:5111): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 19:23:19:774 cpu/(5111:5111): CPU_DISPATCH listo para recibir al cliente
+[INFO] 19:23:29:497 cpu/(5111:5111): Cliente conectado (a CPU_DISPATCH)
+[INFO] 19:23:29:497 cpu/(5111:5111): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 19:23:29:497 cpu/(5111:5111): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 19:23:29:497 cpu/(5111:5111): Valor alfa 0.50
+[INFO] 19:27:50:726 cpu/(5111:5111): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 19:27:50:726 cpu/(5111:5111): Ejecutando NOOP
+[INFO] 19:27:51:727 cpu/(5111:5111): Ejecutando NOOP
+[INFO] 19:27:52:727 cpu/(5111:5111): Ejecutando NOOP
+[INFO] 19:27:53:727 cpu/(5111:5111): Ejecutando NOOP
+[INFO] 19:27:54:729 cpu/(5111:5111): Ejecutando NOOP
+[INFO] 19:27:55:730 cpu/(5111:5111): Ejecutando IO
+[INFO] 19:27:55:730 cpu/(5111:5111): Rafaga real 5003
+[INFO] 19:27:55:730 cpu/(5111:5111): Proceso 1 estimacion rafaga siguiente 12501.500000
+[INFO] 19:27:55:730 cpu/(5111:5111): Program counter 6 (despues de ejecutar)
+[INFO] 19:27:55:730 cpu/(5111:5111): ==============================================================
+[INFO] 19:27:58:732 cpu/(5111:5111): Proceso 1 -> program counter 6 - est 12501.500000
+[INFO] 19:27:58:733 cpu/(5111:5111): Ejecutando NOOP
+[INFO] 19:27:59:733 cpu/(5111:5111): Ejecutando NOOP
+[INFO] 19:28:00:734 cpu/(5111:5111): Ejecutando NOOP
+[INFO] 19:28:01:735 cpu/(5111:5111): Ejecutando EXIT
+[INFO] 19:28:01:735 cpu/(5111:5111): Rafaga real 3002
+[INFO] 19:28:01:735 cpu/(5111:5111): Proceso 1 estimacion rafaga siguiente 7751.750000
+[INFO] 19:28:01:735 cpu/(5111:5111): Program counter 10 (despues de ejecutar)
+[INFO] 19:28:01:735 cpu/(5111:5111): ==============================================================
+[INFO] 19:28:17:712 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:712 cpu/(5111:5111): Proceso 0 -> program counter 10 - est 7751.750000
+[INFO] 19:28:17:712 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:713 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:714 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:714 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:714 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:714 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:714 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:714 cpu/(5111:5126): Interrupcion recibida
+[INFO] 19:28:17:714 cpu/(5111:5126): Interrupcion recibida

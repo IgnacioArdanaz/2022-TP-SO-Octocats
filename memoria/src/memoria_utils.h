@@ -18,10 +18,21 @@
 //#include <structures.h>
 //#include <pcb.h>
 
+typedef unsigned int* fila_1er_nivel;
+
+typedef struct {
+	unsigned int* direccion;
+	unsigned char modificado;
+	unsigned char presencia;
+} fila_2do_nivel;
+
 t_log* logger;
 t_config* config;
 
 void apagar_memoria();
 void inicializar_memoria();
+uint32_t crear_tabla_1er_nivel();
+void crear_tablas_2do_nivel();
+void asignar_marcos(t_list* tabla_2do_nivel);
 
 #endif /* MEMORIA_UTILS_H_ */

@@ -3688,3 +3688,20 @@
 [INFO] 23:33:54:657 CONSOLA/(18319:18319): El proceso se finalizó exitosamente :)
 [INFO] 23:33:59:665 CONSOLA/(18330:18330): El proceso se finalizó exitosamente :)
 [INFO] 23:34:02:669 CONSOLA/(18344:18344): El proceso se finalizó exitosamente :)
+[ERROR] 19:24:19:937 CONSOLA/(5158:5158): Uso incorrecto :(
+	Ejemplo: ./a.out un_tamanio ruta_de_pseudocodigo
+[ERROR] 19:26:39:308 CONSOLA/(5257:5257): Uso incorrecto :(
+	Ejemplo: ./a.out un_tamanio ruta_de_pseudocodigo
+[INFO] 19:27:50:722 CONSOLA/(5308:5308): Instruccion numero 0: N -1 -1
+[INFO] 19:27:50:722 CONSOLA/(5308:5308): Instruccion numero 1: N -1 -1
+[INFO] 19:27:50:723 CONSOLA/(5308:5308): Instruccion numero 2: N -1 -1
+[INFO] 19:27:50:723 CONSOLA/(5308:5308): Instruccion numero 3: N -1 -1
+[INFO] 19:27:50:723 CONSOLA/(5308:5308): Instruccion numero 4: N -1 -1
+[INFO] 19:27:50:723 CONSOLA/(5308:5308): Instruccion numero 5: I 3000 -1
+[INFO] 19:27:50:723 CONSOLA/(5308:5308): Instruccion numero 6: N -1 -1
+[INFO] 19:27:50:723 CONSOLA/(5308:5308): Instruccion numero 7: N -1 -1
+[INFO] 19:27:50:724 CONSOLA/(5308:5308): Instruccion numero 8: N -1 -1
+[INFO] 19:27:50:724 CONSOLA/(5308:5308): Instruccion numero 9: E -1 -1
+[INFO] 19:27:50:724 CONSOLA/(5308:5308): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 19:27:50:724 CONSOLA/(5308:5308): Programa enviado al kernel correctamente!
+[INFO] 19:28:01:735 CONSOLA/(5308:5308): El proceso se finalizó exitosamente :)

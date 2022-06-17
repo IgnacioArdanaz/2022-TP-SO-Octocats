@@ -4819,3 +4819,26 @@
 [INFO] 23:33:59:665 KERNEL/(18301:18308): [EXECUTE -> EXIT] Proceso 2 terminado
 [INFO] 23:33:59:666 KERNEL/(18301:18309): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
 [INFO] 23:34:02:669 KERNEL/(18301:18308): [EXECUTE -> EXIT] Proceso 3 terminado
+[INFO] 12:05:31:483 KERNEL/(4348:4348): Error al conectar (a CPU DISPATCH)
+[INFO] 12:05:31:484 KERNEL/(4348:4348): Error al conectar (a CPU INTERRUPT)
+[INFO] 12:05:31:484 KERNEL/(4348:4348): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 12:05:31:485 KERNEL/(4348:4348): Kernel esperando un nuevo cliente
+[INFO] 12:05:31:485 KERNEL/(4348:4348): KERNEL listo para recibir al cliente
+[INFO] 19:23:29:496 KERNEL/(5121:5121): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 19:23:29:497 KERNEL/(5121:5121): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 19:23:29:497 KERNEL/(5121:5121): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 19:23:29:497 KERNEL/(5121:5121): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 19:23:29:497 KERNEL/(5121:5121): Kernel esperando un nuevo cliente
+[INFO] 19:23:29:498 KERNEL/(5121:5121): KERNEL listo para recibir al cliente
+[INFO] 19:27:50:724 KERNEL/(5121:5121): Cliente conectado (a KERNEL)
+[INFO] 19:27:50:724 KERNEL/(5121:5121): Socket del cliente recibido en kernel.
+[INFO] 19:27:50:724 KERNEL/(5121:5121): Kernel esperando un nuevo cliente
+[INFO] 19:27:50:724 KERNEL/(5121:5121): KERNEL listo para recibir al cliente
+[INFO] 19:27:50:726 KERNEL/(5121:5127): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 19:27:50:726 KERNEL/(5121:5127): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 19:27:50:726 KERNEL/(5121:5130): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 19:27:55:730 KERNEL/(5121:5129): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 19:27:55:730 KERNEL/(5121:5128): [IO] Proceso 1 esperando 3000 milisegundos
+[INFO] 19:27:58:731 KERNEL/(5121:5128): [BLOCKED -> READY] Proceso 1 saliendo de blocked hacia ready :)
+[INFO] 19:27:58:732 KERNEL/(5121:5130): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 19:28:01:735 KERNEL/(5121:5129): [EXECUTE -> EXIT] Proceso 1 terminado
