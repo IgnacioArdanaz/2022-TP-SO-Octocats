@@ -28,6 +28,9 @@ typedef struct {
 
 t_log* logger;
 t_config* config;
+int cliente_cpu, cliente_kernel;
+
+int server_memoria;
 
 void apagar_memoria();
 void inicializar_memoria();

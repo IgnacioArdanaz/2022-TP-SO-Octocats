@@ -9,10 +9,4 @@
 #include <protocol.c>
 #include "memoria_utils.h"
 
-#define IP "127.0.0.1"
-#define PUERTO "4444"
-
 #endif /* MEMORIA_MAIN_H_ */
-
-t_log* logger;
-t_config* config;

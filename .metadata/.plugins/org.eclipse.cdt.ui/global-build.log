@@ -1,12 +1,634 @@
-19:21:41 **** Incremental Build of configuration Debug for project memoria ****
+12:36:24 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:36:25 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:36:25 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+12:36:26 **** Incremental Build of configuration Debug for project memoria ****
 make all 
 Building file: ../src/memoria_utils.c
 Invoking: GCC C Compiler
 gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
-../src/memoria_utils.c: In function ‘crear_tabla_1er_nivel’:
-../src/memoria_utils.c:38:6: warning: unused variable ‘tamanio_tabla’ [-Wunused-variable]
-  int tamanio_tabla = sizeof(fila_1er_nivel*) * entradas_por_tabla;
-      ^
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:54:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:54:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:60:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+                                                   ^
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+../src/memoria_utils.c:60:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:70:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return &memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+12:36:26 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:37:51 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:9:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf(memoria);
+  ^
+../src/memoria_main.c:10:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf(memoria + 20);
+  ^
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:54:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:54:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:60:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:60:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:70:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return &memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+12:38:11 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:9:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘void *’ [-Wformat=]
+  printf("%d",memoria);
+         ^
+../src/memoria_main.c:10:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘void *’ [-Wformat=]
+  printf("%d",memoria + 20);
+         ^
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:54:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:54:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:60:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:60:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:70:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return &memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+12:38:27 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:9:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘void *’ [-Wformat=]
+  printf("%d",memoria);
+         ^
+../src/memoria_main.c:10:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘void *’ [-Wformat=]
+  printf("%d",memoria + 20);
+         ^
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:54:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:54:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:60:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:60:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:70:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return &memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+12:38:52 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:9:14: error: expected expression before ‘int’
+  printf("%d",int(memoria));
+              ^
+../src/memoria_main.c:10:14: error: expected expression before ‘int’
+  printf("%d",int(memoria + 20));
+              ^
+src/subdir.mk:21: recipe for target 'src/memoria_main.o' failed
+make: *** [src/memoria_main.o] Error 1
+12:39:16 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:54:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:54:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:60:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:60:9: error: void value not ignored as it ought to be
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:70:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return &memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+12:39:47 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:9:18: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+  void* memoria = malloc(80);
+                  ^
+../src/memoria_main.c:9:18: warning: incompatible implicit declaration of built-in function ‘malloc’
+../src/memoria_main.c:9:18: note: include ‘<stdlib.h>’ or provide a declaration of ‘malloc’
+src/subdir.mk:21: recipe for target 'src/memoria_main.o' failed
+../src/memoria_main.c:12:2: warning: implicit declaration of function ‘free’ [-Wimplicit-function-declaration]
+  free(memoria);
+  ^
+../src/memoria_main.c:12:2: warning: incompatible implicit declaration of built-in function ‘free’
+../src/memoria_main.c:12:2: note: include ‘<stdlib.h>’ or provide a declaration of ‘free’
+../src/memoria_main.c:24:9: error: ‘EXIT_SUCCESS’ undeclared (first use in this function)
+  return EXIT_SUCCESS;
+         ^
+../src/memoria_main.c:24:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/memoria_main.o] Error 1
+12:39:55 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:9:18: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+  void* memoria = malloc(80);
+                  ^
+../src/memoria_main.c:9:18: warning: incompatible implicit declaration of built-in function ‘malloc’
+../src/memoria_main.c:9:18: note: include ‘<stdlib.h>’ or provide a declaration of ‘malloc’
+../src/memoria_main.c:12:2: warning: implicit declaration of function ‘free’ [-Wimplicit-function-declaration]
+  free(memoria);
+  ^
+../src/memoria_main.c:12:2: warning: incompatible implicit declaration of built-in function ‘free’
+../src/memoria_main.c:12:2: note: include ‘<stdlib.h>’ or provide a declaration of ‘free’
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:54:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:54:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:60:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:60:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:70:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return &memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+12:40:11 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:54:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:54:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:60:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:60:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_2do_nivel,nro_tabla)[index];
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:70:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return &memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+12:40:21 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:40:32 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:41:28 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:41:29 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:41:29 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+12:41:30 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:62:9: error: incompatible types when returning type ‘void *’ but ‘fila_2do_nivel {aka struct <anonymous>}’ was expected
+  return NULL;
+         ^
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:72:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return &memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:63:1: warning: control reaches end of non-void function [-Wreturn-type]
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+12:41:30 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:42:22 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:42:23 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:42:23 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+12:42:24 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:62:2: error: conversion to non-scalar type requested
+  return (fila_2do_nivel) 8;
+  ^
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:72:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return &memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:63:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+12:42:24 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:42:36 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:42:36 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:42:37 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+12:42:37 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:62:2: error: conversion to non-scalar type requested
+  return (fila_2do_nivel) NULL;
+  ^
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:72:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return &memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:63:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+12:42:38 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:43:19 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:43:20 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:43:20 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+12:43:20 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:62:22: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  fila_2do_nivel n = {15,0,0};
+                      ^
+../src/memoria_utils.c:62:22: note: (near initialization for ‘n.direccion’)
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:73:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return &memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
 In file included from ../src/memoria_utils.h:17:0,
                  from ../src/memoria_utils.c:1:
 ../src/memoria_utils.c: At top level:
@@ -29,24 +651,793 @@ Invoking: GCC C Linker
 gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
 Finished building target: memoria
  
-19:22:16 **** Incremental Build of configuration Debug for project consola ****
+12:43:21 **** Incremental Build of configuration Debug for project shared ****
 make all 
 make: Nothing to be done for 'all'.
-19:22:17 **** Incremental Build of configuration Debug for project cpu ****
+12:43:32 **** Incremental Build of configuration Debug for project memoria ****
 make all 
 make: Nothing to be done for 'all'.
-19:22:18 **** Incremental Build of configuration Debug for project kernel ****
+12:46:03 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:46:38 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:47:13 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:47:58 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:50:08 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-19:22:19 **** Incremental Build of configuration Debug for project memoria ****
+12:50:09 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:09 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:10 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:10 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:19 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:19 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:20 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:20 **** Incremental Build of configuration Debug for project memoria ****
 make all 
 Building file: ../src/memoria_utils.c
 Invoking: GCC C Compiler
 gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
-../src/memoria_utils.c: In function ‘crear_tabla_1er_nivel’:
-../src/memoria_utils.c:40:12: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-   tabla[i] = malloc(sizeof(fila_1er_nivel));
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:62:22: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  fila_2do_nivel n = {15,0,0};
+                      ^
+../src/memoria_utils.c:62:22: note: (near initialization for ‘n.direccion’)
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:73:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:50:21 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:33 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:33 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:34 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:34 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:62:22: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  fila_2do_nivel n = {15,0,0};
+                      ^
+../src/memoria_utils.c:62:22: note: (near initialization for ‘n.direccion’)
+../src/memoria_utils.c: In function ‘obtener_entrada_marco’:
+../src/memoria_utils.c:73:9: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  return (unsigned char) memoria + tam_pagina * nro_marco + desplazamiento;
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:50:36 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:55 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:55 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:55 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+12:50:56 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:62:22: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  fila_2do_nivel n = {15,0,0};
+                      ^
+../src/memoria_utils.c:62:22: note: (near initialization for ‘n.direccion’)
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:50:57 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+12:54:53 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:17:37: error: invalid type argument of unary ‘*’ (have ‘int’)
+  printf("DATO EN LA UBICACION: %d", *ubicacion);
+                                     ^
+src/subdir.mk:21: recipe for target 'src/memoria_main.o' failed
+make: *** [src/memoria_main.o] Error 1
+12:55:18 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:15:19: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* ubicacion = (int) memoria + nro_marco * tam_pagina + desplaz;
+                   ^
+../src/memoria_main.c:16:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘int *’ [-Wformat=]
+  printf("UBICACION DEL DATO en desplz %d: %d\n", desplaz, ubicacion);
+         ^
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:55:50 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:15:19: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  int* ubicacion = (int) memoria + nro_marco * tam_pagina + desplaz;
+                   ^
+../src/memoria_main.c:16:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘int **’ [-Wformat=]
+  printf("UBICACION DEL DATO en desplz %d: %d\n", desplaz, &ubicacion);
+         ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:56:07 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:17:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+  printf("DATO EN LA UBICACION: %d", &ubicacion);
+         ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:58:24 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:59:16 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:16:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘int *’ [-Wformat=]
+  printf("UBICACION DEL DATO en desplz %d: %d\n", desplaz, ubicacion);
+         ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+12:59:49 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:16:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘int *’ [-Wformat=]
+  printf("UBICACION DEL DATO en desplz %d: %d\n", desplaz, ubicacion);
+         ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:00:02 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:16:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘int *’ [-Wformat=]
+  printf("UBICACION DEL DATO en desplz %d: %d\n", desplaz, ubicacion);
+         ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:00:12 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘main’:
+../src/memoria_main.c:16:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘int *’ [-Wformat=]
+  printf("UBICACION DEL DATO en desplz %d: %d\n", desplaz, ubicacion);
+         ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:00:45 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:01:10 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:01:26 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:02:22 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:05:06 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:18:39 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:18:40 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:18:40 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+13:18:41 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:54:10: warning: dereferencing ‘void *’ pointer
+  return (*list_get(lista_tablas_1er_nivel,nro_tabla))[index];
+          ^
+../src/memoria_utils.c:54:54: error: subscripted value is neither array nor pointer nor vector
+  return (*list_get(lista_tablas_1er_nivel,nro_tabla))[index];
+                                                      ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+make: *** [src/memoria_utils.o] Error 1
+13:18:41 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+13:20:28 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_boludeces’:
+../src/memoria_main.c:29:9: warning: passing argument 1 of ‘printf’ from incompatible pointer type [-Wincompatible-pointer-types]
+  printf(a);
+         ^
+In file included from ../src/memoria_main.h:4:0,
+                 from ../src/memoria_main.c:1:
+/usr/include/stdio.h:362:12: note: expected ‘const char * restrict’ but argument is of type ‘int *’
+ extern int printf (const char *__restrict __format, ...);
             ^
+../src/memoria_main.c:29:9: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf(a);
+         ^
+../src/memoria_main.c:27:7: warning: unused variable ‘b’ [-Wunused-variable]
+  int* b = list_get(l,0);
+       ^
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:54:51: warning: dereferencing ‘void *’ pointer
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+                                                   ^
+../src/memoria_utils.c:54:9: error: void value not ignored as it ought to be
+  return list_get(lista_tablas_1er_nivel,nro_tabla)[index];
+         ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+src/subdir.mk:21: recipe for target 'src/memoria_utils.o' failed
+../src/memoria_utils.c: In function ‘obtener_entrada_1er_nivel’:
+../src/memoria_utils.c:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+13:20:42 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:21:00 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_boludeces’:
+../src/memoria_main.c:29:9: warning: passing argument 1 of ‘printf’ from incompatible pointer type [-Wincompatible-pointer-types]
+  printf(b);
+         ^
+In file included from ../src/memoria_main.h:4:0,
+                 from ../src/memoria_main.c:1:
+/usr/include/stdio.h:362:12: note: expected ‘const char * restrict’ but argument is of type ‘int *’
+ extern int printf (const char *__restrict __format, ...);
+            ^
+../src/memoria_main.c:29:2: warning: format not a string literal and no format arguments [-Wformat-security]
+  printf(b);
+  ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:21:10 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_boludeces’:
+../src/memoria_main.c:29:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+  printf("%d", b);
+         ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:21:15 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:21:33 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_boludeces’:
+../src/memoria_main.c:29:19: error: subscripted value is neither array nor pointer nor vector
+  printf("%p", (*b)[0]);
+                   ^
+src/subdir.mk:21: recipe for target 'src/memoria_main.o' failed
+make: *** [src/memoria_main.o] Error 1
+13:21:44 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_boludeces’:
+../src/memoria_main.c:29:9: warning: format ‘%p’ expects argument of type ‘void *’, but argument 2 has type ‘int’ [-Wformat=]
+  printf("%p", b[0]);
+         ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:21:50 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:21:56 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:22:30 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:22:31 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:22:31 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+13:22:32 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:22:33 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:28 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:29 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:29 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:29 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:23:30 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:58 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:58 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:59 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+13:23:59 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:24:00 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+13:27:39 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:27:39 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:27:40 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+13:27:40 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘inicializar_memoria’:
+../src/memoria_utils.c:18:17: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
+                 ^
+../src/memoria_utils.c:19:59: warning: passing argument 4 of ‘iniciar_servidor’ makes pointer from integer without a cast [-Wint-conversion]
+  server_memoria = iniciar_servidor(logger, "MEMORIA", ip, puerto_escucha);
+                                                           ^
+In file included from ../src/memoria_utils.h:16:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/sockets.h:11:5: note: expected ‘char *’ but argument is of type ‘char’
+ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto);
+     ^
 In file included from ../src/memoria_utils.h:17:0,
                  from ../src/memoria_utils.c:1:
 ../src/memoria_utils.c: At top level:
@@ -69,19 +1460,79 @@ Invoking: GCC C Linker
 gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
 Finished building target: memoria
  
-19:22:20 **** Incremental Build of configuration Debug for project shared ****
+13:27:44 **** Incremental Build of configuration Debug for project shared ****
 make all 
 make: Nothing to be done for 'all'.
-19:22:53 **** Incremental Build of configuration Debug for project consola ****
+13:28:50 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-19:22:53 **** Incremental Build of configuration Debug for project cpu ****
+13:28:51 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-19:22:54 **** Incremental Build of configuration Debug for project kernel ****
+13:28:52 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 make: Nothing to be done for 'all'.
-19:22:55 **** Incremental Build of configuration Debug for project memoria ****
+13:28:52 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+13:28:53 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+13:28:55 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+13:29:06 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+13:29:24 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘inicializar_memoria’:
+../src/memoria_utils.c:17:17: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
+                 ^
+../src/memoria_utils.c:18:59: warning: passing argument 4 of ‘iniciar_servidor’ makes pointer from integer without a cast [-Wint-conversion]
+  server_memoria = iniciar_servidor(logger, "MEMORIA", ip, puerto_escucha);
+                                                           ^
+In file included from ../src/memoria_utils.h:16:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/sockets.h:11:5: note: expected ‘char *’ but argument is of type ‘char’
+ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto);
+     ^
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:32:52 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+13:32:53 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+13:32:54 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+13:32:54 **** Incremental Build of configuration Debug for project memoria ****
 make all 
 Building file: ../src/memoria_main.c
 Invoking: GCC C Compiler
@@ -112,33 +1563,83 @@ Invoking: GCC C Linker
 gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
 Finished building target: memoria
  
-19:22:56 **** Incremental Build of configuration Debug for project shared ****
+13:32:56 **** Incremental Build of configuration Debug for project shared ****
 make all 
 make: Nothing to be done for 'all'.
-19:23:12 **** Incremental Build of configuration Debug for project memoria ****
+13:33:00 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+13:33:05 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-19:23:18 **** Incremental Build of configuration Debug for project cpu ****
+13:33:12 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 make: Nothing to be done for 'all'.
-19:23:28 **** Incremental Build of configuration Debug for project kernel ****
+13:36:34 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
-19:24:18 **** Incremental Build of configuration Debug for project consola ****
+13:36:35 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+Building file: ../src/cpu_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cpu_main.d" -MT"src/cpu_main.o" -o "src/cpu_main.o" "../src/cpu_main.c"
+In file included from ../src/cpu_main.h:14:0,
+                 from ../src/cpu_main.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/cpu_main.c
+ 
+Building target: cpu
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "cpu"  ./src/cpu_main.o   -lcommons -lshared -lpthread
+Finished building target: cpu
+ 
+13:36:36 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+Finished building: ../src/kernel_main.c
+ 
+Building target: kernel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lshared -lpthread
+Finished building target: kernel
+ 
+13:36:37 **** Incremental Build of configuration Debug for project memoria ****
 make all 
 make: Nothing to be done for 'all'.
-19:25:29 **** Incremental Build of configuration Debug for project consola ****
+13:36:37 **** Incremental Build of configuration Debug for project shared ****
 make all 
 make: Nothing to be done for 'all'.
-19:25:52 **** Incremental Build of configuration Debug for project consola ****
+13:36:42 **** Incremental Build of configuration Debug for project memoria ****
 make all 
 make: Nothing to be done for 'all'.
-19:26:37 **** Incremental Build of configuration Debug for project consola ****
+13:36:47 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
-19:26:56 **** Incremental Build of configuration Debug for project consola ****
+13:36:51 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 make: Nothing to be done for 'all'.
-19:27:48 **** Incremental Build of configuration Debug for project consola ****
+13:36:54 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.

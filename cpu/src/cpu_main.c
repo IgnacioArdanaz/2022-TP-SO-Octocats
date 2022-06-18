@@ -71,10 +71,11 @@ void inicializar_cpu(){
 		exit(EXIT_FAILURE);
 	}
 
+	char* ip = config_get_string_value(config, "IP");
 	char* puerto_dispatch = config_get_string_value(config, "PUERTO_ESCUCHA_DISPATCH");
 	char* puerto_interrupt = config_get_string_value(config, "PUERTO_ESCUCHA_INTERRUPT");
-	server_cpu_dispatch = iniciar_servidor(logger, "CPU_DISPATCH", IP, puerto_dispatch);
-	server_cpu_interrupt = iniciar_servidor(logger, "CPU_INTERRUPT", IP, puerto_interrupt);
+	server_cpu_dispatch = iniciar_servidor(logger, "CPU_DISPATCH", ip, puerto_dispatch);
+	server_cpu_interrupt = iniciar_servidor(logger, "CPU_INTERRUPT", ip, puerto_interrupt);
 
 	cliente_socket_dispatch = esperar_cliente(logger, "CPU_DISPATCH",server_cpu_dispatch);
 	cliente_socket_interrupt = esperar_cliente(logger, "CPU_INTERRUPT", server_cpu_interrupt);

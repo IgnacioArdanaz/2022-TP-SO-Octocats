@@ -15,8 +15,6 @@
 #include<structures.h>
 #include<pcb.h>
 
-#define IP "127.0.0.1"
-
 void inicializar_cpu();
 void apagar_cpu();
 void interrupcion();

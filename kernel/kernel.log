@@ -4842,3 +4842,27 @@
 [INFO] 19:27:58:731 KERNEL/(5121:5128): [BLOCKED -> READY] Proceso 1 saliendo de blocked hacia ready :)
 [INFO] 19:27:58:732 KERNEL/(5121:5130): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
 [INFO] 19:28:01:735 KERNEL/(5121:5129): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 13:33:13:728 KERNEL/(8561:8561): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 13:33:13:732 KERNEL/(8561:8561): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 13:33:13:732 KERNEL/(8561:8561): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 13:33:13:732 KERNEL/(8561:8561): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 13:33:13:732 KERNEL/(8561:8561): Kernel esperando un nuevo cliente
+[INFO] 13:33:13:732 KERNEL/(8561:8561): KERNEL listo para recibir al cliente
+[INFO] 13:36:52:341 KERNEL/(8804:8804): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 13:36:52:343 KERNEL/(8804:8804): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 13:36:52:343 KERNEL/(8804:8804): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 13:36:52:344 KERNEL/(8804:8804): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 13:36:52:344 KERNEL/(8804:8804): Kernel esperando un nuevo cliente
+[INFO] 13:36:52:344 KERNEL/(8804:8804): KERNEL listo para recibir al cliente
+[INFO] 13:36:55:204 KERNEL/(8804:8804): Cliente conectado (a KERNEL)
+[INFO] 13:36:55:204 KERNEL/(8804:8804): Socket del cliente recibido en kernel.
+[INFO] 13:36:55:204 KERNEL/(8804:8804): Kernel esperando un nuevo cliente
+[INFO] 13:36:55:204 KERNEL/(8804:8804): KERNEL listo para recibir al cliente
+[INFO] 13:36:55:206 KERNEL/(8804:8811): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 13:36:55:206 KERNEL/(8804:8811): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 13:36:55:206 KERNEL/(8804:8814): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 13:37:00:209 KERNEL/(8804:8813): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 13:37:00:209 KERNEL/(8804:8812): [IO] Proceso 1 esperando 3000 milisegundos
+[INFO] 13:37:03:210 KERNEL/(8804:8812): [BLOCKED -> READY] Proceso 1 saliendo de blocked hacia ready :)
+[INFO] 13:37:03:210 KERNEL/(8804:8814): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 13:37:06:213 KERNEL/(8804:8813): [EXECUTE -> EXIT] Proceso 1 terminado

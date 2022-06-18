@@ -10,8 +10,4 @@
 #include <protocol.c>
 #include <structures.h>
 
-
-#define IP "127.0.0.1"
-
-
 #endif /* KERNEL_MAIN_H_ */

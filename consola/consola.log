@@ -3705,3 +3705,16 @@
 [INFO] 19:27:50:724 CONSOLA/(5308:5308): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 [INFO] 19:27:50:724 CONSOLA/(5308:5308): Programa enviado al kernel correctamente!
 [INFO] 19:28:01:735 CONSOLA/(5308:5308): El proceso se finalizó exitosamente :)
+[INFO] 13:36:55:200 CONSOLA/(8820:8820): Instruccion numero 0: N -1 -1
+[INFO] 13:36:55:201 CONSOLA/(8820:8820): Instruccion numero 1: N -1 -1
+[INFO] 13:36:55:201 CONSOLA/(8820:8820): Instruccion numero 2: N -1 -1
+[INFO] 13:36:55:201 CONSOLA/(8820:8820): Instruccion numero 3: N -1 -1
+[INFO] 13:36:55:201 CONSOLA/(8820:8820): Instruccion numero 4: N -1 -1
+[INFO] 13:36:55:204 CONSOLA/(8820:8820): Instruccion numero 5: I 3000 -1
+[INFO] 13:36:55:204 CONSOLA/(8820:8820): Instruccion numero 6: N -1 -1
+[INFO] 13:36:55:204 CONSOLA/(8820:8820): Instruccion numero 7: N -1 -1
+[INFO] 13:36:55:204 CONSOLA/(8820:8820): Instruccion numero 8: N -1 -1
+[INFO] 13:36:55:204 CONSOLA/(8820:8820): Instruccion numero 9: E -1 -1
+[INFO] 13:36:55:204 CONSOLA/(8820:8820): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 13:36:55:204 CONSOLA/(8820:8820): Programa enviado al kernel correctamente!
+[INFO] 13:37:06:213 CONSOLA/(8820:8820): El proceso se finalizó exitosamente :)

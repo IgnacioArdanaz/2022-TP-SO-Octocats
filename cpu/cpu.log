@@ -7458,3 +7458,62 @@
 [INFO] 19:28:17:714 cpu/(5111:5126): Interrupcion recibida
 [INFO] 19:28:17:714 cpu/(5111:5126): Interrupcion recibida
 [INFO] 19:28:17:714 cpu/(5111:5126): Interrupcion recibida
+[INFO] 13:33:06:407 cpu/(8549:8549): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 13:33:06:408 cpu/(8549:8549): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 13:33:06:408 cpu/(8549:8549): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 13:33:06:408 cpu/(8549:8549): CPU_DISPATCH listo para recibir al cliente
+[INFO] 13:33:13:732 cpu/(8549:8549): Cliente conectado (a CPU_DISPATCH)
+[INFO] 13:33:13:732 cpu/(8549:8549): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 13:33:13:732 cpu/(8549:8549): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 13:33:13:732 cpu/(8549:8549): Valor alfa 0.50
+[INFO] 13:33:25:190 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:190 cpu/(8549:8549): Proceso 42952 -> program counter 1768057187 - est 5298732962368291327859007051688540940064325476881412774000222763429492471982875119241820431441547155463017983568516598876161599293009626498631816715816025257207779178921016080465920.000000
+[INFO] 13:33:25:190 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:190 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:190 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:190 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:190 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:33:25:191 cpu/(8549:8571): Interrupcion recibida
+[INFO] 13:36:48:025 cpu/(8793:8793): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 13:36:48:027 cpu/(8793:8793): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 13:36:48:027 cpu/(8793:8793): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 13:36:48:027 cpu/(8793:8793): CPU_DISPATCH listo para recibir al cliente
+[INFO] 13:36:52:342 cpu/(8793:8793): Cliente conectado (a CPU_DISPATCH)
+[INFO] 13:36:52:343 cpu/(8793:8793): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 13:36:52:343 cpu/(8793:8793): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 13:36:52:343 cpu/(8793:8793): Valor alfa 0.50
+[INFO] 13:36:55:206 cpu/(8793:8793): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 13:36:55:206 cpu/(8793:8793): Ejecutando NOOP
+[INFO] 13:36:56:206 cpu/(8793:8793): Ejecutando NOOP
+[INFO] 13:36:57:207 cpu/(8793:8793): Ejecutando NOOP
+[INFO] 13:36:58:207 cpu/(8793:8793): Ejecutando NOOP
+[INFO] 13:36:59:208 cpu/(8793:8793): Ejecutando NOOP
+[INFO] 13:37:00:209 cpu/(8793:8793): Ejecutando IO
+[INFO] 13:37:00:209 cpu/(8793:8793): Rafaga real 5002
+[INFO] 13:37:00:209 cpu/(8793:8793): Proceso 1 estimacion rafaga siguiente 12501.000000
+[INFO] 13:37:00:209 cpu/(8793:8793): Program counter 6 (despues de ejecutar)
+[INFO] 13:37:00:209 cpu/(8793:8793): ==============================================================
+[INFO] 13:37:03:210 cpu/(8793:8793): Proceso 1 -> program counter 6 - est 12501.000000
+[INFO] 13:37:03:210 cpu/(8793:8793): Ejecutando NOOP
+[INFO] 13:37:04:211 cpu/(8793:8793): Ejecutando NOOP
+[INFO] 13:37:05:212 cpu/(8793:8793): Ejecutando NOOP
+[INFO] 13:37:06:213 cpu/(8793:8793): Ejecutando EXIT
+[INFO] 13:37:06:213 cpu/(8793:8793): Rafaga real 3002
+[INFO] 13:37:06:213 cpu/(8793:8793): Proceso 1 estimacion rafaga siguiente 7751.500000
+[INFO] 13:37:06:213 cpu/(8793:8793): Program counter 10 (despues de ejecutar)
+[INFO] 13:37:06:213 cpu/(8793:8793): ==============================================================
