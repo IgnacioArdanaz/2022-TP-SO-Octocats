@@ -4,19 +4,18 @@
 #include<stdio.h>
 #include<stdlib.h>
 //#include<stdbool.h>
-//#include<pthread.h>
+#include<pthread.h>
 #include<commons/log.h>
 #include<commons/config.h>
 //#include<commons/string.h>
 //#include<readline/readline.h>
-//#include<semaphore.h>
+#include<semaphore.h>
 //#include<commons/collections/queue.h>
 #include<commons/collections/list.h>
 //#include<commons/collections/dictionary.h>
 #include <sockets.h>
 #include <protocol.h>
 //#include <structures.h>
-//#include <pcb.h>
 #include <commons/bitarray.h>
 
 typedef uint32_t fila_1er_nivel;
@@ -34,6 +33,10 @@ int cliente_cpu, cliente_kernel;
 int server_memoria;
 
 void apagar_memoria();
+void escuchar_kernel();
+void recibir_kernel();
+void escuchar_cpu();
+void recibir_cpu();
 void inicializar_memoria();
 uint32_t crear_tablas();
 void asignar_marcos(t_list* tabla_2do_nivel);

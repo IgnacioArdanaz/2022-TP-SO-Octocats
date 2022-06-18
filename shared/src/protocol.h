@@ -20,7 +20,8 @@ typedef enum {
 	INTERRUPTION,
 	EXIT,
 	CONTINUE,
-	BLOCKED
+	BLOCKED,
+	SOLICITUD_TABLA
 } op_code;
 
 //PROGRAMA
@@ -34,5 +35,9 @@ bool send_proceso(int fd, PCB_t* proceso, op_code codigo);
 static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
 bool recv_proceso(int fd, PCB_t* proceso);
 static void deserializar_proceso(void* stream, PCB_t* proceso);
+
+//SOLICITUD TABLA PAGINAS
+bool send_solicitud_tabla_paginas(int fd, uint32_t tamanio);
+static void* serializar_solicitud(uint32_t tamanio);
 
 #endif

@@ -1,5 +1,9 @@
 #include "memoria_utils.h"
 
+
+pthread_mutex_t mx_log = PTHREAD_MUTEX_INITIALIZER;
+
+int cliente_kernel;
 t_list* lista_tablas_1er_nivel;
 t_list* lista_tablas_2do_nivel;
 uint16_t tam_memoria;
@@ -14,9 +18,12 @@ void* memoria;
 void inicializar_memoria(){
 	logger = log_create("memoria.log", "memoria", 1, LOG_LEVEL_INFO);
 	config = config_create("memoria.config");
-//	char* ip = config_get_string_value(config,"IP");
-//	char* puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
-//	server_memoria = iniciar_servidor(logger, "MEMORIA", ip, puerto_escucha);
+	char* ip = config_get_string_value(config,"IP");
+	char* puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
+	server_memoria = iniciar_servidor(logger, "MEMORIA", ip, puerto_escucha);
+	cliente_cpu = esperar_cliente(logger, "MEMORIA", server_memoria);
+	cliente_kernel = esperar_cliente(logger, "MEMORIA", server_memoria);
+
 
 	tam_memoria = config_get_int_value(config,"TAM_MEMORIA");
 	tam_pagina = config_get_int_value(config,"TAM_PAGINA");
@@ -32,6 +39,90 @@ void inicializar_memoria(){
 	for (int i = 0; i < tam_memoria / tam_pagina; i++)
 		marcos_ocupados[i] = 0;
 
+}
+
+void escuchar_kernel() {
+	while(1) {
+		recibir_kernel();
+	}
+}
+
+void recibir_kernel() {
+	op_code cop;
+	while (cliente_kernel != -1) {
+		if (recv(cliente_kernel, &cop, sizeof(op_code), 0) <= 0) {
+			pthread_mutex_lock(&mx_log);
+			log_error(logger,"DISCONNECT FAILURE!");
+			pthread_mutex_unlock(&mx_log);
+			return;
+		}
+		switch (cop) {
+			case SOLICITUD_TABLA:
+			{
+				uint32_t tamanio = 0;
+
+				if (!recv(cliente_kernel, &tamanio, sizeof(uint32_t), 0)) {
+					pthread_mutex_lock(&mx_log);
+					log_error(logger,"Fallo recibiendo SOLICITUD");
+					pthread_mutex_unlock(&mx_log);
+					break;
+				}
+
+				uint32_t tabla_paginas = crear_tablas(tamanio);
+
+				send(cliente_kernel, &tabla_paginas, sizeof(uint32_t), 0);
+
+				return;
+			}
+
+			default:
+				pthread_mutex_lock(&mx_log);
+				log_error(logger, "Algo anduvo mal en el server de memoria\n Cop: %d",cop);
+				pthread_mutex_unlock(&mx_log);
+		}
+	}
+}
+
+void escuchar_cpu() {
+	while(1) {
+		recibir_cpu();
+	}
+}
+
+void recibir_cpu() {
+//	op_code cop;
+//	while (cliente_kernel != -1) {
+//		if (recv(cliente_kernel, &cop, sizeof(op_code), 0) <= 0) {
+//			pthread_mutex_lock(&mx_log);
+//			log_error(logger,"DISCONNECT FAILURE!");
+//			pthread_mutex_unlock(&mx_log);
+//			return;
+//		}
+//		switch (cop) {
+//			case SOLICITUD_TABLA:
+//			{
+//				uint32_t tamanio = 0;
+//
+//				if (!recv(cliente_kernel, &tamanio, sizeof(uint32_t), 0)) {
+//					pthread_mutex_lock(&mx_log);
+//					log_error(logger,"Fallo recibiendo SOLICITUD");
+//					pthread_mutex_unlock(&mx_log);
+//					break;
+//				}
+//
+//				uint32_t tabla_paginas = crear_tablas(tamanio);
+//
+//				send(cliente_kernel, &tabla_paginas, sizeof(uint32_t), 0);
+//
+//				return;
+//			}
+//
+//			default:
+//				pthread_mutex_lock(&mx_log);
+//				log_error(logger, "Algo anduvo mal en el server de memoria\n Cop: %d",cop);
+//				pthread_mutex_unlock(&mx_log);
+//		}
+//	}
 }
 
 // buscar el primer marco libre

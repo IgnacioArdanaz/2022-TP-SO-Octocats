@@ -106,7 +106,7 @@ void inicializar_kernel(){
 
 int escuchar_servidor(char* name, int server_socket){
 	log_info(logger,"Kernel esperando un nuevo cliente");
-	int cliente_socket = cliente_socket = esperar_cliente(logger, name, server_socket);
+	int cliente_socket = esperar_cliente(logger, name, server_socket);
 	log_info(logger,"Socket del cliente recibido en kernel.");
 	if (cliente_socket != -1){
 		pthread_t hilo;
@@ -192,6 +192,7 @@ void pasaje_a_ready(){
 			proceso = queue_pop(cola_new);
 			log_info(logger,"[NEW -> READY] PROCESO %d AGREGADO A READY", proceso->pid);
 			pthread_mutex_unlock(&mx_cola_new);
+			solicitar_tabla_paginas(proceso);
 		}
 		else{
 			pthread_mutex_lock(&mx_cola_suspended_ready);
@@ -206,6 +207,15 @@ void pasaje_a_ready(){
 		sem_post(&s_cont_ready); //Sumo uno al contador de pcbs en ready
 		loggear_estado_de_colas();
 	}
+}
+
+
+void solicitar_tabla_paginas(PCB_t* proceso){
+	send_solicitud_tabla_paginas(conexion_memoria, &proceso->tamanio);
+	uint32_t tabla_paginas = 0;
+	recv(conexion_memoria, &tabla_paginas, sizeof(uint32_t), 0);
+	proceso->tabla_paginas = tabla_paginas;
+	printf("proceso %d tabla de pag %d", proceso->pid, proceso->tabla_paginas);
 }
 
 void loggear_estado_de_colas(){

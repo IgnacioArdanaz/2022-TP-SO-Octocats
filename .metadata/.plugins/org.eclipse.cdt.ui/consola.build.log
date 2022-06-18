@@ -1,6 +1,6 @@
-16:46:57 **** Incremental Build of configuration Debug for project consola ****
+19:20:37 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
 
-16:46:58 Build Finished (took 710ms)
+19:20:39 Build Finished (took 1s.382ms)
 

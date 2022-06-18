@@ -193,3 +193,27 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 
 }
 
+/***************************** SOLICITUD TABLA PAGINAS *****************************/
+// Envio y serializacion
+bool send_solicitud_tabla_paginas(int fd, uint32_t tamanio) {
+    size_t size = sizeof(op_code) + sizeof(uint32_t);
+    void* stream = serializar_solicitud(tamanio);
+    if (send(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+    free(stream);
+    return true;
+}
+
+static void* serializar_solicitud(uint32_t tamanio) {
+    void* stream = malloc(sizeof(op_code) + sizeof(uint32_t));
+
+    op_code cop = SOLICITUD_TABLA;
+    size_t acumulador = 0;
+    memcpy(stream + acumulador, &cop, sizeof(op_code));
+    acumulador += sizeof(op_code);
+    memcpy(stream + acumulador, &tamanio, sizeof(uint32_t));
+
+    return stream;
+}

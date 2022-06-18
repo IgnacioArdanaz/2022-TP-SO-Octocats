@@ -44,14 +44,21 @@ int main(void) {
 //	testeando_boludeces();
 
 	inicializar_memoria();
+	pthread_t hilo_kernel;
+	pthread_create(&hilo_kernel, NULL, (void*) escuchar_kernel, NULL);
+	pthread_detach(hilo_kernel);
 
-	testeando_tablas();
+
+//	pthread_t hilo_cpu;
+//	pthread_create(&hilo_cpu, NULL, (void*) escuchar_cpu, NULL);
+//	pthread_detach(hilo_cpu);
 
 
-//	cliente_cpu = esperar_cliente(logger, "MEMORIA", server_memoria);
-//	cliente_kernel = esperar_cliente(logger, "MEMORIA", server_memoria);
+//	testeando_tablas();
+
+
 //
-//	while(true); //simula que sigue corriendo
+	while(true); //simula que sigue corriendo
 
 	return 0;
 
