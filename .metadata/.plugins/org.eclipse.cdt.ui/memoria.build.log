@@ -1,6 +1,29 @@
-13:36:42 **** Incremental Build of configuration Debug for project memoria ****
+16:49:10 **** Incremental Build of configuration Debug for project memoria ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:17:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:29:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:30:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:34:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
 
-13:36:42 Build Finished (took 296ms)
+16:49:11 Build Finished (took 1s.47ms)
 

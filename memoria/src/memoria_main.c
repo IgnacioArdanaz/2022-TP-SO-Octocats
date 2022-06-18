@@ -29,16 +29,29 @@ void testeando_boludeces(){
 
 }
 
+void testeando_tablas(){
+
+	int n1 = crear_tablas(1024);
+	int n2 = crear_tablas(1024);
+	int n3 = crear_tablas(1024);
+	int n4 = crear_tablas(1024);
+	int n5 = crear_tablas(1);
+
+}
+
 int main(void) {
 
 //	testeando_boludeces();
 
 	inicializar_memoria();
 
-	cliente_cpu = esperar_cliente(logger, "MEMORIA", server_memoria);
-	cliente_kernel = esperar_cliente(logger, "MEMORIA", server_memoria);
+	testeando_tablas();
 
-	while(true); //simula que sigue corriendo
+
+//	cliente_cpu = esperar_cliente(logger, "MEMORIA", server_memoria);
+//	cliente_kernel = esperar_cliente(logger, "MEMORIA", server_memoria);
+//
+//	while(true); //simula que sigue corriendo
 
 	return 0;
 
