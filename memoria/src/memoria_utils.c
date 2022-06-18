@@ -74,7 +74,22 @@ void recibir_kernel() {
 
 				return;
 			}
+			case ELIMINAR_ESTRUCTURAS:
+			{
+				uint32_t tabla_paginas = 0;
+				uint16_t pid;
 
+				if (!recv_eliminar_estructuras(cliente_kernel, &pid, &tabla_paginas)) {
+					pthread_mutex_lock(&mx_log);
+					log_error(logger,"Fallo recibiendo ELIMINAR ESTRUCTURAS");
+					pthread_mutex_unlock(&mx_log);
+					break;
+				}
+
+				eliminar_estructuras(tabla_paginas, pid);
+
+				return;
+			}
 			default:
 				pthread_mutex_lock(&mx_log);
 				log_error(logger, "Algo anduvo mal en el server de memoria\n Cop: %d",cop);
@@ -165,8 +180,10 @@ uint32_t crear_tablas(uint32_t tamanio){
 	int marcos_req = calcular_cant_marcos(tamanio);
 	printf("CANT DE MARCOS REQUERIDOS: %d\n", marcos_req);
 	fila_1er_nivel tabla_1er_nivel [entradas_por_tabla];
+	inicializar_tabla_1er_nivel(tabla_1er_nivel);
 	for (int i = 0; i < entradas_por_tabla && marcos_req > marcos_actuales(i, 0); i++){
 		fila_2do_nivel* tabla_2do_nivel = malloc(entradas_por_tabla * sizeof(fila_2do_nivel));
+		inicializar_tabla_2do_nivel(tabla_2do_nivel);
 		for (int j = 0 ; j < entradas_por_tabla && marcos_req > marcos_actuales(i, j); j++){
 			fila_2do_nivel fila = {0,0,0};
 			// chequea si el proceso ya ocupo la cantidad maxima (parametro marcos x proceso)
@@ -197,9 +214,21 @@ uint32_t crear_tablas(uint32_t tamanio){
 	return list_add(lista_tablas_1er_nivel,tabla_1er_nivel);
 }
 
+void inicializar_tabla_1er_nivel(fila_1er_nivel tabla_1er_nivel[]){
+	for (int i = 0; i < entradas_por_tabla; i++){
+		tabla_1er_nivel[i] = -1;
+	}
+}
+
+void inicializar_tabla_2do_nivel(fila_2do_nivel* tabla_2do_nivel){
+	for (int i = 0; i < entradas_por_tabla; i++){
+		tabla_2do_nivel[i]->nro_marco = -1;
+	}
+}
+
 // dada un nro de tabla y un index devuelve la entrada correspondiente
 // quizas convenga devolver directamente el valor y no su puntero
-fila_1er_nivel obtener_entrada_1er_nivel(uint32_t nro_tabla, uint32_t index){
+fila_1er_nivel obtener_entrada_1er_nivel(int32_t nro_tabla, uint32_t index){
 	fila_1er_nivel* tabla = list_get(lista_tablas_1er_nivel,nro_tabla);
 	return tabla[index];
 }
@@ -223,4 +252,12 @@ uint32_t obtener_entrada_marco(uint32_t nro_marco, uint32_t desplazamiento){
 
 void asignar_marcos(t_list* tabla_2do_nivel){
 
+}
+
+void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
+	// Acá se tendrían que eliminar el archivo swap correspondiente...
+	for(int i=0; i < entradas_por_tabla && lista_tablas_1er_nivel[tabla_paginas][i] != -1; i++) {
+		for(int j=0; j < entradas_por_tabla && lista_tablas_2do_nivel[i][j]->nro_marco != -1; j++)
+			// Aca hay que pasar a 0 el marco del bitmap que corresponda
+	}
 }

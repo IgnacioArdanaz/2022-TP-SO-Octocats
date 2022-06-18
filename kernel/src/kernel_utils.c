@@ -271,6 +271,7 @@ void esperar_cpu(){
 				send(socket_pcb,&cop,sizeof(op_code),0);
 				log_info(logger, "[EXECUTE -> EXIT] Proceso %d terminado",pcb->pid);
 				pcb_destroy(pcb);
+				send_eliminar_estructuras(conexion_memoria, pcb->tabla_paginas, pcb->pid);
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
 				break;

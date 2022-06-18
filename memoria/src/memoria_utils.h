@@ -18,7 +18,7 @@
 //#include <structures.h>
 #include <commons/bitarray.h>
 
-typedef uint32_t fila_1er_nivel;
+typedef int32_t fila_1er_nivel;
 
 typedef struct {
 	uint32_t nro_marco;
