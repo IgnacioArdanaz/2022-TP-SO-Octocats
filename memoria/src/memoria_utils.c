@@ -221,23 +221,47 @@ void inicializar_tabla_2do_nivel(fila_2do_nivel* tabla_2do_nivel){
 }
 
 // dada un nro de tabla y un index devuelve el nro de tabla de 2do nivel
-fila_1er_nivel obtener_entrada_1er_nivel(int32_t nro_tabla, uint32_t index){
+fila_1er_nivel obtener_entrada_1er_nivel(int32_t nro_tabla, uint32_t index, uint32_t pid){
+	if (pid != pid_actual || nro_tabla != entrada_1er_nivel_actual){
+		pid_actual = pid;
+		entrada_1er_nivel_actual = nro_tabla;
+		puntero.entrada_1er_nivel = 0;
+		puntero.entrada_2do_nivel = 0;
+	}
 	fila_1er_nivel* tabla = list_get(lista_tablas_1er_nivel,nro_tabla);
 	return tabla[index];
 }
 
 // dada un nro de tabla y un index devuelve el nro de marco correspondiente
 // si el bit de presencia esta en 0, traerlo a memoria --> algoritmos cock / cock modificado (cock = gallo)
-fila_2do_nivel obtener_entrada_2do_nivel(uint32_t nro_tabla, uint32_t index){
+uint32_t obtener_entrada_2do_nivel(uint32_t nro_tabla, uint32_t index){
 	fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel,nro_tabla);
-	fila_2do_nivel entrada = tabla[index];
-	if (entrada.presencia == 1){
-		return entrada.nro_marco;
+	fila_2do_nivel* entrada = &tabla[index];
+	if (entrada->presencia == 1){
+		return entrada->nro_marco;
 	}
-	// si no esta en memoria, hay que traerlo:
-	// primero fijarse si el proceso ya consumió todos los marcos que puede consumir (marcos_x_proceso)
-	// si ese es el caso --> ejecutar el algoritmo que viene desde el archivo de config
-	return 5;
+	// si no esta en memoria, traerlo
+	FILE* swap = abrir_archivo_swap(pid_actual);
+	void* marco = leer_marco_en_swap(swap,entrada->nro_marco, tam_pagina);
+	int nro_marco;
+	// si ya ocupa todos los marcos que puede ocupar, hacer un reemplazo
+	if (marcos_en_memoria() == marcos_por_proceso){
+		printf("Reemplazo\n");
+		nro_marco = clock_simple(swap);
+	}
+	else{
+		nro_marco = buscar_marco_libre();
+		if (nro_marco == -1){
+			printf("ERROR!!!!! NO HAY MARCOS LIBRES EN MEMORIA!!!\n");
+			exit(EXIT_FAILURE);
+		}
+	}
+	cerrar_archivo_swap(swap);
+	marcos_ocupados[nro_marco] = 1;
+	entrada->nro_marco = nro_marco;
+	entrada->presencia = 1;
+	escribir_marco(entrada->nro_marco, marco);
+	return nro_marco;
 }
 
 // avanza al proximo marco del proceso
@@ -255,7 +279,7 @@ void avanzar_puntero(){
 // SI EL PID ES DIFERENTE AL PID ACTUAL, EL PUNTERO LO PONEMOS EN NULL
 // Y SI AL RECIBIR UNA PETICION A LA 1ER LISTA DE TABLAS ES != A LA ACTUAL, PONEMOS EN NULL
 // iterar sobre la lista de tablas de 2do nivel
-uint32_t clock(){
+uint32_t clock_simple(FILE* swap){
 
 	// iteramos en las tablas de 2do nivel
 	fila_1er_nivel* tabla_1er_nivel = list_get(lista_tablas_1er_nivel, entrada_1er_nivel_actual);
@@ -263,8 +287,10 @@ uint32_t clock(){
 	// hasta que no encuentre uno no para
 	while(1){
 
-		fila_2do_nivel* tabla_2do_nivel = tabla_1er_nivel[puntero.entrada_1er_nivel];
+		fila_2do_nivel* tabla_2do_nivel = list_get(lista_tablas_2do_nivel,tabla_1er_nivel[puntero.entrada_1er_nivel]);
 		fila_2do_nivel* entrada_2do_nivel = &tabla_2do_nivel[puntero.entrada_2do_nivel];
+
+		int nro_marco_del_proceso = puntero.entrada_1er_nivel * entradas_por_tabla + puntero.entrada_2do_nivel;
 
 		avanzar_puntero();
 
@@ -272,11 +298,19 @@ uint32_t clock(){
 		if (entrada_2do_nivel->presencia == 0) continue;
 
 		if (entrada_2do_nivel->uso == 0){
-			// logica de swappeo de marco y traer el otro
-			printf("Elegido!");
-			return 0;
+			// logica de swappeo de marco
+			printf("Elegido %d!\n",nro_marco_del_proceso);
+			// si tiene el bit de modificado en 1, hay que actualizar el archivo swap
+			if (entrada_2do_nivel->modificado == 1){
+				actualizar_marco_en_swap(swap, nro_marco_del_proceso, obtener_marco(nro_marco_del_proceso), tam_pagina);
+			}
+			entrada_2do_nivel->presencia = 0;
+			marcos_ocupados[entrada_2do_nivel->nro_marco] = 0;
+			return entrada_2do_nivel->nro_marco;
 		}
-		else tabla_2do_nivel[puntero.entrada_2do_nivel]->uso = 0;
+		else{
+			entrada_2do_nivel->uso = 0;
+		}
 	}
 
 	return 0;
@@ -293,12 +327,35 @@ uint32_t clock_modificado(){
 // --> nos da la direccion que buscamos
 // (chequear implementacion)
 // quizas convenga devolver directamente el valor y no su puntero
-uint32_t obtener_entrada_marco(uint32_t nro_marco, uint32_t desplazamiento){
-	return (uint32_t) memoria + tam_pagina * nro_marco + desplazamiento;
+uint8_t obtener_entrada_marco(uint32_t nro_marco, uint32_t desplazamiento){
+	uint8_t* direccion = (uint8_t*) memoria + tam_pagina * nro_marco + desplazamiento;
+	return *direccion;
 }
 
-void asignar_marcos(t_list* tabla_2do_nivel){
+void* obtener_marco(uint32_t nro_marco){
+	void* marco;
+	memcpy(marco, memoria + nro_marco * tam_pagina, tam_pagina);
+	return marco;
+}
 
+uint32_t marcos_en_memoria(){
+	int cont = 0;
+	fila_1er_nivel* tabla_1er_nivel = list_get(lista_tablas_1er_nivel, entrada_1er_nivel_actual);
+	for (int i = 0; i < entradas_por_tabla; i++){
+		fila_2do_nivel* tabla_2do_nivel = list_get(lista_tablas_2do_nivel, tabla_1er_nivel[i]);
+		for (int j = 0; j < entradas_por_tabla; j++){
+			fila_2do_nivel* entrada = &tabla_2do_nivel[j];
+			if (entrada->nro_marco == -1) continue;
+			if (entrada->presencia == 1) cont++;
+		}
+
+	}
+	return cont;
+}
+
+void escribir_marco(uint32_t nro_marco, void* marco){
+	uint32_t marco_en_memoria = nro_marco * tam_pagina;
+	memcpy(memoria + marco_en_memoria, marco, tam_pagina);
 }
 
 void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
@@ -309,6 +366,7 @@ void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
 	for(int i=0; i < entradas_por_tabla; i++) {
 		fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel,tabla_1er_nivel[i]);
 		for(int j=0; j < entradas_por_tabla; j++)
+			if (tabla->nro_marco == -1) continue;
 			if (tabla->presencia == 1)
 				marcos_ocupados[tabla->nro_marco] = 0;
 	}

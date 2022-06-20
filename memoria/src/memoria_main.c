@@ -32,16 +32,33 @@ void testeando_boludeces(){
 void testeando_tablas(){
 
 	int n1 = crear_tablas(0,1024);
-	printf("%d\n",n1);
-	int n2 = crear_tablas(1,1024);
-	printf("%d\n",n2);
-	int n3 = crear_tablas(2,1024);
-	printf("%d\n",n3);
-	int n4 = crear_tablas(3,1024);
-	printf("%d\n",n4);
-	int n5 = crear_tablas(4,1);
-	printf("%d\n",n5);
-	eliminar_estructuras(n4, 3);
+	printf("TABLA DE 1ER NIVEL: %d\n",n1);
+	int rta1 = obtener_entrada_1er_nivel(n1, 0, 0);
+	int rta2 = obtener_entrada_2do_nivel(rta1, 0);
+	int rta3 = obtener_entrada_marco(rta2, 0);
+	printf("%d\n",rta3);
+	rta1 = obtener_entrada_1er_nivel(n1, 1, 0);
+	rta2 = obtener_entrada_2do_nivel(rta1, 1);
+	rta3 = obtener_entrada_marco(rta2, 0);
+	printf("%d\n",rta3);
+	rta1 = obtener_entrada_1er_nivel(n1, 2, 0);
+	rta2 = obtener_entrada_2do_nivel(rta1, 0);
+	rta3 = obtener_entrada_marco(rta2, 0);
+	printf("%d\n",rta3);
+	rta1 = obtener_entrada_1er_nivel(n1, 3, 0);
+	rta2 = obtener_entrada_2do_nivel(rta1, 0);
+	rta3 = obtener_entrada_marco(rta2, 0);
+	printf("%d\n",rta3);
+	printf("Ahora no deberia swappear un marco\n");
+	rta1 = obtener_entrada_1er_nivel(n1, 2, 0);
+	rta2 = obtener_entrada_2do_nivel(rta1, 0);
+	rta3 = obtener_entrada_marco(rta2, 0);
+	printf("%d\n",rta3);
+	printf("Ahora deberia swappear un marco\n");
+	rta1 = obtener_entrada_1er_nivel(n1, 3, 0);
+	rta2 = obtener_entrada_2do_nivel(rta1, 2);
+	rta3 = obtener_entrada_marco(rta2, 0);
+	printf("%d\n",rta3);
 
 }
 
