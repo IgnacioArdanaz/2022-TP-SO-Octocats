@@ -86,7 +86,7 @@ void recibir_kernel() {
 			case ELIMINAR_ESTRUCTURAS:
 			{
 				uint32_t tabla_paginas = 0;
-				uint16_t pid;
+				uint16_t pid = 0;
 
 				if (!recv_eliminar_estructuras(cliente_kernel, &pid, &tabla_paginas)) {
 					pthread_mutex_lock(&mx_log);
@@ -186,10 +186,10 @@ fila_2do_nivel crear_fila(int marco, int mod, int pres){
 uint32_t crear_tablas(uint16_t pid, uint32_t tamanio){
 
 	int marcos_req = calcular_cant_marcos(tamanio);
-	printf("CANT DE MARCOS REQUERIDOS: %d\n", marcos_req);
-	fila_1er_nivel tabla_1er_nivel [entradas_por_tabla];
+	fila_1er_nivel* tabla_1er_nivel = malloc(sizeof(uint32_t) * entradas_por_tabla);
 	FILE* swap = crear_archivo_swap(pid);
 	inicializar_tabla_1er_nivel(tabla_1er_nivel);
+
 	for (int i = 0; i < entradas_por_tabla && marcos_req > marcos_actuales(i, 0); i++){
 		fila_2do_nivel* tabla_2do_nivel = malloc(entradas_por_tabla * sizeof(fila_2do_nivel));
 		inicializar_tabla_2do_nivel(tabla_2do_nivel);
@@ -246,9 +246,15 @@ void asignar_marcos(t_list* tabla_2do_nivel){
 }
 
 void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
-//	// Acá se tendrían que eliminar el archivo swap correspondiente...
-//	for(int i=0; i < entradas_por_tabla && lista_tablas_1er_nivel[tabla_paginas][i] != -1; i++) {
-//		for(int j=0; j < entradas_por_tabla && lista_tablas_2do_nivel[i][j]->nro_marco != -1; j++)
-//			// Aca hay que pasar a 0 el marco del bitmap que corresponda
-//	}
+	// Acá se tendrían que eliminar el archivo swap correspondiente...
+	// sería --> por cada marco --> bit de presencia --> pres == 1 --> bitarray a 0
+	// yyyyyyyyy eliminamos el .swap
+	fila_1er_nivel* tabla_1er_nivel = list_get(lista_tablas_1er_nivel, tabla_paginas);
+	for(int i=0; i < entradas_por_tabla; i++) {
+		fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel,tabla_1er_nivel[i]);
+		for(int j=0; j < entradas_por_tabla; j++)
+			if (tabla->presencia == 1)
+				marcos_ocupados[tabla->nro_marco] = 0;
+	}
+	borrar_archivo_swap(pid);
 }

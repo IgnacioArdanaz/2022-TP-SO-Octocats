@@ -8101,3 +8101,980 @@ Invoking: GCC C Linker
 gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
 Finished building target: memoria
  
+16:30:07 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+16:30:08 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+16:30:09 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+16:30:10 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_tablas’:
+../src/memoria_main.c:38:6: warning: unused variable ‘n5’ [-Wunused-variable]
+  int n5 = crear_tablas(4,1);
+      ^
+../src/memoria_main.c:37:6: warning: unused variable ‘n4’ [-Wunused-variable]
+  int n4 = crear_tablas(3,1024);
+      ^
+../src/memoria_main.c:36:6: warning: unused variable ‘n3’ [-Wunused-variable]
+  int n3 = crear_tablas(2,1024);
+      ^
+../src/memoria_main.c:35:6: warning: unused variable ‘n2’ [-Wunused-variable]
+  int n2 = crear_tablas(1,1024);
+      ^
+../src/memoria_main.c:34:6: warning: unused variable ‘n1’ [-Wunused-variable]
+  int n1 = crear_tablas(0,1024);
+      ^
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:30:12 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+16:36:44 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+16:36:45 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+16:36:45 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+16:36:46 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘eliminar_estructuras’:
+../src/memoria_utils.c:253:2: error: expected ‘,’ or ‘;’ before ‘for’
+  for(int i=0; i < entradas_por_tabla; i++) {
+  ^
+../src/memoria_utils.c:253:15: error: ‘i’ undeclared (first use in this function)
+  for(int i=0; i < entradas_por_tabla; i++) {
+               ^
+../src/memoria_utils.c:253:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/memoria_utils.c:253:42: error: expected ‘;’ before ‘)’ token
+  for(int i=0; i < entradas_por_tabla; i++) {
+                                          ^
+../src/memoria_utils.c:253:42: error: expected statement before ‘)’ token
+../src/memoria_utils.c:252:18: warning: unused variable ‘tabla_1er_nivel’ [-Wunused-variable]
+  fila_1er_nivel* tabla_1er_nivel = list_get(lista_tablas_1er_nivel, tabla_paginas)
+                  ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+src/subdir.mk:24: recipe for target 'src/memoria_utils.o' failed
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+make: *** [src/memoria_utils.o] Error 1
+16:36:47 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+16:37:30 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+16:37:30 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+16:37:31 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+16:37:31 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:37:32 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+16:37:57 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_tablas’:
+../src/memoria_main.c:38:6: warning: unused variable ‘n5’ [-Wunused-variable]
+  int n5 = crear_tablas(4,1);
+      ^
+../src/memoria_main.c:37:6: warning: unused variable ‘n4’ [-Wunused-variable]
+  int n4 = crear_tablas(3,1024);
+      ^
+../src/memoria_main.c:36:6: warning: unused variable ‘n3’ [-Wunused-variable]
+  int n3 = crear_tablas(2,1024);
+      ^
+../src/memoria_main.c:35:6: warning: unused variable ‘n2’ [-Wunused-variable]
+  int n2 = crear_tablas(1,1024);
+      ^
+../src/memoria_main.c:34:6: warning: unused variable ‘n1’ [-Wunused-variable]
+  int n1 = crear_tablas(0,1024);
+      ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:38:52 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_tablas’:
+../src/memoria_main.c:41:18: error: ‘marcos_ocupados’ undeclared (first use in this function)
+   printf("%d\n", marcos_ocupados[i]);
+                  ^
+../src/memoria_main.c:41:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/memoria_main.c:38:6: warning: unused variable ‘n5’ [-Wunused-variable]
+  int n5 = crear_tablas(4,1);
+      ^
+../src/memoria_main.c:37:6: warning: unused variable ‘n4’ [-Wunused-variable]
+  int n4 = crear_tablas(3,1024);
+      ^
+../src/memoria_main.c:36:6: warning: unused variable ‘n3’ [-Wunused-variable]
+  int n3 = crear_tablas(2,1024);
+      ^
+../src/memoria_main.c:35:6: warning: unused variable ‘n2’ [-Wunused-variable]
+  int n2 = crear_tablas(1,1024);
+      ^
+../src/memoria_main.c:34:6: warning: unused variable ‘n1’ [-Wunused-variable]
+  int n1 = crear_tablas(0,1024);
+      ^
+src/subdir.mk:24: recipe for target 'src/memoria_main.o' failed
+make: *** [src/memoria_main.o] Error 1
+16:39:14 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_tablas’:
+../src/memoria_main.c:38:6: warning: unused variable ‘n5’ [-Wunused-variable]
+  int n5 = crear_tablas(4,1);
+      ^
+../src/memoria_main.c:37:6: warning: unused variable ‘n4’ [-Wunused-variable]
+  int n4 = crear_tablas(3,1024);
+      ^
+../src/memoria_main.c:36:6: warning: unused variable ‘n3’ [-Wunused-variable]
+  int n3 = crear_tablas(2,1024);
+      ^
+../src/memoria_main.c:35:6: warning: unused variable ‘n2’ [-Wunused-variable]
+  int n2 = crear_tablas(1,1024);
+      ^
+../src/memoria_main.c:34:6: warning: unused variable ‘n1’ [-Wunused-variable]
+  int n1 = crear_tablas(0,1024);
+      ^
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:39:45 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+16:40:12 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:40:21 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+16:41:13 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_tablas’:
+../src/memoria_main.c:38:6: warning: unused variable ‘n5’ [-Wunused-variable]
+  int n5 = crear_tablas(4,1);
+      ^
+../src/memoria_main.c:37:6: warning: unused variable ‘n4’ [-Wunused-variable]
+  int n4 = crear_tablas(3,1024);
+      ^
+../src/memoria_main.c:36:6: warning: unused variable ‘n3’ [-Wunused-variable]
+  int n3 = crear_tablas(2,1024);
+      ^
+../src/memoria_main.c:35:6: warning: unused variable ‘n2’ [-Wunused-variable]
+  int n2 = crear_tablas(1,1024);
+      ^
+../src/memoria_main.c:34:6: warning: unused variable ‘n1’ [-Wunused-variable]
+  int n1 = crear_tablas(0,1024);
+      ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:41:18 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+16:43:13 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+16:45:21 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:46:32 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘eliminar_estructuras’:
+../src/memoria_utils.c:255:3: error: expected ‘;’ before ‘for’
+   for (int i = 0; i<entradas_por_tabla; i++){
+   ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+src/subdir.mk:24: recipe for target 'src/memoria_utils.o' failed
+make: *** [src/memoria_utils.o] Error 1
+16:46:37 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:47:07 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:48:03 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘eliminar_estructuras’:
+../src/memoria_utils.c:264:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘fila_2do_nivel {aka struct <anonymous>}’ [-Wformat=]
+    printf("\t%d\n", tabla_2do_nivel[i]);
+           ^
+../src/memoria_utils.c:268:59: error: ‘tabla_1er_nivel’ undeclared (first use in this function)
+   fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel,tabla_1er_nivel[i]);
+                                                           ^
+../src/memoria_utils.c:268:59: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+src/subdir.mk:24: recipe for target 'src/memoria_utils.o' failed
+make: *** [src/memoria_utils.o] Error 1
+16:48:58 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:50:24 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_tablas’:
+../src/memoria_main.c:38:6: warning: unused variable ‘n5’ [-Wunused-variable]
+  int n5 = crear_tablas(4,1);
+      ^
+../src/memoria_main.c:37:6: warning: unused variable ‘n4’ [-Wunused-variable]
+  int n4 = crear_tablas(3,1500);
+      ^
+../src/memoria_main.c:36:6: warning: unused variable ‘n3’ [-Wunused-variable]
+  int n3 = crear_tablas(2,8000);
+      ^
+../src/memoria_main.c:35:6: warning: unused variable ‘n2’ [-Wunused-variable]
+  int n2 = crear_tablas(1,16000);
+      ^
+../src/memoria_main.c:34:6: warning: unused variable ‘n1’ [-Wunused-variable]
+  int n1 = crear_tablas(0,4096);
+      ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:50:50 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_tablas’:
+../src/memoria_main.c:38:6: warning: unused variable ‘n5’ [-Wunused-variable]
+  int n5 = crear_tablas(4,1);
+      ^
+../src/memoria_main.c:37:6: warning: unused variable ‘n4’ [-Wunused-variable]
+  int n4 = crear_tablas(3,1024);
+      ^
+../src/memoria_main.c:36:6: warning: unused variable ‘n3’ [-Wunused-variable]
+  int n3 = crear_tablas(2,1024);
+      ^
+../src/memoria_main.c:35:6: warning: unused variable ‘n2’ [-Wunused-variable]
+  int n2 = crear_tablas(1,1024);
+      ^
+../src/memoria_main.c:34:6: warning: unused variable ‘n1’ [-Wunused-variable]
+  int n1 = crear_tablas(0,1024);
+      ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:51:53 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:51:55 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+16:52:21 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:53:56 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:54:43 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘crear_tablas’:
+../src/memoria_utils.c:206:10: warning: passing argument 1 of ‘printf’ makes pointer from integer without a cast [-Wint-conversion]
+   printf(nro_tabla_2do_nivel);
+          ^
+In file included from ../src/memoria_utils.h:4:0,
+                 from ../src/memoria_utils.c:1:
+/usr/include/stdio.h:362:12: note: expected ‘const char * restrict’ but argument is of type ‘uint32_t {aka unsigned int}’
+ extern int printf (const char *__restrict __format, ...);
+            ^
+../src/memoria_utils.c:206:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(nro_tabla_2do_nivel);
+   ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:55:00 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:55:37 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+../src/memoria_main.c: In function ‘testeando_tablas’:
+../src/memoria_main.c:38:6: warning: unused variable ‘n5’ [-Wunused-variable]
+  int n5 = crear_tablas(4,1);
+      ^
+../src/memoria_main.c:36:6: warning: unused variable ‘n3’ [-Wunused-variable]
+  int n3 = crear_tablas(2,1024);
+      ^
+../src/memoria_main.c:35:6: warning: unused variable ‘n2’ [-Wunused-variable]
+  int n2 = crear_tablas(1,1024);
+      ^
+../src/memoria_main.c:34:6: warning: unused variable ‘n1’ [-Wunused-variable]
+  int n1 = crear_tablas(0,1024);
+      ^
+Finished building: ../src/memoria_main.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:58:05 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+16:58:06 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+16:59:56 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+17:00:47 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+17:01:33 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+17:02:00 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 
+17:02:40 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_swap.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_swap.d" -MT"src/memoria_swap.o" -o "src/memoria_swap.o" "../src/memoria_swap.c"
+Finished building: ../src/memoria_swap.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
+Finished building target: memoria
+ 

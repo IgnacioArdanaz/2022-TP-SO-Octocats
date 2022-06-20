@@ -32,10 +32,16 @@ void testeando_boludeces(){
 void testeando_tablas(){
 
 	int n1 = crear_tablas(0,1024);
+	printf("%d\n",n1);
 	int n2 = crear_tablas(1,1024);
+	printf("%d\n",n2);
 	int n3 = crear_tablas(2,1024);
+	printf("%d\n",n3);
 	int n4 = crear_tablas(3,1024);
+	printf("%d\n",n4);
 	int n5 = crear_tablas(4,1);
+	printf("%d\n",n5);
+	eliminar_estructuras(n4, 3);
 
 }
 

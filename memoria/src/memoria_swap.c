@@ -9,7 +9,7 @@ void inicializar_swap(){
 // crear archivo
 FILE* crear_archivo_swap(uint16_t pid){
 	char* path_to_file = string_from_format("%s/%d.swap",swap_path, pid);
-	printf("%s\n",path_to_file);
+	printf("Archivo %s creado.\n", path_to_file);
 	FILE* f = fopen(path_to_file,"wb");
 	return f;
 }
@@ -30,6 +30,7 @@ void cerrar_archivo_swap(FILE* archivo){
 void borrar_archivo_swap(uint16_t pid){
 	char* path_to_file = string_from_format("%s/%d.swap",swap_path, pid);
 	remove(path_to_file);
+	printf("Archivo %s eliminado.\n", path_to_file);
 }
 
 // agregar marco en archivo, devuelve el nro de marco que representa en swap
