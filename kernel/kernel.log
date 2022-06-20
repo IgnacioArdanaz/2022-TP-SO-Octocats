@@ -5021,3 +5021,9 @@
 [INFO] 19:20:47:257 KERNEL/(16493:16502): [EXECUTE -> EXIT] Proceso 2 terminado
 [INFO] 19:20:47:257 KERNEL/(16493:16503): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
 [INFO] 19:20:52:266 KERNEL/(16493:16502): [EXECUTE -> EXIT] Proceso 3 terminado
+[INFO] 16:20:21:441 KERNEL/(8027:8027): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 16:20:21:442 KERNEL/(8027:8027): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 16:20:21:442 KERNEL/(8027:8027): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 16:20:21:442 KERNEL/(8027:8027): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 16:20:21:443 KERNEL/(8027:8027): Kernel esperando un nuevo cliente
+[INFO] 16:20:21:443 KERNEL/(8027:8027): KERNEL listo para recibir al cliente

@@ -9068,3 +9068,78 @@
 [INFO] 19:28:05:016 cpu/(16474:16499): Interrupcion recibida
 [INFO] 19:28:05:016 cpu/(16474:16499): Interrupcion recibida
 [INFO] 19:28:05:016 cpu/(16474:16499): Interrupcion recibida
+[INFO] 16:20:18:291 cpu/(8016:8016): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 16:20:18:292 cpu/(8016:8016): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 16:20:18:293 cpu/(8016:8016): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 16:20:18:293 cpu/(8016:8016): CPU_DISPATCH listo para recibir al cliente
+[INFO] 16:20:21:442 cpu/(8016:8016): Cliente conectado (a CPU_DISPATCH)
+[INFO] 16:20:21:442 cpu/(8016:8016): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 16:20:21:442 cpu/(8016:8016): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 16:20:21:442 cpu/(8016:8016): Valor alfa 0.50
+[INFO] 16:20:32:535 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:535 cpu/(8016:8016): Proceso 14256 -> program counter 1430475589 - est 13154718503261897792828315474747168129024.000000
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:536 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
+[INFO] 16:20:32:537 cpu/(8016:8038): Interrupcion recibida
