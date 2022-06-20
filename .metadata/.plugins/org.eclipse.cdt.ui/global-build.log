@@ -9078,3 +9078,182 @@ Invoking: GCC C Linker
 gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
 Finished building target: memoria
  
+17:38:59 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+17:39:00 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+17:39:01 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+17:39:02 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c:9:15: error: ‘puntero_clock’ redeclared as different kind of symbol
+ puntero_clock puntero_clock;
+               ^
+In file included from ../src/memoria_utils.c:1:0:
+../src/memoria_utils.h:34:3: note: previous declaration of ‘puntero_clock’ was here
+ } puntero_clock;
+   ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:235:10: error: incompatible types when returning type ‘int32_t {aka int}’ but ‘fila_2do_nivel {aka struct <anonymous>}’ was expected
+   return entrada.nro_marco;
+          ^
+../src/memoria_utils.c:238:9: error: incompatible types when returning type ‘int’ but ‘fila_2do_nivel {aka struct <anonymous>}’ was expected
+  return 5;
+         ^
+../src/memoria_utils.c: At top level:
+../src/memoria_utils.c:245:10: error: conflicting types for ‘clock’
+ uint32_t clock(){
+          ^
+In file included from /usr/include/pthread.h:24:0,
+                 from ../src/memoria_utils.h:7,
+                 from ../src/memoria_utils.c:1:
+/usr/include/time.h:189:16: note: previous declaration of ‘clock’ was here
+src/subdir.mk:24: recipe for target 'src/memoria_utils.o' failed
+ extern clock_t clock (void) __THROW;
+                ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:239:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+17:39:04 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+17:39:15 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+17:39:16 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+17:39:16 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+17:39:17 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:235:10: error: incompatible types when returning type ‘int32_t {aka int}’ but ‘fila_2do_nivel {aka struct <anonymous>}’ was expected
+   return entrada.nro_marco;
+          ^
+../src/memoria_utils.c:238:9: error: incompatible types when returning type ‘int’ but ‘fila_2do_nivel {aka struct <anonymous>}’ was expected
+  return 5;
+         ^
+../src/memoria_utils.c: At top level:
+../src/memoria_utils.c:245:10: error: conflicting types for ‘clock’
+ uint32_t clock(){
+          ^
+In file included from /usr/include/pthread.h:24:0,
+                 from ../src/memoria_utils.h:7,
+                 from ../src/memoria_utils.c:1:
+/usr/include/time.h:189:16: note: previous declaration of ‘clock’ was here
+ extern clock_t clock (void) __THROW;
+                ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:31:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:32:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:36:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:42:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
+src/subdir.mk:24: recipe for target 'src/memoria_utils.o' failed
+ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:46:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+../src/memoria_utils.c: In function ‘obtener_entrada_2do_nivel’:
+../src/memoria_utils.c:239:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/memoria_utils.o] Error 1
+17:39:18 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+17:39:47 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+17:39:48 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+17:39:48 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+17:39:49 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+In file included from ../src/memoria_main.h:10:0,
+                 from ../src/memoria_main.c:1:
+../src/memoria_utils.h:53:10: error: conflicting types for ‘clock’
+ uint32_t clock();
+          ^
+In file included from /usr/include/pthread.h:24:0,
+                 from ../src/memoria_utils.h:7,
+                 from ../src/memoria_main.h:10,
+                 from ../src/memoria_main.c:1:
+/usr/include/time.h:189:16: note: previous declaration of ‘clock’ was here
+ extern clock_t clock (void) __THROW;
+                ^
+../src/memoria_main.c: In function ‘clock_modificado’:
+../src/memoria_main.c:3:27: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ void testeando_boludeces(){
+                           ^
+../src/memoria_main.c:32:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ void testeando_tablas(){
+                        ^
+../src/memoria_main.c:48:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ int main(void) {
+                ^
+../src/memoria_main.c:71:1: error: expected ‘{’ at end of input
+ }
+ ^
+../src/memoria_main.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/subdir.mk:24: recipe for target 'src/memoria_main.o' failed
+make: *** [src/memoria_main.o] Error 1
+17:39:50 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.

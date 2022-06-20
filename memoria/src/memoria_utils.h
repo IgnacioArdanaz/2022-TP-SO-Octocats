@@ -25,7 +25,13 @@ typedef struct {
 	int32_t nro_marco;
 	unsigned char modificado;
 	unsigned char presencia;
+	unsigned char uso;
 } fila_2do_nivel;
+
+typedef struct {
+	uint32_t entrada_1er_nivel;
+	uint32_t entrada_2do_nivel;
+} puntero_clock;
 
 int cliente_cpu, cliente_kernel;
 
@@ -44,5 +50,7 @@ int buscar_marco_libre();
 int marcos_actuales(int entrada_1er_nivel, int entrada_2do_nivel);
 void inicializar_tabla_1er_nivel(fila_1er_nivel* tabla_1er_nivel);
 void inicializar_tabla_2do_nivel(fila_2do_nivel* tabla_2do_nivel);
+uint32_t clock();
+uint32_t clock_modificado()
 
 #endif /* MEMORIA_UTILS_H_ */

@@ -1,15 +1,38 @@
-17:02:40 **** Incremental Build of configuration Debug for project memoria ****
+17:39:49 **** Incremental Build of configuration Debug for project memoria ****
 make all 
-Building file: ../src/memoria_swap.c
+Building file: ../src/memoria_main.c
 Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_swap.d" -MT"src/memoria_swap.o" -o "src/memoria_swap.o" "../src/memoria_swap.c"
-Finished building: ../src/memoria_swap.c
- 
-Building target: memoria
-Invoking: GCC C Linker
-gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lshared
-Finished building target: memoria
- 
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+In file included from ../src/memoria_main.h:10:0,
+                 from ../src/memoria_main.c:1:
+../src/memoria_utils.h:53:10: error: conflicting types for ‘clock’
+ uint32_t clock();
+          ^
+In file included from /usr/include/pthread.h:24:0,
+                 from ../src/memoria_utils.h:7,
+                 from ../src/memoria_main.h:10,
+                 from ../src/memoria_main.c:1:
+/usr/include/time.h:189:16: note: previous declaration of ‘clock’ was here
+ extern clock_t clock (void) __THROW;
+                ^
+../src/memoria_main.c: In function ‘clock_modificado’:
+../src/memoria_main.c:3:27: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ void testeando_boludeces(){
+                           ^
+../src/memoria_main.c:32:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ void testeando_tablas(){
+                        ^
+../src/memoria_main.c:48:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ int main(void) {
+                ^
+../src/memoria_main.c:71:1: error: expected ‘{’ at end of input
+ }
+ ^
+../src/memoria_main.c:71:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/subdir.mk:24: recipe for target 'src/memoria_main.o' failed
+make: *** [src/memoria_main.o] Error 1
 
-17:02:41 Build Finished (took 896ms)
+17:39:50 Build Finished (took 970ms)
 

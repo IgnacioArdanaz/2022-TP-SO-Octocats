@@ -4,6 +4,9 @@
 pthread_mutex_t mx_log = PTHREAD_MUTEX_INITIALIZER;
 
 int cliente_kernel;
+uint16_t pid_actual;
+uint16_t entrada_1er_nivel_actual;
+puntero_clock puntero;
 t_list* lista_tablas_1er_nivel;
 t_list* lista_tablas_2do_nivel;
 uint16_t tam_memoria;
@@ -195,7 +198,7 @@ uint32_t crear_tablas(uint16_t pid, uint32_t tamanio){
 		inicializar_tabla_2do_nivel(tabla_2do_nivel);
 		for (int j = 0 ; j < entradas_por_tabla && marcos_req > marcos_actuales(i, j); j++){
 			uint32_t nro_marco = agregar_marco_en_swap(swap, tam_pagina);
-			fila_2do_nivel fila = {nro_marco,0,0};
+			fila_2do_nivel fila = {nro_marco,0,0,0};
 			tabla_2do_nivel[j] = fila;
 		}
 		uint32_t nro_tabla_2do_nivel = list_add(lista_tablas_2do_nivel,tabla_2do_nivel);
@@ -217,18 +220,71 @@ void inicializar_tabla_2do_nivel(fila_2do_nivel* tabla_2do_nivel){
 	}
 }
 
-// dada un nro de tabla y un index devuelve la entrada correspondiente
-// quizas convenga devolver directamente el valor y no su puntero
+// dada un nro de tabla y un index devuelve el nro de tabla de 2do nivel
 fila_1er_nivel obtener_entrada_1er_nivel(int32_t nro_tabla, uint32_t index){
 	fila_1er_nivel* tabla = list_get(lista_tablas_1er_nivel,nro_tabla);
 	return tabla[index];
 }
 
-// dada un nro de tabla y un index devuelve la entrada correspondiente
-// quizas convenga devolver directamente el valor y no su puntero
+// dada un nro de tabla y un index devuelve el nro de marco correspondiente
+// si el bit de presencia esta en 0, traerlo a memoria --> algoritmos cock / cock modificado (cock = gallo)
 fila_2do_nivel obtener_entrada_2do_nivel(uint32_t nro_tabla, uint32_t index){
 	fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel,nro_tabla);
-	return tabla[index];
+	fila_2do_nivel entrada = tabla[index];
+	if (entrada.presencia == 1){
+		return entrada.nro_marco;
+	}
+	// si no esta en memoria, hay que traerlo:
+	// primero fijarse si el proceso ya consumió todos los marcos que puede consumir (marcos_x_proceso)
+	// si ese es el caso --> ejecutar el algoritmo que viene desde el archivo de config
+	return 5;
+}
+
+// avanza al proximo marco del proceso
+void avanzar_puntero(){
+	if (puntero.entrada_2do_nivel + 1 == entradas_por_tabla){
+		puntero.entrada_2do_nivel = 0;
+		if (puntero.entrada_1er_nivel + 1 == entradas_por_tabla)
+			puntero.entrada_1er_nivel = 0;
+		else puntero.entrada_1er_nivel++;
+	}
+	else puntero.entrada_2do_nivel++;
+}
+
+// CADA VEZ QUE LLEGA UNA PETICION, NOS TIENE QUE LLEGAR EL PID
+// SI EL PID ES DIFERENTE AL PID ACTUAL, EL PUNTERO LO PONEMOS EN NULL
+// Y SI AL RECIBIR UNA PETICION A LA 1ER LISTA DE TABLAS ES != A LA ACTUAL, PONEMOS EN NULL
+// iterar sobre la lista de tablas de 2do nivel
+uint32_t clock(){
+
+	// iteramos en las tablas de 2do nivel
+	fila_1er_nivel* tabla_1er_nivel = list_get(lista_tablas_1er_nivel, entrada_1er_nivel_actual);
+
+	// hasta que no encuentre uno no para
+	while(1){
+
+		fila_2do_nivel* tabla_2do_nivel = tabla_1er_nivel[puntero.entrada_1er_nivel];
+		fila_2do_nivel* entrada_2do_nivel = &tabla_2do_nivel[puntero.entrada_2do_nivel];
+
+		avanzar_puntero();
+
+		// si ya no esta en memoria para que me gasto??? La re concha de tu madre
+		if (entrada_2do_nivel->presencia == 0) continue;
+
+		if (entrada_2do_nivel->uso == 0){
+			// logica de swappeo de marco y traer el otro
+			printf("Elegido!");
+			return 0;
+		}
+		else tabla_2do_nivel[puntero.entrada_2do_nivel]->uso = 0;
+	}
+
+	return 0;
+}
+
+// iterar sobre la lista de tablas de 2do nivel
+uint32_t clock_modificado(){
+	return 0;
 }
 
 // dado un nro de marco y un desplazamiento, devuelve el dato en concreto
