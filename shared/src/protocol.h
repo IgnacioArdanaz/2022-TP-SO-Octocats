@@ -21,9 +21,14 @@ typedef enum {
 	EXIT,
 	CONTINUE,
 	BLOCKED,
-	SOLICITUD_TABLA,
+	CREAR_TABLA,
 	ELIMINAR_ESTRUCTURAS,
-	SUSPENDER_PROCESO
+	SUSPENDER_PROCESO,
+	SOLICITUD_NRO_TABLA_2DO_NIVEL,
+	SOLICITUD_NRO_MARCO,
+	READ,
+	WRITE,
+	ESCRITURA_OK,
 } op_code;
 
 //PROGRAMA
@@ -38,19 +43,40 @@ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
 bool recv_proceso(int fd, PCB_t* proceso);
 static void deserializar_proceso(void* stream, PCB_t* proceso);
 
-//SOLICITUD TABLA PAGINAS
-bool send_solicitud_tabla_paginas(int fd, uint32_t tamanio, uint16_t pid);
-static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
-bool recv_solicitud_tabla(int fd, uint32_t* tamanio, uint16_t* pid);
+// CREAR TABLA
+bool send_crear_tabla(int fd, uint32_t tamanio, uint16_t pid);
+static void* serializar_crear_tabla(uint32_t tamanio, uint16_t pid);
+bool recv_crear_tabla(int fd, uint32_t* tamanio, uint16_t* pid);
+
+//SUSENDER PROCESO
+bool send_suspender_proceso(int fd, uint16_t pid, uint32_t tabla_paginas);
+static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
+bool recv_suspender_proceso(int fd, uint16_t* pid, uint32_t* tabla_paginas);
 
 // ELIMINAR ESTRUCTURAS
 bool send_eliminar_estructuras(int fd, uint32_t tabla_paginas, uint16_t pid);
 static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
 bool recv_eliminar_estructuras(int fd, uint16_t* pid, uint32_t* tabla_paginas);
 
-//SUSENDER PROCESO
-bool send_suspender_proceso(int fd, uint16_t pid, uint32_t tabla_paginas);
-static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
-bool recv_suspender_proceso(int fd, uint16_t* pid, uint32_t* tabla_paginas);
+// SOLICITUD TABLA 2DO NIVEL
+bool send_solicitud_nro_tabla_2do_nivel(int fd, uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla);
+static void* serializar_solicitud_nro_tabla_2do_nivel(uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla);
+bool recv_solicitud_nro_tabla_2do_nivel(int fd, uint16_t* pid, uint32_t* nro_tabla_1er_nivel, uint32_t* entrada_tabla);
+
+
+// SOLICITUD NRO MARCO
+bool send_solicitud_nro_marco(int fd, uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla);
+static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla);
+bool recv_solicitud_nro_marco(int fd, uint16_t* pid, uint32_t* nro_tabla_2do_nivel, uint32_t* entrada_tabla);
+
+// READ
+bool send_read(int fd, uint32_t nro_marco, uint16_t desplazamiento);
+static void* serializar_read(uint32_t nro_marco, uint16_t desplazamiento);
+bool recv_read(int fd, uint32_t* nro_marco, uint16_t* desplazamiento);
+
+// WRITE
+bool send_write(int fd, uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+static void* serializar_write(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+bool recv_write(int fd, uint32_t* nro_marco, uint16_t* desplazamiento, uint32_t* dato);
 
 #endif

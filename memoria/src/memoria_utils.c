@@ -63,12 +63,12 @@ void recibir_kernel() {
 			return;
 		}
 		switch (cop) {
-			case SOLICITUD_TABLA:
+			case CREAR_TABLA:
 			{
 				uint32_t tamanio = 0;
 				uint16_t pid = 0;
 
-				if (!recv_solicitud_tabla(cliente_kernel, &tamanio, &pid)) {
+				if (!recv_crear_tabla(cliente_kernel, &tamanio, &pid)) {
 					pthread_mutex_lock(&mx_log);
 					log_error(logger,"Fallo recibiendo ELIMINAR ESTRUCTURAS");
 					pthread_mutex_unlock(&mx_log);
@@ -215,39 +215,97 @@ void escuchar_cpu() {
 }
 
 void recibir_cpu() {
-//	op_code cop;
-//	while (cliente_kernel != -1) {
-//		if (recv(cliente_kernel, &cop, sizeof(op_code), 0) <= 0) {
-//			pthread_mutex_lock(&mx_log);
-//			log_error(logger,"DISCONNECT FAILURE!");
-//			pthread_mutex_unlock(&mx_log);
-//			return;
-//		}
-//		switch (cop) {
-//			case SOLICITUD_TABLA:
-//			{
-//				uint32_t tamanio = 0;
-//
-//				if (!recv(cliente_kernel, &tamanio, sizeof(uint32_t), 0)) {
-//					pthread_mutex_lock(&mx_log);
-//					log_error(logger,"Fallo recibiendo SOLICITUD");
-//					pthread_mutex_unlock(&mx_log);
-//					break;
-//				}
-//
-//				uint32_t tabla_paginas = crear_tablas(tamanio);
-//
-//				send(cliente_kernel, &tabla_paginas, sizeof(uint32_t), 0);
-//
-//				return;
-//			}
-//
-//			default:
-//				pthread_mutex_lock(&mx_log);
-//				log_error(logger, "Algo anduvo mal en el server de memoria\n Cop: %d",cop);
-//				pthread_mutex_unlock(&mx_log);
-//		}
-//	}
+	op_code cop;
+	while (cliente_cpu != -1) {
+		if (recv(cliente_cpu, &cop, sizeof(op_code), 0) <= 0) {
+			pthread_mutex_lock(&mx_log);
+			log_error(logger,"DISCONNECT FAILURE!");
+			pthread_mutex_unlock(&mx_log);
+			return;
+		}
+		switch (cop) {
+			case SOLICITUD_NRO_TABLA_2DO_NIVEL:
+			{
+				uint16_t pid = 0;
+				uint32_t nro_tabla_1er_nivel = 0;
+				uint32_t entrada_tabla = 0;
+
+				if (!recv_solicitud_nro_tabla_2do_nivel(cliente_cpu, &pid, &nro_tabla_1er_nivel, &entrada_tabla)) {
+					pthread_mutex_lock(&mx_log);
+					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
+					pthread_mutex_unlock(&mx_log);
+					break;
+				}
+
+				fila_1er_nivel nro_tabla_2do_nivel = obtener_nro_tabla_2do_nivel(nro_tabla_1er_nivel, entrada_tabla, pid);
+
+				send(cliente_cpu, &nro_tabla_2do_nivel, sizeof(fila_1er_nivel), 0);
+
+				return;
+			}
+			case SOLICITUD_NRO_MARCO:
+			{
+				uint16_t pid = 0; // No se usa por ahora
+				uint32_t nro_tabla_2do_nivel = 0;
+				uint32_t entrada_tabla = 0;
+
+				if (!recv_solicitud_nro_marco(cliente_cpu, &pid, &nro_tabla_2do_nivel, &entrada_tabla)) {
+					pthread_mutex_lock(&mx_log);
+					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
+					pthread_mutex_unlock(&mx_log);
+					break;
+				}
+
+				uint32_t nro_marco = obtener_nro_marco_memoria(nro_tabla_2do_nivel, entrada_tabla);
+
+				send(cliente_cpu, &nro_marco, sizeof(uint32_t), 0);
+
+				return;
+			}
+			case READ:
+			{
+				uint32_t nro_marco;
+				uint16_t desplazamiento;
+
+				if (!recv_read(cliente_cpu, &nro_marco, &desplazamiento)) {
+					pthread_mutex_lock(&mx_log);
+					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
+					pthread_mutex_unlock(&mx_log);
+					break;
+				}
+
+				uint32_t dato = read_en_memoria(nro_marco, desplazamiento);
+
+				send(cliente_cpu, &dato, sizeof(uint32_t), 0);
+
+				return;
+			}
+			case WRITE:
+			{
+				uint32_t nro_marco;
+				uint16_t desplazamiento;
+				uint32_t dato;
+
+				if (!recv_write(cliente_cpu, &nro_marco, &desplazamiento, &dato)) {
+					pthread_mutex_lock(&mx_log);
+					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
+					pthread_mutex_unlock(&mx_log);
+					break;
+				}
+
+				write_en_memoria(nro_marco, desplazamiento, dato);
+
+				op_code resultado = ESCRITURA_OK;
+				send(cliente_cpu, &resultado, sizeof(op_code), 0);
+
+				return;
+			}
+			default:
+				pthread_mutex_lock(&mx_log);
+				log_error(logger, "Algo anduvo mal en el server de memoria\n Cop: %d",cop);
+				pthread_mutex_unlock(&mx_log);
+		}
+	}
 }
 
 // buscar el primer marco libre
@@ -279,7 +337,7 @@ void printear_bitmap(){
 }
 
 // dada un nro de tabla y un index devuelve el nro de tabla de 2do nivel
-fila_1er_nivel obtener_entrada_1er_nivel(int32_t nro_tabla, uint32_t index, uint32_t pid){
+fila_1er_nivel obtener_nro_tabla_2do_nivel(int32_t nro_tabla, uint32_t index, uint32_t pid){
 	if (pid != pid_actual || nro_tabla != entrada_1er_nivel_actual){
 		pid_actual = pid;
 		entrada_1er_nivel_actual = nro_tabla;
@@ -292,7 +350,7 @@ fila_1er_nivel obtener_entrada_1er_nivel(int32_t nro_tabla, uint32_t index, uint
 
 // dada un nro de tabla y un index devuelve el nro de marco correspondiente
 // si el bit de presencia esta en 0, traerlo a memoria --> algoritmos cock / cock modificado (cock = gallo)
-uint32_t obtener_entrada_2do_nivel(uint32_t nro_tabla, uint32_t index){
+uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index){
 	fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel,nro_tabla);
 	fila_2do_nivel* entrada = &tabla[index];
 	if (entrada->presencia == 1){

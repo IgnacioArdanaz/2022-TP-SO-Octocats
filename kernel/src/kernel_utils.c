@@ -211,7 +211,7 @@ void pasaje_a_ready(){
 
 
 void solicitar_tabla_paginas(PCB_t* proceso){
-	send_solicitud_tabla_paginas(conexion_memoria, &proceso->tamanio, &proceso->pid);
+	send_crear_tabla(conexion_memoria, &proceso->tamanio, &proceso->pid);
 	uint32_t tabla_paginas = 0;
 	recv(conexion_memoria, &tabla_paginas, sizeof(uint32_t), 0);
 	proceso->tabla_paginas = tabla_paginas;
