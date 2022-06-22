@@ -22,7 +22,8 @@ typedef enum {
 	CONTINUE,
 	BLOCKED,
 	SOLICITUD_TABLA,
-	ELIMINAR_ESTRUCTURAS
+	ELIMINAR_ESTRUCTURAS,
+	SUSPENDER_PROCESO
 } op_code;
 
 //PROGRAMA
@@ -40,10 +41,16 @@ static void deserializar_proceso(void* stream, PCB_t* proceso);
 //SOLICITUD TABLA PAGINAS
 bool send_solicitud_tabla_paginas(int fd, uint32_t tamanio, uint16_t pid);
 static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
+bool recv_solicitud_tabla(int fd, uint32_t* tamanio, uint16_t* pid);
 
 // ELIMINAR ESTRUCTURAS
 bool send_eliminar_estructuras(int fd, uint32_t tabla_paginas, uint16_t pid);
 static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
 bool recv_eliminar_estructuras(int fd, uint16_t* pid, uint32_t* tabla_paginas);
+
+//SUSENDER PROCESO
+bool send_suspender_proceso(int fd, uint16_t pid, uint32_t tabla_paginas);
+static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
+bool recv_suspender_proceso(int fd, uint16_t* pid, uint32_t* tabla_paginas);
 
 #endif

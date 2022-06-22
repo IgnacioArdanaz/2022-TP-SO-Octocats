@@ -45,6 +45,8 @@ void inicializar_memoria(){
 
 }
 
+/***************************** HILO KERNEL *****************************/
+
 void escuchar_kernel() {
 	while(1) {
 		recibir_kernel();
@@ -66,16 +68,9 @@ void recibir_kernel() {
 				uint32_t tamanio = 0;
 				uint16_t pid = 0;
 
-				if (!recv(cliente_kernel, &tamanio, sizeof(uint32_t), 0)) {
+				if (!recv_solicitud_tabla(cliente_kernel, &tamanio, &pid)) {
 					pthread_mutex_lock(&mx_log);
-					log_error(logger,"Fallo recibiendo SOLICITUD");
-					pthread_mutex_unlock(&mx_log);
-					break;
-				}
-
-				if (!recv(cliente_kernel, &pid, sizeof(uint16_t), 0)) {
-					pthread_mutex_lock(&mx_log);
-					log_error(logger,"Fallo recibiendo SOLICITUD");
+					log_error(logger,"Fallo recibiendo ELIMINAR ESTRUCTURAS");
 					pthread_mutex_unlock(&mx_log);
 					break;
 				}
@@ -102,6 +97,26 @@ void recibir_kernel() {
 
 				return;
 			}
+			case SUSPENDER_PROCESO:
+			{
+				uint32_t tabla_paginas = 0;
+				uint16_t pid = 0;
+
+				if (!recv_suspender_proceso(cliente_kernel, &pid, &tabla_paginas)) {
+					pthread_mutex_lock(&mx_log);
+					log_error(logger,"Fallo recibiendo ELIMINAR ESTRUCTURAS");
+					pthread_mutex_unlock(&mx_log);
+					break;
+				}
+
+				suspender_proceso(pid, tabla_paginas);
+
+				uint16_t resultado = 1;
+				send(cliente_kernel, &resultado, sizeof(uint16_t), 0);
+
+
+				return;
+			}
 			default:
 				pthread_mutex_lock(&mx_log);
 				log_error(logger, "Algo anduvo mal en el server de memoria\n Cop: %d",cop);
@@ -109,6 +124,89 @@ void recibir_kernel() {
 		}
 	}
 }
+
+// INICIALIZACIÓN DE PROCESO
+fila_2do_nivel crear_fila(int marco, int mod, int pres){
+	fila_2do_nivel f = {marco, mod, pres};
+	return f;
+}
+
+// creas los marcos y las tablas necesarias para el proceso
+uint32_t crear_tablas(uint16_t pid, uint32_t tamanio){
+
+	int marcos_req = calcular_cant_marcos(tamanio);
+	fila_1er_nivel* tabla_1er_nivel = malloc(sizeof(uint32_t) * entradas_por_tabla);
+	FILE* swap = crear_archivo_swap(pid);
+	inicializar_tabla_1er_nivel(tabla_1er_nivel);
+
+	for (int i = 0; i < entradas_por_tabla && marcos_req > marcos_actuales(i, 0); i++){
+		fila_2do_nivel* tabla_2do_nivel = malloc(entradas_por_tabla * sizeof(fila_2do_nivel));
+		inicializar_tabla_2do_nivel(tabla_2do_nivel);
+		for (int j = 0 ; j < entradas_por_tabla && marcos_req > marcos_actuales(i, j); j++){
+			uint32_t nro_marco = agregar_marco_en_swap(swap, tam_pagina);
+			fila_2do_nivel fila = {nro_marco,0,0,0};
+			tabla_2do_nivel[j] = fila;
+		}
+		uint32_t nro_tabla_2do_nivel = list_add(lista_tablas_2do_nivel,tabla_2do_nivel);
+		tabla_1er_nivel[i] = nro_tabla_2do_nivel;
+	}
+	cerrar_archivo_swap(swap);
+	return list_add(lista_tablas_1er_nivel,tabla_1er_nivel);
+}
+
+void inicializar_tabla_1er_nivel(fila_1er_nivel* tabla_1er_nivel){
+	for (int i = 0; i < entradas_por_tabla; i++){
+		tabla_1er_nivel[i] = -1;
+	}
+}
+
+void inicializar_tabla_2do_nivel(fila_2do_nivel* tabla_2do_nivel){
+	for (int i = 0; i < entradas_por_tabla; i++){
+		tabla_2do_nivel[i].nro_marco = -1;
+	}
+}
+
+// SUSPENSIÓN DE PROCESO
+
+void suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
+	FILE* swap = abrir_archivo_swap(pid);
+	fila_1er_nivel* tabla_1er_nivel = list_get(lista_tablas_1er_nivel, tabla_paginas);
+	for(int i=0; i < entradas_por_tabla; i++) {
+		fila_2do_nivel* tabla_2do_nivel = list_get(lista_tablas_2do_nivel,tabla_1er_nivel[i]);
+		for(int j=0; j < entradas_por_tabla; j++) {
+			if (tabla_2do_nivel->nro_marco == -1) continue;
+			if (tabla_2do_nivel->presencia == 1) {
+				marcos_ocupados[tabla_2do_nivel->nro_marco] = 0;
+				tabla_2do_nivel->presencia = 0;
+				if (tabla_2do_nivel->modificado == 1) {
+					int nro_marco_en_swap = i * entradas_por_tabla + j;
+					actualizar_marco_en_swap(swap, nro_marco_en_swap, obtener_marco(tabla_2do_nivel->nro_marco), tam_pagina);
+					tabla_2do_nivel->modificado = 0;
+				}
+			}
+		}
+	}
+	cerrar_archivo_swap(swap);
+}
+
+// FINALIZACIÓN DE PROCESO
+
+void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
+	// Acá se tendrían que eliminar el archivo swap correspondiente...
+	// sería --> por cada marco --> bit de presencia --> pres == 1 --> bitarray a 0
+	// yyyyyyyyy eliminamos el .swap
+	fila_1er_nivel* tabla_1er_nivel = list_get(lista_tablas_1er_nivel, tabla_paginas);
+	for(int i=0; i < entradas_por_tabla; i++) {
+		fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel,tabla_1er_nivel[i]);
+		for(int j=0; j < entradas_por_tabla; j++)
+			if (tabla->nro_marco == -1) continue;
+			if (tabla->presencia == 1)
+				marcos_ocupados[tabla->nro_marco] = 0;
+	}
+	borrar_archivo_swap(pid);
+}
+
+/***************************** HILO CPU *****************************/
 
 void escuchar_cpu() {
 	while(1) {
@@ -177,46 +275,6 @@ int marcos_actuales(int entrada_1er_nivel, int entrada_2do_nivel){
 void printear_bitmap(){
 	for (int i = 0; i < tam_memoria / tam_pagina; i++){
 		printf("%d : %d\n", i, marcos_ocupados[i]);
-	}
-}
-
-fila_2do_nivel crear_fila(int marco, int mod, int pres){
-	fila_2do_nivel f = {marco, mod, pres};
-	return f;
-}
-
-// creas los marcos y las tablas necesarias para el proceso
-uint32_t crear_tablas(uint16_t pid, uint32_t tamanio){
-
-	int marcos_req = calcular_cant_marcos(tamanio);
-	fila_1er_nivel* tabla_1er_nivel = malloc(sizeof(uint32_t) * entradas_por_tabla);
-	FILE* swap = crear_archivo_swap(pid);
-	inicializar_tabla_1er_nivel(tabla_1er_nivel);
-
-	for (int i = 0; i < entradas_por_tabla && marcos_req > marcos_actuales(i, 0); i++){
-		fila_2do_nivel* tabla_2do_nivel = malloc(entradas_por_tabla * sizeof(fila_2do_nivel));
-		inicializar_tabla_2do_nivel(tabla_2do_nivel);
-		for (int j = 0 ; j < entradas_por_tabla && marcos_req > marcos_actuales(i, j); j++){
-			uint32_t nro_marco = agregar_marco_en_swap(swap, tam_pagina);
-			fila_2do_nivel fila = {nro_marco,0,0,0};
-			tabla_2do_nivel[j] = fila;
-		}
-		uint32_t nro_tabla_2do_nivel = list_add(lista_tablas_2do_nivel,tabla_2do_nivel);
-		tabla_1er_nivel[i] = nro_tabla_2do_nivel;
-	}
-	cerrar_archivo_swap(swap);
-	return list_add(lista_tablas_1er_nivel,tabla_1er_nivel);
-}
-
-void inicializar_tabla_1er_nivel(fila_1er_nivel* tabla_1er_nivel){
-	for (int i = 0; i < entradas_por_tabla; i++){
-		tabla_1er_nivel[i] = -1;
-	}
-}
-
-void inicializar_tabla_2do_nivel(fila_2do_nivel* tabla_2do_nivel){
-	for (int i = 0; i < entradas_por_tabla; i++){
-		tabla_2do_nivel[i].nro_marco = -1;
 	}
 }
 
@@ -290,7 +348,7 @@ uint32_t clock_simple(FILE* swap){
 		fila_2do_nivel* tabla_2do_nivel = list_get(lista_tablas_2do_nivel,tabla_1er_nivel[puntero.entrada_1er_nivel]);
 		fila_2do_nivel* entrada_2do_nivel = &tabla_2do_nivel[puntero.entrada_2do_nivel];
 
-		int nro_marco_del_proceso = puntero.entrada_1er_nivel * entradas_por_tabla + puntero.entrada_2do_nivel;
+		int nro_marco_en_swap = puntero.entrada_1er_nivel * entradas_por_tabla + puntero.entrada_2do_nivel;
 
 		avanzar_puntero();
 
@@ -299,10 +357,11 @@ uint32_t clock_simple(FILE* swap){
 
 		if (entrada_2do_nivel->uso == 0){
 			// logica de swappeo de marco
-			printf("Elegido %d!\n",nro_marco_del_proceso);
+			printf("Elegido %d!\n",nro_marco_en_swap);
 			// si tiene el bit de modificado en 1, hay que actualizar el archivo swap
 			if (entrada_2do_nivel->modificado == 1){
-				actualizar_marco_en_swap(swap, nro_marco_del_proceso, obtener_marco(nro_marco_del_proceso), tam_pagina);
+				actualizar_marco_en_swap(swap, nro_marco_en_swap, obtener_marco(entrada_2do_nivel->nro_marco), tam_pagina);
+				entrada_2do_nivel->modificado = 0;
 			}
 			entrada_2do_nivel->presencia = 0;
 			marcos_ocupados[entrada_2do_nivel->nro_marco] = 0;
@@ -356,19 +415,4 @@ uint32_t marcos_en_memoria(){
 void escribir_marco(uint32_t nro_marco, void* marco){
 	uint32_t marco_en_memoria = nro_marco * tam_pagina;
 	memcpy(memoria + marco_en_memoria, marco, tam_pagina);
-}
-
-void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
-	// Acá se tendrían que eliminar el archivo swap correspondiente...
-	// sería --> por cada marco --> bit de presencia --> pres == 1 --> bitarray a 0
-	// yyyyyyyyy eliminamos el .swap
-	fila_1er_nivel* tabla_1er_nivel = list_get(lista_tablas_1er_nivel, tabla_paginas);
-	for(int i=0; i < entradas_por_tabla; i++) {
-		fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel,tabla_1er_nivel[i]);
-		for(int j=0; j < entradas_por_tabla; j++)
-			if (tabla->nro_marco == -1) continue;
-			if (tabla->presencia == 1)
-				marcos_ocupados[tabla->nro_marco] = 0;
-	}
-	borrar_archivo_swap(pid);
 }

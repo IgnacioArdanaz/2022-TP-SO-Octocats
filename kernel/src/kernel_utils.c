@@ -320,6 +320,9 @@ void suspendiendo(PCB_t* pcb){
 	if(iteracion_actual == dictionary_get(iteracion_blocked, key)){
 		pthread_mutex_unlock(&mx_iteracion_blocked);
 		log_info(logger,"[BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso %d",pcb->pid);
+		send_suspender_proceso(conexion_memoria, pcb->pid, pcb->tabla_paginas);
+		uint16_t resultado;
+		recv(conexion_memoria, &resultado, sizeof(uint16_t), 0);
 		list_add(cola_suspended_blocked,pcb->pid);
 		pthread_mutex_unlock(&mx_cola_blocked);
 		pthread_mutex_unlock(&mx_cola_suspended_blocked);

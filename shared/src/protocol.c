@@ -220,6 +220,24 @@ static void* serializar_solicitud(uint32_t tamanio, uint16_t pid) {
     return stream;
 }
 
+bool recv_solicitud_tabla(int fd, uint32_t* tamanio, uint16_t* pid) {
+	size_t size = sizeof(uint32_t) + sizeof(uint16_t);
+	void* stream = malloc(size);
+	if (recv(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	 }
+
+	size_t acumulador = 0;
+	memcpy(&tamanio, stream + acumulador, sizeof(uint32_t));
+	acumulador += sizeof(uint32_t);
+	memcpy(&pid, stream + acumulador, sizeof(uint16_t));
+	acumulador += sizeof(uint16_t);
+
+	free(stream);
+    return true;
+}
+
 /***************************** ELIMINAR ESTRUCTURAS *****************************/
 bool send_eliminar_estructuras(int fd, uint32_t tabla_paginas, uint16_t pid) {
 	size_t size = sizeof(op_code) + sizeof(uint32_t) + sizeof(uint16_t);
@@ -260,6 +278,52 @@ bool recv_eliminar_estructuras(int fd, uint16_t* pid, uint32_t* tabla_paginas) {
 	acumulador += sizeof(uint32_t);
 	memcpy(&pid, stream + acumulador, sizeof(uint16_t));
 	acumulador += sizeof(uint16_t);
+
+	free(stream);
+    return true;
+}
+
+
+/***************************** SUSENDER PROCESO *****************************/
+bool send_suspender_proceso(int fd, uint16_t pid, uint32_t tabla_paginas) {
+	size_t size = sizeof(op_code) + sizeof(uint32_t) + sizeof(uint16_t);
+	void* stream = serializar_suspender_proceso(tabla_paginas, pid);
+	if (send(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+	free(stream);
+	return true;
+}
+
+static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
+    void* stream = malloc(sizeof(op_code) + sizeof(uint32_t) + sizeof(uint16_t));
+
+    op_code cop = SUSPENDER_PROCESO;
+    size_t acumulador = 0;
+    memcpy(stream + acumulador, &cop, sizeof(op_code));
+    acumulador += sizeof(op_code);
+	memcpy(stream + acumulador, &pid, sizeof(uint16_t));
+    acumulador += sizeof(uint16_t);
+    memcpy(stream + acumulador, &tabla_paginas, sizeof(uint32_t));
+
+    return stream;
+}
+
+//Recepcion y deserealizacion
+bool recv_suspender_proceso(int fd, uint16_t* pid, uint32_t* tabla_paginas) {
+	size_t size = sizeof(uint32_t) + sizeof(uint16_t);
+	void* stream = malloc(size);
+	if (recv(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	 }
+
+	size_t acumulador = 0;
+	memcpy(&pid, stream + acumulador, sizeof(uint16_t));
+	acumulador += sizeof(uint16_t);
+	memcpy(&tabla_paginas, stream + acumulador, sizeof(uint32_t));
+	acumulador += sizeof(uint32_t);
 
 	free(stream);
     return true;
