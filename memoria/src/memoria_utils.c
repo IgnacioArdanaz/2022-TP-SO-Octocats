@@ -318,7 +318,7 @@ uint32_t obtener_entrada_2do_nivel(uint32_t nro_tabla, uint32_t index){
 	marcos_ocupados[nro_marco] = 1;
 	entrada->nro_marco = nro_marco;
 	entrada->presencia = 1;
-	escribir_marco(entrada->nro_marco, marco);
+	escribir_marco_en_memoria(entrada->nro_marco, marco);
 	return nro_marco;
 }
 
@@ -380,17 +380,6 @@ uint32_t clock_modificado(){
 	return 0;
 }
 
-// dado un nro de marco y un desplazamiento, devuelve el dato en concreto
-// la posicion que nos da el puntero a la memoria + tam_pagina * nro_marco nos da -->
-// --> la posicion de inicio del marco especificado, luego eso + desplazamiento -->
-// --> nos da la direccion que buscamos
-// (chequear implementacion)
-// quizas convenga devolver directamente el valor y no su puntero
-uint8_t obtener_entrada_marco(uint32_t nro_marco, uint32_t desplazamiento){
-	uint8_t* direccion = (uint8_t*) memoria + tam_pagina * nro_marco + desplazamiento;
-	return *direccion;
-}
-
 void* obtener_marco(uint32_t nro_marco){
 	void* marco;
 	memcpy(marco, memoria + nro_marco * tam_pagina, tam_pagina);
@@ -412,7 +401,24 @@ uint32_t marcos_en_memoria(){
 	return cont;
 }
 
-void escribir_marco(uint32_t nro_marco, void* marco){
+void escribir_marco_en_memoria(uint32_t nro_marco, void* marco){
 	uint32_t marco_en_memoria = nro_marco * tam_pagina;
 	memcpy(memoria + marco_en_memoria, marco, tam_pagina);
 }
+
+// Dado un nro de marco y un desplazamiento, devuelve el dato en concreto
+uint32_t read_en_memoria(uint32_t nro_marco, uint16_t desplazamiento){
+	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
+	uint32_t dato;
+	memcpy(&dato, memoria + desplazamiento_final, sizeof(dato));
+	return dato;
+}
+
+// Dado un nro de marco, un desplazamiento y un dato, escribe el dato en dicha posicion
+void write_en_memoria(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato) {
+	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
+	memcpy(memoria + desplazamiento_final, &dato, sizeof(dato));
+}
+
+
+

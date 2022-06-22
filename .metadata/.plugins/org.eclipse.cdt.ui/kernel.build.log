@@ -1,5 +1,10 @@
-10:26:02 **** Incremental Build of configuration Debug for project kernel ****
+11:14:56 **** Incremental Build of configuration Debug for project kernel ****
 make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+Finished building: ../src/kernel_main.c
+ 
 Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
 gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
@@ -81,10 +86,10 @@ In file included from ../src/kernel_utils.h:17:0,
 /home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:43:14: warning: ‘serializar_solicitud’ declared ‘static’ but never defined [-Wunused-function]
  static void* serializar_solicitud(uint32_t tamanio, uint16_t pid);
               ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:47:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:48:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
  static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
               ^
-/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:52:14: warning: ‘serializar_suspender_proceso’ declared ‘static’ but never defined [-Wunused-function]
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:53:14: warning: ‘serializar_suspender_proceso’ declared ‘static’ but never defined [-Wunused-function]
  static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
               ^
 Finished building: ../src/kernel_utils.c
@@ -95,5 +100,5 @@ gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_m
 Finished building target: kernel
  
 
-10:26:04 Build Finished (took 1s.869ms)
+11:14:59 Build Finished (took 3s.104ms)
 

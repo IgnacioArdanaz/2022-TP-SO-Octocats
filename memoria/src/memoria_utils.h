@@ -65,9 +65,11 @@ uint32_t obtener_entrada_2do_nivel(uint32_t nro_tabla, uint32_t index);
 void avanzar_puntero();
 uint32_t clock_simple(FILE* swap);
 uint32_t clock_modificado();
-uint8_t obtener_entrada_marco(uint32_t nro_marco, uint32_t desplazamiento);
 void* obtener_marco(uint32_t nro_marco);
 uint32_t marcos_en_memoria();
-void escribir_marco(uint32_t nro_marco, void* marco);
+void escribir_marco_en_memoria(uint32_t nro_marco, void* marco);
+
+uint32_t read_en_memoria(uint32_t nro_marco, uint16_t desplazamiento);
+void write_en_memoria(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
 
 #endif /* MEMORIA_UTILS_H_ */
