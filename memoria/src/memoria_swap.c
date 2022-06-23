@@ -1,9 +1,11 @@
 #include "memoria_swap.h"
 
 char* swap_path;
+uint16_t retardo_swap;
 
 void inicializar_swap(){
 	swap_path = config_get_string_value(config,"PATH_SWAP");
+	retardo_swap = config_get_int_value(config,"RETARDO_SWAP");
 }
 
 // crear archivo
@@ -39,6 +41,7 @@ uint32_t agregar_marco_en_swap(FILE* archivo, uint32_t tamanio_marcos){
 	void* marco = malloc(tamanio_marcos);
 	fwrite(marco, 1, tamanio_marcos, archivo);
 	free(marco);
+	usleep(retardo_swap * 1000);
 	return ftell(archivo) / tamanio_marcos - 1;
 }
 
@@ -46,6 +49,7 @@ uint32_t agregar_marco_en_swap(FILE* archivo, uint32_t tamanio_marcos){
 void actualizar_marco_en_swap(FILE* archivo, uint32_t nro_marco, void* marco, uint32_t tamanio_marcos){
 	fseek(archivo, nro_marco * tamanio_marcos, SEEK_SET);
 	fwrite(marco, 1, tamanio_marcos, archivo);
+	usleep(retardo_swap * 1000);
 }
 
 // leer marco
@@ -53,5 +57,6 @@ void* leer_marco_en_swap(FILE* archivo, uint32_t nro_marco, uint32_t tamanio_mar
 	void* marco = malloc(tamanio_marcos);
 	fseek(archivo, nro_marco * tamanio_marcos, SEEK_SET);
 	fread(marco, 1, tamanio_marcos, archivo);
+	usleep(retardo_swap * 1000);
 	return marco;
 }

@@ -31,34 +31,24 @@ void testeando_boludeces(){
 
 void testeando_tablas(){
 
-	int n1 = crear_tablas(0,1024);
-	printf("TABLA DE 1ER NIVEL: %d\n",n1);
-	int rta1 = obtener_nro_tabla_2do_nivel(n1, 0, 0);
-	int rta2 = obtener_nro_marco_memoria(rta1, 0);
+	for (int i = 0; i < 16; i++){
+		int n1 = crear_tablas(i,1024);
+		printf("TABLA DE 1ER NIVEL: %d\n",n1);
+		int rta1 = obtener_nro_tabla_2do_nivel(n1, 0, i);
+		int rta2 = obtener_nro_marco_memoria(rta1, 0);
+		int rta3 = read_en_memoria(rta2, 0);
+		printf("%d\n",rta3);
+	}
+
+	int rta1 = obtener_nro_tabla_2do_nivel(0, 1, 0);
+	int rta2 = obtener_nro_marco_memoria(rta1, 2);
 	int rta3 = read_en_memoria(rta2, 0);
-	printf("%d\n",rta3);
-	rta1 = obtener_nro_tabla_2do_nivel(n1, 1, 0);
-	rta2 = obtener_nro_marco_memoria(rta1, 1);
-	rta3 = read_en_memoria(rta2, 0);
-	printf("%d\n",rta3);
-	rta1 = obtener_nro_tabla_2do_nivel(n1, 2, 0);
-	rta2 = obtener_nro_marco_memoria(rta1, 0);
-	rta3 = read_en_memoria(rta2, 0);
-	printf("%d\n",rta3);
-	rta1 = obtener_nro_tabla_2do_nivel(n1, 3, 0);
-	rta2 = obtener_nro_marco_memoria(rta1, 0);
-	rta3 = read_en_memoria(rta2, 0);
-	printf("%d\n",rta3);
-	printf("Ahora no deberia swappear un marco\n");
-	rta1 = obtener_nro_tabla_2do_nivel(n1, 2, 0);
-	rta2 = obtener_nro_marco_memoria(rta1, 0);
-	rta3 = read_en_memoria(rta2, 0);
-	printf("%d\n",rta3);
-	printf("Ahora deberia swappear un marco\n");
-	rta1 = obtener_nro_tabla_2do_nivel(n1, 3, 0);
-	rta2 = obtener_nro_marco_memoria(rta1, 2);
-	rta3 = read_en_memoria(rta2, 0);
-	printf("%d\n",rta3);
+	printf("%d", rta3);
+
+
+	write_en_memoria(rta2, 0, 4);
+
+	imprimir_tablas_2();
 
 }
 

@@ -6,6 +6,7 @@ pthread_mutex_t mx_log = PTHREAD_MUTEX_INITIALIZER;
 int cliente_kernel;
 uint16_t pid_actual;
 uint16_t entrada_1er_nivel_actual;
+fila_2do_nivel* entrada_2do_nivel_actual;
 puntero_clock puntero;
 t_list* lista_tablas_1er_nivel;
 t_list* lista_tablas_2do_nivel;
@@ -14,9 +15,31 @@ uint16_t tam_pagina;
 uint16_t entradas_por_tabla;
 uint16_t retardo_memoria;
 uint16_t marcos_por_proceso;
-uint16_t retardo_swap;
 uint8_t* marcos_ocupados;
+char* algoritmo;
 void* memoria;
+
+void imprimir_tablas_1(){
+	printf("TABLAS 1ER NIVEL:\n");
+	for (int i = 0; i < list_size(lista_tablas_1er_nivel); i++){
+		printf("TABLA %d:\n", i);
+		fila_1er_nivel* tabla = list_get(lista_tablas_1er_nivel, i);
+		for (int j = 0; j < entradas_por_tabla; j ++){
+			printf("%d - %d\n", j, tabla[j]);
+		}
+	}
+}
+
+void imprimir_tablas_2(){
+	printf("TABLAS 2DO NIVEL:\n");
+	for (int i = 0; i < list_size(lista_tablas_2do_nivel); i++){
+		printf("TABLA %d:\n", i);
+		fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel, i);
+		for (int j = 0; j < entradas_por_tabla; j ++){
+			printf("%d - marco %d uso %d presencia %d modificado %d\n", j, tabla[j].nro_marco,tabla[j].uso, tabla[j].presencia, tabla[j].modificado);
+		}
+	}
+}
 
 void inicializar_memoria(){
 	logger = log_create("memoria.log", "memoria", 1, LOG_LEVEL_INFO);
@@ -30,9 +53,11 @@ void inicializar_memoria(){
 	tam_memoria = config_get_int_value(config,"TAM_MEMORIA");
 	tam_pagina = config_get_int_value(config,"TAM_PAGINA");
 	entradas_por_tabla = config_get_int_value(config,"ENTRADAS_POR_TABLA");
+
 	retardo_memoria = config_get_double_value(config,"RETARDO_MEMORIA");
+
 	marcos_por_proceso = config_get_int_value(config,"MARCOS_POR_PROCESO");
-	retardo_swap = config_get_int_value(config,"RETARDO_SWAP");
+	algoritmo = config_get_string_value(config,"ALGORITMO_REEMPLAZO");
 
 	memoria = malloc(tam_memoria);
 	lista_tablas_1er_nivel = list_create();
@@ -76,7 +101,7 @@ void recibir_kernel() {
 				}
 
 				uint32_t tabla_paginas = crear_tablas(pid, tamanio);
-
+				usleep(retardo_memoria * 1000);
 				send(cliente_kernel, &tabla_paginas, sizeof(uint32_t), 0);
 
 				return;
@@ -197,11 +222,14 @@ void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
 	// yyyyyyyyy eliminamos el .swap
 	fila_1er_nivel* tabla_1er_nivel = list_get(lista_tablas_1er_nivel, tabla_paginas);
 	for(int i=0; i < entradas_por_tabla; i++) {
-		fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel,tabla_1er_nivel[i]);
-		for(int j=0; j < entradas_por_tabla; j++)
-			if (tabla->nro_marco == -1) continue;
-			if (tabla->presencia == 1)
-				marcos_ocupados[tabla->nro_marco] = 0;
+		fila_1er_nivel nro_tabla_2do_nivel = tabla_1er_nivel[i];
+		if (nro_tabla_2do_nivel == -1) break; // si no hay mas salite
+		fila_2do_nivel* tabla_2do_nivel = list_get(lista_tablas_2do_nivel,nro_tabla_2do_nivel);
+		for(int j=0; j < entradas_por_tabla; j++){
+			if (tabla_2do_nivel->nro_marco == -1) break; // si no hay mas salite
+			if (tabla_2do_nivel->presencia == 1)
+				marcos_ocupados[tabla_2do_nivel->nro_marco] = 0;
+		}
 	}
 	borrar_archivo_swap(pid);
 }
@@ -239,6 +267,7 @@ void recibir_cpu() {
 
 				fila_1er_nivel nro_tabla_2do_nivel = obtener_nro_tabla_2do_nivel(nro_tabla_1er_nivel, entrada_tabla, pid);
 
+				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &nro_tabla_2do_nivel, sizeof(fila_1er_nivel), 0);
 
 				return;
@@ -258,6 +287,7 @@ void recibir_cpu() {
 
 				uint32_t nro_marco = obtener_nro_marco_memoria(nro_tabla_2do_nivel, entrada_tabla);
 
+				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &nro_marco, sizeof(uint32_t), 0);
 
 				return;
@@ -276,6 +306,7 @@ void recibir_cpu() {
 
 				uint32_t dato = read_en_memoria(nro_marco, desplazamiento);
 
+				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &dato, sizeof(uint32_t), 0);
 
 				return;
@@ -296,6 +327,7 @@ void recibir_cpu() {
 				write_en_memoria(nro_marco, desplazamiento, dato);
 
 				op_code resultado = ESCRITURA_OK;
+				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &resultado, sizeof(op_code), 0);
 
 				return;
@@ -348,12 +380,26 @@ fila_1er_nivel obtener_nro_tabla_2do_nivel(int32_t nro_tabla, uint32_t index, ui
 	return tabla[index];
 }
 
+// vemos que algoritmo usar y lo usamos
+uint32_t usar_algoritmo(FILE* swap){
+	if (strcmp(algoritmo, "CLOCK-M") == 0)
+		return clock_modificado(swap);
+	else if (strcmp(algoritmo, "CLOCK") == 0)
+		return clock_simple(swap);
+	else{
+		exit(-1);
+	}
+}
+
 // dada un nro de tabla y un index devuelve el nro de marco correspondiente
 // si el bit de presencia esta en 0, traerlo a memoria --> algoritmos cock / cock modificado (cock = gallo)
 uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index){
+
 	fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel,nro_tabla);
 	fila_2do_nivel* entrada = &tabla[index];
 	if (entrada->presencia == 1){
+		entrada->uso = 1;
+		entrada_2do_nivel_actual = entrada;
 		return entrada->nro_marco;
 	}
 	// si no esta en memoria, traerlo
@@ -376,12 +422,18 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index){
 	marcos_ocupados[nro_marco] = 1;
 	entrada->nro_marco = nro_marco;
 	entrada->presencia = 1;
+	entrada->uso = 1;
 	escribir_marco_en_memoria(entrada->nro_marco, marco);
+	entrada_2do_nivel_actual = entrada;
 	return nro_marco;
 }
 
 // avanza al proximo marco del proceso
-void avanzar_puntero(){
+void avanzar_puntero(fila_2do_nivel* entrada_2do_nivel){
+	if (entrada_2do_nivel->nro_marco == -1){
+		puntero.entrada_1er_nivel = 0;
+		puntero.entrada_2do_nivel = 0;
+	}
 	if (puntero.entrada_2do_nivel + 1 == entradas_por_tabla){
 		puntero.entrada_2do_nivel = 0;
 		if (puntero.entrada_1er_nivel + 1 == entradas_por_tabla)
@@ -389,6 +441,19 @@ void avanzar_puntero(){
 		else puntero.entrada_1er_nivel++;
 	}
 	else puntero.entrada_2do_nivel++;
+}
+
+uint32_t reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do_nivel, FILE* swap){
+	// logica de swappeo de marco
+	printf("Elegido %d!\n",nro_marco_en_swap);
+	// si tiene el bit de modificado en 1, hay que actualizar el archivo swap
+	if (entrada_2do_nivel->modificado == 1){
+		actualizar_marco_en_swap(swap, nro_marco_en_swap, obtener_marco(entrada_2do_nivel->nro_marco), tam_pagina);
+		entrada_2do_nivel->modificado = 0;
+	}
+	entrada_2do_nivel->presencia = 0;
+	marcos_ocupados[entrada_2do_nivel->nro_marco] = 0;
+	return entrada_2do_nivel->nro_marco;
 }
 
 // CADA VEZ QUE LLEGA UNA PETICION, NOS TIENE QUE LLEGAR EL PID
@@ -408,22 +473,13 @@ uint32_t clock_simple(FILE* swap){
 
 		int nro_marco_en_swap = puntero.entrada_1er_nivel * entradas_por_tabla + puntero.entrada_2do_nivel;
 
-		avanzar_puntero();
+		avanzar_puntero(entrada_2do_nivel);
 
 		// si ya no esta en memoria para que me gasto??? La re concha de tu madre
 		if (entrada_2do_nivel->presencia == 0) continue;
 
 		if (entrada_2do_nivel->uso == 0){
-			// logica de swappeo de marco
-			printf("Elegido %d!\n",nro_marco_en_swap);
-			// si tiene el bit de modificado en 1, hay que actualizar el archivo swap
-			if (entrada_2do_nivel->modificado == 1){
-				actualizar_marco_en_swap(swap, nro_marco_en_swap, obtener_marco(entrada_2do_nivel->nro_marco), tam_pagina);
-				entrada_2do_nivel->modificado = 0;
-			}
-			entrada_2do_nivel->presencia = 0;
-			marcos_ocupados[entrada_2do_nivel->nro_marco] = 0;
-			return entrada_2do_nivel->nro_marco;
+			return reemplazo_por_clock(nro_marco_en_swap, entrada_2do_nivel, swap);
 		}
 		else{
 			entrada_2do_nivel->uso = 0;
@@ -433,13 +489,72 @@ uint32_t clock_simple(FILE* swap){
 	return 0;
 }
 
+bool punteros_son_iguales(puntero_clock p1, puntero_clock p2){
+	return p2.entrada_1er_nivel == p1.entrada_1er_nivel && p2.entrada_2do_nivel == p1.entrada_2do_nivel;
+}
+
 // iterar sobre la lista de tablas de 2do nivel
-uint32_t clock_modificado(){
+uint32_t clock_modificado(FILE* swap){
+
+	// iteramos en las tablas de 2do nivel
+	fila_1er_nivel* tabla_1er_nivel = list_get(lista_tablas_1er_nivel, entrada_1er_nivel_actual);
+	puntero_clock puntero_inicial = puntero;
+	// hasta que no encuentre uno no para
+	while(1){
+		// 1er paso del algoritmo
+		while(1){
+
+			fila_2do_nivel* tabla_2do_nivel = list_get(lista_tablas_2do_nivel,tabla_1er_nivel[puntero.entrada_1er_nivel]);
+			fila_2do_nivel* entrada_2do_nivel = &tabla_2do_nivel[puntero.entrada_2do_nivel];
+
+			int nro_marco_en_swap = puntero.entrada_1er_nivel * entradas_por_tabla + puntero.entrada_2do_nivel;
+
+			// marmo va a chequear esto
+			avanzar_puntero(entrada_2do_nivel);
+
+			// si ya no esta en memoria para que me gasto??? La re concha de tu madre
+			if (entrada_2do_nivel->presencia == 0) continue;
+
+			if (entrada_2do_nivel->uso == 0 && entrada_2do_nivel->modificado == 0){
+				return reemplazo_por_clock(nro_marco_en_swap, entrada_2do_nivel, swap);
+			}
+
+			if (punteros_son_iguales(puntero, puntero_inicial)){
+				break;
+			}
+		}
+		// 2do paso del algoritmo
+		while(1){
+
+			fila_2do_nivel* tabla_2do_nivel = list_get(lista_tablas_2do_nivel,tabla_1er_nivel[puntero.entrada_1er_nivel]);
+			fila_2do_nivel* entrada_2do_nivel = &tabla_2do_nivel[puntero.entrada_2do_nivel];
+
+			int nro_marco_en_swap = puntero.entrada_1er_nivel * entradas_por_tabla + puntero.entrada_2do_nivel;
+
+			// marmo va a chequear esto
+			avanzar_puntero(entrada_2do_nivel);
+
+			// si ya no esta en memoria para que me gasto??? La re concha de tu madre
+			if (entrada_2do_nivel->presencia == 0) continue;
+
+			if (entrada_2do_nivel->uso == 0 && entrada_2do_nivel->modificado == 1){
+				return reemplazo_por_clock(nro_marco_en_swap, entrada_2do_nivel, swap);
+			}
+			else{
+				entrada_2do_nivel->uso = 0;
+			}
+			if (punteros_son_iguales(puntero, puntero_inicial)){
+				break;
+			}
+		}
+		// 3er paso del algoritmo, volver a empezar
+	}
+
 	return 0;
 }
 
 void* obtener_marco(uint32_t nro_marco){
-	void* marco;
+	void* marco = malloc(tam_pagina);
 	memcpy(marco, memoria + nro_marco * tam_pagina, tam_pagina);
 	return marco;
 }
@@ -476,7 +591,8 @@ uint32_t read_en_memoria(uint32_t nro_marco, uint16_t desplazamiento){
 void write_en_memoria(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato) {
 	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
 	memcpy(memoria + desplazamiento_final, &dato, sizeof(dato));
+	// falta hacer que cambie el bit de modificado a 1
+	entrada_2do_nivel_actual->modificado = 1;
 }
-
 
 
