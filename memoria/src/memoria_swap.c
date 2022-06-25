@@ -41,7 +41,6 @@ uint32_t agregar_marco_en_swap(FILE* archivo, uint32_t tamanio_marcos){
 	void* marco = malloc(tamanio_marcos);
 	fwrite(marco, 1, tamanio_marcos, archivo);
 	free(marco);
-	usleep(retardo_swap * 1000);
 	return ftell(archivo) / tamanio_marcos - 1;
 }
 

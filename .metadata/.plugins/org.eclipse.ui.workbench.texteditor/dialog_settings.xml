@@ -2,20 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="&#x09;fila_2do_nivel tabla [entradas_por_tabla] = malloc(sizeof(fila_2do_nivel)*entradas_por_tabla);" key="selection"/>
+		<item value="send" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="send"/>
+			<item value="&#x09;&#x09;&#x09;&#x09;usleep(retardo_memoria * 1000);"/>
+			<item value="obtener_nr"/>
+			<item value="entrada_1er_nivel_actual"/>
+			<item value="actual"/>
+			<item value="obtener"/>
+			<item value="printf"/>
+			<item value="prinrd"/>
+			<item value="elimin"/>
+			<item value="finalizar"/>
+			<item value="crear_tab"/>
+			<item value="clock_simple(swap)"/>
+			<item value="obte"/>
 			<item value="&#x09;fila_2do_nivel tabla [entradas_por_tabla] = malloc(sizeof(fila_2do_nivel)*entradas_por_tabla);"/>
 			<item value="result"/>
-			<item value="grado_m"/>
-			<item value="grado_,u"/>
-			<item value="mx_mult"/>
-			<item value="multiprogramacion_actual"/>
-			<item value="susp"/>
-			<item value="SUSP"/>
 		</list>
 		<list key="replacehistory">
 			<item value="s_pasaje_a_ready"/>

@@ -47,8 +47,9 @@ void testeando_tablas(){
 
 
 	write_en_memoria(rta2, 0, 4);
+	printf("%d\n",read_en_memoria(rta2, 0));
 
-	imprimir_tablas_2();
+//	imprimir_tablas_2();
 
 }
 
@@ -66,10 +67,7 @@ int main(void) {
 //	pthread_create(&hilo_cpu, NULL, (void*) escuchar_cpu, NULL);
 //	pthread_detach(hilo_cpu);
 
-
 	testeando_tablas();
-
-
 
 //	while(true); //simula que sigue corriendo
 

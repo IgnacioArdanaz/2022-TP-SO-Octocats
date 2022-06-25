@@ -101,7 +101,7 @@ void recibir_kernel() {
 				}
 
 				uint32_t tabla_paginas = crear_tablas(pid, tamanio);
-				usleep(retardo_memoria * 1000);
+				// usleep(retardo_memoria * 1000); //este usleep no va xq es para kernel, no cpu:)
 				send(cliente_kernel, &tabla_paginas, sizeof(uint32_t), 0);
 
 				return;
