@@ -51,7 +51,6 @@ void apagar_memoria();
 void escuchar_kernel();
 void recibir_kernel();
 
-fila_2do_nivel crear_fila(int marco, int mod, int pres);
 uint32_t crear_tablas(uint16_t pid, uint32_t tamanio);
 void inicializar_tabla_1er_nivel(fila_1er_nivel* tabla_1er_nivel);
 void inicializar_tabla_2do_nivel(fila_2do_nivel* tabla_2do_nivel);

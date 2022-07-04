@@ -1,4 +1,4 @@
-22:15:39 **** Build of configuration Debug for project shared ****
+10:54:59 **** Incremental Build of configuration Debug for project shared ****
 make all 
 Building file: ../src/protocol.c
 Invoking: Cross GCC Compiler
@@ -11,5 +11,5 @@ gcc -shared -o "libshared.so"  ./src/pcb.o ./src/protocol.o ./src/sockets.o   -l
 Finished building target: libshared.so
  
 
-22:15:40 Build Finished (took 627ms)
+10:55:00 Build Finished (took 1s.645ms)
 

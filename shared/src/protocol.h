@@ -29,26 +29,32 @@ typedef enum {
 	READ,
 	WRITE,
 	ESCRITURA_OK,
+	DATOS_NECESARIOS,
 } op_code;
 
-//PROGRAMA
+// PROGRAMA
 bool send_programa(int fd, t_list* instrucciones, uint16_t tamanio);
 bool recv_programa(int fd, t_list* instrucciones, uint16_t* tamanio);
 static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
 static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
 
-//PROCESO
+// PROCESO
 bool send_proceso(int fd, PCB_t* proceso, op_code codigo);
 static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
 bool recv_proceso(int fd, PCB_t* proceso);
 static void deserializar_proceso(void* stream, PCB_t* proceso);
+
+// DATOS NECESARIOS
+bool send_datos_necesarios(int fd, uint16_t entradas_por_tabla, uint16_t tam_pagina);
+static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t tam_pagina);
+bool recv_datos_necesarios(int fd, uint16_t* entradas_por_tabla, uint16_t* tam_pagina);
 
 // CREAR TABLA
 bool send_crear_tabla(int fd, uint32_t tamanio, uint16_t pid);
 static void* serializar_crear_tabla(uint32_t tamanio, uint16_t pid);
 bool recv_crear_tabla(int fd, uint32_t* tamanio, uint16_t* pid);
 
-//SUSENDER PROCESO
+// SUSENDER PROCESO
 bool send_suspender_proceso(int fd, uint16_t pid, uint32_t tabla_paginas);
 static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
 bool recv_suspender_proceso(int fd, uint16_t* pid, uint32_t* tabla_paginas);

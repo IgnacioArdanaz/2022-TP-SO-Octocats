@@ -193,6 +193,51 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 
 }
 
+/************************* DATOS NECESARIOS (MEMORIA -> CPU) ***********************/
+// Envio y serializacion
+bool send_datos_necesarios(int fd, uint16_t entradas_por_tabla, uint16_t tam_pagina) {
+    size_t size = sizeof(op_code) + 2 * sizeof(uint16_t);
+    void* stream = serializar_datos_necesarios(entradas_por_tabla, tam_pagina);
+    if (send(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+    free(stream);
+    return true;
+}
+
+static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t tam_pagina) {
+    void* stream = malloc(sizeof(op_code) + 2 * sizeof(uint16_t));
+
+    op_code cop = DATOS_NECESARIOS;
+    size_t acumulador = 0;
+    memcpy(stream + acumulador, &cop, sizeof(op_code));
+    acumulador += sizeof(op_code);
+    memcpy(stream + acumulador, &entradas_por_tabla, sizeof(uint16_t));
+    acumulador += sizeof(uint16_t);
+    memcpy(stream + acumulador, &tam_pagina, sizeof(uint16_t));
+
+    return stream;
+}
+
+bool recv_datos_necesarios(int fd, uint16_t* entradas_por_tabla, uint16_t* tam_pagina) {
+	size_t size = 2 * sizeof(uint16_t);
+	void* stream = malloc(size);
+	if (recv(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	 }
+
+	size_t acumulador = 0;
+	memcpy(&entradas_por_tabla, stream + acumulador, sizeof(uint16_t));
+	acumulador += sizeof(uint16_t);
+	memcpy(&tam_pagina, stream + acumulador, sizeof(uint16_t));
+
+	free(stream);
+    return true;
+}
+
+
 /***************************** SOLICITUD TABLA PAGINAS *****************************/
 // Envio y serializacion
 bool send_crear_tabla(int fd, uint32_t tamanio, uint16_t pid) {
@@ -233,7 +278,7 @@ bool recv_crear_tabla(int fd, uint32_t* tamanio, uint16_t* pid) {
 	acumulador += sizeof(uint32_t);
 	memcpy(&pid, stream + acumulador, sizeof(uint16_t));
 
-	free(stream);	acumulador += sizeof(uint32_t);
+	free(stream);
     return true;
 }
 

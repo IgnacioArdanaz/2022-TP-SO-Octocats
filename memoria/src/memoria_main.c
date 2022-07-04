@@ -58,6 +58,7 @@ int main(void) {
 //	testeando_boludeces();
 //
 	inicializar_memoria();
+
 //	pthread_t hilo_kernel;
 //	pthread_create(&hilo_kernel, NULL, (void*) escuchar_kernel, NULL);
 //	pthread_detach(hilo_kernel);

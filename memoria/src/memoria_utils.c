@@ -21,7 +21,6 @@ uint16_t tam_memoria;
 uint16_t tam_pagina;
 uint16_t entradas_por_tabla;
 uint16_t retardo_memoria;
-uint16_t retardo_swap;
 uint16_t marcos_por_proceso;
 
 // Extras
@@ -61,8 +60,7 @@ void inicializar_memoria(){
 	tam_memoria = config_get_int_value(config,"TAM_MEMORIA");
 	tam_pagina = config_get_int_value(config,"TAM_PAGINA");
 	entradas_por_tabla = config_get_int_value(config,"ENTRADAS_POR_TABLA");
-	retardo_memoria = config_get_double_value(config,"RETARDO_MEMORIA");
-	retardo_swap = config_get_double_value(config,"RETARDO_SWAP");
+	retardo_memoria = config_get_int_value(config,"RETARDO_MEMORIA");
 	marcos_por_proceso = config_get_int_value(config,"MARCOS_POR_PROCESO");
 	algoritmo = config_get_string_value(config,"ALGORITMO_REEMPLAZO");
 
@@ -76,6 +74,7 @@ void inicializar_memoria(){
 
 	inicializar_swap();
 
+	send_datos_necesarios(cliente_cpu, entradas_por_tabla, tam_pagina);
 }
 
 /***********************************************************************/
@@ -111,24 +110,7 @@ void recibir_kernel() {
 				}
 
 				uint32_t tabla_paginas = crear_tablas(pid, tamanio);
-				// usleep(retardo_memoria * 1000); //este usleep no va xq es para kernel, no cpu:)
 				send(cliente_kernel, &tabla_paginas, sizeof(uint32_t), 0);
-
-				return;
-			}
-			case ELIMINAR_ESTRUCTURAS:
-			{
-				uint32_t tabla_paginas = 0;
-				uint16_t pid = 0;
-
-				if (!recv_eliminar_estructuras(cliente_kernel, &pid, &tabla_paginas)) {
-					pthread_mutex_lock(&mx_log);
-					log_error(logger,"Fallo recibiendo ELIMINAR ESTRUCTURAS");
-					pthread_mutex_unlock(&mx_log);
-					break;
-				}
-
-				eliminar_estructuras(tabla_paginas, pid);
 
 				return;
 			}
@@ -152,6 +134,22 @@ void recibir_kernel() {
 
 				return;
 			}
+			case ELIMINAR_ESTRUCTURAS:
+			{
+				uint32_t tabla_paginas = 0;
+				uint16_t pid = 0;
+
+				if (!recv_eliminar_estructuras(cliente_kernel, &pid, &tabla_paginas)) {
+					pthread_mutex_lock(&mx_log);
+					log_error(logger,"Fallo recibiendo ELIMINAR ESTRUCTURAS");
+					pthread_mutex_unlock(&mx_log);
+					break;
+				}
+
+				eliminar_estructuras(tabla_paginas, pid);
+
+				return;
+			}
 			default:
 				pthread_mutex_lock(&mx_log);
 				log_error(logger, "Algo anduvo mal en el server de memoria\n Cop: %d",cop);
@@ -161,22 +159,17 @@ void recibir_kernel() {
 }
 
 //// INICIALIZACIÓN DE PROCESO
-fila_2do_nivel crear_fila(int marco, int mod, int pres){
-	fila_2do_nivel f = {marco, mod, pres};
-	return f;
-}
 
 // creas los marcos y las tablas necesarias para el proceso
 uint32_t crear_tablas(uint16_t pid, uint32_t tamanio){
-
 	int marcos_req = calcular_cant_marcos(tamanio);
 	fila_1er_nivel* tabla_1er_nivel = malloc(sizeof(uint32_t) * entradas_por_tabla);
 	FILE* swap = crear_archivo_swap(pid);
-	inicializar_tabla_1er_nivel(tabla_1er_nivel);
+	inicializar_tabla_1er_nivel(tabla_1er_nivel); //Pone todas las entradas en -1
 
 	for (int i = 0; i < entradas_por_tabla && marcos_req > marcos_actuales(i, 0); i++){
 		fila_2do_nivel* tabla_2do_nivel = malloc(entradas_por_tabla * sizeof(fila_2do_nivel));
-		inicializar_tabla_2do_nivel(tabla_2do_nivel);
+		inicializar_tabla_2do_nivel(tabla_2do_nivel); //Pone todas las entradas en -1
 		for (int j = 0 ; j < entradas_por_tabla && marcos_req > marcos_actuales(i, j); j++){
 			uint32_t nro_marco = agregar_marco_en_swap(swap, tam_pagina);
 			fila_2do_nivel fila = {nro_marco,0,0,0};
@@ -210,7 +203,7 @@ void suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
 	for (int i = 0; i < list_size(estructura->marcos_en_memoria); i++){
 		fila_busqueda = list_get(estructura->marcos_en_memoria, i);
 		bitarray_marcos_ocupados[fila_busqueda->nro_marco_en_memoria] = 0;
-		if(fila_busqueda->pagina->presencia == 1){
+		if(fila_busqueda->pagina->modificado == 1){
 			actualizar_marco_en_swap(swap, fila_busqueda->nro_marco_en_swap, obtener_marco(fila_busqueda->nro_marco_en_memoria), tam_pagina);
 		}
 		fila_busqueda->pagina->presencia = 0;
@@ -219,7 +212,6 @@ void suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
 		estructura->puntero = 0;
 		list_remove(estructura->marcos_en_memoria, i); //Lo hago aparte porque me da miedo usar malloc
 	}
-
 	cerrar_archivo_swap(swap);
 }
 
@@ -505,6 +497,8 @@ uint32_t read_en_memoria(uint32_t nro_marco, uint16_t desplazamiento){
 	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
 	uint32_t dato;
 	memcpy(&dato, memoria + desplazamiento_final, sizeof(dato));
+	fila_2do_nivel* pagina_actual = obtener_pagina(pid_actual, nro_marco);
+	pagina_actual->uso = 1;
 	return dato;
 }
 
@@ -513,6 +507,7 @@ void write_en_memoria(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato
 	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
 	memcpy(memoria + desplazamiento_final, &dato, sizeof(dato));
 	fila_2do_nivel* pagina_actual = obtener_pagina(pid_actual, nro_marco);
+	pagina_actual->uso = 1;
 	pagina_actual->modificado = 1;
 }
 
