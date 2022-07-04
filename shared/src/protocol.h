@@ -65,9 +65,9 @@ bool recv_solicitud_nro_tabla_2do_nivel(int fd, uint16_t* pid, uint32_t* nro_tab
 
 
 // SOLICITUD NRO MARCO
-bool send_solicitud_nro_marco(int fd, uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla);
-static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla);
-bool recv_solicitud_nro_marco(int fd, uint16_t* pid, uint32_t* nro_tabla_2do_nivel, uint32_t* entrada_tabla);
+bool send_solicitud_nro_marco(int fd, uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel);
+static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel);
+bool recv_solicitud_nro_marco(int fd, uint16_t* pid, uint32_t* nro_tabla_2do_nivel, uint32_t* entrada_tabla, uint32_t* index_tabla_1er_nivel);
 
 // READ
 bool send_read(int fd, uint32_t nro_marco, uint16_t desplazamiento);

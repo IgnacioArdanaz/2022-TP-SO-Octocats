@@ -375,9 +375,9 @@ bool recv_solicitud_nro_tabla_2do_nivel(int fd, uint16_t* pid, uint32_t* nro_tab
 }
 
 /***************************** SOLICITUD NRO MARCO *****************************/
-bool send_solicitud_nro_marco(int fd, uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla) {
-	size_t size = sizeof(op_code) + sizeof(uint32_t) * 2 + sizeof(uint16_t);
-	void* stream = serializar_solicitud_nro_marco(pid, nro_tabla_2do_nivel, entrada_tabla);
+bool send_solicitud_nro_marco(int fd, uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel) {
+	size_t size = sizeof(op_code) + sizeof(uint32_t) * 3 + sizeof(uint16_t);
+	void* stream = serializar_solicitud_nro_marco(pid, nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
 	if (send(fd, stream, size, 0) != size) {
 		free(stream);
 		return false;
@@ -386,8 +386,8 @@ bool send_solicitud_nro_marco(int fd, uint16_t pid, uint32_t nro_tabla_2do_nivel
 	return true;
 }
 
-static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla) {
-    void* stream = malloc(sizeof(op_code) + sizeof(uint32_t) * 2+ sizeof(uint16_t));
+static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel) {
+    void* stream = malloc(sizeof(op_code) + sizeof(uint32_t) * 3 + sizeof(uint16_t));
 
     op_code cop = SOLICITUD_NRO_MARCO;
     size_t acumulador = 0;
@@ -398,13 +398,15 @@ static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do
     memcpy(stream + acumulador, &nro_tabla_2do_nivel, sizeof(uint32_t));
     acumulador += sizeof(uint32_t);
     memcpy(stream + acumulador, &entrada_tabla, sizeof(uint32_t));
+    acumulador += sizeof(uint32_t);
+    memcpy(stream + acumulador, &index_tabla_1er_nivel, sizeof(uint32_t));
 
     return stream;
 }
 
 //Recepcion y deserealizacion
-bool recv_solicitud_nro_marco(int fd, uint16_t* pid, uint32_t* nro_tabla_2do_nivel, uint32_t* entrada_tabla) {
-	size_t size = sizeof(uint32_t) * 2 + sizeof(uint16_t);
+bool recv_solicitud_nro_marco(int fd, uint16_t* pid, uint32_t* nro_tabla_2do_nivel, uint32_t* entrada_tabla, uint32_t* index_tabla_1er_nivel) {
+	size_t size = sizeof(uint32_t) * 3 + sizeof(uint16_t);
 	void* stream = malloc(size);
 	if (recv(fd, stream, size, 0) != size) {
 		free(stream);
@@ -417,6 +419,8 @@ bool recv_solicitud_nro_marco(int fd, uint16_t* pid, uint32_t* nro_tabla_2do_niv
 	memcpy(&nro_tabla_2do_nivel, stream + acumulador, sizeof(uint32_t));
 	acumulador += sizeof(uint32_t);
 	memcpy(&entrada_tabla, stream + acumulador, sizeof(uint32_t));
+	acumulador += sizeof(uint32_t);
+	memcpy(&index_tabla_1er_nivel, stream + acumulador, sizeof(uint32_t));
 
 	free(stream);
     return true;

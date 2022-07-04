@@ -47,7 +47,7 @@ int server_memoria;
 void inicializar_memoria();
 void apagar_memoria();
 
-// HILO KERNEL
+/***************************** HILO KERNEL *****************************/
 void escuchar_kernel();
 void recibir_kernel();
 
@@ -55,34 +55,45 @@ fila_2do_nivel crear_fila(int marco, int mod, int pres);
 uint32_t crear_tablas(uint16_t pid, uint32_t tamanio);
 void inicializar_tabla_1er_nivel(fila_1er_nivel* tabla_1er_nivel);
 void inicializar_tabla_2do_nivel(fila_2do_nivel* tabla_2do_nivel);
-void crear_estructura_clock(uint16_t pid);
 
 void suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
 
 void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
 
-// HILO CPU
+/***************************** HILO CPU *****************************/
 void escuchar_cpu();
 void recibir_cpu();
-int buscar_marco_libre();
+
+//
+fila_1er_nivel obtener_nro_tabla_2do_nivel(int32_t nro_tabla, uint32_t index, uint32_t pid);
+
+//
+uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t index_de_1er_nivel);
+
+// FUNCIONES ALGORITMOS CLOCK Y CLOCK MODIFICADO
 uint32_t usar_algoritmo(FILE* swap);
+uint32_t clock_simple(FILE* swap);
+uint32_t clock_modificado(FILE* swap);
+void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do_nivel, FILE* swap);
+
+// READ Y WRITE
+uint32_t read_en_memoria(uint32_t nro_marco, uint16_t desplazamiento);
+void write_en_memoria(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+
+// FUNCIONES GENERALES
+void* obtener_marco(uint32_t nro_marco);
+uint32_t marcos_en_memoria();
+void escribir_marco_en_memoria(uint32_t nro_marco, void* marco);
+int buscar_marco_libre();
 uint32_t calcular_cant_marcos(uint32_t tamanio);
 int marcos_actuales(int entrada_1er_nivel, int entrada_2do_nivel);
 void printear_bitmap();
-fila_1er_nivel obtener_nro_tabla_2do_nivel(int32_t nro_tabla, uint32_t index, uint32_t pid);
-uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index);
-void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do_nivel, FILE* swap)
-void agregar_pagina_a_estructura_clock(int32_t nro_marco, fila_2do_nivel* pagina);
-estructura_clock* buscar_estructura_clock();
-uint16_t avanzar_puntero(uint16_t puntero_clock);
-uint32_t clock_simple(FILE* swap);
-uint32_t clock_modificado(FILE* swap);
-void* obtener_marco(uint32_t nro_marco);
-void eliminar_marco_estructura_clock(uint32_t nro_marco_en_swap);
-uint32_t marcos_en_memoria();
-void escribir_marco_en_memoria(uint32_t nro_marco, void* marco);
 
-uint32_t read_en_memoria(uint32_t nro_marco, uint16_t desplazamiento);
-void write_en_memoria(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+/***************************** FUNCIONES ESTRUCTURA CLOCK *****************************/
+void crear_estructura_clock(uint16_t pid);
+uint16_t avanzar_puntero(uint16_t puntero_clock);
+estructura_clock* buscar_estructura_clock(uint16_t pid_a_buscar);
+void agregar_pagina_a_estructura_clock(int32_t nro_marco, fila_2do_nivel* pagina, uint32_t nro_marco_en_swap);
+fila_2do_nivel* obtener_pagina(uint16_t pid_actual, int32_t nro_marco);
 
 #endif /* MEMORIA_UTILS_H_ */

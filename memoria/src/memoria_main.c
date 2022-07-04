@@ -35,13 +35,13 @@ void testeando_tablas(){
 		int n1 = crear_tablas(i,1024);
 		printf("TABLA DE 1ER NIVEL: %d\n",n1);
 		int rta1 = obtener_nro_tabla_2do_nivel(n1, 0, i);
-		int rta2 = obtener_nro_marco_memoria(rta1, 0);
+		int rta2 = obtener_nro_marco_memoria(rta1, 0, 0);
 		int rta3 = read_en_memoria(rta2, 0);
 		printf("%d\n",rta3);
 	}
 
 	int rta1 = obtener_nro_tabla_2do_nivel(0, 1, 0);
-	int rta2 = obtener_nro_marco_memoria(rta1, 2);
+	int rta2 = obtener_nro_marco_memoria(rta1, 2, 0);
 	int rta3 = read_en_memoria(rta2, 0);
 	printf("%d", rta3);
 
