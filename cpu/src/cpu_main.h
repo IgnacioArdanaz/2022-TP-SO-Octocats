@@ -23,6 +23,11 @@ typedef struct{
 	clock_t ultima_referencia;
 }TLB_t;
 
+typedef struct{
+	int32_t marco;
+	int32_t desplazamiento;
+}marco_t;
+
 void inicializar_cpu();
 void apagar_cpu();
 void interrupcion();
@@ -32,7 +37,7 @@ instruccion_t* fetch(t_list* instrucciones, uint32_t pc);
 int decode(instruccion_t* instruccion_ejecutar );
 int execute(instruccion_t* instruccion_ejecutar,uint32_t tabla_paginas);
 int check_interrupt();
-uint32_t traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas);
+marco_t traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas);
 void ejecutarWrite(uint32_t dir_logica,uint32_t valor,uint32_t tabla_paginas );
 int ejecutarRead(uint32_t dir_logica,uint32_t tabla_paginas);
 void reemplazo_tlb_FIFO(uint32_t numero_pagina, int32_t marco );

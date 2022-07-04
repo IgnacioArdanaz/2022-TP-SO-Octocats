@@ -13,7 +13,7 @@ uint64_t rafaga_real;
 uint16_t tam_pagina;
 uint16_t cant_ent_paginas;
 t_list* tlb;
-uint16_t pid_anterior=0;
+uint16_t pid_actual=0;
 
 int main(void) {
 
@@ -25,7 +25,8 @@ int main(void) {
 		recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0);
 		recv_proceso(cliente_socket_dispatch,pcb);
 		log_info(logger,"Proceso %d -> program counter %d - est %f", pcb->pid, pcb->pc, pcb->est_rafaga);
-		if(pcb->pid != pid_anterior ) limpiar_tlb();
+		limpiar_tlb();
+		pid_actual = pcb->pid;
 		struct timespec start;
 		clock_gettime(CLOCK_REALTIME,&start);
 		op_code estado = iniciar_ciclo_instruccion(pcb);
@@ -33,7 +34,7 @@ int main(void) {
 		clock_gettime(CLOCK_REALTIME, &end);
 		rafaga_real = (end.tv_sec - start.tv_sec) * 1000 + (end.tv_nsec - start.tv_nsec) / 1000000;
 		calculo_estimacion(pcb, estado);
-		pid_anterior = pcb->pid;
+
 		log_info(logger,"Program counter %d (despues de ejecutar)",pcb->pc);
 		log_info(logger,"==============================================================");
 		send_proceso(cliente_socket_dispatch,pcb,estado);
@@ -183,11 +184,11 @@ int decode(instruccion_t* instruccion_ejecutar ){
 
 
 int ejecutarRead(uint32_t dir_logica,uint32_t tabla_paginas){
-	uint32_t dir_fisica;
+	marco_t dir_fisica;
 	int valor=8;
 	dir_fisica = traducir_direccion(dir_logica,tabla_paginas);
-	//Sería send_read(int fd, uint32_t nro_marco, uint16_t desplazamiento)
-	//send_instruccion(dir_fisica);
+
+	send_read(conexion_memoria,dir_fisica.marco,dir_fisica.desplazamiento);
 	// Este de aca abajo te lo hacemos nosotros, tranqui
 	// valor = recv_valor_leido();
 	return valor;
@@ -196,16 +197,16 @@ int ejecutarRead(uint32_t dir_logica,uint32_t tabla_paginas){
 
 
 void ejecutarWrite(uint32_t dir_logica,uint32_t valor,uint32_t tabla_paginas ){
-	uint32_t dir_fisica;
+	marco_t dir_fisica;
 	dir_fisica = traducir_direccion(dir_logica, tabla_paginas);
-	//Sería send_write(int fd, uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato)
-	//send_instruccion(dir_fisica,valor)
+
+	send_write(conexion_memoria,dir_fisica.marco,dir_fisica.desplazamiento,valor);
 	// Este de aca abajo te lo hacemos nosotros, tranqui
 	//recv_verificacion
 }
 
-uint32_t traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas){
-
+marco_t  traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas_1){
+	marco_t dire_fisica;
 	int32_t marco;
 	uint32_t numero_pagina = floor((double)dir_logica/(double)tam_pagina);
 	//Aca hay que fijarse si esta en la tlb
@@ -214,12 +215,14 @@ uint32_t traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas){
 	if(marco==-1){
 		uint32_t entrada_tabla_1 = floor((double)numero_pagina/(double)cant_ent_paginas);
 		uint32_t entrada_tabla_2 = numero_pagina % cant_ent_paginas;
-		// Seria send_solicitud_nro_tabla_2do_nivel(int fd, uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla)
-		//send_tabla(tabla_paginas,entrada_tabla_1);
+
+		send_solicitud_nro_tabla_2do_nivel(conexion_memoria, pid_actual, tabla_paginas_1,  entrada_tabla_1);
+
 		// Este de aca abajo te lo hacemos nosotros, tranqui
 		//recv_tabla(&tabla_paginas2);
-		// Seria send_solicitud_nro_marco(int fd, uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel)
-		//send_tabla(tabla_paginas2,entrada_tabla_2);
+
+		//send_solicitud_nro_marco(conexion_memoria, pid_actual, tabla_paginas_2,  entrada_tabla_2,entrada_tabla_1);
+
 		// Este de aca abajo te lo hacemos nosotros, tranqui
 		//recv_tabla(&marco);
 		marco = rand()%11;
@@ -231,7 +234,10 @@ uint32_t traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas){
 
 	uint32_t desplazamiento = dir_logica - numero_pagina * tam_pagina;
 
-	return marco + desplazamiento;
+	dire_fisica.marco = marco;
+	dire_fisica.desplazamiento =desplazamiento;
+
+	return dire_fisica;
 
 
 }
