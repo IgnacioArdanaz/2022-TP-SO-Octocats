@@ -7,7 +7,7 @@
 
 typedef struct {
 	uint16_t pid;
-	uint16_t tamanio;
+	uint32_t tamanio;
 	t_list* instrucciones;
 	uint32_t pc;
 	uint32_t tabla_paginas;

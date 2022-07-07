@@ -51,11 +51,6 @@ void imprimir_tablas_2(){
 void inicializar_memoria(){
 	logger = log_create("memoria.log", "memoria", 1, LOG_LEVEL_INFO);
 	config = config_create("memoria.config");
-	char* ip = config_get_string_value(config,"IP");
-	char* puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
-	server_memoria = iniciar_servidor(logger, "MEMORIA", ip, puerto_escucha);
-//	cliente_cpu = esperar_cliente(logger, "MEMORIA", server_memoria);
-//	cliente_kernel = esperar_cliente(logger, "MEMORIA", server_memoria);
 
 	tam_memoria = config_get_int_value(config,"TAM_MEMORIA");
 	tam_pagina = config_get_int_value(config,"TAM_PAGINA");
@@ -63,6 +58,17 @@ void inicializar_memoria(){
 	retardo_memoria = config_get_int_value(config,"RETARDO_MEMORIA");
 	marcos_por_proceso = config_get_int_value(config,"MARCOS_POR_PROCESO");
 	algoritmo = config_get_string_value(config,"ALGORITMO_REEMPLAZO");
+
+	char* ip = config_get_string_value(config,"IP");
+	char* puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
+	server_memoria = iniciar_servidor(logger, "MEMORIA", ip, puerto_escucha);
+	cliente_cpu = esperar_cliente(logger, "MEMORIA", server_memoria);
+	send(cliente_cpu, &tam_pagina, sizeof(uint16_t),0);
+	send(cliente_cpu, &entradas_por_tabla, sizeof(uint16_t),0);
+	log_info(logger, "Enviando a CPU: tam_pagina=%d - cant_ent_paginas=%d", tam_pagina, entradas_por_tabla);
+//	send_datos_necesarios(cliente_cpu, entradas_por_tabla, tam_pagina);
+	cliente_kernel = esperar_cliente(logger, "MEMORIA", server_memoria);
+
 
 	memoria = malloc(tam_memoria);
 	lista_tablas_1er_nivel = list_create();
@@ -73,8 +79,6 @@ void inicializar_memoria(){
 		bitarray_marcos_ocupados[i] = 0;
 
 	inicializar_swap();
-
-	send_datos_necesarios(cliente_cpu, entradas_por_tabla, tam_pagina);
 }
 
 /***********************************************************************/
@@ -99,15 +103,18 @@ void recibir_kernel() {
 		switch (cop) {
 			case CREAR_TABLA:
 			{
-				uint32_t tamanio = 0;
-				uint16_t pid = 0;
+				log_info(logger, "Entre a crear tabla \n");
+				uint32_t tamanio;
+				uint16_t pid;
 
 				if (!recv_crear_tabla(cliente_kernel, &tamanio, &pid)) {
 					pthread_mutex_lock(&mx_log);
-					log_error(logger,"Fallo recibiendo ELIMINAR ESTRUCTURAS");
+					log_error(logger,"Fallo recibiendo CREAR TABLA");
 					pthread_mutex_unlock(&mx_log);
 					break;
 				}
+
+				log_info(logger, "Creando tabla para programa %d de tamanio %d", pid, tamanio);
 
 				uint32_t tabla_paginas = crear_tablas(pid, tamanio);
 				send(cliente_kernel, &tabla_paginas, sizeof(uint32_t), 0);
@@ -116,6 +123,7 @@ void recibir_kernel() {
 			}
 			case SUSPENDER_PROCESO:
 			{
+				printf("Entre a susp proc \n");
 				uint32_t tabla_paginas = 0;
 				uint16_t pid = 0;
 
@@ -126,6 +134,7 @@ void recibir_kernel() {
 					break;
 				}
 
+				log_info(logger, "Suspendiendo proceso %d", pid);
 				suspender_proceso(pid, tabla_paginas);
 
 				uint16_t resultado = 1;
@@ -136,6 +145,7 @@ void recibir_kernel() {
 			}
 			case ELIMINAR_ESTRUCTURAS:
 			{
+				printf("Entre a eliminar proc \n");
 				uint32_t tabla_paginas = 0;
 				uint16_t pid = 0;
 
@@ -146,6 +156,7 @@ void recibir_kernel() {
 					break;
 				}
 
+				log_info(logger, "Eliminando tablas del proceso %d", pid);
 				eliminar_estructuras(tabla_paginas, pid);
 
 				return;
@@ -250,6 +261,7 @@ void recibir_cpu() {
 		switch (cop) {
 			case SOLICITUD_NRO_TABLA_2DO_NIVEL:
 			{
+				printf("Entre a sol nro tabla 2 \n");
 				uint16_t pid = 0;
 				uint32_t nro_tabla_1er_nivel = 0;
 				uint32_t entrada_tabla = 0;
@@ -261,7 +273,9 @@ void recibir_cpu() {
 					break;
 				}
 
+				log_info(logger, "Obteniendo el numero de tabla de 2do nivel (pid = %d | nro_tabla_1er_nivel = %d | entrada_tabla = %d)", pid, nro_tabla_1er_nivel, entrada_tabla);
 				fila_1er_nivel nro_tabla_2do_nivel = obtener_nro_tabla_2do_nivel(nro_tabla_1er_nivel, entrada_tabla, pid);
+				log_info(logger, "Numero de tabla de 2do nivel = %d", nro_tabla_2do_nivel);
 
 				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &nro_tabla_2do_nivel, sizeof(fila_1er_nivel), 0);
@@ -270,6 +284,7 @@ void recibir_cpu() {
 			}
 			case SOLICITUD_NRO_MARCO:
 			{
+				printf("Entre a sol nro marco \n");
 				uint16_t pid = 0; // No se usa por ahora
 				uint32_t nro_tabla_2do_nivel = 0;
 				uint32_t entrada_tabla = 0;
@@ -282,7 +297,9 @@ void recibir_cpu() {
 					break;
 				}
 
+				log_info(logger, "Obteniendo numero de marco (nro_tabla_2do_nivel = %d | entrada_tabla = %d | index_tabla_1er_nivel = %d)", nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
 				uint32_t nro_marco = obtener_nro_marco_memoria(nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
+				log_info(logger, "Numero de marco obtenido = %d", nro_marco);
 
 				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &nro_marco, sizeof(uint32_t), 0);
@@ -291,6 +308,7 @@ void recibir_cpu() {
 			}
 			case READ:
 			{
+				printf("Entre a read \n");
 				uint32_t nro_marco;
 				uint16_t desplazamiento;
 
@@ -301,7 +319,9 @@ void recibir_cpu() {
 					break;
 				}
 
+				log_info(logger, "Obteniendo dato (nro_marco = %d, desplazamiento = %d)", nro_marco, desplazamiento);
 				uint32_t dato = read_en_memoria(nro_marco, desplazamiento);
+				log_info(logger, "Dato leido '%d'", dato);
 
 				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &dato, sizeof(uint32_t), 0);
@@ -310,6 +330,7 @@ void recibir_cpu() {
 			}
 			case WRITE:
 			{
+				printf("Entre a write \n");
 				uint32_t nro_marco;
 				uint16_t desplazamiento;
 				uint32_t dato;
@@ -321,6 +342,7 @@ void recibir_cpu() {
 					break;
 				}
 
+				log_info(logger, "Escribiendo '%d' (nro_marco = %d, desplazamiento = %d)", dato, nro_marco, desplazamiento);
 				write_en_memoria(nro_marco, desplazamiento, dato);
 
 				op_code resultado = ESCRITURA_OK;

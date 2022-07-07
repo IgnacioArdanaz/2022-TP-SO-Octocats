@@ -211,11 +211,12 @@ void pasaje_a_ready(){
 
 
 void solicitar_tabla_paginas(PCB_t* proceso){
+	log_info(logger, "Solicitando tabla de pag para proceso %d de tamanio %d", proceso->pid, proceso->tamanio);
 	send_crear_tabla(conexion_memoria, &proceso->tamanio, &proceso->pid);
-	uint32_t tabla_paginas = 0;
+	uint32_t tabla_paginas;
 	recv(conexion_memoria, &tabla_paginas, sizeof(uint32_t), 0);
 	proceso->tabla_paginas = tabla_paginas;
-	printf("proceso %d tabla de pag %d", proceso->pid, proceso->tabla_paginas);
+	log_info(logger, "proceso %d tabla de pag %d", proceso->pid, proceso->tabla_paginas);
 }
 
 void loggear_estado_de_colas(){

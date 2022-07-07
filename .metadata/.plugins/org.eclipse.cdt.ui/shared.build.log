@@ -1,19 +1,21 @@
-14:01:25 **** Build of configuration Debug for project shared ****
+00:39:06 **** Incremental Build of configuration Debug for project shared ****
 make all 
 Building file: ../src/pcb.c
 Invoking: Cross GCC Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/pcb.d" -MT"src/pcb.o" -o "src/pcb.o" "../src/pcb.c"
+../src/protocol.c:258:14: warning: ‘serializar_crear_tabla’ defined but not used [-Wunused-function]
 Finished building: ../src/pcb.c
  
 Building file: ../src/protocol.c
 Invoking: Cross GCC Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/protocol.d" -MT"src/protocol.o" -o "src/protocol.o" "../src/protocol.c"
+ static void* serializar_crear_tabla(uint32_t tamanio, uint16_t pid) {
+              ^
+../src/protocol.c: In function ‘send_crear_tabla’:
+../src/protocol.c:256:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
 Finished building: ../src/protocol.c
- 
-Building file: ../src/sockets.c
-Invoking: Cross GCC Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/sockets.d" -MT"src/sockets.o" -o "src/sockets.o" "../src/sockets.c"
-Finished building: ../src/sockets.c
  
 Building target: libshared.so
 Invoking: Cross GCC Linker
@@ -21,5 +23,5 @@ gcc -shared -o "libshared.so"  ./src/pcb.o ./src/protocol.o ./src/sockets.o   -l
 Finished building target: libshared.so
  
 
-14:01:49 Build Finished (took 24s.232ms)
+00:39:08 Build Finished (took 1s.997ms)
 

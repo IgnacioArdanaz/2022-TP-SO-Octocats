@@ -86,8 +86,11 @@ void inicializar_cpu(){
 	if (conexion_memoria == 0){
 		log_error(logger,"Error al intentar conectarse a memoria :-(");
 		exit(EXIT_FAILURE);
-		recv_datos_necesarios(conexion_memoria,&tam_pagina, &cant_ent_paginas);
 	}
+	recv(conexion_memoria, &tam_pagina, sizeof(uint16_t),0);
+	recv(conexion_memoria, &cant_ent_paginas, sizeof(uint16_t),0);
+//	recv_datos_necesarios(conexion_memoria, &tam_pagina, &cant_ent_paginas);
+	log_info(logger, "RECIBIDO: tam_pagina=%d - cant_ent_paginas=%d", tam_pagina, cant_ent_paginas);
 
 	char* ip = config_get_string_value(config, "IP");
 	char* puerto_dispatch = config_get_string_value(config, "PUERTO_ESCUCHA_DISPATCH");
@@ -185,12 +188,12 @@ int decode(instruccion_t* instruccion_ejecutar ){
 
 int ejecutarRead(uint32_t dir_logica,uint32_t tabla_paginas){
 	marco_t dir_fisica;
-	int valor=8;
+	uint32_t valor = 8;
 	dir_fisica = traducir_direccion(dir_logica,tabla_paginas);
 
-	send_read(conexion_memoria,dir_fisica.marco,dir_fisica.desplazamiento);
-	// Este de aca abajo te lo hacemos nosotros, tranqui
-	// valor = recv_valor_leido();
+	send_read(conexion_memoria, dir_fisica.marco, dir_fisica.desplazamiento);
+	recv(conexion_memoria, &valor, sizeof(uint32_t), 0);
+
 	return valor;
 }
 
@@ -198,48 +201,47 @@ int ejecutarRead(uint32_t dir_logica,uint32_t tabla_paginas){
 
 void ejecutarWrite(uint32_t dir_logica,uint32_t valor,uint32_t tabla_paginas ){
 	marco_t dir_fisica;
+	op_code resultado;
 	dir_fisica = traducir_direccion(dir_logica, tabla_paginas);
 
 	send_write(conexion_memoria,dir_fisica.marco,dir_fisica.desplazamiento,valor);
-	// Este de aca abajo te lo hacemos nosotros, tranqui
+	recv(conexion_memoria, &resultado, sizeof(op_code), 0);
 	//recv_verificacion
 }
 
 marco_t  traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas_1){
 	marco_t dire_fisica;
-	int32_t marco;
-	uint32_t numero_pagina = floor((double)dir_logica/(double)tam_pagina);
+	uint32_t nro_marco;
+	uint32_t numero_pagina = floor( (double)dir_logica / (double)tam_pagina );
 	//Aca hay que fijarse si esta en la tlb
-	marco=presente_en_tlb(numero_pagina);
+	nro_marco = presente_en_tlb(numero_pagina);
 
-	if(marco==-1){
+	if(nro_marco==-1){
 		uint32_t entrada_tabla_1 = floor((double)numero_pagina/(double)cant_ent_paginas);
 		uint32_t entrada_tabla_2 = numero_pagina % cant_ent_paginas;
+		int32_t nro_tabla_2do_nivel;
+
 
 		send_solicitud_nro_tabla_2do_nivel(conexion_memoria, pid_actual, tabla_paginas_1,  entrada_tabla_1);
+		recv(conexion_memoria, &nro_tabla_2do_nivel, sizeof(int32_t), 0);
 
-		// Este de aca abajo te lo hacemos nosotros, tranqui
-		//recv_tabla(&tabla_paginas2);
+		send_solicitud_nro_marco(conexion_memoria, pid_actual, nro_tabla_2do_nivel,  entrada_tabla_2,entrada_tabla_1);
+		recv(conexion_memoria, &nro_marco, sizeof(uint32_t), 0);
 
-		//send_solicitud_nro_marco(conexion_memoria, pid_actual, tabla_paginas_2,  entrada_tabla_2,entrada_tabla_1);
-
-		// Este de aca abajo te lo hacemos nosotros, tranqui
-		//recv_tabla(&marco);
-		marco = rand()%11;
-		if(!marco_en_tlb(marco,numero_pagina)){
-			if(strcmp(reemplazo_tlb,"LRU"))reemplazo_tlb_LRU( numero_pagina,  marco );
-			else if(strcmp(reemplazo_tlb,"FIFO")) reemplazo_tlb_FIFO(numero_pagina,marco);
+		if(!marco_en_tlb(nro_marco,numero_pagina)){
+			if(strcmp(reemplazo_tlb,"LRU"))
+				reemplazo_tlb_LRU(numero_pagina, nro_marco);
+			else if(strcmp(reemplazo_tlb,"FIFO"))
+				reemplazo_tlb_FIFO(numero_pagina,nro_marco);
 		}
 	}
 
 	uint32_t desplazamiento = dir_logica - numero_pagina * tam_pagina;
 
-	dire_fisica.marco = marco;
+	dire_fisica.marco = nro_marco;
 	dire_fisica.desplazamiento =desplazamiento;
 
 	return dire_fisica;
-
-
 }
 
 
@@ -339,7 +341,7 @@ void interrupcion(){
 	while(1){
 		op_code opcode;
 		recv(cliente_socket_interrupt, &opcode, sizeof(op_code), 0);
-		log_info(logger, "Interrupcion recibida");
+//		log_info(logger, "Interrupcion recibida");
 		hay_interrupcion = true;
 	}
 }
