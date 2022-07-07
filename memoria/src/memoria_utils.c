@@ -117,7 +117,7 @@ void recibir_kernel() {
 
 				log_info(logger, "Creando tabla para programa %d de tamanio %d", pid, tamanio);
 
-				uint32_t tabla_paginas = 25;//crear_tablas(pid, tamanio);
+				uint32_t tabla_paginas = crear_tablas(pid, tamanio);
 
 				log_info(logger, "Tabla creada: Número %d\n", tabla_paginas);
 				send(cliente_kernel, &tabla_paginas, sizeof(uint32_t), 0);
@@ -181,8 +181,7 @@ void recibir_kernel() {
 // creas los marcos y las tablas necesarias para el proceso
 uint32_t crear_tablas(uint16_t pid, uint16_t tamanio){
 	int marcos_req = calcular_cant_marcos(tamanio);
-	int numero;
-	fila_1er_nivel* tabla_1er_nivel = malloc(sizeof(uint32_t) * entradas_por_tabla);
+	fila_1er_nivel* tabla_1er_nivel = malloc(sizeof(int32_t) * entradas_por_tabla);
 	FILE* swap = crear_archivo_swap(pid);
 	inicializar_tabla_1er_nivel(tabla_1er_nivel); //Pone todas las entradas en -1
 	printf("Antes de crear las tablas \n");
@@ -191,17 +190,18 @@ uint32_t crear_tablas(uint16_t pid, uint16_t tamanio){
 		inicializar_tabla_2do_nivel(tabla_2do_nivel); //Pone todas las entradas en -1
 		for (int j = 0 ; j < entradas_por_tabla && marcos_req > marcos_actuales(i, j); j++){
 			uint32_t nro_marco = agregar_marco_en_swap(swap, tam_pagina);
-			fila_2do_nivel fila = {nro_marco,0,0,0};
+			printf("Antes de crear la fila %d \n", nro_marco);
+			fila_2do_nivel fila = {nro_marco,0,0,0}; //Podria ser {0,0,0,0}
+			printf("Antes de asignar la fila \n");
 			tabla_2do_nivel[j] = fila;
+			printf("Siguiente iteracion \n");
 		}
-		uint32_t nro_tabla_2do_nivel = list_add(lista_tablas_2do_nivel,tabla_2do_nivel);
+		uint32_t nro_tabla_2do_nivel = list_add(lista_tablas_2do_nivel, tabla_2do_nivel);
 		tabla_1er_nivel[i] = nro_tabla_2do_nivel;
 	}
 	cerrar_archivo_swap(swap);
 	crear_estructura_clock(pid);
-	numero = list_add(lista_tablas_1er_nivel,tabla_1er_nivel);
-	printf("NUmero de tabla de primer nivel ½d:",numero);
-	return numero;
+	return list_add(lista_tablas_1er_nivel, tabla_1er_nivel);
 }
 
 void inicializar_tabla_1er_nivel(fila_1er_nivel* tabla_1er_nivel){
