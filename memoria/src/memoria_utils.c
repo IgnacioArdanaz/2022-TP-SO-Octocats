@@ -63,12 +63,12 @@ void inicializar_memoria(){
 	char* puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
 	server_memoria = iniciar_servidor(logger, "MEMORIA", ip, puerto_escucha);
 	cliente_cpu = esperar_cliente(logger, "MEMORIA", server_memoria);
-	send(cliente_cpu, &tam_pagina, sizeof(uint16_t),0);
-	send(cliente_cpu, &entradas_por_tabla, sizeof(uint16_t),0);
+
 	log_info(logger, "Enviando a CPU: tam_pagina=%d - cant_ent_paginas=%d", tam_pagina, entradas_por_tabla);
+	send(cliente_cpu, &entradas_por_tabla, sizeof(uint16_t),0);
+	send(cliente_cpu, &tam_pagina, sizeof(uint16_t),0);
 //	send_datos_necesarios(cliente_cpu, entradas_por_tabla, tam_pagina);
 	cliente_kernel = esperar_cliente(logger, "MEMORIA", server_memoria);
-
 
 	memoria = malloc(tam_memoria);
 	lista_tablas_1er_nivel = list_create();
@@ -104,19 +104,22 @@ void recibir_kernel() {
 			case CREAR_TABLA:
 			{
 				log_info(logger, "Entre a crear tabla \n");
-				uint32_t tamanio;
-				uint16_t pid;
-
-				if (!recv_crear_tabla(cliente_kernel, &tamanio, &pid)) {
-					pthread_mutex_lock(&mx_log);
-					log_error(logger,"Fallo recibiendo CREAR TABLA");
-					pthread_mutex_unlock(&mx_log);
-					break;
-				}
+				uint16_t tamanio = 123;
+				uint16_t pid = 123;
+				recv(cliente_kernel, &tamanio, sizeof(uint16_t), 0);
+				recv(cliente_kernel, &pid, sizeof(uint16_t), 0);
+//				if (!recv_crear_tabla(cliente_kernel, &tamanio, &pid)) {
+//					pthread_mutex_lock(&mx_log);
+//					log_error(logger,"Fallo recibiendo CREAR TABLA");
+//					pthread_mutex_unlock(&mx_log);
+//					break;
+//				}
 
 				log_info(logger, "Creando tabla para programa %d de tamanio %d", pid, tamanio);
 
-				uint32_t tabla_paginas = crear_tablas(pid, tamanio);
+				uint32_t tabla_paginas = 25;//crear_tablas(pid, tamanio);
+
+				log_info(logger, "Tabla creada: Número %d\n", tabla_paginas);
 				send(cliente_kernel, &tabla_paginas, sizeof(uint32_t), 0);
 
 				return;
@@ -126,16 +129,17 @@ void recibir_kernel() {
 				printf("Entre a susp proc \n");
 				uint32_t tabla_paginas = 0;
 				uint16_t pid = 0;
-
-				if (!recv_suspender_proceso(cliente_kernel, &pid, &tabla_paginas)) {
-					pthread_mutex_lock(&mx_log);
-					log_error(logger,"Fallo recibiendo ELIMINAR ESTRUCTURAS");
-					pthread_mutex_unlock(&mx_log);
-					break;
-				}
+				recv(cliente_kernel, &pid, sizeof(uint16_t),0);
+				recv(cliente_kernel, &tabla_paginas, sizeof(uint16_t),0);
+//				if (!recv_suspender_proceso(cliente_kernel, &pid, &tabla_paginas)) {
+//					pthread_mutex_lock(&mx_log);
+//					log_error(logger,"Fallo recibiendo ELIMINAR ESTRUCTURAS");
+//					pthread_mutex_unlock(&mx_log);
+//					break;
+//				}
 
 				log_info(logger, "Suspendiendo proceso %d", pid);
-				suspender_proceso(pid, tabla_paginas);
+				//suspender_proceso(pid, tabla_paginas);
 
 				uint16_t resultado = 1;
 				send(cliente_kernel, &resultado, sizeof(uint16_t), 0);
@@ -145,19 +149,22 @@ void recibir_kernel() {
 			}
 			case ELIMINAR_ESTRUCTURAS:
 			{
-				printf("Entre a eliminar proc \n");
+				printf("Entre a eliminar estructuras \n");
 				uint32_t tabla_paginas = 0;
 				uint16_t pid = 0;
 
-				if (!recv_eliminar_estructuras(cliente_kernel, &pid, &tabla_paginas)) {
-					pthread_mutex_lock(&mx_log);
-					log_error(logger,"Fallo recibiendo ELIMINAR ESTRUCTURAS");
-					pthread_mutex_unlock(&mx_log);
-					break;
-				}
+				recv(cliente_kernel, &tabla_paginas, sizeof(uint32_t),0);
+				recv(cliente_kernel, &pid, sizeof(uint16_t),0);
+
+//				if (!recv_eliminar_estructuras(cliente_kernel, &pid, &tabla_paginas)) {
+//					pthread_mutex_lock(&mx_log);
+//					log_error(logger,"Fallo recibiendo ELIMINAR ESTRUCTURAS");
+//					pthread_mutex_unlock(&mx_log);
+//					break;
+//				}
 
 				log_info(logger, "Eliminando tablas del proceso %d", pid);
-				eliminar_estructuras(tabla_paginas, pid);
+				//eliminar_estructuras(tabla_paginas, pid);
 
 				return;
 			}
@@ -172,12 +179,13 @@ void recibir_kernel() {
 //// INICIALIZACIÓN DE PROCESO
 
 // creas los marcos y las tablas necesarias para el proceso
-uint32_t crear_tablas(uint16_t pid, uint32_t tamanio){
+uint32_t crear_tablas(uint16_t pid, uint16_t tamanio){
 	int marcos_req = calcular_cant_marcos(tamanio);
+	int numero;
 	fila_1er_nivel* tabla_1er_nivel = malloc(sizeof(uint32_t) * entradas_por_tabla);
 	FILE* swap = crear_archivo_swap(pid);
 	inicializar_tabla_1er_nivel(tabla_1er_nivel); //Pone todas las entradas en -1
-
+	printf("Antes de crear las tablas \n");
 	for (int i = 0; i < entradas_por_tabla && marcos_req > marcos_actuales(i, 0); i++){
 		fila_2do_nivel* tabla_2do_nivel = malloc(entradas_por_tabla * sizeof(fila_2do_nivel));
 		inicializar_tabla_2do_nivel(tabla_2do_nivel); //Pone todas las entradas en -1
@@ -191,7 +199,9 @@ uint32_t crear_tablas(uint16_t pid, uint32_t tamanio){
 	}
 	cerrar_archivo_swap(swap);
 	crear_estructura_clock(pid);
-	return list_add(lista_tablas_1er_nivel,tabla_1er_nivel);
+	numero = list_add(lista_tablas_1er_nivel,tabla_1er_nivel);
+	printf("NUmero de tabla de primer nivel ½d:",numero);
+	return numero;
 }
 
 void inicializar_tabla_1er_nivel(fila_1er_nivel* tabla_1er_nivel){
@@ -353,7 +363,7 @@ void recibir_cpu() {
 			}
 			default:
 				pthread_mutex_lock(&mx_log);
-				log_error(logger, "Algo anduvo mal en el server de memoria\n Cop: %d",cop);
+				log_error(logger, "Algo anduvo mal en el server de memoria (EN EL HILO DE CPU)\n Cop: %d",cop);
 				pthread_mutex_unlock(&mx_log);
 		}
 	}
@@ -564,7 +574,7 @@ int buscar_marco_libre(){
 }
 
 // Devuelve la cantidad de marcos que requiere un proceso del tamanio especificado
-uint32_t calcular_cant_marcos(uint32_t tamanio){
+uint32_t calcular_cant_marcos(uint16_t tamanio){
 	int  cant_marcos = tamanio / tam_pagina;
 	if (tamanio % tam_pagina != 0)
 		cant_marcos++;
@@ -620,6 +630,7 @@ void crear_estructura_clock(uint16_t pid){
 	estructura.marcos_en_memoria = list_create();
 	estructura.puntero = 0;
 	list_add(lista_estructuras_clock, &estructura);
+	log_info("Creada estructura clock del proceso: %d", pid);
 }
 
 

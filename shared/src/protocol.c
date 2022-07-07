@@ -226,9 +226,9 @@ bool recv_datos_necesarios(int fd, uint16_t* entradas_por_tabla, uint16_t* tam_p
 	 }
 
 	size_t acumulador = 0;
-	memcpy(&entradas_por_tabla, stream + acumulador, sizeof(uint16_t));
+	memcpy(entradas_por_tabla, stream + acumulador, sizeof(uint16_t));
 	acumulador += sizeof(uint16_t);
-	memcpy(&tam_pagina, stream + acumulador, sizeof(uint16_t));
+	memcpy(tam_pagina, stream + acumulador, sizeof(uint16_t));
 
 	printf("tam_pagina=%d - cant_ent_paginas=%d", *tam_pagina, *entradas_por_tabla);
 	free(stream);
@@ -238,51 +238,46 @@ bool recv_datos_necesarios(int fd, uint16_t* entradas_por_tabla, uint16_t* tam_p
 
 /***************************** SOLICITUD TABLA PAGINAS *****************************/
 // Envio y serializacion
-bool send_crear_tabla(int fd, uint32_t tamanio, uint16_t pid) {
-	op_code cop = CREAR_TABLA;
-	send(fd, &cop, sizeof(op_code), 0);
-	send(fd, &tamanio, sizeof(uint32_t), 0);
-	send(fd, &pid, sizeof(uint16_t), 0);
-
-
-//    size_t size = sizeof(op_code) + sizeof(uint32_t) + sizeof(uint16_t);
-//    void* stream = serializar_crear_tabla(tamanio, pid);
-//    if (send(fd, stream, size, 0) != size) {
-//        free(stream);
-//        return false;
-//    }
-//    free(stream);
-//    return true;
+bool send_crear_tabla(int fd, uint16_t tamanio, uint16_t pid) {
+    size_t size = sizeof(op_code) + 2 * sizeof(uint16_t);
+    void* stream = serializar_crear_tabla(tamanio, pid);
+    printf("Mandando %d \n", tamanio);
+    if (send(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+    free(stream);
+    return true;
 }
 
-static void* serializar_crear_tabla(uint32_t tamanio, uint16_t pid) {
-    void* stream = malloc(sizeof(op_code) + sizeof(uint32_t) + sizeof(uint16_t));
+static void* serializar_crear_tabla(uint16_t tamanio, uint16_t pid) {
+    void* stream = malloc(sizeof(op_code) + sizeof(uint16_t) + sizeof(uint16_t));
 
     op_code cop = CREAR_TABLA;
     size_t acumulador = 0;
     memcpy(stream + acumulador, &cop, sizeof(op_code));
     acumulador += sizeof(op_code);
-    memcpy(stream + acumulador, &tamanio, sizeof(uint32_t));
-    acumulador += sizeof(uint32_t);
+    memcpy(stream + acumulador, &tamanio, sizeof(uint16_t));
+    acumulador += sizeof(uint16_t);
     memcpy(stream + acumulador, &pid, sizeof(uint16_t));
 
     return stream;
 }
 
-bool recv_crear_tabla(int fd, uint32_t* tamanio, uint16_t* pid) {
-	size_t size = sizeof(uint32_t) + sizeof(uint16_t);
-	void* stream = malloc(size);
-	if (recv(fd, stream, size, 0) != size) {
-		free(stream);
-		return false;
-	 }
+bool recv_crear_tabla(int fd, uint16_t* tamanio, uint16_t* pid) {
+    size_t size = 2 * sizeof(uint16_t);
+    void* stream = malloc(size);
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+     }
 
-	size_t acumulador = 0;
-	memcpy(&tamanio, stream + acumulador, sizeof(uint32_t));
-	acumulador += sizeof(uint32_t);
-	memcpy(&pid, stream + acumulador, sizeof(uint16_t));
+    size_t acumulador = 0;
+    memcpy(tamanio, stream + acumulador, sizeof(uint32_t));
+    acumulador += sizeof(uint32_t);
+    memcpy(pid, stream + acumulador, sizeof(uint16_t));
 
-	free(stream);
+    free(stream);
     return true;
 }
 

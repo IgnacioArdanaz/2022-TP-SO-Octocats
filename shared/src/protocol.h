@@ -50,9 +50,9 @@ static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t t
 bool recv_datos_necesarios(int fd, uint16_t* entradas_por_tabla, uint16_t* tam_pagina);
 
 // CREAR TABLA
-bool send_crear_tabla(int fd, uint32_t tamanio, uint16_t pid);
-static void* serializar_crear_tabla(uint32_t tamanio, uint16_t pid);
-bool recv_crear_tabla(int fd, uint32_t* tamanio, uint16_t* pid);
+bool send_crear_tabla(int fd, uint16_t tamanio, uint16_t pid);
+static void* serializar_crear_tabla(uint16_t tamanio, uint16_t pid);
+bool recv_crear_tabla(int fd, uint16_t* tamanio, uint16_t* pid);
 
 // SUSENDER PROCESO
 bool send_suspender_proceso(int fd, uint16_t pid, uint32_t tabla_paginas);

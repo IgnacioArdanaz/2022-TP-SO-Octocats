@@ -212,7 +212,11 @@ void pasaje_a_ready(){
 
 void solicitar_tabla_paginas(PCB_t* proceso){
 	log_info(logger, "Solicitando tabla de pag para proceso %d de tamanio %d", proceso->pid, proceso->tamanio);
-	send_crear_tabla(conexion_memoria, &proceso->tamanio, &proceso->pid);
+//	send_crear_tabla(conexion_memoria, proceso->tamanio, proceso->pid);
+	op_code cop = CREAR_TABLA;
+	send(conexion_memoria, &cop, sizeof(op_code), 0);
+	send(conexion_memoria, &proceso->tamanio, sizeof(uint16_t), 0);
+	send(conexion_memoria, &proceso->pid, sizeof(uint16_t), 0);
 	uint32_t tabla_paginas;
 	recv(conexion_memoria, &tabla_paginas, sizeof(uint32_t), 0);
 	proceso->tabla_paginas = tabla_paginas;
@@ -271,8 +275,14 @@ void esperar_cpu(){
 				sem_post(&s_multiprogramacion_actual);
 				send(socket_pcb,&cop,sizeof(op_code),0);
 				log_info(logger, "[EXECUTE -> EXIT] Proceso %d terminado",pcb->pid);
+
+				op_code cop_memoria = ELIMINAR_ESTRUCTURAS;
+				send(conexion_memoria, &cop_memoria, sizeof(op_code),0);
+				send(conexion_memoria, &pcb->tabla_paginas, sizeof(uint32_t),0);
+				send(conexion_memoria, &pcb->pid, sizeof(uint16_t),0);
+				//send_eliminar_estructuras(conexion_memoria, pcb->tabla_paginas, pcb->pid);
+
 				pcb_destroy(pcb);
-				send_eliminar_estructuras(conexion_memoria, pcb->tabla_paginas, pcb->pid);
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
 				break;
@@ -306,6 +316,7 @@ void esperar_cpu(){
 void suspendiendo(PCB_t* pcb){
 	char* key = string_itoa(pcb->pid);
 	pthread_mutex_lock(&mx_iteracion_blocked);
+	op_code cop = SUSPENDER_PROCESO;
 	int iteracion_actual = dictionary_get(iteracion_blocked, key);
 	pthread_mutex_unlock(&mx_iteracion_blocked);
 	usleep(tiempo_suspended*1000);
@@ -321,9 +332,15 @@ void suspendiendo(PCB_t* pcb){
 	if(iteracion_actual == dictionary_get(iteracion_blocked, key)){
 		pthread_mutex_unlock(&mx_iteracion_blocked);
 		log_info(logger,"[BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso %d",pcb->pid);
-		send_suspender_proceso(conexion_memoria, pcb->pid, pcb->tabla_paginas);
+
+		send(conexion_memoria, &cop, sizeof(op_code),0);
+		send(conexion_memoria, &pcb->pid, sizeof(uint16_t),0);
+		send(conexion_memoria, &pcb->tabla_paginas, sizeof(uint16_t),0);
+		//send_suspender_proceso(conexion_memoria, pcb->pid, pcb->tabla_paginas);
+
 		uint16_t resultado;
 		recv(conexion_memoria, &resultado, sizeof(uint16_t), 0);
+
 		list_add(cola_suspended_blocked,pcb->pid);
 		pthread_mutex_unlock(&mx_cola_blocked);
 		pthread_mutex_unlock(&mx_cola_suspended_blocked);

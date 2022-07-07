@@ -1,20 +1,12 @@
-00:39:06 **** Incremental Build of configuration Debug for project shared ****
+16:48:12 **** Incremental Build of configuration Debug for project shared ****
 make all 
-Building file: ../src/pcb.c
-Invoking: Cross GCC Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/pcb.d" -MT"src/pcb.o" -o "src/pcb.o" "../src/pcb.c"
-../src/protocol.c:258:14: warning: ‘serializar_crear_tabla’ defined but not used [-Wunused-function]
-Finished building: ../src/pcb.c
- 
 Building file: ../src/protocol.c
 Invoking: Cross GCC Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/protocol.d" -MT"src/protocol.o" -o "src/protocol.o" "../src/protocol.c"
- static void* serializar_crear_tabla(uint32_t tamanio, uint16_t pid) {
-              ^
-../src/protocol.c: In function ‘send_crear_tabla’:
-../src/protocol.c:256:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
+../src/protocol.c: In function ‘recv_crear_tabla’:
+../src/protocol.c:281:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘uint16_t * {aka short unsigned int *}’ [-Wformat=]
+  printf("Recibiendo %d \n", tamanio);
+         ^
 Finished building: ../src/protocol.c
  
 Building target: libshared.so
@@ -23,5 +15,5 @@ gcc -shared -o "libshared.so"  ./src/pcb.o ./src/protocol.o ./src/sockets.o   -l
 Finished building target: libshared.so
  
 
-00:39:08 Build Finished (took 1s.997ms)
+16:48:13 Build Finished (took 982ms)
 

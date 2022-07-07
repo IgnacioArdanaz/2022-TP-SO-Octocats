@@ -87,9 +87,11 @@ void inicializar_cpu(){
 		log_error(logger,"Error al intentar conectarse a memoria :-(");
 		exit(EXIT_FAILURE);
 	}
-	recv(conexion_memoria, &tam_pagina, sizeof(uint16_t),0);
-	recv(conexion_memoria, &cant_ent_paginas, sizeof(uint16_t),0);
-//	recv_datos_necesarios(conexion_memoria, &tam_pagina, &cant_ent_paginas);
+
+	recv(conexion_memoria, &cant_ent_paginas, sizeof(uint16_t), 0);
+	recv(conexion_memoria, &tam_pagina, sizeof(uint16_t), 0);
+
+//	recv_datos_necesarios(conexion_memoria, &cant_ent_paginas, &tam_pagina);
 	log_info(logger, "RECIBIDO: tam_pagina=%d - cant_ent_paginas=%d", tam_pagina, cant_ent_paginas);
 
 	char* ip = config_get_string_value(config, "IP");
