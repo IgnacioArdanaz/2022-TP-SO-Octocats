@@ -103,11 +103,12 @@ void recibir_kernel() {
 		switch (cop) {
 			case CREAR_TABLA:
 			{
-				log_info(logger, "Entre a crear tabla \n");
+				log_info(logger, "Entre a crear tabla");
 				uint16_t tamanio = 123;
 				uint16_t pid = 123;
 				recv(cliente_kernel, &tamanio, sizeof(uint16_t), 0);
 				recv(cliente_kernel, &pid, sizeof(uint16_t), 0);
+
 //				if (!recv_crear_tabla(cliente_kernel, &tamanio, &pid)) {
 //					pthread_mutex_lock(&mx_log);
 //					log_error(logger,"Fallo recibiendo CREAR TABLA");
@@ -126,7 +127,7 @@ void recibir_kernel() {
 			}
 			case SUSPENDER_PROCESO:
 			{
-				printf("Entre a susp proc \n");
+				log_info(logger, "Entre a susp proc");
 				uint32_t tabla_paginas = 0;
 				uint16_t pid = 0;
 				recv(cliente_kernel, &pid, sizeof(uint16_t),0);
@@ -138,8 +139,9 @@ void recibir_kernel() {
 //					break;
 //				}
 
-				log_info(logger, "Suspendiendo proceso %d", pid);
-				//suspender_proceso(pid, tabla_paginas);
+				log_info(logger, "Suspendiendo proceso %d (tabla_paginas = %d)", pid, tabla_paginas);
+
+				suspender_proceso(pid, tabla_paginas);
 
 				uint16_t resultado = 1;
 				send(cliente_kernel, &resultado, sizeof(uint16_t), 0);
@@ -149,7 +151,7 @@ void recibir_kernel() {
 			}
 			case ELIMINAR_ESTRUCTURAS:
 			{
-				printf("Entre a eliminar estructuras \n");
+				log_info(logger, "Entre a eliminar estructuras");
 				uint32_t tabla_paginas = 0;
 				uint16_t pid = 0;
 
@@ -164,7 +166,7 @@ void recibir_kernel() {
 //				}
 
 				log_info(logger, "Eliminando tablas del proceso %d", pid);
-				//eliminar_estructuras(tabla_paginas, pid);
+				eliminar_estructuras(tabla_paginas, pid);
 
 				return;
 			}
@@ -184,17 +186,13 @@ uint32_t crear_tablas(uint16_t pid, uint16_t tamanio){
 	fila_1er_nivel* tabla_1er_nivel = malloc(sizeof(int32_t) * entradas_por_tabla);
 	FILE* swap = crear_archivo_swap(pid);
 	inicializar_tabla_1er_nivel(tabla_1er_nivel); //Pone todas las entradas en -1
-	printf("Antes de crear las tablas \n");
 	for (int i = 0; i < entradas_por_tabla && marcos_req > marcos_actuales(i, 0); i++){
 		fila_2do_nivel* tabla_2do_nivel = malloc(entradas_por_tabla * sizeof(fila_2do_nivel));
 		inicializar_tabla_2do_nivel(tabla_2do_nivel); //Pone todas las entradas en -1
 		for (int j = 0 ; j < entradas_por_tabla && marcos_req > marcos_actuales(i, j); j++){
 			uint32_t nro_marco = agregar_marco_en_swap(swap, tam_pagina);
-			printf("Antes de crear la fila %d \n", nro_marco);
 			fila_2do_nivel fila = {nro_marco,0,0,0}; //Podria ser {0,0,0,0}
-			printf("Antes de asignar la fila \n");
 			tabla_2do_nivel[j] = fila;
-			printf("Siguiente iteracion \n");
 		}
 		uint32_t nro_tabla_2do_nivel = list_add(lista_tablas_2do_nivel, tabla_2do_nivel);
 		tabla_1er_nivel[i] = nro_tabla_2do_nivel;
@@ -218,19 +216,26 @@ void inicializar_tabla_2do_nivel(fila_2do_nivel* tabla_2do_nivel){
 
 // SUSPENSIÓN DE PROCESO
 void suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
+	printf("Antes de abrir arch swap \n");
 	FILE* swap = abrir_archivo_swap(pid);
+	printf("Desp de abrir arch swap \n");
 	estructura_clock* estructura = buscar_estructura_clock(pid);
+	printf("Desp de buscar estructura clock (pid = %d, puntero = %d\n", estructura->pid, estructura->puntero);
+//	printf("Desp de buscar estructura clock (pid = %d, puntero = %d, size marcos = %d \n", estructura->pid, estructura->puntero, list_size(estructura->marcos_en_memoria));
 	fila_estructura_clock* fila_busqueda;
 	for (int i = 0; i < list_size(estructura->marcos_en_memoria); i++){
 		fila_busqueda = list_get(estructura->marcos_en_memoria, i);
 		bitarray_marcos_ocupados[fila_busqueda->nro_marco_en_memoria] = 0;
 		if(fila_busqueda->pagina->modificado == 1){
+			printf("Antes de actualizar marco\n");
 			actualizar_marco_en_swap(swap, fila_busqueda->nro_marco_en_swap, obtener_marco(fila_busqueda->nro_marco_en_memoria), tam_pagina);
+			printf("Desp de actualizar marco\n");
 		}
 		fila_busqueda->pagina->presencia = 0;
 		fila_busqueda->pagina->uso = 0;
 		fila_busqueda->pagina->modificado = 0;
 		estructura->puntero = 0;
+		printf("Antes de eliminar de estructura clock\n");
 		list_remove(estructura->marcos_en_memoria, i); //Lo hago aparte porque me da miedo usar malloc
 	}
 	cerrar_archivo_swap(swap);
@@ -271,7 +276,7 @@ void recibir_cpu() {
 		switch (cop) {
 			case SOLICITUD_NRO_TABLA_2DO_NIVEL:
 			{
-				printf("Entre a sol nro tabla 2 \n");
+				log_info(logger, "Entre a sol nro tabla 2");
 				uint16_t pid = 0;
 				uint32_t nro_tabla_1er_nivel = 0;
 				uint32_t entrada_tabla = 0;
@@ -294,7 +299,7 @@ void recibir_cpu() {
 			}
 			case SOLICITUD_NRO_MARCO:
 			{
-				printf("Entre a sol nro marco \n");
+				log_info(logger, "Entre a sol nro marco");
 				uint16_t pid = 0; // No se usa por ahora
 				uint32_t nro_tabla_2do_nivel = 0;
 				uint32_t entrada_tabla = 0;
@@ -318,7 +323,7 @@ void recibir_cpu() {
 			}
 			case READ:
 			{
-				printf("Entre a read \n");
+				log_info(logger, "Entre a read");
 				uint32_t nro_marco;
 				uint16_t desplazamiento;
 
@@ -340,7 +345,7 @@ void recibir_cpu() {
 			}
 			case WRITE:
 			{
-				printf("Entre a write \n");
+				log_info(logger, "Entre a write");
 				uint32_t nro_marco;
 				uint16_t desplazamiento;
 				uint32_t dato;
@@ -616,20 +621,24 @@ void agregar_pagina_a_estructura_clock(int32_t nro_marco, fila_2do_nivel* pagina
 
 estructura_clock* buscar_estructura_clock(uint16_t pid_a_buscar){
 	estructura_clock* estructura;
+	printf("size lista_estructuras_clock = %d\n", list_size(lista_estructuras_clock));
 	for (int i = 0; i < list_size(lista_estructuras_clock); i++){
 		estructura = list_get(lista_estructuras_clock, i);
+		printf("lista_estructuras_clock elemento %d : pid = %d \n", i, estructura->pid);
 		if (pid_a_buscar == estructura->pid)
 			return estructura;
 	}
+	printf("Estoy por devolver 0\n");
 	return 0;
 }
 
 void crear_estructura_clock(uint16_t pid){
-	estructura_clock estructura;
-	estructura.pid = pid;
-	estructura.marcos_en_memoria = list_create();
-	estructura.puntero = 0;
-	list_add(lista_estructuras_clock, &estructura);
+	estructura_clock* estructura = malloc(sizeof(estructura_clock));
+	estructura->pid = pid;
+	estructura->marcos_en_memoria = list_create();
+	estructura->puntero = 0;
+	printf("creando elemento: pid = %d \n", estructura->pid);
+	list_add(lista_estructuras_clock, estructura);
 	log_info("Creada estructura clock del proceso: %d", pid);
 }
 

@@ -1,12 +1,13 @@
-16:48:12 **** Incremental Build of configuration Debug for project shared ****
+20:01:33 **** Incremental Build of configuration Debug for project shared ****
 make all 
+Building file: ../src/pcb.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/pcb.d" -MT"src/pcb.o" -o "src/pcb.o" "../src/pcb.c"
+Finished building: ../src/pcb.c
+ 
 Building file: ../src/protocol.c
 Invoking: Cross GCC Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/protocol.d" -MT"src/protocol.o" -o "src/protocol.o" "../src/protocol.c"
-../src/protocol.c: In function ‘recv_crear_tabla’:
-../src/protocol.c:281:9: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘uint16_t * {aka short unsigned int *}’ [-Wformat=]
-  printf("Recibiendo %d \n", tamanio);
-         ^
 Finished building: ../src/protocol.c
  
 Building target: libshared.so
@@ -15,5 +16,5 @@ gcc -shared -o "libshared.so"  ./src/pcb.o ./src/protocol.o ./src/sockets.o   -l
 Finished building target: libshared.so
  
 
-16:48:13 Build Finished (took 982ms)
+20:01:35 Build Finished (took 1s.717ms)
 
