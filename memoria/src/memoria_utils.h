@@ -76,8 +76,8 @@ uint32_t clock_modificado(FILE* swap);
 void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do_nivel, FILE* swap);
 
 // READ Y WRITE
-uint32_t read_en_memoria(uint32_t nro_marco, uint16_t desplazamiento);
-void write_en_memoria(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+uint32_t read_en_memoria(uint32_t nro_marco, uint32_t desplazamiento);
+void write_en_memoria(uint32_t nro_marco, uint32_t desplazamiento, uint32_t dato);
 
 // FUNCIONES GENERALES
 void* obtener_marco(uint32_t nro_marco);

@@ -18,7 +18,6 @@ uint16_t pid_actual=0;
 int main(void) {
 
 	inicializar_cpu();
-
 	while(1){
 		PCB_t* pcb = pcb_create();
 		op_code cop;
@@ -81,7 +80,7 @@ void inicializar_cpu(){
 	//conexion con MEMORIA
 	char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
 	char* puerto_memoria = config_get_string_value(config,"PUERTO_MEMORIA");
-	int conexion_memoria = crear_conexion(logger, "MEMORIA", ip_memoria, puerto_memoria);
+	conexion_memoria = crear_conexion(logger, "MEMORIA", ip_memoria, puerto_memoria);
 
 	if (conexion_memoria == 0){
 		log_error(logger,"Error al intentar conectarse a memoria :-(");
@@ -90,7 +89,6 @@ void inicializar_cpu(){
 
 	recv(conexion_memoria, &cant_ent_paginas, sizeof(uint16_t), 0);
 	recv(conexion_memoria, &tam_pagina, sizeof(uint16_t), 0);
-
 //	recv_datos_necesarios(conexion_memoria, &cant_ent_paginas, &tam_pagina);
 	log_info(logger, "RECIBIDO: tam_pagina=%d - cant_ent_paginas=%d", tam_pagina, cant_ent_paginas);
 
@@ -99,7 +97,6 @@ void inicializar_cpu(){
 	char* puerto_interrupt = config_get_string_value(config, "PUERTO_ESCUCHA_INTERRUPT");
 	server_cpu_dispatch = iniciar_servidor(logger, "CPU_DISPATCH", ip, puerto_dispatch);
 	server_cpu_interrupt = iniciar_servidor(logger, "CPU_INTERRUPT", ip, puerto_interrupt);
-
 	cliente_socket_dispatch = esperar_cliente(logger, "CPU_DISPATCH",server_cpu_dispatch);
 	cliente_socket_interrupt = esperar_cliente(logger, "CPU_INTERRUPT", server_cpu_interrupt);
 	recv(cliente_socket_dispatch, &alfa, sizeof(double), 0);
@@ -216,10 +213,10 @@ void ejecutarWrite(uint32_t dir_logica,uint32_t valor,uint32_t tabla_paginas ){
 	op_code cop = WRITE;
 	send(conexion_memoria, &cop, sizeof(op_code),0);
 	send(conexion_memoria, &dir_fisica.marco, sizeof(uint32_t),0);
-	send(conexion_memoria, &dir_fisica.desplazamiento, sizeof(uint16_t),0);
-	send(conexion_memoria, &valor, sizeof(uint16_t),0);
+	send(conexion_memoria, &dir_fisica.desplazamiento, sizeof(uint32_t),0);
+	send(conexion_memoria, &valor, sizeof(uint32_t),0);
 
-	log_info(logger, "Ejecutando WRITE para marco %d y desplazamiento %d", dir_fisica.marco, dir_fisica.desplazamiento);
+	log_info(logger, "Ejecutando WRITE: marco %d,  desp %d, valor: %d", dir_fisica.marco, dir_fisica.desplazamiento, valor);
 //	send_write(conexion_memoria,dir_fisica.marco,dir_fisica.desplazamiento,valor);
 	recv(conexion_memoria, &resultado, sizeof(op_code), 0);
 	//recv_verificacion
@@ -227,7 +224,7 @@ void ejecutarWrite(uint32_t dir_logica,uint32_t valor,uint32_t tabla_paginas ){
 
 marco_t  traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas_1){
 	marco_t dire_fisica;
-	uint32_t nro_marco;
+	uint32_t nro_marco = 145;
 	uint32_t numero_pagina = floor( (double)dir_logica / (double)tam_pagina );
 	//Aca hay que fijarse si esta en la tlb
 	nro_marco = presente_en_tlb(numero_pagina);
@@ -236,7 +233,7 @@ marco_t  traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas_1){
 		log_info(logger, "La pagina %d no esta en TLB", numero_pagina);
 		uint32_t entrada_tabla_1 = floor((double)numero_pagina/(double)cant_ent_paginas);
 		uint32_t entrada_tabla_2 = numero_pagina % cant_ent_paginas;
-		int32_t nro_tabla_2do_nivel;
+		int32_t nro_tabla_2do_nivel = 237;
 
 
 //		send_solicitud_nro_tabla_2do_nivel(conexion_memoria, pid_actual, tabla_paginas_1,  entrada_tabla_1);
@@ -246,6 +243,7 @@ marco_t  traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas_1){
 		send(conexion_memoria, &tabla_paginas_1, sizeof(uint32_t),0);
 		send(conexion_memoria, &entrada_tabla_1, sizeof(uint32_t),0);
 		recv(conexion_memoria, &nro_tabla_2do_nivel, sizeof(int32_t), 0);
+		log_info(logger, "Recibida tabla pag 2do nivel numero: %d", nro_tabla_2do_nivel);
 
 //		send_solicitud_nro_marco(conexion_memoria, pid_actual, nro_tabla_2do_nivel,  entrada_tabla_2,entrada_tabla_1);
 		cop = SOLICITUD_NRO_MARCO;
@@ -254,8 +252,8 @@ marco_t  traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas_1){
 		send(conexion_memoria, &nro_tabla_2do_nivel, sizeof(int32_t),0);
 		send(conexion_memoria, &entrada_tabla_2, sizeof(uint32_t),0);
 		send(conexion_memoria, &entrada_tabla_1, sizeof(uint32_t),0);
-
 		recv(conexion_memoria, &nro_marco, sizeof(uint32_t), 0);
+		log_info(logger, "Recibido numero de marco: %d", nro_marco);
 
 		if(!marco_en_tlb(nro_marco,numero_pagina)){
 			if(strcmp(reemplazo_tlb,"LRU"))

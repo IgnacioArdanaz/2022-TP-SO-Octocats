@@ -96,14 +96,15 @@ void recibir_kernel() {
 	while (cliente_kernel != -1) {
 		if (recv(cliente_kernel, &cop, sizeof(op_code), 0) <= 0) {
 			pthread_mutex_lock(&mx_log);
-			log_error(logger,"DISCONNECT FAILURE EN KERNEL!");
+			//log_error(logger,"DISCONNECT FAILURE EN KERNEL!");
+			printf("DISCONNECT FAILURE EN KERNEL!\n");
 			pthread_mutex_unlock(&mx_log);
 			return;
 		}
 		switch (cop) {
 			case CREAR_TABLA:
 			{
-				log_info(logger, "Entre a crear tabla");
+				log_info(logger, "[KERNEL] Entre a crear tabla");
 				uint16_t tamanio = 123;
 				uint16_t pid = 123;
 				recv(cliente_kernel, &tamanio, sizeof(uint16_t), 0);
@@ -116,18 +117,18 @@ void recibir_kernel() {
 //					break;
 //				}
 
-				log_info(logger, "Creando tabla para programa %d de tamanio %d", pid, tamanio);
+				log_info(logger, "[KERNEL] Creando tabla para programa %d de tamanio %d", pid, tamanio);
 
 				uint32_t tabla_paginas = crear_tablas(pid, tamanio);
 
-				log_info(logger, "Tabla creada: Número %d\n", tabla_paginas);
+				log_info(logger, "[KERNEL] Tabla creada: Número %d", tabla_paginas);
 				send(cliente_kernel, &tabla_paginas, sizeof(uint32_t), 0);
 
 				return;
 			}
 			case SUSPENDER_PROCESO:
 			{
-				log_info(logger, "Entre a susp proc");
+				log_info(logger, "[KERNEL] Entre a suspender proceso");
 				uint32_t tabla_paginas = 0;
 				uint16_t pid = 0;
 				recv(cliente_kernel, &pid, sizeof(uint16_t),0);
@@ -139,7 +140,7 @@ void recibir_kernel() {
 //					break;
 //				}
 
-				log_info(logger, "Suspendiendo proceso %d (tabla_paginas = %d)", pid, tabla_paginas);
+				log_info(logger, "[KERNEL] Suspendiendo proceso %d (tabla_paginas = %d)", pid, tabla_paginas);
 
 				suspender_proceso(pid, tabla_paginas);
 
@@ -151,7 +152,7 @@ void recibir_kernel() {
 			}
 			case ELIMINAR_ESTRUCTURAS:
 			{
-				log_info(logger, "Entre a eliminar estructuras");
+				log_info(logger, "[KERNEL] Entre a eliminar estructuras");
 				uint32_t tabla_paginas = 0;
 				uint16_t pid = 0;
 
@@ -165,7 +166,7 @@ void recibir_kernel() {
 //					break;
 //				}
 
-				log_info(logger, "Eliminando tablas del proceso %d", pid);
+				log_info(logger, "[KERNEL] Eliminando tablas del proceso %d", pid);
 				eliminar_estructuras(tabla_paginas, pid);
 
 				return;
@@ -269,14 +270,15 @@ void recibir_cpu() {
 	while (cliente_cpu != -1) {
 		if (recv(cliente_cpu, &cop, sizeof(op_code), 0) <= 0) {
 			pthread_mutex_lock(&mx_log);
-			log_error(logger,"DISCONNECT FAILURE EN CPU!");
+			//log_error(logger,"DISCONNECT FAILURE EN CPU!");
+			printf("DISCONNECT FAILURE EN CPU!\n");
 			pthread_mutex_unlock(&mx_log);
 			return;
 		}
 		switch (cop) {
 			case SOLICITUD_NRO_TABLA_2DO_NIVEL:
 			{
-				log_info(logger, "Entre a sol nro tabla 2");
+				log_info(logger, "[CPU] Entre a sol nro tabla 2");
 				uint16_t pid = 0;
 				uint32_t nro_tabla_1er_nivel = 0;
 				uint32_t entrada_tabla = 0;
@@ -292,9 +294,9 @@ void recibir_cpu() {
 //					break;
 //				}
 
-				log_info(logger, "Obteniendo el numero de tabla de 2do nivel (pid = %d | nro_tabla_1er_nivel = %d | entrada_tabla = %d)", pid, nro_tabla_1er_nivel, entrada_tabla);
+				log_info(logger, "[CPU] Obteniendo el numero de tabla de 2do nivel (pid = %d | nro_tabla_1er_nivel = %d | entrada_tabla = %d)", pid, nro_tabla_1er_nivel, entrada_tabla);
 				fila_1er_nivel nro_tabla_2do_nivel = obtener_nro_tabla_2do_nivel(nro_tabla_1er_nivel, entrada_tabla, pid);
-				log_info(logger, "Numero de tabla de 2do nivel = %d", nro_tabla_2do_nivel);
+				log_info(logger, "[CPU] Numero de tabla de 2do nivel = %d", nro_tabla_2do_nivel);
 
 				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &nro_tabla_2do_nivel, sizeof(fila_1er_nivel), 0);
@@ -303,7 +305,7 @@ void recibir_cpu() {
 			}
 			case SOLICITUD_NRO_MARCO:
 			{
-				log_info(logger, "Entre a sol nro marco");
+				log_info(logger, "[CPU] Entre a solicitud nro marco");
 				uint16_t pid = 0; // No se usa por ahora
 				uint32_t nro_tabla_2do_nivel = 0;
 				uint32_t entrada_tabla = 0;
@@ -321,9 +323,9 @@ void recibir_cpu() {
 //					break;
 //				}
 
-				log_info(logger, "Obteniendo numero de marco (nro_tabla_2do_nivel = %d | entrada_tabla = %d | index_tabla_1er_nivel = %d)", nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
+				log_info(logger, "[CPU] Obteniendo numero de marco (nro_tabla_2do_nivel = %d | entrada_tabla = %d | index_tabla_1er_nivel = %d)", nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
 				uint32_t nro_marco = obtener_nro_marco_memoria(nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
-				log_info(logger, "Numero de marco obtenido = %d", nro_marco);
+				log_info(logger, "[CPU] Numero de marco obtenido = %d", nro_marco);
 
 				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &nro_marco, sizeof(uint32_t), 0);
@@ -332,12 +334,12 @@ void recibir_cpu() {
 			}
 			case READ:
 			{
-				log_info(logger, "Entre a read");
+				log_info(logger, "[CPU] Entre a read");
 				uint32_t nro_marco;
-				uint16_t desplazamiento;
+				uint32_t desplazamiento;
 
 				recv(cliente_cpu, &nro_marco, sizeof(uint32_t),0);
-				recv(cliente_cpu, &desplazamiento, sizeof(uint16_t),0);
+				recv(cliente_cpu, &desplazamiento, sizeof(uint32_t),0);
 
 //				if (!recv_read(cliente_cpu, &nro_marco, &desplazamiento)) {
 //					pthread_mutex_lock(&mx_log);
@@ -346,9 +348,9 @@ void recibir_cpu() {
 //					break;
 //				}
 
-				log_info(logger, "Obteniendo dato (nro_marco = %d, desplazamiento = %d)", nro_marco, desplazamiento);
+				log_info(logger, "[CPU] Obteniendo dato (nro_marco = %d, desplazamiento = %d)", nro_marco, desplazamiento);
 				uint32_t dato = read_en_memoria(nro_marco, desplazamiento);
-				log_info(logger, "Dato leido '%d'", dato);
+				log_info(logger, "[CPU] Dato leido '%d'", dato);
 
 				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &dato, sizeof(uint32_t), 0);
@@ -357,14 +359,14 @@ void recibir_cpu() {
 			}
 			case WRITE:
 			{
-				log_info(logger, "Entre a write");
+				log_info(logger, "[CPU] Entre a write");
 				uint32_t nro_marco;
-				uint16_t desplazamiento;
+				uint32_t desplazamiento;
 				uint32_t dato;
 
-				send(cliente_cpu, &nro_marco, sizeof(uint32_t),0);
-				send(cliente_cpu, &desplazamiento, sizeof(uint16_t),0);
-				send(cliente_cpu, &dato, sizeof(uint16_t),0);
+				recv(cliente_cpu, &nro_marco, sizeof(uint32_t),0);
+				recv(cliente_cpu, &desplazamiento, sizeof(uint32_t),0);
+				recv(cliente_cpu, &dato, sizeof(uint32_t),0);
 
 //				if (!recv_write(cliente_cpu, &nro_marco, &desplazamiento, &dato)) {
 //					pthread_mutex_lock(&mx_log);
@@ -373,7 +375,7 @@ void recibir_cpu() {
 //					break;
 //				}
 
-				log_info(logger, "Escribiendo '%d' (nro_marco = %d, desplazamiento = %d)", dato, nro_marco, desplazamiento);
+				log_info(logger, "[CPU] Escribiendo '%d' (nro_marco = %d, desplazamiento = %d)", dato, nro_marco, desplazamiento);
 				write_en_memoria(nro_marco, desplazamiento, dato);
 
 				op_code resultado = ESCRITURA_OK;
@@ -396,7 +398,7 @@ fila_1er_nivel obtener_nro_tabla_2do_nivel(int32_t nro_tabla, uint32_t index, ui
 		pid_actual = pid;
 	}
 	fila_1er_nivel* tabla = list_get(lista_tablas_1er_nivel,nro_tabla);
-	log_info(logger, "Tabla : %d - Index: %d - PID: %d - Resultado: %d", nro_tabla, index, pid, tabla[index]);
+	log_info(logger, "[CPU] Tabla : %d - Index: %d - PID: %d - Resultado: %d", nro_tabla, index, pid, tabla[index]);
 	return tabla[index];
 }
 
@@ -406,11 +408,11 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 	fila_2do_nivel* tabla_2do_nivel = list_get(lista_tablas_2do_nivel, nro_tabla);
 	fila_2do_nivel* pagina = &tabla_2do_nivel[index];
 	if (pagina->presencia == 1){
-		log_info(logger, "Presencia = 1");
+		log_info(logger, "[CPU] Presencia = 1");
 		pagina->uso = 1;
 		return pagina->nro_marco;
 	}
-	log_info(logger, "PAGE FAULT");
+	log_info(logger, "[CPU] PAGE FAULT");
 	// si no esta en memoria, traerlo (HAY PAGE FAULT)
 	FILE* swap = abrir_archivo_swap(pid_actual);
 	void* marco = leer_marco_en_swap(swap,pagina->nro_marco, tam_pagina);
@@ -422,7 +424,7 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 	}
 	else{
 		nro_marco = buscar_marco_libre();
-		log_info(logger, "El proceso tiene marcos disponibles, no hubo reemplazo");
+		log_info(logger, "[CPU] El proceso tiene marcos disponibles, no hubo reemplazo");
 		if (nro_marco == -1){
 			log_error(logger, "ERROR!!!!! NO HAY MARCOS LIBRES EN MEMORIA!!!");
 			exit(EXIT_FAILURE);
@@ -443,11 +445,11 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 // Vemos que algoritmo usar y lo usamos
 uint32_t usar_algoritmo(FILE* swap){
 	if (strcmp(algoritmo, "CLOCK-M") == 0){
-		log_info(logger, "Reemplazo por CLOCK-M");
+		log_info(logger, "[CPU] Reemplazo por CLOCK-M");
 		return clock_modificado(swap);
 	}
 	else if (strcmp(algoritmo, "CLOCK") == 0){
-		log_info(logger, "Reemplazo por CLOCK");
+		log_info(logger, "[CPU] Reemplazo por CLOCK");
 		return clock_simple(swap);
 	}
 	else{
@@ -472,7 +474,7 @@ uint32_t clock_simple(FILE* swap){
 
 		if (pagina->uso == 0){ //Encontró a la víctima
 			reemplazo_por_clock(nro_marco_en_swap, pagina, swap);
-			log_info(logger, "Posición final puntero: %d",puntero_clock);
+			log_info(logger, "[CPU] Posición final puntero: %d",puntero_clock);
 			estructura->puntero = puntero_clock; //Guardo el puntero actualizado.
 			return nro_marco;
 		}
@@ -503,7 +505,7 @@ uint32_t clock_modificado(FILE* swap){
 
 			if (pagina->uso == 0 && pagina->modificado == 0){
 				reemplazo_por_clock(nro_marco_en_swap, pagina, swap);
-				log_info(logger, "Posición final puntero: %d",puntero_clock);
+				log_info(logger, "[CPU] Posición final puntero: %d",puntero_clock);
 				estructura->puntero = puntero_clock; //Guardo el puntero actualizado.
 				return nro_marco;
 			}
@@ -544,7 +546,7 @@ uint32_t clock_modificado(FILE* swap){
 
 void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do_nivel, FILE* swap){
 	// logica de swappeo de marco
-	log_info(logger, "Pagina victima elegida: %d",nro_marco_en_swap);
+	log_info(logger, "[CPU] Pagina victima elegida: %d",nro_marco_en_swap);
 	// si tiene el bit de modificado en 1, hay que actualizar el archivo swap
 	if (entrada_2do_nivel->modificado == 1){
 		actualizar_marco_en_swap(swap, nro_marco_en_swap, obtener_marco(entrada_2do_nivel->nro_marco), tam_pagina);
@@ -555,24 +557,24 @@ void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do
 }
 
 // Dado un nro de marco y un desplazamiento, devuelve el dato en concreto
-uint32_t read_en_memoria(uint32_t nro_marco, uint16_t desplazamiento){
+uint32_t read_en_memoria(uint32_t nro_marco, uint32_t desplazamiento){
 	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
 	uint32_t dato;
 	memcpy(&dato, memoria + desplazamiento_final, sizeof(dato));
 	fila_2do_nivel* pagina_actual = obtener_pagina(pid_actual, nro_marco);
 	pagina_actual->uso = 1;
-	log_info(logger, "Dato '%d' leido en marco %d", dato, nro_marco);
+	log_info(logger, "[CPU] Dato '%d' leido en marco %d", dato, nro_marco);
 	return dato;
 }
 
 // Dado un nro de marco, un desplazamiento y un dato, escribe el dato en dicha posicion
-void write_en_memoria(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato) {
+void write_en_memoria(uint32_t nro_marco, uint32_t desplazamiento, uint32_t dato) {
 	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
 	memcpy(memoria + desplazamiento_final, &dato, sizeof(dato));
 	fila_2do_nivel* pagina_actual = obtener_pagina(pid_actual, nro_marco);
 	pagina_actual->uso = 1;
 	pagina_actual->modificado = 1;
-	log_info(logger, "Dato '%d' escrito en marco %d", dato, nro_marco);
+	log_info(logger, "[CPU] Dato '%d' escrito en marco %d", dato, nro_marco);
 }
 
 ////////////////////////// FUNCIONES GENERALES //////////////////////////
@@ -666,7 +668,7 @@ void crear_estructura_clock(uint16_t pid){
 	estructura->puntero = 0;
 	printf("creando elemento: pid = %d \n", estructura->pid);
 	list_add(lista_estructuras_clock, estructura);
-	log_info("Creada estructura clock del proceso: %d", pid);
+	log_info("[CPU] Creada estructura clock del proceso: %d", pid);
 }
 
 
