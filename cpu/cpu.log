@@ -1,0 +1,427 @@
+[INFO] 21:16:34:990 cpu/(3913:3913): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 21:16:34:991 cpu/(3913:3913): RECIBIDO: tam_pagina=128 - cant_ent_paginas=4
+[INFO] 21:16:34:991 cpu/(3913:3913): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 21:16:34:991 cpu/(3913:3913): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 21:16:34:991 cpu/(3913:3913): CPU_DISPATCH listo para recibir al cliente
+[INFO] 21:16:38:914 cpu/(3913:3913): Cliente conectado (a CPU_DISPATCH)
+[INFO] 21:16:38:914 cpu/(3913:3913): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 21:16:38:915 cpu/(3913:3913): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 21:16:38:915 cpu/(3913:3913): Valor alfa 0.50
+[INFO] 21:16:43:109 cpu/(3913:3913): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 21:16:43:109 cpu/(3913:3913): Ejecutando WRITE
+[INFO] 21:16:43:109 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:110 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:110 cpu/(3913:3913): Ciclo cpu: 291945
+[INFO] 21:16:43:110 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:110 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:110 cpu/(3913:3913): Ciclo cpu: 291948
+[INFO] 21:16:43:110 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:110 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:112 cpu/(3913:3913): Ciclo cpu: 291951
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Ciclo cpu: 291953
+[INFO] 21:16:43:113 cpu/(3913:3913): Ejecutando WRITE
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero pagina: 0
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Ciclo cpu: 292552
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Ciclo cpu: 291948
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Ciclo cpu: 291951
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Ciclo cpu: 291953
+[INFO] 21:16:43:113 cpu/(3913:3913): Ejecutando WRITE
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero pagina: 1
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Ciclo cpu: 292990
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Ciclo cpu: 291948
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Ciclo cpu: 291951
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:113 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Ciclo cpu: 291953
+[INFO] 21:16:43:114 cpu/(3913:3913): Ejecutando WRITE
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero pagina: 2
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Ciclo cpu: 293476
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Ciclo cpu: 291948
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Ciclo cpu: 291951
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Ciclo cpu: 291953
+[INFO] 21:16:43:114 cpu/(3913:3913): Ejecutando WRITE
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero pagina: 4
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Ciclo cpu: 293879
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Ciclo cpu: 291948
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Ciclo cpu: 291951
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:114 cpu/(3913:3913): Ciclo cpu: 291953
+[INFO] 21:16:43:114 cpu/(3913:3913): Ejecutando WRITE
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero pagina: 0
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:115 cpu/(3913:3913): Ciclo cpu: 294327
+[INFO] 21:16:43:115 cpu/(3913:3913): Ejecutando WRITE
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero pagina: 0
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:115 cpu/(3913:3913): Ciclo cpu: 294545
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:115 cpu/(3913:3913): Ciclo cpu: 291948
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:115 cpu/(3913:3913): Ciclo cpu: 291951
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:115 cpu/(3913:3913): Ciclo cpu: 291953
+[INFO] 21:16:43:115 cpu/(3913:3913): Ejecutando READ
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero pagina: 8
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:115 cpu/(3913:3913): Ciclo cpu: 294986
+[INFO] 21:16:43:115 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:116 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:116 cpu/(3913:3913): Ciclo cpu: 291948
+[INFO] 21:16:43:116 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:116 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:116 cpu/(3913:3913): Ciclo cpu: 291951
+[INFO] 21:16:43:116 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:43:116 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:43:116 cpu/(3913:3913): Ciclo cpu: 291953
+[INFO] 21:16:43:117 cpu/(3913:3913): Valor leido 8
+[INFO] 21:16:43:117 cpu/(3913:3913): Ejecutando IO
+[INFO] 21:16:43:117 cpu/(3913:3913): Rafaga real 7
+[INFO] 21:16:43:120 cpu/(3913:3913): Proceso 1 estimacion rafaga siguiente 10003.500000
+[INFO] 21:16:43:120 cpu/(3913:3913): Program counter 9 (despues de ejecutar)
+[INFO] 21:16:43:120 cpu/(3913:3913): ==============================================================
+[INFO] 21:16:46:123 cpu/(3913:3913): Proceso 1 -> program counter 9 - est 10003.500000
+[INFO] 21:16:46:123 cpu/(3913:3913): Ejecutando READ
+[INFO] 21:16:46:123 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:46:123 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:46:124 cpu/(3913:3913): Ciclo cpu: 296273
+[INFO] 21:16:46:124 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:46:124 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:46:124 cpu/(3913:3913): Ciclo cpu: 296276
+[INFO] 21:16:46:127 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:46:128 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:46:128 cpu/(3913:3913): Ciclo cpu: 296277
+[INFO] 21:16:46:128 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:46:128 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:46:128 cpu/(3913:3913): Ciclo cpu: 296279
+[INFO] 21:16:46:128 cpu/(3913:3913): Valor leido 8
+[INFO] 21:16:46:129 cpu/(3913:3913): Ejecutando READ
+[INFO] 21:16:46:131 cpu/(3913:3913): Numero pagina: 2
+[INFO] 21:16:46:131 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:46:131 cpu/(3913:3913): Ciclo cpu: 297063
+[INFO] 21:16:46:131 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:46:131 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:46:131 cpu/(3913:3913): Ciclo cpu: 296276
+[INFO] 21:16:46:131 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:46:131 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:46:132 cpu/(3913:3913): Ciclo cpu: 296277
+[INFO] 21:16:46:132 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:46:132 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:46:132 cpu/(3913:3913): Ciclo cpu: 296279
+[INFO] 21:16:46:132 cpu/(3913:3913): Valor leido 8
+[INFO] 21:16:46:132 cpu/(3913:3913): Ejecutando EXIT
+[INFO] 21:16:46:132 cpu/(3913:3913): Rafaga real 9
+[INFO] 21:16:46:133 cpu/(3913:3913): Proceso 1 estimacion rafaga siguiente 5006.250000
+[INFO] 21:16:46:135 cpu/(3913:3913): Program counter 12 (despues de ejecutar)
+[INFO] 21:16:46:135 cpu/(3913:3913): ==============================================================
+[INFO] 21:16:47:661 cpu/(3913:3913): Proceso 2 -> program counter 0 - est 20000.000000
+[INFO] 21:16:47:661 cpu/(3913:3913): Ejecutando WRITE
+[INFO] 21:16:47:661 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:47:661 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:47:661 cpu/(3913:3913): Ciclo cpu: 298919
+[INFO] 21:16:47:661 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:47:661 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:47:661 cpu/(3913:3913): Ciclo cpu: 298921
+[INFO] 21:16:47:661 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:47:661 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:47:661 cpu/(3913:3913): Ciclo cpu: 298923
+[INFO] 21:16:47:662 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:47:662 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:47:662 cpu/(3913:3913): Ciclo cpu: 298924
+[INFO] 21:16:47:662 cpu/(3913:3913): Ejecutando WRITE
+[INFO] 21:16:47:662 cpu/(3913:3913): Numero pagina: 4
+[INFO] 21:16:47:662 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:47:662 cpu/(3913:3913): Ciclo cpu: 299406
+[INFO] 21:16:47:662 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:47:662 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:47:662 cpu/(3913:3913): Ciclo cpu: 298921
+[INFO] 21:16:47:662 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:47:662 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:47:662 cpu/(3913:3913): Ciclo cpu: 298923
+[INFO] 21:16:47:662 cpu/(3913:3913): Numero pagina: -1
+[INFO] 21:16:47:662 cpu/(3913:3913): Numero marco: -1
+[INFO] 21:16:47:662 cpu/(3913:3913): Ciclo cpu: 298924
+[INFO] 21:16:47:662 cpu/(3913:3913): Ejecutando EXIT
+[INFO] 21:16:47:662 cpu/(3913:3913): Rafaga real 1
+[INFO] 21:16:47:662 cpu/(3913:3913): Proceso 2 estimacion rafaga siguiente 10000.500000
+[INFO] 21:16:47:662 cpu/(3913:3913): Program counter 3 (despues de ejecutar)
+[INFO] 21:16:47:662 cpu/(3913:3913): ==============================================================
+[INFO] 21:29:37:791 cpu/(4755:4755): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 21:29:37:791 cpu/(4755:4755): RECIBIDO: tam_pagina=128 - cant_ent_paginas=4
+[INFO] 21:29:37:791 cpu/(4755:4755): CPU_DISPATCH listo para recibir al cliente
+[INFO] 21:29:37:791 cpu/(4755:4755): Cliente conectado (a CPU_DISPATCH)
+[INFO] 21:29:37:791 cpu/(4755:4755): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 21:29:37:791 cpu/(4755:4755): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 21:29:37:791 cpu/(4755:4755): Valor alfa 0.00
+[INFO] 21:29:37:792 cpu/(4755:4755): Proceso 38832 -> program counter 0 - est -0.000000
+[INFO] 21:31:29:932 cpu/(4932:4932): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 21:31:29:932 cpu/(4932:4932): RECIBIDO: tam_pagina=128 - cant_ent_paginas=4
+[INFO] 21:31:29:932 cpu/(4932:4932): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 21:31:29:932 cpu/(4932:4932): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 21:31:29:933 cpu/(4932:4932): CPU_DISPATCH listo para recibir al cliente
+[INFO] 21:31:33:446 cpu/(4932:4932): Cliente conectado (a CPU_DISPATCH)
+[INFO] 21:31:33:446 cpu/(4932:4932): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 21:31:33:446 cpu/(4932:4932): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 21:31:33:446 cpu/(4932:4932): Valor alfa 0.50
+[INFO] 21:31:37:124 cpu/(4932:4932): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 21:31:37:124 cpu/(4932:4932): Ejecutando WRITE
+[INFO] 21:31:37:124 cpu/(4932:4932): Ejecutando WRITE para marco -1 y desplazamiento 0
+[INFO] 21:31:37:124 cpu/(4932:4932): Ejecutando WRITE
+[INFO] 21:31:37:124 cpu/(4932:4932): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 21:31:37:124 cpu/(4932:4932): Ejecutando WRITE
+[INFO] 21:31:37:124 cpu/(4932:4932): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 21:31:37:124 cpu/(4932:4932): Ejecutando WRITE
+[INFO] 21:31:37:124 cpu/(4932:4932): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 21:31:37:125 cpu/(4932:4932): Ejecutando WRITE
+[INFO] 21:31:37:125 cpu/(4932:4932): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 21:31:37:125 cpu/(4932:4932): Ejecutando WRITE
+[INFO] 21:31:37:125 cpu/(4932:4932): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 21:31:37:125 cpu/(4932:4932): Ejecutando WRITE
+[INFO] 21:31:37:125 cpu/(4932:4932): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 21:31:37:125 cpu/(4932:4932): Ejecutando READ
+[INFO] 21:31:37:125 cpu/(4932:4932): Ejecutando READ para marco -1 y desplazamiento 0
+[INFO] 21:31:37:125 cpu/(4932:4932): Dato leido = 8
+[INFO] 21:31:37:125 cpu/(4932:4932): Valor leido 8
+[INFO] 21:31:37:125 cpu/(4932:4932): Ejecutando IO
+[INFO] 21:31:37:125 cpu/(4932:4932): Rafaga real 0
+[INFO] 21:31:37:125 cpu/(4932:4932): Proceso 1 estimacion rafaga siguiente 10000.000000
+[INFO] 21:31:37:125 cpu/(4932:4932): Program counter 9 (despues de ejecutar)
+[INFO] 21:31:37:125 cpu/(4932:4932): ==============================================================
+[INFO] 21:31:40:127 cpu/(4932:4932): Proceso 1 -> program counter 9 - est 10000.000000
+[INFO] 21:31:40:127 cpu/(4932:4932): Ejecutando READ
+[INFO] 21:31:40:127 cpu/(4932:4932): Ejecutando READ para marco -1 y desplazamiento 4
+[INFO] 21:31:40:127 cpu/(4932:4932): Dato leido = 8
+[INFO] 21:31:40:128 cpu/(4932:4932): Valor leido 8
+[INFO] 21:31:40:128 cpu/(4932:4932): Ejecutando READ
+[INFO] 21:31:40:128 cpu/(4932:4932): Ejecutando READ para marco -1 y desplazamiento 8
+[INFO] 21:31:40:128 cpu/(4932:4932): Dato leido = 8
+[INFO] 21:31:40:128 cpu/(4932:4932): Valor leido 8
+[INFO] 21:31:40:128 cpu/(4932:4932): Ejecutando EXIT
+[INFO] 21:31:40:128 cpu/(4932:4932): Rafaga real 0
+[INFO] 21:31:40:128 cpu/(4932:4932): Proceso 1 estimacion rafaga siguiente 5000.000000
+[INFO] 21:31:40:128 cpu/(4932:4932): Program counter 12 (despues de ejecutar)
+[INFO] 21:31:40:128 cpu/(4932:4932): ==============================================================
+[INFO] 21:31:40:320 cpu/(4932:4932): Proceso 2 -> program counter 0 - est 20000.000000
+[INFO] 21:31:40:320 cpu/(4932:4932): Ejecutando WRITE
+[INFO] 21:31:40:320 cpu/(4932:4932): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 21:31:40:320 cpu/(4932:4932): Ejecutando WRITE
+[INFO] 21:31:40:320 cpu/(4932:4932): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 21:31:40:320 cpu/(4932:4932): Ejecutando EXIT
+[INFO] 21:31:40:320 cpu/(4932:4932): Rafaga real 0
+[INFO] 21:31:40:320 cpu/(4932:4932): Proceso 2 estimacion rafaga siguiente 10000.000000
+[INFO] 21:31:40:321 cpu/(4932:4932): Program counter 3 (despues de ejecutar)
+[INFO] 21:31:40:321 cpu/(4932:4932): ==============================================================
+[INFO] 21:34:29:103 cpu/(4932:4932): Proceso 15328 -> program counter 3 - est 10000.000000
+[INFO] 22:17:02:150 cpu/(7821:7821): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 22:17:02:151 cpu/(7821:7821): RECIBIDO: tam_pagina=128 - cant_ent_paginas=4
+[INFO] 22:17:02:151 cpu/(7821:7821): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 22:17:02:151 cpu/(7821:7821): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 22:17:02:151 cpu/(7821:7821): CPU_DISPATCH listo para recibir al cliente
+[INFO] 22:17:05:594 cpu/(7821:7821): Cliente conectado (a CPU_DISPATCH)
+[INFO] 22:17:05:594 cpu/(7821:7821): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 22:17:05:596 cpu/(7821:7821): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 22:17:05:596 cpu/(7821:7821): Valor alfa 0.50
+[INFO] 22:17:10:018 cpu/(7821:7821): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE para marco -1 y desplazamiento 0
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando READ
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando READ para marco -1 y desplazamiento 0
+[INFO] 22:17:10:019 cpu/(7821:7821): Dato leido = 8
+[INFO] 22:17:10:019 cpu/(7821:7821): Valor leido 8
+[INFO] 22:17:10:019 cpu/(7821:7821): Ejecutando IO
+[INFO] 22:17:10:020 cpu/(7821:7821): Rafaga real 0
+[INFO] 22:17:10:020 cpu/(7821:7821): Proceso 1 estimacion rafaga siguiente 10000.000000
+[INFO] 22:17:10:020 cpu/(7821:7821): Program counter 9 (despues de ejecutar)
+[INFO] 22:17:10:020 cpu/(7821:7821): ==============================================================
+[INFO] 22:17:13:022 cpu/(7821:7821): Proceso 1 -> program counter 9 - est 10000.000000
+[INFO] 22:17:13:023 cpu/(7821:7821): Ejecutando READ
+[INFO] 22:17:13:023 cpu/(7821:7821): Ejecutando READ para marco -1 y desplazamiento 4
+[INFO] 22:17:13:023 cpu/(7821:7821): Dato leido = 8
+[INFO] 22:17:13:023 cpu/(7821:7821): Valor leido 8
+[INFO] 22:17:13:023 cpu/(7821:7821): Ejecutando READ
+[INFO] 22:17:13:023 cpu/(7821:7821): Ejecutando READ para marco -1 y desplazamiento 8
+[INFO] 22:17:13:023 cpu/(7821:7821): Dato leido = 8
+[INFO] 22:17:13:023 cpu/(7821:7821): Valor leido 8
+[INFO] 22:17:13:023 cpu/(7821:7821): Ejecutando EXIT
+[INFO] 22:17:13:023 cpu/(7821:7821): Rafaga real 0
+[INFO] 22:17:13:026 cpu/(7821:7821): Proceso 1 estimacion rafaga siguiente 5000.000000
+[INFO] 22:17:13:026 cpu/(7821:7821): Program counter 12 (despues de ejecutar)
+[INFO] 22:17:13:027 cpu/(7821:7821): ==============================================================
+[INFO] 22:17:13:316 cpu/(7821:7821): Proceso 2 -> program counter 0 - est 20000.000000
+[INFO] 22:17:13:316 cpu/(7821:7821): Ejecutando WRITE
+[INFO] 22:17:13:316 cpu/(7821:7821): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 22:17:13:316 cpu/(7821:7821): Ejecutando WRITE
+[INFO] 22:17:13:317 cpu/(7821:7821): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:17:13:317 cpu/(7821:7821): Ejecutando EXIT
+[INFO] 22:17:13:317 cpu/(7821:7821): Rafaga real 0
+[INFO] 22:17:13:317 cpu/(7821:7821): Proceso 2 estimacion rafaga siguiente 10000.000000
+[INFO] 22:17:13:317 cpu/(7821:7821): Program counter 3 (despues de ejecutar)
+[INFO] 22:17:13:317 cpu/(7821:7821): ==============================================================
+[INFO] 22:24:09:386 cpu/(8352:8352): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 22:24:09:387 cpu/(8352:8352): RECIBIDO: tam_pagina=128 - cant_ent_paginas=4
+[INFO] 22:24:09:387 cpu/(8352:8352): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 22:24:09:387 cpu/(8352:8352): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 22:24:09:390 cpu/(8352:8352): CPU_DISPATCH listo para recibir al cliente
+[INFO] 22:24:12:737 cpu/(8352:8352): Cliente conectado (a CPU_DISPATCH)
+[INFO] 22:24:12:737 cpu/(8352:8352): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 22:24:12:737 cpu/(8352:8352): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 22:24:12:737 cpu/(8352:8352): Valor alfa 0.50
+[INFO] 22:24:17:249 cpu/(8352:8352): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE para marco -1 y desplazamiento 0
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando READ
+[INFO] 22:24:17:250 cpu/(8352:8352): Ejecutando READ para marco -1 y desplazamiento 0
+[INFO] 22:24:17:251 cpu/(8352:8352): Dato leido = 8
+[INFO] 22:24:17:251 cpu/(8352:8352): Valor leido 8
+[INFO] 22:24:17:251 cpu/(8352:8352): Ejecutando IO
+[INFO] 22:24:17:251 cpu/(8352:8352): Rafaga real 0
+[INFO] 22:24:17:251 cpu/(8352:8352): Proceso 1 estimacion rafaga siguiente 10000.000000
+[INFO] 22:24:17:251 cpu/(8352:8352): Program counter 9 (despues de ejecutar)
+[INFO] 22:24:17:251 cpu/(8352:8352): ==============================================================
+[INFO] 22:24:20:256 cpu/(8352:8352): Proceso 1 -> program counter 9 - est 10000.000000
+[INFO] 22:24:20:256 cpu/(8352:8352): Ejecutando READ
+[INFO] 22:24:20:256 cpu/(8352:8352): Ejecutando READ para marco -1 y desplazamiento 4
+[INFO] 22:24:20:256 cpu/(8352:8352): Dato leido = 8
+[INFO] 22:24:20:256 cpu/(8352:8352): Valor leido 8
+[INFO] 22:24:20:256 cpu/(8352:8352): Ejecutando READ
+[INFO] 22:24:20:256 cpu/(8352:8352): Ejecutando READ para marco -1 y desplazamiento 8
+[INFO] 22:24:20:256 cpu/(8352:8352): Dato leido = 8
+[INFO] 22:24:20:256 cpu/(8352:8352): Valor leido 8
+[INFO] 22:24:20:256 cpu/(8352:8352): Ejecutando EXIT
+[INFO] 22:24:20:257 cpu/(8352:8352): Rafaga real 0
+[INFO] 22:24:20:257 cpu/(8352:8352): Proceso 1 estimacion rafaga siguiente 5000.000000
+[INFO] 22:24:20:257 cpu/(8352:8352): Program counter 12 (despues de ejecutar)
+[INFO] 22:24:20:257 cpu/(8352:8352): ==============================================================
+[INFO] 22:24:21:677 cpu/(8352:8352): Proceso 2 -> program counter 0 - est 20000.000000
+[INFO] 22:24:21:677 cpu/(8352:8352): Ejecutando WRITE
+[INFO] 22:24:21:677 cpu/(8352:8352): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 22:24:21:677 cpu/(8352:8352): Ejecutando WRITE
+[INFO] 22:24:21:677 cpu/(8352:8352): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:24:21:677 cpu/(8352:8352): Ejecutando EXIT
+[INFO] 22:24:21:677 cpu/(8352:8352): Rafaga real 0
+[INFO] 22:24:21:677 cpu/(8352:8352): Proceso 2 estimacion rafaga siguiente 10000.000000
+[INFO] 22:24:21:677 cpu/(8352:8352): Program counter 3 (despues de ejecutar)
+[INFO] 22:24:21:677 cpu/(8352:8352): ==============================================================
+[INFO] 22:30:05:272 cpu/(8352:8352): Proceso 15328 -> program counter 3 - est 10000.000000
+[INFO] 22:31:37:449 cpu/(8888:8888): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 22:31:37:450 cpu/(8888:8888): RECIBIDO: tam_pagina=128 - cant_ent_paginas=4
+[INFO] 22:31:37:450 cpu/(8888:8888): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 22:31:37:450 cpu/(8888:8888): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 22:31:37:450 cpu/(8888:8888): CPU_DISPATCH listo para recibir al cliente
+[INFO] 22:31:40:958 cpu/(8888:8888): Cliente conectado (a CPU_DISPATCH)
+[INFO] 22:31:40:958 cpu/(8888:8888): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 22:31:40:958 cpu/(8888:8888): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 22:31:40:959 cpu/(8888:8888): Valor alfa 0.50
+[INFO] 22:31:45:496 cpu/(8888:8888): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 22:31:45:496 cpu/(8888:8888): Ejecutando WRITE
+[INFO] 22:31:45:496 cpu/(8888:8888): La pagina 0 no esta en TLB
+[INFO] 22:31:45:496 cpu/(8888:8888): Ejecutando WRITE para marco -1 y desplazamiento 0
+[INFO] 22:31:45:496 cpu/(8888:8888): Ejecutando WRITE
+[INFO] 22:31:45:496 cpu/(8888:8888): La pagina 1 no esta en TLB
+[INFO] 22:31:45:496 cpu/(8888:8888): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:31:45:496 cpu/(8888:8888): Ejecutando WRITE
+[INFO] 22:31:45:496 cpu/(8888:8888): La pagina 2 no esta en TLB
+[INFO] 22:31:45:496 cpu/(8888:8888): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:31:45:496 cpu/(8888:8888): Ejecutando WRITE
+[INFO] 22:31:45:496 cpu/(8888:8888): La pagina 4 no esta en TLB
+[INFO] 22:31:45:496 cpu/(8888:8888): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 22:31:45:496 cpu/(8888:8888): Ejecutando WRITE
+[INFO] 22:31:45:496 cpu/(8888:8888): La pagina 0 no esta en TLB
+[INFO] 22:31:45:497 cpu/(8888:8888): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:31:45:497 cpu/(8888:8888): Ejecutando WRITE
+[INFO] 22:31:45:497 cpu/(8888:8888): La pagina 0 no esta en TLB
+[INFO] 22:31:45:497 cpu/(8888:8888): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 22:31:45:497 cpu/(8888:8888): Ejecutando WRITE
+[INFO] 22:31:45:497 cpu/(8888:8888): La pagina 8 no esta en TLB
+[INFO] 22:31:45:497 cpu/(8888:8888): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:31:45:497 cpu/(8888:8888): Ejecutando READ
+[INFO] 22:31:45:497 cpu/(8888:8888): La pagina 0 no esta en TLB
+[INFO] 22:31:45:497 cpu/(8888:8888): Ejecutando READ para marco -1 y desplazamiento 0
+[INFO] 22:31:45:497 cpu/(8888:8888): Dato leido = 8
+[INFO] 22:31:45:497 cpu/(8888:8888): Valor leido 8
+[INFO] 22:31:45:497 cpu/(8888:8888): Ejecutando IO
+[INFO] 22:31:45:497 cpu/(8888:8888): Rafaga real 1
+[INFO] 22:31:45:497 cpu/(8888:8888): Proceso 1 estimacion rafaga siguiente 10000.500000
+[INFO] 22:31:45:497 cpu/(8888:8888): Program counter 9 (despues de ejecutar)
+[INFO] 22:31:45:497 cpu/(8888:8888): ==============================================================
+[INFO] 22:31:48:008 cpu/(8888:8888): Proceso 2 -> program counter 0 - est 20000.000000
+[INFO] 22:31:48:009 cpu/(8888:8888): Ejecutando WRITE
+[INFO] 22:31:48:009 cpu/(8888:8888): La pagina 4 no esta en TLB
+[INFO] 22:31:48:009 cpu/(8888:8888): Ejecutando WRITE para marco -1 y desplazamiento 8
+[INFO] 22:31:48:009 cpu/(8888:8888): Ejecutando WRITE
+[INFO] 22:31:48:009 cpu/(8888:8888): La pagina 2 no esta en TLB
+[INFO] 22:31:48:009 cpu/(8888:8888): Ejecutando WRITE para marco -1 y desplazamiento 4
+[INFO] 22:31:48:009 cpu/(8888:8888): Ejecutando EXIT
+[INFO] 22:31:48:009 cpu/(8888:8888): Rafaga real 0
+[INFO] 22:31:48:009 cpu/(8888:8888): Proceso 2 estimacion rafaga siguiente 10000.000000
+[INFO] 22:31:48:009 cpu/(8888:8888): Program counter 3 (despues de ejecutar)
+[INFO] 22:31:48:009 cpu/(8888:8888): ==============================================================
+[INFO] 22:31:48:498 cpu/(8888:8888): Proceso 1 -> program counter 9 - est 10000.500000
+[INFO] 22:31:48:498 cpu/(8888:8888): Ejecutando READ
+[INFO] 22:31:48:499 cpu/(8888:8888): La pagina 2 no esta en TLB
+[INFO] 22:31:48:499 cpu/(8888:8888): Ejecutando READ para marco -1 y desplazamiento 4
+[INFO] 22:31:48:499 cpu/(8888:8888): Dato leido = 8
+[INFO] 22:31:48:499 cpu/(8888:8888): Valor leido 8
+[INFO] 22:31:48:499 cpu/(8888:8888): Ejecutando READ
+[INFO] 22:31:48:499 cpu/(8888:8888): La pagina 4 no esta en TLB
+[INFO] 22:31:48:500 cpu/(8888:8888): Ejecutando READ para marco -1 y desplazamiento 8
+[INFO] 22:31:48:500 cpu/(8888:8888): Dato leido = 8
+[INFO] 22:31:48:500 cpu/(8888:8888): Valor leido 8
+[INFO] 22:31:48:501 cpu/(8888:8888): Ejecutando EXIT
+[INFO] 22:31:48:501 cpu/(8888:8888): Rafaga real 2
+[INFO] 22:31:48:501 cpu/(8888:8888): Proceso 1 estimacion rafaga siguiente 5001.250000
+[INFO] 22:31:48:501 cpu/(8888:8888): Program counter 12 (despues de ejecutar)
+[INFO] 22:31:48:501 cpu/(8888:8888): ==============================================================

@@ -96,7 +96,7 @@ void recibir_kernel() {
 	while (cliente_kernel != -1) {
 		if (recv(cliente_kernel, &cop, sizeof(op_code), 0) <= 0) {
 			pthread_mutex_lock(&mx_log);
-			log_error(logger,"DISCONNECT FAILURE!");
+			log_error(logger,"DISCONNECT FAILURE EN KERNEL!");
 			pthread_mutex_unlock(&mx_log);
 			return;
 		}
@@ -269,7 +269,7 @@ void recibir_cpu() {
 	while (cliente_cpu != -1) {
 		if (recv(cliente_cpu, &cop, sizeof(op_code), 0) <= 0) {
 			pthread_mutex_lock(&mx_log);
-			log_error(logger,"DISCONNECT FAILURE!");
+			log_error(logger,"DISCONNECT FAILURE EN CPU!");
 			pthread_mutex_unlock(&mx_log);
 			return;
 		}
@@ -281,12 +281,16 @@ void recibir_cpu() {
 				uint32_t nro_tabla_1er_nivel = 0;
 				uint32_t entrada_tabla = 0;
 
-				if (!recv_solicitud_nro_tabla_2do_nivel(cliente_cpu, &pid, &nro_tabla_1er_nivel, &entrada_tabla)) {
-					pthread_mutex_lock(&mx_log);
-					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
-					pthread_mutex_unlock(&mx_log);
-					break;
-				}
+				recv(cliente_cpu, &pid, sizeof(uint16_t),0);
+				recv(cliente_cpu, &nro_tabla_1er_nivel, sizeof(uint32_t),0);
+				recv(cliente_cpu, &entrada_tabla, sizeof(uint32_t),0);
+
+//				if (!recv_solicitud_nro_tabla_2do_nivel(cliente_cpu, &pid, &nro_tabla_1er_nivel, &entrada_tabla)) {
+//					pthread_mutex_lock(&mx_log);
+//					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
+//					pthread_mutex_unlock(&mx_log);
+//					break;
+//				}
 
 				log_info(logger, "Obteniendo el numero de tabla de 2do nivel (pid = %d | nro_tabla_1er_nivel = %d | entrada_tabla = %d)", pid, nro_tabla_1er_nivel, entrada_tabla);
 				fila_1er_nivel nro_tabla_2do_nivel = obtener_nro_tabla_2do_nivel(nro_tabla_1er_nivel, entrada_tabla, pid);
@@ -305,12 +309,17 @@ void recibir_cpu() {
 				uint32_t entrada_tabla = 0;
 				uint32_t index_tabla_1er_nivel = 0; //Lo necesito para guardar el numero de pagina
 
-				if (!recv_solicitud_nro_marco(cliente_cpu, &pid, &nro_tabla_2do_nivel, &entrada_tabla, &index_tabla_1er_nivel)) {
-					pthread_mutex_lock(&mx_log);
-					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
-					pthread_mutex_unlock(&mx_log);
-					break;
-				}
+				recv(cliente_cpu, &pid_actual, sizeof(uint16_t),0);
+				recv(cliente_cpu, &nro_tabla_2do_nivel, sizeof(int32_t),0);
+				recv(cliente_cpu, &entrada_tabla, sizeof(uint32_t),0);
+				recv(cliente_cpu, &index_tabla_1er_nivel, sizeof(uint32_t),0);
+
+//				if (!recv_solicitud_nro_marco(cliente_cpu, &pid, &nro_tabla_2do_nivel, &entrada_tabla, &index_tabla_1er_nivel)) {
+//					pthread_mutex_lock(&mx_log);
+//					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
+//					pthread_mutex_unlock(&mx_log);
+//					break;
+//				}
 
 				log_info(logger, "Obteniendo numero de marco (nro_tabla_2do_nivel = %d | entrada_tabla = %d | index_tabla_1er_nivel = %d)", nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
 				uint32_t nro_marco = obtener_nro_marco_memoria(nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
@@ -327,12 +336,15 @@ void recibir_cpu() {
 				uint32_t nro_marco;
 				uint16_t desplazamiento;
 
-				if (!recv_read(cliente_cpu, &nro_marco, &desplazamiento)) {
-					pthread_mutex_lock(&mx_log);
-					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
-					pthread_mutex_unlock(&mx_log);
-					break;
-				}
+				recv(cliente_cpu, &nro_marco, sizeof(uint32_t),0);
+				recv(cliente_cpu, &desplazamiento, sizeof(uint16_t),0);
+
+//				if (!recv_read(cliente_cpu, &nro_marco, &desplazamiento)) {
+//					pthread_mutex_lock(&mx_log);
+//					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
+//					pthread_mutex_unlock(&mx_log);
+//					break;
+//				}
 
 				log_info(logger, "Obteniendo dato (nro_marco = %d, desplazamiento = %d)", nro_marco, desplazamiento);
 				uint32_t dato = read_en_memoria(nro_marco, desplazamiento);
@@ -350,12 +362,16 @@ void recibir_cpu() {
 				uint16_t desplazamiento;
 				uint32_t dato;
 
-				if (!recv_write(cliente_cpu, &nro_marco, &desplazamiento, &dato)) {
-					pthread_mutex_lock(&mx_log);
-					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
-					pthread_mutex_unlock(&mx_log);
-					break;
-				}
+				send(cliente_cpu, &nro_marco, sizeof(uint32_t),0);
+				send(cliente_cpu, &desplazamiento, sizeof(uint16_t),0);
+				send(cliente_cpu, &dato, sizeof(uint16_t),0);
+
+//				if (!recv_write(cliente_cpu, &nro_marco, &desplazamiento, &dato)) {
+//					pthread_mutex_lock(&mx_log);
+//					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
+//					pthread_mutex_unlock(&mx_log);
+//					break;
+//				}
 
 				log_info(logger, "Escribiendo '%d' (nro_marco = %d, desplazamiento = %d)", dato, nro_marco, desplazamiento);
 				write_en_memoria(nro_marco, desplazamiento, dato);
@@ -380,6 +396,7 @@ fila_1er_nivel obtener_nro_tabla_2do_nivel(int32_t nro_tabla, uint32_t index, ui
 		pid_actual = pid;
 	}
 	fila_1er_nivel* tabla = list_get(lista_tablas_1er_nivel,nro_tabla);
+	log_info(logger, "Tabla : %d - Index: %d - PID: %d - Resultado: %d", nro_tabla, index, pid, tabla[index]);
 	return tabla[index];
 }
 
@@ -389,23 +406,25 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 	fila_2do_nivel* tabla_2do_nivel = list_get(lista_tablas_2do_nivel, nro_tabla);
 	fila_2do_nivel* pagina = &tabla_2do_nivel[index];
 	if (pagina->presencia == 1){
+		log_info(logger, "Presencia = 1");
 		pagina->uso = 1;
 		return pagina->nro_marco;
 	}
+	log_info(logger, "PAGE FAULT");
 	// si no esta en memoria, traerlo (HAY PAGE FAULT)
 	FILE* swap = abrir_archivo_swap(pid_actual);
 	void* marco = leer_marco_en_swap(swap,pagina->nro_marco, tam_pagina);
 	int32_t nro_marco;
 	// si ya ocupa todos los marcos que puede ocupar, hacer un reemplazo (EJECUTAR ALGORITMO)
 	if (marcos_en_memoria() == marcos_por_proceso){
-		printf("Reemplazo\n");
 		//Devuelve el marco donde estaba la víctima, que es donde voy a colocar la nueva página
 		nro_marco = usar_algoritmo(swap);
 	}
 	else{
 		nro_marco = buscar_marco_libre();
+		log_info(logger, "El proceso tiene marcos disponibles, no hubo reemplazo");
 		if (nro_marco == -1){
-			printf("ERROR!!!!! NO HAY MARCOS LIBRES EN MEMORIA!!!\n");
+			log_error(logger, "ERROR!!!!! NO HAY MARCOS LIBRES EN MEMORIA!!!");
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -423,10 +442,14 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 
 // Vemos que algoritmo usar y lo usamos
 uint32_t usar_algoritmo(FILE* swap){
-	if (strcmp(algoritmo, "CLOCK-M") == 0)
+	if (strcmp(algoritmo, "CLOCK-M") == 0){
+		log_info(logger, "Reemplazo por CLOCK-M");
 		return clock_modificado(swap);
-	else if (strcmp(algoritmo, "CLOCK") == 0)
+	}
+	else if (strcmp(algoritmo, "CLOCK") == 0){
+		log_info(logger, "Reemplazo por CLOCK");
 		return clock_simple(swap);
+	}
 	else{
 		exit(-1);
 	}
@@ -449,6 +472,7 @@ uint32_t clock_simple(FILE* swap){
 
 		if (pagina->uso == 0){ //Encontró a la víctima
 			reemplazo_por_clock(nro_marco_en_swap, pagina, swap);
+			log_info(logger, "Posición final puntero: %d",puntero_clock);
 			estructura->puntero = puntero_clock; //Guardo el puntero actualizado.
 			return nro_marco;
 		}
@@ -479,6 +503,7 @@ uint32_t clock_modificado(FILE* swap){
 
 			if (pagina->uso == 0 && pagina->modificado == 0){
 				reemplazo_por_clock(nro_marco_en_swap, pagina, swap);
+				log_info(logger, "Posición final puntero: %d",puntero_clock);
 				estructura->puntero = puntero_clock; //Guardo el puntero actualizado.
 				return nro_marco;
 			}
@@ -519,7 +544,7 @@ uint32_t clock_modificado(FILE* swap){
 
 void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do_nivel, FILE* swap){
 	// logica de swappeo de marco
-	printf("Elegido %d!\n",nro_marco_en_swap);
+	log_info(logger, "Pagina victima elegida: %d",nro_marco_en_swap);
 	// si tiene el bit de modificado en 1, hay que actualizar el archivo swap
 	if (entrada_2do_nivel->modificado == 1){
 		actualizar_marco_en_swap(swap, nro_marco_en_swap, obtener_marco(entrada_2do_nivel->nro_marco), tam_pagina);
@@ -536,6 +561,7 @@ uint32_t read_en_memoria(uint32_t nro_marco, uint16_t desplazamiento){
 	memcpy(&dato, memoria + desplazamiento_final, sizeof(dato));
 	fila_2do_nivel* pagina_actual = obtener_pagina(pid_actual, nro_marco);
 	pagina_actual->uso = 1;
+	log_info(logger, "Dato '%d' leido en marco %d", dato, nro_marco);
 	return dato;
 }
 
@@ -546,6 +572,7 @@ void write_en_memoria(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato
 	fila_2do_nivel* pagina_actual = obtener_pagina(pid_actual, nro_marco);
 	pagina_actual->uso = 1;
 	pagina_actual->modificado = 1;
+	log_info(logger, "Dato '%d' escrito en marco %d", dato, nro_marco);
 }
 
 ////////////////////////// FUNCIONES GENERALES //////////////////////////

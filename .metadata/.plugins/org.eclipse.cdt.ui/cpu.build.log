@@ -1,6 +1,74 @@
-21:03:01 **** Incremental Build of configuration Debug for project cpu ****
+22:31:34 **** Incremental Build of configuration Debug for project cpu ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/cpu_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cpu_main.d" -MT"src/cpu_main.o" -o "src/cpu_main.o" "../src/cpu_main.c"
+../src/cpu_main.c: In function ‘iniciar_ciclo_instruccion’:
+../src/cpu_main.c:156:34: warning: implicit declaration of function ‘fetch_operands’ [-Wimplicit-function-declaration]
+    instruccion_ejecutar->arg2  = fetch_operands(instruccion_ejecutar->arg2,pcb->tabla_paginas);
+                                  ^
+../src/cpu_main.c: In function ‘traducir_direccion’:
+../src/cpu_main.c:233:14: warning: implicit declaration of function ‘presente_en_tlb’ [-Wimplicit-function-declaration]
+  nro_marco = presente_en_tlb(numero_pagina);
+              ^
+../src/cpu_main.c: In function ‘reemplazo_tlb_LRU’:
+../src/cpu_main.c:314:16: warning: passing argument 2 of ‘list_sort’ from incompatible pointer type [-Wincompatible-pointer-types]
+  list_sort(tlb,*menor); //Preguntar como se supone que funciona esto
+                ^
+In file included from /home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:7:0,
+                 from ../src/cpu_main.h:15,
+                 from ../src/cpu_main.c:1:
+/usr/include/commons/collections/list.h:234:7: note: expected ‘_Bool (*)(void *, void *)’ but argument is of type ‘_Bool (*)(TLB_t *, TLB_t *) {aka _Bool (*)(struct <anonymous> *, struct <anonymous> *)}’
+  void list_sort(t_list *, bool (*comparator)(void *, void *));
+       ^
+In file included from ../src/cpu_main.h:15:0,
+                 from ../src/cpu_main.c:1:
+../src/cpu_main.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:39:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:43:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:45:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:49:14: warning: ‘serializar_datos_necesarios’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t tam_pagina);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:54:14: warning: ‘serializar_crear_tabla’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_crear_tabla(uint16_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:59:14: warning: ‘serializar_suspender_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:64:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:69:14: warning: ‘serializar_solicitud_nro_tabla_2do_nivel’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_tabla_2do_nivel(uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla);
+              ^
+In file included from ../src/cpu_main.h:15:0,
+                 from ../src/cpu_main.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:75:14: warning: ‘serializar_solicitud_nro_marco’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:80:14: warning: ‘serializar_read’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_read(uint32_t nro_marco, uint16_t desplazamiento);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:85:14: warning: ‘serializar_write’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_write(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+              ^
+Finished building: ../src/cpu_main.c
+ 
+Building target: cpu
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "cpu"  ./src/cpu_main.o   -lcommons -lshared -lpthread -lm
+Finished building target: cpu
+ 
 
-21:03:02 Build Finished (took 655ms)
+22:31:36 Build Finished (took 1s.587ms)
 

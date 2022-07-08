@@ -193,9 +193,16 @@ int ejecutarRead(uint32_t dir_logica,uint32_t tabla_paginas){
 	uint32_t valor = 8;
 	dir_fisica = traducir_direccion(dir_logica,tabla_paginas);
 
-	send_read(conexion_memoria, dir_fisica.marco, dir_fisica.desplazamiento);
-	recv(conexion_memoria, &valor, sizeof(uint32_t), 0);
+	log_info(logger, "Ejecutando READ para marco %d y desplazamiento %d", dir_fisica.marco, dir_fisica.desplazamiento);
+//	send_read(conexion_memoria, dir_fisica.marco, dir_fisica.desplazamiento);
 
+	op_code cop = READ;
+	send(conexion_memoria, &cop, sizeof(op_code),0);
+	send(conexion_memoria, &dir_fisica.marco, sizeof(uint32_t),0);
+	send(conexion_memoria, &dir_fisica.desplazamiento, sizeof(uint16_t),0);
+
+	recv(conexion_memoria, &valor, sizeof(uint32_t), 0);
+	log_info(logger, "Dato leido = %d", valor);
 	return valor;
 }
 
@@ -206,7 +213,14 @@ void ejecutarWrite(uint32_t dir_logica,uint32_t valor,uint32_t tabla_paginas ){
 	op_code resultado;
 	dir_fisica = traducir_direccion(dir_logica, tabla_paginas);
 
-	send_write(conexion_memoria,dir_fisica.marco,dir_fisica.desplazamiento,valor);
+	op_code cop = WRITE;
+	send(conexion_memoria, &cop, sizeof(op_code),0);
+	send(conexion_memoria, &dir_fisica.marco, sizeof(uint32_t),0);
+	send(conexion_memoria, &dir_fisica.desplazamiento, sizeof(uint16_t),0);
+	send(conexion_memoria, &valor, sizeof(uint16_t),0);
+
+	log_info(logger, "Ejecutando WRITE para marco %d y desplazamiento %d", dir_fisica.marco, dir_fisica.desplazamiento);
+//	send_write(conexion_memoria,dir_fisica.marco,dir_fisica.desplazamiento,valor);
 	recv(conexion_memoria, &resultado, sizeof(op_code), 0);
 	//recv_verificacion
 }
@@ -219,15 +233,28 @@ marco_t  traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas_1){
 	nro_marco = presente_en_tlb(numero_pagina);
 
 	if(nro_marco==-1){
+		log_info(logger, "La pagina %d no esta en TLB", numero_pagina);
 		uint32_t entrada_tabla_1 = floor((double)numero_pagina/(double)cant_ent_paginas);
 		uint32_t entrada_tabla_2 = numero_pagina % cant_ent_paginas;
 		int32_t nro_tabla_2do_nivel;
 
 
-		send_solicitud_nro_tabla_2do_nivel(conexion_memoria, pid_actual, tabla_paginas_1,  entrada_tabla_1);
+//		send_solicitud_nro_tabla_2do_nivel(conexion_memoria, pid_actual, tabla_paginas_1,  entrada_tabla_1);
+		op_code cop = SOLICITUD_NRO_TABLA_2DO_NIVEL;
+		send(conexion_memoria, &cop, sizeof(op_code),0);
+		send(conexion_memoria, &pid_actual, sizeof(uint16_t),0);
+		send(conexion_memoria, &tabla_paginas_1, sizeof(uint32_t),0);
+		send(conexion_memoria, &entrada_tabla_1, sizeof(uint32_t),0);
 		recv(conexion_memoria, &nro_tabla_2do_nivel, sizeof(int32_t), 0);
 
-		send_solicitud_nro_marco(conexion_memoria, pid_actual, nro_tabla_2do_nivel,  entrada_tabla_2,entrada_tabla_1);
+//		send_solicitud_nro_marco(conexion_memoria, pid_actual, nro_tabla_2do_nivel,  entrada_tabla_2,entrada_tabla_1);
+		cop = SOLICITUD_NRO_MARCO;
+		send(conexion_memoria, &cop, sizeof(op_code),0);
+		send(conexion_memoria, &pid_actual, sizeof(uint16_t),0);
+		send(conexion_memoria, &nro_tabla_2do_nivel, sizeof(int32_t),0);
+		send(conexion_memoria, &entrada_tabla_2, sizeof(uint32_t),0);
+		send(conexion_memoria, &entrada_tabla_1, sizeof(uint32_t),0);
+
 		recv(conexion_memoria, &nro_marco, sizeof(uint32_t), 0);
 
 		if(!marco_en_tlb(nro_marco,numero_pagina)){
@@ -256,9 +283,9 @@ int32_t presente_en_tlb(uint32_t numero_pagina){
 
 	for(int i=0;i< entradas_tlb;i++){
 		TLB_t *tlb_aux = tlb_aux=list_get(tlb,i);
-		log_info(logger,"Numero pagina: %d",tlb_aux->pagina);
-		log_info(logger,"Numero marco: %d", tlb_aux->marco);
-		log_info(logger,"Ciclo cpu: %d",(int)tlb_aux->ultima_referencia);
+//		log_info(logger,"Numero pagina: %d",tlb_aux->pagina);
+//		log_info(logger,"Numero marco: %d", tlb_aux->marco);
+//		log_info(logger,"Ciclo cpu: %d",(int)tlb_aux->ultima_referencia);
 		if(tlb_aux->pagina==numero_pagina){
 			tlb_aux->ultima_referencia = clock();
 			return tlb_aux->marco;

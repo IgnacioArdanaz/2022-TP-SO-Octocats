@@ -37,7 +37,6 @@ void borrar_archivo_swap(uint16_t pid){
 
 // agregar marco en archivo, devuelve el nro de marco que representa en swap
 uint32_t agregar_marco_en_swap(FILE* archivo, uint32_t tamanio_marcos){
-	printf("Agregando marco en swap \n");
 	fseek(archivo, 0, SEEK_END);
 	void* marco = malloc(tamanio_marcos);
 	fwrite(marco, 1, tamanio_marcos, archivo);
@@ -57,6 +56,7 @@ void* leer_marco_en_swap(FILE* archivo, uint32_t nro_marco, uint32_t tamanio_mar
 	void* marco = malloc(tamanio_marcos);
 	fseek(archivo, nro_marco * tamanio_marcos, SEEK_SET);
 	fread(marco, 1, tamanio_marcos, archivo);
+	log_info(logger, "Trayendo marco %d de swap", nro_marco);
 	usleep(retardo_swap * 1000);
 	return marco;
 }
