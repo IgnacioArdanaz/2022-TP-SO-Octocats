@@ -31,23 +31,16 @@ void testeando_boludeces(){
 
 void testeando_tablas(){
 
-	for (int i = 0; i < 16; i++){
-		int n1 = crear_tablas(i,1024);
-		printf("TABLA DE 1ER NIVEL: %d\n",n1);
-		int rta1 = obtener_nro_tabla_2do_nivel(n1, 0, i);
-		int rta2 = obtener_nro_marco_memoria(rta1, 0, 0);
-		int rta3 = read_en_memoria(rta2, 0);
-		printf("%d\n",rta3);
-	}
-
-	int rta1 = obtener_nro_tabla_2do_nivel(0, 1, 0);
+	int n1 = crear_tablas(1,1024);
+	int rta1 = obtener_nro_tabla_2do_nivel(n1, 1, 1);
 	int rta2 = obtener_nro_marco_memoria(rta1, 2, 0);
+	write_en_memoria(rta2,0,48);
 	int rta3 = read_en_memoria(rta2, 0);
 	printf("%d", rta3);
 
 
-	write_en_memoria(rta2, 0, 4);
-	printf("%d\n",read_en_memoria(rta2, 0));
+//	write_en_memoria(rta2, 0, 4);
+//	printf("%d\n",read_en_memoria(rta2, 0));
 
 //	imprimir_tablas_2();
 
@@ -68,9 +61,9 @@ int main(void) {
 	pthread_create(&hilo_cpu, NULL, (void*) escuchar_cpu, NULL);
 	pthread_detach(hilo_cpu);
 
-//	testeando_tablas();
-
 	while(true); //simula que sigue corriendo
+
+//	testeando_tablas();
 
 	return 0;
 

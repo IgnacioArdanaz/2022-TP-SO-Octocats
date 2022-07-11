@@ -415,7 +415,7 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 	log_info(logger, "[CPU] PAGE FAULT");
 	// si no esta en memoria, traerlo (HAY PAGE FAULT)
 	FILE* swap = abrir_archivo_swap(pid_actual);
-	void* marco = leer_marco_en_swap(swap,pagina->nro_marco, tam_pagina);
+	void* marco = leer_marco_en_swap(swap,nro_tabla * entradas_por_tabla + index, tam_pagina);
 	int32_t nro_marco;
 	// si ya ocupa todos los marcos que puede ocupar, hacer un reemplazo (EJECUTAR ALGORITMO)
 	if (marcos_en_memoria() == marcos_por_proceso){
@@ -569,6 +569,7 @@ uint32_t read_en_memoria(uint32_t nro_marco, uint32_t desplazamiento){
 
 // Dado un nro de marco, un desplazamiento y un dato, escribe el dato en dicha posicion
 void write_en_memoria(uint32_t nro_marco, uint32_t desplazamiento, uint32_t dato) {
+	printf("A punto de escribir en el marco %d offset %d\n", nro_marco, desplazamiento);
 	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
 	memcpy(memoria + desplazamiento_final, &dato, sizeof(dato));
 	fila_2do_nivel* pagina_actual = obtener_pagina(pid_actual, nro_marco);
@@ -620,12 +621,6 @@ int marcos_actuales(int entrada_1er_nivel, int entrada_2do_nivel){
 	return entrada_1er_nivel * entradas_por_tabla + entrada_2do_nivel;
 }
 
-void printear_bitmap(){
-	for (int i = 0; i < tam_memoria / tam_pagina; i++){
-		printf("%d : %d\n", i, bitarray_marcos_ocupados[i]);
-	}
-}
-
 ////////////////////////// ESTRUCTURA CLOCK //////////////////////////
 
 void agregar_pagina_a_estructura_clock(int32_t nro_marco, fila_2do_nivel* pagina, uint32_t nro_marco_en_swap){
@@ -641,24 +636,24 @@ void agregar_pagina_a_estructura_clock(int32_t nro_marco, fila_2do_nivel* pagina
 		}
 	}
 	//Si no está el marco en la estructura, lo agrego al final
-	fila_estructura_clock fila_nueva;
-	fila_nueva.nro_marco_en_memoria = nro_marco;
-	fila_nueva.pagina = pagina;
-	fila_nueva.nro_marco_en_swap = nro_marco_en_swap;
-	list_add(estructura->marcos_en_memoria, &fila_nueva);
+	fila_estructura_clock* fila_nueva = malloc(sizeof(fila_estructura_clock));
+	fila_nueva->nro_marco_en_memoria = nro_marco;
+	fila_nueva->pagina = pagina;
+	fila_nueva->nro_marco_en_swap = nro_marco_en_swap;
+	list_add(estructura->marcos_en_memoria, fila_nueva);
+
 }
 
 estructura_clock* buscar_estructura_clock(uint16_t pid_a_buscar){
 	estructura_clock* estructura;
-	printf("size lista_estructuras_clock = %d\n", list_size(lista_estructuras_clock));
 	for (int i = 0; i < list_size(lista_estructuras_clock); i++){
 		estructura = list_get(lista_estructuras_clock, i);
-		printf("lista_estructuras_clock elemento %d : pid = %d \n", i, estructura->pid);
-		if (pid_a_buscar == estructura->pid)
+		if (pid_a_buscar == estructura->pid){
 			return estructura;
+		}
 	}
-	printf("Estoy por devolver 0\n");
-	return 0;
+	log_error(logger,"No encontré la estructura de clock :(\n");
+	return NULL;
 }
 
 void crear_estructura_clock(uint16_t pid){
@@ -687,8 +682,9 @@ fila_2do_nivel* obtener_pagina(uint16_t pid_actual, int32_t nro_marco){
 	for (int i = 0; i < list_size(estructura->marcos_en_memoria); i++){
 		fila_busqueda = list_get(estructura->marcos_en_memoria, i);
 		if (nro_marco == fila_busqueda->nro_marco_en_memoria){
-			return fila_busqueda->pagina;
+			return &(fila_busqueda->pagina);
 		}
 	}
-	return 0;
+	log_error(logger,"Pagina no encontrada :(");
+	return NULL;
 }

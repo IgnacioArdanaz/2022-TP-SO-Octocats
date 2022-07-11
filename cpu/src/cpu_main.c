@@ -175,6 +175,7 @@ int check_interrupt(){
 }
 
 int fetch_operands(int direccion, uint32_t tabla){
+	log_info(logger,"Fetch operands...");
 	return ejecutarRead(direccion,tabla);
 }
 
@@ -189,7 +190,6 @@ int ejecutarRead(uint32_t dir_logica,uint32_t tabla_paginas){
 	marco_t dir_fisica;
 	uint32_t valor = 8;
 	dir_fisica = traducir_direccion(dir_logica,tabla_paginas);
-
 	log_info(logger, "Ejecutando READ para marco %d y desplazamiento %d", dir_fisica.marco, dir_fisica.desplazamiento);
 //	send_read(conexion_memoria, dir_fisica.marco, dir_fisica.desplazamiento);
 

@@ -43,7 +43,6 @@ typedef struct {
 int cliente_cpu, cliente_kernel;
 
 int server_memoria;
-
 void inicializar_memoria();
 void apagar_memoria();
 

@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="desplazamiento" key="selection"/>
+		<item value="leer_" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="desplazamiento"/>
-			<item value="log_info"/>
-			<item value="log"/>
-			<item value="conexion_memoria)"/>
-			<item value="ejecutando"/>
-			<item value="send_datos_necesarios"/>
-			<item value="send("/>
-			<item value="ejecutarRead"/>
-			<item value="trunc"/>
-			<item value="free(stream);"/>
-			<item value="calcular_cant_marcos"/>
-			<item value="marcos_actuales"/>
-			<item value="crear_fila"/>
-			<item value="agregar_marco_en_sw"/>
-			<item value="entrada_1er_nivel_actual"/>
+			<item value="leer_"/>
+			<item value="nro ma"/>
+			<item value="en swap"/>
+			<item value="nro"/>
+			<item value="page"/>
+			<item value="log_inf"/>
+			<item value="tra"/>
+			<item value="Trayendo"/>
+			<item value="marco"/>
+			<item value="Trayendo marco"/>
+			<item value="agregar_pagin"/>
+			<item value="WRITE"/>
+			<item value="pid_actual"/>
+			<item value="crear_estr"/>
+			<item value="size lis"/>
 		</list>
 		<list key="replacehistory">
 			<item value="s_pasaje_a_ready"/>
@@ -39,7 +39,7 @@
 		<item value="340" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="436" key="DIALOG_HEIGHT"/>
-		<item value="1205" key="DIALOG_X_ORIGIN"/>
+		<item value="985" key="DIALOG_X_ORIGIN"/>
 		<item value="116" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
