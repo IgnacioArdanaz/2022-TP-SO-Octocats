@@ -99,7 +99,7 @@ void recibir_kernel() {
 			//log_error(logger,"DISCONNECT FAILURE EN KERNEL!");
 			printf("DISCONNECT FAILURE EN KERNEL!\n");
 			pthread_mutex_unlock(&mx_log);
-			return;
+			exit(-1);
 		}
 		switch (cop) {
 			case CREAR_TABLA:
@@ -273,7 +273,7 @@ void recibir_cpu() {
 			//log_error(logger,"DISCONNECT FAILURE EN CPU!");
 			printf("DISCONNECT FAILURE EN CPU!\n");
 			pthread_mutex_unlock(&mx_log);
-			return;
+			exit(-1);
 		}
 		switch (cop) {
 			case SOLICITUD_NRO_TABLA_2DO_NIVEL:
