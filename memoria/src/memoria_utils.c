@@ -491,12 +491,6 @@ uint32_t clock_simple(FILE* swap){
 	return 0;
 }
 
-uint16_t retroceder_puntero(uint16_t puntero_clock, uint16_t maximo){
-	if (puntero_clock == 0)
-		return maximo - 1;
-	return puntero_clock - 1;
-}
-
 uint32_t clock_modificado(FILE* swap){
 	estructura_clock* estructura = buscar_estructura_clock(pid_actual);
 	uint16_t puntero_clock = estructura->puntero;
@@ -522,7 +516,6 @@ uint32_t clock_modificado(FILE* swap){
 			}
 			//Condición para ir al siguiente paso
 			if (puntero_clock == estructura->puntero){
-				puntero_clock = retroceder_puntero(puntero_clock, list_size(estructura->marcos_en_memoria)); //Lo retrocedo porque abajo se incrementa de nuevo
 				break;
 			}
 		}
@@ -545,7 +538,6 @@ uint32_t clock_modificado(FILE* swap){
 
 			//Condición para ir al siguiente paso
 			if (puntero_clock == estructura->puntero){
-				puntero_clock = retroceder_puntero(puntero_clock, list_size(estructura->marcos_en_memoria)); //Lo retrocedo porque abajo se incrementa de nuevo
 				break;
 			}
 		}
@@ -672,9 +664,8 @@ void crear_estructura_clock(uint16_t pid){
 	estructura->pid = pid;
 	estructura->marcos_en_memoria = list_create();
 	estructura->puntero = 0;
-	printf("creando elemento: pid = %d \n", estructura->pid);
 	list_add(lista_estructuras_clock, estructura);
-	log_info("[CPU] Creada estructura clock del proceso: %d", pid);
+	log_info(logger,"[CPU] Creada estructura clock del proceso: %d", pid);
 }
 
 

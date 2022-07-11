@@ -1,4 +1,4 @@
-16:22:54 **** Incremental Build of configuration Debug for project memoria ****
+16:33:03 **** Incremental Build of configuration Debug for project memoria ****
 make all 
 Building file: ../src/memoria_utils.c
 Invoking: GCC C Compiler
@@ -8,7 +8,7 @@ gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-le
      uint16_t pid = 0; // No se usa por ahora
               ^
 ../src/memoria_utils.c: In function ‘crear_estructura_clock’:
-../src/memoria_utils.c:677:11: warning: passing argument 1 of ‘log_info’ from incompatible pointer type [-Wincompatible-pointer-types]
+../src/memoria_utils.c:675:11: warning: passing argument 1 of ‘log_info’ from incompatible pointer type [-Wincompatible-pointer-types]
   log_info("[CPU] Creada estructura clock del proceso: %d", pid);
            ^
 In file included from ../src/memoria_swap.h:7:0,
@@ -17,7 +17,7 @@ In file included from ../src/memoria_swap.h:7:0,
 /usr/include/commons/log.h:89:9: note: expected ‘t_log * {aka struct <anonymous> *}’ but argument is of type ‘char *’
   void   log_info(t_log* logger, const char* message, ...) __attribute__((format(printf, 2, 3)));
          ^
-../src/memoria_utils.c:677:60: warning: passing argument 2 of ‘log_info’ makes pointer from integer without a cast [-Wint-conversion]
+../src/memoria_utils.c:675:60: warning: passing argument 2 of ‘log_info’ makes pointer from integer without a cast [-Wint-conversion]
   log_info("[CPU] Creada estructura clock del proceso: %d", pid);
                                                             ^
 In file included from ../src/memoria_swap.h:7:0,
@@ -26,11 +26,11 @@ In file included from ../src/memoria_swap.h:7:0,
 /usr/include/commons/log.h:89:9: note: expected ‘const char *’ but argument is of type ‘uint16_t {aka short unsigned int}’
   void   log_info(t_log* logger, const char* message, ...) __attribute__((format(printf, 2, 3)));
          ^
-../src/memoria_utils.c:677:2: warning: format not a string literal and no format arguments [-Wformat-security]
+../src/memoria_utils.c:675:2: warning: format not a string literal and no format arguments [-Wformat-security]
   log_info("[CPU] Creada estructura clock del proceso: %d", pid);
   ^
 ../src/memoria_utils.c: In function ‘obtener_pagina’:
-../src/memoria_utils.c:696:11: warning: return from incompatible pointer type [-Wincompatible-pointer-types]
+../src/memoria_utils.c:694:11: warning: return from incompatible pointer type [-Wincompatible-pointer-types]
     return &(fila_busqueda->pagina);
            ^
 In file included from ../src/memoria_utils.h:18:0,
@@ -82,5 +82,5 @@ gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria
 Finished building target: memoria
  
 
-16:22:59 Build Finished (took 4s.569ms)
+16:33:05 Build Finished (took 1s.915ms)
 
