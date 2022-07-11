@@ -399,6 +399,11 @@ fila_1er_nivel obtener_nro_tabla_2do_nivel(int32_t nro_tabla, uint32_t index, ui
 	}
 	fila_1er_nivel* tabla = list_get(lista_tablas_1er_nivel,nro_tabla);
 	log_info(logger, "[CPU] Tabla : %d - Index: %d - PID: %d - Resultado: %d", nro_tabla, index, pid, tabla[index]);
+	// TODO configurar que le devuelva un mensaje de error a la CPU para que finalice el proceso por error
+	if (tabla[index] == -1){
+		log_error(logger, "SEGMENTATION FAULT!!");
+		exit(-1);
+	}
 	return tabla[index];
 }
 
