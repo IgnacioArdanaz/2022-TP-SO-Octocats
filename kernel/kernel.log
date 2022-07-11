@@ -1565,3 +1565,154 @@
 [INFO] 14:31:14:343 KERNEL/(8785:8801): [EXECUTE -> EXIT] Proceso 2 terminado
 [INFO] 14:31:14:347 KERNEL/(8785:8802): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
 [INFO] 14:31:17:352 KERNEL/(8785:8801): [EXECUTE -> EXIT] Proceso 3 terminado
+[INFO] 14:36:48:188 KERNEL/(8785:8785): Cliente conectado (a KERNEL)
+[INFO] 14:36:48:188 KERNEL/(8785:8785): Socket del cliente recibido en kernel.
+[INFO] 14:36:48:188 KERNEL/(8785:8785): Kernel esperando un nuevo cliente
+[INFO] 14:36:48:188 KERNEL/(8785:8785): KERNEL listo para recibir al cliente
+[INFO] 14:36:48:197 KERNEL/(8785:8799): [NEW -> READY] PROCESO 4 AGREGADO A READY
+[INFO] 14:36:48:197 KERNEL/(8785:8799): Solicitando tabla de pag para proceso 4 de tamanio 1024
+[INFO] 14:36:48:198 KERNEL/(8785:8799): proceso 4 tabla de pag 3
+[INFO] 14:36:48:198 KERNEL/(8785:8799): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 14:36:48:198 KERNEL/(8785:8802): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[ERROR] 14:37:02:623 KERNEL/(8785:8801): DISCONNECT FAILURE!
+[INFO] 14:39:10:897 KERNEL/(9241:9241): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 14:39:10:897 KERNEL/(9241:9241): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 14:39:10:898 KERNEL/(9241:9241): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 14:39:10:898 KERNEL/(9241:9241): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 14:39:10:898 KERNEL/(9241:9241): Kernel esperando un nuevo cliente
+[INFO] 14:39:10:898 KERNEL/(9241:9241): KERNEL listo para recibir al cliente
+[INFO] 14:39:15:746 KERNEL/(9241:9241): Cliente conectado (a KERNEL)
+[INFO] 14:39:15:746 KERNEL/(9241:9241): Socket del cliente recibido en kernel.
+[INFO] 14:39:15:746 KERNEL/(9241:9241): Kernel esperando un nuevo cliente
+[INFO] 14:39:15:746 KERNEL/(9241:9241): KERNEL listo para recibir al cliente
+[INFO] 14:39:15:747 KERNEL/(9241:9249): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 14:39:15:747 KERNEL/(9241:9249): Solicitando tabla de pag para proceso 1 de tamanio 1024
+[INFO] 14:39:15:751 KERNEL/(9241:9249): proceso 1 tabla de pag 0
+[INFO] 14:39:15:751 KERNEL/(9241:9249): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 14:39:15:751 KERNEL/(9241:9252): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[ERROR] 14:39:34:768 KERNEL/(9241:9251): DISCONNECT FAILURE!
+[INFO] 14:41:45:817 KERNEL/(9363:9363): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 14:41:45:817 KERNEL/(9363:9363): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 14:41:45:817 KERNEL/(9363:9363): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 14:41:45:818 KERNEL/(9363:9363): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 14:41:45:818 KERNEL/(9363:9363): Kernel esperando un nuevo cliente
+[INFO] 14:41:45:819 KERNEL/(9363:9363): KERNEL listo para recibir al cliente
+[INFO] 14:41:49:682 KERNEL/(9363:9363): Cliente conectado (a KERNEL)
+[INFO] 14:41:49:682 KERNEL/(9363:9363): Socket del cliente recibido en kernel.
+[INFO] 14:41:49:682 KERNEL/(9363:9363): Kernel esperando un nuevo cliente
+[INFO] 14:41:49:682 KERNEL/(9363:9363): KERNEL listo para recibir al cliente
+[INFO] 14:41:49:683 KERNEL/(9363:9372): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 14:41:49:683 KERNEL/(9363:9372): Solicitando tabla de pag para proceso 1 de tamanio 1024
+[INFO] 14:41:49:683 KERNEL/(9363:9372): proceso 1 tabla de pag 0
+[INFO] 14:41:49:683 KERNEL/(9363:9372): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 14:41:49:683 KERNEL/(9363:9375): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[ERROR] 14:42:08:692 KERNEL/(9363:9374): DISCONNECT FAILURE!
+[INFO] 14:44:47:676 KERNEL/(9483:9483): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 14:44:47:677 KERNEL/(9483:9483): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 14:44:47:677 KERNEL/(9483:9483): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 14:44:47:677 KERNEL/(9483:9483): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 14:44:47:677 KERNEL/(9483:9483): Kernel esperando un nuevo cliente
+[INFO] 14:44:47:677 KERNEL/(9483:9483): KERNEL listo para recibir al cliente
+[INFO] 14:44:51:968 KERNEL/(9483:9483): Cliente conectado (a KERNEL)
+[INFO] 14:44:51:968 KERNEL/(9483:9483): Socket del cliente recibido en kernel.
+[INFO] 14:44:51:973 KERNEL/(9483:9483): Kernel esperando un nuevo cliente
+[INFO] 14:44:51:973 KERNEL/(9483:9483): KERNEL listo para recibir al cliente
+[INFO] 14:44:51:977 KERNEL/(9483:9492): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 14:44:51:977 KERNEL/(9483:9492): Solicitando tabla de pag para proceso 1 de tamanio 16512
+[INFO] 14:44:51:978 KERNEL/(9483:9492): proceso 1 tabla de pag 0
+[INFO] 14:44:51:978 KERNEL/(9483:9492): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 14:44:51:978 KERNEL/(9483:9495): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[INFO] 14:45:19:999 KERNEL/(9483:9494): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 14:45:19:999 KERNEL/(9483:9493): [IO] Proceso 1 esperando 6000 milisegundos
+[INFO] 14:45:25:007 KERNEL/(9483:9519): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 14:45:25:999 KERNEL/(9483:9493): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 14:45:25:999 KERNEL/(9483:9492): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 14:45:25:999 KERNEL/(9483:9492): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 14:45:25:999 KERNEL/(9483:9495): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[INFO] 14:46:05:030 KERNEL/(9483:9494): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 14:46:49:118 KERNEL/(9483:9483): Cliente conectado (a KERNEL)
+[INFO] 14:46:49:118 KERNEL/(9483:9483): Socket del cliente recibido en kernel.
+[INFO] 14:46:49:118 KERNEL/(9483:9483): Kernel esperando un nuevo cliente
+[INFO] 14:46:49:118 KERNEL/(9483:9483): KERNEL listo para recibir al cliente
+[INFO] 14:46:49:125 KERNEL/(9483:9492): [NEW -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 14:46:49:125 KERNEL/(9483:9492): Solicitando tabla de pag para proceso 2 de tamanio 4096
+[INFO] 14:46:49:126 KERNEL/(9483:9492): proceso 2 tabla de pag 1
+[INFO] 14:46:49:126 KERNEL/(9483:9492): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 14:46:49:126 KERNEL/(9483:9495): [READY -> EXECUTE] MANDANDO PROCESO 2 A EJECUTAR
+[INFO] 14:47:17:147 KERNEL/(9483:9494): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 14:47:17:148 KERNEL/(9483:9493): [IO] Proceso 2 esperando 6000 milisegundos
+[INFO] 14:47:22:153 KERNEL/(9483:9554): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 2
+[INFO] 14:47:23:148 KERNEL/(9483:9493): [SUSP_BLOCKED -> SUSP_READY] Proceso 2 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 14:47:23:148 KERNEL/(9483:9492): [SUSP_READY -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 14:47:23:148 KERNEL/(9483:9492): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 14:47:23:148 KERNEL/(9483:9495): [READY -> EXECUTE] MANDANDO PROCESO 2 A EJECUTAR
+[INFO] 14:48:02:171 KERNEL/(9483:9494): [EXECUTE -> EXIT] Proceso 2 terminado
+[INFO] 14:51:16:957 KERNEL/(9625:9625): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 14:51:16:958 KERNEL/(9625:9625): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 14:51:16:958 KERNEL/(9625:9625): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 14:51:16:958 KERNEL/(9625:9625): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 14:51:16:958 KERNEL/(9625:9625): Kernel esperando un nuevo cliente
+[INFO] 14:51:16:958 KERNEL/(9625:9625): KERNEL listo para recibir al cliente
+[INFO] 14:51:20:528 KERNEL/(9625:9625): Cliente conectado (a KERNEL)
+[INFO] 14:51:20:528 KERNEL/(9625:9625): Socket del cliente recibido en kernel.
+[INFO] 14:51:20:528 KERNEL/(9625:9625): Kernel esperando un nuevo cliente
+[INFO] 14:51:20:528 KERNEL/(9625:9625): KERNEL listo para recibir al cliente
+[INFO] 14:51:20:534 KERNEL/(9625:9634): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 14:51:20:534 KERNEL/(9625:9634): Solicitando tabla de pag para proceso 1 de tamanio 4096
+[INFO] 14:51:20:537 KERNEL/(9625:9634): proceso 1 tabla de pag 0
+[INFO] 14:51:20:537 KERNEL/(9625:9634): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 14:51:20:538 KERNEL/(9625:9637): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[INFO] 14:51:48:555 KERNEL/(9625:9636): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 14:51:48:555 KERNEL/(9625:9635): [IO] Proceso 1 esperando 6000 milisegundos
+[INFO] 14:51:53:558 KERNEL/(9625:9653): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 14:51:54:555 KERNEL/(9625:9635): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 14:51:54:555 KERNEL/(9625:9634): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 14:51:54:555 KERNEL/(9625:9634): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 14:51:54:555 KERNEL/(9625:9637): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[ERROR] 14:52:19:908 KERNEL/(9625:9636): DISCONNECT FAILURE!
+[INFO] 14:53:48:455 KERNEL/(9693:9693): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 14:53:48:456 KERNEL/(9693:9693): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 14:53:48:456 KERNEL/(9693:9693): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 14:53:48:456 KERNEL/(9693:9693): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 14:53:48:456 KERNEL/(9693:9693): Kernel esperando un nuevo cliente
+[INFO] 14:53:48:456 KERNEL/(9693:9693): KERNEL listo para recibir al cliente
+[INFO] 14:53:53:527 KERNEL/(9693:9693): Cliente conectado (a KERNEL)
+[INFO] 14:53:53:527 KERNEL/(9693:9693): Socket del cliente recibido en kernel.
+[INFO] 14:53:53:527 KERNEL/(9693:9693): Kernel esperando un nuevo cliente
+[INFO] 14:53:53:527 KERNEL/(9693:9693): KERNEL listo para recibir al cliente
+[INFO] 14:53:53:529 KERNEL/(9693:9702): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 14:53:53:529 KERNEL/(9693:9702): Solicitando tabla de pag para proceso 1 de tamanio 4096
+[INFO] 14:53:53:530 KERNEL/(9693:9702): proceso 1 tabla de pag 0
+[INFO] 14:53:53:531 KERNEL/(9693:9702): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 14:53:53:531 KERNEL/(9693:9705): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[INFO] 14:54:21:553 KERNEL/(9693:9704): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 14:54:21:553 KERNEL/(9693:9703): [IO] Proceso 1 esperando 6000 milisegundos
+[INFO] 14:54:26:565 KERNEL/(9693:9720): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 14:54:27:554 KERNEL/(9693:9703): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 14:54:27:554 KERNEL/(9693:9702): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 14:54:27:554 KERNEL/(9693:9702): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 14:54:27:554 KERNEL/(9693:9705): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[ERROR] 14:54:52:943 KERNEL/(9693:9704): DISCONNECT FAILURE!
+[INFO] 15:01:50:082 KERNEL/(9876:9876): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 15:01:50:093 KERNEL/(9876:9876): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 15:01:50:093 KERNEL/(9876:9876): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 15:01:50:094 KERNEL/(9876:9876): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 15:01:50:095 KERNEL/(9876:9876): Kernel esperando un nuevo cliente
+[INFO] 15:01:50:095 KERNEL/(9876:9876): KERNEL listo para recibir al cliente
+[INFO] 15:01:53:595 KERNEL/(9876:9876): Cliente conectado (a KERNEL)
+[INFO] 15:01:53:595 KERNEL/(9876:9876): Socket del cliente recibido en kernel.
+[INFO] 15:01:53:595 KERNEL/(9876:9876): Kernel esperando un nuevo cliente
+[INFO] 15:01:53:595 KERNEL/(9876:9876): KERNEL listo para recibir al cliente
+[INFO] 15:01:53:597 KERNEL/(9876:9885): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 15:01:53:597 KERNEL/(9876:9885): Solicitando tabla de pag para proceso 1 de tamanio 4096
+[INFO] 15:01:53:601 KERNEL/(9876:9885): proceso 1 tabla de pag 0
+[INFO] 15:01:53:601 KERNEL/(9876:9885): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 15:01:53:601 KERNEL/(9876:9888): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[INFO] 15:02:21:624 KERNEL/(9876:9887): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 15:02:21:624 KERNEL/(9876:9886): [IO] Proceso 1 esperando 6000 milisegundos
+[INFO] 15:02:26:624 KERNEL/(9876:9908): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 15:02:27:625 KERNEL/(9876:9886): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 15:02:27:625 KERNEL/(9876:9885): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 15:02:27:625 KERNEL/(9876:9885): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 15:02:27:625 KERNEL/(9876:9888): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[ERROR] 15:06:17:520 KERNEL/(9876:9887): DISCONNECT FAILURE!

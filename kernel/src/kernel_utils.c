@@ -132,7 +132,7 @@ void procesar_socket(thread_args* argumentos){
 			pthread_mutex_unlock(&mx_log);
 			int32_t resultError = -1;
 			send(cliente_socket, &resultError, sizeof(int32_t), 0);
-			return;
+			exit(-1);
 		}
 		switch (cop) {
 			case PROGRAMA:
@@ -258,7 +258,7 @@ void esperar_cpu(){
 			pthread_mutex_lock(&mx_log);
 			log_error(logger,"DISCONNECT FAILURE!");
 			pthread_mutex_unlock(&mx_log);
-			return;
+			exit(-1);
 		}
 		PCB_t* pcb = pcb_create();
 		if (!recv_proceso(conexion_cpu_dispatch, pcb)) {

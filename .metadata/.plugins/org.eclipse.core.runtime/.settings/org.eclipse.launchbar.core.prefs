@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:testing,org.eclipse.launchbar.core.descriptorType.default\:consola,org.eclipse.launchbar.core.descriptorType.default\:BASE_1,org.eclipse.launchbar.core.descriptorType.default\:BASE_2,org.eclipse.launchbar.core.descriptorType.default\:PLANI_1,org.eclipse.launchbar.core.descriptorType.default\:PLANI_2,org.eclipse.launchbar.core.descriptorType.default\:memoria,org.eclipse.launchbar.core.descriptorType.default\:cpu,org.eclipse.launchbar.core.descriptorType.default\:kernel,org.eclipse.launchbar.core.descriptorType.default\:SUSPE_1,org.eclipse.launchbar.core.descriptorType.default\:SUSPE_2,org.eclipse.launchbar.core.descriptorType.default\:SUSPE_3
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:testing,org.eclipse.launchbar.core.descriptorType.default\:consola,org.eclipse.launchbar.core.descriptorType.default\:BASE_1,org.eclipse.launchbar.core.descriptorType.default\:BASE_2,org.eclipse.launchbar.core.descriptorType.default\:PLANI_1,org.eclipse.launchbar.core.descriptorType.default\:PLANI_2,org.eclipse.launchbar.core.descriptorType.default\:SUSPE_1,org.eclipse.launchbar.core.descriptorType.default\:SUSPE_2,org.eclipse.launchbar.core.descriptorType.default\:SUSPE_3,org.eclipse.launchbar.core.descriptorType.default\:memoria,org.eclipse.launchbar.core.descriptorType.default\:cpu,org.eclipse.launchbar.core.descriptorType.default\:kernel,org.eclipse.launchbar.core.descriptorType.default\:MEMORIA_1
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:PLANI_1/activeLaunchMode=profile
 org.eclipse.launchbar.core.descriptorType.default\:SUSPE_2/activeLaunchMode=run
@@ -9,4 +9,4 @@ org.eclipse.launchbar.core.descriptorType.default\:SUSPE_2/activeLaunchTarget=or
 org.eclipse.launchbar.core.descriptorType.default\:consola/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:consola/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:cpu/activeLaunchMode=run
-org.eclipse.launchbar.core.descriptorType.default\:memoria/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:memoria/activeLaunchMode=debug

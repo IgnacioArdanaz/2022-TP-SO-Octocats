@@ -3068,3 +3068,451 @@
 [INFO] 14:31:17:352 cpu/(8774:8774): Proceso 3 estimacion rafaga siguiente 7999.500000
 [INFO] 14:31:17:352 cpu/(8774:8774): Program counter 11 (despues de ejecutar)
 [INFO] 14:31:17:352 cpu/(8774:8774): ==============================================================
+[INFO] 14:36:48:198 cpu/(8774:8774): Proceso 4 -> program counter 0 - est 20000.000000
+[INFO] 14:36:48:198 cpu/(8774:8774): Ejecutando WRITE
+[INFO] 14:36:48:198 cpu/(8774:8774): La pagina 0 no esta en TLB
+[INFO] 14:36:49:198 cpu/(8774:8774): Recibida tabla pag 2do nivel numero: 12
+[INFO] 14:36:52:201 cpu/(8774:8774): Recibido numero de marco: 0
+[INFO] 14:36:52:201 cpu/(8774:8774): Ejecutando WRITE: marco 0,  desp 0, valor: 1000
+[INFO] 14:36:53:202 cpu/(8774:8774): Ejecutando WRITE
+[INFO] 14:36:53:202 cpu/(8774:8774): Ejecutando WRITE: marco 0,  desp 4, valor: 1001
+[INFO] 14:36:54:203 cpu/(8774:8774): Ejecutando WRITE
+[INFO] 14:36:54:205 cpu/(8774:8774): La pagina 4 no esta en TLB
+[INFO] 14:36:55:205 cpu/(8774:8774): Recibida tabla pag 2do nivel numero: 13
+[INFO] 14:36:58:207 cpu/(8774:8774): Recibido numero de marco: 1
+[INFO] 14:36:58:207 cpu/(8774:8774): Ejecutando WRITE: marco 1,  desp 4, valor: 2000
+[INFO] 14:36:59:209 cpu/(8774:8774): Aca busco el operando
+[INFO] 14:36:59:209 cpu/(8774:8774): Fetch operands...
+[INFO] 14:36:59:209 cpu/(8774:8774): Ejecutando READ para marco 1 y desplazamiento 4
+[INFO] 14:37:00:210 cpu/(8774:8774): Dato leido = 2000
+[INFO] 14:37:00:210 cpu/(8774:8774): Ejecutando COPY
+[INFO] 14:37:00:210 cpu/(8774:8774): Ejecutando WRITE: marco 1,  desp 0, valor: 2000
+[INFO] 14:37:01:211 cpu/(8774:8774): Ejecutando WRITE
+[INFO] 14:37:01:211 cpu/(8774:8774): La pagina 32 no esta en TLB
+[INFO] 14:37:02:212 cpu/(8774:8774): Recibida tabla pag 2do nivel numero: 795833198
+[INFO] 14:37:02:623 cpu/(8774:8774): Recibido numero de marco: -1
+[INFO] 14:39:06:623 cpu/(9213:9213): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 14:39:06:624 cpu/(9213:9213): RECIBIDO: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 14:39:06:624 cpu/(9213:9213): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 14:39:06:624 cpu/(9213:9213): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 14:39:06:624 cpu/(9213:9213): CPU_DISPATCH listo para recibir al cliente
+[INFO] 14:39:10:897 cpu/(9213:9213): Cliente conectado (a CPU_DISPATCH)
+[INFO] 14:39:10:897 cpu/(9213:9213): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 14:39:10:898 cpu/(9213:9213): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 14:39:10:898 cpu/(9213:9213): Valor alfa 0.50
+[INFO] 14:39:15:751 cpu/(9213:9213): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 14:39:15:751 cpu/(9213:9213): Ejecutando WRITE
+[INFO] 14:39:15:751 cpu/(9213:9213): La pagina 0 no esta en TLB
+[INFO] 14:39:16:751 cpu/(9213:9213): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:39:22:753 cpu/(9213:9213): Recibido numero de marco: 0
+[INFO] 14:39:22:759 cpu/(9213:9213): Ejecutando WRITE: marco 0,  desp 0, valor: 1000
+[INFO] 14:39:23:759 cpu/(9213:9213): Ejecutando WRITE
+[INFO] 14:39:23:759 cpu/(9213:9213): Ejecutando WRITE: marco 0,  desp 4, valor: 1001
+[INFO] 14:39:24:760 cpu/(9213:9213): Ejecutando WRITE
+[INFO] 14:39:24:760 cpu/(9213:9213): La pagina 1 no esta en TLB
+[INFO] 14:39:25:761 cpu/(9213:9213): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:39:31:763 cpu/(9213:9213): Recibido numero de marco: 1
+[INFO] 14:39:31:765 cpu/(9213:9213): Ejecutando WRITE: marco 1,  desp 4, valor: 2000
+[INFO] 14:39:32:765 cpu/(9213:9213): Aca busco el operando
+[INFO] 14:39:32:765 cpu/(9213:9213): Fetch operands...
+[INFO] 14:39:32:765 cpu/(9213:9213): Ejecutando READ para marco 1 y desplazamiento 4
+[INFO] 14:39:33:766 cpu/(9213:9213): Dato leido = 2000
+[INFO] 14:39:33:766 cpu/(9213:9213): Ejecutando COPY
+[INFO] 14:39:33:766 cpu/(9213:9213): Ejecutando WRITE: marco 1,  desp 0, valor: 2000
+[INFO] 14:39:34:767 cpu/(9213:9213): Ejecutando WRITE
+[INFO] 14:39:34:767 cpu/(9213:9213): La pagina 8 no esta en TLB
+[INFO] 14:39:34:767 cpu/(9213:9213): Recibida tabla pag 2do nivel numero: 237
+[INFO] 14:41:42:977 cpu/(9329:9329): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 14:41:42:978 cpu/(9329:9329): RECIBIDO: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 14:41:42:978 cpu/(9329:9329): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 14:41:42:978 cpu/(9329:9329): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 14:41:42:978 cpu/(9329:9329): CPU_DISPATCH listo para recibir al cliente
+[INFO] 14:41:45:817 cpu/(9329:9329): Cliente conectado (a CPU_DISPATCH)
+[INFO] 14:41:45:817 cpu/(9329:9329): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 14:41:45:817 cpu/(9329:9329): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 14:41:45:818 cpu/(9329:9329): Valor alfa 0.50
+[INFO] 14:41:49:683 cpu/(9329:9329): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 14:41:49:683 cpu/(9329:9329): Ejecutando WRITE
+[INFO] 14:41:49:683 cpu/(9329:9329): La pagina 0 no esta en TLB
+[INFO] 14:41:50:684 cpu/(9329:9329): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:41:56:685 cpu/(9329:9329): Recibido numero de marco: 0
+[INFO] 14:41:56:685 cpu/(9329:9329): Ejecutando WRITE: marco 0,  desp 0, valor: 1000
+[INFO] 14:41:57:685 cpu/(9329:9329): Ejecutando WRITE
+[INFO] 14:41:57:686 cpu/(9329:9329): Ejecutando WRITE: marco 0,  desp 4, valor: 1001
+[INFO] 14:41:58:686 cpu/(9329:9329): Ejecutando WRITE
+[INFO] 14:41:58:686 cpu/(9329:9329): La pagina 1 no esta en TLB
+[INFO] 14:41:59:687 cpu/(9329:9329): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:42:05:688 cpu/(9329:9329): Recibido numero de marco: 1
+[INFO] 14:42:05:688 cpu/(9329:9329): Ejecutando WRITE: marco 1,  desp 4, valor: 2000
+[INFO] 14:42:06:689 cpu/(9329:9329): Aca busco el operando
+[INFO] 14:42:06:689 cpu/(9329:9329): Fetch operands...
+[INFO] 14:42:06:689 cpu/(9329:9329): Ejecutando READ para marco 1 y desplazamiento 4
+[INFO] 14:42:07:690 cpu/(9329:9329): Dato leido = 2000
+[INFO] 14:42:07:690 cpu/(9329:9329): Ejecutando COPY
+[INFO] 14:42:07:690 cpu/(9329:9329): Ejecutando WRITE: marco 1,  desp 0, valor: 2000
+[INFO] 14:42:08:691 cpu/(9329:9329): Ejecutando WRITE
+[INFO] 14:42:08:691 cpu/(9329:9329): La pagina 8 no esta en TLB
+[INFO] 14:42:08:692 cpu/(9329:9329): Recibida tabla pag 2do nivel numero: 237
+[INFO] 14:44:45:098 cpu/(9472:9472): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 14:44:45:098 cpu/(9472:9472): RECIBIDO: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 14:44:45:098 cpu/(9472:9472): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 14:44:45:098 cpu/(9472:9472): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 14:44:45:098 cpu/(9472:9472): CPU_DISPATCH listo para recibir al cliente
+[INFO] 14:44:47:677 cpu/(9472:9472): Cliente conectado (a CPU_DISPATCH)
+[INFO] 14:44:47:677 cpu/(9472:9472): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 14:44:47:677 cpu/(9472:9472): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 14:44:47:677 cpu/(9472:9472): Valor alfa 0.50
+[INFO] 14:44:51:978 cpu/(9472:9472): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 14:44:51:978 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:44:51:978 cpu/(9472:9472): La pagina 0 no esta en TLB
+[INFO] 14:44:52:979 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:44:58:981 cpu/(9472:9472): Recibido numero de marco: 0
+[INFO] 14:44:58:981 cpu/(9472:9472): Ejecutando WRITE: marco 0,  desp 0, valor: 1000
+[INFO] 14:44:59:982 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:44:59:983 cpu/(9472:9472): Ejecutando WRITE: marco 0,  desp 4, valor: 1001
+[INFO] 14:45:00:983 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:45:00:984 cpu/(9472:9472): La pagina 1 no esta en TLB
+[INFO] 14:45:01:984 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:45:07:985 cpu/(9472:9472): Recibido numero de marco: 1
+[INFO] 14:45:07:986 cpu/(9472:9472): Ejecutando WRITE: marco 1,  desp 4, valor: 2000
+[INFO] 14:45:08:986 cpu/(9472:9472): Aca busco el operando
+[INFO] 14:45:08:987 cpu/(9472:9472): Fetch operands...
+[INFO] 14:45:08:987 cpu/(9472:9472): Ejecutando READ para marco 1 y desplazamiento 4
+[INFO] 14:45:09:987 cpu/(9472:9472): Dato leido = 2000
+[INFO] 14:45:09:990 cpu/(9472:9472): Ejecutando COPY
+[INFO] 14:45:09:990 cpu/(9472:9472): Ejecutando WRITE: marco 1,  desp 0, valor: 2000
+[INFO] 14:45:10:990 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:45:10:991 cpu/(9472:9472): La pagina 8 no esta en TLB
+[INFO] 14:45:11:993 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 2
+[INFO] 14:45:17:995 cpu/(9472:9472): Recibido numero de marco: 2
+[INFO] 14:45:17:996 cpu/(9472:9472): Ejecutando WRITE: marco 2,  desp 0, valor: 4000
+[INFO] 14:45:18:996 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:45:18:997 cpu/(9472:9472): Ejecutando WRITE: marco 2,  desp 4, valor: 4001
+[INFO] 14:45:19:998 cpu/(9472:9472): Ejecutando IO
+[INFO] 14:45:19:999 cpu/(9472:9472): Rafaga real 28020
+[INFO] 14:45:19:999 cpu/(9472:9472): Proceso 1 estimacion rafaga siguiente 24010.000000
+[INFO] 14:45:19:999 cpu/(9472:9472): Program counter 7 (despues de ejecutar)
+[INFO] 14:45:19:999 cpu/(9472:9472): ==============================================================
+[INFO] 14:45:26:000 cpu/(9472:9472): Proceso 1 -> program counter 7 - est 24010.000000
+[INFO] 14:45:26:000 cpu/(9472:9472): Ejecutando READ
+[INFO] 14:45:26:000 cpu/(9472:9472): La pagina 0 no esta en TLB
+[INFO] 14:45:27:001 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:45:33:002 cpu/(9472:9472): Recibido numero de marco: 0
+[INFO] 14:45:33:003 cpu/(9472:9472): Ejecutando READ para marco 0 y desplazamiento 0
+[INFO] 14:45:34:003 cpu/(9472:9472): Dato leido = 0
+[INFO] 14:45:34:003 cpu/(9472:9472): Valor leido 0
+[INFO] 14:45:34:003 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:45:34:003 cpu/(9472:9472): La pagina 4 no esta en TLB
+[INFO] 14:45:35:004 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 1
+[INFO] 14:45:41:010 cpu/(9472:9472): Recibido numero de marco: 2
+[INFO] 14:45:41:011 cpu/(9472:9472): Ejecutando WRITE: marco 2,  desp 0, valor: 3000
+[INFO] 14:45:42:013 cpu/(9472:9472): Ejecutando READ
+[INFO] 14:45:42:013 cpu/(9472:9472): La pagina 1 no esta en TLB
+[INFO] 14:45:43:014 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:45:44:015 cpu/(9472:9472): Recibido numero de marco: 1
+[INFO] 14:45:44:015 cpu/(9472:9472): Ejecutando READ para marco 1 y desplazamiento 0
+[INFO] 14:45:45:016 cpu/(9472:9472): Dato leido = 2000
+[INFO] 14:45:45:018 cpu/(9472:9472): Valor leido 2000
+[INFO] 14:45:45:018 cpu/(9472:9472): Ejecutando READ
+[INFO] 14:45:45:018 cpu/(9472:9472): La pagina 8 no esta en TLB
+[INFO] 14:45:46:019 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 2
+[INFO] 14:45:52:020 cpu/(9472:9472): Recibido numero de marco: 1
+[INFO] 14:45:52:020 cpu/(9472:9472): Ejecutando READ para marco 1 y desplazamiento 0
+[INFO] 14:45:53:021 cpu/(9472:9472): Dato leido = 0
+[INFO] 14:45:53:021 cpu/(9472:9472): Valor leido 0
+[INFO] 14:45:53:021 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:45:53:021 cpu/(9472:9472): La pagina 15 no esta en TLB
+[INFO] 14:45:54:021 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 3
+[INFO] 14:46:00:023 cpu/(9472:9472): Recibido numero de marco: 1
+[INFO] 14:46:00:023 cpu/(9472:9472): Ejecutando WRITE: marco 1,  desp 160, valor: 9999
+[INFO] 14:46:01:024 cpu/(9472:9472): Ejecutando READ
+[INFO] 14:46:01:024 cpu/(9472:9472): Ejecutando READ para marco 1 y desplazamiento 160
+[INFO] 14:46:02:027 cpu/(9472:9472): Dato leido = 9999
+[INFO] 14:46:02:027 cpu/(9472:9472): Valor leido 9999
+[INFO] 14:46:02:027 cpu/(9472:9472): Ejecutando READ
+[INFO] 14:46:02:027 cpu/(9472:9472): La pagina 4 no esta en TLB
+[INFO] 14:46:03:028 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 1
+[INFO] 14:46:04:028 cpu/(9472:9472): Recibido numero de marco: 2
+[INFO] 14:46:04:029 cpu/(9472:9472): Ejecutando READ para marco 2 y desplazamiento 0
+[INFO] 14:46:05:030 cpu/(9472:9472): Dato leido = 3000
+[INFO] 14:46:05:030 cpu/(9472:9472): Valor leido 3000
+[INFO] 14:46:05:030 cpu/(9472:9472): Ejecutando EXIT
+[INFO] 14:46:05:030 cpu/(9472:9472): Rafaga real 39030
+[INFO] 14:46:05:030 cpu/(9472:9472): Proceso 1 estimacion rafaga siguiente 31520.000000
+[INFO] 14:46:05:030 cpu/(9472:9472): Program counter 15 (despues de ejecutar)
+[INFO] 14:46:05:030 cpu/(9472:9472): ==============================================================
+[INFO] 14:46:49:126 cpu/(9472:9472): Proceso 2 -> program counter 0 - est 20000.000000
+[INFO] 14:46:49:126 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:46:49:126 cpu/(9472:9472): La pagina 0 no esta en TLB
+[INFO] 14:46:50:127 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 4
+[INFO] 14:46:56:128 cpu/(9472:9472): Recibido numero de marco: 0
+[INFO] 14:46:56:128 cpu/(9472:9472): Ejecutando WRITE: marco 0,  desp 0, valor: 1000
+[INFO] 14:46:57:129 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:46:57:130 cpu/(9472:9472): Ejecutando WRITE: marco 0,  desp 4, valor: 1001
+[INFO] 14:46:58:131 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:46:58:131 cpu/(9472:9472): La pagina 1 no esta en TLB
+[INFO] 14:46:59:132 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 4
+[INFO] 14:47:05:134 cpu/(9472:9472): Recibido numero de marco: 1
+[INFO] 14:47:05:134 cpu/(9472:9472): Ejecutando WRITE: marco 1,  desp 4, valor: 2000
+[INFO] 14:47:06:135 cpu/(9472:9472): Aca busco el operando
+[INFO] 14:47:06:136 cpu/(9472:9472): Fetch operands...
+[INFO] 14:47:06:136 cpu/(9472:9472): Ejecutando READ para marco 1 y desplazamiento 4
+[INFO] 14:47:07:136 cpu/(9472:9472): Dato leido = 2000
+[INFO] 14:47:07:136 cpu/(9472:9472): Ejecutando COPY
+[INFO] 14:47:07:136 cpu/(9472:9472): Ejecutando WRITE: marco 1,  desp 0, valor: 2000
+[INFO] 14:47:08:137 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:47:08:137 cpu/(9472:9472): La pagina 8 no esta en TLB
+[INFO] 14:47:09:142 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 6
+[INFO] 14:47:15:144 cpu/(9472:9472): Recibido numero de marco: 2
+[INFO] 14:47:15:144 cpu/(9472:9472): Ejecutando WRITE: marco 2,  desp 0, valor: 4000
+[INFO] 14:47:16:145 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:47:16:147 cpu/(9472:9472): Ejecutando WRITE: marco 2,  desp 4, valor: 4001
+[INFO] 14:47:17:147 cpu/(9472:9472): Ejecutando IO
+[INFO] 14:47:17:147 cpu/(9472:9472): Rafaga real 28021
+[INFO] 14:47:17:147 cpu/(9472:9472): Proceso 2 estimacion rafaga siguiente 24010.500000
+[INFO] 14:47:17:147 cpu/(9472:9472): Program counter 7 (despues de ejecutar)
+[INFO] 14:47:17:147 cpu/(9472:9472): ==============================================================
+[INFO] 14:47:23:148 cpu/(9472:9472): Proceso 2 -> program counter 7 - est 24010.500000
+[INFO] 14:47:23:149 cpu/(9472:9472): Ejecutando READ
+[INFO] 14:47:23:149 cpu/(9472:9472): La pagina 0 no esta en TLB
+[INFO] 14:47:24:149 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 4
+[INFO] 14:47:30:151 cpu/(9472:9472): Recibido numero de marco: 0
+[INFO] 14:47:30:151 cpu/(9472:9472): Ejecutando READ para marco 0 y desplazamiento 0
+[INFO] 14:47:31:151 cpu/(9472:9472): Dato leido = -1240465064
+[INFO] 14:47:31:152 cpu/(9472:9472): Valor leido -1240465064
+[INFO] 14:47:31:152 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:47:31:152 cpu/(9472:9472): La pagina 4 no esta en TLB
+[INFO] 14:47:32:152 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 5
+[INFO] 14:47:38:154 cpu/(9472:9472): Recibido numero de marco: 2
+[INFO] 14:47:38:154 cpu/(9472:9472): Ejecutando WRITE: marco 2,  desp 0, valor: 3000
+[INFO] 14:47:39:154 cpu/(9472:9472): Ejecutando READ
+[INFO] 14:47:39:154 cpu/(9472:9472): La pagina 1 no esta en TLB
+[INFO] 14:47:40:156 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 4
+[INFO] 14:47:41:156 cpu/(9472:9472): Recibido numero de marco: 1
+[INFO] 14:47:41:156 cpu/(9472:9472): Ejecutando READ para marco 1 y desplazamiento 0
+[INFO] 14:47:42:159 cpu/(9472:9472): Dato leido = 2000
+[INFO] 14:47:42:159 cpu/(9472:9472): Valor leido 2000
+[INFO] 14:47:42:159 cpu/(9472:9472): Ejecutando READ
+[INFO] 14:47:42:159 cpu/(9472:9472): La pagina 8 no esta en TLB
+[INFO] 14:47:43:160 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 6
+[INFO] 14:47:49:162 cpu/(9472:9472): Recibido numero de marco: 1
+[INFO] 14:47:49:163 cpu/(9472:9472): Ejecutando READ para marco 1 y desplazamiento 0
+[INFO] 14:47:50:163 cpu/(9472:9472): Dato leido = -1240465064
+[INFO] 14:47:50:164 cpu/(9472:9472): Valor leido -1240465064
+[INFO] 14:47:50:164 cpu/(9472:9472): Ejecutando WRITE
+[INFO] 14:47:50:164 cpu/(9472:9472): La pagina 15 no esta en TLB
+[INFO] 14:47:51:165 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 7
+[INFO] 14:47:57:166 cpu/(9472:9472): Recibido numero de marco: 1
+[INFO] 14:47:57:166 cpu/(9472:9472): Ejecutando WRITE: marco 1,  desp 160, valor: 9999
+[INFO] 14:47:58:167 cpu/(9472:9472): Ejecutando READ
+[INFO] 14:47:58:167 cpu/(9472:9472): Ejecutando READ para marco 1 y desplazamiento 160
+[INFO] 14:47:59:168 cpu/(9472:9472): Dato leido = 9999
+[INFO] 14:47:59:168 cpu/(9472:9472): Valor leido 9999
+[INFO] 14:47:59:168 cpu/(9472:9472): Ejecutando READ
+[INFO] 14:47:59:168 cpu/(9472:9472): La pagina 4 no esta en TLB
+[INFO] 14:48:00:169 cpu/(9472:9472): Recibida tabla pag 2do nivel numero: 5
+[INFO] 14:48:01:170 cpu/(9472:9472): Recibido numero de marco: 2
+[INFO] 14:48:01:170 cpu/(9472:9472): Ejecutando READ para marco 2 y desplazamiento 0
+[INFO] 14:48:02:171 cpu/(9472:9472): Dato leido = 3000
+[INFO] 14:48:02:171 cpu/(9472:9472): Valor leido 3000
+[INFO] 14:48:02:171 cpu/(9472:9472): Ejecutando EXIT
+[INFO] 14:48:02:171 cpu/(9472:9472): Rafaga real 39022
+[INFO] 14:48:02:171 cpu/(9472:9472): Proceso 2 estimacion rafaga siguiente 31516.250000
+[INFO] 14:48:02:171 cpu/(9472:9472): Program counter 15 (despues de ejecutar)
+[INFO] 14:48:02:171 cpu/(9472:9472): ==============================================================
+[INFO] 14:50:06:093 cpu/(9472:9472): Proceso 60176 -> program counter 15 - est 31516.250000
+[INFO] 14:51:14:557 cpu/(9613:9613): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 14:51:14:559 cpu/(9613:9613): RECIBIDO: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 14:51:14:559 cpu/(9613:9613): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 14:51:14:559 cpu/(9613:9613): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 14:51:14:559 cpu/(9613:9613): CPU_DISPATCH listo para recibir al cliente
+[INFO] 14:51:16:958 cpu/(9613:9613): Cliente conectado (a CPU_DISPATCH)
+[INFO] 14:51:16:958 cpu/(9613:9613): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 14:51:16:958 cpu/(9613:9613): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 14:51:16:958 cpu/(9613:9613): Valor alfa 0.50
+[INFO] 14:51:20:538 cpu/(9613:9613): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 14:51:20:538 cpu/(9613:9613): Ejecutando WRITE
+[INFO] 14:51:20:538 cpu/(9613:9613): La pagina 0 no esta en TLB
+[INFO] 14:51:21:538 cpu/(9613:9613): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:51:27:540 cpu/(9613:9613): Recibido numero de marco: 0
+[INFO] 14:51:27:540 cpu/(9613:9613): Ejecutando WRITE: marco 0,  desp 0, valor: 1000
+[INFO] 14:51:28:541 cpu/(9613:9613): Ejecutando WRITE
+[INFO] 14:51:28:541 cpu/(9613:9613): Ejecutando WRITE: marco 0,  desp 4, valor: 1001
+[INFO] 14:51:29:542 cpu/(9613:9613): Ejecutando WRITE
+[INFO] 14:51:29:542 cpu/(9613:9613): La pagina 1 no esta en TLB
+[INFO] 14:51:30:543 cpu/(9613:9613): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:51:36:545 cpu/(9613:9613): Recibido numero de marco: 1
+[INFO] 14:51:36:545 cpu/(9613:9613): Ejecutando WRITE: marco 1,  desp 4, valor: 2000
+[INFO] 14:51:37:545 cpu/(9613:9613): Aca busco el operando
+[INFO] 14:51:37:546 cpu/(9613:9613): Fetch operands...
+[INFO] 14:51:37:546 cpu/(9613:9613): Ejecutando READ para marco 1 y desplazamiento 4
+[INFO] 14:51:38:546 cpu/(9613:9613): Dato leido = 2000
+[INFO] 14:51:38:547 cpu/(9613:9613): Ejecutando COPY
+[INFO] 14:51:38:547 cpu/(9613:9613): Ejecutando WRITE: marco 1,  desp 0, valor: 2000
+[INFO] 14:51:39:548 cpu/(9613:9613): Ejecutando WRITE
+[INFO] 14:51:39:548 cpu/(9613:9613): La pagina 8 no esta en TLB
+[INFO] 14:51:40:549 cpu/(9613:9613): Recibida tabla pag 2do nivel numero: 2
+[INFO] 14:51:46:552 cpu/(9613:9613): Recibido numero de marco: 2
+[INFO] 14:51:46:553 cpu/(9613:9613): Ejecutando WRITE: marco 2,  desp 0, valor: 4000
+[INFO] 14:51:47:553 cpu/(9613:9613): Ejecutando WRITE
+[INFO] 14:51:47:553 cpu/(9613:9613): Ejecutando WRITE: marco 2,  desp 4, valor: 4001
+[INFO] 14:51:48:554 cpu/(9613:9613): Ejecutando IO
+[INFO] 14:51:48:554 cpu/(9613:9613): Rafaga real 28016
+[INFO] 14:51:48:555 cpu/(9613:9613): Proceso 1 estimacion rafaga siguiente 24008.000000
+[INFO] 14:51:48:555 cpu/(9613:9613): Program counter 7 (despues de ejecutar)
+[INFO] 14:51:48:555 cpu/(9613:9613): ==============================================================
+[INFO] 14:51:54:555 cpu/(9613:9613): Proceso 1 -> program counter 7 - est 24008.000000
+[INFO] 14:51:54:555 cpu/(9613:9613): Ejecutando READ
+[INFO] 14:51:54:555 cpu/(9613:9613): La pagina 0 no esta en TLB
+[INFO] 14:51:55:556 cpu/(9613:9613): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:52:01:558 cpu/(9613:9613): Recibido numero de marco: 0
+[INFO] 14:52:01:558 cpu/(9613:9613): Ejecutando READ para marco 0 y desplazamiento 0
+[INFO] 14:52:02:558 cpu/(9613:9613): Dato leido = 0
+[INFO] 14:52:02:559 cpu/(9613:9613): Valor leido 0
+[INFO] 14:52:02:559 cpu/(9613:9613): Ejecutando WRITE
+[INFO] 14:52:02:559 cpu/(9613:9613): La pagina 4 no esta en TLB
+[INFO] 14:52:03:559 cpu/(9613:9613): Recibida tabla pag 2do nivel numero: 1
+[INFO] 14:52:09:561 cpu/(9613:9613): Recibido numero de marco: 2
+[INFO] 14:52:09:561 cpu/(9613:9613): Ejecutando WRITE: marco 2,  desp 0, valor: 3000
+[INFO] 14:52:10:562 cpu/(9613:9613): Ejecutando READ
+[INFO] 14:52:10:562 cpu/(9613:9613): La pagina 1 no esta en TLB
+[INFO] 14:52:11:562 cpu/(9613:9613): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:52:12:563 cpu/(9613:9613): Recibido numero de marco: 1
+[INFO] 14:52:12:563 cpu/(9613:9613): Ejecutando READ para marco 1 y desplazamiento 0
+[INFO] 14:52:13:564 cpu/(9613:9613): Dato leido = 2000
+[INFO] 14:52:13:564 cpu/(9613:9613): Valor leido 2000
+[INFO] 14:52:13:564 cpu/(9613:9613): Ejecutando READ
+[INFO] 14:52:13:564 cpu/(9613:9613): La pagina 8 no esta en TLB
+[INFO] 14:52:14:565 cpu/(9613:9613): Recibida tabla pag 2do nivel numero: 2
+[INFO] 14:52:19:908 cpu/(9613:9613): Recibido numero de marco: -1
+[INFO] 14:52:19:908 cpu/(9613:9613): Ejecutando READ para marco -1 y desplazamiento 0
+[INFO] 14:53:45:260 cpu/(9682:9682): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 14:53:45:261 cpu/(9682:9682): RECIBIDO: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 14:53:45:261 cpu/(9682:9682): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 14:53:45:261 cpu/(9682:9682): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 14:53:45:262 cpu/(9682:9682): CPU_DISPATCH listo para recibir al cliente
+[INFO] 14:53:48:456 cpu/(9682:9682): Cliente conectado (a CPU_DISPATCH)
+[INFO] 14:53:48:456 cpu/(9682:9682): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 14:53:48:456 cpu/(9682:9682): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 14:53:48:456 cpu/(9682:9682): Valor alfa 0.50
+[INFO] 14:53:53:531 cpu/(9682:9682): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 14:53:53:531 cpu/(9682:9682): Ejecutando WRITE
+[INFO] 14:53:53:531 cpu/(9682:9682): La pagina 0 no esta en TLB
+[INFO] 14:53:54:532 cpu/(9682:9682): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:54:00:535 cpu/(9682:9682): Recibido numero de marco: 0
+[INFO] 14:54:00:535 cpu/(9682:9682): Ejecutando WRITE: marco 0,  desp 0, valor: 1000
+[INFO] 14:54:01:536 cpu/(9682:9682): Ejecutando WRITE
+[INFO] 14:54:01:536 cpu/(9682:9682): Ejecutando WRITE: marco 0,  desp 4, valor: 1001
+[INFO] 14:54:02:536 cpu/(9682:9682): Ejecutando WRITE
+[INFO] 14:54:02:539 cpu/(9682:9682): La pagina 1 no esta en TLB
+[INFO] 14:54:03:539 cpu/(9682:9682): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:54:09:540 cpu/(9682:9682): Recibido numero de marco: 1
+[INFO] 14:54:09:541 cpu/(9682:9682): Ejecutando WRITE: marco 1,  desp 4, valor: 2000
+[INFO] 14:54:10:544 cpu/(9682:9682): Aca busco el operando
+[INFO] 14:54:10:544 cpu/(9682:9682): Fetch operands...
+[INFO] 14:54:10:544 cpu/(9682:9682): Ejecutando READ para marco 1 y desplazamiento 4
+[INFO] 14:54:11:545 cpu/(9682:9682): Dato leido = 2000
+[INFO] 14:54:11:545 cpu/(9682:9682): Ejecutando COPY
+[INFO] 14:54:11:545 cpu/(9682:9682): Ejecutando WRITE: marco 1,  desp 0, valor: 2000
+[INFO] 14:54:12:546 cpu/(9682:9682): Ejecutando WRITE
+[INFO] 14:54:12:546 cpu/(9682:9682): La pagina 8 no esta en TLB
+[INFO] 14:54:13:547 cpu/(9682:9682): Recibida tabla pag 2do nivel numero: 2
+[INFO] 14:54:19:549 cpu/(9682:9682): Recibido numero de marco: 2
+[INFO] 14:54:19:549 cpu/(9682:9682): Ejecutando WRITE: marco 2,  desp 0, valor: 4000
+[INFO] 14:54:20:552 cpu/(9682:9682): Ejecutando WRITE
+[INFO] 14:54:20:552 cpu/(9682:9682): Ejecutando WRITE: marco 2,  desp 4, valor: 4001
+[INFO] 14:54:21:553 cpu/(9682:9682): Ejecutando IO
+[INFO] 14:54:21:553 cpu/(9682:9682): Rafaga real 28021
+[INFO] 14:54:21:553 cpu/(9682:9682): Proceso 1 estimacion rafaga siguiente 24010.500000
+[INFO] 14:54:21:553 cpu/(9682:9682): Program counter 7 (despues de ejecutar)
+[INFO] 14:54:21:553 cpu/(9682:9682): ==============================================================
+[INFO] 14:54:27:554 cpu/(9682:9682): Proceso 1 -> program counter 7 - est 24010.500000
+[INFO] 14:54:27:555 cpu/(9682:9682): Ejecutando READ
+[INFO] 14:54:27:555 cpu/(9682:9682): La pagina 0 no esta en TLB
+[INFO] 14:54:28:555 cpu/(9682:9682): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:54:34:556 cpu/(9682:9682): Recibido numero de marco: 0
+[INFO] 14:54:34:557 cpu/(9682:9682): Ejecutando READ para marco 0 y desplazamiento 0
+[INFO] 14:54:35:557 cpu/(9682:9682): Dato leido = 0
+[INFO] 14:54:35:557 cpu/(9682:9682): Valor leido 0
+[INFO] 14:54:35:558 cpu/(9682:9682): Ejecutando WRITE
+[INFO] 14:54:35:558 cpu/(9682:9682): La pagina 4 no esta en TLB
+[INFO] 14:54:36:558 cpu/(9682:9682): Recibida tabla pag 2do nivel numero: 1
+[INFO] 14:54:42:559 cpu/(9682:9682): Recibido numero de marco: 2
+[INFO] 14:54:42:561 cpu/(9682:9682): Ejecutando WRITE: marco 2,  desp 0, valor: 3000
+[INFO] 14:54:43:562 cpu/(9682:9682): Ejecutando READ
+[INFO] 14:54:43:562 cpu/(9682:9682): La pagina 1 no esta en TLB
+[INFO] 14:54:44:562 cpu/(9682:9682): Recibida tabla pag 2do nivel numero: 0
+[INFO] 14:54:45:563 cpu/(9682:9682): Recibido numero de marco: 1
+[INFO] 14:54:45:564 cpu/(9682:9682): Ejecutando READ para marco 1 y desplazamiento 0
+[INFO] 14:54:46:565 cpu/(9682:9682): Dato leido = 2000
+[INFO] 14:54:46:566 cpu/(9682:9682): Valor leido 2000
+[INFO] 14:54:46:566 cpu/(9682:9682): Ejecutando READ
+[INFO] 14:54:46:566 cpu/(9682:9682): La pagina 8 no esta en TLB
+[INFO] 14:54:47:566 cpu/(9682:9682): Recibida tabla pag 2do nivel numero: 2
+[INFO] 14:54:52:942 cpu/(9682:9682): Recibido numero de marco: -1
+[INFO] 14:54:52:942 cpu/(9682:9682): Ejecutando READ para marco -1 y desplazamiento 0
+[INFO] 15:01:48:346 cpu/(9864:9864): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 15:01:48:351 cpu/(9864:9864): RECIBIDO: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 15:01:48:351 cpu/(9864:9864): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 15:01:48:351 cpu/(9864:9864): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 15:01:48:351 cpu/(9864:9864): CPU_DISPATCH listo para recibir al cliente
+[INFO] 15:01:50:093 cpu/(9864:9864): Cliente conectado (a CPU_DISPATCH)
+[INFO] 15:01:50:093 cpu/(9864:9864): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 15:01:50:093 cpu/(9864:9864): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 15:01:50:094 cpu/(9864:9864): Valor alfa 0.50
+[INFO] 15:01:53:601 cpu/(9864:9864): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 15:01:53:601 cpu/(9864:9864): Ejecutando WRITE
+[INFO] 15:01:53:601 cpu/(9864:9864): La pagina 0 no esta en TLB
+[INFO] 15:01:54:602 cpu/(9864:9864): Recibida tabla pag 2do nivel numero: 0
+[INFO] 15:02:00:604 cpu/(9864:9864): Recibido numero de marco: 0
+[INFO] 15:02:00:604 cpu/(9864:9864): Ejecutando WRITE: marco 0,  desp 0, valor: 1000
+[INFO] 15:02:01:605 cpu/(9864:9864): Ejecutando WRITE
+[INFO] 15:02:01:605 cpu/(9864:9864): Ejecutando WRITE: marco 0,  desp 4, valor: 1001
+[INFO] 15:02:02:606 cpu/(9864:9864): Ejecutando WRITE
+[INFO] 15:02:02:607 cpu/(9864:9864): La pagina 1 no esta en TLB
+[INFO] 15:02:03:608 cpu/(9864:9864): Recibida tabla pag 2do nivel numero: 0
+[INFO] 15:02:09:609 cpu/(9864:9864): Recibido numero de marco: 1
+[INFO] 15:02:09:609 cpu/(9864:9864): Ejecutando WRITE: marco 1,  desp 4, valor: 2000
+[INFO] 15:02:10:610 cpu/(9864:9864): Aca busco el operando
+[INFO] 15:02:10:610 cpu/(9864:9864): Fetch operands...
+[INFO] 15:02:10:610 cpu/(9864:9864): Ejecutando READ para marco 1 y desplazamiento 4
+[INFO] 15:02:11:611 cpu/(9864:9864): Dato leido = 2000
+[INFO] 15:02:11:613 cpu/(9864:9864): Ejecutando COPY
+[INFO] 15:02:11:613 cpu/(9864:9864): Ejecutando WRITE: marco 1,  desp 0, valor: 2000
+[INFO] 15:02:12:613 cpu/(9864:9864): Ejecutando WRITE
+[INFO] 15:02:12:614 cpu/(9864:9864): La pagina 8 no esta en TLB
+[INFO] 15:02:13:620 cpu/(9864:9864): Recibida tabla pag 2do nivel numero: 2
+[INFO] 15:02:19:622 cpu/(9864:9864): Recibido numero de marco: 2
+[INFO] 15:02:19:622 cpu/(9864:9864): Ejecutando WRITE: marco 2,  desp 0, valor: 4000
+[INFO] 15:02:20:623 cpu/(9864:9864): Ejecutando WRITE
+[INFO] 15:02:20:623 cpu/(9864:9864): Ejecutando WRITE: marco 2,  desp 4, valor: 4001
+[INFO] 15:02:21:624 cpu/(9864:9864): Ejecutando IO
+[INFO] 15:02:21:624 cpu/(9864:9864): Rafaga real 28022
+[INFO] 15:02:21:624 cpu/(9864:9864): Proceso 1 estimacion rafaga siguiente 24011.000000
+[INFO] 15:02:21:624 cpu/(9864:9864): Program counter 7 (despues de ejecutar)
+[INFO] 15:02:21:624 cpu/(9864:9864): ==============================================================
+[INFO] 15:02:27:625 cpu/(9864:9864): Proceso 1 -> program counter 7 - est 24011.000000
+[INFO] 15:02:27:625 cpu/(9864:9864): Ejecutando READ
+[INFO] 15:02:27:625 cpu/(9864:9864): La pagina 0 no esta en TLB
+[INFO] 15:02:28:626 cpu/(9864:9864): Recibida tabla pag 2do nivel numero: 0
+[INFO] 15:02:34:627 cpu/(9864:9864): Recibido numero de marco: 0
+[INFO] 15:02:34:629 cpu/(9864:9864): Ejecutando READ para marco 0 y desplazamiento 0
+[INFO] 15:02:35:630 cpu/(9864:9864): Dato leido = 0
+[INFO] 15:02:35:630 cpu/(9864:9864): Valor leido 0
+[INFO] 15:02:35:630 cpu/(9864:9864): Ejecutando WRITE
+[INFO] 15:02:35:630 cpu/(9864:9864): La pagina 4 no esta en TLB
+[INFO] 15:02:36:631 cpu/(9864:9864): Recibida tabla pag 2do nivel numero: 1
+[INFO] 15:02:42:632 cpu/(9864:9864): Recibido numero de marco: 2
+[INFO] 15:02:42:633 cpu/(9864:9864): Ejecutando WRITE: marco 2,  desp 0, valor: 3000
+[INFO] 15:02:43:633 cpu/(9864:9864): Ejecutando READ
+[INFO] 15:02:43:633 cpu/(9864:9864): La pagina 1 no esta en TLB
+[INFO] 15:02:44:634 cpu/(9864:9864): Recibida tabla pag 2do nivel numero: 0
+[INFO] 15:02:45:635 cpu/(9864:9864): Recibido numero de marco: 1
+[INFO] 15:02:45:635 cpu/(9864:9864): Ejecutando READ para marco 1 y desplazamiento 0
+[INFO] 15:02:46:636 cpu/(9864:9864): Dato leido = 2000
+[INFO] 15:02:46:636 cpu/(9864:9864): Valor leido 2000
+[INFO] 15:02:46:636 cpu/(9864:9864): Ejecutando READ
+[INFO] 15:02:46:636 cpu/(9864:9864): La pagina 8 no esta en TLB
+[INFO] 15:02:47:637 cpu/(9864:9864): Recibida tabla pag 2do nivel numero: 2
+[INFO] 15:06:17:519 cpu/(9864:9864): Recibido numero de marco: -1
+[INFO] 15:06:17:519 cpu/(9864:9864): Ejecutando READ para marco -1 y desplazamiento 0
