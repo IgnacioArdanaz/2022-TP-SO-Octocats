@@ -491,6 +491,12 @@ uint32_t clock_simple(FILE* swap){
 	return 0;
 }
 
+uint16_t retroceder_puntero(uint16_t puntero_clock, uint16_t maximo){
+	if (puntero_clock == 0)
+		return maximo - 1;
+	return puntero_clock - 1;
+}
+
 uint32_t clock_modificado(FILE* swap){
 	estructura_clock* estructura = buscar_estructura_clock(pid_actual);
 	uint16_t puntero_clock = estructura->puntero;
@@ -516,7 +522,7 @@ uint32_t clock_modificado(FILE* swap){
 			}
 			//Condición para ir al siguiente paso
 			if (puntero_clock == estructura->puntero){
-				puntero_clock--; //Lo retrocedo porque abajo se incrementa de nuevo
+				puntero_clock = retroceder_puntero(puntero_clock, list_size(estructura->marcos_en_memoria)); //Lo retrocedo porque abajo se incrementa de nuevo
 				break;
 			}
 		}
@@ -539,7 +545,7 @@ uint32_t clock_modificado(FILE* swap){
 
 			//Condición para ir al siguiente paso
 			if (puntero_clock == estructura->puntero){
-				puntero_clock--;
+				puntero_clock = retroceder_puntero(puntero_clock, list_size(estructura->marcos_en_memoria)); //Lo retrocedo porque abajo se incrementa de nuevo
 				break;
 			}
 		}
