@@ -1,19 +1,6 @@
-13:31:33 **** Incremental Build of configuration Debug for project memoria ****
+14:21:49 **** Incremental Build of configuration Debug for project memoria ****
 make all 
-Building file: ../src/memoria_swap.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_swap.d" -MT"src/memoria_swap.o" -o "src/memoria_swap.o" "../src/memoria_swap.c"
-../src/memoria_swap.c: In function ‘leer_marco_en_swap’:
-../src/memoria_swap.c:60:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘__off_t {aka long int}’ [-Wformat=]
-    printf("Parametros pasados: tam %d fd %d offset %d\n",sb.st_size, fd, nro_marco * tamanio_marcos);
-           ^
-Finished building: ../src/memoria_swap.c
- 
-Building target: memoria
-Invoking: GCC C Linker
-gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lpthread -lshared
-Finished building target: memoria
- 
+make: Nothing to be done for 'all'.
 
-13:31:35 Build Finished (took 2s.350ms)
+14:21:50 Build Finished (took 1s.86ms)
 

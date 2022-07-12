@@ -75,7 +75,7 @@ void inicializar_memoria(){
 	retardo_memoria = config_get_int_value(config,"RETARDO_MEMORIA");
 	marcos_por_proceso = config_get_int_value(config,"MARCOS_POR_PROCESO");
 	algoritmo = config_get_string_value(config,"ALGORITMO_REEMPLAZO");
-
+	log_info(logger,"Algoritmo %s configurado", algoritmo);
 	char* ip = config_get_string_value(config,"IP");
 	char* puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
 	server_memoria = iniciar_servidor(logger, "MEMORIA", ip, puerto_escucha);
@@ -121,7 +121,6 @@ void recibir_kernel() {
 		switch (cop) {
 			case CREAR_TABLA:
 			{
-				log_info(logger, "[KERNEL] Entre a crear tabla");
 				uint16_t tamanio = 123;
 				uint16_t pid = 123;
 				recv(cliente_kernel, &tamanio, sizeof(uint16_t), 0);
@@ -145,7 +144,6 @@ void recibir_kernel() {
 			}
 			case SUSPENDER_PROCESO:
 			{
-				log_info(logger, "[KERNEL] Entre a suspender proceso");
 				uint32_t tabla_paginas = 0;
 				uint16_t pid = 0;
 				recv(cliente_kernel, &pid, sizeof(uint16_t),0);
@@ -169,7 +167,6 @@ void recibir_kernel() {
 			}
 			case ELIMINAR_ESTRUCTURAS:
 			{
-				log_info(logger, "[KERNEL] Entre a eliminar estructuras");
 				uint32_t tabla_paginas = 0;
 				uint16_t pid = 0;
 
@@ -307,7 +304,6 @@ void recibir_cpu() {
 //				}
 
 				fila_1er_nivel nro_tabla_2do_nivel = obtener_nro_tabla_2do_nivel(nro_tabla_1er_nivel, entrada_tabla, pid);
-				log_info(logger, "[CPU] Numero de tabla de 2do nivel = %d", nro_tabla_2do_nivel);
 
 				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &nro_tabla_2do_nivel, sizeof(fila_1er_nivel), 0);
@@ -359,7 +355,6 @@ void recibir_cpu() {
 //				}
 
 				uint32_t dato = read_en_memoria(nro_marco, desplazamiento);
-				log_info(logger, "[CPU] Dato leido '%d'", dato);
 
 				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &dato, sizeof(uint32_t), 0);
@@ -560,6 +555,7 @@ void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do
 	log_info(logger, "[CPU] Pagina victima elegida: %d",nro_marco_en_swap);
 	// si tiene el bit de modificado en 1, hay que actualizar el archivo swap
 	if (entrada_2do_nivel->modificado == 1){
+		log_info(logger,"[CPU] Actualizando pagina victima en swap (bit de modificado = 1)");
 		actualizar_marco_en_swap(get_fd(pid), nro_marco_en_swap, obtener_marco(entrada_2do_nivel->nro_marco), tam_pagina);
 		entrada_2do_nivel->modificado = 0;
 	}
