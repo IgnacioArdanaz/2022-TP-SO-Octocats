@@ -2,12 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="DISCONNECT FA" key="selection"/>
+		<item value="Antes de" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="antes de"/>
+			<item value="a punto de"/>
+			<item value="agregar_pa"/>
+			<item value="agregar_es"/>
+			<item value="reemplazo_po"/>
+			<item value="reempl"/>
+			<item value="vict"/>
 			<item value="DISCONNECT FA"/>
 			<item value="DISCONNECT FAILURE"/>
 			<item value="DISCONNECT FAILURE EN"/>
@@ -16,13 +23,6 @@
 			<item value="leer_"/>
 			<item value="nro ma"/>
 			<item value="en swap"/>
-			<item value="nro"/>
-			<item value="page"/>
-			<item value="log_inf"/>
-			<item value="tra"/>
-			<item value="Trayendo"/>
-			<item value="marco"/>
-			<item value="Trayendo marco"/>
 		</list>
 		<list key="replacehistory">
 			<item value="s_pasaje_a_ready"/>

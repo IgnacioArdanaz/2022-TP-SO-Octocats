@@ -15,6 +15,9 @@ t_list* lista_estructuras_clock;
 uint8_t* bitarray_marcos_ocupados;
 void* memoria;
 
+// fd de swaps
+t_dictionary* fd_swaps;
+
 // Datos config
 char* algoritmo;
 uint16_t tam_memoria;
@@ -25,6 +28,20 @@ uint16_t marcos_por_proceso;
 
 // Extras
 uint16_t pid_actual;
+
+// funciones para no pasar a char cada vez que accedemos
+
+int get_fd(uint16_t pid){
+	char* key = string_itoa(pid);
+	return (int) dictionary_get(fd_swaps, key);
+}
+
+void set_fd(uint16_t pid, int fd){
+	char* key = string_itoa(pid);
+	dictionary_put(fd_swaps, key, fd);
+}
+
+////////////////////////////////////////
 
 void imprimir_tablas_1(){
 	printf("TABLAS 1ER NIVEL:\n");
@@ -67,13 +84,13 @@ void inicializar_memoria(){
 	log_info(logger, "Enviando a CPU: tam_pagina=%d - cant_ent_paginas=%d", tam_pagina, entradas_por_tabla);
 	send(cliente_cpu, &entradas_por_tabla, sizeof(uint16_t),0);
 	send(cliente_cpu, &tam_pagina, sizeof(uint16_t),0);
-//	send_datos_necesarios(cliente_cpu, entradas_por_tabla, tam_pagina);
 	cliente_kernel = esperar_cliente(logger, "MEMORIA", server_memoria);
 
 	memoria = malloc(tam_memoria);
 	lista_tablas_1er_nivel = list_create();
 	lista_tablas_2do_nivel = list_create();
 	lista_estructuras_clock = list_create();
+	fd_swaps = dictionary_create();
 	bitarray_marcos_ocupados = malloc(tam_memoria / tam_pagina);
 	for (int i = 0; i < tam_memoria / tam_pagina; i++)
 		bitarray_marcos_ocupados[i] = 0;
@@ -185,20 +202,21 @@ void recibir_kernel() {
 uint32_t crear_tablas(uint16_t pid, uint16_t tamanio){
 	int marcos_req = calcular_cant_marcos(tamanio);
 	fila_1er_nivel* tabla_1er_nivel = malloc(sizeof(int32_t) * entradas_por_tabla);
-	FILE* swap = crear_archivo_swap(pid);
+	int fd = crear_archivo_swap(pid, tamanio);
+	set_fd(pid, fd);
 	inicializar_tabla_1er_nivel(tabla_1er_nivel); //Pone todas las entradas en -1
+	int nro_pagina = 0;
 	for (int i = 0; i < entradas_por_tabla && marcos_req > marcos_actuales(i, 0); i++){
 		fila_2do_nivel* tabla_2do_nivel = malloc(entradas_por_tabla * sizeof(fila_2do_nivel));
 		inicializar_tabla_2do_nivel(tabla_2do_nivel); //Pone todas las entradas en -1
 		for (int j = 0 ; j < entradas_por_tabla && marcos_req > marcos_actuales(i, j); j++){
-			uint32_t nro_marco = agregar_marco_en_swap(swap, tam_pagina);
-			fila_2do_nivel fila = {nro_marco,0,0,0}; //Podria ser {0,0,0,0}
+			fila_2do_nivel fila = {nro_pagina,0,0,0}; //Podria ser {0,0,0,0}
+			nro_pagina++; // incrementamos el nro de pagina
 			tabla_2do_nivel[j] = fila;
 		}
 		uint32_t nro_tabla_2do_nivel = list_add(lista_tablas_2do_nivel, tabla_2do_nivel);
 		tabla_1er_nivel[i] = nro_tabla_2do_nivel;
 	}
-	cerrar_archivo_swap(swap);
 	crear_estructura_clock(pid);
 	return list_add(lista_tablas_1er_nivel, tabla_1er_nivel);
 }
@@ -217,29 +235,23 @@ void inicializar_tabla_2do_nivel(fila_2do_nivel* tabla_2do_nivel){
 
 // SUSPENSIÓN DE PROCESO
 void suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
-	printf("Antes de abrir arch swap \n");
-	FILE* swap = abrir_archivo_swap(pid);
-	printf("Desp de abrir arch swap \n");
+	int fd = get_fd(pid);
 	estructura_clock* estructura = buscar_estructura_clock(pid);
-	printf("Desp de buscar estructura clock (pid = %d, puntero = %d\n", estructura->pid, estructura->puntero);
-//	printf("Desp de buscar estructura clock (pid = %d, puntero = %d, size marcos = %d \n", estructura->pid, estructura->puntero, list_size(estructura->marcos_en_memoria));
 	fila_estructura_clock* fila_busqueda;
 	for (int i = 0; i < list_size(estructura->marcos_en_memoria); i++){
 		fila_busqueda = list_get(estructura->marcos_en_memoria, i);
 		bitarray_marcos_ocupados[fila_busqueda->nro_marco_en_memoria] = 0;
 		if(fila_busqueda->pagina->modificado == 1){
-			printf("Antes de actualizar marco\n");
-			actualizar_marco_en_swap(swap, fila_busqueda->nro_marco_en_swap, obtener_marco(fila_busqueda->nro_marco_en_memoria), tam_pagina);
-			printf("Desp de actualizar marco\n");
+			void* marco = obtener_marco(fila_busqueda->nro_marco_en_memoria);
+			actualizar_marco_en_swap(fd, fila_busqueda->nro_marco_en_swap, marco, tam_pagina);
 		}
 		fila_busqueda->pagina->presencia = 0;
 		fila_busqueda->pagina->uso = 0;
 		fila_busqueda->pagina->modificado = 0;
 		estructura->puntero = 0;
-		printf("Antes de eliminar de estructura clock\n");
 		list_remove(estructura->marcos_en_memoria, i); //Lo hago aparte porque me da miedo usar malloc
+		free(fila_busqueda);
 	}
-	cerrar_archivo_swap(swap);
 }
 
 // FINALIZACIÓN DE PROCESO
@@ -252,7 +264,7 @@ void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
 		fila_busqueda = list_get(estructura->marcos_en_memoria, i);
 		bitarray_marcos_ocupados[fila_busqueda->nro_marco_en_memoria] = 0;
 	}
-	borrar_archivo_swap(pid);
+	borrar_archivo_swap(pid, get_fd(pid));
 }
 
 /***********************************************************************/
@@ -271,14 +283,14 @@ void recibir_cpu() {
 		if (recv(cliente_cpu, &cop, sizeof(op_code), 0) <= 0) {
 			pthread_mutex_lock(&mx_log);
 			//log_error(logger,"DISCONNECT FAILURE EN CPU!");
-			printf("DISCONNECT FAILURE EN CPU!\n");
+			log_error(logger,"DISCONNECT FAILURE EN CPU!");
 			pthread_mutex_unlock(&mx_log);
 			exit(-1);
 		}
 		switch (cop) {
 			case SOLICITUD_NRO_TABLA_2DO_NIVEL:
 			{
-				log_info(logger, "[CPU] Entre a sol nro tabla 2");
+				log_info(logger, "[CPU] Procesando solicitud de nro tabla de 2do nivel...");
 				uint16_t pid = 0;
 				uint32_t nro_tabla_1er_nivel = 0;
 				uint32_t entrada_tabla = 0;
@@ -294,7 +306,6 @@ void recibir_cpu() {
 //					break;
 //				}
 
-				log_info(logger, "[CPU] Obteniendo el numero de tabla de 2do nivel (pid = %d | nro_tabla_1er_nivel = %d | entrada_tabla = %d)", pid, nro_tabla_1er_nivel, entrada_tabla);
 				fila_1er_nivel nro_tabla_2do_nivel = obtener_nro_tabla_2do_nivel(nro_tabla_1er_nivel, entrada_tabla, pid);
 				log_info(logger, "[CPU] Numero de tabla de 2do nivel = %d", nro_tabla_2do_nivel);
 
@@ -305,7 +316,7 @@ void recibir_cpu() {
 			}
 			case SOLICITUD_NRO_MARCO:
 			{
-				log_info(logger, "[CPU] Entre a solicitud nro marco");
+				log_info(logger, "[CPU] Procesando solicitud de nro marco...");
 				uint16_t pid = 0; // No se usa por ahora
 				uint32_t nro_tabla_2do_nivel = 0;
 				uint32_t entrada_tabla = 0;
@@ -323,7 +334,6 @@ void recibir_cpu() {
 //					break;
 //				}
 
-				log_info(logger, "[CPU] Obteniendo numero de marco (nro_tabla_2do_nivel = %d | entrada_tabla = %d | index_tabla_1er_nivel = %d)", nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
 				uint32_t nro_marco = obtener_nro_marco_memoria(nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
 				log_info(logger, "[CPU] Numero de marco obtenido = %d", nro_marco);
 
@@ -334,7 +344,7 @@ void recibir_cpu() {
 			}
 			case READ:
 			{
-				log_info(logger, "[CPU] Entre a read");
+				log_info(logger, "[CPU] Procesando lectura...");
 				uint32_t nro_marco;
 				uint32_t desplazamiento;
 
@@ -348,7 +358,6 @@ void recibir_cpu() {
 //					break;
 //				}
 
-				log_info(logger, "[CPU] Obteniendo dato (nro_marco = %d, desplazamiento = %d)", nro_marco, desplazamiento);
 				uint32_t dato = read_en_memoria(nro_marco, desplazamiento);
 				log_info(logger, "[CPU] Dato leido '%d'", dato);
 
@@ -359,7 +368,7 @@ void recibir_cpu() {
 			}
 			case WRITE:
 			{
-				log_info(logger, "[CPU] Entre a write");
+				log_info(logger, "[CPU] Procesando escritura...");
 				uint32_t nro_marco;
 				uint32_t desplazamiento;
 				uint32_t dato;
@@ -375,8 +384,8 @@ void recibir_cpu() {
 //					break;
 //				}
 
-				log_info(logger, "[CPU] Escribiendo '%d' (nro_marco = %d, desplazamiento = %d)", dato, nro_marco, desplazamiento);
 				write_en_memoria(nro_marco, desplazamiento, dato);
+				log_info(logger, "[CPU] Dato escrito: '%d' (nro_marco = %d, desplazamiento = %d)", dato, nro_marco, desplazamiento);
 
 				op_code resultado = ESCRITURA_OK;
 				usleep(retardo_memoria * 1000);
@@ -401,7 +410,7 @@ fila_1er_nivel obtener_nro_tabla_2do_nivel(int32_t nro_tabla, uint32_t index, ui
 	log_info(logger, "[CPU] Tabla : %d - Index: %d - PID: %d - Resultado: %d", nro_tabla, index, pid, tabla[index]);
 	// TODO configurar que le devuelva un mensaje de error a la CPU para que finalice el proceso por error
 	if (tabla[index] == -1){
-		log_error(logger, "SEGMENTATION FAULT!!");
+		log_error(logger, "SEGMENTATION FAULT!! El proceso no es lo suficientemente grande!");
 		exit(-1);
 	}
 	return tabla[index];
@@ -413,29 +422,28 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 	fila_2do_nivel* tabla_2do_nivel = list_get(lista_tablas_2do_nivel, nro_tabla);
 	fila_2do_nivel* pagina = &tabla_2do_nivel[index];
 	if (pagina->presencia == 1){
-		log_info(logger, "[CPU] Presencia = 1");
+		log_info(logger, "[CPU] Pagina en memoria principal!");
 		pagina->uso = 1;
 		return pagina->nro_marco;
 	}
-	log_info(logger, "[CPU] PAGE FAULT");
+	log_info(logger, "[CPU] PAGE FAULT!!!");
+	int fd = get_fd(pid_actual);
 	// si no esta en memoria, traerlo (HAY PAGE FAULT)
-	FILE* swap = abrir_archivo_swap(pid_actual);
-	void* marco = leer_marco_en_swap(swap,nro_tabla * entradas_por_tabla + index, tam_pagina);
+	void* marco = leer_marco_en_swap(fd,nro_tabla * entradas_por_tabla + index, tam_pagina);
 	int32_t nro_marco;
 	// si ya ocupa todos los marcos que puede ocupar, hacer un reemplazo (EJECUTAR ALGORITMO)
 	if (marcos_en_memoria() == marcos_por_proceso){
 		//Devuelve el marco donde estaba la víctima, que es donde voy a colocar la nueva página
-		nro_marco = usar_algoritmo(swap);
+		nro_marco = usar_algoritmo(pid_actual);
 	}
 	else{
 		nro_marco = buscar_marco_libre();
-		log_info(logger, "[CPU] El proceso tiene marcos disponibles, no hubo reemplazo");
+		log_info(logger, "[CPU] El proceso tiene marcos disponibles :)");
 		if (nro_marco == -1){
 			log_error(logger, "ERROR!!!!! NO HAY MARCOS LIBRES EN MEMORIA!!!");
 			exit(EXIT_FAILURE);
 		}
 	}
-	cerrar_archivo_swap(swap);
 	bitarray_marcos_ocupados[nro_marco] = 1;
 	pagina->nro_marco = nro_marco;
 	pagina->presencia = 1;
@@ -448,21 +456,21 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 }
 
 // Vemos que algoritmo usar y lo usamos
-uint32_t usar_algoritmo(FILE* swap){
+uint32_t usar_algoritmo(int pid){
 	if (strcmp(algoritmo, "CLOCK-M") == 0){
 		log_info(logger, "[CPU] Reemplazo por CLOCK-M");
-		return clock_modificado(swap);
+		return clock_modificado(pid);
 	}
 	else if (strcmp(algoritmo, "CLOCK") == 0){
 		log_info(logger, "[CPU] Reemplazo por CLOCK");
-		return clock_simple(swap);
+		return clock_simple(pid);
 	}
 	else{
 		exit(-1);
 	}
 }
 
-uint32_t clock_simple(FILE* swap){
+uint32_t clock_simple(int pid){
 	// hasta que no encuentre uno no para
 	estructura_clock* estructura = buscar_estructura_clock(pid_actual);
 	uint16_t puntero_clock = estructura->puntero;
@@ -478,7 +486,7 @@ uint32_t clock_simple(FILE* swap){
 		puntero_clock = avanzar_puntero(puntero_clock);
 
 		if (pagina->uso == 0){ //Encontró a la víctima
-			reemplazo_por_clock(nro_marco_en_swap, pagina, swap);
+			reemplazo_por_clock(nro_marco_en_swap, pagina, pid);
 			log_info(logger, "[CPU] Posición final puntero: %d",puntero_clock);
 			estructura->puntero = puntero_clock; //Guardo el puntero actualizado.
 			return nro_marco;
@@ -491,7 +499,7 @@ uint32_t clock_simple(FILE* swap){
 	return 0;
 }
 
-uint32_t clock_modificado(FILE* swap){
+uint32_t clock_modificado(int pid){
 	estructura_clock* estructura = buscar_estructura_clock(pid_actual);
 	uint16_t puntero_clock = estructura->puntero;
 	fila_estructura_clock* fila;
@@ -509,7 +517,7 @@ uint32_t clock_modificado(FILE* swap){
 			puntero_clock = avanzar_puntero(puntero_clock);
 
 			if (pagina->uso == 0 && pagina->modificado == 0){
-				reemplazo_por_clock(nro_marco_en_swap, pagina, swap);
+				reemplazo_por_clock(nro_marco_en_swap, pagina, pid);
 				log_info(logger, "[CPU] Posición final puntero: %d",puntero_clock);
 				estructura->puntero = puntero_clock; //Guardo el puntero actualizado.
 				return nro_marco;
@@ -528,7 +536,7 @@ uint32_t clock_modificado(FILE* swap){
 			puntero_clock = avanzar_puntero(puntero_clock);
 
 			if (pagina->uso == 0 && pagina->modificado == 1){
-				reemplazo_por_clock(nro_marco_en_swap, pagina, swap);
+				reemplazo_por_clock(nro_marco_en_swap, pagina, pid);
 				estructura->puntero = puntero_clock; //Guardo el puntero actualizado.
 				return nro_marco;
 			}
@@ -547,12 +555,12 @@ uint32_t clock_modificado(FILE* swap){
 	return 0;
 }
 
-void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do_nivel, FILE* swap){
+void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do_nivel, int pid){
 	// logica de swappeo de marco
 	log_info(logger, "[CPU] Pagina victima elegida: %d",nro_marco_en_swap);
 	// si tiene el bit de modificado en 1, hay que actualizar el archivo swap
 	if (entrada_2do_nivel->modificado == 1){
-		actualizar_marco_en_swap(swap, nro_marco_en_swap, obtener_marco(entrada_2do_nivel->nro_marco), tam_pagina);
+		actualizar_marco_en_swap(get_fd(pid), nro_marco_en_swap, obtener_marco(entrada_2do_nivel->nro_marco), tam_pagina);
 		entrada_2do_nivel->modificado = 0;
 	}
 	entrada_2do_nivel->presencia = 0;
@@ -572,13 +580,11 @@ uint32_t read_en_memoria(uint32_t nro_marco, uint32_t desplazamiento){
 
 // Dado un nro de marco, un desplazamiento y un dato, escribe el dato en dicha posicion
 void write_en_memoria(uint32_t nro_marco, uint32_t desplazamiento, uint32_t dato) {
-	printf("A punto de escribir en el marco %d offset %d\n", nro_marco, desplazamiento);
 	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
 	memcpy(memoria + desplazamiento_final, &dato, sizeof(dato));
 	fila_2do_nivel* pagina_actual = obtener_pagina(pid_actual, nro_marco);
 	pagina_actual->uso = 1;
 	pagina_actual->modificado = 1;
-	log_info(logger, "[CPU] Dato '%d' escrito en marco %d", dato, nro_marco);
 }
 
 ////////////////////////// FUNCIONES GENERALES //////////////////////////
@@ -684,7 +690,7 @@ fila_2do_nivel* obtener_pagina(uint16_t pid_actual, int32_t nro_marco){
 	for (int i = 0; i < list_size(estructura->marcos_en_memoria); i++){
 		fila_busqueda = list_get(estructura->marcos_en_memoria, i);
 		if (nro_marco == fila_busqueda->nro_marco_en_memoria){
-			return &(fila_busqueda->pagina);
+			return fila_busqueda->pagina;
 		}
 	}
 	log_error(logger,"Pagina no encontrada :(");

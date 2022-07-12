@@ -1,6 +1,6 @@
 #include "memoria_swap.h"
 
-char* swap_path;
+char* swap_path = "/home/utnso/swap";
 uint16_t retardo_swap;
 
 void inicializar_swap(){
@@ -8,55 +8,59 @@ void inicializar_swap(){
 	retardo_swap = config_get_int_value(config,"RETARDO_SWAP");
 }
 
-// crear archivo
-FILE* crear_archivo_swap(uint16_t pid){
+// crear archivo --> devuelve el file descriptor
+int crear_archivo_swap(uint16_t pid, uint32_t tamanio_en_bytes){
 	char* path_to_file = string_from_format("%s/%d.swap",swap_path, pid);
+	if (access(path_to_file, F_OK) == 0) // si por alguna razon ya existe el archivo, borralo
+		remove(path_to_file);
+	int fd = open(path_to_file, O_RDWR|O_TRUNC|O_CREAT|O_EXCL,S_IROTH|S_IWOTH);
+	if (fd == -1){
+		printf("[ERROR] No se pudo crear el archivo! :(\n");
+		printf("[ERROR] %s", strerror(errno));
+		exit(-1);
+	}
+	ftruncate(fd, 0);
+	ftruncate(fd, tamanio_en_bytes);
 	printf("Archivo %s creado.\n", path_to_file);
-	FILE* f = fopen(path_to_file,"wb");
-	return f;
-}
-
-// abrir archivo
-FILE* abrir_archivo_swap(uint16_t pid){
-	char* path_to_file = string_from_format("%s/%d.swap",swap_path, pid);
-	FILE* f = fopen(path_to_file,"rb");
-	return f;
-}
-
-// cerrar archivo
-void cerrar_archivo_swap(FILE* archivo){
-	fclose(archivo);
+	return fd;
 }
 
 // borrar archivo
-void borrar_archivo_swap(uint16_t pid){
+void borrar_archivo_swap(uint16_t pid, int fd){
 	char* path_to_file = string_from_format("%s/%d.swap",swap_path, pid);
+	close(fd);
 	remove(path_to_file);
 	printf("Archivo %s eliminado.\n", path_to_file);
 }
 
-// agregar marco en archivo, devuelve el nro de marco que representa en swap
-uint32_t agregar_marco_en_swap(FILE* archivo, uint32_t tamanio_marcos){
-	fseek(archivo, 0, SEEK_END);
-	void* marco = malloc(tamanio_marcos);
-	fwrite(marco, 1, tamanio_marcos, archivo);
-	free(marco);
-	return ftell(archivo) / tamanio_marcos - 1;
-}
-
 // actualizar marco en archivo
-void actualizar_marco_en_swap(FILE* archivo, uint32_t nro_marco, void* marco, uint32_t tamanio_marcos){
-	fseek(archivo, nro_marco * tamanio_marcos, SEEK_SET);
-	fwrite(marco, 1, tamanio_marcos, archivo);
-	usleep(retardo_swap * 1000);
+void actualizar_marco_en_swap(int fd, uint32_t nro_marco, void* marco, uint32_t tamanio_marcos){
+	struct stat sb;
+	if (fstat(fd,&sb) == -1){
+		printf("[ERROR] No se pudo obtener el tamaño del archivo :(\n");
+		exit(-1);
+	}
+	void* datos_archivo = mmap(NULL, sb.st_size, PROT_WRITE, MAP_SHARED,fd,0);
+	memcpy(datos_archivo + tamanio_marcos * nro_marco, marco, tamanio_marcos);
+	munmap(datos_archivo, sb.st_size);
 }
 
 // leer marco
-void* leer_marco_en_swap(FILE* archivo, uint32_t nro_marco, uint32_t tamanio_marcos){
+void* leer_marco_en_swap(int fd, uint32_t nro_marco, uint32_t tamanio_marcos){
 	void* marco = malloc(tamanio_marcos);
-	fseek(archivo, nro_marco * tamanio_marcos, SEEK_SET);
-	fread(marco, 1, tamanio_marcos, archivo);
-	log_info(logger, "Trayendo marco %d de swap", nro_marco);
-	usleep(retardo_swap * 1000);
+	struct stat sb;
+	if (fstat(fd,&sb) == -1){
+		printf("[ERROR] No se pudo obtener el tamaño del archivo :(\n");
+		exit(-1);
+	}
+	void* datos_archivo = mmap(NULL, sb.st_size, PROT_READ, MAP_PRIVATE,fd,0);
+	if (datos_archivo == MAP_FAILED){ // si fallo el mmap
+		printf("[ERROR] Fallo de mmap\n[ERROR] %s\n",strerror(errno));
+		if (errno == EINVAL) // si el error es de argumentos invalidos
+			printf("Parametros pasados: tam %d fd %d offset %d\n",sb.st_size, fd, nro_marco * tamanio_marcos);
+		exit(-1);
+	}
+	memcpy(marco, datos_archivo + nro_marco * tamanio_marcos, tamanio_marcos);
+	munmap(datos_archivo, sb.st_size);
 	return marco;
 }

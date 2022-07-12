@@ -13,7 +13,7 @@
 #include<semaphore.h>
 //#include<commons/collections/queue.h>
 #include<commons/collections/list.h>
-//#include<commons/collections/dictionary.h>
+#include<commons/collections/dictionary.h>
 #include <sockets.h>
 #include <protocol.h>
 //#include <structures.h>
@@ -69,10 +69,10 @@ fila_1er_nivel obtener_nro_tabla_2do_nivel(int32_t nro_tabla, uint32_t index, ui
 uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t index_de_1er_nivel);
 
 // FUNCIONES ALGORITMOS CLOCK Y CLOCK MODIFICADO
-uint32_t usar_algoritmo(FILE* swap);
-uint32_t clock_simple(FILE* swap);
-uint32_t clock_modificado(FILE* swap);
-void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do_nivel, FILE* swap);
+uint32_t usar_algoritmo(int pid);
+uint32_t clock_simple(int pid);
+uint32_t clock_modificado(int pid);
+void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do_nivel, int pid);
 
 // READ Y WRITE
 uint32_t read_en_memoria(uint32_t nro_marco, uint32_t desplazamiento);
