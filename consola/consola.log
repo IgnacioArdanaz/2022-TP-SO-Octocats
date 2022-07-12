@@ -2080,3 +2080,57 @@
 [INFO] 15:46:06:966 CONSOLA/(5258:5258): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 [INFO] 15:46:06:969 CONSOLA/(5258:5258): Programa enviado al kernel correctamente!
 [INFO] 15:47:39:056 CONSOLA/(5258:5258): El proceso se finalizó exitosamente :)
+[INFO] 17:53:46:702 CONSOLA/(3166:3166): Instruccion numero 0: W 0 1000
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 1: W 4 1001
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 2: W 260 2000
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 3: C 256 260
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 4: W 2048 4000
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 5: W 2052 4001
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 6: I 6000 -1
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 7: R 0 -1
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 8: W 1024 3000
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 9: R 256 -1
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 10: R 2048 -1
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 11: W 4000 9999
+[INFO] 17:53:46:703 CONSOLA/(3166:3166): Instruccion numero 12: R 4000 -1
+[INFO] 17:53:46:704 CONSOLA/(3166:3166): Instruccion numero 13: R 1024 -1
+[INFO] 17:53:46:704 CONSOLA/(3166:3166): Instruccion numero 14: E -1 -1
+[INFO] 17:53:46:704 CONSOLA/(3166:3166): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 17:53:46:704 CONSOLA/(3166:3166): Programa enviado al kernel correctamente!
+[INFO] 17:55:18:808 CONSOLA/(3166:3166): El proceso se finalizó exitosamente :)
+[INFO] 18:04:36:436 CONSOLA/(4047:4047): Instruccion numero 0: W 0 1000
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 1: W 4 1001
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 2: W 260 2000
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 3: C 256 260
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 4: W 2048 4000
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 5: W 2052 4001
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 6: I 6000 -1
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 7: R 0 -1
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 8: W 1024 3000
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 9: R 256 -1
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 10: R 2048 -1
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 11: W 4000 9999
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 12: R 4000 -1
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 13: R 1024 -1
+[INFO] 18:04:36:439 CONSOLA/(4047:4047): Instruccion numero 14: E -1 -1
+[INFO] 18:04:36:442 CONSOLA/(4047:4047): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 18:04:36:442 CONSOLA/(4047:4047): Programa enviado al kernel correctamente!
+[INFO] 18:06:08:543 CONSOLA/(4047:4047): El proceso se finalizó exitosamente :)
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 0: W 0 1000
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 1: W 4 1001
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 2: W 260 2000
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 3: C 256 260
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 4: W 2048 4000
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 5: W 2052 4001
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 6: I 6000 -1
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 7: R 0 -1
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 8: W 1024 3000
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 9: R 256 -1
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 10: R 2048 -1
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 11: W 4000 9999
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 12: R 4000 -1
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 13: R 1024 -1
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Instruccion numero 14: E -1 -1
+[INFO] 18:16:42:556 CONSOLA/(4466:4466): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 18:16:42:557 CONSOLA/(4466:4466): Programa enviado al kernel correctamente!
+[INFO] 18:18:00:666 CONSOLA/(4466:4466): El proceso se finalizó exitosamente :)

@@ -16,6 +16,7 @@
 
 t_log* logger;
 t_config* config;
+uint16_t retardo_swap;
 
 void inicializar_swap();
 

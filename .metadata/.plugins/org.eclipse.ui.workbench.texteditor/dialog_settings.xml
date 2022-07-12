@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Actu" key="selection"/>
+		<item value="final" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="modi"/>
+			<item value="Act"/>
+			<item value="Acr"/>
+			<item value="ac"/>
+			<item value="es"/>
+			<item value="PAGE FAULT"/>
+			<item value="usleep"/>
+			<item value="retardo_sw"/>
+			<item value="suspe"/>
 			<item value="actu"/>
 			<item value="page fault"/>
-			<item value="PAGE FAULT"/>
-			<item value="Act"/>
 			<item value="pagina en"/>
 			<item value="numero de tab"/>
 			<item value="leido"/>
 			<item value="ENTRE A"/>
-			<item value="emt"/>
-			<item value="antes de"/>
-			<item value="a punto de"/>
-			<item value="agregar_pa"/>
-			<item value="agregar_es"/>
-			<item value="reemplazo_po"/>
-			<item value="reempl"/>
 		</list>
 		<list key="replacehistory">
 			<item value="s_pasaje_a_ready"/>

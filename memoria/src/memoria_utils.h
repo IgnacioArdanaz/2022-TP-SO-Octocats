@@ -90,7 +90,6 @@ void printear_bitmap();
 /***************************** FUNCIONES ESTRUCTURA CLOCK *****************************/
 void crear_estructura_clock(uint16_t pid);
 uint16_t avanzar_puntero(uint16_t puntero_clock);
-estructura_clock* buscar_estructura_clock(uint16_t pid_a_buscar);
 void agregar_pagina_a_estructura_clock(int32_t nro_marco, fila_2do_nivel* pagina, uint32_t nro_marco_en_swap);
 fila_2do_nivel* obtener_pagina(uint16_t pid_actual, int32_t nro_marco);
 

@@ -14959,3 +14959,646 @@ make: Nothing to be done for 'all'.
 15:46:05 **** Incremental Build of configuration Debug for project consola ****
 make all 
 make: Nothing to be done for 'all'.
+17:53:36 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+17:53:39 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+17:53:41 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+17:53:43 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+18:01:02 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+18:01:03 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+18:01:04 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+18:01:05 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘set_fd’:
+../src/memoria_utils.c:41:32: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+  dictionary_put(fd_swaps, key, fd);
+                                ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/memoria_swap.h:14,
+                 from ../src/memoria_utils.h:8,
+                 from ../src/memoria_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/memoria_utils.c: In function ‘inicializar_memoria’:
+../src/memoria_utils.c:102:2: error: ‘lista_estructuras_clock’ undeclared (first use in this function)
+src/subdir.mk:24: recipe for target 'src/memoria_utils.o' failed
+  lista_estructuras_clock = list_create();
+  ^
+../src/memoria_utils.c:102:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/memoria_utils.c: In function ‘recibir_cpu’:
+../src/memoria_utils.c:332:14: warning: unused variable ‘pid’ [-Wunused-variable]
+     uint16_t pid = 0; // No se usa por ahora
+              ^
+../src/memoria_utils.c: In function ‘buscar_estructura_clock’:
+../src/memoria_utils.c:670:32: error: ‘lista_estructuras_clock’ undeclared (first use in this function)
+  for (int i = 0; i < list_size(lista_estructuras_clock); i++){
+                                ^
+../src/memoria_utils.c: In function ‘crear_estructura_clock’:
+../src/memoria_utils.c:685:11: error: ‘lista_estructuras_clock’ undeclared (first use in this function)
+  list_add(lista_estructuras_clock, estructura);
+           ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:39:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:43:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:45:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:49:14: warning: ‘serializar_datos_necesarios’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t tam_pagina);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:54:14: warning: ‘serializar_crear_tabla’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_crear_tabla(uint16_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:59:14: warning: ‘serializar_suspender_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:64:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:69:14: warning: ‘serializar_solicitud_nro_tabla_2do_nivel’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_tabla_2do_nivel(uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla);
+              ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:75:14: warning: ‘serializar_solicitud_nro_marco’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:80:14: warning: ‘serializar_read’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_read(uint32_t nro_marco, uint16_t desplazamiento);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:85:14: warning: ‘serializar_write’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_write(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+              ^
+make: *** [src/memoria_utils.o] Error 1
+18:01:06 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+18:02:02 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+18:02:04 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+18:02:05 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+18:02:05 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘set_fd’:
+../src/memoria_utils.c:41:32: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+  dictionary_put(fd_swaps, key, fd);
+                                ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/memoria_swap.h:14,
+                 from ../src/memoria_utils.h:8,
+                 from ../src/memoria_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/memoria_utils.c: In function ‘inicializar_memoria’:
+../src/memoria_utils.c:102:2: error: ‘lista_estructuras_clock’ undeclared (first use in this function)
+  lista_estructuras_clock = dictionary_create();
+  ^
+../src/memoria_utils.c:102:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/memoria_utils.c: In function ‘recibir_cpu’:
+../src/memoria_utils.c:332:14: warning: unused variable ‘pid’ [-Wunused-variable]
+     uint16_t pid = 0; // No se usa por ahora
+              ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+src/subdir.mk:24: recipe for target 'src/memoria_utils.o' failed
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:39:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:43:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:45:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:49:14: warning: ‘serializar_datos_necesarios’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t tam_pagina);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:54:14: warning: ‘serializar_crear_tabla’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_crear_tabla(uint16_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:59:14: warning: ‘serializar_suspender_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:64:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:69:14: warning: ‘serializar_solicitud_nro_tabla_2do_nivel’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_tabla_2do_nivel(uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla);
+              ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:75:14: warning: ‘serializar_solicitud_nro_marco’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:80:14: warning: ‘serializar_read’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_read(uint32_t nro_marco, uint16_t desplazamiento);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:85:14: warning: ‘serializar_write’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_write(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+              ^
+make: *** [src/memoria_utils.o] Error 1
+18:02:06 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+18:02:18 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+18:02:19 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+18:02:20 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+18:02:21 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘set_fd’:
+../src/memoria_utils.c:41:32: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+  dictionary_put(fd_swaps, key, fd);
+                                ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/memoria_swap.h:14,
+                 from ../src/memoria_utils.h:8,
+                 from ../src/memoria_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/memoria_utils.c: In function ‘recibir_cpu’:
+../src/memoria_utils.c:332:14: warning: unused variable ‘pid’ [-Wunused-variable]
+     uint16_t pid = 0; // No se usa por ahora
+              ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:39:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:43:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:45:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:49:14: warning: ‘serializar_datos_necesarios’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t tam_pagina);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:54:14: warning: ‘serializar_crear_tabla’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_crear_tabla(uint16_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:59:14: warning: ‘serializar_suspender_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:64:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:69:14: warning: ‘serializar_solicitud_nro_tabla_2do_nivel’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_tabla_2do_nivel(uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla);
+              ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:75:14: warning: ‘serializar_solicitud_nro_marco’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:80:14: warning: ‘serializar_read’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_read(uint32_t nro_marco, uint16_t desplazamiento);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:85:14: warning: ‘serializar_write’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_write(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lpthread -lshared
+./src/memoria_utils.o: In function `suspender_proceso':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_utils.c:246: undefined reference to `buscar_estructura_clock'
+./src/memoria_utils.o: In function `eliminar_estructuras':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_utils.c:273: undefined reference to `buscar_estructura_clock'
+./src/memoria_utils.o: In function `clock_simple':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_utils.c:486: undefined reference to `buscar_estructura_clock'
+./src/memoria_utils.o: In function `clock_modificado':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_utils.c:514: undefined reference to `buscar_estructura_clock'
+makefile:30: recipe for target 'memoria' failed
+./src/memoria_utils.o: In function `marcos_en_memoria':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_utils.c:613: undefined reference to `buscar_estructura_clock'
+./src/memoria_utils.o:/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_utils.c:649: more undefined references to `buscar_estructura_clock' follow
+collect2: error: ld returned 1 exit status
+make: *** [memoria] Error 1
+18:02:22 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+18:03:34 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+18:03:35 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+18:03:37 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+18:03:38 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘set_fd’:
+../src/memoria_utils.c:41:32: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+  dictionary_put(fd_swaps, key, fd);
+                                ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/memoria_swap.h:14,
+                 from ../src/memoria_utils.h:8,
+                 from ../src/memoria_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/memoria_utils.c: In function ‘agregar_pagina_a_estructura_clock’:
+../src/memoria_utils.c:649:33: warning: implicit declaration of function ‘buscar_estructura_clock’ [-Wimplicit-function-declaration]
+  estructura_clock* estructura = buscar_estructura_clock(pid_actual);
+                                 ^
+../src/memoria_utils.c:649:33: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+../src/memoria_utils.c: In function ‘obtener_pagina’:
+../src/memoria_utils.c:688:33: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  estructura_clock* estructura = buscar_estructura_clock(pid_actual);
+                                 ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:39:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:43:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:45:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:49:14: warning: ‘serializar_datos_necesarios’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t tam_pagina);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:54:14: warning: ‘serializar_crear_tabla’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_crear_tabla(uint16_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:59:14: warning: ‘serializar_suspender_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:64:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:69:14: warning: ‘serializar_solicitud_nro_tabla_2do_nivel’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_tabla_2do_nivel(uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla);
+              ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:75:14: warning: ‘serializar_solicitud_nro_marco’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:80:14: warning: ‘serializar_read’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_read(uint32_t nro_marco, uint16_t desplazamiento);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:85:14: warning: ‘serializar_write’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_write(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lpthread -lshared
+./src/memoria_utils.o: In function `agregar_pagina_a_estructura_clock':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_utils.c:649: undefined reference to `buscar_estructura_clock'
+./src/memoria_utils.o: In function `obtener_pagina':
+/home/utnso/tp-2022-1c-Octocats/memoria/Debug/../src/memoria_utils.c:688: undefined reference to `buscar_estructura_clock'
+collect2: error: ld returned 1 exit status
+make: *** [memoria] Error 1
+makefile:30: recipe for target 'memoria' failed
+18:03:39 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+18:03:52 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+18:03:54 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+18:03:55 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+18:03:56 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘set_fd’:
+../src/memoria_utils.c:41:32: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+  dictionary_put(fd_swaps, key, fd);
+                                ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/memoria_swap.h:14,
+                 from ../src/memoria_utils.h:8,
+                 from ../src/memoria_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:39:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:43:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:45:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:49:14: warning: ‘serializar_datos_necesarios’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t tam_pagina);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:54:14: warning: ‘serializar_crear_tabla’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_crear_tabla(uint16_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:59:14: warning: ‘serializar_suspender_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:64:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:69:14: warning: ‘serializar_solicitud_nro_tabla_2do_nivel’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_tabla_2do_nivel(uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla);
+              ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:75:14: warning: ‘serializar_solicitud_nro_marco’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:80:14: warning: ‘serializar_read’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_read(uint32_t nro_marco, uint16_t desplazamiento);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:85:14: warning: ‘serializar_write’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_write(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lpthread -lshared
+Finished building target: memoria
+ 
+18:03:57 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+18:04:24 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+make: Nothing to be done for 'all'.
+18:04:27 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+18:04:30 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+18:04:34 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+18:12:32 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_swap.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_swap.d" -MT"src/memoria_swap.o" -o "src/memoria_swap.o" "../src/memoria_swap.c"
+../src/memoria_swap.c: In function ‘leer_marco_en_swap’:
+../src/memoria_swap.c:60:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘__off_t {aka long int}’ [-Wformat=]
+    printf("Parametros pasados: tam %d fd %d offset %d\n",sb.st_size, fd, nro_marco * tamanio_marcos);
+           ^
+Finished building: ../src/memoria_swap.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘set_fd’:
+../src/memoria_utils.c:41:32: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+  dictionary_put(fd_swaps, key, fd);
+                                ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/memoria_swap.h:14,
+                 from ../src/memoria_utils.h:8,
+                 from ../src/memoria_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+../src/memoria_utils.c: In function ‘reemplazo_por_clock’:
+../src/memoria_utils.c:541:10: error: ‘retardo_swap’ undeclared (first use in this function)
+   usleep(retardo_swap * 1000); // tenemos el retardo por swappear un marco modificado
+          ^
+../src/memoria_utils.c:541:10: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:39:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:43:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:45:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:49:14: warning: ‘serializar_datos_necesarios’ declared ‘static’ but never defined [-Wunused-function]
+src/subdir.mk:24: recipe for target 'src/memoria_utils.o' failed
+ static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t tam_pagina);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:54:14: warning: ‘serializar_crear_tabla’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_crear_tabla(uint16_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:59:14: warning: ‘serializar_suspender_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:64:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:69:14: warning: ‘serializar_solicitud_nro_tabla_2do_nivel’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_tabla_2do_nivel(uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla);
+              ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:75:14: warning: ‘serializar_solicitud_nro_marco’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:80:14: warning: ‘serializar_read’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_read(uint32_t nro_marco, uint16_t desplazamiento);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:85:14: warning: ‘serializar_write’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_write(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+              ^
+make: *** [src/memoria_utils.o] Error 1
+18:15:02 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.
+18:15:03 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+18:15:04 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+18:15:05 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_main.d" -MT"src/memoria_main.o" -o "src/memoria_main.o" "../src/memoria_main.c"
+Finished building: ../src/memoria_main.c
+ 
+Building file: ../src/memoria_swap.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_swap.d" -MT"src/memoria_swap.o" -o "src/memoria_swap.o" "../src/memoria_swap.c"
+../src/memoria_swap.c: In function ‘leer_marco_en_swap’:
+../src/memoria_swap.c:59:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘__off_t {aka long int}’ [-Wformat=]
+    printf("Parametros pasados: tam %d fd %d offset %d\n",sb.st_size, fd, nro_marco * tamanio_marcos);
+           ^
+Finished building: ../src/memoria_swap.c
+ 
+Building file: ../src/memoria_utils.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_utils.d" -MT"src/memoria_utils.o" -o "src/memoria_utils.o" "../src/memoria_utils.c"
+../src/memoria_utils.c: In function ‘set_fd’:
+../src/memoria_utils.c:41:32: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
+  dictionary_put(fd_swaps, key, fd);
+                                ^
+In file included from /usr/include/commons/config.h:20:0,
+                 from ../src/memoria_swap.h:14,
+                 from ../src/memoria_utils.h:8,
+                 from ../src/memoria_utils.c:1:
+/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
+  void     dictionary_put(t_dictionary *, char *key, void *data);
+           ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+../src/memoria_utils.c: At top level:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:38:14: warning: ‘serializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_programa(size_t* size, t_list* instrucciones, uint16_t tamanio);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:39:13: warning: ‘deserializar_programa’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_programa(void* stream, t_list* instrucciones, uint16_t* tamanio);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:43:14: warning: ‘serializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_proceso(size_t* size, PCB_t* proceso, op_code codigo);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:45:13: warning: ‘deserializar_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void deserializar_proceso(void* stream, PCB_t* proceso);
+             ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:49:14: warning: ‘serializar_datos_necesarios’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t tam_pagina);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:54:14: warning: ‘serializar_crear_tabla’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_crear_tabla(uint16_t tamanio, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:59:14: warning: ‘serializar_suspender_proceso’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:64:14: warning: ‘serializar_eliminar_estructuras’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:69:14: warning: ‘serializar_solicitud_nro_tabla_2do_nivel’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_tabla_2do_nivel(uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla);
+              ^
+In file included from ../src/memoria_utils.h:18:0,
+                 from ../src/memoria_utils.c:1:
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:75:14: warning: ‘serializar_solicitud_nro_marco’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:80:14: warning: ‘serializar_read’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_read(uint32_t nro_marco, uint16_t desplazamiento);
+              ^
+/home/utnso/tp-2022-1c-Octocats/shared/src/protocol.h:85:14: warning: ‘serializar_write’ declared ‘static’ but never defined [-Wunused-function]
+ static void* serializar_write(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato);
+              ^
+Finished building: ../src/memoria_utils.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lpthread -lshared
+Finished building target: memoria
+ 
+18:15:06 **** Incremental Build of configuration Debug for project shared ****
+make all 
+make: Nothing to be done for 'all'.
+18:16:32 **** Incremental Build of configuration Debug for project memoria ****
+make all 
+Building file: ../src/memoria_swap.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/memoria_swap.d" -MT"src/memoria_swap.o" -o "src/memoria_swap.o" "../src/memoria_swap.c"
+../src/memoria_swap.c: In function ‘leer_marco_en_swap’:
+../src/memoria_swap.c:59:22: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘__off_t {aka long int}’ [-Wformat=]
+    log_error(logger, "Parametros pasados: tam %d fd %d offset %d",sb.st_size, fd, nro_marco * tamanio_marcos);
+                      ^
+Finished building: ../src/memoria_swap.c
+ 
+Building target: memoria
+Invoking: GCC C Linker
+gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "memoria"  ./src/memoria_main.o ./src/memoria_swap.o ./src/memoria_utils.o   -lcommons -lpthread -lshared
+Finished building target: memoria
+ 
+18:16:35 **** Incremental Build of configuration Debug for project cpu ****
+make all 
+make: Nothing to be done for 'all'.
+18:16:37 **** Incremental Build of configuration Debug for project kernel ****
+make all 
+make: Nothing to be done for 'all'.
+18:16:40 **** Incremental Build of configuration Debug for project consola ****
+make all 
+make: Nothing to be done for 'all'.

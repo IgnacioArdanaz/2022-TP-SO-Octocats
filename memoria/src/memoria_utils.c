@@ -9,7 +9,7 @@ t_list* lista_tablas_1er_nivel;
 t_list* lista_tablas_2do_nivel;
 
 // Estructura clock
-t_list* lista_estructuras_clock;
+t_dictionary* estructuras_clock;
 
 // Memoria real
 uint8_t* bitarray_marcos_ocupados;
@@ -39,6 +39,16 @@ int get_fd(uint16_t pid){
 void set_fd(uint16_t pid, int fd){
 	char* key = string_itoa(pid);
 	dictionary_put(fd_swaps, key, fd);
+}
+
+estructura_clock* get_estructura_clock(uint16_t pid){
+	char* key = string_itoa(pid);
+	return dictionary_get(estructuras_clock, key);
+}
+
+void set_estructura_clock(uint16_t pid, estructura_clock* e_clock){
+	char* key = string_itoa(pid);
+	return dictionary_put(estructuras_clock, key, e_clock);
 }
 
 ////////////////////////////////////////
@@ -89,7 +99,7 @@ void inicializar_memoria(){
 	memoria = malloc(tam_memoria);
 	lista_tablas_1er_nivel = list_create();
 	lista_tablas_2do_nivel = list_create();
-	lista_estructuras_clock = list_create();
+	estructuras_clock = dictionary_create();
 	fd_swaps = dictionary_create();
 	bitarray_marcos_ocupados = malloc(tam_memoria / tam_pagina);
 	for (int i = 0; i < tam_memoria / tam_pagina; i++)
@@ -233,7 +243,7 @@ void inicializar_tabla_2do_nivel(fila_2do_nivel* tabla_2do_nivel){
 // SUSPENSIÓN DE PROCESO
 void suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
 	int fd = get_fd(pid);
-	estructura_clock* estructura = buscar_estructura_clock(pid);
+	estructura_clock* estructura = get_estructura_clock(pid);
 	fila_estructura_clock* fila_busqueda;
 	// vamos agarrando el primer elemento en todas las iteraciones
 	// como estamos eliminandolos de la lista, el 2do pasaria a ser el 1er y asi sucesivamente
@@ -243,6 +253,7 @@ void suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
 		if(fila_busqueda->pagina->modificado == 1){
 			void* marco = obtener_marco(fila_busqueda->nro_marco_en_memoria);
 			actualizar_marco_en_swap(fd, fila_busqueda->nro_marco_en_swap, marco, tam_pagina);
+			// aca no implementamos el retardo para no hacer uno por cada marco swappeado
 		}
 		fila_busqueda->pagina->presencia = 0;
 		fila_busqueda->pagina->uso = 0;
@@ -250,22 +261,18 @@ void suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
 		estructura->puntero = 0;
 		list_remove_and_destroy_element(estructura->marcos_en_memoria, 0, free);
 	}
-	if (list_size(estructura->marcos_en_memoria) > 0){
-		printf("[ERROR] ALGO SALIO MAL AL SUSPENDER :( \n");
-		exit(-1);
-	}
+	usleep(retardo_swap * 1000); // hacemos un solo retardo para mantenerlo consistente
 }
 
 // FINALIZACIÓN DE PROCESO
 void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
-	// Actualizar bitarray de marcos libres y eliminar el .swap
-	// Tambien podría eliminar la estructura de la lista y sus elementos.
-	estructura_clock* estructura = buscar_estructura_clock(pid);
+	estructura_clock* estructura = get_estructura_clock(pid);
 	fila_estructura_clock* fila_busqueda;
 	for (int i = 0; i < list_size(estructura->marcos_en_memoria); i++){
 		fila_busqueda = list_get(estructura->marcos_en_memoria, i);
 		bitarray_marcos_ocupados[fila_busqueda->nro_marco_en_memoria] = 0;
 	}
+	list_destroy_and_destroy_elements(estructura->marcos_en_memoria, free);
 	borrar_archivo_swap(pid, get_fd(pid));
 }
 
@@ -284,7 +291,6 @@ void recibir_cpu() {
 	while (cliente_cpu != -1) {
 		if (recv(cliente_cpu, &cop, sizeof(op_code), 0) <= 0) {
 			pthread_mutex_lock(&mx_log);
-			//log_error(logger,"DISCONNECT FAILURE EN CPU!");
 			log_error(logger,"DISCONNECT FAILURE EN CPU!");
 			pthread_mutex_unlock(&mx_log);
 			exit(-1);
@@ -301,13 +307,6 @@ void recibir_cpu() {
 				recv(cliente_cpu, &nro_tabla_1er_nivel, sizeof(uint32_t),0);
 				recv(cliente_cpu, &entrada_tabla, sizeof(uint32_t),0);
 
-//				if (!recv_solicitud_nro_tabla_2do_nivel(cliente_cpu, &pid, &nro_tabla_1er_nivel, &entrada_tabla)) {
-//					pthread_mutex_lock(&mx_log);
-//					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
-//					pthread_mutex_unlock(&mx_log);
-//					break;
-//				}
-
 				fila_1er_nivel nro_tabla_2do_nivel = obtener_nro_tabla_2do_nivel(nro_tabla_1er_nivel, entrada_tabla, pid);
 
 				usleep(retardo_memoria * 1000);
@@ -318,7 +317,6 @@ void recibir_cpu() {
 			case SOLICITUD_NRO_MARCO:
 			{
 				log_info(logger, "[CPU] Procesando solicitud de nro marco...");
-				uint16_t pid = 0; // No se usa por ahora
 				uint32_t nro_tabla_2do_nivel = 0;
 				uint32_t entrada_tabla = 0;
 				uint32_t index_tabla_1er_nivel = 0; //Lo necesito para guardar el numero de pagina
@@ -327,13 +325,6 @@ void recibir_cpu() {
 				recv(cliente_cpu, &nro_tabla_2do_nivel, sizeof(int32_t),0);
 				recv(cliente_cpu, &entrada_tabla, sizeof(uint32_t),0);
 				recv(cliente_cpu, &index_tabla_1er_nivel, sizeof(uint32_t),0);
-
-//				if (!recv_solicitud_nro_marco(cliente_cpu, &pid, &nro_tabla_2do_nivel, &entrada_tabla, &index_tabla_1er_nivel)) {
-//					pthread_mutex_lock(&mx_log);
-//					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
-//					pthread_mutex_unlock(&mx_log);
-//					break;
-//				}
 
 				uint32_t nro_marco = obtener_nro_marco_memoria(nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
 				log_info(logger, "[CPU] Numero de marco obtenido = %d", nro_marco);
@@ -352,13 +343,6 @@ void recibir_cpu() {
 				recv(cliente_cpu, &nro_marco, sizeof(uint32_t),0);
 				recv(cliente_cpu, &desplazamiento, sizeof(uint32_t),0);
 
-//				if (!recv_read(cliente_cpu, &nro_marco, &desplazamiento)) {
-//					pthread_mutex_lock(&mx_log);
-//					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
-//					pthread_mutex_unlock(&mx_log);
-//					break;
-//				}
-
 				uint32_t dato = read_en_memoria(nro_marco, desplazamiento);
 
 				usleep(retardo_memoria * 1000);
@@ -376,13 +360,6 @@ void recibir_cpu() {
 				recv(cliente_cpu, &nro_marco, sizeof(uint32_t),0);
 				recv(cliente_cpu, &desplazamiento, sizeof(uint32_t),0);
 				recv(cliente_cpu, &dato, sizeof(uint32_t),0);
-
-//				if (!recv_write(cliente_cpu, &nro_marco, &desplazamiento, &dato)) {
-//					pthread_mutex_lock(&mx_log);
-//					log_error(logger,"Fallo recibiendo SOLICITUD NRO TABLA 2DO NIVEL");
-//					pthread_mutex_unlock(&mx_log);
-//					break;
-//				}
 
 				write_en_memoria(nro_marco, desplazamiento, dato);
 				log_info(logger, "[CPU] Dato escrito: '%d' (nro_marco = %d, desplazamiento = %d)", dato, nro_marco, desplazamiento);
@@ -472,7 +449,7 @@ uint32_t usar_algoritmo(int pid){
 
 uint32_t clock_simple(int pid){
 	// hasta que no encuentre uno no para
-	estructura_clock* estructura = buscar_estructura_clock(pid_actual);
+	estructura_clock* estructura = get_estructura_clock(pid_actual);
 	uint16_t puntero_clock = estructura->puntero;
 	fila_estructura_clock* fila;
 	fila_2do_nivel* pagina;
@@ -500,7 +477,7 @@ uint32_t clock_simple(int pid){
 }
 
 uint32_t clock_modificado(int pid){
-	estructura_clock* estructura = buscar_estructura_clock(pid_actual);
+	estructura_clock* estructura = get_estructura_clock(pid_actual);
 	uint16_t puntero_clock = estructura->puntero;
 	fila_estructura_clock* fila;
 	fila_2do_nivel* pagina;
@@ -562,6 +539,7 @@ void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do
 	if (entrada_2do_nivel->modificado == 1){
 		log_info(logger,"[CPU] Actualizando pagina victima en swap (bit de modificado = 1)");
 		actualizar_marco_en_swap(get_fd(pid), nro_marco_en_swap, obtener_marco(entrada_2do_nivel->nro_marco), tam_pagina);
+		usleep(retardo_swap * 1000); // tenemos el retardo por swappear un marco modificado
 		entrada_2do_nivel->modificado = 0;
 	}
 	entrada_2do_nivel->presencia = 0;
@@ -599,7 +577,7 @@ void* obtener_marco(uint32_t nro_marco){
 
 // Cuenta la cantidad de marcos en memoria que tiene un proceso
 uint32_t marcos_en_memoria(){
-	estructura_clock* estructura = buscar_estructura_clock(pid_actual);
+	estructura_clock* estructura = get_estructura_clock(pid_actual);
 	return list_size(estructura->marcos_en_memoria);
 }
 
@@ -635,7 +613,7 @@ int marcos_actuales(int entrada_1er_nivel, int entrada_2do_nivel){
 
 void agregar_pagina_a_estructura_clock(int32_t nro_marco, fila_2do_nivel* pagina, uint32_t nro_marco_en_swap){
 	//Si ya está ese marco en la estructura, actualizo su página.
-	estructura_clock* estructura = buscar_estructura_clock(pid_actual);
+	estructura_clock* estructura = get_estructura_clock(pid_actual);
 	fila_estructura_clock* fila_busqueda;
 	for (int i = 0; i < list_size(estructura->marcos_en_memoria); i++){
 		fila_busqueda = list_get(estructura->marcos_en_memoria, i);
@@ -654,24 +632,12 @@ void agregar_pagina_a_estructura_clock(int32_t nro_marco, fila_2do_nivel* pagina
 
 }
 
-estructura_clock* buscar_estructura_clock(uint16_t pid_a_buscar){
-	estructura_clock* estructura;
-	for (int i = 0; i < list_size(lista_estructuras_clock); i++){
-		estructura = list_get(lista_estructuras_clock, i);
-		if (pid_a_buscar == estructura->pid){
-			return estructura;
-		}
-	}
-	log_error(logger,"No encontré la estructura de clock :(\n");
-	return NULL;
-}
-
 void crear_estructura_clock(uint16_t pid){
 	estructura_clock* estructura = malloc(sizeof(estructura_clock));
 	estructura->pid = pid;
 	estructura->marcos_en_memoria = list_create();
 	estructura->puntero = 0;
-	list_add(lista_estructuras_clock, estructura);
+	set_estructura_clock(pid, estructura);
 	log_info(logger,"[CPU] Creada estructura clock del proceso: %d", pid);
 }
 
@@ -686,7 +652,7 @@ uint16_t avanzar_puntero(uint16_t puntero_clock){
 
 // Devuelve el puntero a una página (fila de segundo nivel)
 fila_2do_nivel* obtener_pagina(uint16_t pid_actual, int32_t nro_marco){
-	estructura_clock* estructura = buscar_estructura_clock(pid_actual);
+	estructura_clock* estructura = get_estructura_clock(pid_actual);
 	fila_estructura_clock* fila_busqueda;
 	for (int i = 0; i < list_size(estructura->marcos_en_memoria); i++){
 		fila_busqueda = list_get(estructura->marcos_en_memoria, i);
