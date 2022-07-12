@@ -235,8 +235,10 @@ void suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
 	int fd = get_fd(pid);
 	estructura_clock* estructura = buscar_estructura_clock(pid);
 	fila_estructura_clock* fila_busqueda;
-	for (int i = 0; i < list_size(estructura->marcos_en_memoria); i++){
-		fila_busqueda = list_get(estructura->marcos_en_memoria, i);
+	// vamos agarrando el primer elemento en todas las iteraciones
+	// como estamos eliminandolos de la lista, el 2do pasaria a ser el 1er y asi sucesivamente
+	while (list_size(estructura->marcos_en_memoria) > 0){
+		fila_busqueda = list_get(estructura->marcos_en_memoria, 0);
 		bitarray_marcos_ocupados[fila_busqueda->nro_marco_en_memoria] = 0;
 		if(fila_busqueda->pagina->modificado == 1){
 			void* marco = obtener_marco(fila_busqueda->nro_marco_en_memoria);
@@ -246,8 +248,11 @@ void suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
 		fila_busqueda->pagina->uso = 0;
 		fila_busqueda->pagina->modificado = 0;
 		estructura->puntero = 0;
-		list_remove(estructura->marcos_en_memoria, i); //Lo hago aparte porque me da miedo usar malloc
-		free(fila_busqueda);
+		list_remove_and_destroy_element(estructura->marcos_en_memoria, 0, free);
+	}
+	if (list_size(estructura->marcos_en_memoria) > 0){
+		printf("[ERROR] ALGO SALIO MAL AL SUSPENDER :( \n");
+		exit(-1);
 	}
 }
 

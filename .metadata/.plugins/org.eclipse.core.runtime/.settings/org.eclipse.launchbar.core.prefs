@@ -10,5 +10,5 @@ org.eclipse.launchbar.core.descriptorType.default\:consola/activeLaunchMode=debu
 org.eclipse.launchbar.core.descriptorType.default\:consola/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:cpu/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:kernel/activeLaunchMode=run
-org.eclipse.launchbar.core.descriptorType.default\:memoria/activeLaunchMode=profile
+org.eclipse.launchbar.core.descriptorType.default\:memoria/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:testeando_suspension/activeLaunchMode=debug
