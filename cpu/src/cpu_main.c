@@ -194,7 +194,8 @@ int ejecutarRead(uint32_t dir_logica,uint32_t tabla_paginas){
 	marco_t dir_fisica;
 	uint32_t valor = 8;
 	dir_fisica = traducir_direccion(dir_logica,tabla_paginas);
-	log_info(logger, "Ejecutando READ para marco %d y desplazamiento %d", dir_fisica.marco, dir_fisica.desplazamiento);
+	log_info(logger, "Ejecutando READ para pagina %d, marco %d y desplazamiento %d",
+			dir_logica / tam_pagina, dir_fisica.marco, dir_fisica.desplazamiento);
 //	send_read(conexion_memoria, dir_fisica.marco, dir_fisica.desplazamiento);
 
 	op_code cop = READ;
@@ -220,7 +221,8 @@ void ejecutarWrite(uint32_t dir_logica,uint32_t valor,uint32_t tabla_paginas ){
 	send(conexion_memoria, &dir_fisica.desplazamiento, sizeof(uint32_t),0);
 	send(conexion_memoria, &valor, sizeof(uint32_t),0);
 
-	log_info(logger, "Ejecutando WRITE: marco %d,  desp %d, valor: %d", dir_fisica.marco, dir_fisica.desplazamiento, valor);
+	log_info(logger, "Ejecutando WRITE: pagina %d, marco %d,  desp %d, valor: %d",
+			dir_logica / tam_pagina, dir_fisica.marco, dir_fisica.desplazamiento, valor);
 //	send_write(conexion_memoria,dir_fisica.marco,dir_fisica.desplazamiento,valor);
 	recv(conexion_memoria, &resultado, sizeof(op_code), 0);
 	//recv_verificacion
