@@ -1,6 +1,6 @@
-18:15:06 **** Incremental Build of configuration Debug for project shared ****
+18:36:08 **** Incremental Build of configuration Debug for project shared ****
 make all 
-make: Nothing to be done for 'all'.
+Cannot run program "make": Unknown reason
 
-18:15:06 Build Finished (took 537ms)
+18:36:08 Build Finished (took 25ms)
 

@@ -2953,3 +2953,72 @@
 [INFO] 18:17:16:629 KERNEL/(4449:4457): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
 [INFO] 18:17:16:629 KERNEL/(4449:4460): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
 [INFO] 18:18:00:661 KERNEL/(4449:4459): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 18:38:49:824 KERNEL/(5013:5013): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 18:38:49:827 KERNEL/(5013:5013): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 18:38:49:827 KERNEL/(5013:5013): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 18:38:49:828 KERNEL/(5013:5013): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 18:38:49:828 KERNEL/(5013:5013): Kernel esperando un nuevo cliente
+[INFO] 18:38:49:828 KERNEL/(5013:5013): KERNEL listo para recibir al cliente
+[INFO] 18:38:51:541 KERNEL/(5013:5013): Cliente conectado (a KERNEL)
+[INFO] 18:38:51:541 KERNEL/(5013:5013): Socket del cliente recibido en kernel.
+[INFO] 18:38:51:541 KERNEL/(5013:5013): Kernel esperando un nuevo cliente
+[INFO] 18:38:51:541 KERNEL/(5013:5013): KERNEL listo para recibir al cliente
+[INFO] 18:38:51:546 KERNEL/(5013:5024): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 18:38:51:548 KERNEL/(5013:5024): Solicitando tabla de pag para proceso 1 de tamanio 4096
+[INFO] 18:38:51:548 KERNEL/(5013:5024): proceso 1 tabla de pag 0
+[INFO] 18:38:51:548 KERNEL/(5013:5024): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 18:38:51:549 KERNEL/(5013:5027): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[INFO] 18:39:19:563 KERNEL/(5013:5026): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 18:39:19:564 KERNEL/(5013:5025): [IO] Proceso 1 esperando 6000 milisegundos
+[INFO] 18:39:24:564 KERNEL/(5013:5046): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 18:39:29:603 KERNEL/(5013:5025): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 18:39:29:603 KERNEL/(5013:5024): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 18:39:29:603 KERNEL/(5013:5024): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 18:39:29:603 KERNEL/(5013:5027): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[ERROR] 18:42:32:383 KERNEL/(5013:5026): DISCONNECT FAILURE!
+[INFO] 18:44:11:312 KERNEL/(5179:5179): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 18:44:11:313 KERNEL/(5179:5179): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 18:44:11:313 KERNEL/(5179:5179): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 18:44:11:313 KERNEL/(5179:5179): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 18:44:11:313 KERNEL/(5179:5179): Kernel esperando un nuevo cliente
+[INFO] 18:44:11:313 KERNEL/(5179:5179): KERNEL listo para recibir al cliente
+[INFO] 18:44:13:609 KERNEL/(5179:5179): Cliente conectado (a KERNEL)
+[INFO] 18:44:13:610 KERNEL/(5179:5179): Socket del cliente recibido en kernel.
+[INFO] 18:44:13:610 KERNEL/(5179:5179): Kernel esperando un nuevo cliente
+[INFO] 18:44:13:610 KERNEL/(5179:5179): KERNEL listo para recibir al cliente
+[INFO] 18:44:13:611 KERNEL/(5179:5193): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 18:44:13:611 KERNEL/(5179:5193): Solicitando tabla de pag para proceso 1 de tamanio 4096
+[INFO] 18:44:13:611 KERNEL/(5179:5193): proceso 1 tabla de pag 0
+[INFO] 18:44:13:612 KERNEL/(5179:5193): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 18:44:13:612 KERNEL/(5179:5196): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[INFO] 18:44:41:628 KERNEL/(5179:5195): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 18:44:41:628 KERNEL/(5179:5194): [IO] Proceso 1 esperando 6000 milisegundos
+[INFO] 18:44:46:630 KERNEL/(5179:5206): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 18:44:51:671 KERNEL/(5179:5194): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 18:44:51:673 KERNEL/(5179:5193): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 18:44:51:673 KERNEL/(5179:5193): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 18:44:51:673 KERNEL/(5179:5196): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[INFO] 18:46:10:709 KERNEL/(5179:5195): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 18:52:01:909 KERNEL/(5407:5407): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 18:52:01:910 KERNEL/(5407:5407): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 18:52:01:910 KERNEL/(5407:5407): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 18:52:01:911 KERNEL/(5407:5407): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 18:52:01:911 KERNEL/(5407:5407): Kernel esperando un nuevo cliente
+[INFO] 18:52:01:911 KERNEL/(5407:5407): KERNEL listo para recibir al cliente
+[INFO] 18:52:04:410 KERNEL/(5407:5407): Cliente conectado (a KERNEL)
+[INFO] 18:52:04:411 KERNEL/(5407:5407): Socket del cliente recibido en kernel.
+[INFO] 18:52:04:411 KERNEL/(5407:5407): Kernel esperando un nuevo cliente
+[INFO] 18:52:04:411 KERNEL/(5407:5407): KERNEL listo para recibir al cliente
+[INFO] 18:52:04:413 KERNEL/(5407:5420): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 18:52:04:413 KERNEL/(5407:5420): Solicitando tabla de pag para proceso 1 de tamanio 4096
+[INFO] 18:52:04:413 KERNEL/(5407:5420): proceso 1 tabla de pag 0
+[INFO] 18:52:04:413 KERNEL/(5407:5420): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 18:52:04:413 KERNEL/(5407:5423): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[INFO] 18:52:32:442 KERNEL/(5407:5422): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 18:52:32:442 KERNEL/(5407:5421): [IO] Proceso 1 esperando 6000 milisegundos
+[INFO] 18:52:37:450 KERNEL/(5407:5438): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 18:52:42:492 KERNEL/(5407:5421): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 18:52:42:494 KERNEL/(5407:5420): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 18:52:42:494 KERNEL/(5407:5420): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 18:52:42:494 KERNEL/(5407:5423): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
+[INFO] 18:53:36:538 KERNEL/(5407:5422): [EXECUTE -> EXIT] Proceso 1 terminado

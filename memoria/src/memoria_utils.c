@@ -385,7 +385,6 @@ fila_1er_nivel obtener_nro_tabla_2do_nivel(int32_t nro_tabla, uint32_t index, ui
 	}
 	fila_1er_nivel* tabla = list_get(lista_tablas_1er_nivel,nro_tabla);
 	log_info(logger, "[CPU] Tabla : %d - Index: %d - PID: %d - Resultado: %d", nro_tabla, index, pid, tabla[index]);
-	// TODO configurar que le devuelva un mensaje de error a la CPU para que finalice el proceso por error
 	if (tabla[index] == -1){
 		log_error(logger, "SEGMENTATION FAULT!! El proceso no es lo suficientemente grande!");
 		exit(-1);
@@ -644,10 +643,10 @@ void crear_estructura_clock(uint16_t pid){
 
 // avanza al proximo marco del proceso
 uint16_t avanzar_puntero(uint16_t puntero_clock){
-	if(puntero_clock + 1 == marcos_por_proceso)
-		return 0;
-	else
-		return puntero_clock++;
+    puntero_clock++;
+    if(puntero_clock == marcos_por_proceso)
+        return 0;
+    return puntero_clock;
 }
 
 // Devuelve el puntero a una página (fila de segundo nivel)
