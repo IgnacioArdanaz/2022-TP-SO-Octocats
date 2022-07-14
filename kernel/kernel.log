@@ -3208,3 +3208,179 @@
 [INFO] 23:02:49:485 KERNEL/(5415:5425): [EXECUTE -> EXIT] Proceso 2 terminado
 [INFO] 23:02:49:486 KERNEL/(5415:5426): [READY -> EXECUTE] MANDANDO PROCESO 1 A EJECUTAR
 [INFO] 23:03:07:494 KERNEL/(5415:5425): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 10:11:48:262 KERNEL/(7071:7071): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 10:11:48:264 KERNEL/(7071:7071): Error al conectar (a CPU DISPATCH)
+[INFO] 10:11:48:264 KERNEL/(7071:7071): Error al conectar (a CPU INTERRUPT)
+[INFO] 10:11:48:264 KERNEL/(7071:7071): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 10:11:48:264 KERNEL/(7071:7071): Kernel esperando un nuevo cliente
+[INFO] 10:11:48:264 KERNEL/(7071:7071): KERNEL listo para recibir al cliente
+[INFO] 10:29:01:436 KERNEL/(9043:9043): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 10:29:01:453 KERNEL/(9043:9043): Error al conectar (a CPU DISPATCH)
+[INFO] 10:29:01:454 KERNEL/(9043:9043): Error al conectar (a CPU INTERRUPT)
+[INFO] 10:29:01:454 KERNEL/(9043:9043): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 10:29:01:456 KERNEL/(9043:9043): Kernel esperando un nuevo cliente
+[INFO] 10:29:01:457 KERNEL/(9043:9043): KERNEL listo para recibir al cliente
+[INFO] 10:30:12:338 KERNEL/(9185:9185): Error al conectar (a MEMORIA)
+[ERROR] 10:30:12:339 KERNEL/(9185:9185): Error al intentar conectarse a memoria :-(
+[INFO] 10:30:30:460 KERNEL/(9234:9234): Error al conectar (a MEMORIA)
+[ERROR] 10:30:30:461 KERNEL/(9234:9234): Error al intentar conectarse a memoria :-(
+[INFO] 10:30:52:372 KERNEL/(9283:9283): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 10:30:52:373 KERNEL/(9283:9283): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 10:30:52:373 KERNEL/(9283:9283): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 10:30:52:373 KERNEL/(9283:9283): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 10:30:52:373 KERNEL/(9283:9283): Kernel esperando un nuevo cliente
+[INFO] 10:30:52:373 KERNEL/(9283:9283): KERNEL listo para recibir al cliente
+[INFO] 10:32:58:480 KERNEL/(9516:9516): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 10:32:58:481 KERNEL/(9516:9516): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 10:32:58:481 KERNEL/(9516:9516): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 10:32:58:482 KERNEL/(9516:9516): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 10:32:58:482 KERNEL/(9516:9516): Kernel esperando un nuevo cliente
+[INFO] 10:32:58:483 KERNEL/(9516:9516): KERNEL listo para recibir al cliente
+[INFO] 10:50:38:416 KERNEL/(11361:11361): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 10:50:38:417 KERNEL/(11361:11361): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 10:50:38:417 KERNEL/(11361:11361): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[ERROR] 10:50:38:668 KERNEL/(11361:11361): Error creando el socket :(
+[INFO] 10:56:55:372 KERNEL/(11694:11694): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 10:56:55:373 KERNEL/(11694:11694): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 10:56:55:373 KERNEL/(11694:11694): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[ERROR] 10:56:55:393 KERNEL/(11694:11694): Error creando el socket :(
+[INFO] 10:57:37:024 KERNEL/(11776:11776): Error al conectar (a MEMORIA)
+[ERROR] 10:57:37:025 KERNEL/(11776:11776): Error al intentar conectarse a memoria :-(
+[INFO] 10:58:13:780 KERNEL/(11847:11847): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 10:58:13:780 KERNEL/(11847:11847): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 10:58:13:781 KERNEL/(11847:11847): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[ERROR] 10:58:13:945 KERNEL/(11847:11847): Error creando el socket :(
+[INFO] 10:59:04:741 KERNEL/(11920:11920): Error al conectar (a MEMORIA)
+[ERROR] 10:59:04:743 KERNEL/(11920:11920): Error al intentar conectarse a memoria :-(
+[INFO] 11:01:25:115 KERNEL/(12148:12148): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 11:01:25:118 KERNEL/(12148:12148): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 11:01:25:118 KERNEL/(12148:12148): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[ERROR] 11:01:25:145 KERNEL/(12148:12148): Error creando el socket :(
+[INFO] 11:02:18:456 KERNEL/(12237:12237): Error al conectar (a MEMORIA)
+[ERROR] 11:02:18:457 KERNEL/(12237:12237): Error al intentar conectarse a memoria :-(
+[INFO] 11:02:58:324 KERNEL/(12331:12331): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 11:02:58:326 KERNEL/(12331:12331): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 11:02:58:327 KERNEL/(12331:12331): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 11:02:58:328 KERNEL/(12331:12331): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 11:02:58:328 KERNEL/(12331:12331): Kernel esperando un nuevo cliente
+[INFO] 11:02:58:328 KERNEL/(12331:12331): KERNEL listo para recibir al cliente
+[INFO] 11:03:09:542 KERNEL/(12331:12331): Cliente conectado (a KERNEL)
+[INFO] 11:03:09:542 KERNEL/(12331:12331): Socket del cliente recibido en kernel.
+[INFO] 11:03:09:542 KERNEL/(12331:12331): Kernel esperando un nuevo cliente
+[INFO] 11:03:09:542 KERNEL/(12331:12331): KERNEL listo para recibir al cliente
+[INFO] 11:03:09:551 KERNEL/(12331:12339): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 11:03:09:551 KERNEL/(12331:12339): Solicitando tabla de pag para proceso 1 de tamanio 2048
+[INFO] 11:03:09:566 KERNEL/(12331:12339): proceso 1 tabla de pag 0
+[INFO] 11:03:09:566 KERNEL/(12331:12339): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 11:03:09:566 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 11:03:11:340 KERNEL/(12331:12331): Cliente conectado (a KERNEL)
+[INFO] 11:03:11:340 KERNEL/(12331:12331): Socket del cliente recibido en kernel.
+[INFO] 11:03:11:340 KERNEL/(12331:12331): Kernel esperando un nuevo cliente
+[INFO] 11:03:11:341 KERNEL/(12331:12331): KERNEL listo para recibir al cliente
+[INFO] 11:03:11:342 KERNEL/(12331:12339): [NEW -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 11:03:11:342 KERNEL/(12331:12339): Solicitando tabla de pag para proceso 2 de tamanio 2048
+[INFO] 11:03:11:381 KERNEL/(12331:12339): proceso 2 tabla de pag 1
+[INFO] 11:03:11:381 KERNEL/(12331:12339): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 11:03:11:381 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:03:13:035 KERNEL/(12331:12331): Cliente conectado (a KERNEL)
+[INFO] 11:03:13:035 KERNEL/(12331:12331): Socket del cliente recibido en kernel.
+[INFO] 11:03:13:035 KERNEL/(12331:12331): Kernel esperando un nuevo cliente
+[INFO] 11:03:13:035 KERNEL/(12331:12331): KERNEL listo para recibir al cliente
+[INFO] 11:03:13:037 KERNEL/(12331:12339): [NEW -> READY] PROCESO 3 AGREGADO A READY
+[INFO] 11:03:13:037 KERNEL/(12331:12339): Solicitando tabla de pag para proceso 3 de tamanio 2048
+[INFO] 11:03:13:077 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 11:03:13:078 KERNEL/(12331:12339): proceso 3 tabla de pag 2
+[INFO] 11:03:13:078 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 11:03:13:078 KERNEL/(12331:12339): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 2
+[INFO] 11:03:13:078 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:03:13:183 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 11:03:13:183 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 11:03:14:009 KERNEL/(12331:12331): Cliente conectado (a KERNEL)
+[INFO] 11:03:14:009 KERNEL/(12331:12331): Socket del cliente recibido en kernel.
+[INFO] 11:03:14:009 KERNEL/(12331:12331): Kernel esperando un nuevo cliente
+[INFO] 11:03:14:009 KERNEL/(12331:12331): KERNEL listo para recibir al cliente
+[INFO] 11:03:14:016 KERNEL/(12331:12339): [NEW -> READY] PROCESO 4 AGREGADO A READY
+[INFO] 11:03:14:016 KERNEL/(12331:12339): Solicitando tabla de pag para proceso 4 de tamanio 2048
+[INFO] 11:03:14:053 KERNEL/(12331:12339): proceso 4 tabla de pag 3
+[INFO] 11:03:14:053 KERNEL/(12331:12339): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 11:03:14:053 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:03:14:795 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 11:03:14:795 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 11:03:15:036 KERNEL/(12331:12331): Cliente conectado (a KERNEL)
+[INFO] 11:03:15:036 KERNEL/(12331:12331): Socket del cliente recibido en kernel.
+[INFO] 11:03:15:036 KERNEL/(12331:12331): Kernel esperando un nuevo cliente
+[INFO] 11:03:15:036 KERNEL/(12331:12331): KERNEL listo para recibir al cliente
+[INFO] 11:03:15:037 KERNEL/(12331:12339): [NEW -> READY] PROCESO 5 AGREGADO A READY
+[INFO] 11:03:15:039 KERNEL/(12331:12339): Solicitando tabla de pag para proceso 5 de tamanio 2048
+[INFO] 11:03:15:077 KERNEL/(12331:12339): proceso 5 tabla de pag 4
+[INFO] 11:03:15:077 KERNEL/(12331:12339): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 11:03:15:077 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:03:16:499 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 11:03:16:499 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 11:03:30:967 KERNEL/(12331:12341): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 11:03:30:967 KERNEL/(12331:12340): [IO] Proceso 1 esperando 5000 milisegundos
+[INFO] 11:03:30:968 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 11:03:31:978 KERNEL/(12331:12402): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 11:03:35:968 KERNEL/(12331:12340): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 11:03:35:968 KERNEL/(12331:12339): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 11:03:35:968 KERNEL/(12331:12339): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 11:03:35:968 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:03:37:494 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 11:03:37:494 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 11:03:55:876 KERNEL/(12331:12341): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 11:03:55:879 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 11:04:06:919 KERNEL/(12331:12341): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 11:04:06:920 KERNEL/(12331:12340): [IO] Proceso 2 esperando 5000 milisegundos
+[INFO] 11:04:06:920 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 11:04:07:926 KERNEL/(12331:12431): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 2
+[INFO] 11:04:11:920 KERNEL/(12331:12340): [SUSP_BLOCKED -> SUSP_READY] Proceso 2 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 11:04:11:920 KERNEL/(12331:12339): [SUSP_READY -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 11:04:11:920 KERNEL/(12331:12339): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 11:04:11:920 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:04:13:439 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 11:04:13:439 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 11:04:29:505 KERNEL/(12331:12341): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 11:04:29:506 KERNEL/(12331:12340): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 11:04:29:506 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 11:04:29:606 KERNEL/(12331:12340): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 11:04:29:607 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:04:31:011 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 11:04:31:011 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 11:04:31:518 KERNEL/(12331:12341): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 11:04:31:519 KERNEL/(12331:12340): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 11:04:31:519 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 11:04:31:619 KERNEL/(12331:12340): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 11:04:31:620 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:04:34:024 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 11:04:34:024 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 11:04:34:530 KERNEL/(12331:12341): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 11:04:34:530 KERNEL/(12331:12340): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 11:04:34:530 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 11:04:34:630 KERNEL/(12331:12340): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 11:04:34:632 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:04:36:035 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 11:04:36:035 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 11:04:36:541 KERNEL/(12331:12341): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 11:04:36:541 KERNEL/(12331:12340): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 11:04:36:541 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 11:04:36:642 KERNEL/(12331:12340): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 11:04:36:644 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:04:39:047 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 11:04:39:047 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 11:04:39:555 KERNEL/(12331:12341): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 11:04:39:555 KERNEL/(12331:12340): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 11:04:39:555 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 11:04:39:655 KERNEL/(12331:12340): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 11:04:39:655 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:04:41:060 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 11:04:41:060 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 11:04:41:568 KERNEL/(12331:12341): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 11:04:41:568 KERNEL/(12331:12340): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 11:04:41:568 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 11:04:41:670 KERNEL/(12331:12340): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 11:04:41:670 KERNEL/(12331:12342): [INTERRUPT] Mandando interrupcion
+[INFO] 11:04:45:074 KERNEL/(12331:12341): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 11:04:45:074 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 11:04:46:083 KERNEL/(12331:12341): [EXECUTE -> EXIT] Proceso 2 terminado
+[INFO] 11:04:46:085 KERNEL/(12331:12342): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[ERROR] 11:04:57:382 KERNEL/(12331:12341): DISCONNECT FAILURE!

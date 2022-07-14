@@ -93,7 +93,9 @@ void inicializar_cpu(){
 //	recv_datos_necesarios(conexion_memoria, &cant_ent_paginas, &tam_pagina);
 	log_info(logger, "RECIBIDO: tam_pagina=%d - cant_ent_paginas=%d", tam_pagina, cant_ent_paginas);
 
-	char* ip = config_get_string_value(config, "IP");
+	t_config* config_ips = config_create("../ips.config");
+	char* ip = config_get_string_value(config_ips,"IP_CPU");
+	//char* ip = config_get_string_value(config, "IP");
 	char* puerto_dispatch = config_get_string_value(config, "PUERTO_ESCUCHA_DISPATCH");
 	char* puerto_interrupt = config_get_string_value(config, "PUERTO_ESCUCHA_INTERRUPT");
 	server_cpu_dispatch = iniciar_servidor(logger, "CPU_DISPATCH", ip, puerto_dispatch);
@@ -102,6 +104,7 @@ void inicializar_cpu(){
 	cliente_socket_interrupt = esperar_cliente(logger, "CPU_INTERRUPT", server_cpu_interrupt);
 	recv(cliente_socket_dispatch, &alfa, sizeof(double), 0);
 	log_info(logger,"Valor alfa %.2f",alfa);
+	config_destroy(config_ips);
 	pthread_t hilo_interrupciones;
 	pthread_create(&hilo_interrupciones,NULL,(void*)interrupcion,NULL);
 	pthread_detach(hilo_interrupciones);

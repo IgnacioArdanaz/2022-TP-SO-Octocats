@@ -79,6 +79,9 @@ void inicializar_memoria(){
 	logger = log_create("memoria.log", "memoria", 1, LOG_LEVEL_INFO);
 	config = config_create("memoria.config");
 
+	t_config* config_ips = config_create("../ips.config");
+	char* ip = config_get_string_value(config_ips,"IP_MEMORIA");
+
 	tam_memoria = config_get_int_value(config,"TAM_MEMORIA");
 	tam_pagina = config_get_int_value(config,"TAM_PAGINA");
 	entradas_por_tabla = config_get_int_value(config,"ENTRADAS_POR_TABLA");
@@ -86,7 +89,8 @@ void inicializar_memoria(){
 	marcos_por_proceso = config_get_int_value(config,"MARCOS_POR_PROCESO");
 	algoritmo = config_get_string_value(config,"ALGORITMO_REEMPLAZO");
 	log_info(logger,"Algoritmo %s configurado", algoritmo);
-	char* ip = config_get_string_value(config,"IP");
+	//char* ip = config_get_string_value(config,"IP");
+
 	char* puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
 	server_memoria = iniciar_servidor(logger, "MEMORIA", ip, puerto_escucha);
 	cliente_cpu = esperar_cliente(logger, "MEMORIA", server_memoria);
@@ -95,7 +99,7 @@ void inicializar_memoria(){
 	send(cliente_cpu, &entradas_por_tabla, sizeof(uint16_t),0);
 	send(cliente_cpu, &tam_pagina, sizeof(uint16_t),0);
 	cliente_kernel = esperar_cliente(logger, "MEMORIA", server_memoria);
-
+	config_destroy(config_ips);
 	memoria = malloc(tam_memoria);
 	lista_tablas_1er_nivel = list_create();
 	lista_tablas_2do_nivel = list_create();
