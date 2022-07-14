@@ -41,6 +41,11 @@ void set_fd(uint16_t pid, int fd){
 	dictionary_put(fd_swaps, key, fd);
 }
 
+void del_fd(uint16_t pid){
+	char* key = string_itoa(pid);
+	dictionary_remove(fd_swaps, key);
+}
+
 estructura_clock* get_estructura_clock(uint16_t pid){
 	char* key = string_itoa(pid);
 	return dictionary_get(estructuras_clock, key);
@@ -49,6 +54,11 @@ estructura_clock* get_estructura_clock(uint16_t pid){
 void set_estructura_clock(uint16_t pid, estructura_clock* e_clock){
 	char* key = string_itoa(pid);
 	return dictionary_put(estructuras_clock, key, e_clock);
+}
+
+void del_estructura_clock(uint16_t pid){
+	char* key = string_itoa(pid);
+	return dictionary_remove_and_destroy(estructuras_clock, key, free);
 }
 
 ////////////////////////////////////////
@@ -279,6 +289,8 @@ void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
 	list_destroy_and_destroy_elements(estructura->marcos_en_memoria, free);
 	// dictionary_remove_and_destroy(estructuras_clock, pid, free); //TODO
 	borrar_archivo_swap(pid, get_fd(pid));
+	del_fd(pid);
+	del_estructura_clock(pid);
 }
 
 /***********************************************************************/

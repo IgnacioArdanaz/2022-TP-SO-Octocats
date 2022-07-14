@@ -1,4 +1,4 @@
-11:02:55 **** Incremental Build of configuration Debug for project kernel ****
+11:45:50 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 Building file: ../src/kernel_main.c
 Invoking: GCC C Compiler
@@ -11,5 +11,5 @@ gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_m
 Finished building target: kernel
  
 
-11:02:57 Build Finished (took 2s.221ms)
+11:45:51 Build Finished (took 1s.464ms)
 
