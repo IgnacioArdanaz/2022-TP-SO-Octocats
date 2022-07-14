@@ -62,6 +62,7 @@ void inicializar_cpu(){
 	espera = config_get_int_value(config, "RETARDO_NOOP");
 	entradas_tlb = config_get_int_value(config, "ENTRADAS_TLB");
 	reemplazo_tlb = config_get_string_value(config, "REEMPLAZO_TLB");
+	log_info(logger,"Algoritmo de reemplazo configurado: %s", reemplazo_tlb);
 	hay_interrupcion = false;
 	tlb=list_create();
 
@@ -256,9 +257,9 @@ marco_t  traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas_1){
 		log_info(logger, "Recibido numero de marco: %d", nro_marco);
 
 		if(!marco_en_tlb(nro_marco,numero_pagina)){
-			if(strcmp(reemplazo_tlb,"LRU"))
+			if(strcmp(reemplazo_tlb,"LRU") == 0)
 				reemplazo_tlb_LRU(numero_pagina, nro_marco);
-			else if(strcmp(reemplazo_tlb,"FIFO"))
+			else if(strcmp(reemplazo_tlb,"FIFO") == 0)
 				reemplazo_tlb_FIFO(numero_pagina,nro_marco);
 		}
 	}
@@ -296,9 +297,13 @@ int32_t presente_en_tlb(uint32_t numero_pagina){
 }
 
 void reemplazo_tlb_FIFO(uint32_t numero_pagina, int32_t marco ){
+	TLB_t* tlb_entrada_0 = list_get(tlb,0);
+	log_info(logger,"Pagina %d asignada al marco %d", numero_pagina, marco);
+	if (tlb_entrada_0->pagina != -1)
+		log_info(logger, "Pagina %d y marco %d reemplazados :(", tlb_entrada_0->pagina, tlb_entrada_0->marco);
 	list_remove_and_destroy_element(tlb,0,free);
 	TLB_t *tlb_entrada = crear_entrada_tlb(numero_pagina,marco);
-	list_add_in_index(tlb,entradas_tlb-1,tlb_entrada);
+	list_add(tlb,tlb_entrada);
 
 }
 
@@ -310,9 +315,13 @@ bool menor(TLB_t* a,TLB_t* b){
 void reemplazo_tlb_LRU(uint32_t numero_pagina, int32_t marco ){
 
 	list_sort(tlb,*menor); //Preguntar como se supone que funciona esto
+	TLB_t* tlb_entrada_0 = list_get(tlb,0);
+	log_info(logger,"Pagina %d asignada al marco %d", numero_pagina, marco);
+	if (tlb_entrada_0->pagina != -1)
+		log_info(logger, "Pagina %d y marco %d reemplazados :(", tlb_entrada_0->pagina, tlb_entrada_0->marco);
 	list_remove_and_destroy_element(tlb,0,free);
 	TLB_t *tlb_entrada = crear_entrada_tlb(numero_pagina,marco);
-	list_add_in_index(tlb,entradas_tlb-1,tlb_entrada);
+	list_add(tlb,tlb_entrada);
 }
 
 bool marco_en_tlb(int32_t marco,int32_t pagina){//Para encontrar la lista a actualizar

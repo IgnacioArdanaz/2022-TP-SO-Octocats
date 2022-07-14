@@ -273,6 +273,7 @@ void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
 		bitarray_marcos_ocupados[fila_busqueda->nro_marco_en_memoria] = 0;
 	}
 	list_destroy_and_destroy_elements(estructura->marcos_en_memoria, free);
+	// dictionary_remove_and_destroy(estructuras_clock, pid, free); //TODO
 	borrar_archivo_swap(pid, get_fd(pid));
 }
 
