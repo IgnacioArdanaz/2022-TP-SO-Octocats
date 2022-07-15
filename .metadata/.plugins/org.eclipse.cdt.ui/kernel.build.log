@@ -1,5 +1,10 @@
-12:59:47 **** Incremental Build of configuration Debug for project kernel ****
+16:53:57 **** Incremental Build of configuration Debug for project kernel ****
 make all 
+Building file: ../src/kernel_main.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
+Finished building: ../src/kernel_main.c
+ 
 Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
 gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
@@ -14,7 +19,7 @@ In file included from /usr/include/commons/collections/queue.h:20:0,
   int list_add(t_list *, void *element);
       ^
 ../src/kernel_utils.c: In function ‘esta_suspendido’:
-../src/kernel_utils.c:401:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+../src/kernel_utils.c:400:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
    uint16_t pid_actual = list_iterator_next(list_iterator);
                          ^
 In file included from ../src/kernel_utils.h:17:0,
@@ -66,5 +71,5 @@ gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_m
 Finished building target: kernel
  
 
-12:59:48 Build Finished (took 1s.341ms)
+16:53:59 Build Finished (took 1s.661ms)
 

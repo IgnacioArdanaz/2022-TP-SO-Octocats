@@ -306,6 +306,15 @@ void esperar_cpu(){
 				sem_post(&s_blocked);
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
+				
+				//Por si va a io entre que se pregunto si cpu estaba ocupado y se solicita el desalojo
+				int sem_valor;
+                		sem_getvalue (&s_pcb_desalojado, &sem_valor);
+                		if(sem_valor == -1){
+                    			sem_post(&s_pcb_desalojado);
+					printf("\n\n\n----------------------------------------------------\"UWU\"----------------------------------------------\n\n\n");
+				}
+
 				break;
 			default:
 				log_error(logger, "AAAlgo anduvo mal en el server del kernel\n Cop: %d",cop);
@@ -433,25 +442,15 @@ void printear_estado_semaforos(){
 /****Hilo READY -> EXECUTE (SRT) ***/
 void srt_ready_execute(){
 	while(1){
-//		log_info(logger,"[DEBUG] entrando al while loop");
-//		printear_estado_semaforos();
 		int sem_valor;
 		sem_getvalue (&s_ready_execute, &sem_valor);
 		if(sem_valor == 1) //Se le dio post mientras no se habia terminado de mandar a otro a ejecutar
 			sem_wait(&s_ready_execute);
-//		log_info(logger,"[DEBUG] Luego del control");
-//		printear_estado_semaforos();
 		sem_wait(&s_ready_execute);
-//		log_info(logger,"[DEBUG] Luego del wait a ready execute");
-//		printear_estado_semaforos();
 		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
-//		log_info(logger,"[DEBUG] Luego del wait al contador de ready");
-//		printear_estado_semaforos();
 		if(!cpu_desocupado){
 			desalojar_cpu();
 			sem_wait(&s_pcb_desalojado);
-//			log_info(logger,"[DEBUG] Luego del wait al pcb desalojado");
-//			printear_estado_semaforos();
 		}
 		pthread_mutex_lock(&mx_lista_ready);
 		PCB_t* proceso = seleccionar_proceso_srt(); // mx porque la funcion usa a la cola de ready

@@ -23,6 +23,7 @@ int main(void) {
 		op_code cop;
 		recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0);
 		recv_proceso(cliente_socket_dispatch,pcb);
+		hay_interrupcion = false;
 		log_info(logger,"Proceso %d -> program counter %d - est %f", pcb->pid, pcb->pc, pcb->est_rafaga);
 		limpiar_tlb();
 		pid_actual = pcb->pid;
