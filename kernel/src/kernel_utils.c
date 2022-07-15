@@ -160,7 +160,7 @@ void procesar_socket(thread_args* argumentos){
 
 				char* key = string_itoa(pid_actual);
 				pthread_mutex_lock(&mx_socket);
-				dictionary_put(sockets, key, cliente_socket);
+				dictionary_put(sockets, key, (int*) cliente_socket);
 				pthread_mutex_unlock(&mx_socket);
 				pthread_mutex_lock(&mx_iteracion_blocked);
 				dictionary_put(iteracion_blocked, key, 0);
@@ -317,7 +317,7 @@ void suspendiendo(PCB_t* pcb){
 	char* key = string_itoa(pcb->pid);
 	pthread_mutex_lock(&mx_iteracion_blocked);
 	op_code cop = SUSPENDER_PROCESO;
-	int iteracion_actual = dictionary_get(iteracion_blocked, key);
+	int iteracion_actual = (int) dictionary_get(iteracion_blocked, key);
 	pthread_mutex_unlock(&mx_iteracion_blocked);
 	usleep(tiempo_suspended*1000);
 	pthread_mutex_lock(&mx_cola_blocked);
@@ -329,7 +329,7 @@ void suspendiendo(PCB_t* pcb){
 		pthread_exit(0);
 	}
 	pthread_mutex_lock(&mx_iteracion_blocked);
-	if(iteracion_actual == dictionary_get(iteracion_blocked, key)){
+	if(iteracion_actual == (int) dictionary_get(iteracion_blocked, key)){
 		pthread_mutex_unlock(&mx_iteracion_blocked);
 		log_info(logger,"[BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso %d",pcb->pid);
 
@@ -410,18 +410,50 @@ bool esta_suspendido(uint16_t pid){
 	return false;
 }
 
+void printear_estado_semaforos(){
+	int sem_valor;
+	sem_getvalue (&s_pasaje_a_ready, &sem_valor);
+	log_info(logger, "[DEBUG] Pasaje a ready: %d", sem_valor);
+	sem_getvalue (&s_ready_execute, &sem_valor);
+	log_info(logger,"[DEBUG] Ready a execute: %d", sem_valor);
+	sem_getvalue (&s_cont_ready, &sem_valor);
+	log_info(logger,"[DEBUG] Contador de ready: %d", sem_valor);
+	sem_getvalue (&s_cpu_desocupado, &sem_valor);
+	log_info(logger,"[DEBUG] CPU desocupado: %d", sem_valor);
+	sem_getvalue (&s_blocked, &sem_valor);
+	log_info(logger,"[DEBUG] Blocked: %d", sem_valor);
+	sem_getvalue (&s_suspended_ready, &sem_valor);
+	log_info(logger,"[DEBUG] Suspended -> ready: %d", sem_valor);
+	sem_getvalue (&s_multiprogramacion_actual, &sem_valor);
+	log_info(logger,"[DEBUG] Multiprogramacion actual: %d", sem_valor);
+	sem_getvalue (&s_pcb_desalojado, &sem_valor);
+	log_info(logger,"[DEBUG] PCB desalojado: %d", sem_valor);
+	sem_getvalue (&s_esperar_cpu, &sem_valor);
+	log_info(logger,"[DEBUG] Esperar CPU: %d", sem_valor);
+}
+
 /****Hilo READY -> EXECUTE (SRT) ***/
 void srt_ready_execute(){
 	while(1){
+		log_info(logger,"[DEBUG] entrando al while loop");
+		printear_estado_semaforos();
 		int sem_valor;
 		sem_getvalue (&s_ready_execute, &sem_valor);
 		if(sem_valor == 1) //Se le dio post mientras no se habia terminado de mandar a otro a ejecutar
 			sem_wait(&s_ready_execute);
+		log_info(logger,"[DEBUG] Luego del control");
+		printear_estado_semaforos();
 		sem_wait(&s_ready_execute);
+		log_info(logger,"[DEBUG] Luego del wait a ready execute");
+		printear_estado_semaforos();
 		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
+		log_info(logger,"[DEBUG] Luego del wait al contador de ready");
+		printear_estado_semaforos();
 		if(!cpu_desocupado){
 			desalojar_cpu();
 			sem_wait(&s_pcb_desalojado);
+			log_info(logger,"[DEBUG]Luego del wait al pcb desalojado");
+			printear_estado_semaforos();
 		}
 		pthread_mutex_lock(&mx_lista_ready);
 		PCB_t* proceso = seleccionar_proceso_srt(); // mx porque la funcion usa a la cola de ready
