@@ -1,0 +1,235 @@
+[INFO] 16:45:11:287 cpu/(6053:6053): Algoritmo de reemplazo configurado: LRU
+[INFO] 16:45:11:288 cpu/(6053:6053): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 16:45:11:288 cpu/(6053:6053): RECIBIDO: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 16:45:11:288 cpu/(6053:6053): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 16:45:11:289 cpu/(6053:6053): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 16:45:11:289 cpu/(6053:6053): CPU_DISPATCH listo para recibir al cliente
+[INFO] 16:45:19:260 cpu/(6053:6053): Cliente conectado (a CPU_DISPATCH)
+[INFO] 16:45:19:260 cpu/(6053:6053): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 16:45:19:260 cpu/(6053:6053): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 16:45:19:260 cpu/(6053:6053): Valor alfa 0.20
+[INFO] 16:46:18:991 cpu/(6053:6053): Proceso 1 -> program counter 0 - est 50000.000000
+[INFO] 16:46:18:991 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:19:092 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:19:193 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:19:294 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:19:394 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:19:495 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:19:596 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:19:698 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:19:798 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:19:898 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:19:999 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:19:999 cpu/(6053:6053): La pagina 0 no esta en TLB
+[INFO] 16:46:20:500 cpu/(6053:6053): Recibida tabla pag 2do nivel numero: 0
+[INFO] 16:46:22:002 cpu/(6053:6053): Recibido numero de marco: 0
+[INFO] 16:46:22:002 cpu/(6053:6053): Pagina 0 asignada al marco 0
+[INFO] 16:46:22:002 cpu/(6053:6053): Ejecutando WRITE: pagina 0, marco 0,  desp 0, valor: 1
+[INFO] 16:46:22:503 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:22:603 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:22:704 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:22:705 cpu/(6053:6053): Ejecutando WRITE: pagina 0, marco 0,  desp 4, valor: 2
+[INFO] 16:46:23:205 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:23:306 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:23:407 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:23:408 cpu/(6053:6053): Ejecutando WRITE: pagina 0, marco 0,  desp 8, valor: 3
+[INFO] 16:46:23:908 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:24:008 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:24:109 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:24:109 cpu/(6053:6053): Ejecutando WRITE: pagina 0, marco 0,  desp 12, valor: 4
+[INFO] 16:46:24:609 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:24:710 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:24:811 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:24:811 cpu/(6053:6053): Ejecutando WRITE: pagina 0, marco 0,  desp 16, valor: 5
+[INFO] 16:46:25:312 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:25:412 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:25:513 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:25:513 cpu/(6053:6053): La pagina 1 no esta en TLB
+[INFO] 16:46:26:014 cpu/(6053:6053): Recibida tabla pag 2do nivel numero: 0
+[INFO] 16:46:27:515 cpu/(6053:6053): Recibido numero de marco: 1
+[INFO] 16:46:27:515 cpu/(6053:6053): Pagina 1 asignada al marco 1
+[INFO] 16:46:27:515 cpu/(6053:6053): Ejecutando WRITE: pagina 1, marco 1,  desp 0, valor: 11
+[INFO] 16:46:28:015 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:28:116 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:28:216 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:28:217 cpu/(6053:6053): Ejecutando WRITE: pagina 1, marco 1,  desp 4, valor: 12
+[INFO] 16:46:28:717 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:28:818 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:28:918 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:28:919 cpu/(6053:6053): Ejecutando WRITE: pagina 1, marco 1,  desp 8, valor: 13
+[INFO] 16:46:29:420 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:29:520 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:29:621 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:29:622 cpu/(6053:6053): Ejecutando WRITE: pagina 1, marco 1,  desp 12, valor: 14
+[INFO] 16:46:30:122 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:30:223 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:30:324 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:30:324 cpu/(6053:6053): Ejecutando WRITE: pagina 1, marco 1,  desp 16, valor: 15
+[INFO] 16:46:30:824 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:30:925 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:31:025 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:31:025 cpu/(6053:6053): La pagina 2 no esta en TLB
+[INFO] 16:46:31:526 cpu/(6053:6053): Recibida tabla pag 2do nivel numero: 0
+[INFO] 16:46:33:027 cpu/(6053:6053): Recibido numero de marco: 2
+[INFO] 16:46:33:027 cpu/(6053:6053): Pagina 2 asignada al marco 2
+[INFO] 16:46:33:027 cpu/(6053:6053): Pagina 0 y marco 0 reemplazados :(
+[INFO] 16:46:33:027 cpu/(6053:6053): Ejecutando WRITE: pagina 2, marco 2,  desp 0, valor: 21
+[INFO] 16:46:33:528 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:33:628 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:33:728 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:33:729 cpu/(6053:6053): Ejecutando WRITE: pagina 2, marco 2,  desp 4, valor: 22
+[INFO] 16:46:34:229 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:34:330 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:34:431 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:34:431 cpu/(6053:6053): Ejecutando WRITE: pagina 2, marco 2,  desp 8, valor: 23
+[INFO] 16:46:34:932 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:35:032 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:35:133 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:35:133 cpu/(6053:6053): Ejecutando WRITE: pagina 2, marco 2,  desp 12, valor: 24
+[INFO] 16:46:35:634 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:35:734 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:35:835 cpu/(6053:6053): Ejecutando WRITE
+[INFO] 16:46:35:835 cpu/(6053:6053): Ejecutando WRITE: pagina 2, marco 2,  desp 16, valor: 25
+[INFO] 16:46:36:335 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:36:436 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:36:536 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:36:636 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:36:737 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:36:837 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:36:938 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:37:038 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:37:139 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:37:239 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:37:339 cpu/(6053:6053): Ejecutando IO
+[INFO] 16:46:37:340 cpu/(6053:6053): Rafaga real 18349
+[INFO] 16:46:37:340 cpu/(6053:6053): Proceso 1 estimacion rafaga siguiente 24679.200000
+[INFO] 16:46:37:340 cpu/(6053:6053): Program counter 64 (despues de ejecutar)
+[INFO] 16:46:37:340 cpu/(6053:6053): ==============================================================
+[INFO] 16:46:42:342 cpu/(6053:6053): Proceso 1 -> program counter 64 - est 24679.200000
+[INFO] 16:46:42:342 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:42:443 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:42:544 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:42:644 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:42:744 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:42:845 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:42:946 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:43:047 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:43:147 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:43:247 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:43:348 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:43:348 cpu/(6053:6053): La pagina 0 no esta en TLB
+[INFO] 16:46:43:848 cpu/(6053:6053): Recibida tabla pag 2do nivel numero: 0
+[INFO] 16:46:45:350 cpu/(6053:6053): Recibido numero de marco: 0
+[INFO] 16:46:45:350 cpu/(6053:6053): Pagina 0 asignada al marco 0
+[INFO] 16:46:45:350 cpu/(6053:6053): Ejecutando READ para pagina 0, marco 0 y desplazamiento 0
+[INFO] 16:46:45:851 cpu/(6053:6053): Dato leido = 1
+[INFO] 16:46:45:851 cpu/(6053:6053): Valor leido 1
+[INFO] 16:46:45:851 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:45:951 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:46:052 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:46:052 cpu/(6053:6053): Ejecutando READ para pagina 0, marco 0 y desplazamiento 4
+[INFO] 16:46:46:553 cpu/(6053:6053): Dato leido = 2
+[INFO] 16:46:46:553 cpu/(6053:6053): Valor leido 2
+[INFO] 16:46:46:553 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:46:654 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:46:754 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:46:754 cpu/(6053:6053): Ejecutando READ para pagina 0, marco 0 y desplazamiento 8
+[INFO] 16:46:47:255 cpu/(6053:6053): Dato leido = 3
+[INFO] 16:46:47:255 cpu/(6053:6053): Valor leido 3
+[INFO] 16:46:47:255 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:47:356 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:47:457 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:47:458 cpu/(6053:6053): Ejecutando READ para pagina 0, marco 0 y desplazamiento 12
+[INFO] 16:46:47:959 cpu/(6053:6053): Dato leido = 4
+[INFO] 16:46:47:959 cpu/(6053:6053): Valor leido 4
+[INFO] 16:46:47:959 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:48:059 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:48:160 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:48:161 cpu/(6053:6053): Ejecutando READ para pagina 0, marco 0 y desplazamiento 16
+[INFO] 16:46:48:661 cpu/(6053:6053): Dato leido = 5
+[INFO] 16:46:48:661 cpu/(6053:6053): Valor leido 5
+[INFO] 16:46:48:662 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:48:762 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:48:863 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:48:863 cpu/(6053:6053): La pagina 1 no esta en TLB
+[INFO] 16:46:49:364 cpu/(6053:6053): Recibida tabla pag 2do nivel numero: 0
+[INFO] 16:46:50:865 cpu/(6053:6053): Recibido numero de marco: 1
+[INFO] 16:46:50:865 cpu/(6053:6053): Pagina 1 asignada al marco 1
+[INFO] 16:46:50:865 cpu/(6053:6053): Ejecutando READ para pagina 1, marco 1 y desplazamiento 0
+[INFO] 16:46:51:366 cpu/(6053:6053): Dato leido = 11
+[INFO] 16:46:51:366 cpu/(6053:6053): Valor leido 11
+[INFO] 16:46:51:366 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:51:466 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:51:567 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:51:567 cpu/(6053:6053): Ejecutando READ para pagina 1, marco 1 y desplazamiento 4
+[INFO] 16:46:52:067 cpu/(6053:6053): Dato leido = 12
+[INFO] 16:46:52:067 cpu/(6053:6053): Valor leido 12
+[INFO] 16:46:52:068 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:52:168 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:52:268 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:52:268 cpu/(6053:6053): Ejecutando READ para pagina 1, marco 1 y desplazamiento 8
+[INFO] 16:46:52:769 cpu/(6053:6053): Dato leido = 13
+[INFO] 16:46:52:769 cpu/(6053:6053): Valor leido 13
+[INFO] 16:46:52:769 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:52:870 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:52:970 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:52:970 cpu/(6053:6053): Ejecutando READ para pagina 1, marco 1 y desplazamiento 12
+[INFO] 16:46:53:471 cpu/(6053:6053): Dato leido = 14
+[INFO] 16:46:53:471 cpu/(6053:6053): Valor leido 14
+[INFO] 16:46:53:471 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:53:572 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:53:672 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:53:672 cpu/(6053:6053): Ejecutando READ para pagina 1, marco 1 y desplazamiento 16
+[INFO] 16:46:54:173 cpu/(6053:6053): Dato leido = 15
+[INFO] 16:46:54:173 cpu/(6053:6053): Valor leido 15
+[INFO] 16:46:54:173 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:54:273 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:54:374 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:54:374 cpu/(6053:6053): La pagina 2 no esta en TLB
+[INFO] 16:46:54:875 cpu/(6053:6053): Recibida tabla pag 2do nivel numero: 0
+[INFO] 16:46:56:376 cpu/(6053:6053): Recibido numero de marco: 2
+[INFO] 16:46:56:376 cpu/(6053:6053): Pagina 2 asignada al marco 2
+[INFO] 16:46:56:376 cpu/(6053:6053): Pagina 0 y marco 0 reemplazados :(
+[INFO] 16:46:56:376 cpu/(6053:6053): Ejecutando READ para pagina 2, marco 2 y desplazamiento 0
+[INFO] 16:46:56:876 cpu/(6053:6053): Dato leido = 21
+[INFO] 16:46:56:877 cpu/(6053:6053): Valor leido 21
+[INFO] 16:46:56:877 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:56:977 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:57:078 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:57:079 cpu/(6053:6053): Ejecutando READ para pagina 2, marco 2 y desplazamiento 4
+[INFO] 16:46:57:580 cpu/(6053:6053): Dato leido = 22
+[INFO] 16:46:57:580 cpu/(6053:6053): Valor leido 22
+[INFO] 16:46:57:580 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:57:680 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:57:781 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:57:782 cpu/(6053:6053): Ejecutando READ para pagina 2, marco 2 y desplazamiento 8
+[INFO] 16:46:58:282 cpu/(6053:6053): Dato leido = 23
+[INFO] 16:46:58:283 cpu/(6053:6053): Valor leido 23
+[INFO] 16:46:58:283 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:58:383 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:58:484 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:58:484 cpu/(6053:6053): Ejecutando READ para pagina 2, marco 2 y desplazamiento 12
+[INFO] 16:46:58:984 cpu/(6053:6053): Dato leido = 24
+[INFO] 16:46:58:985 cpu/(6053:6053): Valor leido 24
+[INFO] 16:46:58:985 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:59:085 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:59:186 cpu/(6053:6053): Ejecutando READ
+[INFO] 16:46:59:186 cpu/(6053:6053): Ejecutando READ para pagina 2, marco 2 y desplazamiento 16
+[INFO] 16:46:59:686 cpu/(6053:6053): Dato leido = 25
+[INFO] 16:46:59:687 cpu/(6053:6053): Valor leido 25
+[INFO] 16:46:59:687 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:59:788 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:59:889 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:46:59:989 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:47:00:090 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:47:00:190 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:47:00:291 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:47:00:391 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:47:00:492 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:47:00:592 cpu/(6053:6053): Ejecutando NOOP
+[INFO] 16:47:00:693 cpu/(6053:6053): Ejecutando EXIT
+[INFO] 16:47:00:693 cpu/(6053:6053): Rafaga real 18350
+[INFO] 16:47:00:693 cpu/(6053:6053): Proceso 1 estimacion rafaga siguiente 19615.840000
+[INFO] 16:47:00:693 cpu/(6053:6053): Program counter 128 (despues de ejecutar)
+[INFO] 16:47:00:693 cpu/(6053:6053): ==============================================================
+[INFO] 16:47:10:353 cpu/(6053:6053): Proceso 0 -> program counter 128 - est 19615.840000

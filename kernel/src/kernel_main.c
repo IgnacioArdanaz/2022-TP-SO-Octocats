@@ -4,7 +4,7 @@
 int main(void) {
 
 	inicializar_kernel();
-	t_config* config_ips = config_create("../ips.config");
+	t_config* config_ips = config_create("../../ips.config");
 	char* ip = config_get_string_value(config_ips,"IP_KERNEL");
 	printf("Valor %s\n", ip);
 	char* puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");

@@ -87,9 +87,9 @@ void imprimir_tablas_2(){
 
 void inicializar_memoria(){
 	logger = log_create("memoria.log", "memoria", 1, LOG_LEVEL_INFO);
-	config = config_create("memoria.config");
+	config = config_create("../memoria.config");
 
-	t_config* config_ips = config_create("../ips.config");
+	t_config* config_ips = config_create("../../ips.config");
 	char* ip = config_get_string_value(config_ips,"IP_MEMORIA");
 
 	tam_memoria = config_get_int_value(config,"TAM_MEMORIA");

@@ -31,7 +31,7 @@ double estimacion_inicial;
 void inicializar_kernel(){
 
 	logger = log_create("kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
-	config = config_create("kernel.config");
+	config = config_create("../kernel.config");
 
 	cola_new = queue_create();
 	cola_blocked = list_create();
@@ -385,7 +385,6 @@ void ejecutar_io() {
 		else{
 			log_info(logger, "[BLOCKED -> READY] Proceso %d saliendo de blocked hacia ready :)",proceso->pid);
 			pthread_mutex_lock(&mx_lista_ready);
-			printf("Pase el mutex de ready!\n");
 			list_add(lista_ready, proceso);
 			pthread_mutex_unlock(&mx_lista_ready);
 			sem_post(&s_ready_execute);

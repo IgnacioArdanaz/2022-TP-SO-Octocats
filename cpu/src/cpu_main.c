@@ -58,7 +58,7 @@ void calculo_estimacion(PCB_t *pcb, op_code estado){
 
 void inicializar_cpu(){
 	logger = log_create("cpu.log", "cpu", 1, LOG_LEVEL_INFO);
-	config = config_create("cpu.config");
+	config = config_create("../cpu.config");
 	espera = config_get_int_value(config, "RETARDO_NOOP");
 	entradas_tlb = config_get_int_value(config, "ENTRADAS_TLB");
 	reemplazo_tlb = config_get_string_value(config, "REEMPLAZO_TLB");
@@ -93,7 +93,7 @@ void inicializar_cpu(){
 //	recv_datos_necesarios(conexion_memoria, &cant_ent_paginas, &tam_pagina);
 	log_info(logger, "RECIBIDO: tam_pagina=%d - cant_ent_paginas=%d", tam_pagina, cant_ent_paginas);
 
-	t_config* config_ips = config_create("../ips.config");
+	t_config* config_ips = config_create("../../ips.config");
 	char* ip = config_get_string_value(config_ips,"IP_CPU");
 	//char* ip = config_get_string_value(config, "IP");
 	char* puerto_dispatch = config_get_string_value(config, "PUERTO_ESCUCHA_DISPATCH");
