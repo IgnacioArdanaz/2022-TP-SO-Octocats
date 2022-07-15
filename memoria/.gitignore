@@ -28,7 +28,6 @@
 *.so
 *.so.*
 *.dylib
-*.mk
 *.o
 *.d
 
