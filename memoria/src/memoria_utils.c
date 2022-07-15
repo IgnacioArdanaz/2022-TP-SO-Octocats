@@ -287,7 +287,6 @@ void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
 		bitarray_marcos_ocupados[fila_busqueda->nro_marco_en_memoria] = 0;
 	}
 	list_destroy_and_destroy_elements(estructura->marcos_en_memoria, free);
-	// dictionary_remove_and_destroy(estructuras_clock, pid, free); //TODO
 	borrar_archivo_swap(pid, get_fd(pid));
 	del_fd(pid);
 	del_estructura_clock(pid);
@@ -421,8 +420,11 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 	}
 	log_info(logger, "[CPU] PAGE FAULT!!!");
 	int fd = get_fd(pid_actual);
+	uint32_t nro_marco_en_swap = index_tabla_1er_nivel * entradas_por_tabla + index;
 	// si no esta en memoria, traerlo (HAY PAGE FAULT)
-	void* marco = leer_marco_en_swap(fd,nro_tabla * entradas_por_tabla + index, tam_pagina);
+	void* marco = leer_marco_en_swap(fd,nro_marco_en_swap, tam_pagina);
+	uint32_t* i = marco;
+	log_info(logger,"Offset 0 del marco leido de memoria: %d (nro de pagina %d)",*i, nro_marco_en_swap);
 	int32_t nro_marco;
 	// si ya ocupa todos los marcos que puede ocupar, hacer un reemplazo (EJECUTAR ALGORITMO)
 	if (marcos_en_memoria() == marcos_por_proceso){
@@ -443,7 +445,6 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 	pagina->uso = 1;
 	escribir_marco_en_memoria(pagina->nro_marco, marco);
 
-	uint32_t nro_marco_en_swap = index_tabla_1er_nivel * entradas_por_tabla + index;
 	agregar_pagina_a_estructura_clock(nro_marco, pagina, nro_marco_en_swap);
 	return nro_marco;
 }
@@ -558,6 +559,10 @@ void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do
 		usleep(retardo_swap * 1000); // tenemos el retardo por swappear un marco modificado
 		entrada_2do_nivel->modificado = 0;
 	}
+	void* m = leer_marco_en_swap(get_fd(pid), nro_marco_en_swap, tam_pagina);
+	uint32_t* i = m;
+	log_info(logger, "Offset 0 de escritura: %d (pagina %d)", *i, nro_marco_en_swap),
+	free(m);
 	entrada_2do_nivel->presencia = 0;
 	bitarray_marcos_ocupados[entrada_2do_nivel->nro_marco] = 0;
 }
@@ -567,6 +572,8 @@ uint32_t read_en_memoria(uint32_t nro_marco, uint32_t desplazamiento){
 	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
 	uint32_t dato;
 	memcpy(&dato, memoria + desplazamiento_final, sizeof(dato));
+	if (dato < 0 || dato > 10000)
+		log_error(logger,"READ FALOPA :(");
 	fila_2do_nivel* pagina_actual = obtener_pagina(pid_actual, nro_marco);
 	pagina_actual->uso = 1;
 	log_info(logger, "[CPU] Dato '%d' leido en marco %d", dato, nro_marco);

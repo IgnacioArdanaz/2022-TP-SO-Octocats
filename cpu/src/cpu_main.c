@@ -118,9 +118,6 @@ void inicializar_tlb(){
 		TLB_t *tlb_aux = crear_entrada_tlb(-1,-1);
 		list_add(tlb, tlb_aux);
 
-		//TLB_t *tlb_aux2 = list_get(tlb,i);
-		//log_info(logger,"Numero pagina: %d", tlb_aux2->pagina);
-		//log_info(logger,"Numero pagina: %d", tlb_aux2->marco);
 	}
 
 }

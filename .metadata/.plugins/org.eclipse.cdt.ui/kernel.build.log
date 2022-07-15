@@ -1,15 +1,6 @@
-11:45:50 **** Incremental Build of configuration Debug for project kernel ****
+23:18:09 **** Incremental Build of configuration Debug for project kernel ****
 make all 
-Building file: ../src/kernel_main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
-Finished building: ../src/kernel_main.c
- 
-Building target: kernel
-Invoking: GCC C Linker
-gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_main.o ./src/kernel_utils.o   -lcommons -lshared -lpthread
-Finished building target: kernel
- 
+make: Nothing to be done for 'all'.
 
-11:45:51 Build Finished (took 1s.464ms)
+23:18:10 Build Finished (took 693ms)
 
