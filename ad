@@ -1,0 +1,256 @@
+[33mcommit 33bfe4c21292509d13849fa5c11d21bb71fdb8db[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Thu Jul 7 22:34:14 2022 -0300
+
+    Vamos desbloqueando partes git add .! :(
+
+[33mcommit 8673de302bcece2c59ff1a6143d815ea7f4029f0[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Thu Jul 7 21:06:45 2022 -0300
+
+    Funcionan creacion, suspencion y finalizacion pero sin probar CPU
+
+[33mcommit dc2122475c11a321a403c30988d912c6b30b4822[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Thu Jul 7 19:08:19 2022 -0300
+
+    Arreglando temitas de swap (crear la carpeta 😅
+
+[33mcommit 82473cfe639995f95b72e583d38e4cc00ddf67be[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Thu Jul 7 18:44:44 2022 -0300
+
+    Kernel se comunica bien con memoria pero sin usar las funciones de protocol
+
+[33mcommit d73de853fb3d6fdf651c233351c1075ff4efa71b[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Thu Jul 7 00:55:17 2022 -0300
+
+    recv cpu + script de configs para pruebas + algunos logs
+
+[33mcommit 05feb28e8b805639ee969914427bae364d0bf69a[m
+Author: Ziro41 <cifernandez@frba.utn.edu.ar>
+Date:   Mon Jul 4 14:14:03 2022 -0300
+
+    Agrego sends en cpu
+
+[33mcommit e9e4925338352241afc1e8e09d8ce1ca051f2732[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Mon Jul 4 11:51:17 2022 -0300
+
+    Se comenzó a integrar memoria a cpu
+
+[33mcommit bca08f3b83715e3bd88468722479eddd8a89d1c2[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Mon Jul 4 10:59:22 2022 -0300
+
+    La nueva estructura va andando 10 puntos
+
+[33mcommit 9142a989fef45e36f33c74d7108543115ba37f38[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Sun Jul 3 22:18:25 2022 -0300
+
+    Se adaptó todo a la nueva estructura de clock y se puso más lindo el codigo
+
+[33mcommit 7565fb27ea1a3c8bb6feae3b659c898187ed16d0[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Mon Jun 27 23:07:18 2022 -0300
+
+    Se comenzo a desarrollar la estructura para gestion de clock
+
+[33mcommit d7b1eae90db02c56721f83b6969f394e15022a5f[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Sat Jun 25 11:39:17 2022 -0300
+
+    Retardo no afecta a crear tablas
+
+[33mcommit d2ec6991bd0dfba04fa0eecf74149e6776f46418[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Thu Jun 23 19:07:40 2022 -0300
+
+    Clock modificado y retardos implementados
+
+[33mcommit df3f64a2046d597cd3f0c25f9e9afd4a490b38d9[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Wed Jun 22 13:04:53 2022 -0300
+
+    Implementamos hilo de escucha con CPU
+
+[33mcommit a40f1328e55cb4e8f92427663b6eaa2a4989a4d6[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Wed Jun 22 11:23:27 2022 -0300
+
+    Agregamos implementacion 'read' y 'write'
+
+[33mcommit be9c508dcc2d797f39e4f7fba69471f911addf9f[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Wed Jun 22 10:49:30 2022 -0300
+
+    Agregamos suspension de procesos en memoria
+
+[33mcommit ece66088547e4c90ade7e127bee2f1568687e54f[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Mon Jun 20 20:43:29 2022 -0300
+
+    Swapeo con clock simple anda de 10 :)
+
+[33mcommit 4849463688382da59e27959408eed7c728e787c6[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Mon Jun 20 17:59:36 2022 -0300
+
+    Reemplazos empezados
+
+[33mcommit a28e0adc4bff120dc5826990ca55365e65b4163c[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Mon Jun 20 17:04:26 2022 -0300
+
+    Eliminacion de estructuras de proceso anda de 10 :)
+
+[33mcommit 2b5e102b5ec9fdf55f6895c26b81567c760a0336[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Mon Jun 20 16:25:36 2022 -0300
+
+    Swap anda de 10 :)
+
+[33mcommit c2b3288a811217bfae2aff3f28512ac2c6597c2c[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Sat Jun 18 20:35:23 2022 -0300
+
+    Kernel solicita la eliminacion de tablas al finalizar proceso (en progreso)
+
+[33mcommit d91e3ee00993f990a5805bf7e32a2ef1f51abd08[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Sat Jun 18 19:29:40 2022 -0300
+
+    Kernel solicita y recibe valor tabla de paginas
+
+[33mcommit 269e9186639877f759d8694049c8556ede433f3c[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Sat Jun 18 16:50:33 2022 -0300
+
+    Creacion de tablas hecha :)
+
+[33mcommit 03db4d753678326b990bba785b671bc51aa8761e[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Sat Jun 18 13:37:44 2022 -0300
+
+    Ips parametrizadas y avance memoria
+
+[33mcommit 3021ec201bfe099d022995dd767dcfb1d96a1d67[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Fri Jun 17 19:29:30 2022 -0300
+
+    Conexiones con cpu y kernel
+
+[33mcommit 6c067ab3667d14c520728c370856df7934a43075[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Tue Jun 14 16:06:04 2022 -0300
+
+    Comienzo a generar las estructuras en memoria
+
+[33mcommit 5b7312872751f542e4c8f9cdf44c2ea989889655[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Sat Jun 11 23:38:04 2022 -0300
+
+    Solucionado desalojos fantasma 👻 Anda de 10 👌
+
+[33mcommit ccbfe6f14fdc7d8b4cf946ab05cf5cad3470ec39[m
+Merge: 546c2ad 636fe9d
+Author: Thiago Cabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Wed Jun 8 19:37:35 2022 -0300
+
+    Merge pull request #2 from sisoputnfrba/dev
+    
+    Checkpoint 3
+
+[33mcommit 636fe9d3b7b6fc65af809ffecb5ab20a4d8a6578[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Sat Jun 4 16:47:32 2022 -0300
+
+    Anda en consola :)
+
+[33mcommit 3f208897a320f59dd47043ba97c202abefb024e5[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Sat Jun 4 12:11:01 2022 -0300
+
+    Optimizar boludeces
+
+[33mcommit ca8251db97a51fea9b4e3ba0b022aa5144b853dd[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Sat Jun 4 00:08:54 2022 -0300
+
+    Ajuste en el calculo de las estimaciones rafaga
+
+[33mcommit be8d91c356e3939831908b4c41dc75fb5d6d69b6[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Fri Jun 3 23:39:43 2022 -0300
+
+    Modifico algunos log_info
+
+[33mcommit 1e5d89a70d796677314d030588253806183851b1[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Fri Jun 3 14:59:56 2022 -0300
+
+    Arreglo SRT
+
+[33mcommit 0e22178fb7adf510df55e42cf275a5fbdffa0601[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Fri Jun 3 12:17:18 2022 -0300
+
+    Controlamos iteraciones de blocked para suspenderlo de forma correcta.
+
+[33mcommit 6f37d21ba5862d5fb11fe3bf521681d6d7ff3139[m
+Author: Ignacio Ardanaz <nachitoard@gmail.com>
+Date:   Fri Jun 3 00:29:06 2022 -0300
+
+    Agrego carpeta de tests
+
+[33mcommit 9a3618ec399661d0f85d0ea8c56589f852851289[m
+Author: Ziro41 <cifernandez@frba.utn.edu.ar>
+Date:   Thu Jun 2 19:45:40 2022 -0300
+
+    Calculo estimacion rafaga
+
+[33mcommit 8abb5fa374b60b0eb3235362f0c118af14a911a9[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Thu Jun 2 18:12:37 2022 -0300
+
+    Se envían interrupciones y se desaloja cpu
+
+[33mcommit ea74262caf387137adf234e256becb27db3846ed[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Thu Jun 2 14:16:39 2022 -0300
+
+    Se pasan a ready los suspendidos con mayor prioridad a los new
+
+[33mcommit 0b3560abdb4cb664a9bc3a69619bae5a2a2861de[m
+Author: lucas-marmo <lmarmo@frba.utn.edu.ar>
+Date:   Thu Jun 2 13:05:40 2022 -0300
+
+    Lista de pid suspendidos. Al finalizar blocked pasan a ready o suspended-ready.
+
+[33mcommit e41f1605d3b569cc89a60e7f7af70f7846de9765[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Thu Jun 2 00:09:56 2022 -0300
+
+    Suspension de proceso implementado
+
+[33mcommit 26194dca2d8231577219893a29e611a52a7da047[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Tue May 31 21:14:29 2022 -0300
+
+    Kernel y CPU se conectan con Memoria
+
+[33mcommit 47ad4c1ff2ccfe3c17c89d3c3fbccb1a259b7a23[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Tue May 31 20:52:06 2022 -0300
+
+    Memoria empezada, reorganizacion de variables y demas
+
+[33mcommit 2b0e7f6295b65fa1d07b99562178e7504e8807fc[m
+Author: thiagocabrera <tcabreralavezzi@frba.utn.edu.ar>
+Date:   Tue May 31 19:32:52 2022 -0300
+
+    Arreglo temitas cola blocked
+
+[33mcommit 2caf9a0228b765a1d95baf

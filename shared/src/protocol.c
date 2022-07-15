@@ -193,3 +193,373 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
 
 }
 
+/************************* DATOS NECESARIOS (MEMORIA -> CPU) ***********************/
+// Envio y serializacion
+bool send_datos_necesarios(int fd, uint16_t entradas_por_tabla, uint16_t tam_pagina) {
+    size_t size = 2 * sizeof(uint16_t);
+    void* stream = serializar_datos_necesarios(entradas_por_tabla, tam_pagina);
+    if (send(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+    free(stream);
+    return true;
+}
+
+static void* serializar_datos_necesarios(uint16_t entradas_por_tabla, uint16_t tam_pagina) {
+    void* stream = malloc(2 * sizeof(uint16_t));
+
+    size_t acumulador = 0;
+    memcpy(stream + acumulador, &entradas_por_tabla, sizeof(uint16_t));
+    acumulador += sizeof(uint16_t);
+    memcpy(stream + acumulador, &tam_pagina, sizeof(uint16_t));
+
+    return stream;
+}
+
+bool recv_datos_necesarios(int fd, uint16_t* entradas_por_tabla, uint16_t* tam_pagina) {
+	size_t size = 2 * sizeof(uint16_t);
+	void* stream = malloc(size);
+	if (recv(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	 }
+
+	size_t acumulador = 0;
+	memcpy(entradas_por_tabla, stream + acumulador, sizeof(uint16_t));
+	acumulador += sizeof(uint16_t);
+	memcpy(tam_pagina, stream + acumulador, sizeof(uint16_t));
+
+	printf("tam_pagina=%d - cant_ent_paginas=%d", *tam_pagina, *entradas_por_tabla);
+	free(stream);
+    return true;
+}
+
+
+/***************************** SOLICITUD TABLA PAGINAS *****************************/
+// Envio y serializacion
+bool send_crear_tabla(int fd, uint16_t tamanio, uint16_t pid) {
+    size_t size = sizeof(op_code) + 2 * sizeof(uint16_t);
+    void* stream = serializar_crear_tabla(tamanio, pid);
+    printf("Mandando %d \n", tamanio);
+    if (send(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+    free(stream);
+    return true;
+}
+
+static void* serializar_crear_tabla(uint16_t tamanio, uint16_t pid) {
+    void* stream = malloc(sizeof(op_code) + sizeof(uint16_t) + sizeof(uint16_t));
+
+    op_code cop = CREAR_TABLA;
+    size_t acumulador = 0;
+    memcpy(stream + acumulador, &cop, sizeof(op_code));
+    acumulador += sizeof(op_code);
+    memcpy(stream + acumulador, &tamanio, sizeof(uint16_t));
+    acumulador += sizeof(uint16_t);
+    memcpy(stream + acumulador, &pid, sizeof(uint16_t));
+
+    return stream;
+}
+
+bool recv_crear_tabla(int fd, uint16_t* tamanio, uint16_t* pid) {
+    size_t size = 2 * sizeof(uint16_t);
+    void* stream = malloc(size);
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+     }
+
+    size_t acumulador = 0;
+    memcpy(tamanio, stream + acumulador, sizeof(uint32_t));
+    acumulador += sizeof(uint32_t);
+    memcpy(pid, stream + acumulador, sizeof(uint16_t));
+
+    free(stream);
+    return true;
+}
+
+/***************************** ELIMINAR ESTRUCTURAS *****************************/
+bool send_eliminar_estructuras(int fd, uint32_t tabla_paginas, uint16_t pid) {
+	size_t size = sizeof(op_code) + sizeof(uint32_t) + sizeof(uint16_t);
+	void* stream = serializar_eliminar_estructuras(tabla_paginas, pid);
+	if (send(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+	free(stream);
+	return true;
+}
+
+static void* serializar_eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
+    void* stream = malloc(sizeof(op_code) + sizeof(uint32_t) + sizeof(uint16_t));
+
+    op_code cop = ELIMINAR_ESTRUCTURAS;
+    size_t acumulador = 0;
+    memcpy(stream + acumulador, &cop, sizeof(op_code));
+    acumulador += sizeof(op_code);
+    memcpy(stream + acumulador, &tabla_paginas, sizeof(uint32_t));
+    acumulador += sizeof(uint32_t);
+	memcpy(stream + acumulador, &pid, sizeof(uint16_t));
+
+    return stream;
+}
+
+//Recepcion y deserealizacion
+bool recv_eliminar_estructuras(int fd, uint16_t* pid, uint32_t* tabla_paginas) {
+	size_t size = sizeof(uint32_t) + sizeof(uint16_t);
+	void* stream = malloc(size);
+	if (recv(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	 }
+
+	size_t acumulador = 0;
+	memcpy(&tabla_paginas, stream + acumulador, sizeof(uint32_t));
+	acumulador += sizeof(uint32_t);
+	memcpy(&pid, stream + acumulador, sizeof(uint16_t));
+
+	free(stream);
+    return true;
+}
+
+
+/***************************** SUSENDER PROCESO *****************************/
+bool send_suspender_proceso(int fd, uint16_t pid, uint32_t tabla_paginas) {
+	size_t size = sizeof(op_code) + sizeof(uint32_t) + sizeof(uint16_t);
+	void* stream = serializar_suspender_proceso(tabla_paginas, pid);
+	if (send(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+	free(stream);
+	return true;
+}
+
+static void* serializar_suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
+    void* stream = malloc(sizeof(op_code) + sizeof(uint32_t) + sizeof(uint16_t));
+
+    op_code cop = SUSPENDER_PROCESO;
+    size_t acumulador = 0;
+    memcpy(stream + acumulador, &cop, sizeof(op_code));
+    acumulador += sizeof(op_code);
+	memcpy(stream + acumulador, &pid, sizeof(uint16_t));
+    acumulador += sizeof(uint16_t);
+    memcpy(stream + acumulador, &tabla_paginas, sizeof(uint32_t));
+
+    return stream;
+}
+
+//Recepcion y deserealizacion
+bool recv_suspender_proceso(int fd, uint16_t* pid, uint32_t* tabla_paginas) {
+	size_t size = sizeof(uint32_t) + sizeof(uint16_t);
+	void* stream = malloc(size);
+	if (recv(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	 }
+
+	size_t acumulador = 0;
+	memcpy(&pid, stream + acumulador, sizeof(uint16_t));
+	acumulador += sizeof(uint16_t);
+	memcpy(&tabla_paginas, stream + acumulador, sizeof(uint32_t));
+
+	free(stream);
+    return true;
+}
+
+/***************************** SOLICITUD TABLA 2DO NIVEL *****************************/
+bool send_solicitud_nro_tabla_2do_nivel(int fd, uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla) {
+	size_t size = sizeof(op_code) + sizeof(uint32_t) * 2 + sizeof(uint16_t);
+	void* stream = serializar_solicitud_nro_tabla_2do_nivel(pid, nro_tabla_1er_nivel, entrada_tabla);
+	if (send(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+	free(stream);
+	return true;
+}
+
+static void* serializar_solicitud_nro_tabla_2do_nivel(uint16_t pid, uint32_t nro_tabla_1er_nivel, uint32_t entrada_tabla) {
+    void* stream = malloc(sizeof(op_code) + sizeof(uint32_t) * 2+ sizeof(uint16_t));
+
+    op_code cop = SOLICITUD_NRO_TABLA_2DO_NIVEL;
+    size_t acumulador = 0;
+    memcpy(stream + acumulador, &cop, sizeof(op_code));
+    acumulador += sizeof(op_code);
+	memcpy(stream + acumulador, &pid, sizeof(uint16_t));
+    acumulador += sizeof(uint16_t);
+    memcpy(stream + acumulador, &nro_tabla_1er_nivel, sizeof(uint32_t));
+    acumulador += sizeof(uint32_t);
+    memcpy(stream + acumulador, &entrada_tabla, sizeof(uint32_t));
+
+    return stream;
+}
+
+//Recepcion y deserealizacion
+bool recv_solicitud_nro_tabla_2do_nivel(int fd, uint16_t* pid, uint32_t* nro_tabla_1er_nivel, uint32_t* entrada_tabla) {
+	size_t size = sizeof(uint32_t) * 2 + sizeof(uint16_t);
+	void* stream = malloc(size);
+	if (recv(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	 }
+
+	size_t acumulador = 0;
+	memcpy(&pid, stream + acumulador, sizeof(uint16_t));
+	acumulador += sizeof(uint16_t);
+	memcpy(&nro_tabla_1er_nivel, stream + acumulador, sizeof(uint32_t));
+	acumulador += sizeof(uint32_t);
+	memcpy(&entrada_tabla, stream + acumulador, sizeof(uint32_t));
+
+	free(stream);
+    return true;
+}
+
+/***************************** SOLICITUD NRO MARCO *****************************/
+bool send_solicitud_nro_marco(int fd, uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel) {
+	size_t size = sizeof(op_code) + sizeof(uint32_t) * 3 + sizeof(uint16_t);
+	void* stream = serializar_solicitud_nro_marco(pid, nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
+	if (send(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+	free(stream);
+	return true;
+}
+
+static void* serializar_solicitud_nro_marco(uint16_t pid, uint32_t nro_tabla_2do_nivel, uint32_t entrada_tabla, uint32_t index_tabla_1er_nivel) {
+    void* stream = malloc(sizeof(op_code) + sizeof(uint32_t) * 3 + sizeof(uint16_t));
+
+    op_code cop = SOLICITUD_NRO_MARCO;
+    size_t acumulador = 0;
+    memcpy(stream + acumulador, &cop, sizeof(op_code));
+    acumulador += sizeof(op_code);
+	memcpy(stream + acumulador, &pid, sizeof(uint16_t));
+    acumulador += sizeof(uint16_t);
+    memcpy(stream + acumulador, &nro_tabla_2do_nivel, sizeof(uint32_t));
+    acumulador += sizeof(uint32_t);
+    memcpy(stream + acumulador, &entrada_tabla, sizeof(uint32_t));
+    acumulador += sizeof(uint32_t);
+    memcpy(stream + acumulador, &index_tabla_1er_nivel, sizeof(uint32_t));
+
+    return stream;
+}
+
+//Recepcion y deserealizacion
+bool recv_solicitud_nro_marco(int fd, uint16_t* pid, uint32_t* nro_tabla_2do_nivel, uint32_t* entrada_tabla, uint32_t* index_tabla_1er_nivel) {
+	size_t size = sizeof(uint32_t) * 3 + sizeof(uint16_t);
+	void* stream = malloc(size);
+	if (recv(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+
+	size_t acumulador = 0;
+	memcpy(&pid, stream + acumulador, sizeof(uint16_t));
+	acumulador += sizeof(uint16_t);
+	memcpy(&nro_tabla_2do_nivel, stream + acumulador, sizeof(uint32_t));
+	acumulador += sizeof(uint32_t);
+	memcpy(&entrada_tabla, stream + acumulador, sizeof(uint32_t));
+	acumulador += sizeof(uint32_t);
+	memcpy(&index_tabla_1er_nivel, stream + acumulador, sizeof(uint32_t));
+
+	free(stream);
+    return true;
+}
+
+/***************************** READ *****************************/
+bool send_read(int fd, uint32_t nro_marco, uint16_t desplazamiento) {
+	size_t size = sizeof(op_code) + sizeof(uint32_t) + sizeof(uint16_t);
+	void* stream = serializar_read(nro_marco, desplazamiento);
+	if (send(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+	free(stream);
+	return true;
+}
+
+static void* serializar_read(uint32_t nro_marco, uint16_t desplazamiento) {
+    void* stream = malloc(sizeof(op_code) + sizeof(uint32_t) + sizeof(uint16_t));
+
+    op_code cop = READ;
+    size_t acumulador = 0;
+    memcpy(stream + acumulador, &cop, sizeof(op_code));
+    acumulador += sizeof(op_code);
+    memcpy(stream + acumulador, &nro_marco, sizeof(uint32_t));
+    acumulador += sizeof(uint32_t);
+    memcpy(stream + acumulador, &desplazamiento, sizeof(uint32_t));
+
+    return stream;
+}
+
+//Recepcion y deserealizacion
+bool recv_read(int fd, uint32_t* nro_marco, uint16_t* desplazamiento) {
+	size_t size = sizeof(uint32_t) + sizeof(uint16_t);
+	void* stream = malloc(size);
+	if (recv(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+
+	size_t acumulador = 0;
+	memcpy(&nro_marco, stream + acumulador, sizeof(uint32_t));
+	acumulador += sizeof(uint32_t);
+	memcpy(&desplazamiento, stream + acumulador, sizeof(uint16_t));
+
+	free(stream);
+    return true;
+}
+
+/***************************** WRITE *****************************/
+bool send_write(int fd, uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato) {
+	size_t size = sizeof(op_code) + sizeof(uint32_t) * 2 + sizeof(uint16_t) ;
+	void* stream = serializar_write(nro_marco, desplazamiento, dato);
+	if (send(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	}
+	free(stream);
+	return true;
+}
+
+static void* serializar_write(uint32_t nro_marco, uint16_t desplazamiento, uint32_t dato) {
+    void* stream = malloc(sizeof(op_code) + sizeof(uint32_t) * 2 + sizeof(uint16_t));
+
+    op_code cop = WRITE;
+    size_t acumulador = 0;
+    memcpy(stream + acumulador, &cop, sizeof(op_code));
+    acumulador += sizeof(op_code);
+    memcpy(stream + acumulador, &nro_marco, sizeof(uint32_t));
+    acumulador += sizeof(uint32_t);
+    memcpy(stream + acumulador, &desplazamiento, sizeof(uint32_t));
+    acumulador += sizeof(uint32_t);
+    memcpy(stream + acumulador, &dato, sizeof(uint32_t));
+
+    return stream;
+}
+
+//Recepcion y deserealizacion
+bool recv_write(int fd, uint32_t* nro_marco, uint16_t* desplazamiento, uint32_t* dato) {
+	size_t size = sizeof(uint32_t) + sizeof(uint16_t);
+	void* stream = malloc(size);
+	if (recv(fd, stream, size, 0) != size) {
+		free(stream);
+		return false;
+	 }
+
+	size_t acumulador = 0;
+	memcpy(&nro_marco, stream + acumulador, sizeof(uint32_t));
+	acumulador += sizeof(uint32_t);
+	memcpy(&desplazamiento, stream + acumulador, sizeof(uint16_t));
+	acumulador += sizeof(uint32_t);
+	memcpy(&dato, stream + acumulador, sizeof(uint16_t));
+
+	free(stream);
+    return true;
+}
+
+

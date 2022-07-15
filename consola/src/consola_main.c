@@ -9,7 +9,7 @@ int main(int argc, char** argv){
 	}
 
 	//Recibe primero el tamanio y despues el path
-	uint16_t tamanio = atoi(argv[1]);
+	uint32_t tamanio = atoi(argv[1]);
 	char* path = string_duplicate(argv[2]);
 
 	t_list* codigo = list_create();

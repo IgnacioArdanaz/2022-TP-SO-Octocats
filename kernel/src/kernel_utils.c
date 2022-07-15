@@ -49,14 +49,14 @@ void inicializar_kernel(){
 	tiempo_suspended = config_get_int_value(config,"TIEMPO_MAXIMO_BLOQUEADO");
 
 	//conectando con MEMORIA
-//	char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
-//	char* puerto_memoria = config_get_string_value(config,"PUERTO_MEMORIA");
-//	conexion_memoria = crear_conexion(logger, "MEMORIA", ip_memoria, puerto_memoria);
-//
-//	if (conexion_memoria == 0){
-//		log_error(logger,"Error al intentar conectarse a memoria :-(");
-//		exit(EXIT_FAILURE);
-//	}
+	char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
+	char* puerto_memoria = config_get_string_value(config,"PUERTO_MEMORIA");
+	conexion_memoria = crear_conexion(logger, "MEMORIA", ip_memoria, puerto_memoria);
+
+	if (conexion_memoria == 0){
+		log_error(logger,"Error al intentar conectarse a memoria :-(");
+		exit(EXIT_FAILURE);
+	}
 
 
 	//conectando con CPU
@@ -106,7 +106,7 @@ void inicializar_kernel(){
 
 int escuchar_servidor(char* name, int server_socket){
 	log_info(logger,"Kernel esperando un nuevo cliente");
-	int cliente_socket = cliente_socket = esperar_cliente(logger, name, server_socket);
+	int cliente_socket = esperar_cliente(logger, name, server_socket);
 	log_info(logger,"Socket del cliente recibido en kernel.");
 	if (cliente_socket != -1){
 		pthread_t hilo;
@@ -132,7 +132,7 @@ void procesar_socket(thread_args* argumentos){
 			pthread_mutex_unlock(&mx_log);
 			int32_t resultError = -1;
 			send(cliente_socket, &resultError, sizeof(int32_t), 0);
-			return;
+			exit(-1);
 		}
 		switch (cop) {
 			case PROGRAMA:
@@ -192,6 +192,7 @@ void pasaje_a_ready(){
 			proceso = queue_pop(cola_new);
 			log_info(logger,"[NEW -> READY] PROCESO %d AGREGADO A READY", proceso->pid);
 			pthread_mutex_unlock(&mx_cola_new);
+			solicitar_tabla_paginas(proceso);
 		}
 		else{
 			pthread_mutex_lock(&mx_cola_suspended_ready);
@@ -206,6 +207,20 @@ void pasaje_a_ready(){
 		sem_post(&s_cont_ready); //Sumo uno al contador de pcbs en ready
 		loggear_estado_de_colas();
 	}
+}
+
+
+void solicitar_tabla_paginas(PCB_t* proceso){
+	log_info(logger, "Solicitando tabla de pag para proceso %d de tamanio %d", proceso->pid, proceso->tamanio);
+//	send_crear_tabla(conexion_memoria, proceso->tamanio, proceso->pid);
+	op_code cop = CREAR_TABLA;
+	send(conexion_memoria, &cop, sizeof(op_code), 0);
+	send(conexion_memoria, &proceso->tamanio, sizeof(uint16_t), 0);
+	send(conexion_memoria, &proceso->pid, sizeof(uint16_t), 0);
+	uint32_t tabla_paginas;
+	recv(conexion_memoria, &tabla_paginas, sizeof(uint32_t), 0);
+	proceso->tabla_paginas = tabla_paginas;
+	log_info(logger, "proceso %d tabla de pag %d", proceso->pid, proceso->tabla_paginas);
 }
 
 void loggear_estado_de_colas(){
@@ -243,7 +258,7 @@ void esperar_cpu(){
 			pthread_mutex_lock(&mx_log);
 			log_error(logger,"DISCONNECT FAILURE!");
 			pthread_mutex_unlock(&mx_log);
-			return;
+			exit(-1);
 		}
 		PCB_t* pcb = pcb_create();
 		if (!recv_proceso(conexion_cpu_dispatch, pcb)) {
@@ -260,6 +275,13 @@ void esperar_cpu(){
 				sem_post(&s_multiprogramacion_actual);
 				send(socket_pcb,&cop,sizeof(op_code),0);
 				log_info(logger, "[EXECUTE -> EXIT] Proceso %d terminado",pcb->pid);
+
+				op_code cop_memoria = ELIMINAR_ESTRUCTURAS;
+				send(conexion_memoria, &cop_memoria, sizeof(op_code),0);
+				send(conexion_memoria, &pcb->tabla_paginas, sizeof(uint32_t),0);
+				send(conexion_memoria, &pcb->pid, sizeof(uint16_t),0);
+				//send_eliminar_estructuras(conexion_memoria, pcb->tabla_paginas, pcb->pid);
+
 				pcb_destroy(pcb);
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
@@ -294,6 +316,7 @@ void esperar_cpu(){
 void suspendiendo(PCB_t* pcb){
 	char* key = string_itoa(pcb->pid);
 	pthread_mutex_lock(&mx_iteracion_blocked);
+	op_code cop = SUSPENDER_PROCESO;
 	int iteracion_actual = dictionary_get(iteracion_blocked, key);
 	pthread_mutex_unlock(&mx_iteracion_blocked);
 	usleep(tiempo_suspended*1000);
@@ -309,6 +332,15 @@ void suspendiendo(PCB_t* pcb){
 	if(iteracion_actual == dictionary_get(iteracion_blocked, key)){
 		pthread_mutex_unlock(&mx_iteracion_blocked);
 		log_info(logger,"[BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso %d",pcb->pid);
+
+		send(conexion_memoria, &cop, sizeof(op_code),0);
+		send(conexion_memoria, &pcb->pid, sizeof(uint16_t),0);
+		send(conexion_memoria, &pcb->tabla_paginas, sizeof(uint16_t),0);
+		//send_suspender_proceso(conexion_memoria, pcb->pid, pcb->tabla_paginas);
+
+		uint16_t resultado;
+		recv(conexion_memoria, &resultado, sizeof(uint16_t), 0);
+
 		list_add(cola_suspended_blocked,pcb->pid);
 		pthread_mutex_unlock(&mx_cola_blocked);
 		pthread_mutex_unlock(&mx_cola_suspended_blocked);

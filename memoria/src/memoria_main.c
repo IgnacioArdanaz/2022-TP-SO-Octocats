@@ -1,34 +1,39 @@
 #include "memoria_main.h"
 
-char* puerto_escucha;
-int cliente_cpu, cliente_kernel;
+void testeando_boludeces(){
+	/////// ESTA FUNCIONANDO EL SWAPEO DE ESTA MANERA
+//	int fd = crear_archivo_swap(1, 64);
+//	void* marco = malloc(64);
+//	int a = 255;
+//	memcpy(marco + 8, &a, 4);
+//	free(marco);
+//	int* puntual1 = marco + 8;
+//	printf("Antes de bajarlo a swap: %d\n", *puntual1);
+//	actualizar_marco_en_swap(fd, 0, marco, 64);
+//	void* otro_marco = leer_marco_en_swap(fd, 0, 64);
+//	int* puntual = otro_marco + 8;
+//	printf("%d\n", *puntual);
+//	borrar_archivo_swap(1, fd);
+
+}
 
 int main(void) {
 
+//	testeando_boludeces();
+
 	inicializar_memoria();
 
-	puerto_escucha = config_get_string_value(config,"PUERTO_ESCUCHA");
-	int server_memoria = iniciar_servidor(logger, "MEMORIA", IP, puerto_escucha);
+	pthread_t hilo_kernel;
+	pthread_create(&hilo_kernel, NULL, (void*) escuchar_kernel, NULL);
+	pthread_detach(hilo_kernel);
 
-	cliente_cpu = esperar_cliente(logger, "MEMORIA", server_memoria);
-	cliente_kernel = esperar_cliente(logger, "MEMORIA", server_memoria);
+
+	pthread_t hilo_cpu;
+	pthread_create(&hilo_cpu, NULL, (void*) escuchar_cpu, NULL);
+	pthread_detach(hilo_cpu);
 
 	while(true); //simula que sigue corriendo
 
-	apagar_memoria();
+	return 0;
 
-	return EXIT_SUCCESS;
-
-}
-
-void inicializar_memoria(){
-	logger = log_create("memoria.log", "memoria", 1, LOG_LEVEL_INFO);
-	config = config_create("memoria.config");
-}
-
-void apagar_memoria(){
-	liberar_conexion(&cliente_cpu);
-	liberar_conexion(&cliente_kernel);
-	log_destroy(logger);
-	config_destroy(config);
 }
