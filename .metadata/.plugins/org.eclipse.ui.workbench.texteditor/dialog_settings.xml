@@ -2,32 +2,32 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="leido en mar" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="leido en mar"/>
-			<item value="t_conf"/>
-			<item value="t_config"/>
-			<item value="config"/>
-			<item value="&quot;IP&quot;"/>
-			<item value="IP"/>
-			<item value="Actu"/>
-			<item value="PAGE FAULT"/>
-			<item value="Actualizand"/>
-			<item value="modificado"/>
-			<item value="bit_mod"/>
-			<item value="modi"/>
-			<item value="Act"/>
-			<item value="Acr"/>
-			<item value="ac"/>
+			<item value="Off"/>
+			<item value="FALOPA"/>
+			<item value="le"/>
+			<item value="lectura"/>
+			<item value="READ FA"/>
+			<item value="READ"/>
+			<item value="Offset"/>
+			<item value="Proceso 3"/>
+			<item value="Proceso "/>
+			<item value="Read"/>
+			<item value="falopa"/>
+			<item value="READ FALOPA"/>
+			<item value="escr"/>
+			<item value="Offs"/>
+			<item value="Pagina victima elegida: 0"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 			<item value="s_pasaje_a_ready"/>
 			<item value="pasaje_a_ready"/>
-			<item value=""/>
 			<item value="log_info(logger,"/>
 			<item value="3"/>
 			<item value="2"/>
@@ -39,7 +39,7 @@
 		<item value="340" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="436" key="DIALOG_HEIGHT"/>
-		<item value="1089" key="DIALOG_X_ORIGIN"/>
-		<item value="160" key="DIALOG_Y_ORIGIN"/>
+		<item value="1012" key="DIALOG_X_ORIGIN"/>
+		<item value="149" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
