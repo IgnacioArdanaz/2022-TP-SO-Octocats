@@ -40,6 +40,6 @@ void suspendiendo(PCB_t* pcb);
 bool esta_suspendido(uint16_t pid);
 PCB_t* seleccionar_proceso_srt();
 void desalojar_cpu();
-void imprimirContReady();
+void printear_estado_semaforos();
 
 #endif /* KERNEL_UTILS_H_ */
