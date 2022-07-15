@@ -1,4 +1,4 @@
-11:29:49 **** Incremental Build of configuration Debug for project kernel ****
+12:59:47 **** Incremental Build of configuration Debug for project kernel ****
 make all 
 Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
@@ -13,21 +13,8 @@ In file included from /usr/include/commons/collections/queue.h:20:0,
 /usr/include/commons/collections/list.h:58:6: note: expected ‘void *’ but argument is of type ‘uint16_t {aka short unsigned int}’
   int list_add(t_list *, void *element);
       ^
-../src/kernel_utils.c: In function ‘ejecutar_io’:
-../src/kernel_utils.c:374:26: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
-   int iteracion_actual = dictionary_get(iteracion_blocked, key);
-                          ^
-../src/kernel_utils.c:376:42: warning: passing argument 3 of ‘dictionary_put’ makes pointer from integer without a cast [-Wint-conversion]
-   dictionary_put(iteracion_blocked, key, iteracion_actual + 1);
-                                          ^
-In file included from /usr/include/commons/config.h:20:0,
-                 from ../src/kernel_utils.h:10,
-                 from ../src/kernel_utils.c:1:
-/usr/include/commons/collections/dictionary.h:43:11: note: expected ‘void *’ but argument is of type ‘int’
-  void     dictionary_put(t_dictionary *, char *key, void *data);
-           ^
 ../src/kernel_utils.c: In function ‘esta_suspendido’:
-../src/kernel_utils.c:400:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+../src/kernel_utils.c:401:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
    uint16_t pid_actual = list_iterator_next(list_iterator);
                          ^
 In file included from ../src/kernel_utils.h:17:0,
@@ -79,5 +66,5 @@ gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_m
 Finished building target: kernel
  
 
-11:29:51 Build Finished (took 1s.427ms)
+12:59:48 Build Finished (took 1s.341ms)
 

@@ -28,6 +28,9 @@
 *.so
 *.so.*
 *.dylib
+*.mk
+*.o
+*.d
 
 # Executables
 *.exe
@@ -42,7 +45,6 @@
 *.su
 *.idb
 *.pdb
-/Debug/
 
 # Kernel Module Compile Results
 *.mod*
