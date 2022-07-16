@@ -237,7 +237,7 @@ marco_t  traducir_direccion(uint32_t dir_logica,uint32_t tabla_paginas_1){
 	nro_marco = presente_en_tlb(numero_pagina);
 
 	if(nro_marco==-1){
-		log_info(logger, "La pagina %d no esta en TLB", numero_pagina);
+		log_info(logger, "TLB MISS (pagina %d)", numero_pagina);
 		uint32_t entrada_tabla_1 = floor((double)numero_pagina/(double)cant_ent_paginas);
 		uint32_t entrada_tabla_2 = numero_pagina % cant_ent_paginas;
 		int32_t nro_tabla_2do_nivel = 237;
@@ -293,6 +293,7 @@ int32_t presente_en_tlb(uint32_t numero_pagina){
 //		log_info(logger,"Ciclo cpu: %d",(int)tlb_aux->ultima_referencia);
 		if(tlb_aux->pagina==numero_pagina){
 			tlb_aux->ultima_referencia = clock();
+			log_info(logger,"TLB HIT (pagina %d)", numero_pagina);
 			return tlb_aux->marco;
 		}
 
