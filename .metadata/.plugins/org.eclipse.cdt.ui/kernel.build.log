@@ -1,15 +1,10 @@
-16:53:57 **** Incremental Build of configuration Debug for project kernel ****
+22:49:59 **** Incremental Build of configuration Debug for project kernel ****
 make all 
-Building file: ../src/kernel_main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_main.d" -MT"src/kernel_main.o" -o "src/kernel_main.o" "../src/kernel_main.c"
-Finished building: ../src/kernel_main.c
- 
 Building file: ../src/kernel_utils.c
 Invoking: GCC C Compiler
 gcc -I"/home/utnso/tp-2022-1c-Octocats/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kernel_utils.d" -MT"src/kernel_utils.o" -o "src/kernel_utils.o" "../src/kernel_utils.c"
 ../src/kernel_utils.c: In function ‘suspendiendo’:
-../src/kernel_utils.c:344:35: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
+../src/kernel_utils.c:356:35: warning: passing argument 2 of ‘list_add’ makes pointer from integer without a cast [-Wint-conversion]
    list_add(cola_suspended_blocked,pcb->pid);
                                    ^
 In file included from /usr/include/commons/collections/queue.h:20:0,
@@ -19,7 +14,7 @@ In file included from /usr/include/commons/collections/queue.h:20:0,
   int list_add(t_list *, void *element);
       ^
 ../src/kernel_utils.c: In function ‘esta_suspendido’:
-../src/kernel_utils.c:400:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+../src/kernel_utils.c:415:25: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
    uint16_t pid_actual = list_iterator_next(list_iterator);
                          ^
 In file included from ../src/kernel_utils.h:17:0,
@@ -71,5 +66,5 @@ gcc -L"/home/utnso/tp-2022-1c-Octocats/shared/Debug" -o "kernel"  ./src/kernel_m
 Finished building target: kernel
  
 
-16:53:59 Build Finished (took 1s.661ms)
+22:50:01 Build Finished (took 1s.492ms)
 

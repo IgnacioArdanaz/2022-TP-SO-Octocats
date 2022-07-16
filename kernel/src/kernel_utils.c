@@ -166,7 +166,7 @@ void procesar_socket(thread_args* argumentos){
 				dictionary_put(iteracion_blocked, key, 0);
 				pthread_mutex_unlock(&mx_iteracion_blocked);
 				sem_post(&s_pasaje_a_ready); //Avisa al hilo planificador de pasaje a ready que debe ejecutarse.
-
+				free(key);
 				return;
 			}
 
@@ -270,10 +270,13 @@ void esperar_cpu(){
 		cpu_desocupado = true;
 		switch (cop) {
 			case EXIT:{
-				int socket_pcb = (int) dictionary_get(sockets,string_itoa(pcb->pid));
+				char* key = string_itoa(pcb->pid);
+				int socket_pcb = (int) dictionary_get(sockets,key);
 				// Hay q avisarle a memoria que finalizo para q borre to-do.
 				sem_post(&s_multiprogramacion_actual);
 				send(socket_pcb,&cop,sizeof(op_code),0);
+				dictionary_remove_and_destroy(sockets, key, free);
+				free(key);
 				log_info(logger, "[EXECUTE -> EXIT] Proceso %d terminado",pcb->pid);
 
 				op_code cop_memoria = ELIMINAR_ESTRUCTURAS;
@@ -355,11 +358,13 @@ void suspendiendo(PCB_t* pcb){
 		pthread_mutex_unlock(&mx_cola_suspended_blocked);
 		//hay que pedir las colas y liberarlas en el mismo orden para evitar deadlocks
 		sem_post(&s_multiprogramacion_actual);
+		free(key);
 		pthread_exit(0);
 	}
 	pthread_mutex_unlock(&mx_iteracion_blocked);
 	pthread_mutex_unlock(&mx_cola_blocked);
 	pthread_mutex_unlock(&mx_cola_suspended_blocked);
+	free(key);
 	pthread_exit(0);
 }
 
@@ -381,6 +386,7 @@ void ejecutar_io() {
 		pthread_mutex_unlock(&mx_cola_blocked);
 		char* key = string_itoa(proceso->pid);
 		int iteracion_actual = (int) dictionary_get(iteracion_blocked, key);
+		free(key);
 		pthread_mutex_lock(&mx_iteracion_blocked);
 		dictionary_put(iteracion_blocked, key,(int *) iteracion_actual + 1);
 		pthread_mutex_unlock(&mx_iteracion_blocked);

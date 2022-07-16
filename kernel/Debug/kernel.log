@@ -9986,3 +9986,2162 @@
 [INFO] 20:58:35:210 KERNEL/(21505:21508): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
 [INFO] 20:58:35:210 KERNEL/(21505:21507): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
 [INFO] 20:58:35:210 KERNEL/(21505:21507): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 5
+[INFO] 21:19:09:552 KERNEL/(6553:6553): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 21:19:09:553 KERNEL/(6553:6553): Error al conectar (a CPU DISPATCH)
+[INFO] 21:19:09:553 KERNEL/(6553:6553): Error al conectar (a CPU INTERRUPT)
+[INFO] 21:19:09:553 KERNEL/(6553:6553): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 21:19:09:554 KERNEL/(6553:6553): Kernel esperando un nuevo cliente
+[INFO] 21:19:09:554 KERNEL/(6553:6553): KERNEL listo para recibir al cliente
+[INFO] 21:19:21:594 KERNEL/(6561:6561): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 21:19:21:595 KERNEL/(6561:6561): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 21:19:21:596 KERNEL/(6561:6561): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 21:19:21:597 KERNEL/(6561:6561): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 21:19:21:597 KERNEL/(6561:6561): Kernel esperando un nuevo cliente
+[INFO] 21:19:21:597 KERNEL/(6561:6561): KERNEL listo para recibir al cliente
+[INFO] 21:19:28:108 KERNEL/(6561:6561): Cliente conectado (a KERNEL)
+[INFO] 21:19:28:108 KERNEL/(6561:6561): Socket del cliente recibido en kernel.
+[INFO] 21:19:28:108 KERNEL/(6561:6561): Kernel esperando un nuevo cliente
+[INFO] 21:19:28:108 KERNEL/(6561:6561): KERNEL listo para recibir al cliente
+[INFO] 21:19:28:111 KERNEL/(6561:6563): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 21:19:28:111 KERNEL/(6561:6563): Solicitando tabla de pag para proceso 1 de tamanio 2048
+[INFO] 21:19:28:154 KERNEL/(6561:6563): proceso 1 tabla de pag 0
+[INFO] 21:19:28:154 KERNEL/(6561:6563): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:19:28:154 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 21:19:29:095 KERNEL/(6561:6561): Cliente conectado (a KERNEL)
+[INFO] 21:19:29:095 KERNEL/(6561:6561): Socket del cliente recibido en kernel.
+[INFO] 21:19:29:095 KERNEL/(6561:6561): Kernel esperando un nuevo cliente
+[INFO] 21:19:29:095 KERNEL/(6561:6561): KERNEL listo para recibir al cliente
+[INFO] 21:19:29:099 KERNEL/(6561:6563): [NEW -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 21:19:29:099 KERNEL/(6561:6563): Solicitando tabla de pag para proceso 2 de tamanio 2048
+[INFO] 21:19:29:101 KERNEL/(6561:6563): proceso 2 tabla de pag 1
+[INFO] 21:19:29:101 KERNEL/(6561:6563): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 21:19:29:101 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:19:29:160 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 21:19:29:160 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 21:19:30:072 KERNEL/(6561:6561): Cliente conectado (a KERNEL)
+[INFO] 21:19:30:072 KERNEL/(6561:6561): Socket del cliente recibido en kernel.
+[INFO] 21:19:30:072 KERNEL/(6561:6561): Kernel esperando un nuevo cliente
+[INFO] 21:19:30:073 KERNEL/(6561:6561): KERNEL listo para recibir al cliente
+[INFO] 21:19:30:075 KERNEL/(6561:6563): [NEW -> READY] PROCESO 3 AGREGADO A READY
+[INFO] 21:19:30:075 KERNEL/(6561:6563): Solicitando tabla de pag para proceso 3 de tamanio 2048
+[INFO] 21:19:30:113 KERNEL/(6561:6563): proceso 3 tabla de pag 2
+[INFO] 21:19:30:113 KERNEL/(6561:6563): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 2
+[INFO] 21:19:30:113 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:19:30:937 KERNEL/(6561:6561): Cliente conectado (a KERNEL)
+[INFO] 21:19:30:937 KERNEL/(6561:6561): Socket del cliente recibido en kernel.
+[INFO] 21:19:30:937 KERNEL/(6561:6561): Kernel esperando un nuevo cliente
+[INFO] 21:19:30:937 KERNEL/(6561:6561): KERNEL listo para recibir al cliente
+[INFO] 21:19:30:939 KERNEL/(6561:6563): [NEW -> READY] PROCESO 4 AGREGADO A READY
+[INFO] 21:19:30:939 KERNEL/(6561:6563): Solicitando tabla de pag para proceso 4 de tamanio 2048
+[INFO] 21:19:30:981 KERNEL/(6561:6563): proceso 4 tabla de pag 3
+[INFO] 21:19:30:982 KERNEL/(6561:6563): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 21:19:31:708 KERNEL/(6561:6561): Cliente conectado (a KERNEL)
+[INFO] 21:19:31:708 KERNEL/(6561:6561): Socket del cliente recibido en kernel.
+[INFO] 21:19:31:708 KERNEL/(6561:6561): Kernel esperando un nuevo cliente
+[INFO] 21:19:31:708 KERNEL/(6561:6561): KERNEL listo para recibir al cliente
+[INFO] 21:19:31:709 KERNEL/(6561:6563): [NEW -> READY] PROCESO 5 AGREGADO A READY
+[INFO] 21:19:31:709 KERNEL/(6561:6563): Solicitando tabla de pag para proceso 5 de tamanio 2048
+[INFO] 21:19:31:715 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 21:19:31:715 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 21:19:31:749 KERNEL/(6561:6563): proceso 5 tabla de pag 4
+[INFO] 21:19:31:749 KERNEL/(6561:6563): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 21:19:31:749 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:19:31:817 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 21:19:31:817 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 21:19:47:593 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 21:19:47:593 KERNEL/(6561:6564): [IO] Proceso 1 esperando 5000 milisegundos
+[INFO] 21:19:47:593 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 21:19:48:603 KERNEL/(6561:6580): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 21:19:52:594 KERNEL/(6561:6564): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 21:19:52:594 KERNEL/(6561:6563): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 21:19:52:594 KERNEL/(6561:6563): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 21:19:52:594 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:19:54:121 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 21:19:54:121 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 21:20:12:505 KERNEL/(6561:6565): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 21:20:12:506 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 21:20:23:562 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 21:20:23:562 KERNEL/(6561:6564): [IO] Proceso 2 esperando 5000 milisegundos
+[INFO] 21:20:23:562 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 21:20:24:569 KERNEL/(6561:6588): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 2
+[INFO] 21:20:28:563 KERNEL/(6561:6564): [SUSP_BLOCKED -> SUSP_READY] Proceso 2 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 21:20:28:563 KERNEL/(6561:6563): [SUSP_READY -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 21:20:28:563 KERNEL/(6561:6563): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 21:20:28:563 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:20:30:093 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 21:20:30:094 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 21:20:46:160 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 21:20:46:161 KERNEL/(6561:6564): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 21:20:46:161 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 21:20:46:261 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 21:20:46:261 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:20:47:675 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 21:20:47:675 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 21:20:48:179 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 21:20:48:179 KERNEL/(6561:6564): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 21:20:48:179 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 21:20:48:280 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 21:20:48:280 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:20:50:691 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 21:20:50:692 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 21:20:51:197 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 21:20:51:197 KERNEL/(6561:6564): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 21:20:51:197 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 21:20:51:297 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 21:20:51:297 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:20:52:706 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 21:20:52:706 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 21:20:53:211 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 21:20:53:211 KERNEL/(6561:6564): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 21:20:53:211 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 21:20:53:311 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 21:20:53:311 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:20:55:722 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 21:20:55:722 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 21:20:56:227 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 21:20:56:227 KERNEL/(6561:6564): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 21:20:56:227 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 21:20:56:328 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 21:20:56:328 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:20:57:736 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 21:20:57:736 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 21:20:58:239 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 21:20:58:240 KERNEL/(6561:6564): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 21:20:58:240 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 21:20:58:340 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 21:20:58:341 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:21:01:751 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 21:21:01:752 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 21:21:02:761 KERNEL/(6561:6565): [EXECUTE -> EXIT] Proceso 2 terminado
+[INFO] 21:21:02:762 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 21:23:52:938 KERNEL/(6561:6565): [EXECUTE -> EXIT] Proceso 3 terminado
+[INFO] 21:23:52:939 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:53:142 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:53:142 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:53:142 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:53:242 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:53:242 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:55:651 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:23:55:651 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:55:853 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:55:853 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:55:853 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:55:954 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:55:954 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:55:956 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:23:55:956 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:56:158 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:56:158 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:56:158 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:56:258 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:56:258 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:56:261 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:23:56:261 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:56:463 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:56:463 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:56:463 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:56:564 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:56:564 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:56:567 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:23:56:567 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:56:769 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:56:769 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:56:769 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:56:870 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:56:870 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:56:873 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:23:56:873 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:57:076 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:57:076 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:57:076 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:57:177 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:57:177 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:57:179 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:23:57:179 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:57:381 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:57:381 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:57:381 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:57:482 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:57:482 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:57:484 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:23:57:484 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:57:686 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:57:686 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:57:686 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:57:787 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:57:787 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:57:789 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:23:57:789 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:57:991 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:57:992 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:57:992 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:58:092 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:58:093 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:58:094 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:23:58:095 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:58:297 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:58:297 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:58:297 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:58:397 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:58:397 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:58:401 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:23:58:401 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:58:603 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:58:603 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:58:603 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:58:703 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:58:703 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:58:705 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:23:58:706 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:58:908 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:58:909 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:58:909 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:58:911 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:23:59:009 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:59:009 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:23:59:009 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:59:109 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:23:59:109 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:23:59:111 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 21:23:59:111 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:23:59:212 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:23:59:212 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:23:59:213 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:23:59:313 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:23:59:313 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:00:727 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:00:727 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:00:929 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:00:929 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:00:929 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:01:030 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:01:030 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:01:032 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:01:032 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:01:234 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:01:234 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:01:234 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:01:334 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:01:335 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:01:338 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:01:338 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:01:540 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:01:541 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:01:541 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:01:641 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:01:641 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:01:644 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:01:644 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:01:846 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:01:846 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:01:846 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:01:947 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:01:947 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:01:949 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:01:949 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:02:150 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:02:151 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:02:151 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:02:251 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:02:251 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:02:253 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:02:254 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:02:455 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:02:455 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:02:455 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:02:556 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:02:556 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:02:559 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:02:559 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:02:761 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:02:761 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:02:761 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:02:861 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:02:861 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:02:864 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:02:864 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:03:066 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:03:066 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:03:066 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:03:166 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:03:166 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:03:169 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:03:169 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:03:371 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:03:371 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:03:371 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:03:471 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:03:471 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:03:474 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:03:474 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:03:676 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:03:676 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:03:676 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:03:776 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:03:777 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:03:779 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:03:779 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:03:981 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:03:981 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:03:981 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:03:983 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:04:081 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:04:082 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:04:082 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:04:182 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:04:183 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:04:184 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 21:24:04:184 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:04:286 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:04:286 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:04:286 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:04:386 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:04:386 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:06:797 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:06:797 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:07:805 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:07:805 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:07:805 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:07:906 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:07:906 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:07:906 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 21:24:07:907 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:08:008 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:08:008 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:08:008 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:08:109 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:08:109 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:09:517 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:09:517 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:10:524 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:10:524 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:10:524 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:10:625 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:10:626 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:10:727 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 21:24:10:727 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:10:728 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:10:728 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:10:728 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:10:829 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:10:829 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:12:236 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:12:237 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:13:245 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:13:245 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:13:245 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:13:345 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:13:346 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:13:347 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 21:24:13:347 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:13:449 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:13:449 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:13:449 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:13:549 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:13:550 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:14:958 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:14:958 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:15:965 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:15:965 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:15:965 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:16:066 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:16:066 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:16:067 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 21:24:16:067 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:16:169 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:16:169 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:16:169 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:16:269 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:16:269 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:17:678 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:17:678 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:18:687 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:18:687 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:18:687 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:18:788 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:18:788 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:18:789 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 21:24:18:789 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:18:891 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:18:891 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:18:891 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:18:992 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:18:992 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:20:399 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:20:399 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:21:407 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:21:407 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:21:407 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:21:507 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:21:507 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:21:508 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 21:24:21:509 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:21:611 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:21:611 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:21:611 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:21:711 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:21:711 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:24:121 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:24:121 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:25:128 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:25:128 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:25:128 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:25:229 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:25:229 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:25:230 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 21:24:25:230 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:25:332 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 21:24:25:332 KERNEL/(6561:6564): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 21:24:25:332 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:25:433 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 21:24:25:433 KERNEL/(6561:6566): [INTERRUPT] Mandando interrupcion
+[INFO] 21:24:26:840 KERNEL/(6561:6565): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 21:24:26:840 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:27:849 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:27:849 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:27:849 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 21:24:27:850 KERNEL/(6561:6565): [EXECUTE -> EXIT] Proceso 4 terminado
+[INFO] 21:24:27:949 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:27:950 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:31:466 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:31:466 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:31:566 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:31:566 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:34:079 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:34:079 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:34:180 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:34:180 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:36:695 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:36:695 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:36:796 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:36:796 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:39:312 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:39:313 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:39:413 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:39:413 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:41:926 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:41:927 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:42:027 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:42:027 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:44:541 KERNEL/(6561:6565): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 21:24:44:541 KERNEL/(6561:6564): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 21:24:44:641 KERNEL/(6561:6564): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 21:24:44:641 KERNEL/(6561:6566): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 21:24:44:644 KERNEL/(6561:6565): [EXECUTE -> EXIT] Proceso 5 terminado
+[INFO] 22:20:10:047 KERNEL/(7568:7568): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 22:20:10:048 KERNEL/(7568:7568): Error al conectar (a CPU DISPATCH)
+[INFO] 22:20:10:048 KERNEL/(7568:7568): Error al conectar (a CPU INTERRUPT)
+[INFO] 22:20:10:049 KERNEL/(7568:7568): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 22:20:10:049 KERNEL/(7568:7568): Kernel esperando un nuevo cliente
+[INFO] 22:20:10:049 KERNEL/(7568:7568): KERNEL listo para recibir al cliente
+[INFO] 22:20:16:366 KERNEL/(7568:7568): Cliente conectado (a KERNEL)
+[INFO] 22:20:16:366 KERNEL/(7568:7568): Socket del cliente recibido en kernel.
+[INFO] 22:20:16:366 KERNEL/(7568:7568): Kernel esperando un nuevo cliente
+[INFO] 22:20:16:366 KERNEL/(7568:7568): KERNEL listo para recibir al cliente
+[INFO] 22:20:16:370 KERNEL/(7568:7569): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 22:20:16:370 KERNEL/(7568:7569): Solicitando tabla de pag para proceso 1 de tamanio 2048
+[INFO] 22:20:16:370 KERNEL/(7568:7569): proceso 1 tabla de pag 16777220
+[INFO] 22:20:16:370 KERNEL/(7568:7569): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:20:16:370 KERNEL/(7568:7572): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[ERROR] 22:20:16:371 KERNEL/(7568:7571): DISCONNECT FAILURE!
+[INFO] 22:22:02:327 KERNEL/(7637:7637): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 22:22:02:328 KERNEL/(7637:7637): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 22:22:02:337 KERNEL/(7637:7637): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 22:22:02:338 KERNEL/(7637:7637): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 22:22:02:338 KERNEL/(7637:7637): Kernel esperando un nuevo cliente
+[INFO] 22:22:02:338 KERNEL/(7637:7637): KERNEL listo para recibir al cliente
+[INFO] 22:22:08:719 KERNEL/(7637:7637): Cliente conectado (a KERNEL)
+[INFO] 22:22:08:719 KERNEL/(7637:7637): Socket del cliente recibido en kernel.
+[INFO] 22:22:08:720 KERNEL/(7637:7637): Kernel esperando un nuevo cliente
+[INFO] 22:22:08:720 KERNEL/(7637:7637): KERNEL listo para recibir al cliente
+[INFO] 22:22:08:721 KERNEL/(7637:7639): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 22:22:08:721 KERNEL/(7637:7639): Solicitando tabla de pag para proceso 1 de tamanio 2048
+[INFO] 22:22:08:769 KERNEL/(7637:7639): proceso 1 tabla de pag 0
+[INFO] 22:22:08:770 KERNEL/(7637:7639): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:22:08:770 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:22:09:565 KERNEL/(7637:7637): Cliente conectado (a KERNEL)
+[INFO] 22:22:09:565 KERNEL/(7637:7637): Socket del cliente recibido en kernel.
+[INFO] 22:22:09:565 KERNEL/(7637:7637): Kernel esperando un nuevo cliente
+[INFO] 22:22:09:565 KERNEL/(7637:7637): KERNEL listo para recibir al cliente
+[INFO] 22:22:09:566 KERNEL/(7637:7639): [NEW -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 22:22:09:566 KERNEL/(7637:7639): Solicitando tabla de pag para proceso 2 de tamanio 2048
+[INFO] 22:22:09:569 KERNEL/(7637:7639): proceso 2 tabla de pag 1
+[INFO] 22:22:09:569 KERNEL/(7637:7639): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:22:09:569 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:22:09:576 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:22:09:576 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:22:12:598 KERNEL/(7637:7637): Cliente conectado (a KERNEL)
+[INFO] 22:22:12:598 KERNEL/(7637:7637): Socket del cliente recibido en kernel.
+[INFO] 22:22:12:598 KERNEL/(7637:7637): Kernel esperando un nuevo cliente
+[INFO] 22:22:12:598 KERNEL/(7637:7637): KERNEL listo para recibir al cliente
+[INFO] 22:22:12:600 KERNEL/(7637:7639): [NEW -> READY] PROCESO 3 AGREGADO A READY
+[INFO] 22:22:12:600 KERNEL/(7637:7639): Solicitando tabla de pag para proceso 3 de tamanio 2048
+[INFO] 22:22:12:642 KERNEL/(7637:7639): proceso 3 tabla de pag 2
+[INFO] 22:22:12:642 KERNEL/(7637:7639): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 2
+[INFO] 22:22:12:643 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:22:13:035 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:22:13:035 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:22:13:694 KERNEL/(7637:7637): Cliente conectado (a KERNEL)
+[INFO] 22:22:13:694 KERNEL/(7637:7637): Socket del cliente recibido en kernel.
+[INFO] 22:22:13:694 KERNEL/(7637:7637): Kernel esperando un nuevo cliente
+[INFO] 22:22:13:694 KERNEL/(7637:7637): KERNEL listo para recibir al cliente
+[INFO] 22:22:13:695 KERNEL/(7637:7639): [NEW -> READY] PROCESO 4 AGREGADO A READY
+[INFO] 22:22:13:695 KERNEL/(7637:7639): Solicitando tabla de pag para proceso 4 de tamanio 2048
+[INFO] 22:22:13:735 KERNEL/(7637:7639): proceso 4 tabla de pag 3
+[INFO] 22:22:13:735 KERNEL/(7637:7639): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 22:22:13:735 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:22:14:748 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:22:14:748 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:22:29:269 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 22:22:29:269 KERNEL/(7637:7640): [IO] Proceso 1 esperando 5000 milisegundos
+[INFO] 22:22:29:269 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:22:30:276 KERNEL/(7637:7664): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 22:22:34:269 KERNEL/(7637:7640): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:22:34:269 KERNEL/(7637:7639): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 22:22:34:269 KERNEL/(7637:7639): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 22:22:34:269 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:22:35:812 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:22:35:812 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:22:54:218 KERNEL/(7637:7641): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 22:22:54:221 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:23:05:309 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:23:05:309 KERNEL/(7637:7640): [IO] Proceso 2 esperando 5000 milisegundos
+[INFO] 22:23:05:309 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:05:512 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:05:512 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:06:315 KERNEL/(7637:7703): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 2
+[INFO] 22:23:07:318 KERNEL/(7637:7704): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 3
+[INFO] 22:23:09:041 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:10:044 KERNEL/(7637:7705): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 4
+[INFO] 22:23:11:046 KERNEL/(7637:7640): [SUSP_BLOCKED -> SUSP_READY] Proceso 2 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:23:11:046 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:11:046 KERNEL/(7637:7639): [SUSP_READY -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 22:23:11:046 KERNEL/(7637:7639): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:23:11:046 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:23:11:147 KERNEL/(7637:7640): [SUSP_BLOCKED -> SUSP_READY] Proceso 3 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:23:11:148 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:11:148 KERNEL/(7637:7639): [SUSP_READY -> READY] PROCESO 3 AGREGADO A READY
+[INFO] 22:23:11:148 KERNEL/(7637:7639): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:23:11:148 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:11:149 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:23:11:149 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:11:249 KERNEL/(7637:7640): [SUSP_BLOCKED -> SUSP_READY] Proceso 4 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:23:11:249 KERNEL/(7637:7639): [SUSP_READY -> READY] PROCESO 4 AGREGADO A READY
+[INFO] 22:23:11:249 KERNEL/(7637:7639): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 2
+[INFO] 22:23:11:249 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:11:251 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:11:251 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:11:355 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:11:355 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:11:355 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:11:456 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:11:456 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:13:879 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:13:879 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:14:083 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:14:083 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:14:083 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:14:184 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:14:184 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:14:187 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:14:187 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:14:390 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:14:390 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:14:390 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:14:490 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:14:491 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:14:493 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:14:496 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:14:698 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:14:698 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:14:698 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:14:799 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:14:799 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:14:802 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:14:802 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:15:005 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:15:005 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:15:005 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:15:106 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:15:107 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:15:113 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:15:114 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:15:327 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:15:327 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:15:327 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:15:428 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:15:428 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:15:448 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:15:449 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:15:661 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:15:661 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:15:662 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:15:762 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:15:762 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:15:776 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:15:776 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:15:980 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:15:980 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:15:980 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:16:080 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:16:081 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:16:083 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:16:083 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:16:286 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:16:286 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:16:286 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:16:387 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:16:388 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:16:391 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:16:391 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:16:593 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:16:593 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:16:593 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:16:693 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:16:693 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:16:696 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:16:696 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:16:898 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:16:898 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:16:898 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:16:999 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:16:999 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:17:001 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:17:001 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:17:203 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:17:203 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:17:203 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:17:206 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:17:206 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:23:17:303 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:17:303 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:17:303 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:17:309 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:23:17:309 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:17:406 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:17:407 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:17:411 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:17:411 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:17:513 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:17:513 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:17:513 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:17:614 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:17:614 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:20:068 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:20:068 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:21:078 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:21:078 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:21:079 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:21:179 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:21:179 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:21:183 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:21:183 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:21:285 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:21:285 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:21:285 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:21:386 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:21:387 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:22:806 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:22:807 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:23:820 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:23:820 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:23:820 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:23:921 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:23:921 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:24:022 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:24:022 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:24:024 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:24:025 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:24:025 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:24:130 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:24:131 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:25:546 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:25:546 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:26:558 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:26:559 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:26:559 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:26:659 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:26:660 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:26:662 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:26:663 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:26:765 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:26:765 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:26:765 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:26:866 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:26:866 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:28:273 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:28:273 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:29:282 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:29:282 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:29:282 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:29:382 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:29:382 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:29:384 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:29:384 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:29:485 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:29:486 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:29:486 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:29:586 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:29:586 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:30:999 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:30:999 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:32:009 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:32:009 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:32:009 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:32:109 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:32:109 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:32:111 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:32:111 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:32:212 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:32:212 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:32:212 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:32:313 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:32:313 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:33:721 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:33:721 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:34:729 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:34:729 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:34:729 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:34:830 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:34:830 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:34:831 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:34:831 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:34:933 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:34:933 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:34:933 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:35:033 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:35:034 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:37:447 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:37:448 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:38:456 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:38:456 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:38:456 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:38:557 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:38:557 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:38:558 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:38:558 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:38:661 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:38:661 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:38:661 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:38:762 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:38:762 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:40:170 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:40:171 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:41:178 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:41:179 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:41:179 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:41:279 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:41:280 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:41:381 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:41:381 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:41:383 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:41:383 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:41:383 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:41:483 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:41:484 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:43:895 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:43:895 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:44:902 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:44:902 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:44:902 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:45:003 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:45:003 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:45:004 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:45:004 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:45:106 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:45:106 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:45:106 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:45:206 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:45:206 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:46:619 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:46:620 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:47:641 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:47:641 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:47:641 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:47:742 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:47:742 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:47:744 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:47:744 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:47:848 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:47:849 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:47:849 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:47:949 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:47:950 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:49:377 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:49:377 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:50:387 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:50:387 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:50:387 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:50:487 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:50:487 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:50:489 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:50:489 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:50:591 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:50:591 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:50:591 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:50:691 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:50:691 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:52:107 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:52:108 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:53:121 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:53:122 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:53:122 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:53:223 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:53:223 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:53:224 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:53:225 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:53:327 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:53:327 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:53:327 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:53:427 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:53:428 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:54:842 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:54:843 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:55:855 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:55:855 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:55:856 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:55:956 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:55:956 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:55:959 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:55:959 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:56:061 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:56:061 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:56:062 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:56:162 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:56:162 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:57:595 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:23:57:595 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:58:606 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:23:58:607 KERNEL/(7637:7640): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:23:58:607 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:58:707 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:23:58:707 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:58:809 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:23:58:809 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:58:811 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:58:811 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:58:811 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:23:58:814 KERNEL/(7637:7641): [EXECUTE -> EXIT] Proceso 4 terminado
+[INFO] 22:23:58:815 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:23:58:911 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:58:911 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:58:916 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:23:58:917 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:59:119 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:59:119 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:59:119 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:23:59:219 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:59:220 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:59:222 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:23:59:222 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:59:426 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:59:427 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:59:427 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:23:59:527 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:59:528 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:59:531 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:23:59:533 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:23:59:738 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:23:59:738 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:23:59:738 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:23:59:839 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:23:59:839 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:23:59:842 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:23:59:842 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:24:00:044 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 3 bloqueado
+[INFO] 22:24:00:044 KERNEL/(7637:7640): [IO] Proceso 3 esperando 100 milisegundos
+[INFO] 22:24:00:044 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:24:00:145 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 3 saliendo de blocked hacia ready :)
+[INFO] 22:24:00:145 KERNEL/(7637:7642): [INTERRUPT] Mandando interrupcion
+[INFO] 22:24:00:146 KERNEL/(7637:7641): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:24:00:146 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:24:00:147 KERNEL/(7637:7641): [EXECUTE -> EXIT] Proceso 3 terminado
+[INFO] 22:24:00:149 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:24:15:538 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:24:15:538 KERNEL/(7637:7640): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:24:15:639 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:24:15:639 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:24:16:143 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:24:16:143 KERNEL/(7637:7640): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:24:16:243 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:24:16:244 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:24:16:748 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:24:16:748 KERNEL/(7637:7640): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:24:16:849 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:24:16:849 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:24:17:355 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:24:17:355 KERNEL/(7637:7640): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:24:17:456 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:24:17:456 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:24:17:961 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:24:17:961 KERNEL/(7637:7640): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:24:18:061 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:24:18:061 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:24:18:565 KERNEL/(7637:7641): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:24:18:565 KERNEL/(7637:7640): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:24:18:665 KERNEL/(7637:7640): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:24:18:666 KERNEL/(7637:7642): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:24:19:674 KERNEL/(7637:7641): [EXECUTE -> EXIT] Proceso 2 terminado
+[INFO] 22:30:07:350 KERNEL/(8220:8220): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 22:30:07:576 KERNEL/(8220:8220): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 22:30:07:591 KERNEL/(8220:8220): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 22:30:07:730 KERNEL/(8220:8220): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 22:30:07:755 KERNEL/(8220:8220): Kernel esperando un nuevo cliente
+[INFO] 22:30:07:760 KERNEL/(8220:8220): KERNEL listo para recibir al cliente
+[INFO] 22:30:34:512 KERNEL/(8220:8220): Cliente conectado (a KERNEL)
+[INFO] 22:30:34:513 KERNEL/(8220:8220): Socket del cliente recibido en kernel.
+[INFO] 22:30:34:563 KERNEL/(8220:8220): Kernel esperando un nuevo cliente
+[INFO] 22:30:34:563 KERNEL/(8220:8220): KERNEL listo para recibir al cliente
+[INFO] 22:30:34:581 KERNEL/(8220:8223): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 22:30:34:590 KERNEL/(8220:8223): Solicitando tabla de pag para proceso 1 de tamanio 2048
+[INFO] 22:30:34:646 KERNEL/(8220:8223): proceso 1 tabla de pag 0
+[INFO] 22:30:34:652 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:30:34:659 KERNEL/(8220:8223): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 0
+[INFO] 22:30:34:856 KERNEL/(8220:8220): Cliente conectado (a KERNEL)
+[INFO] 22:30:34:857 KERNEL/(8220:8220): Socket del cliente recibido en kernel.
+[INFO] 22:30:34:878 KERNEL/(8220:8220): Kernel esperando un nuevo cliente
+[INFO] 22:30:34:879 KERNEL/(8220:8220): KERNEL listo para recibir al cliente
+[INFO] 22:30:34:880 KERNEL/(8220:8223): [NEW -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 22:30:34:880 KERNEL/(8220:8223): Solicitando tabla de pag para proceso 2 de tamanio 2048
+[INFO] 22:30:34:884 KERNEL/(8220:8223): proceso 2 tabla de pag 1
+[INFO] 22:30:34:885 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:30:34:887 KERNEL/(8220:8223): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:30:35:025 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:30:35:034 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:30:35:711 KERNEL/(8220:8220): Cliente conectado (a KERNEL)
+[INFO] 22:30:35:711 KERNEL/(8220:8220): Socket del cliente recibido en kernel.
+[INFO] 22:30:35:712 KERNEL/(8220:8220): Kernel esperando un nuevo cliente
+[INFO] 22:30:35:712 KERNEL/(8220:8220): KERNEL listo para recibir al cliente
+[INFO] 22:30:35:746 KERNEL/(8220:8223): [NEW -> READY] PROCESO 3 AGREGADO A READY
+[INFO] 22:30:35:747 KERNEL/(8220:8223): Solicitando tabla de pag para proceso 3 de tamanio 2048
+[INFO] 22:30:35:787 KERNEL/(8220:8223): proceso 3 tabla de pag 2
+[INFO] 22:30:35:788 KERNEL/(8220:8223): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 2
+[INFO] 22:30:35:789 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:30:35:875 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:30:35:882 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:30:38:004 KERNEL/(8220:8220): Cliente conectado (a KERNEL)
+[INFO] 22:30:38:005 KERNEL/(8220:8220): Socket del cliente recibido en kernel.
+[INFO] 22:30:38:005 KERNEL/(8220:8220): Kernel esperando un nuevo cliente
+[INFO] 22:30:38:006 KERNEL/(8220:8220): KERNEL listo para recibir al cliente
+[INFO] 22:30:38:017 KERNEL/(8220:8223): [NEW -> READY] PROCESO 4 AGREGADO A READY
+[INFO] 22:30:38:018 KERNEL/(8220:8223): Solicitando tabla de pag para proceso 4 de tamanio 2048
+[INFO] 22:30:38:061 KERNEL/(8220:8223): proceso 4 tabla de pag 3
+[INFO] 22:30:38:062 KERNEL/(8220:8223): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 22:30:38:062 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:30:38:511 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:30:38:516 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:30:39:312 KERNEL/(8220:8220): Cliente conectado (a KERNEL)
+[INFO] 22:30:39:313 KERNEL/(8220:8220): Socket del cliente recibido en kernel.
+[INFO] 22:30:39:314 KERNEL/(8220:8220): Kernel esperando un nuevo cliente
+[INFO] 22:30:39:314 KERNEL/(8220:8220): KERNEL listo para recibir al cliente
+[INFO] 22:30:39:340 KERNEL/(8220:8223): [NEW -> READY] PROCESO 5 AGREGADO A READY
+[INFO] 22:30:39:340 KERNEL/(8220:8223): Solicitando tabla de pag para proceso 5 de tamanio 2048
+[INFO] 22:30:39:382 KERNEL/(8220:8223): proceso 5 tabla de pag 4
+[INFO] 22:30:39:383 KERNEL/(8220:8223): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 22:30:39:384 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:30:40:265 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:30:40:270 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:30:55:538 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 22:30:55:540 KERNEL/(8220:8224): [IO] Proceso 1 esperando 5000 milisegundos
+[INFO] 22:30:55:542 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:30:56:556 KERNEL/(8220:8333): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 22:31:00:557 KERNEL/(8220:8224): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:31:00:559 KERNEL/(8220:8223): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 22:31:00:560 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:31:00:560 KERNEL/(8220:8223): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 22:31:02:106 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:31:02:112 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:31:20:612 KERNEL/(8220:8225): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 22:31:20:614 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:31:31:758 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:31:31:759 KERNEL/(8220:8224): [IO] Proceso 2 esperando 5000 milisegundos
+[INFO] 22:31:31:760 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:31:32:776 KERNEL/(8220:8335): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 2
+[INFO] 22:31:36:760 KERNEL/(8220:8224): [SUSP_BLOCKED -> SUSP_READY] Proceso 2 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:31:36:760 KERNEL/(8220:8223): [SUSP_READY -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 22:31:36:761 KERNEL/(8220:8223): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 22:31:36:761 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:31:38:401 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:31:38:408 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:31:54:816 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:31:54:817 KERNEL/(8220:8224): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:31:54:818 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:31:54:920 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:31:54:921 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:31:56:409 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:31:56:410 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:31:56:951 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:31:56:952 KERNEL/(8220:8224): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:31:56:953 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:31:57:053 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:31:57:054 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:31:59:568 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:31:59:572 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:32:00:123 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:32:00:124 KERNEL/(8220:8224): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:32:00:125 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:32:00:225 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:32:00:226 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:32:01:738 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:32:01:739 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:32:02:286 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:32:02:288 KERNEL/(8220:8224): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:32:02:289 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:32:02:389 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:32:02:390 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:32:04:899 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:32:04:900 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:32:05:436 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:32:05:437 KERNEL/(8220:8224): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:32:05:438 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:32:05:538 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:32:05:539 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:32:07:034 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:32:07:041 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:32:07:584 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:32:07:585 KERNEL/(8220:8224): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:32:07:586 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:32:07:688 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:32:07:690 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:32:11:190 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:32:11:196 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:32:12:242 KERNEL/(8220:8225): [EXECUTE -> EXIT] Proceso 2 terminado
+[INFO] 22:32:12:244 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:35:03:684 KERNEL/(8220:8225): [EXECUTE -> EXIT] Proceso 3 terminado
+[INFO] 22:35:03:693 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:03:924 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:03:925 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:03:926 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:04:026 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:04:028 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:06:530 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:06:531 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:06:767 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:06:768 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:06:769 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:06:870 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:06:871 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:06:969 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:06:970 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:07:232 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:07:233 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:07:234 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:07:336 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:07:337 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:07:473 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:07:475 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:07:728 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:07:728 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:07:729 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:07:830 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:07:832 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:07:930 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:07:932 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:08:159 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:08:160 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:08:160 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:08:260 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:08:261 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:08:373 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:08:381 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:08:612 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:08:613 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:08:614 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:08:714 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:08:715 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:08:816 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:08:821 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:09:056 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:09:056 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:09:057 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:09:158 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:09:162 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:09:349 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:09:356 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:09:580 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:09:581 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:09:582 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:09:682 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:09:683 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:09:807 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:09:816 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:10:045 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:10:045 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:10:046 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:10:147 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:10:148 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:10:239 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:10:245 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:10:470 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:10:470 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:10:471 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:10:571 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:10:572 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:10:670 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:10:671 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:10:890 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:10:891 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:10:894 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:10:995 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:10:997 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:11:097 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:11:098 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:11:320 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:11:321 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:11:324 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:11:430 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:11:431 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:11:439 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:35:11:440 KERNEL/(8220:8224): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:35:11:542 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:35:11:543 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:11:661 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:35:11:662 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:11:692 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:11:693 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:11:694 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:11:794 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:11:796 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:13:300 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:13:305 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:13:530 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:13:530 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:13:531 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:13:633 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:13:648 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:13:817 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:13:823 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:14:056 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:14:057 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:14:058 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:14:159 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:14:160 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:14:250 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:14:251 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:14:479 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:14:480 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:14:481 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:14:581 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:14:582 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:14:677 KERNEL/(8220:8225): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:35:14:678 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:35:14:961 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:35:14:963 KERNEL/(8220:8224): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:35:14:966 KERNEL/(8220:8226): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:35:15:066 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:35:15:067 KERNEL/(8220:8226): [INTERRUPT] Mandando interrupcion
+[INFO] 22:35:15:859 KERNEL/(8220:8225): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:35:15:860 KERNEL/(8220:8224): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:35:15:961 KERNEL/(8220:8224): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:39:37:085 KERNEL/(8673:8673): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 22:39:37:308 KERNEL/(8673:8673): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 22:39:37:318 KERNEL/(8673:8673): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 22:39:37:497 KERNEL/(8673:8673): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 22:39:37:525 KERNEL/(8673:8673): Kernel esperando un nuevo cliente
+[INFO] 22:39:37:526 KERNEL/(8673:8673): KERNEL listo para recibir al cliente
+[INFO] 22:39:39:944 KERNEL/(8673:8673): Cliente conectado (a KERNEL)
+[INFO] 22:39:39:945 KERNEL/(8673:8673): Socket del cliente recibido en kernel.
+[INFO] 22:39:39:953 KERNEL/(8673:8673): Kernel esperando un nuevo cliente
+[INFO] 22:39:39:959 KERNEL/(8673:8673): KERNEL listo para recibir al cliente
+[INFO] 22:39:40:019 KERNEL/(8673:8676): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 22:39:40:030 KERNEL/(8673:8676): Solicitando tabla de pag para proceso 1 de tamanio 2048
+[INFO] 22:39:40:083 KERNEL/(8673:8676): proceso 1 tabla de pag 0
+[INFO] 22:39:40:097 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:39:40:099 KERNEL/(8673:8676): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 0
+[INFO] 22:39:40:936 KERNEL/(8673:8673): Cliente conectado (a KERNEL)
+[INFO] 22:39:40:936 KERNEL/(8673:8673): Socket del cliente recibido en kernel.
+[INFO] 22:39:40:944 KERNEL/(8673:8673): Kernel esperando un nuevo cliente
+[INFO] 22:39:40:945 KERNEL/(8673:8673): KERNEL listo para recibir al cliente
+[INFO] 22:39:40:965 KERNEL/(8673:8676): [NEW -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 22:39:40:965 KERNEL/(8673:8676): Solicitando tabla de pag para proceso 2 de tamanio 2048
+[INFO] 22:39:40:969 KERNEL/(8673:8676): proceso 2 tabla de pag 1
+[INFO] 22:39:40:969 KERNEL/(8673:8676): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:39:40:970 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:39:41:052 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:39:41:057 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:39:41:872 KERNEL/(8673:8673): Cliente conectado (a KERNEL)
+[INFO] 22:39:41:873 KERNEL/(8673:8673): Socket del cliente recibido en kernel.
+[INFO] 22:39:41:874 KERNEL/(8673:8673): Kernel esperando un nuevo cliente
+[INFO] 22:39:41:874 KERNEL/(8673:8673): KERNEL listo para recibir al cliente
+[INFO] 22:39:41:909 KERNEL/(8673:8676): [NEW -> READY] PROCESO 3 AGREGADO A READY
+[INFO] 22:39:41:909 KERNEL/(8673:8676): Solicitando tabla de pag para proceso 3 de tamanio 2048
+[INFO] 22:39:41:951 KERNEL/(8673:8676): proceso 3 tabla de pag 2
+[INFO] 22:39:41:952 KERNEL/(8673:8676): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 2
+[INFO] 22:39:41:952 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:39:43:709 KERNEL/(8673:8673): Cliente conectado (a KERNEL)
+[INFO] 22:39:43:709 KERNEL/(8673:8673): Socket del cliente recibido en kernel.
+[INFO] 22:39:43:710 KERNEL/(8673:8673): Kernel esperando un nuevo cliente
+[INFO] 22:39:43:710 KERNEL/(8673:8673): KERNEL listo para recibir al cliente
+[INFO] 22:39:43:715 KERNEL/(8673:8676): [NEW -> READY] PROCESO 4 AGREGADO A READY
+[INFO] 22:39:43:716 KERNEL/(8673:8676): Solicitando tabla de pag para proceso 4 de tamanio 2048
+[INFO] 22:39:43:763 KERNEL/(8673:8676): proceso 4 tabla de pag 3
+[INFO] 22:39:43:763 KERNEL/(8673:8676): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 22:39:43:913 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:39:43:914 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:39:44:745 KERNEL/(8673:8673): Cliente conectado (a KERNEL)
+[INFO] 22:39:44:746 KERNEL/(8673:8673): Socket del cliente recibido en kernel.
+[INFO] 22:39:44:746 KERNEL/(8673:8673): Kernel esperando un nuevo cliente
+[INFO] 22:39:44:747 KERNEL/(8673:8673): KERNEL listo para recibir al cliente
+[INFO] 22:39:44:778 KERNEL/(8673:8676): [NEW -> READY] PROCESO 5 AGREGADO A READY
+[INFO] 22:39:44:779 KERNEL/(8673:8676): Solicitando tabla de pag para proceso 5 de tamanio 2048
+[INFO] 22:39:44:821 KERNEL/(8673:8676): proceso 5 tabla de pag 4
+[INFO] 22:39:44:821 KERNEL/(8673:8676): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 22:39:44:821 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:39:45:731 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:39:45:742 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:40:01:173 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 22:40:01:178 KERNEL/(8673:8677): [IO] Proceso 1 esperando 5000 milisegundos
+[INFO] 22:40:01:180 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:40:02:203 KERNEL/(8673:8705): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 22:40:06:260 KERNEL/(8673:8677): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:40:06:278 KERNEL/(8673:8676): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 22:40:06:279 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:40:06:280 KERNEL/(8673:8676): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 22:40:07:844 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:40:07:852 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:40:26:576 KERNEL/(8673:8678): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 22:40:26:579 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:40:37:784 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:40:37:786 KERNEL/(8673:8677): [IO] Proceso 2 esperando 5000 milisegundos
+[INFO] 22:40:37:788 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:40:38:784 KERNEL/(8673:8726): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 2
+[INFO] 22:40:42:787 KERNEL/(8673:8677): [SUSP_BLOCKED -> SUSP_READY] Proceso 2 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:40:42:788 KERNEL/(8673:8676): [SUSP_READY -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 22:40:42:789 KERNEL/(8673:8676): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 22:40:42:789 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:40:44:473 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:40:44:478 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:41:00:831 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:41:00:833 KERNEL/(8673:8677): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:41:00:838 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:41:00:942 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:44:02:880 KERNEL/(8673:8678): [EXECUTE -> EXIT] Proceso 3 terminado
+[INFO] 22:44:02:882 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:44:03:424 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:44:03:425 KERNEL/(8673:8677): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:44:03:426 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:03:527 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:44:03:529 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:03:552 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:03:556 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:44:04:127 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:44:04:128 KERNEL/(8673:8677): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:44:04:129 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:04:229 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:44:04:230 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:04:248 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:04:251 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:44:04:802 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:44:04:803 KERNEL/(8673:8677): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:44:04:804 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:04:835 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:04:836 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:04:904 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:44:04:908 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:04:909 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:05:010 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:07:475 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:07:483 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:44:08:025 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:44:08:025 KERNEL/(8673:8677): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:44:08:026 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:08:126 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:44:08:127 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:08:153 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:08:159 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:44:08:705 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:44:08:706 KERNEL/(8673:8677): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:44:08:707 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:08:807 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:44:08:808 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:08:836 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:08:837 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:44:09:939 KERNEL/(8673:8678): [EXECUTE -> EXIT] Proceso 2 terminado
+[INFO] 22:44:09:959 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:10:000 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:10:002 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:10:003 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:10:103 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:10:104 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:10:192 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:10:193 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:10:419 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:10:420 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:10:421 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:10:521 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:10:522 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:10:605 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:10:613 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:10:845 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:10:846 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:10:847 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:10:947 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:10:949 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:11:041 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:11:049 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:11:287 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:11:288 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:11:289 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:11:389 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:11:390 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:11:487 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:11:488 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:11:710 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:11:712 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:11:713 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:11:813 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:11:814 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:11:902 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:11:902 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:12:124 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:12:125 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:12:126 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:12:227 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:12:230 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:12:367 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:12:368 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:12:593 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:12:594 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:12:595 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:12:695 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:12:696 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:12:784 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:12:785 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:13:043 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:13:045 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:13:046 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:13:147 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:13:148 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:13:233 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:13:237 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:13:462 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:13:463 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:13:464 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:13:564 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:13:565 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:13:646 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:13:651 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:13:872 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:13:873 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:13:874 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:13:975 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:13:976 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:14:059 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:14:063 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:14:287 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:14:288 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:14:289 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:14:379 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:14:389 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:14:390 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:14:391 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:14:493 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:14:493 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:14:513 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:14:520 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:14:643 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:14:644 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:14:645 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:14:745 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:14:746 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:16:245 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:16:251 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:16:476 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:16:477 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:16:478 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:16:578 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:16:579 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:16:669 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:16:674 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:16:893 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:16:894 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:16:895 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:16:995 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:16:996 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:17:069 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:17:070 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:17:293 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:17:294 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:17:295 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:17:395 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:17:396 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:17:484 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:17:486 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:17:716 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:17:717 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:17:718 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:17:818 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:17:819 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:17:928 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:17:929 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:18:152 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:18:153 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:18:154 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:18:255 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:18:256 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:18:340 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:18:347 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:18:595 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:18:596 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:18:597 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:18:698 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:18:698 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:18:784 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:18:792 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:19:012 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:19:013 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:19:015 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:19:115 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:19:116 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:19:212 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:19:217 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:19:439 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:19:440 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:19:442 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:19:542 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:19:542 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:19:625 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:19:627 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:19:879 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:19:881 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:19:882 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:19:982 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:19:984 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:20:066 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:20:072 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:20:294 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:20:295 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:20:296 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:20:396 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:20:397 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:20:486 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:20:492 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:20:717 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:20:718 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:20:719 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:20:803 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:20:819 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:20:820 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:20:821 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:20:929 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:20:930 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:20:943 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:20:947 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:21:076 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:21:077 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:21:078 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:21:179 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:21:182 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:23:682 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:23:683 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:24:779 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:24:780 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:24:781 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:24:882 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:24:883 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:24:900 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:24:904 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:25:030 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:25:031 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:25:032 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:25:133 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:25:135 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:26:653 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:26:659 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:27:804 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:27:805 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:27:806 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:27:906 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:27:907 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:27:922 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:27:926 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:28:055 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:28:056 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:28:057 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:28:157 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:28:157 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:29:659 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:29:660 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:30:767 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:30:767 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:30:768 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:30:869 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:30:870 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:30:890 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:30:893 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:31:027 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:31:028 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:31:030 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:31:131 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:31:139 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:32:674 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:32:675 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:33:779 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:33:780 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:33:781 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:33:881 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:33:882 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:33:906 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:33:913 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:34:046 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:34:047 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:34:048 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:34:148 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:34:149 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:35:649 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:35:656 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:36:751 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:36:752 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:36:753 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:36:853 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:36:854 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:36:873 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:36:885 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:37:035 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:37:036 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:37:038 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:37:139 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:37:144 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:38:654 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:38:660 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:39:760 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:39:761 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:39:762 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:39:862 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:39:863 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:39:885 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:39:886 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:40:020 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:40:021 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:40:022 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:40:122 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:40:123 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:42:637 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:42:644 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:43:751 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:43:752 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:43:753 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:43:853 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:43:854 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:43:873 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:44:43:885 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:44:020 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:44:44:022 KERNEL/(8673:8677): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:44:44:026 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:44:125 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:44:44:126 KERNEL/(8673:8679): [INTERRUPT] Mandando interrupcion
+[INFO] 22:44:45:644 KERNEL/(8673:8678): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:44:45:647 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:46:763 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:46:764 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:46:766 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:44:46:811 KERNEL/(8673:8678): [EXECUTE -> EXIT] Proceso 4 terminado
+[INFO] 22:44:46:866 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:46:867 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:50:497 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:50:498 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:50:600 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:50:601 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:53:231 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:53:232 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:53:334 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:53:336 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:55:999 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:56:000 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:56:102 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:56:107 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:44:58:899 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:44:58:901 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:44:59:004 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:44:59:006 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:45:01:689 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:45:01:691 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:45:01:793 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:45:01:794 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:45:04:424 KERNEL/(8673:8678): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:45:04:425 KERNEL/(8673:8677): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:45:04:526 KERNEL/(8673:8677): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:45:04:528 KERNEL/(8673:8679): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:45:04:643 KERNEL/(8673:8678): [EXECUTE -> EXIT] Proceso 5 terminado
+[INFO] 22:50:53:501 KERNEL/(9260:9260): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 22:50:53:716 KERNEL/(9260:9260): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 22:50:53:725 KERNEL/(9260:9260): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 22:50:53:833 KERNEL/(9260:9260): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 22:50:53:852 KERNEL/(9260:9260): Kernel esperando un nuevo cliente
+[INFO] 22:50:53:854 KERNEL/(9260:9260): KERNEL listo para recibir al cliente
+[INFO] 22:50:59:610 KERNEL/(9260:9260): Cliente conectado (a KERNEL)
+[INFO] 22:50:59:611 KERNEL/(9260:9260): Socket del cliente recibido en kernel.
+[INFO] 22:50:59:616 KERNEL/(9260:9260): Kernel esperando un nuevo cliente
+[INFO] 22:50:59:616 KERNEL/(9260:9260): KERNEL listo para recibir al cliente
+[INFO] 22:50:59:684 KERNEL/(9260:9264): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 22:50:59:689 KERNEL/(9260:9264): Solicitando tabla de pag para proceso 1 de tamanio 2048
+[INFO] 22:50:59:742 KERNEL/(9260:9264): proceso 1 tabla de pag 0
+[INFO] 22:50:59:750 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:50:59:760 KERNEL/(9260:9264): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 0
+[INFO] 22:51:00:448 KERNEL/(9260:9260): Cliente conectado (a KERNEL)
+[INFO] 22:51:00:449 KERNEL/(9260:9260): Socket del cliente recibido en kernel.
+[INFO] 22:51:00:463 KERNEL/(9260:9260): Kernel esperando un nuevo cliente
+[INFO] 22:51:00:463 KERNEL/(9260:9260): KERNEL listo para recibir al cliente
+[INFO] 22:51:00:480 KERNEL/(9260:9264): [NEW -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 22:51:00:481 KERNEL/(9260:9264): Solicitando tabla de pag para proceso 2 de tamanio 2048
+[INFO] 22:51:00:487 KERNEL/(9260:9264): proceso 2 tabla de pag 1
+[INFO] 22:51:00:487 KERNEL/(9260:9264): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:51:00:488 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:51:00:643 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:51:00:651 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:51:01:303 KERNEL/(9260:9260): Cliente conectado (a KERNEL)
+[INFO] 22:51:01:304 KERNEL/(9260:9260): Socket del cliente recibido en kernel.
+[INFO] 22:51:01:304 KERNEL/(9260:9260): Kernel esperando un nuevo cliente
+[INFO] 22:51:01:305 KERNEL/(9260:9260): KERNEL listo para recibir al cliente
+[INFO] 22:51:01:330 KERNEL/(9260:9264): [NEW -> READY] PROCESO 3 AGREGADO A READY
+[INFO] 22:51:01:331 KERNEL/(9260:9264): Solicitando tabla de pag para proceso 3 de tamanio 2048
+[INFO] 22:51:01:374 KERNEL/(9260:9264): proceso 3 tabla de pag 2
+[INFO] 22:51:01:374 KERNEL/(9260:9264): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 2
+[INFO] 22:51:01:375 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:51:02:221 KERNEL/(9260:9260): Cliente conectado (a KERNEL)
+[INFO] 22:51:02:221 KERNEL/(9260:9260): Socket del cliente recibido en kernel.
+[INFO] 22:51:02:222 KERNEL/(9260:9260): Kernel esperando un nuevo cliente
+[INFO] 22:51:02:222 KERNEL/(9260:9260): KERNEL listo para recibir al cliente
+[INFO] 22:51:02:230 KERNEL/(9260:9264): [NEW -> READY] PROCESO 4 AGREGADO A READY
+[INFO] 22:51:02:233 KERNEL/(9260:9264): Solicitando tabla de pag para proceso 4 de tamanio 2048
+[INFO] 22:51:02:273 KERNEL/(9260:9264): proceso 4 tabla de pag 3
+[INFO] 22:51:02:274 KERNEL/(9260:9264): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 22:51:03:103 KERNEL/(9260:9260): Cliente conectado (a KERNEL)
+[INFO] 22:51:03:104 KERNEL/(9260:9260): Socket del cliente recibido en kernel.
+[INFO] 22:51:03:105 KERNEL/(9260:9260): Kernel esperando un nuevo cliente
+[INFO] 22:51:03:105 KERNEL/(9260:9260): KERNEL listo para recibir al cliente
+[INFO] 22:51:03:134 KERNEL/(9260:9264): [NEW -> READY] PROCESO 5 AGREGADO A READY
+[INFO] 22:51:03:135 KERNEL/(9260:9264): Solicitando tabla de pag para proceso 5 de tamanio 2048
+[INFO] 22:51:03:178 KERNEL/(9260:9264): proceso 5 tabla de pag 4
+[INFO] 22:51:03:178 KERNEL/(9260:9264): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 22:51:03:454 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:51:03:461 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:51:03:471 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:51:03:574 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:51:03:580 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:51:19:405 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 22:51:19:407 KERNEL/(9260:9265): [IO] Proceso 1 esperando 5000 milisegundos
+[INFO] 22:51:19:408 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:51:20:418 KERNEL/(9260:9285): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 22:51:24:418 KERNEL/(9260:9265): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:51:24:429 KERNEL/(9260:9264): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 22:51:24:430 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:51:24:431 KERNEL/(9260:9264): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 22:51:25:946 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:51:25:950 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:51:44:394 KERNEL/(9260:9266): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 22:51:44:408 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:51:55:508 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:51:55:509 KERNEL/(9260:9265): [IO] Proceso 2 esperando 5000 milisegundos
+[INFO] 22:51:55:510 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:51:56:532 KERNEL/(9260:9310): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 2
+[INFO] 22:52:00:511 KERNEL/(9260:9265): [SUSP_BLOCKED -> SUSP_READY] Proceso 2 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:52:00:512 KERNEL/(9260:9264): [SUSP_READY -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 22:52:00:513 KERNEL/(9260:9264): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 22:52:00:513 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:52:02:081 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:52:02:092 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:52:18:188 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:52:18:189 KERNEL/(9260:9265): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:52:18:190 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:52:18:291 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:52:18:292 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:52:19:736 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:52:19:742 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:52:20:269 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:52:20:270 KERNEL/(9260:9265): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:52:20:271 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:52:20:372 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:52:20:374 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:52:22:822 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:52:22:827 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:52:23:351 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:52:23:351 KERNEL/(9260:9265): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:52:23:352 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:52:23:452 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:52:23:453 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:52:24:904 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:52:24:906 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:52:25:430 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:52:25:430 KERNEL/(9260:9265): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:52:25:431 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:52:25:532 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:52:25:533 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:52:28:061 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:52:28:065 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:52:28:627 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:52:28:629 KERNEL/(9260:9265): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:52:28:630 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:52:28:730 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:52:28:731 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:52:30:206 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:52:30:216 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:52:30:735 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:52:30:736 KERNEL/(9260:9265): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:52:30:737 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:52:30:837 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:52:30:838 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:52:34:292 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:52:34:294 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:52:35:315 KERNEL/(9260:9266): [EXECUTE -> EXIT] Proceso 2 terminado
+[INFO] 22:52:35:339 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:55:25:688 KERNEL/(9260:9266): [EXECUTE -> EXIT] Proceso 3 terminado
+[INFO] 22:55:25:690 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:25:903 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:25:903 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:25:904 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:26:005 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:26:006 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:28:454 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:28:460 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:28:678 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:28:679 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:28:682 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:28:782 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:28:783 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:28:828 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:28:829 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:29:052 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:29:053 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:29:054 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:29:154 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:29:155 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:29:204 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:29:205 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:29:456 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:29:459 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:29:462 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:29:562 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:29:563 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:29:629 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:29:638 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:29:850 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:29:851 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:29:852 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:29:953 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:29:953 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:29:999 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:30:001 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:30:225 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:30:226 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:30:227 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:30:328 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:30:329 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:30:378 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:30:383 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:30:603 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:30:604 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:30:605 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:30:705 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:30:706 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:30:801 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:30:802 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:31:015 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:31:016 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:31:017 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:31:118 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:31:120 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:31:225 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:31:227 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:31:439 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:31:440 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:31:441 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:31:542 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:31:543 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:31:586 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:31:593 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:31:807 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:31:808 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:31:811 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:31:911 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:31:914 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:32:020 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:32:026 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:32:251 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:32:252 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:32:253 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:32:353 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:32:354 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:32:406 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:32:412 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:32:639 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:32:642 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:32:643 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:32:687 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:55:32:744 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:32:745 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:32:754 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:55:32:856 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:55:32:857 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:32:962 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:55:32:971 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:32:996 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:32:996 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:32:997 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:33:098 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:33:100 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:34:556 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:34:557 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:34:774 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:34:775 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:34:776 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:34:876 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:34:877 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:34:922 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:34:933 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:35:143 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:35:144 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:35:145 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:35:245 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:35:246 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:35:297 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:35:301 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:35:551 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:35:553 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:35:554 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:35:654 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:35:655 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:35:703 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:35:707 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:35:956 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:35:959 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:35:962 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:36:062 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:36:065 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:36:132 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:36:133 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:36:347 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:36:348 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:36:351 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:36:451 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:36:452 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:36:533 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:36:540 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:36:750 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:36:751 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:36:752 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:36:852 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:36:853 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:36:901 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:36:904 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:37:122 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:37:123 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:37:125 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:37:225 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:37:226 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:37:274 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:37:278 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:37:488 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:37:489 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:37:490 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:37:591 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:37:594 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:37:647 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:37:656 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:37:866 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:37:867 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:37:868 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:37:968 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:37:969 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:38:022 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:38:023 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:38:236 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:38:237 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:38:238 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:38:339 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:38:342 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:38:385 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:38:391 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:38:603 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:38:604 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:38:605 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:38:652 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:55:38:705 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:38:707 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:38:713 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:55:38:815 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:55:38:816 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:38:821 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:55:38:829 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:38:952 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:38:953 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:38:954 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:39:054 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:39:056 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:41:510 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:41:511 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:42:591 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:55:42:592 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:55:42:594 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:42:694 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:55:42:695 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:42:702 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:55:42:707 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:42:823 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:42:826 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:42:827 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:42:927 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:42:928 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:44:388 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:44:390 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:45:439 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:55:45:440 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:55:45:440 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:45:541 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:55:45:541 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:45:552 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:55:45:560 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:45:671 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:45:672 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:45:673 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:45:774 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:45:775 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:47:232 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:47:235 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:48:302 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:55:48:304 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:55:48:306 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:48:406 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:55:48:407 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:48:421 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:55:48:428 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:48:543 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:48:546 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:48:547 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:48:647 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:48:648 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:50:089 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:50:096 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:51:152 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:55:51:157 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:55:51:158 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:51:258 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:55:51:258 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:51:266 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:55:51:272 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:51:383 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:51:384 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:51:385 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:51:485 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:51:486 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:52:938 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:52:939 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:53:995 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:55:53:996 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:55:54:002 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:54:102 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:55:54:103 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:54:110 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:55:54:116 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:54:227 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:54:228 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:54:230 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:54:330 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:54:331 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:55:782 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:55:789 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:56:840 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:55:56:845 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:55:56:846 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:56:946 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:55:56:947 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:56:952 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:55:56:960 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:55:57:075 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:55:57:075 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:55:57:076 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:55:57:177 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:55:57:178 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:55:59:632 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:55:59:643 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:56:00:723 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:56:00:724 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:56:00:724 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:56:00:825 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:56:00:826 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:56:00:834 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 4 desalojado
+[INFO] 22:56:00:844 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:56:00:953 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 22:56:00:954 KERNEL/(9260:9265): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 22:56:00:955 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:56:01:055 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 22:56:01:056 KERNEL/(9260:9267): [INTERRUPT] Mandando interrupcion
+[INFO] 22:56:02:504 KERNEL/(9260:9266): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 22:56:02:510 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:56:03:579 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:56:03:580 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:56:03:581 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 22:56:03:589 KERNEL/(9260:9266): [EXECUTE -> EXIT] Proceso 4 terminado
+[INFO] 22:56:03:681 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:56:03:682 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:56:07:239 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:56:07:240 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:56:07:342 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:56:07:343 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:56:09:900 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:56:09:902 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:56:10:006 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:56:10:007 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:56:12:561 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:56:12:566 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:56:12:668 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:56:12:669 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:56:15:223 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:56:15:224 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:56:15:329 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:56:15:330 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:56:17:919 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:56:17:920 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:56:18:021 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:56:18:023 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:56:20:581 KERNEL/(9260:9266): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 22:56:20:582 KERNEL/(9260:9265): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 22:56:20:683 KERNEL/(9260:9265): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)
+[INFO] 22:56:20:684 KERNEL/(9260:9267): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 22:56:20:733 KERNEL/(9260:9266): [EXECUTE -> EXIT] Proceso 5 terminado
+[INFO] 22:58:26:595 KERNEL/(9675:9675): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 22:58:26:840 KERNEL/(9675:9675): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 22:58:26:850 KERNEL/(9675:9675): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 22:58:27:016 KERNEL/(9675:9675): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 22:58:27:045 KERNEL/(9675:9675): Kernel esperando un nuevo cliente
+[INFO] 22:58:27:046 KERNEL/(9675:9675): KERNEL listo para recibir al cliente
+[INFO] 22:58:30:474 KERNEL/(9675:9675): Cliente conectado (a KERNEL)
+[INFO] 22:58:30:475 KERNEL/(9675:9675): Socket del cliente recibido en kernel.
+[INFO] 22:58:30:496 KERNEL/(9675:9675): Kernel esperando un nuevo cliente
+[INFO] 22:58:30:496 KERNEL/(9675:9675): KERNEL listo para recibir al cliente
+[INFO] 22:58:30:551 KERNEL/(9675:9678): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 22:58:30:569 KERNEL/(9675:9678): Solicitando tabla de pag para proceso 1 de tamanio 2048
+[INFO] 22:58:30:628 KERNEL/(9675:9678): proceso 1 tabla de pag 0
+[INFO] 22:58:30:641 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:58:30:644 KERNEL/(9675:9678): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 0
+[INFO] 22:58:31:563 KERNEL/(9675:9675): Cliente conectado (a KERNEL)
+[INFO] 22:58:31:563 KERNEL/(9675:9675): Socket del cliente recibido en kernel.
+[INFO] 22:58:31:588 KERNEL/(9675:9675): Kernel esperando un nuevo cliente
+[INFO] 22:58:31:588 KERNEL/(9675:9675): KERNEL listo para recibir al cliente
+[INFO] 22:58:31:592 KERNEL/(9675:9678): [NEW -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 22:58:31:593 KERNEL/(9675:9678): Solicitando tabla de pag para proceso 2 de tamanio 2048
+[INFO] 22:58:31:596 KERNEL/(9675:9678): proceso 2 tabla de pag 1
+[INFO] 22:58:31:596 KERNEL/(9675:9678): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 22:58:31:597 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 22:58:31:739 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:58:31:749 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:58:32:516 KERNEL/(9675:9675): Cliente conectado (a KERNEL)
+[INFO] 22:58:32:517 KERNEL/(9675:9675): Socket del cliente recibido en kernel.
+[INFO] 22:58:32:520 KERNEL/(9675:9675): Kernel esperando un nuevo cliente
+[INFO] 22:58:32:521 KERNEL/(9675:9675): KERNEL listo para recibir al cliente
+[INFO] 22:58:32:550 KERNEL/(9675:9678): [NEW -> READY] PROCESO 3 AGREGADO A READY
+[INFO] 22:58:32:551 KERNEL/(9675:9678): Solicitando tabla de pag para proceso 3 de tamanio 2048
+[INFO] 22:58:32:591 KERNEL/(9675:9678): proceso 3 tabla de pag 2
+[INFO] 22:58:32:591 KERNEL/(9675:9678): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 2
+[INFO] 22:58:32:592 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 22:58:33:467 KERNEL/(9675:9675): Cliente conectado (a KERNEL)
+[INFO] 22:58:33:468 KERNEL/(9675:9675): Socket del cliente recibido en kernel.
+[INFO] 22:58:33:468 KERNEL/(9675:9675): Kernel esperando un nuevo cliente
+[INFO] 22:58:33:469 KERNEL/(9675:9675): KERNEL listo para recibir al cliente
+[INFO] 22:58:33:482 KERNEL/(9675:9678): [NEW -> READY] PROCESO 4 AGREGADO A READY
+[INFO] 22:58:33:483 KERNEL/(9675:9678): Solicitando tabla de pag para proceso 4 de tamanio 2048
+[INFO] 22:58:33:523 KERNEL/(9675:9678): proceso 4 tabla de pag 3
+[INFO] 22:58:33:523 KERNEL/(9675:9678): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 22:58:34:330 KERNEL/(9675:9675): Cliente conectado (a KERNEL)
+[INFO] 22:58:34:330 KERNEL/(9675:9675): Socket del cliente recibido en kernel.
+[INFO] 22:58:34:331 KERNEL/(9675:9675): Kernel esperando un nuevo cliente
+[INFO] 22:58:34:332 KERNEL/(9675:9675): KERNEL listo para recibir al cliente
+[INFO] 22:58:34:358 KERNEL/(9675:9678): [NEW -> READY] PROCESO 5 AGREGADO A READY
+[INFO] 22:58:34:359 KERNEL/(9675:9678): Solicitando tabla de pag para proceso 5 de tamanio 2048
+[INFO] 22:58:34:403 KERNEL/(9675:9678): proceso 5 tabla de pag 4
+[INFO] 22:58:34:404 KERNEL/(9675:9678): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 22:58:34:503 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:58:34:504 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:58:34:517 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 22:58:34:644 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 22:58:34:645 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:58:50:638 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 22:58:50:640 KERNEL/(9675:9679): [IO] Proceso 1 esperando 5000 milisegundos
+[INFO] 22:58:50:641 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:58:51:642 KERNEL/(9675:9698): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 22:58:55:657 KERNEL/(9675:9679): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:58:55:666 KERNEL/(9675:9678): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 22:58:55:667 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 22:58:55:668 KERNEL/(9675:9678): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 4
+[INFO] 22:58:57:228 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 2 desalojado
+[INFO] 22:58:57:229 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 22:59:15:765 KERNEL/(9675:9680): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 22:59:15:768 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:59:26:906 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:59:26:907 KERNEL/(9675:9679): [IO] Proceso 2 esperando 5000 milisegundos
+[INFO] 22:59:26:908 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:59:27:907 KERNEL/(9675:9708): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 2
+[INFO] 22:59:31:908 KERNEL/(9675:9679): [SUSP_BLOCKED -> SUSP_READY] Proceso 2 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 22:59:31:909 KERNEL/(9675:9678): [SUSP_READY -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 22:59:31:910 KERNEL/(9675:9678): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 3
+[INFO] 22:59:31:910 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 22:59:33:538 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:59:33:544 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:59:49:694 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:59:49:695 KERNEL/(9675:9679): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:59:49:696 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:59:49:797 KERNEL/(9675:9679): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:59:49:799 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 22:59:51:299 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:59:51:305 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:59:51:848 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:59:51:849 KERNEL/(9675:9679): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:59:51:851 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:59:51:951 KERNEL/(9675:9679): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:59:51:952 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 22:59:54:453 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:59:54:453 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:59:54:996 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:59:54:997 KERNEL/(9675:9679): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:59:54:998 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:59:55:098 KERNEL/(9675:9679): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:59:55:099 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 22:59:56:608 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:59:56:609 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 22:59:57:150 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 22:59:57:151 KERNEL/(9675:9679): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 22:59:57:152 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 22:59:57:252 KERNEL/(9675:9679): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 22:59:57:253 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 22:59:59:754 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 22:59:59:761 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 23:00:00:302 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 23:00:00:304 KERNEL/(9675:9679): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 23:00:00:305 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 23:00:00:406 KERNEL/(9675:9679): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 23:00:00:406 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 23:00:01:907 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 23:00:01:910 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 23:00:02:451 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 23:00:02:452 KERNEL/(9675:9679): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 23:00:02:453 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 23:00:02:554 KERNEL/(9675:9679): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 23:00:02:555 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 23:00:06:058 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 3 desalojado
+[INFO] 23:00:06:063 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 23:00:07:139 KERNEL/(9675:9680): [EXECUTE -> EXIT] Proceso 2 terminado
+[INFO] 23:00:07:141 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 3 a ejecutar
+[INFO] 23:02:58:033 KERNEL/(9675:9680): [EXECUTE -> EXIT] Proceso 3 terminado
+[INFO] 23:02:58:041 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 23:02:58:265 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 23:02:58:266 KERNEL/(9675:9679): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 23:02:58:268 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 23:02:58:368 KERNEL/(9675:9679): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 23:02:58:369 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 23:03:00:880 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 23:03:00:881 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 23:03:01:114 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 23:03:01:115 KERNEL/(9675:9679): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 23:03:01:116 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 23:03:01:218 KERNEL/(9675:9679): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 23:03:01:219 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 23:03:01:319 KERNEL/(9675:9680): [EXECUTE -> READY] Proceso 5 desalojado
+[INFO] 23:03:01:321 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 4 a ejecutar
+[INFO] 23:03:01:605 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 4 bloqueado
+[INFO] 23:03:01:607 KERNEL/(9675:9679): [IO] Proceso 4 esperando 100 milisegundos
+[INFO] 23:03:01:611 KERNEL/(9675:9681): [READY -> EXECUTE] Mandando proceso 5 a ejecutar
+[INFO] 23:03:01:710 KERNEL/(9675:9679): [BLOCKED -> READY] Proceso 4 saliendo de blocked hacia ready :)
+[INFO] 23:03:01:712 KERNEL/(9675:9681): [INTERRUPT] Mandando interrupcion
+[INFO] 23:03:02:687 KERNEL/(9675:9680): [EXECUTE -> BLOCKED] Proceso 5 bloqueado
+[INFO] 23:03:02:687 KERNEL/(9675:9679): [IO] Proceso 5 esperando 100 milisegundos
+[INFO] 23:03:02:788 KERNEL/(9675:9679): [BLOCKED -> READY] Proceso 5 saliendo de blocked hacia ready :)

@@ -125,7 +125,7 @@ void inicializar_tlb(){
 
 
 void limpiar_tlb(){
-	list_clean(tlb);
+	list_clean_and_destroy_elements(tlb,free);
 	inicializar_tlb(tlb);
 }
 
