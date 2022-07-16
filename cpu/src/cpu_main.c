@@ -335,8 +335,10 @@ bool marco_en_tlb(int32_t marco,int32_t pagina){//Para encontrar la lista a actu
 	for (int i=0;i< entradas_tlb;i++){
 		TLB_t *tlb_aux = list_get(tlb,i);
 		if(tlb_aux->marco==marco){
+			list_remove(tlb,i);
 			tlb_aux->pagina = pagina;
 			tlb_aux->ultima_referencia = clock();
+			list_add(tlb,tlb_aux);
 			return true;
 			}
 	}

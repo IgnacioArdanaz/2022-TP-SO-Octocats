@@ -1,0 +1,294 @@
+[INFO] 16:03:23:737 cpu/(6998:6998): Algoritmo de reemplazo configurado: FIFO
+[INFO] 16:03:23:859 cpu/(6998:6998): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 16:03:23:866 cpu/(6998:6998): RECIBIDO: tam_pagina=128 - cant_ent_paginas=4
+[INFO] 16:03:23:871 cpu/(6998:6998): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 16:03:23:872 cpu/(6998:6998): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 16:03:23:874 cpu/(6998:6998): CPU_DISPATCH listo para recibir al cliente
+[INFO] 16:03:26:371 cpu/(6998:6998): Cliente conectado (a CPU_DISPATCH)
+[INFO] 16:03:26:373 cpu/(6998:6998): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 16:03:26:376 cpu/(6998:6998): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 16:03:26:429 cpu/(6998:6998): Valor alfa 0.50
+[INFO] 16:03:29:928 cpu/(6998:6998): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 16:03:29:946 cpu/(6998:6998): Ejecutando WRITE
+[INFO] 16:03:29:950 cpu/(6998:6998): TLB MISS (pagina 0)
+[INFO] 16:03:32:970 cpu/(6998:6998): Recibida tabla pag 2do nivel numero: 0
+[INFO] 16:03:38:973 cpu/(6998:6998): Recibido numero de marco: 0
+[INFO] 16:03:38:977 cpu/(6998:6998): Pagina 0 asignada al marco 0
+[INFO] 16:03:38:994 cpu/(6998:6998): Ejecutando WRITE: pagina 0, marco 0,  desp 0, valor: 100
+[INFO] 16:03:41:995 cpu/(6998:6998): Ejecutando WRITE
+[INFO] 16:03:41:995 cpu/(6998:6998): TLB MISS (pagina 1)
+[INFO] 16:03:44:996 cpu/(6998:6998): Recibida tabla pag 2do nivel numero: 0
+[INFO] 16:03:50:998 cpu/(6998:6998): Recibido numero de marco: 1
+[INFO] 16:03:50:999 cpu/(6998:6998): Pagina 1 asignada al marco 1
+[INFO] 16:03:51:000 cpu/(6998:6998): Ejecutando WRITE: pagina 1, marco 1,  desp 4, valor: 101
+[INFO] 16:03:54:000 cpu/(6998:6998): Ejecutando WRITE
+[INFO] 16:03:54:001 cpu/(6998:6998): TLB MISS (pagina 2)
+[INFO] 16:03:57:002 cpu/(6998:6998): Recibida tabla pag 2do nivel numero: 0
+[INFO] 16:04:03:004 cpu/(6998:6998): Recibido numero de marco: 2
+[INFO] 16:04:03:005 cpu/(6998:6998): Pagina 2 asignada al marco 2
+[INFO] 16:04:03:005 cpu/(6998:6998): Ejecutando WRITE: pagina 2, marco 2,  desp 4, valor: 102
+[INFO] 16:04:06:007 cpu/(6998:6998): Ejecutando WRITE
+[INFO] 16:04:06:007 cpu/(6998:6998): TLB MISS (pagina 4)
+[INFO] 16:04:09:009 cpu/(6998:6998): Recibida tabla pag 2do nivel numero: 1
+[INFO] 16:04:15:010 cpu/(6998:6998): Recibido numero de marco: 3
+[INFO] 16:04:15:011 cpu/(6998:6998): Pagina 4 asignada al marco 3
+[INFO] 16:04:15:012 cpu/(6998:6998): Ejecutando WRITE: pagina 4, marco 3,  desp 8, valor: 104
+[INFO] 16:04:18:012 cpu/(6998:6998): Ejecutando WRITE
+[INFO] 16:04:18:013 cpu/(6998:6998): TLB HIT (pagina 0)
+[INFO] 16:04:18:014 cpu/(6998:6998): Ejecutando WRITE: pagina 0, marco 0,  desp 4, valor: 110
+[INFO] 16:04:21:015 cpu/(6998:6998): Ejecutando WRITE
+[INFO] 16:04:21:015 cpu/(6998:6998): TLB HIT (pagina 0)
+[INFO] 16:04:21:016 cpu/(6998:6998): Ejecutando WRITE: pagina 0, marco 0,  desp 8, valor: 120
+[INFO] 16:04:24:017 cpu/(6998:6998): Ejecutando WRITE
+[INFO] 16:04:24:018 cpu/(6998:6998): TLB MISS (pagina 8)
+[INFO] 16:04:27:019 cpu/(6998:6998): Recibida tabla pag 2do nivel numero: 2
+[INFO] 16:04:33:020 cpu/(6998:6998): Recibido numero de marco: 4
+[INFO] 16:04:33:021 cpu/(6998:6998): Pagina 8 asignada al marco 4
+[INFO] 16:04:33:022 cpu/(6998:6998): Pagina 0 y marco 0 reemplazados :(
+[INFO] 16:04:33:023 cpu/(6998:6998): Ejecutando WRITE: pagina 8, marco 4,  desp 4, valor: 108
+[INFO] 16:04:36:023 cpu/(6998:6998): Ejecutando READ
+[INFO] 16:04:36:024 cpu/(6998:6998): TLB MISS (pagina 0)
+[INFO] 16:04:39:025 cpu/(6998:6998): Recibida tabla pag 2do nivel numero: 0
+[INFO] 16:04:42:026 cpu/(6998:6998): Recibido numero de marco: 0
+[INFO] 16:04:42:027 cpu/(6998:6998): Pagina 0 asignada al marco 0
+[INFO] 16:04:42:027 cpu/(6998:6998): Pagina 1 y marco 1 reemplazados :(
+[INFO] 16:04:42:028 cpu/(6998:6998): Ejecutando READ para pagina 0, marco 0 y desplazamiento 0
+[INFO] 16:04:45:030 cpu/(6998:6998): Dato leido = 100
+[INFO] 16:04:45:031 cpu/(6998:6998): Valor leido 100
+[INFO] 16:04:45:032 cpu/(6998:6998): Ejecutando IO
+[INFO] 16:04:45:036 cpu/(6998:6998): Rafaga real 75100
+[INFO] 16:04:45:044 cpu/(6998:6998): Proceso 1 estimacion rafaga siguiente 47550.000000
+[INFO] 16:04:45:048 cpu/(6998:6998): Program counter 9 (despues de ejecutar)
+[INFO] 16:04:45:049 cpu/(6998:6998): ==============================================================
+[INFO] 16:04:45:066 cpu/(6998:6998): Proceso 2 -> program counter 0 - est 20000.000000
+[INFO] 16:04:45:067 cpu/(6998:6998): Ejecutando WRITE
+[INFO] 16:04:45:067 cpu/(6998:6998): TLB MISS (pagina 4)
+[INFO] 16:04:48:070 cpu/(6998:6998): Recibida tabla pag 2do nivel numero: 5
+[INFO] 16:04:54:072 cpu/(6998:6998): Recibido numero de marco: 5
+[INFO] 16:04:54:073 cpu/(6998:6998): Pagina 4 asignada al marco 5
+[INFO] 16:04:54:073 cpu/(6998:6998): Ejecutando WRITE: pagina 4, marco 5,  desp 8, valor: 999
+[INFO] 16:04:57:074 cpu/(6998:6998): Ejecutando WRITE
+[INFO] 16:04:57:075 cpu/(6998:6998): TLB MISS (pagina 2)
+[INFO] 16:05:00:076 cpu/(6998:6998): Recibida tabla pag 2do nivel numero: 4
+[INFO] 16:05:06:077 cpu/(6998:6998): Recibido numero de marco: 6
+[INFO] 16:05:06:078 cpu/(6998:6998): Pagina 2 asignada al marco 6
+[INFO] 16:05:06:079 cpu/(6998:6998): Ejecutando WRITE: pagina 2, marco 6,  desp 4, valor: 999
+[INFO] 16:05:09:079 cpu/(6998:6998): Ejecutando EXIT
+[INFO] 16:05:09:079 cpu/(6998:6998): Rafaga real 24012
+[INFO] 16:05:09:080 cpu/(6998:6998): Proceso 2 estimacion rafaga siguiente 22006.000000
+[INFO] 16:05:09:081 cpu/(6998:6998): Program counter 3 (despues de ejecutar)
+[INFO] 16:05:09:081 cpu/(6998:6998): ==============================================================
+[INFO] 16:05:09:083 cpu/(6998:6998): Proceso 1 -> program counter 9 - est 47550.000000
+[INFO] 16:05:09:084 cpu/(6998:6998): Ejecutando READ
+[INFO] 16:05:09:088 cpu/(6998:6998): TLB MISS (pagina 2)
+[INFO] 16:05:12:089 cpu/(6998:6998): Recibida tabla pag 2do nivel numero: 0
+[INFO] 16:05:15:091 cpu/(6998:6998): Recibido numero de marco: 2
+[INFO] 16:05:15:091 cpu/(6998:6998): Pagina 2 asignada al marco 2
+[INFO] 16:05:15:092 cpu/(6998:6998): Ejecutando READ para pagina 2, marco 2 y desplazamiento 4
+[INFO] 16:05:18:093 cpu/(6998:6998): Dato leido = 102
+[INFO] 16:05:18:093 cpu/(6998:6998): Valor leido 102
+[INFO] 16:05:18:094 cpu/(6998:6998): Ejecutando READ
+[INFO] 16:05:18:095 cpu/(6998:6998): TLB MISS (pagina 4)
+[INFO] 16:05:21:096 cpu/(6998:6998): Recibida tabla pag 2do nivel numero: 1
+[INFO] 16:05:24:097 cpu/(6998:6998): Recibido numero de marco: 3
+[INFO] 16:05:24:097 cpu/(6998:6998): Pagina 4 asignada al marco 3
+[INFO] 16:05:24:098 cpu/(6998:6998): Ejecutando READ para pagina 4, marco 3 y desplazamiento 8
+[INFO] 16:05:27:099 cpu/(6998:6998): Dato leido = 104
+[INFO] 16:05:27:099 cpu/(6998:6998): Valor leido 104
+[INFO] 16:05:27:099 cpu/(6998:6998): Ejecutando EXIT
+[INFO] 16:05:27:100 cpu/(6998:6998): Rafaga real 18016
+[INFO] 16:05:27:100 cpu/(6998:6998): Proceso 1 estimacion rafaga siguiente 32783.000000
+[INFO] 16:05:27:101 cpu/(6998:6998): Program counter 12 (despues de ejecutar)
+[INFO] 16:05:27:101 cpu/(6998:6998): ==============================================================
+[INFO] 16:05:55:835 cpu/(6998:6998): Proceso 0 -> program counter 0 - est 0.000000
+[INFO] 20:30:27:706 cpu/(4249:4249): Algoritmo de reemplazo configurado: FIFO
+[INFO] 20:30:27:708 cpu/(4249:4249): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 20:30:27:708 cpu/(4249:4249): RECIBIDO: tam_pagina=128 - cant_ent_paginas=4
+[INFO] 20:30:27:709 cpu/(4249:4249): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 20:30:27:709 cpu/(4249:4249): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 20:30:27:713 cpu/(4249:4249): CPU_DISPATCH listo para recibir al cliente
+[INFO] 20:30:30:412 cpu/(4249:4249): Cliente conectado (a CPU_DISPATCH)
+[INFO] 20:30:30:412 cpu/(4249:4249): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 20:30:30:412 cpu/(4249:4249): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 20:30:30:413 cpu/(4249:4249): Valor alfa 0.50
+[INFO] 20:31:05:866 cpu/(4249:4249): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 20:31:05:866 cpu/(4249:4249): Ejecutando WRITE
+[INFO] 20:31:05:866 cpu/(4249:4249): TLB MISS (pagina 0)
+[INFO] 20:31:08:867 cpu/(4249:4249): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:31:14:870 cpu/(4249:4249): Recibido numero de marco: 0
+[INFO] 20:31:14:870 cpu/(4249:4249): Pagina 0 asignada al marco 0
+[INFO] 20:31:14:870 cpu/(4249:4249): Ejecutando WRITE: pagina 0, marco 0,  desp 0, valor: 1000
+[INFO] 20:31:17:870 cpu/(4249:4249): Ejecutando WRITE
+[INFO] 20:31:17:870 cpu/(4249:4249): TLB HIT (pagina 0)
+[INFO] 20:31:17:870 cpu/(4249:4249): Ejecutando WRITE: pagina 0, marco 0,  desp 4, valor: 1001
+[INFO] 20:31:20:871 cpu/(4249:4249): Ejecutando WRITE
+[INFO] 20:31:20:871 cpu/(4249:4249): TLB MISS (pagina 2)
+[INFO] 20:31:23:872 cpu/(4249:4249): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:31:29:874 cpu/(4249:4249): Recibido numero de marco: 1
+[INFO] 20:31:29:874 cpu/(4249:4249): Pagina 2 asignada al marco 1
+[INFO] 20:31:29:874 cpu/(4249:4249): Ejecutando WRITE: pagina 2, marco 1,  desp 4, valor: 2000
+[INFO] 20:31:32:875 cpu/(4249:4249): Aca busco el operando
+[INFO] 20:31:32:875 cpu/(4249:4249): Fetch operands...
+[INFO] 20:31:32:875 cpu/(4249:4249): TLB HIT (pagina 2)
+[INFO] 20:31:32:875 cpu/(4249:4249): Ejecutando READ para pagina 2, marco 1 y desplazamiento 4
+[INFO] 20:31:35:877 cpu/(4249:4249): Dato leido = 2000
+[INFO] 20:31:35:877 cpu/(4249:4249): Ejecutando COPY
+[INFO] 20:31:35:877 cpu/(4249:4249): TLB HIT (pagina 2)
+[INFO] 20:31:35:877 cpu/(4249:4249): Ejecutando WRITE: pagina 2, marco 1,  desp 0, valor: 2000
+[INFO] 20:31:38:877 cpu/(4249:4249): Ejecutando WRITE
+[INFO] 20:31:38:878 cpu/(4249:4249): TLB MISS (pagina 16)
+[INFO] 20:31:41:878 cpu/(4249:4249): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:31:44:879 cpu/(4249:4249): Recibido numero de marco: 0
+[INFO] 20:31:44:880 cpu/(4249:4249): Ejecutando WRITE: pagina 16, marco 0,  desp 0, valor: 4000
+[INFO] 20:31:47:881 cpu/(4249:4249): Ejecutando WRITE
+[INFO] 20:31:47:881 cpu/(4249:4249): TLB HIT (pagina 16)
+[INFO] 20:31:47:881 cpu/(4249:4249): Ejecutando WRITE: pagina 16, marco 0,  desp 4, valor: 4001
+[INFO] 20:31:50:882 cpu/(4249:4249): Ejecutando IO
+[INFO] 20:31:50:882 cpu/(4249:4249): Rafaga real 45016
+[INFO] 20:31:50:883 cpu/(4249:4249): Proceso 1 estimacion rafaga siguiente 32508.000000
+[INFO] 20:31:50:883 cpu/(4249:4249): Program counter 7 (despues de ejecutar)
+[INFO] 20:31:50:883 cpu/(4249:4249): ==============================================================
+[INFO] 20:31:58:925 cpu/(4249:4249): Proceso 1 -> program counter 7 - est 32508.000000
+[INFO] 20:31:58:925 cpu/(4249:4249): Ejecutando READ
+[INFO] 20:31:58:925 cpu/(4249:4249): TLB MISS (pagina 0)
+[INFO] 20:32:01:926 cpu/(4249:4249): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:32:07:929 cpu/(4249:4249): Recibido numero de marco: 0
+[INFO] 20:32:07:930 cpu/(4249:4249): Pagina 0 asignada al marco 0
+[INFO] 20:32:07:930 cpu/(4249:4249): Ejecutando READ para pagina 0, marco 0 y desplazamiento 0
+[INFO] 20:32:10:932 cpu/(4249:4249): Dato leido = 4000
+[INFO] 20:32:10:932 cpu/(4249:4249): Valor leido 4000
+[INFO] 20:32:10:933 cpu/(4249:4249): Ejecutando WRITE
+[INFO] 20:32:10:933 cpu/(4249:4249): TLB MISS (pagina 8)
+[INFO] 20:32:13:934 cpu/(4249:4249): Recibida tabla pag 2do nivel numero: 2
+[INFO] 20:32:19:936 cpu/(4249:4249): Recibido numero de marco: 1
+[INFO] 20:32:19:937 cpu/(4249:4249): Pagina 8 asignada al marco 1
+[INFO] 20:32:19:937 cpu/(4249:4249): Ejecutando WRITE: pagina 8, marco 1,  desp 0, valor: 3000
+[INFO] 20:32:22:937 cpu/(4249:4249): Ejecutando READ
+[INFO] 20:32:22:938 cpu/(4249:4249): TLB MISS (pagina 2)
+[INFO] 20:32:25:939 cpu/(4249:4249): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:32:31:941 cpu/(4249:4249): Recibido numero de marco: 2
+[INFO] 20:32:31:941 cpu/(4249:4249): Pagina 2 asignada al marco 2
+[INFO] 20:32:31:941 cpu/(4249:4249): Ejecutando READ para pagina 2, marco 2 y desplazamiento 0
+[INFO] 20:32:34:942 cpu/(4249:4249): Dato leido = 2000
+[INFO] 20:32:34:942 cpu/(4249:4249): Valor leido 2000
+[INFO] 20:32:34:942 cpu/(4249:4249): Ejecutando READ
+[INFO] 20:32:34:943 cpu/(4249:4249): TLB MISS (pagina 16)
+[INFO] 20:32:37:944 cpu/(4249:4249): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:32:40:945 cpu/(4249:4249): Recibido numero de marco: 0
+[INFO] 20:32:40:945 cpu/(4249:4249): Ejecutando READ para pagina 16, marco 0 y desplazamiento 0
+[INFO] 20:32:43:946 cpu/(4249:4249): Dato leido = 4000
+[INFO] 20:32:43:946 cpu/(4249:4249): Valor leido 4000
+[INFO] 20:32:43:946 cpu/(4249:4249): Ejecutando WRITE
+[INFO] 20:32:43:946 cpu/(4249:4249): TLB MISS (pagina 31)
+[INFO] 20:32:46:947 cpu/(4249:4249): Recibida tabla pag 2do nivel numero: -1237318488
+[INFO] 20:32:47:444 cpu/(4249:4249): Recibido numero de marco: -1
+[INFO] 20:34:32:495 cpu/(4486:4486): Algoritmo de reemplazo configurado: LRU
+[INFO] 20:34:32:496 cpu/(4486:4486): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 20:34:32:497 cpu/(4486:4486): RECIBIDO: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:34:32:497 cpu/(4486:4486): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 20:34:32:497 cpu/(4486:4486): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 20:34:32:497 cpu/(4486:4486): CPU_DISPATCH listo para recibir al cliente
+[INFO] 20:34:33:608 cpu/(4486:4486): Cliente conectado (a CPU_DISPATCH)
+[INFO] 20:34:33:608 cpu/(4486:4486): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 20:34:33:609 cpu/(4486:4486): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 20:34:33:609 cpu/(4486:4486): Valor alfa 0.50
+[INFO] 20:34:34:417 cpu/(4486:4486): Proceso 1 -> program counter 0 - est 20000.000000
+[INFO] 20:34:34:417 cpu/(4486:4486): Ejecutando WRITE
+[INFO] 20:34:34:417 cpu/(4486:4486): TLB MISS (pagina 0)
+[INFO] 20:34:35:417 cpu/(4486:4486): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:34:41:420 cpu/(4486:4486): Recibido numero de marco: 0
+[INFO] 20:34:41:421 cpu/(4486:4486): Pagina 0 asignada al marco 0
+[INFO] 20:34:41:421 cpu/(4486:4486): Ejecutando WRITE: pagina 0, marco 0,  desp 0, valor: 1000
+[INFO] 20:34:42:421 cpu/(4486:4486): Ejecutando WRITE
+[INFO] 20:34:42:422 cpu/(4486:4486): TLB HIT (pagina 0)
+[INFO] 20:34:42:422 cpu/(4486:4486): Ejecutando WRITE: pagina 0, marco 0,  desp 4, valor: 1001
+[INFO] 20:34:43:423 cpu/(4486:4486): Ejecutando WRITE
+[INFO] 20:34:43:423 cpu/(4486:4486): TLB MISS (pagina 1)
+[INFO] 20:34:44:424 cpu/(4486:4486): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:34:50:426 cpu/(4486:4486): Recibido numero de marco: 1
+[INFO] 20:34:50:426 cpu/(4486:4486): Pagina 1 asignada al marco 1
+[INFO] 20:34:50:426 cpu/(4486:4486): Pagina 0 y marco 0 reemplazados :(
+[INFO] 20:34:50:426 cpu/(4486:4486): Ejecutando WRITE: pagina 1, marco 1,  desp 4, valor: 2000
+[INFO] 20:34:51:427 cpu/(4486:4486): Aca busco el operando
+[INFO] 20:34:51:427 cpu/(4486:4486): Fetch operands...
+[INFO] 20:34:51:427 cpu/(4486:4486): TLB HIT (pagina 1)
+[INFO] 20:34:51:428 cpu/(4486:4486): Ejecutando READ para pagina 1, marco 1 y desplazamiento 4
+[INFO] 20:34:52:428 cpu/(4486:4486): Dato leido = 2000
+[INFO] 20:34:52:429 cpu/(4486:4486): Ejecutando COPY
+[INFO] 20:34:52:429 cpu/(4486:4486): TLB HIT (pagina 1)
+[INFO] 20:34:52:429 cpu/(4486:4486): Ejecutando WRITE: pagina 1, marco 1,  desp 0, valor: 2000
+[INFO] 20:34:53:430 cpu/(4486:4486): Ejecutando WRITE
+[INFO] 20:34:53:431 cpu/(4486:4486): TLB MISS (pagina 8)
+[INFO] 20:34:54:432 cpu/(4486:4486): Recibida tabla pag 2do nivel numero: 2
+[INFO] 20:35:00:435 cpu/(4486:4486): Recibido numero de marco: 2
+[INFO] 20:35:00:435 cpu/(4486:4486): Pagina 8 asignada al marco 2
+[INFO] 20:35:00:435 cpu/(4486:4486): Pagina 1 y marco 1 reemplazados :(
+[INFO] 20:35:00:435 cpu/(4486:4486): Ejecutando WRITE: pagina 8, marco 2,  desp 0, valor: 4000
+[INFO] 20:35:01:436 cpu/(4486:4486): Ejecutando WRITE
+[INFO] 20:35:01:436 cpu/(4486:4486): TLB HIT (pagina 8)
+[INFO] 20:35:01:436 cpu/(4486:4486): Ejecutando WRITE: pagina 8, marco 2,  desp 4, valor: 4001
+[INFO] 20:35:02:436 cpu/(4486:4486): Ejecutando IO
+[INFO] 20:35:02:437 cpu/(4486:4486): Rafaga real 28019
+[INFO] 20:35:02:437 cpu/(4486:4486): Proceso 1 estimacion rafaga siguiente 24009.500000
+[INFO] 20:35:02:437 cpu/(4486:4486): Program counter 7 (despues de ejecutar)
+[INFO] 20:35:02:437 cpu/(4486:4486): ==============================================================
+[INFO] 20:35:12:479 cpu/(4486:4486): Proceso 1 -> program counter 7 - est 24009.500000
+[INFO] 20:35:12:480 cpu/(4486:4486): Ejecutando READ
+[INFO] 20:35:12:480 cpu/(4486:4486): TLB MISS (pagina 0)
+[INFO] 20:35:13:480 cpu/(4486:4486): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:35:19:483 cpu/(4486:4486): Recibido numero de marco: 0
+[INFO] 20:35:19:483 cpu/(4486:4486): Pagina 0 asignada al marco 0
+[INFO] 20:35:19:483 cpu/(4486:4486): Ejecutando READ para pagina 0, marco 0 y desplazamiento 0
+[INFO] 20:35:20:484 cpu/(4486:4486): Dato leido = 1000
+[INFO] 20:35:20:485 cpu/(4486:4486): Valor leido 1000
+[INFO] 20:35:20:485 cpu/(4486:4486): Ejecutando WRITE
+[INFO] 20:35:20:485 cpu/(4486:4486): TLB MISS (pagina 4)
+[INFO] 20:35:21:486 cpu/(4486:4486): Recibida tabla pag 2do nivel numero: 1
+[INFO] 20:35:27:487 cpu/(4486:4486): Recibido numero de marco: 1
+[INFO] 20:35:27:488 cpu/(4486:4486): Pagina 4 asignada al marco 1
+[INFO] 20:35:27:489 cpu/(4486:4486): Pagina 0 y marco 0 reemplazados :(
+[INFO] 20:35:27:489 cpu/(4486:4486): Ejecutando WRITE: pagina 4, marco 1,  desp 0, valor: 3000
+[INFO] 20:35:28:490 cpu/(4486:4486): Ejecutando READ
+[INFO] 20:35:28:490 cpu/(4486:4486): TLB MISS (pagina 1)
+[INFO] 20:35:29:491 cpu/(4486:4486): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:35:35:493 cpu/(4486:4486): Recibido numero de marco: 2
+[INFO] 20:35:35:494 cpu/(4486:4486): Pagina 1 asignada al marco 2
+[INFO] 20:35:35:494 cpu/(4486:4486): Pagina 4 y marco 1 reemplazados :(
+[INFO] 20:35:35:494 cpu/(4486:4486): Ejecutando READ para pagina 1, marco 2 y desplazamiento 0
+[INFO] 20:35:36:494 cpu/(4486:4486): Dato leido = 2000
+[INFO] 20:35:36:494 cpu/(4486:4486): Valor leido 2000
+[INFO] 20:35:36:494 cpu/(4486:4486): Ejecutando READ
+[INFO] 20:35:36:494 cpu/(4486:4486): TLB MISS (pagina 8)
+[INFO] 20:35:37:495 cpu/(4486:4486): Recibida tabla pag 2do nivel numero: 2
+[INFO] 20:35:43:498 cpu/(4486:4486): Recibido numero de marco: 0
+[INFO] 20:35:43:498 cpu/(4486:4486): Pagina 8 asignada al marco 0
+[INFO] 20:35:43:498 cpu/(4486:4486): Pagina 1 y marco 2 reemplazados :(
+[INFO] 20:35:43:498 cpu/(4486:4486): Ejecutando READ para pagina 8, marco 0 y desplazamiento 0
+[INFO] 20:35:44:499 cpu/(4486:4486): Dato leido = 4000
+[INFO] 20:35:44:499 cpu/(4486:4486): Valor leido 4000
+[INFO] 20:35:44:499 cpu/(4486:4486): Ejecutando WRITE
+[INFO] 20:35:44:499 cpu/(4486:4486): TLB MISS (pagina 15)
+[INFO] 20:35:45:500 cpu/(4486:4486): Recibida tabla pag 2do nivel numero: 3
+[INFO] 20:35:56:505 cpu/(4486:4486): Recibido numero de marco: 1
+[INFO] 20:35:56:506 cpu/(4486:4486): Pagina 15 asignada al marco 1
+[INFO] 20:35:56:506 cpu/(4486:4486): Pagina 8 y marco 0 reemplazados :(
+[INFO] 20:35:56:506 cpu/(4486:4486): Ejecutando WRITE: pagina 15, marco 1,  desp 160, valor: 9999
+[INFO] 20:35:57:507 cpu/(4486:4486): Ejecutando READ
+[INFO] 20:35:57:507 cpu/(4486:4486): TLB HIT (pagina 15)
+[INFO] 20:35:57:507 cpu/(4486:4486): Ejecutando READ para pagina 15, marco 1 y desplazamiento 160
+[INFO] 20:35:58:508 cpu/(4486:4486): Dato leido = 9999
+[INFO] 20:35:58:509 cpu/(4486:4486): Valor leido 9999
+[INFO] 20:35:58:509 cpu/(4486:4486): Ejecutando READ
+[INFO] 20:35:58:510 cpu/(4486:4486): TLB MISS (pagina 4)
+[INFO] 20:35:59:510 cpu/(4486:4486): Recibida tabla pag 2do nivel numero: 1
+[INFO] 20:36:05:512 cpu/(4486:4486): Recibido numero de marco: 2
+[INFO] 20:36:05:512 cpu/(4486:4486): Pagina 4 asignada al marco 2
+[INFO] 20:36:05:512 cpu/(4486:4486): Pagina 15 y marco 1 reemplazados :(
+[INFO] 20:36:05:513 cpu/(4486:4486): Ejecutando READ para pagina 4, marco 2 y desplazamiento 0
+[INFO] 20:36:06:513 cpu/(4486:4486): Dato leido = 3000
+[INFO] 20:36:06:514 cpu/(4486:4486): Valor leido 3000
+[INFO] 20:36:06:514 cpu/(4486:4486): Ejecutando EXIT
+[INFO] 20:36:06:514 cpu/(4486:4486): Rafaga real 54034
+[INFO] 20:36:06:515 cpu/(4486:4486): Proceso 1 estimacion rafaga siguiente 39021.750000
+[INFO] 20:36:06:515 cpu/(4486:4486): Program counter 15 (despues de ejecutar)
+[INFO] 20:36:06:515 cpu/(4486:4486): ==============================================================

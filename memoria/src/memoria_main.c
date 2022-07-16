@@ -30,9 +30,7 @@ int main(void) {
 
 	pthread_t hilo_cpu;
 	pthread_create(&hilo_cpu, NULL, (void*) escuchar_cpu, NULL);
-	pthread_detach(hilo_cpu);
-
-	while(true); //simula que sigue corriendo
+	pthread_join(hilo_cpu, NULL);
 
 	return 0;
 
