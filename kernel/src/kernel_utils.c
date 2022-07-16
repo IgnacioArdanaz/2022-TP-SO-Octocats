@@ -23,6 +23,7 @@ t_queue* cola_suspended_ready;
 t_dictionary* iteracion_blocked;
 
 bool cpu_desocupado;
+bool hay_interrupcion;
 
 int pid_sig, conexion_cpu_dispatch, conexion_cpu_interrupt, tiempo_suspended, conexion_memoria;
 
@@ -43,6 +44,7 @@ void inicializar_kernel(){
 
 	pid_sig = 1;
 	cpu_desocupado = true;
+	hay_interrupcion = false;
 
 	estimacion_inicial = config_get_double_value(config,"ESTIMACION_INICIAL");
 	char* algoritmo_config = config_get_string_value(config,"ALGORITMO_PLANIFICACION");
@@ -288,6 +290,9 @@ void esperar_cpu(){
 				pcb_destroy(pcb);
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
+
+				if(hay_interrupcion)
+					sem_post(&s_pcb_desalojado);
 				break;
 			}
 			case INTERRUPTION:
@@ -310,13 +315,8 @@ void esperar_cpu(){
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
 				
-				//Por si va a io entre que se pregunto si cpu estaba ocupado y se solicita el desalojo
-				int sem_valor;
-                		sem_getvalue (&s_pcb_desalojado, &sem_valor);
-                		if(sem_valor == -1){
-                    			sem_post(&s_pcb_desalojado);
-					printf("\n\n\n----------------------------------------------------\"UWU\"----------------------------------------------\n\n\n");
-				}
+				if(hay_interrupcion)
+					sem_post(&s_pcb_desalojado);
 
 				break;
 			default:
@@ -455,8 +455,10 @@ void srt_ready_execute(){
 		sem_wait(&s_ready_execute);
 		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
 		if(!cpu_desocupado){
+			hay_interrupcion =  true;
 			desalojar_cpu();
 			sem_wait(&s_pcb_desalojado);
+			hay_interrupcion =  false;
 		}
 		pthread_mutex_lock(&mx_lista_ready);
 		PCB_t* proceso = seleccionar_proceso_srt(); // mx porque la funcion usa a la cola de ready

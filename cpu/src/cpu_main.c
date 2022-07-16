@@ -23,7 +23,7 @@ int main(void) {
 		op_code cop;
 		recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0);
 		recv_proceso(cliente_socket_dispatch,pcb);
-		hay_interrupcion = false;
+		
 		log_info(logger,"Proceso %d -> program counter %d - est %f", pcb->pid, pcb->pc, pcb->est_rafaga);
 		limpiar_tlb();
 		pid_actual = pcb->pid;
@@ -37,6 +37,7 @@ int main(void) {
 
 		log_info(logger,"Program counter %d (despues de ejecutar)",pcb->pc);
 		log_info(logger,"==============================================================");
+		hay_interrupcion = false;
 		send_proceso(cliente_socket_dispatch,pcb,estado);
 		pcb_destroy(pcb);
 	}
