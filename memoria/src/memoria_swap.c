@@ -10,7 +10,7 @@ void inicializar_swap(){
 // crear archivo --> devuelve el file descriptor
 int crear_archivo_swap(uint16_t pid, uint32_t tamanio_en_bytes){
 	char* path_to_file = string_from_format("%s/%d.swap",swap_path, pid);
-	free(path_to_file);
+	
 	if (access(path_to_file, F_OK) == 0) // si por alguna razon ya existe el archivo, borralo
 		remove(path_to_file);
 	int fd = open(path_to_file, O_RDWR|O_TRUNC|O_CREAT|O_EXCL,S_IROTH|S_IWOTH);
@@ -22,6 +22,7 @@ int crear_archivo_swap(uint16_t pid, uint32_t tamanio_en_bytes){
 	ftruncate(fd, 0);
 	ftruncate(fd, tamanio_en_bytes);
 	log_info(logger,"Archivo %s creado.", path_to_file);
+	free(path_to_file);
 	return fd;
 }
 

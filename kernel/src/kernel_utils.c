@@ -275,8 +275,8 @@ void esperar_cpu(){
 				// Hay q avisarle a memoria que finalizo para q borre to-do.
 				sem_post(&s_multiprogramacion_actual);
 				send(socket_pcb,&cop,sizeof(op_code),0);
-				dictionary_remove_and_destroy(sockets, key, free);
-				free(key);
+				//dictionary_remove_and_destroy(sockets, key, free);
+				//free(key);
 				log_info(logger, "[EXECUTE -> EXIT] Proceso %d terminado",pcb->pid);
 
 				op_code cop_memoria = ELIMINAR_ESTRUCTURAS;
