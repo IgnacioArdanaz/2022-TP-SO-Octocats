@@ -79,9 +79,12 @@ void inicializar_cpu(){
 		}*/
 
 	operando_copy = 0;
+	t_config* config_ips = config_create("../../ips.config");
+	char* ip = config_get_string_value(config_ips,"IP_CPU");
+	char* ip_memoria = config_get_string_value(config_ips,"IP_MEMORIA");
 
 	//conexion con MEMORIA
-	char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
+	//char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
 	char* puerto_memoria = config_get_string_value(config,"PUERTO_MEMORIA");
 	conexion_memoria = crear_conexion(logger, "MEMORIA", ip_memoria, puerto_memoria);
 
@@ -95,8 +98,7 @@ void inicializar_cpu(){
 //	recv_datos_necesarios(conexion_memoria, &cant_ent_paginas, &tam_pagina);
 	log_info(logger, "RECIBIDO: tam_pagina=%d - cant_ent_paginas=%d", tam_pagina, cant_ent_paginas);
 
-	t_config* config_ips = config_create("../../ips.config");
-	char* ip = config_get_string_value(config_ips,"IP_CPU");
+
 	//char* ip = config_get_string_value(config, "IP");
 	char* puerto_dispatch = config_get_string_value(config, "PUERTO_ESCUCHA_DISPATCH");
 	char* puerto_interrupt = config_get_string_value(config, "PUERTO_ESCUCHA_INTERRUPT");

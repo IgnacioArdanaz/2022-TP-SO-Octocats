@@ -50,8 +50,12 @@ void inicializar_kernel(){
 	char* algoritmo_config = config_get_string_value(config,"ALGORITMO_PLANIFICACION");
 	tiempo_suspended = config_get_int_value(config,"TIEMPO_MAXIMO_BLOQUEADO");
 
+	t_config* config_ips = config_create("../../ips.config");
+	char* ip_memoria = config_get_string_value(config_ips,"IP_MEMORIA");
+	char* ip_cpu = config_get_string_value(config_ips,"IP_CPU");
+
 	//conectando con MEMORIA
-	char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
+	//char* ip_memoria = config_get_string_value(config,"IP_MEMORIA");
 	char* puerto_memoria = config_get_string_value(config,"PUERTO_MEMORIA");
 	conexion_memoria = crear_conexion(logger, "MEMORIA", ip_memoria, puerto_memoria);
 
@@ -62,7 +66,7 @@ void inicializar_kernel(){
 
 
 	//conectando con CPU
-	char* ip_cpu = config_get_string_value(config,"IP_CPU");
+	//char* ip_cpu = config_get_string_value(config,"IP_CPU");
 	char* puerto_cpu_dispatch = config_get_string_value(config,"PUERTO_CPU_DISPATCH");
 	char* puerto_cpu_interrupt = config_get_string_value(config,"PUERTO_CPU_INTERRUPT");
 	conexion_cpu_dispatch = crear_conexion(logger, "CPU DISPATCH", ip_cpu, puerto_cpu_dispatch);
@@ -70,7 +74,7 @@ void inicializar_kernel(){
 	double alfa = config_get_double_value(config,"ALFA");
 	send(conexion_cpu_dispatch,&alfa,sizeof(alfa),0);
 
-
+	config_destroy(config_ips);
 	sem_init(&s_pasaje_a_ready, 0, 0);
 	sem_init(&s_cont_ready, 0, 0); // Incrementa al sumar un proceso a ready y decrementa al ejecutarlo
 	sem_init(&s_blocked, 0, 0);
