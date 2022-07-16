@@ -33,63 +33,49 @@ uint16_t pid_actual;
 
 int get_fd(uint16_t pid){
 	char* key = string_itoa(pid);
-	return (int) dictionary_get(fd_swaps, key);
+	int fd = (int) dictionary_get(fd_swaps, key);
+	free(key);
+	return fd;
 }
 
 void set_fd(uint16_t pid, int fd){
 	char* key = string_itoa(pid);
-	dictionary_put(fd_swaps, key, fd);
+	dictionary_put(fd_swaps, key, (int*) fd);
+	free(key);
 }
 
 void del_fd(uint16_t pid){
 	char* key = string_itoa(pid);
 	dictionary_remove(fd_swaps, key);
+	free(key);
 }
 
 estructura_clock* get_estructura_clock(uint16_t pid){
 	char* key = string_itoa(pid);
-	return dictionary_get(estructuras_clock, key);
+	estructura_clock* e_clock = dictionary_get(estructuras_clock, key);
+	free(key);
+	return e_clock;
 }
 
 void set_estructura_clock(uint16_t pid, estructura_clock* e_clock){
 	char* key = string_itoa(pid);
-	return dictionary_put(estructuras_clock, key, e_clock);
+	dictionary_put(estructuras_clock, key, e_clock);
+	free(key);
 }
 
 void del_estructura_clock(uint16_t pid){
 	char* key = string_itoa(pid);
-	return dictionary_remove_and_destroy(estructuras_clock, key, free);
+	dictionary_remove_and_destroy(estructuras_clock, key, free);
+	free(key);
 }
 
 ////////////////////////////////////////
 
-void imprimir_tablas_1(){
-	printf("TABLAS 1ER NIVEL:\n");
-	for (int i = 0; i < list_size(lista_tablas_1er_nivel); i++){
-		printf("TABLA %d:\n", i);
-		fila_1er_nivel* tabla = list_get(lista_tablas_1er_nivel, i);
-		for (int j = 0; j < entradas_por_tabla; j ++){
-			printf("%d - %d\n", j, tabla[j]);
-		}
-	}
-}
-
-void imprimir_tablas_2(){
-	printf("TABLAS 2DO NIVEL:\n");
-	for (int i = 0; i < list_size(lista_tablas_2do_nivel); i++){
-		printf("TABLA %d:\n", i);
-		fila_2do_nivel* tabla = list_get(lista_tablas_2do_nivel, i);
-		for (int j = 0; j < entradas_por_tabla; j ++){
-			printf("%d - marco %d uso %d presencia %d modificado %d\n", j, tabla[j].nro_marco,tabla[j].uso, tabla[j].presencia, tabla[j].modificado);
-		}
-	}
-}
-
 void inicializar_memoria(){
 	logger = log_create("memoria.log", "memoria", 1, LOG_LEVEL_INFO);
-	config = config_create("memoria.config");
+	config = config_create("../memoria.config");
 
-	t_config* config_ips = config_create("../ips.config");
+	t_config* config_ips = config_create("../../ips.config");
 	char* ip = config_get_string_value(config_ips,"IP_MEMORIA");
 
 	tam_memoria = config_get_int_value(config,"TAM_MEMORIA");
@@ -442,7 +428,8 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 	pagina->presencia = 1;
 	pagina->uso = 1;
 	escribir_marco_en_memoria(pagina->nro_marco, marco);
-
+	//INTENTO SOLUCION MEMORY LEAK
+	free(marco);
 	agregar_pagina_a_estructura_clock(nro_marco, pagina, nro_marco_en_swap);
 	return nro_marco;
 }

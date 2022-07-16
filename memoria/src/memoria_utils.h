@@ -85,7 +85,6 @@ void escribir_marco_en_memoria(uint32_t nro_marco, void* marco);
 int buscar_marco_libre();
 uint32_t calcular_cant_marcos(uint16_t tamanio);
 int marcos_actuales(int entrada_1er_nivel, int entrada_2do_nivel);
-void printear_bitmap();
 
 /***************************** FUNCIONES ESTRUCTURA CLOCK *****************************/
 void crear_estructura_clock(uint16_t pid);
