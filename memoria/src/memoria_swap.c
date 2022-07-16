@@ -42,6 +42,8 @@ void actualizar_marco_en_swap(int fd, uint32_t nro_marco, void* marco, uint32_t 
 	void* datos_archivo = mmap(NULL, sb.st_size, PROT_WRITE, MAP_SHARED,fd,0);
 	memcpy(datos_archivo + tamanio_marcos * nro_marco, marco, tamanio_marcos);
 	munmap(datos_archivo, sb.st_size);
+	//INTENTO SOLUCION MEMORY LEAK
+	free(marco);
 }
 
 // leer marco

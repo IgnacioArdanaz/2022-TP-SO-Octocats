@@ -17786,3 +17786,125 @@
 [INFO] 19:54:33:858 cpu/(7474:7474): Proceso 5 estimacion rafaga siguiente 510.716209
 [INFO] 19:54:33:863 cpu/(7474:7474): Program counter 193 (despues de ejecutar)
 [INFO] 19:54:33:864 cpu/(7474:7474): ==============================================================
+[INFO] 20:54:53:520 cpu/(21443:21443): Algoritmo de reemplazo configurado: LRU
+[INFO] 20:54:53:524 cpu/(21443:21443): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 20:54:53:526 cpu/(21443:21443): RECIBIDO: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:54:53:526 cpu/(21443:21443): Escuchando en 127.0.0.1:8001 (CPU_DISPATCH)
+[INFO] 20:54:53:527 cpu/(21443:21443): Escuchando en 127.0.0.1:8005 (CPU_INTERRUPT)
+[INFO] 20:54:53:527 cpu/(21443:21443): CPU_DISPATCH listo para recibir al cliente
+[INFO] 20:55:27:693 cpu/(21443:21443): Cliente conectado (a CPU_DISPATCH)
+[INFO] 20:55:27:693 cpu/(21443:21443): CPU_INTERRUPT listo para recibir al cliente
+[INFO] 20:55:27:693 cpu/(21443:21443): Cliente conectado (a CPU_INTERRUPT)
+[INFO] 20:55:27:696 cpu/(21443:21443): Valor alfa 0.20
+[INFO] 20:58:10:767 cpu/(21443:21443): Proceso 1 -> program counter 0 - est 50000.000000
+[INFO] 20:58:10:768 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:10:868 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:10:968 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:11:069 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:11:169 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:11:270 cpu/(21443:21443): Rafaga real 503
+[INFO] 20:58:11:270 cpu/(21443:21443): Proceso 1 estimacion rafaga siguiente 49497.000000
+[INFO] 20:58:11:270 cpu/(21443:21443): Program counter 5 (despues de ejecutar)
+[INFO] 20:58:11:270 cpu/(21443:21443): ==============================================================
+[INFO] 20:58:11:276 cpu/(21443:21443): Proceso 1 -> program counter 5 - est 49497.000000
+[INFO] 20:58:11:276 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:11:376 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:11:477 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:11:577 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:11:678 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:11:778 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:11:778 cpu/(21443:21443): La pagina 0 no esta en TLB
+[INFO] 20:58:12:295 cpu/(21443:21443): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:58:13:828 cpu/(21443:21443): Recibido numero de marco: 0
+[INFO] 20:58:13:828 cpu/(21443:21443): Pagina 0 asignada al marco 0
+[INFO] 20:58:13:828 cpu/(21443:21443): Ejecutando WRITE: pagina 0, marco 0,  desp 0, valor: 1
+[INFO] 20:58:14:345 cpu/(21443:21443): Rafaga real 3068
+[INFO] 20:58:14:345 cpu/(21443:21443): Proceso 1 estimacion rafaga siguiente 46429.000000
+[INFO] 20:58:14:345 cpu/(21443:21443): Program counter 11 (despues de ejecutar)
+[INFO] 20:58:14:345 cpu/(21443:21443): ==============================================================
+[INFO] 20:58:14:347 cpu/(21443:21443): Proceso 1 -> program counter 11 - est 46429.000000
+[INFO] 20:58:14:347 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:14:447 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:14:547 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:14:547 cpu/(21443:21443): La pagina 0 no esta en TLB
+[INFO] 20:58:15:051 cpu/(21443:21443): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:58:15:554 cpu/(21443:21443): Recibido numero de marco: 0
+[INFO] 20:58:15:554 cpu/(21443:21443): Pagina 0 asignada al marco 0
+[INFO] 20:58:15:554 cpu/(21443:21443): Ejecutando WRITE: pagina 0, marco 0,  desp 4, valor: 2
+[INFO] 20:58:16:055 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:16:156 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:16:256 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:16:256 cpu/(21443:21443): Ejecutando WRITE: pagina 0, marco 0,  desp 8, valor: 3
+[INFO] 20:58:16:758 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:16:858 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:16:959 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:16:959 cpu/(21443:21443): Ejecutando WRITE: pagina 0, marco 0,  desp 12, valor: 4
+[INFO] 20:58:17:461 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:17:561 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:17:661 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:17:662 cpu/(21443:21443): Ejecutando WRITE: pagina 0, marco 0,  desp 16, valor: 5
+[INFO] 20:58:18:164 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:18:264 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:18:365 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:18:366 cpu/(21443:21443): La pagina 1 no esta en TLB
+[INFO] 20:58:18:868 cpu/(21443:21443): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:58:20:373 cpu/(21443:21443): Recibido numero de marco: 1
+[INFO] 20:58:20:373 cpu/(21443:21443): Pagina 1 asignada al marco 1
+[INFO] 20:58:20:373 cpu/(21443:21443): Ejecutando WRITE: pagina 1, marco 1,  desp 0, valor: 11
+[INFO] 20:58:20:876 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:20:976 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:21:076 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:21:077 cpu/(21443:21443): Ejecutando WRITE: pagina 1, marco 1,  desp 4, valor: 12
+[INFO] 20:58:21:578 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:21:678 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:21:779 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:21:779 cpu/(21443:21443): Ejecutando WRITE: pagina 1, marco 1,  desp 8, valor: 13
+[INFO] 20:58:22:280 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:22:381 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:22:482 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:22:482 cpu/(21443:21443): Ejecutando WRITE: pagina 1, marco 1,  desp 12, valor: 14
+[INFO] 20:58:22:984 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:23:085 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:23:185 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:23:185 cpu/(21443:21443): Ejecutando WRITE: pagina 1, marco 1,  desp 16, valor: 15
+[INFO] 20:58:23:687 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:23:787 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:23:887 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:23:888 cpu/(21443:21443): La pagina 2 no esta en TLB
+[INFO] 20:58:24:389 cpu/(21443:21443): Recibida tabla pag 2do nivel numero: 0
+[INFO] 20:58:25:894 cpu/(21443:21443): Recibido numero de marco: 2
+[INFO] 20:58:25:894 cpu/(21443:21443): Pagina 2 asignada al marco 2
+[INFO] 20:58:25:894 cpu/(21443:21443): Pagina 0 y marco 0 reemplazados :(
+[INFO] 20:58:25:894 cpu/(21443:21443): Ejecutando WRITE: pagina 2, marco 2,  desp 0, valor: 21
+[INFO] 20:58:26:396 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:26:496 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:26:596 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:26:596 cpu/(21443:21443): Ejecutando WRITE: pagina 2, marco 2,  desp 4, valor: 22
+[INFO] 20:58:27:098 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:27:198 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:27:299 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:27:299 cpu/(21443:21443): Ejecutando WRITE: pagina 2, marco 2,  desp 8, valor: 23
+[INFO] 20:58:27:801 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:27:901 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:28:002 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:28:002 cpu/(21443:21443): Ejecutando WRITE: pagina 2, marco 2,  desp 12, valor: 24
+[INFO] 20:58:28:503 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:28:604 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:28:704 cpu/(21443:21443): Ejecutando WRITE
+[INFO] 20:58:28:704 cpu/(21443:21443): Ejecutando WRITE: pagina 2, marco 2,  desp 16, valor: 25
+[INFO] 20:58:29:206 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:29:306 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:29:407 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:29:507 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:29:607 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:29:707 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:29:808 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:29:908 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:30:008 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:30:108 cpu/(21443:21443): Ejecutando NOOP
+[INFO] 20:58:30:209 cpu/(21443:21443): Ejecutando IO
+[INFO] 20:58:30:209 cpu/(21443:21443): Rafaga real 15862
+[INFO] 20:58:30:209 cpu/(21443:21443): Proceso 1 estimacion rafaga siguiente 21975.400000
+[INFO] 20:58:30:209 cpu/(21443:21443): Program counter 64 (despues de ejecutar)
+[INFO] 20:58:30:209 cpu/(21443:21443): ==============================================================
+[INFO] 21:01:40:365 cpu/(21443:21443): Proceso 0 -> program counter 64 - est 21975.400000

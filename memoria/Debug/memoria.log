@@ -8989,3 +8989,84 @@
 [INFO] 19:54:33:923 memoria/(7449:7476): [KERNEL] Eliminando tablas del proceso 5
 [INFO] 19:54:33:926 memoria/(7449:7476): Archivo /home/utnso/swap/5.swap eliminado.
 [ERROR] 19:55:29:093 memoria/(7449:7477): DISCONNECT FAILURE EN CPU!
+[INFO] 20:52:57:484 memoria/(21270:21270): Algoritmo CLOCK-M configurado
+[INFO] 20:52:57:605 memoria/(21270:21270): Escuchando en 127.0.0.1:8002 (MEMORIA)
+[INFO] 20:52:57:610 memoria/(21270:21270): MEMORIA listo para recibir al cliente
+[INFO] 20:54:53:522 memoria/(21270:21270): Cliente conectado (a MEMORIA)
+[INFO] 20:54:53:524 memoria/(21270:21270): Enviando a CPU: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:54:53:528 memoria/(21270:21270): MEMORIA listo para recibir al cliente
+[INFO] 20:55:27:689 memoria/(21270:21270): Cliente conectado (a MEMORIA)
+[INFO] 20:58:10:719 memoria/(21270:21511): [KERNEL] Creando tabla para programa 1 de tamanio 2048
+[INFO] 20:58:10:741 memoria/(21270:21511): Archivo /home/utnso/swap/1.swap creado.
+[INFO] 20:58:10:753 memoria/(21270:21511): [CPU] Creada estructura clock del proceso: 1
+[INFO] 20:58:10:766 memoria/(21270:21511): [KERNEL] Tabla creada: Número 0
+[INFO] 20:58:11:251 memoria/(21270:21511): [KERNEL] Creando tabla para programa 2 de tamanio 2048
+[INFO] 20:58:11:252 memoria/(21270:21511): Archivo /home/utnso/swap/2.swap creado.
+[INFO] 20:58:11:252 memoria/(21270:21511): [CPU] Creada estructura clock del proceso: 2
+[INFO] 20:58:11:253 memoria/(21270:21511): [KERNEL] Tabla creada: Número 1
+[INFO] 20:58:11:779 memoria/(21270:21512): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:58:11:783 memoria/(21270:21512): [CPU] Tabla : 0 - Index: 0 - PID: 1 - Resultado: 0
+[INFO] 20:58:12:181 memoria/(21270:21511): [KERNEL] Creando tabla para programa 3 de tamanio 2048
+[INFO] 20:58:12:182 memoria/(21270:21511): Archivo /home/utnso/swap/3.swap creado.
+[INFO] 20:58:12:183 memoria/(21270:21511): [CPU] Creada estructura clock del proceso: 3
+[INFO] 20:58:12:184 memoria/(21270:21511): [KERNEL] Tabla creada: Número 2
+[INFO] 20:58:12:295 memoria/(21270:21512): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:58:12:297 memoria/(21270:21512): [CPU] PAGE FAULT!!!
+[INFO] 20:58:13:001 memoria/(21270:21511): [KERNEL] Creando tabla para programa 4 de tamanio 2048
+[INFO] 20:58:13:013 memoria/(21270:21511): Archivo /home/utnso/swap/4.swap creado.
+[INFO] 20:58:13:018 memoria/(21270:21511): [CPU] Creada estructura clock del proceso: 4
+[INFO] 20:58:13:020 memoria/(21270:21511): [KERNEL] Tabla creada: Número 3
+[INFO] 20:58:13:317 memoria/(21270:21512): [CPU] El proceso tiene marcos disponibles :)
+[INFO] 20:58:13:321 memoria/(21270:21512): [CPU] Numero de marco obtenido = 0
+[INFO] 20:58:13:761 memoria/(21270:21511): [KERNEL] Creando tabla para programa 5 de tamanio 2048
+[INFO] 20:58:13:762 memoria/(21270:21511): Archivo /home/utnso/swap/5.swap creado.
+[INFO] 20:58:13:762 memoria/(21270:21511): [CPU] Creada estructura clock del proceso: 5
+[INFO] 20:58:13:763 memoria/(21270:21511): [KERNEL] Tabla creada: Número 4
+[INFO] 20:58:13:829 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:13:834 memoria/(21270:21512): [CPU] Dato escrito: '1' (nro_marco = 0, desplazamiento = 0)
+[INFO] 20:58:14:548 memoria/(21270:21512): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:58:14:550 memoria/(21270:21512): [CPU] Tabla : 0 - Index: 0 - PID: 1 - Resultado: 0
+[INFO] 20:58:15:052 memoria/(21270:21512): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:58:15:052 memoria/(21270:21512): [CPU] Pagina en memoria principal!
+[INFO] 20:58:15:053 memoria/(21270:21512): [CPU] Numero de marco obtenido = 0
+[INFO] 20:58:15:554 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:15:555 memoria/(21270:21512): [CPU] Dato escrito: '2' (nro_marco = 0, desplazamiento = 4)
+[INFO] 20:58:16:256 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:16:257 memoria/(21270:21512): [CPU] Dato escrito: '3' (nro_marco = 0, desplazamiento = 8)
+[INFO] 20:58:16:959 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:16:960 memoria/(21270:21512): [CPU] Dato escrito: '4' (nro_marco = 0, desplazamiento = 12)
+[INFO] 20:58:17:662 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:17:662 memoria/(21270:21512): [CPU] Dato escrito: '5' (nro_marco = 0, desplazamiento = 16)
+[INFO] 20:58:18:366 memoria/(21270:21512): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:58:18:367 memoria/(21270:21512): [CPU] Tabla : 0 - Index: 0 - PID: 1 - Resultado: 0
+[INFO] 20:58:18:868 memoria/(21270:21512): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:58:18:869 memoria/(21270:21512): [CPU] PAGE FAULT!!!
+[INFO] 20:58:19:870 memoria/(21270:21512): [CPU] El proceso tiene marcos disponibles :)
+[INFO] 20:58:19:872 memoria/(21270:21512): [CPU] Numero de marco obtenido = 1
+[INFO] 20:58:20:373 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:20:374 memoria/(21270:21512): [CPU] Dato escrito: '11' (nro_marco = 1, desplazamiento = 0)
+[INFO] 20:58:21:077 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:21:078 memoria/(21270:21512): [CPU] Dato escrito: '12' (nro_marco = 1, desplazamiento = 4)
+[INFO] 20:58:21:779 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:21:780 memoria/(21270:21512): [CPU] Dato escrito: '13' (nro_marco = 1, desplazamiento = 8)
+[INFO] 20:58:22:482 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:22:483 memoria/(21270:21512): [CPU] Dato escrito: '14' (nro_marco = 1, desplazamiento = 12)
+[INFO] 20:58:23:186 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:23:186 memoria/(21270:21512): [CPU] Dato escrito: '15' (nro_marco = 1, desplazamiento = 16)
+[INFO] 20:58:23:888 memoria/(21270:21512): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:58:23:888 memoria/(21270:21512): [CPU] Tabla : 0 - Index: 0 - PID: 1 - Resultado: 0
+[INFO] 20:58:24:390 memoria/(21270:21512): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:58:24:390 memoria/(21270:21512): [CPU] PAGE FAULT!!!
+[INFO] 20:58:25:391 memoria/(21270:21512): [CPU] El proceso tiene marcos disponibles :)
+[INFO] 20:58:25:393 memoria/(21270:21512): [CPU] Numero de marco obtenido = 2
+[INFO] 20:58:25:894 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:25:895 memoria/(21270:21512): [CPU] Dato escrito: '21' (nro_marco = 2, desplazamiento = 0)
+[INFO] 20:58:26:597 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:26:597 memoria/(21270:21512): [CPU] Dato escrito: '22' (nro_marco = 2, desplazamiento = 4)
+[INFO] 20:58:27:299 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:27:300 memoria/(21270:21512): [CPU] Dato escrito: '23' (nro_marco = 2, desplazamiento = 8)
+[INFO] 20:58:28:002 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:28:003 memoria/(21270:21512): [CPU] Dato escrito: '24' (nro_marco = 2, desplazamiento = 12)
+[INFO] 20:58:28:704 memoria/(21270:21512): [CPU] Procesando escritura...
+[INFO] 20:58:28:705 memoria/(21270:21512): [CPU] Dato escrito: '25' (nro_marco = 2, desplazamiento = 16)
+[INFO] 20:58:31:253 memoria/(21270:21511): [KERNEL] Suspendiendo proceso 1 (tabla_paginas = 0)

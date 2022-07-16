@@ -442,7 +442,8 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 	pagina->presencia = 1;
 	pagina->uso = 1;
 	escribir_marco_en_memoria(pagina->nro_marco, marco);
-
+	//INTENTO SOLUCION MEMORY LEAK
+	free(marco);
 	agregar_pagina_a_estructura_clock(nro_marco, pagina, nro_marco_en_swap);
 	return nro_marco;
 }
