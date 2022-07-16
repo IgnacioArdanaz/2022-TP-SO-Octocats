@@ -1,6 +1,6 @@
-20:34:16 **** Build of configuration Debug for project cpu ****
+20:42:07 **** Incremental Build of configuration Debug for project cpu ****
 make all 
 make: Nothing to be done for 'all'.
 
-20:34:17 Build Finished (took 847ms)
+20:42:08 Build Finished (took 738ms)
 

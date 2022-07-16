@@ -17853,3 +17853,166 @@
 [INFO] 20:36:05:513 memoria/(4485:4494): [CPU] Dato '3000' leido en marco 2
 [INFO] 20:36:06:517 memoria/(4485:4493): [KERNEL] Eliminando tablas del proceso 1
 [INFO] 20:36:06:517 memoria/(4485:4493): Archivo /home/utnso/swap/1.swap eliminado.
+[INFO] 20:44:06:431 memoria/(4999:4999): Algoritmo CLOCK configurado
+[INFO] 20:44:06:431 memoria/(4999:4999): MEMORIA listo para recibir al cliente
+[INFO] 20:44:06:431 memoria/(4999:4999): Cliente conectado (a MEMORIA)
+[INFO] 20:44:06:432 memoria/(4999:4999): Enviando a CPU: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:44:06:432 memoria/(4999:4999): MEMORIA listo para recibir al cliente
+[INFO] 20:44:06:432 memoria/(4999:4999): Cliente conectado (a MEMORIA)
+[INFO] 20:44:08:436 memoria/(5002:5002): Algoritmo CLOCK configurado
+[INFO] 20:44:08:436 memoria/(5002:5002): MEMORIA listo para recibir al cliente
+[INFO] 20:44:08:437 memoria/(5002:5002): Cliente conectado (a MEMORIA)
+[INFO] 20:44:08:437 memoria/(5002:5002): Enviando a CPU: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:44:08:437 memoria/(5002:5002): MEMORIA listo para recibir al cliente
+[INFO] 20:44:08:437 memoria/(5002:5002): Cliente conectado (a MEMORIA)
+[INFO] 20:44:09:263 memoria/(5005:5005): Algoritmo CLOCK configurado
+[INFO] 20:44:09:263 memoria/(5005:5005): MEMORIA listo para recibir al cliente
+[INFO] 20:44:09:264 memoria/(5005:5005): Cliente conectado (a MEMORIA)
+[INFO] 20:44:09:264 memoria/(5005:5005): Enviando a CPU: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:44:09:264 memoria/(5005:5005): MEMORIA listo para recibir al cliente
+[INFO] 20:44:09:264 memoria/(5005:5005): Cliente conectado (a MEMORIA)
+[INFO] 20:44:10:070 memoria/(5008:5008): Algoritmo CLOCK configurado
+[INFO] 20:44:10:071 memoria/(5008:5008): MEMORIA listo para recibir al cliente
+[INFO] 20:44:10:071 memoria/(5008:5008): Cliente conectado (a MEMORIA)
+[INFO] 20:44:10:071 memoria/(5008:5008): Enviando a CPU: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:44:10:072 memoria/(5008:5008): MEMORIA listo para recibir al cliente
+[INFO] 20:44:10:072 memoria/(5008:5008): Cliente conectado (a MEMORIA)
+[INFO] 20:44:10:861 memoria/(5011:5011): Algoritmo CLOCK configurado
+[INFO] 20:44:10:861 memoria/(5011:5011): MEMORIA listo para recibir al cliente
+[INFO] 20:44:10:862 memoria/(5011:5011): Cliente conectado (a MEMORIA)
+[INFO] 20:44:10:862 memoria/(5011:5011): Enviando a CPU: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:44:10:862 memoria/(5011:5011): MEMORIA listo para recibir al cliente
+[INFO] 20:44:10:862 memoria/(5011:5011): Cliente conectado (a MEMORIA)
+[INFO] 20:44:11:718 memoria/(5014:5014): Algoritmo CLOCK configurado
+[INFO] 20:44:11:718 memoria/(5014:5014): MEMORIA listo para recibir al cliente
+[INFO] 20:44:11:719 memoria/(5014:5014): Cliente conectado (a MEMORIA)
+[INFO] 20:44:11:719 memoria/(5014:5014): Enviando a CPU: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:44:11:719 memoria/(5014:5014): MEMORIA listo para recibir al cliente
+[INFO] 20:44:11:719 memoria/(5014:5014): Cliente conectado (a MEMORIA)
+[INFO] 20:44:12:645 memoria/(5022:5022): Algoritmo CLOCK configurado
+[INFO] 20:44:12:645 memoria/(5022:5022): MEMORIA listo para recibir al cliente
+[INFO] 20:44:12:645 memoria/(5022:5022): Cliente conectado (a MEMORIA)
+[INFO] 20:44:12:646 memoria/(5022:5022): Enviando a CPU: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:44:12:646 memoria/(5022:5022): MEMORIA listo para recibir al cliente
+[INFO] 20:44:12:646 memoria/(5022:5022): Cliente conectado (a MEMORIA)
+[INFO] 20:44:45:172 memoria/(5203:5203): Algoritmo CLOCK configurado
+[INFO] 20:44:45:172 memoria/(5203:5203): MEMORIA listo para recibir al cliente
+[INFO] 20:44:45:173 memoria/(5203:5203): Cliente conectado (a MEMORIA)
+[INFO] 20:44:45:173 memoria/(5203:5203): Enviando a CPU: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:44:45:173 memoria/(5203:5203): MEMORIA listo para recibir al cliente
+[INFO] 20:44:45:173 memoria/(5203:5203): Cliente conectado (a MEMORIA)
+[INFO] 20:44:47:938 memoria/(5206:5206): Algoritmo CLOCK configurado
+[INFO] 20:44:47:939 memoria/(5206:5206): Escuchando en 127.0.0.1:8002 (MEMORIA)
+[INFO] 20:44:47:939 memoria/(5206:5206): MEMORIA listo para recibir al cliente
+[INFO] 20:44:50:792 memoria/(5206:5206): Cliente conectado (a MEMORIA)
+[INFO] 20:44:50:793 memoria/(5206:5206): Enviando a CPU: tam_pagina=256 - cant_ent_paginas=4
+[INFO] 20:44:50:793 memoria/(5206:5206): MEMORIA listo para recibir al cliente
+[INFO] 20:44:51:352 memoria/(5206:5206): Cliente conectado (a MEMORIA)
+[INFO] 20:44:52:481 memoria/(5206:5209): [KERNEL] Creando tabla para programa 1 de tamanio 4096
+[INFO] 20:44:52:481 memoria/(5206:5209): Archivo /home/utnso/swap/1.swap creado.
+[INFO] 20:44:52:481 memoria/(5206:5209): [CPU] Creada estructura clock del proceso: 1
+[INFO] 20:44:52:481 memoria/(5206:5209): [KERNEL] Tabla creada: Número 0
+[INFO] 20:44:52:482 memoria/(5206:5210): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:44:52:482 memoria/(5206:5210): [CPU] Tabla : 0 - Index: 0 - PID: 1 - Resultado: 0
+[INFO] 20:44:53:482 memoria/(5206:5210): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:44:53:482 memoria/(5206:5210): [CPU] PAGE FAULT!!!
+[INFO] 20:44:58:483 memoria/(5206:5210): [CPU] El proceso tiene marcos disponibles :)
+[INFO] 20:44:58:484 memoria/(5206:5210): [CPU] Numero de marco obtenido = 0
+[INFO] 20:44:59:486 memoria/(5206:5210): [CPU] Procesando escritura...
+[INFO] 20:44:59:486 memoria/(5206:5210): [CPU] Dato escrito: '1000' (nro_marco = 0, desplazamiento = 0)
+[INFO] 20:45:00:487 memoria/(5206:5210): [CPU] Procesando escritura...
+[INFO] 20:45:00:487 memoria/(5206:5210): [CPU] Dato escrito: '1001' (nro_marco = 0, desplazamiento = 4)
+[INFO] 20:45:01:488 memoria/(5206:5210): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:45:01:488 memoria/(5206:5210): [CPU] Tabla : 0 - Index: 0 - PID: 1 - Resultado: 0
+[INFO] 20:45:02:489 memoria/(5206:5210): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:45:02:489 memoria/(5206:5210): [CPU] PAGE FAULT!!!
+[INFO] 20:45:07:490 memoria/(5206:5210): [CPU] El proceso tiene marcos disponibles :)
+[INFO] 20:45:07:491 memoria/(5206:5210): [CPU] Numero de marco obtenido = 1
+[INFO] 20:45:08:492 memoria/(5206:5210): [CPU] Procesando escritura...
+[INFO] 20:45:08:492 memoria/(5206:5210): [CPU] Dato escrito: '2000' (nro_marco = 1, desplazamiento = 4)
+[INFO] 20:45:09:495 memoria/(5206:5210): [CPU] Procesando lectura...
+[INFO] 20:45:09:495 memoria/(5206:5210): [CPU] Dato '2000' leido en marco 1
+[INFO] 20:45:10:496 memoria/(5206:5210): [CPU] Procesando escritura...
+[INFO] 20:45:10:496 memoria/(5206:5210): [CPU] Dato escrito: '2000' (nro_marco = 1, desplazamiento = 0)
+[INFO] 20:45:11:498 memoria/(5206:5210): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:45:11:498 memoria/(5206:5210): [CPU] Tabla : 0 - Index: 2 - PID: 1 - Resultado: 2
+[INFO] 20:45:12:501 memoria/(5206:5210): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:45:12:501 memoria/(5206:5210): [CPU] PAGE FAULT!!!
+[INFO] 20:45:17:502 memoria/(5206:5210): [CPU] El proceso tiene marcos disponibles :)
+[INFO] 20:45:17:503 memoria/(5206:5210): [CPU] Numero de marco obtenido = 2
+[INFO] 20:45:18:506 memoria/(5206:5210): [CPU] Procesando escritura...
+[INFO] 20:45:18:506 memoria/(5206:5210): [CPU] Dato escrito: '4000' (nro_marco = 2, desplazamiento = 0)
+[INFO] 20:45:19:507 memoria/(5206:5210): [CPU] Procesando escritura...
+[INFO] 20:45:19:508 memoria/(5206:5210): [CPU] Dato escrito: '4001' (nro_marco = 2, desplazamiento = 4)
+[INFO] 20:45:25:550 memoria/(5206:5209): [KERNEL] Suspendiendo proceso 1 (tabla_paginas = 0)
+[INFO] 20:45:30:554 memoria/(5206:5210): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:45:30:555 memoria/(5206:5210): [CPU] Tabla : 0 - Index: 0 - PID: 1 - Resultado: 0
+[INFO] 20:45:31:556 memoria/(5206:5210): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:45:31:556 memoria/(5206:5210): [CPU] PAGE FAULT!!!
+[INFO] 20:45:36:557 memoria/(5206:5210): [CPU] El proceso tiene marcos disponibles :)
+[INFO] 20:45:36:557 memoria/(5206:5210): [CPU] Numero de marco obtenido = 0
+[INFO] 20:45:37:559 memoria/(5206:5210): [CPU] Procesando lectura...
+[INFO] 20:45:37:560 memoria/(5206:5210): [CPU] Dato '1000' leido en marco 0
+[INFO] 20:45:38:561 memoria/(5206:5210): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:45:38:562 memoria/(5206:5210): [CPU] Tabla : 0 - Index: 1 - PID: 1 - Resultado: 1
+[INFO] 20:45:39:563 memoria/(5206:5210): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:45:39:564 memoria/(5206:5210): [CPU] PAGE FAULT!!!
+[INFO] 20:45:44:564 memoria/(5206:5210): [CPU] El proceso tiene marcos disponibles :)
+[INFO] 20:45:44:565 memoria/(5206:5210): [CPU] Numero de marco obtenido = 1
+[INFO] 20:45:45:568 memoria/(5206:5210): [CPU] Procesando escritura...
+[INFO] 20:45:45:568 memoria/(5206:5210): [CPU] Dato escrito: '3000' (nro_marco = 1, desplazamiento = 0)
+[INFO] 20:45:46:571 memoria/(5206:5210): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:45:46:571 memoria/(5206:5210): [CPU] Tabla : 0 - Index: 0 - PID: 1 - Resultado: 0
+[INFO] 20:45:47:574 memoria/(5206:5210): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:45:47:574 memoria/(5206:5210): [CPU] PAGE FAULT!!!
+[INFO] 20:45:52:575 memoria/(5206:5210): [CPU] El proceso tiene marcos disponibles :)
+[INFO] 20:45:52:575 memoria/(5206:5210): [CPU] Numero de marco obtenido = 2
+[INFO] 20:45:53:577 memoria/(5206:5210): [CPU] Procesando lectura...
+[INFO] 20:45:53:578 memoria/(5206:5210): [CPU] Dato '2000' leido en marco 2
+[INFO] 20:45:54:580 memoria/(5206:5210): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:45:54:580 memoria/(5206:5210): [CPU] Tabla : 0 - Index: 2 - PID: 1 - Resultado: 2
+[INFO] 20:45:55:581 memoria/(5206:5210): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:45:55:582 memoria/(5206:5210): [CPU] PAGE FAULT!!!
+[INFO] 20:46:00:583 memoria/(5206:5210): [CPU] Reemplazo por CLOCK
+[INFO] 20:46:00:584 memoria/(5206:5210): [CPU] Pagina victima elegida: 0
+[INFO] 20:46:00:584 memoria/(5206:5210): [CPU] Posición final puntero: 1
+[INFO] 20:46:00:584 memoria/(5206:5210): [CPU] Numero de marco obtenido = 0
+[INFO] 20:46:01:587 memoria/(5206:5210): [CPU] Procesando lectura...
+[INFO] 20:46:01:587 memoria/(5206:5210): [CPU] Dato '4000' leido en marco 0
+[INFO] 20:46:02:588 memoria/(5206:5210): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:46:02:589 memoria/(5206:5210): [CPU] Tabla : 0 - Index: 3 - PID: 1 - Resultado: 3
+[INFO] 20:46:03:590 memoria/(5206:5210): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:46:03:590 memoria/(5206:5210): [CPU] PAGE FAULT!!!
+[INFO] 20:46:08:591 memoria/(5206:5210): [CPU] Reemplazo por CLOCK
+[INFO] 20:46:08:591 memoria/(5206:5210): [CPU] Pagina victima elegida: 4
+[INFO] 20:46:08:592 memoria/(5206:5210): [CPU] Actualizando pagina victima en swap (bit de modificado = 1)
+[INFO] 20:46:13:593 memoria/(5206:5210): [CPU] Posición final puntero: 2
+[INFO] 20:46:13:593 memoria/(5206:5210): [CPU] Numero de marco obtenido = 1
+[INFO] 20:46:14:596 memoria/(5206:5210): [CPU] Procesando escritura...
+[INFO] 20:46:14:596 memoria/(5206:5210): [CPU] Dato escrito: '9999' (nro_marco = 1, desplazamiento = 160)
+[INFO] 20:46:15:597 memoria/(5206:5210): [CPU] Procesando lectura...
+[INFO] 20:46:15:597 memoria/(5206:5210): [CPU] Dato '9999' leido en marco 1
+[INFO] 20:46:16:599 memoria/(5206:5210): [CPU] Procesando solicitud de nro tabla de 2do nivel...
+[INFO] 20:46:16:599 memoria/(5206:5210): [CPU] Tabla : 0 - Index: 1 - PID: 1 - Resultado: 1
+[INFO] 20:46:17:600 memoria/(5206:5210): [CPU] Procesando solicitud de nro marco...
+[INFO] 20:46:17:600 memoria/(5206:5210): [CPU] PAGE FAULT!!!
+[INFO] 20:46:22:601 memoria/(5206:5210): [CPU] Reemplazo por CLOCK
+[INFO] 20:46:22:601 memoria/(5206:5210): [CPU] Pagina victima elegida: 1
+[INFO] 20:46:22:602 memoria/(5206:5210): [CPU] Posición final puntero: 0
+[INFO] 20:46:22:602 memoria/(5206:5210): [CPU] Numero de marco obtenido = 2
+[INFO] 20:46:23:605 memoria/(5206:5210): [CPU] Procesando lectura...
+[INFO] 20:46:23:605 memoria/(5206:5210): [CPU] Dato '3000' leido en marco 2
+[INFO] 20:46:24:608 memoria/(5206:5209): [KERNEL] Eliminando tablas del proceso 1
+[INFO] 20:46:24:609 memoria/(5206:5209): Archivo /home/utnso/swap/1.swap eliminado.
+[INFO] 20:47:09:931 memoria/(5260:5260): Algoritmo CLOCK configurado
+[INFO] 20:47:09:931 memoria/(5260:5260): Escuchando en 127.0.0.1:8002 (MEMORIA)
+[INFO] 20:47:09:932 memoria/(5260:5260): MEMORIA listo para recibir al cliente
+[INFO] 20:47:12:024 memoria/(5261:5261): Algoritmo CLOCK configurado
+[INFO] 20:47:12:024 memoria/(5261:5261): Escuchando en 127.0.0.1:8002 (MEMORIA)
+[INFO] 20:47:12:024 memoria/(5261:5261): MEMORIA listo para recibir al cliente
+[INFO] 20:47:12:938 memoria/(5262:5262): Algoritmo CLOCK configurado
+[INFO] 20:47:12:938 memoria/(5262:5262): Escuchando en 127.0.0.1:8002 (MEMORIA)
+[INFO] 20:47:12:939 memoria/(5262:5262): MEMORIA listo para recibir al cliente
+[INFO] 20:47:13:672 memoria/(5263:5263): Algoritmo CLOCK configurado
+[INFO] 20:47:13:672 memoria/(5263:5263): Escuchando en 127.0.0.1:8002 (MEMORIA)
+[INFO] 20:47:13:672 memoria/(5263:5263): MEMORIA listo para recibir al cliente

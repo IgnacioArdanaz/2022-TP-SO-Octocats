@@ -58,6 +58,13 @@ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
         if (socket_servidor == -1) // fallo de crear socket
             continue;
 
+        // establecemos que el puerto sea reusable
+        const int enable = 1;
+        if (setsockopt(socket_servidor, SOL_SOCKET, SO_REUSEADDR, &enable, sizeof(int)) < 0)
+            log_error(logger, "[SHARED][SOCKETS] socket_servidor: (SO_REUSEADDR) failed");
+        if (setsockopt(socket_servidor, SOL_SOCKET, SO_REUSEPORT, &enable, sizeof(int)) < 0)
+            log_error(logger, "[SHARED][SOCKETS] socket_servidor: (SO_REUSEPORT) failed");
+
         if (bind(socket_servidor, p->ai_addr, p->ai_addrlen) == -1) {
             // Si entra aca fallo el bind
             close(socket_servidor);
