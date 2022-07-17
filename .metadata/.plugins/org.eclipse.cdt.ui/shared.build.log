@@ -1,15 +1,6 @@
-20:42:10 **** Incremental Build of configuration Debug for project shared ****
+20:29:01 **** Incremental Build of configuration Debug for project shared ****
 make all 
-Building file: ../src/sockets.c
-Invoking: Cross GCC Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"src/sockets.d" -MT"src/sockets.o" -o "src/sockets.o" "../src/sockets.c"
-Finished building: ../src/sockets.c
- 
-Building target: libshared.so
-Invoking: Cross GCC Linker
-gcc -shared -o "libshared.so"  ./src/pcb.o ./src/protocol.o ./src/sockets.o   -lcommons
-Finished building target: libshared.so
- 
+make: Nothing to be done for 'all'.
 
-20:42:11 Build Finished (took 906ms)
+20:29:02 Build Finished (took 624ms)
 

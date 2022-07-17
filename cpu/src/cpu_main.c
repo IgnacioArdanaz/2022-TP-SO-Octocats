@@ -22,7 +22,10 @@ int main(void) {
 		PCB_t* pcb = pcb_create();
 		op_code cop;
 		recv(cliente_socket_dispatch, &cop, sizeof(op_code), 0);
-		recv_proceso(cliente_socket_dispatch,pcb);
+		if(!recv_proceso(cliente_socket_dispatch,pcb)){
+			log_error(logger, "DISCONNECT FAILURE EN KERNEL!!");
+			exit(-1);
+		}
 		
 		log_info(logger,"Proceso %d -> program counter %d - est %f", pcb->pid, pcb->pc, pcb->est_rafaga);
 		limpiar_tlb();

@@ -193,11 +193,14 @@ void pasaje_a_ready(){
 		sem_wait(&s_pasaje_a_ready);
 		sem_wait(&s_multiprogramacion_actual);
 		PCB_t* proceso;
-		if(queue_is_empty(cola_suspended_ready)){ //Si no hay suspendidos, agarro uno de new
+		pthread_mutex_lock(&mx_cola_suspended_ready);
+		bool hay_procesos_en_suspended_ready = queue_is_empty(cola_suspended_ready);
+		pthread_mutex_unlock(&mx_cola_suspended_ready);
+		if(hay_procesos_en_suspended_ready){ //Si no hay suspendidos, agarro uno de new
 			pthread_mutex_lock(&mx_cola_new);
 			proceso = queue_pop(cola_new);
-			log_info(logger,"[NEW -> READY] PROCESO %d AGREGADO A READY", proceso->pid);
 			pthread_mutex_unlock(&mx_cola_new);
+			log_info(logger,"[NEW -> READY] PROCESO %d AGREGADO A READY", proceso->pid);
 			solicitar_tabla_paginas(proceso);
 		}
 		else{
@@ -231,11 +234,15 @@ void solicitar_tabla_paginas(PCB_t* proceso){
 
 void loggear_estado_de_colas(){
 	pthread_mutex_lock(&mx_log);
+	pthread_mutex_lock(&mx_cola_new);
+	pthread_mutex_lock(&mx_lista_ready);
 	log_info(logger,
 			"[NEW/SUSP_READY -> READY] Cola de new: %d | (new -> ready) Cola de ready: %d",
 			queue_size(cola_new),
 			list_size(lista_ready));
 	pthread_mutex_unlock(&mx_log);
+	pthread_mutex_unlock(&mx_cola_new);
+	pthread_mutex_unlock(&mx_lista_ready);
 }
 
 /****Hilo READY -> EXECUTE (FIFO) ***/
@@ -464,9 +471,7 @@ void srt_ready_execute(){
 			sem_wait(&s_pcb_desalojado);
 			hay_interrupcion =  false;
 		}
-		pthread_mutex_lock(&mx_lista_ready);
-		PCB_t* proceso = seleccionar_proceso_srt(); // mx porque la funcion usa a la cola de ready
-		pthread_mutex_unlock(&mx_lista_ready);
+		PCB_t* proceso = seleccionar_proceso_srt();
 		pthread_mutex_lock(&mx_log);
 		log_info(logger,"[READY -> EXECUTE] Mandando proceso %d a ejecutar",proceso->pid);
 		pthread_mutex_unlock(&mx_log);
@@ -478,6 +483,9 @@ void srt_ready_execute(){
 }
 
 PCB_t* seleccionar_proceso_srt(){
+	// hago un mutex lock y unlock para tod.o el proceso entero para que no me agreguen
+	// procesos a la mitad del procedimiento
+	pthread_mutex_lock(&mx_lista_ready);
 	PCB_t* primer_pcb = list_get(lista_ready,0);
 	double raf_min = primer_pcb->est_rafaga;
 	int index_pcb = 0;
@@ -489,7 +497,9 @@ PCB_t* seleccionar_proceso_srt(){
 			index_pcb = i;
 		}
 	}
-	return list_remove(lista_ready, index_pcb);
+	PCB_t* pcb = list_remove(lista_ready, index_pcb);
+	pthread_mutex_unlock(&mx_lista_ready);
+	return pcb;
 }
 
 void desalojar_cpu(){

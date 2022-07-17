@@ -123,8 +123,7 @@ void recibir_kernel() {
 	while (cliente_kernel != -1) {
 		if (recv(cliente_kernel, &cop, sizeof(op_code), 0) <= 0) {
 			pthread_mutex_lock(&mx_log);
-			//log_error(logger,"DISCONNECT FAILURE EN KERNEL!");
-			printf("DISCONNECT FAILURE EN KERNEL!\n");
+			log_error(logger,"DISCONNECT FAILURE EN KERNEL!");
 			pthread_mutex_unlock(&mx_log);
 			exit(-1);
 		}

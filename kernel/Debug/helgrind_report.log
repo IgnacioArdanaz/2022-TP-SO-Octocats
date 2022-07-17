@@ -1,0 +1,526 @@
+==5783== Helgrind, a thread error detector
+==5783== Copyright (C) 2007-2015, and GNU GPL'd, by OpenWorks LLP et al.
+==5783== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5783== Command: ./kernel
+==5783== Parent PID: 3417
+==5783== 
+==5783== ---Thread-Announcement------------------------------------------
+==5783== 
+==5783== Thread #1 is the program's root thread
+==5783== 
+==5783== ---Thread-Announcement------------------------------------------
+==5783== 
+==5783== Thread #4 was created
+==5783==    at 0x416B1B1: clone (clone.S:88)
+==5783==    by 0x406C1AD: create_thread (createthread.c:102)
+==5783==    by 0x406D99E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B1E6: inicializar_kernel (kernel_utils.c:97)
+==5783==    by 0x804ADAC: main (kernel_main.c:6)
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during write of size 4 at 0x423D8E8 by thread #1
+==5783== Locks held: none
+==5783==    at 0x4036545: memset (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D820: get_cached_stack (allocatestack.c:251)
+==5783==    by 0x406D820: allocate_stack (allocatestack.c:501)
+==5783==    by 0x406D820: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783== 
+==5783== This conflicts with a previous write of size 4 by thread #4
+==5783== Locks held: none
+==5783==    at 0x4036545: memset (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D820: get_cached_stack (allocatestack.c:251)
+==5783==    by 0x406D820: allocate_stack (allocatestack.c:501)
+==5783==    by 0x406D820: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804BCE4: esperar_cpu (kernel_utils.c:322)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x423d8e8 is 8 bytes inside a block of size 136 alloc'd
+==5783==    at 0x402F2A8: calloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x4011726: allocate_dtv (dl-tls.c:322)
+==5783==    by 0x401214B: _dl_allocate_tls (dl-tls.c:539)
+==5783==    by 0x406DCC3: allocate_stack (allocatestack.c:588)
+==5783==    by 0x406DCC3: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783==  Block was alloc'd by thread #1
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during write of size 1 at 0x423D8F4 by thread #1
+==5783== Locks held: none
+==5783==    at 0x4036545: memset (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D820: get_cached_stack (allocatestack.c:251)
+==5783==    by 0x406D820: allocate_stack (allocatestack.c:501)
+==5783==    by 0x406D820: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783== 
+==5783== This conflicts with a previous write of size 1 by thread #4
+==5783== Locks held: none
+==5783==    at 0x4036545: memset (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D820: get_cached_stack (allocatestack.c:251)
+==5783==    by 0x406D820: allocate_stack (allocatestack.c:501)
+==5783==    by 0x406D820: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804BCE4: esperar_cpu (kernel_utils.c:322)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x423d8f4 is 20 bytes inside a block of size 136 alloc'd
+==5783==    at 0x402F2A8: calloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x4011726: allocate_dtv (dl-tls.c:322)
+==5783==    by 0x401214B: _dl_allocate_tls (dl-tls.c:539)
+==5783==    by 0x406DCC3: allocate_stack (allocatestack.c:588)
+==5783==    by 0x406DCC3: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783==  Block was alloc'd by thread #1
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during write of size 2 at 0x423D8F6 by thread #1
+==5783== Locks held: none
+==5783==    at 0x4036545: memset (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D820: get_cached_stack (allocatestack.c:251)
+==5783==    by 0x406D820: allocate_stack (allocatestack.c:501)
+==5783==    by 0x406D820: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783== 
+==5783== This conflicts with a previous write of size 2 by thread #4
+==5783== Locks held: none
+==5783==    at 0x4036545: memset (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D820: get_cached_stack (allocatestack.c:251)
+==5783==    by 0x406D820: allocate_stack (allocatestack.c:501)
+==5783==    by 0x406D820: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804BCE4: esperar_cpu (kernel_utils.c:322)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x423d8f6 is 22 bytes inside a block of size 136 alloc'd
+==5783==    at 0x402F2A8: calloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x4011726: allocate_dtv (dl-tls.c:322)
+==5783==    by 0x401214B: _dl_allocate_tls (dl-tls.c:539)
+==5783==    by 0x406DCC3: allocate_stack (allocatestack.c:588)
+==5783==    by 0x406DCC3: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783==  Block was alloc'd by thread #1
+==5783== 
+==5783== ---Thread-Announcement------------------------------------------
+==5783== 
+==5783== Thread #11 was created
+==5783==    at 0x416B1B1: clone (clone.S:88)
+==5783==    by 0x406C1AD: create_thread (createthread.c:102)
+==5783==    by 0x406D99E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during read of size 4 at 0x6E41B54 by thread #11
+==5783== Locks held: none
+==5783==    at 0x804B36C: procesar_socket (kernel_utils.c:129)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous write of size 4 by thread #1
+==5783== Locks held: none
+==5783==    at 0x406D92B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783==  Address 0x6e41b54 is on thread #11's stack
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during read of size 4 at 0x6E41B54 by thread #11
+==5783== Locks held: none
+==5783==    at 0x405A4AD: list_add (in /usr/lib/libcommons.so)
+==5783==    by 0x8049CFF: deserializar_programa (protocol.c:81)
+==5783==    by 0x8049C39: recv_programa (protocol.c:61)
+==5783==    by 0x804B430: procesar_socket (kernel_utils.c:149)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous write of size 4 by thread #1
+==5783== Locks held: none
+==5783==    at 0x406D92B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783==  Address 0x6e41b54 is on thread #11's stack
+==5783== 
+==5783== ---Thread-Announcement------------------------------------------
+==5783== 
+==5783== Thread #5 was created
+==5783==    at 0x416B1B1: clone (clone.S:88)
+==5783==    by 0x406C1AD: create_thread (createthread.c:102)
+==5783==    by 0x406D99E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B24F: inicializar_kernel (kernel_utils.c:104)
+==5783==    by 0x804ADAC: main (kernel_main.c:6)
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during write of size 1 at 0x804F268 by thread #5
+==5783== Locks held: none
+==5783==    at 0x804C524: srt_ready_execute (kernel_utils.c:469)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous read of size 1 by thread #4
+==5783== Locks held: none
+==5783==    at 0x804BD47: esperar_cpu (kernel_utils.c:329)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x804f268 is 0 bytes inside data symbol "hay_interrupcion"
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during write of size 1 at 0x804F2C0 by thread #4
+==5783== Locks held: none
+==5783==    at 0x804BAEE: esperar_cpu (kernel_utils.c:283)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous read of size 1 by thread #5
+==5783== Locks held: none
+==5783==    at 0x804C516: srt_ready_execute (kernel_utils.c:468)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x804f2c0 is 0 bytes inside data symbol "cpu_desocupado"
+==5783== 
+==5783== ---Thread-Announcement------------------------------------------
+==5783== 
+==5783== Thread #12 was created
+==5783==    at 0x416B1B1: clone (clone.S:88)
+==5783==    by 0x406C1AD: create_thread (createthread.c:102)
+==5783==    by 0x406D99E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during read of size 4 at 0x6E41B54 by thread #12
+==5783== Locks held: none
+==5783==    at 0x405A459: list_add (in /usr/lib/libcommons.so)
+==5783==    by 0x8049CFF: deserializar_programa (protocol.c:81)
+==5783==    by 0x8049C39: recv_programa (protocol.c:61)
+==5783==    by 0x804B430: procesar_socket (kernel_utils.c:149)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous write of size 4 by thread #1
+==5783== Locks held: none
+==5783==    at 0x406D92B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783==  Address 0x6e41b54 is on thread #12's stack
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during read of size 1 at 0x804F268 by thread #4
+==5783== Locks held: none
+==5783==    at 0x804BD47: esperar_cpu (kernel_utils.c:329)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous write of size 1 by thread #5
+==5783== Locks held: none
+==5783==    at 0x804C524: srt_ready_execute (kernel_utils.c:469)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x804f268 is 0 bytes inside data symbol "hay_interrupcion"
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during write of size 1 at 0x804F268 by thread #5
+==5783== Locks held: none
+==5783==    at 0x804C540: srt_ready_execute (kernel_utils.c:472)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous read of size 1 by thread #4
+==5783== Locks held: none
+==5783==    at 0x804BD47: esperar_cpu (kernel_utils.c:329)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x804f268 is 0 bytes inside data symbol "hay_interrupcion"
+==5783== 
+==5783== ---Thread-Announcement------------------------------------------
+==5783== 
+==5783== Thread #29 was created
+==5783==    at 0x416B1B1: clone (clone.S:88)
+==5783==    by 0x406C1AD: create_thread (createthread.c:102)
+==5783==    by 0x406D99E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804BCE4: esperar_cpu (kernel_utils.c:322)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783==  Lock at 0x804F184 was first observed
+==5783==    at 0x40303FC: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804BCAA: esperar_cpu (kernel_utils.c:318)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x804f184 is 0 bytes inside data symbol "mx_cola_blocked"
+==5783== 
+==5783==  Lock at 0x804F19C was first observed
+==5783==    at 0x40303FC: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804BE36: suspendiendo (kernel_utils.c:347)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x804f19c is 0 bytes inside data symbol "mx_cola_suspended_blocked"
+==5783== 
+==5783== Possible data race during read of size 1 at 0x4245C58 by thread #29
+==5783== Locks held: 2, at addresses 0x804F184 0x804F19C
+==5783==    at 0x804BE3D: suspendiendo (kernel_utils.c:348)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x4245c58 is 0 bytes inside a block of size 12 alloc'd
+==5783==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804A08F: deserializar_proceso (protocol.c:176)
+==5783==    by 0x8049FF1: recv_proceso (protocol.c:160)
+==5783==    by 0x804BA97: esperar_cpu (kernel_utils.c:277)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Block was alloc'd by thread #4
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during write of size 1 at 0x804F2C0 by thread #5
+==5783== Locks held: none
+==5783==    at 0x804C58F: srt_ready_execute (kernel_utils.c:478)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous write of size 1 by thread #4
+==5783== Locks held: none
+==5783==    at 0x804BAEE: esperar_cpu (kernel_utils.c:283)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x804f2c0 is 0 bytes inside data symbol "cpu_desocupado"
+==5783== 
+==5783== ---Thread-Announcement------------------------------------------
+==5783== 
+==5783== Thread #32 was created
+==5783==    at 0x416B1B1: clone (clone.S:88)
+==5783==    by 0x406C1AD: create_thread (createthread.c:102)
+==5783==    by 0x406D99E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804BCE4: esperar_cpu (kernel_utils.c:322)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783==  Lock at 0x804F184 was first observed
+==5783==    at 0x40303FC: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804BCAA: esperar_cpu (kernel_utils.c:318)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x804f184 is 0 bytes inside data symbol "mx_cola_blocked"
+==5783== 
+==5783==  Lock at 0x804F19C was first observed
+==5783==    at 0x40303FC: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804BE36: suspendiendo (kernel_utils.c:347)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x804f19c is 0 bytes inside data symbol "mx_cola_suspended_blocked"
+==5783== 
+==5783== Possible data race during read of size 2 at 0x4241F60 by thread #32
+==5783== Locks held: 2, at addresses 0x804F184 0x804F19C
+==5783==    at 0x804BE3D: suspendiendo (kernel_utils.c:348)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x4241f60 is 0 bytes inside a block of size 24 alloc'd
+==5783==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406381B: pcb_create (in /usr/lib/libshared.so)
+==5783==    by 0x804BA83: esperar_cpu (kernel_utils.c:276)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Block was alloc'd by thread #4
+==5783== 
+==5783== ---Thread-Announcement------------------------------------------
+==5783== 
+==5783== Thread #67 was created
+==5783==    at 0x416B1B1: clone (clone.S:88)
+==5783==    by 0x406C1AD: create_thread (createthread.c:102)
+==5783==    by 0x406D99E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783==  Lock at 0x804F124 was first observed
+==5783==    at 0x40303FC: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B4EC: procesar_socket (kernel_utils.c:163)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x804f124 is 0 bytes inside data symbol "mx_cola_new"
+==5783== 
+==5783== Possible data race during read of size 4 at 0xA853B54 by thread #67
+==5783== Locks held: 1, at address 0x804F124
+==5783==    at 0x405A459: list_add (in /usr/lib/libcommons.so)
+==5783==    by 0x405A330: queue_push (in /usr/lib/libcommons.so)
+==5783==    by 0x804B500: procesar_socket (kernel_utils.c:164)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous write of size 4 by thread #1
+==5783== Locks held: none
+==5783==    at 0x406D92B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783==  Address 0xa853b54 is on thread #67's stack
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during read of size 4 at 0xA853B54 by thread #67
+==5783== Locks held: none
+==5783==    at 0x405955C: string_from_format (in /usr/lib/libcommons.so)
+==5783==    by 0x4059621: string_itoa (in /usr/lib/libcommons.so)
+==5783==    by 0x804B520: procesar_socket (kernel_utils.c:167)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous write of size 4 by thread #1
+==5783== Locks held: none
+==5783==    at 0x406D92B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783==  Address 0xa853b54 is on thread #67's stack
+==5783== 
+==5783== ---Thread-Announcement------------------------------------------
+==5783== 
+==5783== Thread #69 was created
+==5783==    at 0x416B1B1: clone (clone.S:88)
+==5783==    by 0x406C1AD: create_thread (createthread.c:102)
+==5783==    by 0x406D99E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during read of size 4 at 0x9851B54 by thread #69
+==5783== Locks held: none
+==5783==    at 0x8049BBB: recv_programa (protocol.c:52)
+==5783==    by 0x804B430: procesar_socket (kernel_utils.c:149)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous write of size 4 by thread #1
+==5783== Locks held: none
+==5783==    at 0x406D92B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783==  Address 0x9851b54 is on thread #69's stack
+==5783== 
+==5783== ---Thread-Announcement------------------------------------------
+==5783== 
+==5783== Thread #71 was created
+==5783==    at 0x416B1B1: clone (clone.S:88)
+==5783==    by 0x406C1AD: create_thread (createthread.c:102)
+==5783==    by 0x406D99E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during read of size 4 at 0x9851B54 by thread #71
+==5783== Locks held: none
+==5783==    at 0x8049C7B: deserializar_programa (protocol.c:66)
+==5783==    by 0x8049C39: recv_programa (protocol.c:61)
+==5783==    by 0x804B430: procesar_socket (kernel_utils.c:149)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous write of size 4 by thread #1
+==5783== Locks held: none
+==5783==    at 0x406D92B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==5783==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x804B32E: escuchar_servidor (kernel_utils.c:122)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783==  Address 0x9851b54 is on thread #71's stack
+==5783== 
+==5783== ----------------------------------------------------------------
+==5783== 
+==5783== Possible data race during read of size 1 at 0x804F2C0 by thread #5
+==5783== Locks held: none
+==5783==    at 0x804C516: srt_ready_execute (kernel_utils.c:468)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783== 
+==5783== This conflicts with a previous write of size 1 by thread #4
+==5783== Locks held: none
+==5783==    at 0x804BAEE: esperar_cpu (kernel_utils.c:283)
+==5783==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==5783==    by 0x406D294: start_thread (pthread_create.c:333)
+==5783==    by 0x416B1CD: clone (clone.S:114)
+==5783==  Address 0x804f2c0 is 0 bytes inside data symbol "cpu_desocupado"
+==5783== 
+==5783== 
+==5783== Process terminating with default action of signal 2 (SIGINT)
+==5783==    at 0x4076264: accept (accept.c:35)
+==5783==    by 0x804997A: esperar_cliente (sockets.c:101)
+==5783==    by 0x804B2D8: escuchar_servidor (kernel_utils.c:115)
+==5783==    by 0x804AE78: main (kernel_main.c:18)
+==5783== 
+==5783== For counts of detected and suppressed errors, rerun with: -v
+==5783== Use --history-level=approx or =none to gain increased speed, at
+==5783== the cost of reduced accuracy of conflicting-access information
+==5783== ERROR SUMMARY: 659 errors from 18 contexts (suppressed: 172992 from 466)
