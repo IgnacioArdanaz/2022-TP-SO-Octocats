@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="hay_interr" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="hay_interr"/>
+			<item value="cpu_desocupado"/>
+			<item value="DISCONNE"/>
 			<item value="Off"/>
 			<item value="FALOPA"/>
 			<item value="le"/>
@@ -20,9 +23,6 @@
 			<item value="Read"/>
 			<item value="falopa"/>
 			<item value="READ FALOPA"/>
-			<item value="escr"/>
-			<item value="Offs"/>
-			<item value="Pagina victima elegida: 0"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

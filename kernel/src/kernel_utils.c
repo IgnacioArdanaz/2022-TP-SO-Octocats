@@ -9,6 +9,8 @@ pthread_mutex_t mx_cola_blocked = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_suspended_blocked = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_cola_suspended_ready = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t mx_iteracion_blocked = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_cpu_desocupado = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_hay_interrupcion = PTHREAD_MUTEX_INITIALIZER;
 
 
 sem_t s_pasaje_a_ready, s_ready_execute, s_cont_ready, s_cpu_desocupado, s_blocked,
@@ -280,7 +282,9 @@ void esperar_cpu(){
 			pthread_mutex_unlock(&mx_log);
 			return;
 		}
+		pthread_mutex_lock(&mx_cpu_desocupado);
 		cpu_desocupado = true;
+		pthread_mutex_unlock(&mx_cpu_desocupado);
 		switch (cop) {
 			case EXIT:{
 				char* key = string_itoa(pcb->pid);
@@ -301,9 +305,12 @@ void esperar_cpu(){
 				pcb_destroy(pcb);
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
-
-				if(hay_interrupcion)
+				pthread_mutex_lock(&mx_hay_interrupcion);
+				if(hay_interrupcion){
+					pthread_mutex_unlock(&mx_hay_interrupcion);
 					sem_post(&s_pcb_desalojado);
+				}
+				pthread_mutex_unlock(&mx_hay_interrupcion);
 				break;
 			}
 			case INTERRUPTION:
@@ -326,8 +333,12 @@ void esperar_cpu(){
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
 				
-				if(hay_interrupcion)
+				pthread_mutex_lock(&mx_hay_interrupcion);
+				if(hay_interrupcion){
+					pthread_mutex_unlock(&mx_hay_interrupcion);
 					sem_post(&s_pcb_desalojado);
+				}
+				pthread_mutex_unlock(&mx_hay_interrupcion);
 
 				break;
 			default:
@@ -465,17 +476,26 @@ void srt_ready_execute(){
 			sem_wait(&s_ready_execute);
 		sem_wait(&s_ready_execute);
 		sem_wait(&s_cont_ready); // Para que no intente ejecutar si la lista de ready esta vacia
+		pthread_mutex_lock(&mx_cpu_desocupado);
 		if(!cpu_desocupado){
+			pthread_mutex_unlock(&mx_cpu_desocupado);
+			pthread_mutex_lock(&mx_hay_interrupcion);
 			hay_interrupcion =  true;
+			pthread_mutex_unlock(&mx_hay_interrupcion);
 			desalojar_cpu();
 			sem_wait(&s_pcb_desalojado);
+			pthread_mutex_lock(&mx_hay_interrupcion);
 			hay_interrupcion =  false;
+			pthread_mutex_unlock(&mx_hay_interrupcion);
 		}
+		pthread_mutex_unlock(&mx_cpu_desocupado);
 		PCB_t* proceso = seleccionar_proceso_srt();
 		pthread_mutex_lock(&mx_log);
 		log_info(logger,"[READY -> EXECUTE] Mandando proceso %d a ejecutar",proceso->pid);
 		pthread_mutex_unlock(&mx_log);
+		pthread_mutex_lock(&mx_cpu_desocupado);
 		cpu_desocupado = false;
+		pthread_mutex_unlock(&mx_cpu_desocupado);
 		send_proceso(conexion_cpu_dispatch, proceso, PROCESO);
 		pcb_destroy(proceso);
 		sem_post(&s_esperar_cpu);
