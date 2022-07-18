@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="hay_interr" key="selection"/>
+		<item value="hay_interrupcion" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
-		<item value="false" key="wholeword"/>
+		<item value="true" key="wholeword"/>
 		<list key="findhistory">
-			<item value="hay_interr"/>
+			<item value="hay_interrupcion"/>
+			<item value="tlb"/>
+			<item value="pid_actual"/>
+			<item value="_lock"/>
+			<item value="lock"/>
+			<item value="fd_swaps"/>
+			<item value="memoria"/>
+			<item value="estructuras_clock"/>
+			<item value="bitarray_marcos_ocupados"/>
 			<item value="cpu_desocupado"/>
-			<item value="DISCONNE"/>
-			<item value="Off"/>
-			<item value="FALOPA"/>
-			<item value="le"/>
-			<item value="lectura"/>
-			<item value="READ FA"/>
-			<item value="READ"/>
-			<item value="Offset"/>
-			<item value="Proceso 3"/>
-			<item value="Proceso "/>
-			<item value="Read"/>
-			<item value="falopa"/>
-			<item value="READ FALOPA"/>
+			<item value="iteracion_blocked"/>
+			<item value="cola_suspended_ready"/>
+			<item value="cola_suspended_blocked"/>
+			<item value="cola_blocked"/>
+			<item value="lista_ready"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
@@ -39,7 +39,7 @@
 		<item value="340" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="436" key="DIALOG_HEIGHT"/>
-		<item value="1012" key="DIALOG_X_ORIGIN"/>
-		<item value="149" key="DIALOG_Y_ORIGIN"/>
+		<item value="1073" key="DIALOG_X_ORIGIN"/>
+		<item value="146" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

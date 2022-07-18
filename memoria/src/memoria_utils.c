@@ -1,6 +1,11 @@
 #include "memoria_utils.h"
 
 pthread_mutex_t mx_log = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_estructuras_clock = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_bitarray_marcos_ocupados = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_memoria = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mx_fd_swaps = PTHREAD_MUTEX_INITIALIZER;
+
 int cliente_kernel;
 int cliente_cpu;
 
@@ -33,39 +38,51 @@ uint16_t pid_actual;
 
 int get_fd(uint16_t pid){
 	char* key = string_itoa(pid);
+	pthread_mutex_lock(&mx_fd_swaps);
 	int fd = (int) dictionary_get(fd_swaps, key);
+	pthread_mutex_unlock(&mx_fd_swaps);
 	free(key);
 	return fd;
 }
 
 void set_fd(uint16_t pid, int fd){
 	char* key = string_itoa(pid);
+	pthread_mutex_lock(&mx_fd_swaps);
 	dictionary_put(fd_swaps, key, (int*) fd);
+	pthread_mutex_unlock(&mx_fd_swaps);
 	free(key);
 }
 
 void del_fd(uint16_t pid){
 	char* key = string_itoa(pid);
+	pthread_mutex_lock(&mx_fd_swaps);
 	dictionary_remove(fd_swaps, key);
+	pthread_mutex_unlock(&mx_fd_swaps);
 	free(key);
 }
 
 estructura_clock* get_estructura_clock(uint16_t pid){
 	char* key = string_itoa(pid);
+	pthread_mutex_lock(&mx_estructuras_clock);
 	estructura_clock* e_clock = dictionary_get(estructuras_clock, key);
+	pthread_mutex_unlock(&mx_estructuras_clock);
 	free(key);
 	return e_clock;
 }
 
 void set_estructura_clock(uint16_t pid, estructura_clock* e_clock){
 	char* key = string_itoa(pid);
+	pthread_mutex_lock(&mx_estructuras_clock);
 	dictionary_put(estructuras_clock, key, e_clock);
+	pthread_mutex_unlock(&mx_estructuras_clock);
 	free(key);
 }
 
 void del_estructura_clock(uint16_t pid){
 	char* key = string_itoa(pid);
+	pthread_mutex_lock(&mx_estructuras_clock);
 	dictionary_remove_and_destroy(estructuras_clock, key, free);
+	pthread_mutex_unlock(&mx_estructuras_clock);
 	free(key);
 }
 
@@ -248,7 +265,9 @@ void suspender_proceso(uint16_t pid, uint32_t tabla_paginas) {
 	// como estamos eliminandolos de la lista, el 2do pasaria a ser el 1er y asi sucesivamente
 	while (list_size(estructura->marcos_en_memoria) > 0){
 		fila_busqueda = list_get(estructura->marcos_en_memoria, 0);
+		pthread_mutex_lock(&mx_bitarray_marcos_ocupados);
 		bitarray_marcos_ocupados[fila_busqueda->nro_marco_en_memoria] = 0;
+		pthread_mutex_unlock(&mx_bitarray_marcos_ocupados);
 		if(fila_busqueda->pagina->modificado == 1){
 			void* marco = obtener_marco(fila_busqueda->nro_marco_en_memoria);
 			actualizar_marco_en_swap(fd, fila_busqueda->nro_marco_en_swap, marco, tam_pagina);
@@ -269,7 +288,9 @@ void eliminar_estructuras(uint32_t tabla_paginas, uint16_t pid) {
 	fila_estructura_clock* fila_busqueda;
 	for (int i = 0; i < list_size(estructura->marcos_en_memoria); i++){
 		fila_busqueda = list_get(estructura->marcos_en_memoria, i);
+		pthread_mutex_lock(&mx_bitarray_marcos_ocupados);
 		bitarray_marcos_ocupados[fila_busqueda->nro_marco_en_memoria] = 0;
+		pthread_mutex_unlock(&mx_bitarray_marcos_ocupados);
 	}
 	list_destroy_and_destroy_elements(estructura->marcos_en_memoria, free);
 	borrar_archivo_swap(pid, get_fd(pid));
@@ -422,7 +443,9 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 			exit(EXIT_FAILURE);
 		}
 	}
+	pthread_mutex_lock(&mx_bitarray_marcos_ocupados);
 	bitarray_marcos_ocupados[nro_marco] = 1;
+	pthread_mutex_unlock(&mx_bitarray_marcos_ocupados);
 	pagina->nro_marco = nro_marco;
 	pagina->presencia = 1;
 	pagina->uso = 1;
@@ -544,14 +567,18 @@ void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do
 		entrada_2do_nivel->modificado = 0;
 	}
 	entrada_2do_nivel->presencia = 0;
+	pthread_mutex_lock(&mx_bitarray_marcos_ocupados);
 	bitarray_marcos_ocupados[entrada_2do_nivel->nro_marco] = 0;
+	pthread_mutex_unlock(&mx_bitarray_marcos_ocupados);
 }
 
 // Dado un nro de marco y un desplazamiento, devuelve el dato en concreto
 uint32_t read_en_memoria(uint32_t nro_marco, uint32_t desplazamiento){
 	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
 	uint32_t dato;
+	pthread_mutex_lock(&mx_memoria);
 	memcpy(&dato, memoria + desplazamiento_final, sizeof(dato));
+	pthread_mutex_unlock(&mx_memoria);
 	fila_2do_nivel* pagina_actual = obtener_pagina(pid_actual, nro_marco);
 	pagina_actual->uso = 1;
 	log_info(logger, "[CPU] Dato '%d' leido en marco %d", dato, nro_marco);
@@ -561,7 +588,9 @@ uint32_t read_en_memoria(uint32_t nro_marco, uint32_t desplazamiento){
 // Dado un nro de marco, un desplazamiento y un dato, escribe el dato en dicha posicion
 void write_en_memoria(uint32_t nro_marco, uint32_t desplazamiento, uint32_t dato) {
 	uint32_t desplazamiento_final = nro_marco * tam_pagina + desplazamiento;
+	pthread_mutex_lock(&mx_memoria);
 	memcpy(memoria + desplazamiento_final, &dato, sizeof(dato));
+	pthread_mutex_unlock(&mx_memoria);
 	fila_2do_nivel* pagina_actual = obtener_pagina(pid_actual, nro_marco);
 	pagina_actual->uso = 1;
 	pagina_actual->modificado = 1;
@@ -572,7 +601,9 @@ void write_en_memoria(uint32_t nro_marco, uint32_t desplazamiento, uint32_t dato
 // Devuelve el contenido de un marco que está en memoria.
 void* obtener_marco(uint32_t nro_marco){
 	void* marco = malloc(tam_pagina);
+	pthread_mutex_lock(&mx_memoria);
 	memcpy(marco, memoria + nro_marco * tam_pagina, tam_pagina);
+	pthread_mutex_unlock(&mx_memoria);
 	return marco;
 }
 
@@ -584,16 +615,22 @@ uint32_t marcos_en_memoria(){
 
 void escribir_marco_en_memoria(uint32_t nro_marco, void* marco){
 	uint32_t marco_en_memoria = nro_marco * tam_pagina;
+	pthread_mutex_lock(&mx_memoria);
 	memcpy(memoria + marco_en_memoria, marco, tam_pagina);
+	pthread_mutex_unlock(&mx_memoria);
 }
 
 
 // Buscar el primer marco libre
 int buscar_marco_libre(){
+	pthread_mutex_lock(&mx_bitarray_marcos_ocupados);
 	for (int i = 0; i < tam_memoria / tam_pagina; i++){
-		if (bitarray_marcos_ocupados[i] == 0)
+		if (bitarray_marcos_ocupados[i] == 0){
+			pthread_mutex_unlock(&mx_bitarray_marcos_ocupados);
 			return i;
+		}
 	}
+	pthread_mutex_unlock(&mx_bitarray_marcos_ocupados);
 	return -1;
 }
 

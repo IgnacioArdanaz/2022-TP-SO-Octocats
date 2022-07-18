@@ -1,5 +1,7 @@
 #include "cpu_main.h"
 
+pthread_mutex_t mx_hay_interrupcion = PTHREAD_MUTEX_INITIALIZER;
+
 t_log* logger;
 t_config* config;
 
@@ -40,7 +42,9 @@ int main(void) {
 
 		log_info(logger,"Program counter %d (despues de ejecutar)",pcb->pc);
 		log_info(logger,"==============================================================");
+		pthread_mutex_lock(&mx_hay_interrupcion);
 		hay_interrupcion = false;
+		pthread_mutex_unlock(&mx_hay_interrupcion);
 		send_proceso(cliente_socket_dispatch,pcb,estado);
 		pcb_destroy(pcb);
 	}
@@ -175,10 +179,13 @@ instruccion_t* fetch(t_list* instrucciones, uint32_t pc){
 }
 
 int check_interrupt(){
+	pthread_mutex_lock(&mx_hay_interrupcion);
 	if (hay_interrupcion){
 		hay_interrupcion = false;
+		pthread_mutex_unlock(&mx_hay_interrupcion);
 		return INTERRUPTION;
 	}
+	pthread_mutex_unlock(&mx_hay_interrupcion);
 	return CONTINUE;
 }
 
@@ -390,6 +397,8 @@ void interrupcion(){
 		op_code opcode;
 		recv(cliente_socket_interrupt, &opcode, sizeof(op_code), 0);
 //		log_info(logger, "Interrupcion recibida");
+		pthread_mutex_lock(&mx_hay_interrupcion);
 		hay_interrupcion = true;
+		pthread_mutex_unlock(&mx_hay_interrupcion);
 	}
 }

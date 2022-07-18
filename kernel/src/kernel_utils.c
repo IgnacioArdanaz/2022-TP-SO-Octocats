@@ -305,6 +305,8 @@ void esperar_cpu(){
 				pcb_destroy(pcb);
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
+
+				//Por si la interrupcion se mando cuando se estaba procesando la instruccion EXIT
 				pthread_mutex_lock(&mx_hay_interrupcion);
 				if(hay_interrupcion){
 					pthread_mutex_unlock(&mx_hay_interrupcion);
@@ -333,6 +335,7 @@ void esperar_cpu(){
 				sem_post(&s_cpu_desocupado);
 				sem_post(&s_ready_execute);
 				
+				//Por si la interrupcion se mando cuando se estaba procesando la instruccion IO
 				pthread_mutex_lock(&mx_hay_interrupcion);
 				if(hay_interrupcion){
 					pthread_mutex_unlock(&mx_hay_interrupcion);
@@ -407,9 +410,9 @@ void ejecutar_io() {
 		list_remove(cola_blocked,0);
 		pthread_mutex_unlock(&mx_cola_blocked);
 		char* key = string_itoa(proceso->pid);
+		pthread_mutex_lock(&mx_iteracion_blocked);
 		int iteracion_actual = (int) dictionary_get(iteracion_blocked, key);
 		free(key);
-		pthread_mutex_lock(&mx_iteracion_blocked);
 		dictionary_put(iteracion_blocked, key,(int *) iteracion_actual + 1);
 		pthread_mutex_unlock(&mx_iteracion_blocked);
 		if (esta_suspendido(proceso->pid)){
