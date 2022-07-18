@@ -320,7 +320,7 @@ void recibir_cpu() {
 		switch (cop) {
 			case SOLICITUD_NRO_TABLA_2DO_NIVEL:
 			{
-				log_info(logger, "[CPU] Procesando solicitud de nro tabla de 2do nivel...");
+				log_info(logger, "[CPU][ACCESO A MEMORIA] Procesando solicitud de nro tabla de 2do nivel...");
 				uint16_t pid = 0;
 				uint32_t nro_tabla_1er_nivel = 0;
 				uint32_t entrada_tabla = 0;
@@ -338,7 +338,7 @@ void recibir_cpu() {
 			}
 			case SOLICITUD_NRO_MARCO:
 			{
-				log_info(logger, "[CPU] Procesando solicitud de nro marco...");
+				log_info(logger, "[CPU][ACCESO A MEMORIA] Procesando solicitud de nro marco...");
 				uint32_t nro_tabla_2do_nivel = 0;
 				uint32_t entrada_tabla = 0;
 				uint32_t index_tabla_1er_nivel = 0; //Lo necesito para guardar el numero de pagina
@@ -349,7 +349,7 @@ void recibir_cpu() {
 				recv(cliente_cpu, &index_tabla_1er_nivel, sizeof(uint32_t),0);
 
 				uint32_t nro_marco = obtener_nro_marco_memoria(nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
-				log_info(logger, "[CPU] Numero de marco obtenido = %d", nro_marco);
+				log_info(logger, "[CPU][ACCESO A MEMORIA] Numero de marco obtenido = %d", nro_marco);
 
 				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &nro_marco, sizeof(uint32_t), 0);
@@ -358,7 +358,7 @@ void recibir_cpu() {
 			}
 			case READ:
 			{
-				log_info(logger, "[CPU] Procesando lectura...");
+				log_info(logger, "[CPU][ACCESO A MEMORIA] Procesando lectura...");
 				uint32_t nro_marco;
 				uint32_t desplazamiento;
 
@@ -374,7 +374,7 @@ void recibir_cpu() {
 			}
 			case WRITE:
 			{
-				log_info(logger, "[CPU] Procesando escritura...");
+				log_info(logger, "[CPU][ACCESO A MEMORIA] Procesando escritura...");
 				uint32_t nro_marco;
 				uint32_t desplazamiento;
 				uint32_t dato;
@@ -424,7 +424,7 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 		pagina->uso = 1;
 		return pagina->nro_marco;
 	}
-	log_info(logger, "[CPU] PAGE FAULT!!!");
+	log_info(logger, "[CPU][ACCESO A DISCO] PAGE FAULT!!!");
 	int fd = get_fd(pid_actual);
 	uint32_t nro_marco_en_swap = index_tabla_1er_nivel * entradas_por_tabla + index;
 	// si no esta en memoria, traerlo (HAY PAGE FAULT)
@@ -450,7 +450,7 @@ uint32_t obtener_nro_marco_memoria(uint32_t nro_tabla, uint32_t index, uint32_t 
 	pagina->presencia = 1;
 	pagina->uso = 1;
 	escribir_marco_en_memoria(pagina->nro_marco, marco);
-	//INTENTO SOLUCION MEMORY LEAK
+
 	free(marco);
 	agregar_pagina_a_estructura_clock(nro_marco, pagina, nro_marco_en_swap);
 	return nro_marco;
@@ -561,7 +561,7 @@ void reemplazo_por_clock(uint32_t nro_marco_en_swap, fila_2do_nivel* entrada_2do
 	log_info(logger, "[CPU] Pagina victima elegida: %d",nro_marco_en_swap);
 	// si tiene el bit de modificado en 1, hay que actualizar el archivo swap
 	if (entrada_2do_nivel->modificado == 1){
-		log_info(logger,"[CPU] Actualizando pagina victima en swap (bit de modificado = 1)");
+		log_info(logger,"[CPU][ACCESO A DISCO] Actualizando pagina victima en swap (bit de modificado = 1)");
 		actualizar_marco_en_swap(get_fd(pid), nro_marco_en_swap, obtener_marco(entrada_2do_nivel->nro_marco), tam_pagina);
 		usleep(retardo_swap * 1000); // tenemos el retardo por swappear un marco modificado
 		entrada_2do_nivel->modificado = 0;

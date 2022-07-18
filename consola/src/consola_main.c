@@ -14,6 +14,7 @@ int main(int argc, char** argv){
 
 	t_list* codigo = list_create();
 	parser(path, codigo);
+	free(path);
 	int cant = list_size(codigo);
 	for(int i=0; i<cant; i++){
 		instruccion_t* inst = list_get(codigo,i);
@@ -37,7 +38,6 @@ int main(int argc, char** argv){
 	else{
 		log_error(logger,"Por desgracia no se pudo enviar el programa :(");
 	}
-
 	list_destroy_and_destroy_elements(codigo,free);
 	log_destroy(logger);
 	config_destroy(config);
