@@ -93,6 +93,7 @@ bool send_proceso(int fd, PCB_t *proceso, op_code codigo) {
     void* stream = serializar_proceso(&size, proceso, codigo);
     if (send(fd, stream, size, 0) != size) {
         free(stream);
+        printf("Murio haciendo el send\n");
         return false;
     }
     free(stream);
@@ -150,13 +151,17 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 //Recepcion y deserealizacion
 bool recv_proceso(int fd, PCB_t* proceso) {
     size_t size_payload;
-    if (recv(fd, &size_payload, sizeof(size_t), 0) != sizeof(size_t))
+    if (recv(fd, &size_payload, sizeof(size_t), 0) != sizeof(size_t)){
+    	printf("Murio recibiendo size_payload \n");
         return false;
+    }
     void* stream = malloc(size_payload);
     if (recv(fd, stream, size_payload, 0) != size_payload) {
+    	printf("Murio recibiendo el stream \n");
         free(stream);
         return false;
     }
+    printf("Recibio el pcb, lo va a deserializar\n");
     deserializar_proceso(stream, proceso);
     free(stream);
     return true;

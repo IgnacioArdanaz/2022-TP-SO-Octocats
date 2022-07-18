@@ -499,6 +499,7 @@ void srt_ready_execute(){
 		pthread_mutex_lock(&mx_cpu_desocupado);
 		cpu_desocupado = false;
 		pthread_mutex_unlock(&mx_cpu_desocupado);
+		printf("PID: %d | PC: %d | Tabla pags: %d \n", proceso->pid, proceso->pc, proceso->tabla_paginas);
 		send_proceso(conexion_cpu_dispatch, proceso, PROCESO);
 		pcb_destroy(proceso);
 		sem_post(&s_esperar_cpu);
