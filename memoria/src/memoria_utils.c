@@ -349,7 +349,7 @@ void recibir_cpu() {
 				recv(cliente_cpu, &index_tabla_1er_nivel, sizeof(uint32_t),0);
 
 				uint32_t nro_marco = obtener_nro_marco_memoria(nro_tabla_2do_nivel, entrada_tabla, index_tabla_1er_nivel);
-				log_info(logger, "[CPU][ACCESO A MEMORIA] Numero de marco obtenido = %d", nro_marco);
+				log_info(logger, "[CPU] Numero de marco obtenido = %d", nro_marco);
 
 				usleep(retardo_memoria * 1000);
 				send(cliente_cpu, &nro_marco, sizeof(uint32_t), 0);
