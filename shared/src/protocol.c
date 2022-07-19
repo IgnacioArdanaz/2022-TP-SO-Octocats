@@ -142,7 +142,7 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
         acumulador += sizeof(int32_t);
         memcpy(stream + acumulador, &inst->arg2, sizeof(int32_t));
         acumulador += sizeof(int32_t);
-        printf("Instruccion %d: %c %d %d", i, inst->operacion, inst->arg1, inst->arg2);
+        printf("Instruccion %d: %c %d %d | ", i, inst->operacion, inst->arg1, inst->arg2);
     }
 
     memcpy(stream + acumulador, &proceso->pc, sizeof(uint32_t));
@@ -167,6 +167,8 @@ bool recv_proceso(int fd, PCB_t* proceso) {
     void* stream = malloc(size_payload);
     if (recv(fd, stream, size_payload, 0) != size_payload) {
     	printf("Murio recibiendo el stream \n");
+    	//Esto en la posta no se deserializaria
+    	deserializar_proceso(stream, proceso);
         free(stream);
         return false;
     }

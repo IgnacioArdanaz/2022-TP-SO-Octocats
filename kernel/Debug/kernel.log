@@ -16074,3 +16074,76 @@
 [INFO] 19:35:42:845 KERNEL/(6727:6731): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
 [INFO] 19:35:42:845 KERNEL/(6727:6734): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
 [INFO] 19:35:43:700 KERNEL/(6727:6733): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 20:46:20:702 KERNEL/(14887:14887): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 20:46:20:703 KERNEL/(14887:14887): Error al conectar (a CPU DISPATCH)
+[INFO] 20:46:20:703 KERNEL/(14887:14887): Error al conectar (a CPU INTERRUPT)
+[INFO] 20:46:20:703 KERNEL/(14887:14887): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 20:46:20:703 KERNEL/(14887:14887): Kernel esperando un nuevo cliente
+[INFO] 20:46:20:703 KERNEL/(14887:14887): KERNEL listo para recibir al cliente
+[INFO] 20:46:44:605 KERNEL/(14928:14928): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+[INFO] 20:46:44:606 KERNEL/(14928:14928): Cliente conectado en 127.0.0.1:8001 (a CPU DISPATCH)
+[INFO] 20:46:44:606 KERNEL/(14928:14928): Cliente conectado en 127.0.0.1:8005 (a CPU INTERRUPT)
+[INFO] 20:46:44:606 KERNEL/(14928:14928): Escuchando en 127.0.0.1:8000 (KERNEL)
+[INFO] 20:46:44:606 KERNEL/(14928:14928): Kernel esperando un nuevo cliente
+[INFO] 20:46:44:607 KERNEL/(14928:14928): KERNEL listo para recibir al cliente
+[INFO] 20:46:49:606 KERNEL/(14928:14928): Cliente conectado (a KERNEL)
+[INFO] 20:46:49:606 KERNEL/(14928:14928): Socket del cliente recibido en kernel.
+[INFO] 20:46:49:606 KERNEL/(14928:14928): Kernel esperando un nuevo cliente
+[INFO] 20:46:49:606 KERNEL/(14928:14928): KERNEL listo para recibir al cliente
+[INFO] 20:46:49:610 KERNEL/(14928:14932): [NEW -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 20:46:49:610 KERNEL/(14928:14932): Solicitando tabla de pag para proceso 1 de tamanio 2048
+[INFO] 20:46:49:611 KERNEL/(14928:14932): proceso 1 tabla de pag 0
+[INFO] 20:46:49:611 KERNEL/(14928:14932): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 20:46:49:611 KERNEL/(14928:14935): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 20:46:50:135 KERNEL/(14928:14928): Cliente conectado (a KERNEL)
+[INFO] 20:46:50:135 KERNEL/(14928:14928): Socket del cliente recibido en kernel.
+[INFO] 20:46:50:135 KERNEL/(14928:14928): Kernel esperando un nuevo cliente
+[INFO] 20:46:50:135 KERNEL/(14928:14928): KERNEL listo para recibir al cliente
+[INFO] 20:46:50:135 KERNEL/(14928:14932): [NEW -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 20:46:50:136 KERNEL/(14928:14932): Solicitando tabla de pag para proceso 2 de tamanio 2048
+[INFO] 20:46:50:174 KERNEL/(14928:14932): proceso 2 tabla de pag 1
+[INFO] 20:46:50:174 KERNEL/(14928:14932): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 20:46:50:174 KERNEL/(14928:14935): [INTERRUPT] Mandando interrupcion
+[INFO] 20:46:50:260 KERNEL/(14928:14934): [EXECUTE -> READY] Proceso 1 desalojado
+[INFO] 20:46:50:260 KERNEL/(14928:14935): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 20:46:50:509 KERNEL/(14928:14934): [EXECUTE -> BLOCKED] Proceso 1 bloqueado
+[INFO] 20:46:50:509 KERNEL/(14928:14933): [IO] Proceso 1 esperando 5000 milisegundos
+[INFO] 20:46:50:509 KERNEL/(14928:14935): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 20:46:51:113 KERNEL/(14928:14934): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 20:46:51:510 KERNEL/(14928:14946): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 1
+[INFO] 20:46:52:114 KERNEL/(14928:14950): [BLOCKED -> SUSP_BLOCKED] Suspendiendo proceso 2
+[INFO] 20:46:55:509 KERNEL/(14928:14933): [SUSP_BLOCKED -> SUSP_READY] Proceso 1 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 20:46:55:509 KERNEL/(14928:14933): [IO] Proceso 2 esperando 5000 milisegundos
+[INFO] 20:46:55:509 KERNEL/(14928:14932): [SUSP_READY -> READY] PROCESO 1 AGREGADO A READY
+[INFO] 20:46:55:510 KERNEL/(14928:14932): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 20:46:55:510 KERNEL/(14928:14935): [READY -> EXECUTE] Mandando proceso 1 a ejecutar
+[INFO] 20:46:56:355 KERNEL/(14928:14934): [EXECUTE -> EXIT] Proceso 1 terminado
+[INFO] 20:47:00:510 KERNEL/(14928:14933): [SUSP_BLOCKED -> SUSP_READY] Proceso 2 saliendo de suspended-blocked hacia suspended-ready :)
+[INFO] 20:47:00:510 KERNEL/(14928:14932): [SUSP_READY -> READY] PROCESO 2 AGREGADO A READY
+[INFO] 20:47:00:510 KERNEL/(14928:14932): [NEW/SUSP_READY -> READY] Cola de new: 0 | (new -> ready) Cola de ready: 1
+[INFO] 20:47:00:510 KERNEL/(14928:14935): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 20:47:01:112 KERNEL/(14928:14934): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 20:47:01:112 KERNEL/(14928:14933): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 20:47:01:213 KERNEL/(14928:14933): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 20:47:01:213 KERNEL/(14928:14935): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 20:47:01:217 KERNEL/(14928:14934): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 20:47:01:217 KERNEL/(14928:14933): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 20:47:01:318 KERNEL/(14928:14933): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 20:47:01:318 KERNEL/(14928:14935): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 20:47:01:324 KERNEL/(14928:14934): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 20:47:01:324 KERNEL/(14928:14933): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 20:47:01:424 KERNEL/(14928:14933): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 20:47:01:424 KERNEL/(14928:14935): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 20:47:01:427 KERNEL/(14928:14934): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 20:47:01:427 KERNEL/(14928:14933): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 20:47:01:527 KERNEL/(14928:14933): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 20:47:01:528 KERNEL/(14928:14935): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 20:47:01:531 KERNEL/(14928:14934): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 20:47:01:531 KERNEL/(14928:14933): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 20:47:01:631 KERNEL/(14928:14933): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 20:47:01:631 KERNEL/(14928:14935): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 20:47:01:635 KERNEL/(14928:14934): [EXECUTE -> BLOCKED] Proceso 2 bloqueado
+[INFO] 20:47:01:635 KERNEL/(14928:14933): [IO] Proceso 2 esperando 100 milisegundos
+[INFO] 20:47:01:735 KERNEL/(14928:14933): [BLOCKED -> READY] Proceso 2 saliendo de blocked hacia ready :)
+[INFO] 20:47:01:735 KERNEL/(14928:14935): [READY -> EXECUTE] Mandando proceso 2 a ejecutar
+[INFO] 20:47:01:739 KERNEL/(14928:14934): [EXECUTE -> EXIT] Proceso 2 terminado
