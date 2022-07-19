@@ -115,7 +115,7 @@ static void* serializar_proceso(size_t* size, PCB_t *proceso, op_code codigo) {
 		+ sizeof(uint32_t)  // size de tabla_paginas
         + sizeof(double);   // size de est_rafaga
     size_t size_payload = *size - sizeof(op_code) - sizeof(size_t);
-
+    printf("Size of size_t (serializando): %d\n", sizeof(size_t));
     void* stream = malloc(*size);
 	size_t acumulador = 0;
     op_code cop = codigo;
@@ -180,7 +180,7 @@ bool recv_proceso(int fd, PCB_t* proceso) {
 
 static void deserializar_proceso(void* stream, PCB_t* proceso) {
 	size_t length_lista, acumulador = 0;
-
+	printf("Size of size_t (deserializando): %d\n", sizeof(size_t));
 	memcpy(&proceso->pid, stream + acumulador, sizeof(uint16_t));
 	printf("Pid %d\n", proceso->pid);
 	acumulador += sizeof(uint16_t);
@@ -200,7 +200,7 @@ static void deserializar_proceso(void* stream, PCB_t* proceso) {
     	acumulador += sizeof(int32_t);
     	memcpy(&instruccion->arg2, stream + acumulador, sizeof(int32_t));
     	acumulador += sizeof(int32_t);
-    	//printf("Instruccion %d: %c %d %d", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
+    	printf("Instruccion %d: %c %d %d | ", i, instruccion->operacion, instruccion->arg1, instruccion->arg2);
     	list_add(proceso->instrucciones,instruccion);
     }
     printf("Cant de instrucciones deserializadas: %d \n", i);
