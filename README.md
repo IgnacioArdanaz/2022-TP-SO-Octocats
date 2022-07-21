@@ -5,4 +5,3 @@ Integrantes:
 - Cabrera Lavezzi, Thiago Martin
 - Fernandez, Ciro
 - Marmo, Lucas Andres
-- Sandrini, Alejo 
