@@ -384,7 +384,7 @@ int execute(instruccion_t* instruccion_ejecutar,uint32_t tabla_paginas){
 			return EXIT;
 			break;
 		default:
-			log_error(logger,"La instruccion se la come");
+			log_error(logger,"Hubo un error en el ciclo de instruccion");
 			break;
 	}
 
